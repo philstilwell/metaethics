@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A branching, non-realist diagnostic for testing the structural coherence of a proposed moral system."
+      content="An interactive check that helps people see whether the rules and values in a moral system fit together."
     />
     <meta name="theme-color" content="#151a17" />
     <title>The Coherence Engine — Test a Moral System</title>
@@ -115,8 +115,21 @@
             </div>
             <p class="question-context" id="questionContext"></p>
             <details class="plain-explanation" id="plainExplanation">
-              <summary>What does this question mean?</summary>
-              <p id="plainExplanationText"></p>
+              <summary>Help me think this through</summary>
+              <div class="explanation-body">
+                <div class="explanation-part">
+                  <strong>In plain words</strong>
+                  <p id="plainExplanationText"></p>
+                </div>
+                <div class="explanation-part explanation-example">
+                  <strong>A simple example</strong>
+                  <p id="plainExampleText"></p>
+                </div>
+                <div class="explanation-part">
+                  <strong>What your answer shows</strong>
+                  <p id="plainRevealText"></p>
+                </div>
+              </div>
             </details>
             <div class="choice-list" id="choiceList" role="radiogroup"></div>
             <div class="question-footer">
@@ -126,7 +139,7 @@
           </article>
         </div>
 
-        <aside class="live-panel" aria-label="Live coherence diagnostic">
+        <aside class="live-panel" aria-label="Live system check">
           <div class="live-header">
             <div>
               <p class="kicker">Live system map</p>
@@ -138,19 +151,19 @@
           <div class="coherence-orb" id="coherenceOrb">
             <div>
               <strong id="liveScore">—</strong>
-              <span>provisional</span>
+              <span>so far</span>
             </div>
           </div>
 
-          <div class="axis-grid" id="axisGrid" aria-label="Scores across thirteen coherence tests"></div>
+          <div class="axis-grid" id="axisGrid" aria-label="Scores across thirteen parts of the system"></div>
 
           <div class="tension-block">
             <div class="tension-heading">
-              <h3>Detected tensions</h3>
+              <h3>Answers that may clash</h3>
               <span id="tensionCount">0</span>
             </div>
             <div class="tension-list" id="tensionList">
-              <p class="empty-tensions">No structural tension detected yet. The engine is listening.</p>
+              <p class="empty-tensions">No answers clash yet. The check is listening.</p>
             </div>
           </div>
         </aside>
@@ -158,24 +171,24 @@
 
       <section class="results hidden" id="resultsView">
         <div class="results-hero">
-          <p class="kicker">Diagnostic complete</p>
+          <p class="kicker">Check complete</p>
           <h1 id="resultsTitle">Your system’s structure</h1>
           <p id="resultsSummary"></p>
         </div>
 
         <div class="scoreboard">
           <div class="score-card score-card-primary">
-            <span>Coherence index</span>
+            <span>How well the parts fit</span>
             <strong id="finalScore">0</strong>
             <p id="finalVerdict"></p>
           </div>
           <div class="score-card">
-            <span>Strongest beam</span>
+            <span>Clearest part</span>
             <strong id="strongestAxis">—</strong>
             <p id="strongestCopy"></p>
           </div>
           <div class="score-card">
-            <span>Largest debt</span>
+            <span>Biggest open question</span>
             <strong id="weakestAxis">—</strong>
             <p id="weakestCopy"></p>
           </div>
@@ -185,7 +198,7 @@
           <section class="report-section">
             <div class="section-heading">
               <p class="kicker">Thirteen tests</p>
-              <h2>Solvency ledger</h2>
+              <h2>How each part scored</h2>
             </div>
             <div class="ledger" id="ledger"></div>
           </section>
@@ -193,7 +206,7 @@
           <section class="report-section">
             <div class="section-heading">
               <p class="kicker">Where claims collide</p>
-              <h2>Tension report</h2>
+              <h2>Where the answers clash</h2>
             </div>
             <div class="final-tensions" id="finalTensions"></div>
           </section>
@@ -202,7 +215,7 @@
         <section class="interpretation">
           <div>
             <p class="kicker">Read this carefully</p>
-            <h2>Coherence is not vindication.</h2>
+          <h2>Fitting together does not make a system true or fair.</h2>
           </div>
           <p>
             A system can be logically consistent and still be false, cruel, based on bad facts, unfairly
@@ -212,7 +225,7 @@
         </section>
 
         <div class="result-actions">
-          <button class="primary-button" id="copyReportButton" type="button">Copy diagnostic</button>
+          <button class="primary-button" id="copyReportButton" type="button">Copy report</button>
           <button class="secondary-button" id="restartButton" type="button">Test another system</button>
         </div>
       </section>
@@ -231,23 +244,22 @@
     <dialog id="methodDialog">
       <button class="dialog-close" id="closeMethodButton" type="button" aria-label="Close">×</button>
       <p class="kicker">Method &amp; limits</p>
-      <h2>A solvency audit, not a truth machine</h2>
+        <h2>A clarity check, not a truth machine</h2>
       <p>
         The test does not assume that moral facts exist outside human minds and practices. It treats
         “moral” and “immoral” as labels that need explanation. A system must say who counts, what is
         being judged, what matters, what its words mean, and how it reaches a conclusion.
       </p>
       <p>
-        The thirteen tests check who counts, what is judged, what matters, what words and verdicts mean,
+        The thirteen tests check who counts, what is judged, what matters, what important words and judgments mean,
         how values become rules, which reasons are offered, whether like cases are treated alike, how
         conflicts are handled, whether facts are checked, whether people can use the system, where it
         came from, and how it can change. Clear rules in this page score the answers. Nothing is sent to
         a server, and no AI reads the answers.
       </p>
       <p>
-        A high score means the proposed system has made more of its architecture visible and stable.
-        It does not establish objective moral facts, prove that the system is humane, or authorize anyone
-        to impose it.
+        A high score means more of the system is clear and its parts fit together. It does not prove that
+        the system is true, kind, fair, or something other people must accept.
       </p>
     </dialog>
 

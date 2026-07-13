@@ -507,12 +507,38 @@ main {
   outline: none;
 }
 
-.plain-explanation p {
-  margin: 0;
+.explanation-body {
+  display: grid;
+  gap: 0;
   padding: 0 16px 16px 34px;
+}
+
+.explanation-part {
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.explanation-part strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.explanation-part p {
+  margin: 0;
   color: #4f5851;
   font-size: 0.86rem;
-  line-height: 1.55;
+  line-height: 1.58;
+}
+
+.explanation-example {
+  position: relative;
+  padding-left: 14px;
+  border-left: 3px solid var(--acid);
 }
 
 .choice-list {

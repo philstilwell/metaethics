@@ -2,69 +2,69 @@
 
 const DIMENSIONS = {
   domain: {
-    name: "Domain",
-    short: "Who counts",
-    debt: "Your circle of concern needs a stable boundary and an account of exclusions.",
+    name: "Who counts",
+    short: "The circle of concern",
+    debt: "The system needs a steady line around who matters and a reason for anyone left out.",
   },
   object: {
-    name: "Object",
-    short: "What is judged",
-    debt: "Separate acts, motives, outcomes, rules, institutions, relationships, and character.",
+    name: "What is judged",
+    short: "The part under review",
+    debt: "Separate the action, reason, result, rule, institution, relationship, and person.",
   },
   value: {
-    name: "Value",
-    short: "What matters",
-    debt: "Name the values doing the work and the role each one plays.",
+    name: "What matters",
+    short: "Main concerns",
+    debt: "Name the concerns doing the work and explain the job each one has.",
   },
   meaning: {
-    name: "Meaning",
-    short: "Stable terms",
-    debt: "Define central terms tightly enough that they constrain conclusions across cases.",
+    name: "Clear words",
+    short: "Steady meanings",
+    debt: "Explain important words clearly enough that they limit decisions across different cases.",
   },
   status: {
-    name: "Status",
-    short: "Verdict grammar",
-    debt: "Distinguish forbidden, harmful, blameworthy, tragic, excused, and repair-demanding.",
+    name: "Types of judgment",
+    short: "More than right or wrong",
+    debt: "Separate what is forbidden, harmful, blameworthy, sad, excused, or in need of repair.",
   },
   generation: {
-    name: "Generation",
-    short: "Value → rule",
-    debt: "Expose the bridge from what matters to what is required, permitted, or repaired.",
+    name: "Building rules",
+    short: "Concern → action",
+    debt: "Show the steps from what matters to what people must, may, or need to repair.",
   },
   reason: {
-    name: "Reason",
-    short: "Why comply",
+    name: "Reasons",
+    short: "Why follow the rule",
     debt: "Give reasons that do more than repeat a slogan or point to a person in charge.",
   },
   similarity: {
-    name: "Similarity",
-    short: "Like cases",
-    debt: "State which differences are relevant and apply them without favoritism.",
+    name: "Fair comparison",
+    short: "Similar cases",
+    debt: "Say which differences really matter and use them without favoring friends or insiders.",
   },
   conflict: {
-    name: "Conflict",
-    short: "Collisions",
+    name: "Hard choices",
+    short: "When good things clash",
     debt: "Explain which value comes first, when exceptions apply, and what loss remains.",
   },
   evidence: {
-    name: "Evidence",
-    short: "Facts",
-    debt: "Make factual premises answerable to evidence, uncertainty, and counterevidence.",
+    name: "Facts & evidence",
+    short: "Checking claims",
+    debt: "Let evidence, doubt, and new facts correct the claims the system depends on.",
   },
   usability: {
-    name: "Usability",
-    short: "Finite agents",
-    debt: "Give bounded people usable guidance under time, uncertainty, and pressure.",
+    name: "Real-world use",
+    short: "Guidance under pressure",
+    debt: "Give limited people useful guidance when time and facts are missing.",
   },
   origin: {
-    name: "Origin",
-    short: "Selectors",
-    debt: "Expose how history, emotion, power, identity, and institutions shaped the system.",
+    name: "Where it came from",
+    short: "History and influence",
+    debt: "Show how history, feelings, power, identity, and institutions shaped the system.",
   },
   revision: {
-    name: "Revision",
-    short: "Challenge",
-    debt: "Provide a disciplined route for appeal, correction, repair, and future cases.",
+    name: "Learning & change",
+    short: "Challenge and repair",
+    debt: "Give people a clear path to object, correct mistakes, repair harm, and handle new cases.",
   },
 };
 
@@ -76,31 +76,127 @@ const PHASES = {
   mirror: "Origins and change",
 };
 
-const PLAIN_EXPLANATIONS = {
-  stance: "Some systems say their rules are true for everyone, even when nobody agrees. Others say rules come from a trusted source, a fair group process, or the goals people choose. Pick the best match for the system you are testing.",
-  groundSource: "If the system says its rules are true for everyone, ask how anyone knows that. Is the answer a feeling, an old source, facts about human life, or an argument that can be checked and corrected?",
-  authorityAccess: "Two honest people can read the same text or follow the same tradition and still disagree. This question asks whether the system has a fair way to find and fix mistakes.",
-  constructionAuthority: "A group can vote on a rule, but a vote alone does not explain why every person must accept it. This question asks whether people affected by the rule get a voice, reasons, and a way to object.",
-  indexDiscipline: "A system may say, “This is what we care about,” which is different from saying, “This is a fact built into the universe.” This question asks whether the system keeps that difference clear when emotions run high.",
-  scope: "Draw an imaginary circle around everyone or everything the system cares about directly. Who is inside: only group members, all humans, all beings that can suffer, or different groups for different stated reasons?",
-  boundary: "Rules often look fair until they are used against an enemy or outsider. This question checks whether the system keeps the same basic standards when doing so becomes difficult.",
-  objectFocus: "People can judge different parts of the same event: what someone did, why they did it, what happened, or what a larger institution allowed. A clear system says which part it is judging.",
-  valueCenter: "A value is something the system treats as important, such as reducing suffering, protecting freedom, keeping loyalty, or telling the truth. Choose the value that most often guides the system.",
-  valueRole: "Saying a value matters is only the start. Is it a goal to increase, a line that cannot be crossed, a rule for emergencies, or one value among several?",
-  termStability: "Words like “harm,” “freedom,” and “respect” can mean different things. This question asks whether the system explains what it means and uses the word the same way for friends and opponents.",
-  statusGrammar: "A result can be harmful without making someone guilty. An act can be allowed but still tragic. This question asks whether the system can describe these differences instead of using only “right” and “wrong.”",
-  bridge: "A value does not create a rule by itself. Caring about safety, for example, does not automatically prove that cameras should be everywhere. The system must explain the steps from the value to the rule.",
-  reasonOffer: "A threat or command can make someone obey, but it may not give them a good reason. This question asks what the system can explain to a person who does not already agree.",
-  similarCases: "A system should use the same standards in cases that are alike in the ways that matter. It should not excuse a friend for the same act it condemns in an opponent without explaining the difference.",
-  conflictMethod: "Important values can clash. Telling the truth may put someone in danger. Protecting safety may reduce freedom. This question asks how the system chooses when it cannot fully protect both values.",
-  scenarioTruth: "This story tests whether the system has a clear exception to a truth-telling rule. It also checks whether the system can admit that even a needed lie may leave trust or other concerns to repair.",
-  scenarioScarcity: "There is no option that helps everyone. The system must explain which facts matter, how it compares different needs, and how it breaks a tie without quietly favoring someone.",
-  scenarioLoyalty: "Groups often change their standards when a trusted leader is accused. This question asks whether the same evidence rules, safety steps, and chance to appeal apply to insiders and outsiders.",
-  facts: "Many value arguments depend on facts: whether a policy reduces harm, whether punishment works, or whether a danger is real. This question asks what evidence could prove the system wrong about those facts.",
-  finiteAgent: "Real people are tired, rushed, scared, and missing information. A useful system should still give them safe starting rules, ways to ask for help, and steps for fixing mistakes.",
-  genealogy: "Our beliefs are shaped by family, religion, class, fear, painful experiences, culture, and power. Learning that history does not prove a belief false. It can show why the system notices some people or problems and misses others.",
-  challenge: "A good system needs both stability and a way to learn. This question asks who may challenge a rule, what evidence can change it, and which parts can or cannot be revised.",
-  repair: "Admitting a mistake is not enough if nothing changes. Repair can include an apology, payment, corrected records, protection from more harm, a new rule, and later review.",
+const QUESTION_GUIDES = {
+  stance: {
+    plain: "Before we test the rules, we need to know where the system thinks they come from. It may say the rules are true for everyone. It may trust a sacred source or leader. It may build rules through agreement. Or it may simply organize the goals that people choose.",
+    example: "A rule against cheating might be described as a fact that is always true, a command from God, an agreement made by a school, or a useful rule for protecting trust. Those are four different starting points.",
+    reveals: "Your answer shows what kind of support the system owes us. A universal fact needs a way to be known. A command needs a trusted source. A shared rule needs a fair process. A chosen goal needs a clear owner and purpose.",
+  },
+  groundSource: {
+    plain: "The system says some rules are true even when people disagree. We are asking how anyone can find those truths and tell a good answer from a mistake.",
+    example: "Someone says, “Stealing is always wrong.” How do they know? They might point to a strong inner feeling, an old text, facts about trust and harm, or an argument that other people can test.",
+    reveals: "Your answer shows whether the system gives us a real way to check its claims or mostly asks us to trust a feeling, tradition, or person.",
+  },
+  authorityAccess: {
+    plain: "People who trust the same source can still disagree about what it means. A strong system needs a way to hear the disagreement and correct a bad reading.",
+    example: "Two sincere members of the same religion read the same passage but reach opposite answers about divorce. Who listens, what evidence matters, and what could change either answer?",
+    reveals: "Your answer shows whether mistakes can be found from outside the group in charge, or whether that group always gets the final word.",
+  },
+  constructionAuthority: {
+    plain: "A vote or meeting can make a rule, but that does not make the rule fair by itself. We are asking who had a voice, who carries the cost, and what people can do if they object.",
+    example: "A town votes for a youth curfew. Most voters are adults, while teenagers must live under the rule. Did the people most affected get heard? Can they challenge it later?",
+    reveals: "Your answer shows whether the process includes the people it controls and whether the rule has clear limits.",
+  },
+  indexDiscipline: {
+    plain: "There is a difference between saying “we deeply oppose this” and saying “the universe itself says this is wrong.” This question asks whether the system keeps that difference clear.",
+    example: "A community may strongly oppose cruelty because its members care about suffering. That is a clear human commitment. Calling cruelty a fact written into reality adds a much bigger claim.",
+    reveals: "Your answer shows whether the system honestly names whose values are speaking, or gives human choices the sound of universal facts.",
+  },
+  scope: {
+    plain: "Imagine drawing a circle around everyone whose needs matter in their own right. Who is inside the circle? Who is outside it? The circle can include people, animals, future people, or other living systems.",
+    example: "When a city builds a dam, should it count only current taxpayers? What about nearby families, animals, people living downstream, and children who will live there later?",
+    reveals: "Your answer shows how wide the system’s concern reaches and whether it can explain where it draws the line.",
+  },
+  boundary: {
+    plain: "A system’s promise to care for people is easiest when those people are friendly. The real test comes when the person is an enemy, outsider, prisoner, or critic.",
+    example: "A country may ban torture for its own citizens but allow it for enemy prisoners. If both can feel pain and both are helpless, what difference is supposed to matter?",
+    reveals: "Your answer shows whether the system uses one steady rule or lowers its standards when doing so helps its own side.",
+  },
+  objectFocus: {
+    plain: "One event has many parts. We can judge what a person did, why they did it, what happened next, or what a larger group allowed. These parts may deserve different answers.",
+    example: "A rich person gives money to a hospital to hide a scandal. The gift helps patients, the motive is selfish, and the company may still be harming workers. Which part are we judging?",
+    reveals: "Your answer shows whether the system can keep these parts separate or jumps between them to protect the answer it already wants.",
+  },
+  valueCenter: {
+    plain: "A value is simply something the system treats as important. Common values include safety, freedom, care, honesty, loyalty, fairness, and less suffering.",
+    example: "A school phone ban may protect attention and safety, but reduce freedom and contact with family. Which concern gets noticed first tells us a lot about the system.",
+    reveals: "Your answer names the system’s main concern. It also points to concerns the system may overlook.",
+  },
+  valueRole: {
+    plain: "It is not enough to say that something matters. We also need to know how it guides a choice. Is it a goal, a firm limit, a starting rule, or one concern that can be outweighed by another?",
+    example: "A school values safety. Does that mean “make students as safe as possible,” “never cross this danger line,” or “usually choose safety unless freedom has a stronger claim”?",
+    reveals: "Your answer shows whether the value has a clear job or is used in a new way whenever the system needs a certain result.",
+  },
+  termStability: {
+    plain: "Important words can change meaning without anyone noticing. We are asking whether words such as harm, safety, freedom, consent, and respect mean roughly the same thing from one case to the next.",
+    example: "A school may call physical danger a safety issue in one case, then call simple disagreement a safety issue in another. The word has grown, but the school may act as if nothing changed.",
+    reveals: "Your answer shows whether the system’s words place real limits on its decisions or stretch to fit almost any decision.",
+  },
+  statusGrammar: {
+    plain: "“Right” and “wrong” are often too simple. An action can cause harm without making someone guilty. A person can be excused while repair is still needed. A choice can be allowed and still be sad.",
+    example: "A child breaks a window after being pushed. The window is damaged, but the child may not be at fault. The owner still needs repair. One word cannot describe all of that.",
+    reveals: "Your answer shows whether the system can describe what actually happened or forces every case into one big yes-or-no judgment.",
+  },
+  bridge: {
+    plain: "A concern does not automatically prove a rule. The system must show the steps between “this matters” and “everyone must do this.”",
+    example: "Safety matters, but that alone does not prove that every school needs cameras in every room. We still need facts about risk, privacy, cost, other choices, and limits on who sees the video.",
+    reveals: "Your answer shows whether the system explains its reasoning or hides the hardest step inside a serious-sounding value word.",
+  },
+  reasonOffer: {
+    plain: "A command can make people obey. A threat can also make people obey. A reason is different: it helps another person understand why the rule connects to things that matter in the case.",
+    example: "“Follow this rule because I am in charge” may work inside a team. A person outside the team may need a reason about safety, trust, cost, or harm before the rule makes sense.",
+    reveals: "Your answer shows whether the system can explain itself to people who do not already trust its leaders, texts, or traditions.",
+  },
+  similarCases: {
+    plain: "People often judge the same action differently depending on who did it. A fair system must explain which differences really matter instead of quietly favoring friends.",
+    example: "Two politicians tell the same kind of lie. A voter excuses the one on their own side but condemns the other. What fact about the cases makes different treatment fair?",
+    reveals: "Your answer shows whether the system checks for favoritism and uses the same standards for allies and opponents.",
+  },
+  conflictMethod: {
+    plain: "Good things can pull in opposite directions. Honesty may conflict with safety. Freedom may conflict with care. Sometimes no choice protects everything.",
+    example: "A doctor wants to respect a patient’s choice but also fears the patient does not understand a deadly risk. Both freedom and protection matter. Which one leads, and when?",
+    reveals: "Your answer shows whether the system has a clear way to choose in hard cases or simply follows whichever value feels strongest at the moment.",
+  },
+  scenarioTruth: {
+    plain: "This story puts honesty and protection in direct conflict. We are not asking whether lying is usually good. We are asking whether the system can explain an exception when telling the truth may lead to serious harm.",
+    example: "If the system allows a lie, it can ask how close and serious the danger must be. If it forbids the lie, it must explain why honesty matters more than your friend’s safety here.",
+    reveals: "Your answer shows how the system handles exceptions, danger, and any harm or loss that remains after the choice.",
+  },
+  scenarioScarcity: {
+    plain: "There is not enough medicine for everyone. Every choice leaves someone without help. The system must decide which facts matter and how to break a tie.",
+    example: "Should the dose go to the sickest person, the person most likely to recover, the youngest person, the first to arrive, or be chosen by lottery? Each rule protects something different.",
+    reveals: "Your answer shows whether the system has open rules for comparing needs or leaves the choice to hidden personal preference.",
+  },
+  scenarioLoyalty: {
+    plain: "Groups often want to protect people they trust. They also need to protect anyone who may have been harmed. This story asks whether loyalty changes the rules for evidence and review.",
+    example: "If the accused leader were a stranger, would the group demand the same amount of proof? Would it offer the same safety to the person making the report?",
+    reveals: "Your answer shows whether the system can examine its own leaders fairly or gives insiders special protection.",
+  },
+  facts: {
+    plain: "Many value claims depend on ordinary facts. A system may say a punishment prevents crime or a policy makes people safer. Those claims can be tested.",
+    example: "A city creates a youth curfew because leaders say it will reduce violence. Later, good data show that violence stayed the same while harmless teenagers were stopped more often.",
+    reveals: "Your answer shows whether unwanted facts can change the rule or whether the system protects its favorite story from evidence.",
+  },
+  finiteAgent: {
+    plain: "Real people have little time, incomplete facts, strong feelings, and limited energy. A useful system must help them act before they can study every detail.",
+    example: "A nurse in an emergency cannot calculate every possible result. The nurse needs a safe first step, a clear role, a way to call for help, and a plan for checking the choice later.",
+    reveals: "Your answer shows whether the system works in real life or only for an imaginary person with perfect knowledge and unlimited time.",
+  },
+  genealogy: {
+    plain: "Our values have a history. Family, religion, culture, fear, painful events, social class, and power all shape what feels obvious to us. Learning that history does not prove a belief wrong.",
+    example: "A person may feel that a harmless custom is disgusting because they were trained from childhood to avoid it. Knowing where the feeling came from helps them ask whether it still tracks a real danger.",
+    reveals: "Your answer shows whether the system can examine its own blind spots or treats its starting beliefs as too special to question.",
+  },
+  challenge: {
+    plain: "A system needs steady rules, but it also needs a way to learn. We are asking who can raise a problem, what can change a decision, and how a case can be reviewed.",
+    example: "A school rule harms students with disabilities in a way leaders did not expect. Can those students speak safely? Can facts change the rule? Who decides, and when is the new rule checked?",
+    reveals: "Your answer shows whether the system can correct honest mistakes or mainly protects the people already in charge.",
+  },
+  repair: {
+    plain: "Saying “we were wrong” is only the beginning. Repair asks what the system will do about the harm and how it will stop the same failure from happening again.",
+    example: "A company wrongly fires a worker. Repair might include an apology, lost pay, a corrected record, a changed policy, protection from payback, and a later check that the fix worked.",
+    reveals: "Your answer shows whether the system treats regret as enough or connects learning to real changes, protection, and follow-up.",
+  },
 };
 
 const question = (config) => config;
@@ -110,30 +206,30 @@ const QUESTIONS = [
     id: "stance",
     phase: "ground",
     axis: "Where the rules come from",
-    prompt: "Why does this system say its rules should count?",
+    prompt: "Where does this system think its rules come from?",
     context:
-      "Start below the slogans. Does the system find rules that are true for everyone, receive rules from a source, build shared rules, or organize values chosen by people?",
+      "Pick the answer that best fits. The rules may be universal truths, commands from a trusted source, agreements people make, or tools for reaching chosen goals.",
     why: "Your answer decides which follow-up questions you will see.",
     dimensions: ["reason", "origin"],
     choices: [
-      { id: "objective", label: "It finds moral facts that are true for everyone", detail: "Its answers stay true even if every person and institution disagrees.", scores: { reason: 1, origin: 1 } },
-      { id: "authority", label: "It receives standards from an authority", detail: "A deity, tradition, text, nature, leader, or institution supplies the rules.", scores: { reason: 1, origin: 1 } },
-      { id: "constructed", label: "It builds fair rules people can share", detail: "The rules come from a fair process, agreement, or reasons people can give each other.", scores: { reason: 2, origin: 2 } },
-      { id: "indexed", label: "It organizes values chosen by people", detail: "Each claim names whose goals, needs, group, or practice it comes from.", scores: { reason: 3, origin: 3 } },
+      { id: "objective", label: "The rules are true for everyone", detail: "They stay true even if every person and group disagrees.", scores: { reason: 1, origin: 1 } },
+      { id: "authority", label: "The rules come from a trusted source", detail: "The source may be God, a sacred text, tradition, nature, a leader, or an institution.", scores: { reason: 1, origin: 1 } },
+      { id: "constructed", label: "People build fair rules together", detail: "The rules come from agreement, discussion, or a fair decision process.", scores: { reason: 2, origin: 2 } },
+      { id: "indexed", label: "The rules help people reach chosen goals", detail: "The system clearly says whose goals, needs, or group it serves.", scores: { reason: 3, origin: 3 } },
     ],
   }),
   question({
     id: "groundSource",
     phase: "ground",
-    axis: "Source of the rule",
-    prompt: "How does the system know its rules are true?",
-    context: "A serious source claim must say more than “it is obvious” or “everyone knows.”",
+    axis: "How does it know?",
+    prompt: "How can people know these rules are true?",
+    context: "“It is obvious” and “everyone knows” do not give us a way to check an answer.",
     why: "A rule said to be true for everyone needs a clear way to find and correct it.",
     dimensions: ["reason", "evidence"],
     when: (a) => ["objective", "authority"].includes(a.stance),
     choices: [
-      { id: "intuition", label: "Immediate intuition or conscience", detail: "Some judgments present themselves as self-evident.", scores: { reason: 0, evidence: 0 } },
-      { id: "tradition", label: "Tradition, text, or established office", detail: "A historically authoritative source fixes the standard.", scores: { reason: 1, evidence: 1 } },
+      { id: "intuition", label: "A strong inner feeling", detail: "Some answers simply feel certain or obvious.", scores: { reason: 0, evidence: 0 } },
+      { id: "tradition", label: "A tradition, text, or trusted leader", detail: "An accepted source tells people what the rule is.", scores: { reason: 1, evidence: 1 } },
       { id: "nature", label: "Facts about human nature and social life", detail: "Facts about health, choice, or how people live together support the rules.", scores: { reason: 2, evidence: 2 } },
       { id: "argument", label: "An argument anyone can check", detail: "The system explains its source, what could prove it wrong, and how errors are fixed.", scores: { reason: 3, evidence: 3 } },
     ],
@@ -142,8 +238,8 @@ const QUESTIONS = [
     id: "authorityAccess",
     phase: "ground",
     axis: "Finding and fixing mistakes",
-    prompt: "When sincere interpreters disagree, what can correct them?",
-    context: "Confidence, social standing, and intensity are not yet methods of correction.",
+    prompt: "When honest people disagree, how can the system find a mistake?",
+    context: "Being confident, important, or deeply upset does not prove that an answer is correct.",
     why: "A claimed fact may be protected from criticism if no one can show it is wrong.",
     dimensions: ["evidence", "revision"],
     when: (a) => ["objective", "authority"].includes(a.stance),
@@ -158,15 +254,15 @@ const QUESTIONS = [
     id: "constructionAuthority",
     phase: "ground",
     axis: "Rules made by a group",
-    prompt: "Why does the chosen procedure bind someone who rejects it?",
+    prompt: "Why should someone follow a group rule they did not accept?",
     context: "A process can create a rule. It still must explain who took part, who was left out, and what happens to people who disagree.",
     why: "A process is not fair simply because it produces an answer.",
     dimensions: ["reason", "domain"],
     when: (a) => a.stance === "constructed",
     choices: [
-      { id: "must", label: "Any rational person must accept it", detail: "Rejection is treated as irrational by definition.", scores: { reason: 1, domain: 1 } },
-      { id: "majority", label: "Collective acceptance is enough", detail: "Once the group decides, holdouts are bound.", scores: { reason: 1, domain: 1 } },
-      { id: "affected", label: "Affected parties receive standing and reasons", detail: "The procedure includes those burdened and exposes tradeoffs.", scores: { reason: 3, domain: 3 } },
+      { id: "must", label: "Any reasonable person should accept it", detail: "People who reject the rule are treated as unreasonable.", scores: { reason: 1, domain: 1 } },
+      { id: "majority", label: "The group’s decision is enough", detail: "Once most people decide, everyone must follow the rule.", scores: { reason: 1, domain: 1 } },
+      { id: "affected", label: "People affected by the rule get a voice", detail: "They can hear the reasons, describe the costs, and object safely.", scores: { reason: 3, domain: 3 } },
       { id: "limited", label: "It applies only inside the named group or institution", detail: "The rule has clear limits, ways to object, and ways to leave when possible.", scores: { reason: 3, domain: 2 } },
     ],
   }),
@@ -174,179 +270,179 @@ const QUESTIONS = [
     id: "indexDiscipline",
     phase: "ground",
     axis: "Keeping claims tied to their source",
-    prompt: "Does the system always say whose values it is using?",
-    context: "“We oppose this” can quietly become “reality condemns this” when pressure rises.",
+    prompt: "Does the system say whose values are speaking?",
+    context: "“We strongly oppose this” is not the same claim as “this is wrong for everyone everywhere.”",
     why: "Strong feelings do not become facts for everyone just because stronger words are used.",
     dimensions: ["meaning", "reason"],
     when: (a) => a.stance === "indexed",
     choices: [
-      { id: "slips", label: "It sometimes speaks objectively for force", detail: "Universal moral language is useful when the stakes are high.", scores: { meaning: 1, reason: 1 } },
-      { id: "mostly", label: "It usually names the relevant aims", detail: "Some inherited moral terms remain intentionally loose.", scores: { meaning: 2, reason: 2 } },
-      { id: "always", label: "Every verdict retains its source and scope", detail: "The system names whose values, which practice, and what status is at issue.", scores: { meaning: 3, reason: 3 } },
+      { id: "slips", label: "Sometimes it talks as if its values bind everyone", detail: "Stronger moral language is used when the issue feels very serious.", scores: { meaning: 1, reason: 1 } },
+      { id: "mostly", label: "It usually says which goals matter", detail: "Some words such as “right” and “wrong” are still left loose.", scores: { meaning: 2, reason: 2 } },
+      { id: "always", label: "It always names the people, goals, and setting", detail: "The reader can tell where each judgment comes from and how far it reaches.", scores: { meaning: 3, reason: 3 } },
     ],
   }),
   question({
     id: "scope",
     phase: "circle",
-    axis: "01 — Domain test",
-    prompt: "Draw the circle. Who counts directly?",
-    context: "Choose the description closest to the system’s actual scope—not its most flattering slogan.",
-    why: "Before a verdict, a system must say whose standing enters the architecture.",
+    axis: "01 — Who is included?",
+    prompt: "Who matters for their own sake?",
+    context: "Choose what the system really does, not what its nicest slogan seems to promise.",
+    why: "A system must say whose needs count before it can judge a choice.",
     dimensions: ["domain"],
     choices: [
       { id: "tribe", label: "Members, citizens, believers, or chosen insiders", detail: "Outsiders matter mainly through their effects on the group.", scores: { domain: 1 } },
-      { id: "human", label: "All humans", detail: "Human membership supplies direct standing.", scores: { domain: 2 } },
-      { id: "sentient", label: "All beings capable of experience", detail: "Animals, future persons, and possible minds enter by stated criteria.", scores: { domain: 3 } },
-      { id: "layered", label: "A layered, explicitly defended domain", detail: "Different beings can have different standing, with reasons for each boundary.", scores: { domain: 3 } },
+      { id: "human", label: "All human beings", detail: "Every human matters simply because they are human.", scores: { domain: 2 } },
+      { id: "sentient", label: "Every being that can feel or experience", detail: "This may include animals, future people, and possible future minds.", scores: { domain: 3 } },
+      { id: "layered", label: "Different beings matter in different ways", detail: "The system gives a clear reason for each difference.", scores: { domain: 3 } },
     ],
   }),
   question({
     id: "boundary",
     phase: "circle",
-    axis: "01 — Domain test",
-    prompt: "What happens when an enemy, outsider, or dissenter becomes inconvenient?",
-    context: "The hard boundary case reveals whether the circle is principled or decorative.",
-    why: "A domain that expands and contracts with advantage is structurally insolvent.",
+    axis: "01 — Who is included?",
+    prompt: "Do enemies and outsiders still count?",
+    context: "A promise to care for people is hardest to keep when those people threaten, criticize, or oppose the group.",
+    why: "The system is inconsistent if people stop mattering whenever that helps its own side.",
     dimensions: ["domain", "similarity"],
     choices: [
-      { id: "excluded", label: "Their standing can be suspended", detail: "Severe threat, betrayal, or dissent can move them outside the circle.", scores: { domain: 0, similarity: 0 } },
+      { id: "excluded", label: "They can stop counting", detail: "A serious threat, betrayal, or disagreement can move them outside the circle.", scores: { domain: 0, similarity: 0 } },
       { id: "reduced", label: "They count, but by a lower standard", detail: "Insiders retain stronger protection even in otherwise similar cases.", scores: { domain: 1, similarity: 1 } },
-      { id: "criteria", label: "Only stated, case-relevant differences matter", detail: "Threat may change treatment, but not erase standing wholesale.", scores: { domain: 3, similarity: 3 } },
-      { id: "same", label: "The same baseline applies to all", detail: "Exceptions require public criteria and do not depend on identity.", scores: { domain: 3, similarity: 3 } },
+      { id: "criteria", label: "Only clear differences in the case matter", detail: "A threat may change the response, but it does not erase the person’s basic needs.", scores: { domain: 3, similarity: 3 } },
+      { id: "same", label: "The same basic rule applies to everyone", detail: "Any exception must have a public reason that is not based only on identity.", scores: { domain: 3, similarity: 3 } },
     ],
   }),
   question({
     id: "objectFocus",
     phase: "circle",
-    axis: "02 — Object test",
-    prompt: "When the system judges a case, what exactly is under examination?",
-    context: "A generous act can help in outcome and manipulate in motive. A neutral rule can discriminate in effect.",
-    why: "Object sliding lets a system move from act to motive to outcome whenever one verdict is threatened.",
+    axis: "02 — What part are we judging?",
+    prompt: "Which part of the case is the system judging?",
+    context: "The action, the reason for it, the result, and the larger system around it may deserve different answers.",
+    why: "A system can protect its favorite answer by quietly switching from one part of the case to another.",
     dimensions: ["object"],
     choices: [
-      { id: "single", label: "One favored object decides", detail: "Consequences, intentions, character, or rules usually settle the case alone.", scores: { object: 1 } },
-      { id: "intuitive", label: "The relevant object is context-sensitive", detail: "People can usually tell what deserves judgment without a formal inventory.", scores: { object: 2 } },
-      { id: "plural", label: "The system separates several objects", detail: "Act, motive, outcome, rule, institution, relationship, and repair can receive distinct findings.", scores: { object: 3 } },
-      { id: "shifts", label: "It follows whichever object best protects the conclusion", detail: "Motive matters in some cases, outcome in others, without a stated rule.", scores: { object: 0 } },
+      { id: "single", label: "One part usually decides the whole case", detail: "The result, intention, character, or rule normally settles everything.", scores: { object: 1 } },
+      { id: "intuitive", label: "The situation tells us which part matters", detail: "People use judgment to focus on the right part of each case.", scores: { object: 2 } },
+      { id: "plural", label: "The system judges each part separately", detail: "The act, motive, result, rule, institution, relationship, and repair can get different answers.", scores: { object: 3 } },
+      { id: "shifts", label: "It focuses on whichever part supports its answer", detail: "The motive matters in one case and the result in another, with no clear reason for the switch.", scores: { object: 0 } },
     ],
   }),
   question({
     id: "valueCenter",
     phase: "circle",
-    axis: "03 — Value test",
-    prompt: "What is the system’s center of gravity?",
-    context: "Every architecture directs attention. Name the value that most reliably wins its attention.",
-    why: "Naming a value reveals what the system notices—and what it is likely to erase.",
+    axis: "03 — What matters most?",
+    prompt: "What does the system care about most?",
+    context: "Choose the concern that most often guides its attention and choices.",
+    why: "The main concern shows us what the system notices and what it may miss.",
     dimensions: ["value"],
     choices: [
-      { id: "welfare", label: "Welfare and the reduction of suffering", detail: "Outcomes for affected beings take priority.", scores: { value: 2 } },
-      { id: "agency", label: "Agency, freedom, and consent", detail: "Control over one’s life constrains other aims.", scores: { value: 2 } },
-      { id: "order", label: "Order, loyalty, purity, or sacred alignment", detail: "Belonging and continuity provide the system’s structure.", scores: { value: 2 } },
-      { id: "plural", label: "A named plurality of values", detail: "Welfare, agency, care, trust, fairness, truth, and recognition play different roles.", scores: { value: 3 } },
+      { id: "welfare", label: "Less suffering and better lives", detail: "What happens to the people or beings affected comes first.", scores: { value: 2 } },
+      { id: "agency", label: "Freedom, choice, and consent", detail: "People should have control over their own lives.", scores: { value: 2 } },
+      { id: "order", label: "Order, loyalty, purity, or sacred rules", detail: "Belonging, stability, and keeping important traditions come first.", scores: { value: 2 } },
+      { id: "plural", label: "Several clearly named concerns", detail: "Care, safety, freedom, trust, fairness, truth, and belonging each have a different job.", scores: { value: 3 } },
     ],
   }),
   question({
     id: "valueRole",
     phase: "circle",
-    axis: "03 — Value test",
-    prompt: "What role does that value play?",
-    context: "A value can be an end, constraint, threshold, default, tie-breaker, ideal, or repair trigger.",
-    why: "A list of values is not yet an architecture.",
+    axis: "03 — What matters most?",
+    prompt: "How does the main concern guide a choice?",
+    context: "It may be a goal to increase, a line not to cross, a usual starting point, or one concern among several.",
+    why: "Naming a concern is not enough. The system must explain what the concern does.",
     dimensions: ["value", "conflict"],
     choices: [
-      { id: "absolute", label: "It is absolute", detail: "The central value cannot be overridden without betraying the system.", scores: { value: 1, conflict: 0 } },
-      { id: "maximize", label: "It should be maximized overall", detail: "Other concerns enter insofar as they affect the master value.", scores: { value: 2, conflict: 1 } },
-      { id: "threshold", label: "It sets thresholds and constraints", detail: "Its role changes in predictable ways when limits are crossed.", scores: { value: 3, conflict: 2 } },
-      { id: "roles", label: "Different values have explicit roles", detail: "Ends, constraints, tie-breakers, and repair triggers are distinguished.", scores: { value: 3, conflict: 3 } },
+      { id: "absolute", label: "It can never be set aside", detail: "Choosing against it would betray the whole system.", scores: { value: 1, conflict: 0 } },
+      { id: "maximize", label: "The system tries to produce as much of it as possible", detail: "Other concerns matter mainly when they help or hurt this one.", scores: { value: 2, conflict: 1 } },
+      { id: "threshold", label: "It sets a clear limit or danger line", detail: "The system says what changes when that line is crossed.", scores: { value: 3, conflict: 2 } },
+      { id: "roles", label: "Different concerns have different jobs", detail: "The system says which are goals, limits, starting rules, tie-breakers, or reasons for repair.", scores: { value: 3, conflict: 3 } },
     ],
   }),
   question({
     id: "termStability",
     phase: "grammar",
-    axis: "04 — Meaning test",
-    prompt: "How stable are its words under pressure?",
+    axis: "04 — Do important words stay clear?",
+    prompt: "Do key words keep the same meaning?",
     context: "Think of terms such as harm, freedom, dignity, consent, respect, safety, care, justice, and authority.",
-    why: "If the handles are rubber, the system can pull any case toward a favored verdict.",
+    why: "If a word can stretch to mean almost anything, it cannot place a real limit on a decision.",
     dimensions: ["meaning"],
     choices: [
-      { id: "elastic", label: "Their meaning follows the case", detail: "Context and felt seriousness decide how broadly a term applies.", scores: { meaning: 0 } },
-      { id: "ordinary", label: "Ordinary language is usually enough", detail: "Borderlines are resolved by common usage and judgment.", scores: { meaning: 2 } },
-      { id: "operational", label: "Core words have clear tests for when they apply", detail: "Some hard cases remain, but the definitions limit friends and opponents alike.", scores: { meaning: 3 } },
-      { id: "plural", label: "Multiple senses are named and separated", detail: "Physical harm, status harm, risk, distress, and offense are not collapsed.", scores: { meaning: 3 } },
+      { id: "elastic", label: "The meaning changes with the case", detail: "How serious the case feels decides how wide the word becomes.", scores: { meaning: 0 } },
+      { id: "ordinary", label: "Everyday meaning is usually enough", detail: "People use common speech and judgment for unclear cases.", scores: { meaning: 2 } },
+      { id: "operational", label: "Core words have clear signs or tests", detail: "Some hard cases remain, but the meaning limits friends and opponents alike.", scores: { meaning: 3 } },
+      { id: "plural", label: "Different meanings are clearly separated", detail: "For example, injury, fear, risk, insult, and unfair treatment are not all called the same kind of harm.", scores: { meaning: 3 } },
     ],
   }),
   question({
     id: "statusGrammar",
     phase: "grammar",
-    axis: "05 — Status test",
-    prompt: "How many verdicts can the system speak?",
-    context: "Not every negative evaluation means forbidden, blameworthy, punishable, or irreparable.",
-    why: "A mature grammar preserves scale and separates act, agent, consequence, and repair.",
+    axis: "05 — What kind of judgment is this?",
+    prompt: "Can the system say more than right or wrong?",
+    context: "Causing harm, being at fault, breaking a law, needing repair, and deserving punishment are different things.",
+    why: "A useful system should describe the act, the person, the result, and the needed response separately.",
     dimensions: ["status"],
     choices: [
-      { id: "binary", label: "Right or wrong", detail: "Clear binary classification gives the system force and simplicity.", scores: { status: 0 } },
+      { id: "binary", label: "Only right or wrong", detail: "Two clear choices keep the system simple and forceful.", scores: { status: 0 } },
       { id: "three", label: "Required, allowed, or forbidden", detail: "These three labels handle most cases.", scores: { status: 2 } },
-      { id: "rich", label: "A rich, separated status grammar", detail: "Justified, excused, blameworthy, tragic, admirable, illegal, and repair-demanding can diverge.", scores: { status: 3 } },
-      { id: "expressive", label: "It avoids verdicts and names responses", detail: "Opposition, warning, sanction, withdrawal, or repair are specified directly.", scores: { status: 3 } },
+      { id: "rich", label: "It uses several separate judgments", detail: "An act can be allowed, excused, harmful, sad, admirable, illegal, or in need of repair in different combinations.", scores: { status: 3 } },
+      { id: "expressive", label: "It names the response instead of giving a moral label", detail: "It says whether to warn, oppose, limit, leave, punish, protect, or repair.", scores: { status: 3 } },
     ],
   }),
   question({
     id: "bridge",
     phase: "grammar",
-    axis: "06 — Generation test",
+    axis: "06 — How does a value become a rule?",
     prompt: "How does “this matters” become “do this”?",
     context: "Safety does not automatically justify surveillance. Truth does not automatically forbid every lie.",
-    why: "The bridge from value to rule is where slogans most often masquerade as reasoning.",
+    why: "A serious value word can hide a missing step in the reasoning.",
     dimensions: ["generation"],
     choices: [
-      { id: "automatic", label: "The value carries its own demand", detail: "If something truly matters, the corresponding obligation follows.", scores: { generation: 0 } },
-      { id: "principle", label: "A general principle connects them", detail: "The system uses a stable rule, though exceptions rely on judgment.", scores: { generation: 2 } },
-      { id: "explicit", label: "Rules, thresholds, roles, and exceptions are explicit", detail: "Relevant case features and competing values are named at the bridge.", scores: { generation: 3 } },
-      { id: "procedure", label: "A contestable procedure generates guidance", detail: "Affected parties, evidence, safeguards, and review shape the output.", scores: { generation: 3 } },
+      { id: "automatic", label: "If it matters, the rule follows automatically", detail: "No other step or explanation is needed.", scores: { generation: 0 } },
+      { id: "principle", label: "A general rule connects the value to the choice", detail: "The rule stays steady, though people still judge exceptions.", scores: { generation: 2 } },
+      { id: "explicit", label: "The steps, limits, and exceptions are clear", detail: "The system names the facts that matter and the other concerns that must be weighed.", scores: { generation: 3 } },
+      { id: "procedure", label: "A fair process turns the value into a rule", detail: "People affected can speak, evidence is checked, protections are added, and the rule is reviewed.", scores: { generation: 3 } },
     ],
   }),
   question({
     id: "reasonOffer",
     phase: "grammar",
-    axis: "07 — Reason test",
-    prompt: "What can the system say to someone who does not already agree?",
-    context: "Compliance can be produced by command, shame, threat, or belonging. Justification is a different achievement.",
-    why: "A reason should expose rather than conceal the system’s values and dependencies.",
+    axis: "07 — What reasons does it give?",
+    prompt: "How does it explain a rule to someone who disagrees?",
+    context: "A command, threat, or feeling of shame may cause obedience. That is not the same as helping someone understand the rule.",
+    why: "A good reason makes the system’s goals, facts, and tradeoffs easier to see.",
     dimensions: ["reason"],
     choices: [
-      { id: "authority", label: "The authority itself is the reason", detail: "Rejecting the source places the dissenter outside proper judgment.", scores: { reason: 0 } },
-      { id: "shared", label: "It appeals to values most people share", detail: "Convergence supplies practical force, even if holdouts remain.", scores: { reason: 2 } },
+      { id: "authority", label: "The trusted source is the whole reason", detail: "People who reject the source are treated as outside proper judgment.", scores: { reason: 0 } },
+      { id: "shared", label: "It points to concerns most people share", detail: "Common concerns give the rule force, even if some people still disagree.", scores: { reason: 2 } },
       { id: "indexed", label: "It gives reasons tied to the people and goals involved", detail: "Goals, roles, relationships, evidence, and tradeoffs are made clear.", scores: { reason: 3 } },
-      { id: "public", label: "It offers public reasons and names residual disagreement", detail: "The system does not pretend that every reasonable dissenter is converted.", scores: { reason: 3 } },
+      { id: "public", label: "Anyone can examine the reasons", detail: "The system openly explains the case and admits when reasonable people may still disagree.", scores: { reason: 3 } },
     ],
   }),
   question({
     id: "similarCases",
     phase: "pressure",
-    axis: "08 — Similarity test",
-    prompt: "When ally and opponent do the same thing, what changes?",
-    context: "The relevant question is not whether cases look identical, but whether stated differences genuinely bear on the verdict.",
-    why: "Special pleading often hides behind identity, sympathy, and institutional loyalty.",
+    axis: "08 — Are similar cases treated alike?",
+    prompt: "If a friend and an opponent do the same thing, are they judged the same way?",
+    context: "Different treatment can be fair, but the system must name a real difference in the cases that explains it.",
+    why: "People often excuse their own side without noticing that the standard changed.",
     dimensions: ["similarity"],
     choices: [
-      { id: "loyalty", label: "Relationship and allegiance legitimately change the verdict", detail: "The system permits partial standards for insiders and outsiders.", scores: { similarity: 1 } },
-      { id: "intuition", label: "Context decides; rigid symmetry can be unfair", detail: "Practical judgment identifies which differences matter.", scores: { similarity: 2 } },
-      { id: "criteria", label: "The same relevance criteria apply to both", detail: "Different treatment requires a difference named in advance.", scores: { similarity: 3 } },
-      { id: "audit", label: "The system actively audits asymmetry", detail: "Evidence standards, exceptions, burdens, and mercy are checked for favoritism.", scores: { similarity: 3 } },
+      { id: "loyalty", label: "Friends and insiders may receive better treatment", detail: "The system allows different standards based on loyalty and relationship.", scores: { similarity: 1 } },
+      { id: "intuition", label: "The full situation decides", detail: "A wise person judges which differences matter in each case.", scores: { similarity: 2 } },
+      { id: "criteria", label: "The same clear standards apply to both", detail: "Different treatment needs a difference that was named before knowing who benefits.", scores: { similarity: 3 } },
+      { id: "audit", label: "The system checks itself for favoritism", detail: "It compares evidence rules, exceptions, burdens, and mercy across both sides.", scores: { similarity: 3 } },
     ],
   }),
   question({
     id: "conflictMethod",
     phase: "pressure",
-    axis: "09 — Conflict test",
-    prompt: "What happens when the system’s values genuinely collide?",
+    axis: "09 — What happens when good things clash?",
+    prompt: "What does the system do when two important concerns clash?",
     context: "Truth, care, freedom, safety, loyalty, equality, and repair often pull in different directions.",
-    why: "Conflict denial produces hidden priorities; improvised balancing produces opportunism.",
+    why: "If the system denies the clash, its true priority stays hidden. If it makes up a new answer each time, favoritism can enter.",
     dimensions: ["conflict"],
     choices: [
-      { id: "denial", label: "A correct system has no genuine conflict", detail: "Apparent collisions result from misunderstanding or insufficient insight.", scores: { conflict: 0 } },
-      { id: "judgment", label: "Practical wisdom balances the case", detail: "No mechanical formula can replace mature judgment.", scores: { conflict: 2 } },
-      { id: "priority", label: "Priorities, thresholds, and exceptions are stated", detail: "The method constrains the result before favored identities are known.", scores: { conflict: 3 } },
+      { id: "denial", label: "A correct system has no real clash", detail: "The problem only looks like a conflict because someone has misunderstood it.", scores: { conflict: 0 } },
+      { id: "judgment", label: "A wise person balances the concerns", detail: "No fixed formula can replace careful human judgment.", scores: { conflict: 2 } },
+      { id: "priority", label: "The order, limits, and exceptions are stated", detail: "The method is clear before anyone knows which person or group will benefit.", scores: { conflict: 3 } },
       { id: "remainder", label: "A clear process decides and records what was lost", detail: "The system can act while admitting harm, tragedy, and the need for repair.", scores: { conflict: 3 } },
     ],
   }),
@@ -354,122 +450,122 @@ const QUESTIONS = [
     id: "scenarioTruth",
     phase: "pressure",
     axis: "Your story — truth under pressure",
-    prompt: "A violent pursuer asks where your friend is hiding. What does the system permit?",
-    context: "Truth supports trust. Protection resists foreseeable harm. The case tests whether a favored value has an articulated limit.",
-    why: "This is a targeted stress test of your conflict and bridge rules.",
+    prompt: "A dangerous person asks where your friend is hiding. What may you do?",
+    context: "Honesty supports trust, but a truthful answer may put your friend in serious danger.",
+    why: "This story tests how the system explains an exception when two important concerns clash.",
     dimensions: ["conflict", "generation", "status"],
     when: (_, state) => state.scenario === "truth",
     choices: [
-      { id: "truth", label: "Tell the truth", detail: "Deception remains forbidden; another person’s threat does not authorize it.", scores: { conflict: 1, generation: 2, status: 2 } },
-      { id: "lie", label: "Lie without residue", detail: "Protection overrides truth and fully settles the case.", scores: { conflict: 2, generation: 2, status: 1 } },
-      { id: "protect", label: "Deceive, with a stated protective threshold", detail: "Imminence, severity, evidence, and necessity constrain the exception.", scores: { conflict: 3, generation: 3, status: 3 } },
-      { id: "refuse", label: "Refuse, redirect, or obstruct", detail: "The system seeks an option that protects without making a false assertion.", scores: { conflict: 3, generation: 3, status: 3 } },
+      { id: "truth", label: "Tell the truth", detail: "Lying stays forbidden even when another person is making a threat.", scores: { conflict: 1, generation: 2, status: 2 } },
+      { id: "lie", label: "Lie, and treat the case as fully settled", detail: "Protecting your friend completely outweighs honesty here.", scores: { conflict: 2, generation: 2, status: 1 } },
+      { id: "protect", label: "Lie only when the danger passes a clear line", detail: "The danger must be close, serious, well supported, and hard to prevent another way.", scores: { conflict: 3, generation: 3, status: 3 } },
+      { id: "refuse", label: "Refuse to answer or send the person away", detail: "Try to protect your friend without saying something false.", scores: { conflict: 3, generation: 3, status: 3 } },
     ],
   }),
   question({
     id: "scenarioScarcity",
     phase: "pressure",
     axis: "Your story — sharing the last dose",
-    prompt: "One dose remains. Five need it. What decides?",
+    prompt: "One dose remains and five people need it. How should the choice be made?",
     context: "One patient is sickest, one will benefit most, one arrived first, one is a child, and one is the only caregiver for three dependents.",
-    why: "Scarcity exposes hidden metrics, domain weights, and tie-breakers.",
+    why: "Not everyone can be helped. The choice shows which needs the system counts and how it breaks a tie.",
     dimensions: ["conflict", "value", "similarity"],
     when: (_, state) => state.scenario === "scarcity",
     choices: [
-      { id: "favorite", label: "Professional judgment should choose the most compelling case", detail: "A clinician integrates need, benefit, role, and context holistically.", scores: { conflict: 2, value: 2, similarity: 1 } },
-      { id: "lottery", label: "Use an equal lottery among eligible patients", detail: "A threshold establishes eligibility; chance resolves equal claims.", scores: { conflict: 3, value: 3, similarity: 3 } },
-      { id: "benefit", label: "Maximize expected clinical benefit", detail: "Outcome estimates determine allocation under a public protocol.", scores: { conflict: 2, value: 2, similarity: 3 } },
-      { id: "layered", label: "Use a public, layered priority protocol", detail: "Need, benefit, dependency, fairness, and a final tie-breaker have defined roles.", scores: { conflict: 3, value: 3, similarity: 3 } },
+      { id: "favorite", label: "Let the medical team choose the strongest case", detail: "The team considers need, likely benefit, family role, and the full situation.", scores: { conflict: 2, value: 2, similarity: 1 } },
+      { id: "lottery", label: "Use a lottery among people who meet a clear need level", detail: "Everyone above that level has an equal chance.", scores: { conflict: 3, value: 3, similarity: 3 } },
+      { id: "benefit", label: "Give it to the person most likely to benefit", detail: "A public medical rule uses the best available estimate of recovery.", scores: { conflict: 2, value: 2, similarity: 3 } },
+      { id: "layered", label: "Use several public steps in order", detail: "Need, likely benefit, people who depend on the patient, fairness, and a final tie-breaker each have a stated place.", scores: { conflict: 3, value: 3, similarity: 3 } },
     ],
   }),
   question({
     id: "scenarioLoyalty",
     phase: "pressure",
     axis: "Your story — trusting your own group",
-    prompt: "A trusted leader in your group is credibly accused. What standard applies?",
+    prompt: "A trusted leader in your group is accused of serious harm. What should happen?",
     context: "The accusation is serious but incomplete. Public judgment could harm both the accuser and the accused.",
-    why: "Loyalty becomes corruption when it silently changes evidence and revision standards.",
+    why: "Loyalty becomes unfair when it quietly changes the proof or process required for an insider.",
     dimensions: ["similarity", "evidence", "revision"],
     when: (_, state) => state.scenario === "loyalty",
     choices: [
-      { id: "protect", label: "Protect the leader until proof is conclusive", detail: "Loyalty and reputational risk justify a higher threshold.", scores: { similarity: 0, evidence: 1, revision: 1 } },
-      { id: "believe", label: "Publicly believe the accuser immediately", detail: "Power asymmetry justifies acting before a full process.", scores: { similarity: 1, evidence: 1, revision: 1 } },
-      { id: "process", label: "Use the same protected process as for an outsider", detail: "Interim safeguards, evidence standards, and anti-retaliation rules are specified.", scores: { similarity: 3, evidence: 3, revision: 3 } },
-      { id: "independent", label: "Transfer the case to an independent review", detail: "The group recognizes its conflict of interest and builds a correction path.", scores: { similarity: 3, evidence: 3, revision: 3 } },
+      { id: "protect", label: "Protect the leader until the proof is final", detail: "Trust and the risk to the leader’s name require more proof than usual.", scores: { similarity: 0, evidence: 1, revision: 1 } },
+      { id: "believe", label: "Publicly support the person making the report right away", detail: "The leader’s power makes it reasonable to act before a full review.", scores: { similarity: 1, evidence: 1, revision: 1 } },
+      { id: "process", label: "Use the same fair process used for an outsider", detail: "Add temporary safety steps, steady evidence rules, and protection from payback.", scores: { similarity: 3, evidence: 3, revision: 3 } },
+      { id: "independent", label: "Ask an independent group to review the case", detail: "The group admits that its loyalty may affect its judgment.", scores: { similarity: 3, evidence: 3, revision: 3 } },
     ],
   }),
   question({
     id: "facts",
     phase: "pressure",
-    axis: "10 — Evidence test",
-    prompt: "What can overturn a factual premise the system wants to be true?",
+    axis: "10 — Are factual claims checked?",
+    prompt: "What could show that the system is wrong about the facts?",
     context: "Claims about harm, punishment, health, consent, risk, behavior, or social order can be tested with evidence, even when feelings are strong.",
-    why: "Facts do not replace values, but they constrain how values apply.",
+    why: "Values tell us what matters. Facts help show whether a rule actually protects it.",
     dimensions: ["evidence"],
     choices: [
-      { id: "conviction", label: "Deep conviction can outrank contrary data", detail: "Some truths are known through conscience, revelation, or lived certainty.", scores: { evidence: 0 } },
-      { id: "supportive", label: "Evidence matters when it fits the system’s categories", detail: "Anomalies are considered, but core commitments remain protected.", scores: { evidence: 1 } },
-      { id: "public", label: "Public evidence and uncertainty are explicit", detail: "Allies and opponents face comparable standards and confidence levels.", scores: { evidence: 3 } },
-      { id: "mixed", label: "Statistics and lived testimony correct each other", detail: "Neither anecdotes nor metrics are allowed to erase relevant experience.", scores: { evidence: 3 } },
+      { id: "conviction", label: "A deep belief can outweigh data", detail: "Conscience, revelation, or personal experience can be more trusted than outside evidence.", scores: { evidence: 0 } },
+      { id: "supportive", label: "Evidence matters when it fits the system’s main beliefs", detail: "Odd results are noticed, but the deepest beliefs stay protected.", scores: { evidence: 1 } },
+      { id: "public", label: "Evidence, doubt, and confidence are shown openly", detail: "Friends and opponents face similar proof and the system admits what is still unknown.", scores: { evidence: 3 } },
+      { id: "mixed", label: "Numbers and people’s reports check each other", detail: "A personal story cannot replace strong data, and a number cannot erase real experience.", scores: { evidence: 3 } },
     ],
   }),
   question({
     id: "finiteAgent",
     phase: "pressure",
-    axis: "11 — Usability test",
+    axis: "11 — Can real people use it?",
     prompt: "Can a tired person use the system before all facts are known?",
-    context: "Real agents decide with incomplete information, limited time, bias, fear, role pressure, and unequal power.",
-    why: "A theory usable only by an ideal observer is incomplete as action guidance.",
+    context: "Real people make choices with missing facts, little time, strong feelings, pressure, and unequal power.",
+    why: "A system is not a useful guide if only a perfect person with unlimited time could follow it.",
     dimensions: ["usability"],
     choices: [
-      { id: "ideal", label: "Correct judgment requires full understanding", detail: "Errors by finite agents do not count against the ideal theory.", scores: { usability: 0 } },
-      { id: "virtue", label: "A well-formed person will perceive the answer", detail: "Cultivated character and practical wisdom supply the missing judgment.", scores: { usability: 2 } },
-      { id: "rules", label: "It provides defaults, thresholds, and emergency rules", detail: "Simple guidance is paired with known exceptions and repair paths.", scores: { usability: 3 } },
-      { id: "institutions", label: "It allocates decisions to accountable roles", detail: "Procedures, escalation, documentation, and review handle bounded agency.", scores: { usability: 3 } },
+      { id: "ideal", label: "A correct choice needs full understanding", detail: "Mistakes made by people with limited knowledge do not count against the ideal system.", scores: { usability: 0 } },
+      { id: "virtue", label: "A wise and caring person will see the answer", detail: "Good habits and experience supply the judgment that rules cannot give.", scores: { usability: 2 } },
+      { id: "rules", label: "It gives safe starting rules and emergency steps", detail: "Simple guidance comes with clear exceptions and a way to repair mistakes.", scores: { usability: 3 } },
+      { id: "institutions", label: "It says who decides and who checks the decision", detail: "Clear roles, calls for help, written records, and later review support limited people.", scores: { usability: 3 } },
     ],
   }),
   question({
     id: "genealogy",
     phase: "mirror",
-    axis: "12 — Origin test",
+    axis: "12 — Where did these ideas come from?",
     prompt: "Can people examine where the system came from?",
     context: "Family, religion, class, painful experiences, disgust, fear, care, institutions, history, evidence, and power all shape what we notice.",
     why: "Learning a belief’s history does not prove it wrong. It can reveal hidden priorities and protected interests.",
     dimensions: ["origin"],
     choices: [
       { id: "sacred", label: "Its deepest beliefs are above this kind of review", detail: "Explaining where a belief came from does not affect its truth or authority.", scores: { origin: 0 } },
-      { id: "story", label: "Origins are acknowledged as background", detail: "History is interesting but secondary to current reasoning.", scores: { origin: 2 } },
-      { id: "selectors", label: "The system shows what shaped it and who gains", detail: "Training, exclusions, emotions, and power can all be reviewed.", scores: { origin: 3 } },
+      { id: "story", label: "The history is admitted but does not change much", detail: "Where the belief came from is interesting, but today’s reasons matter more.", scores: { origin: 2 } },
+      { id: "selectors", label: "The system shows what shaped it and who benefits", detail: "Training, people left out, strong feelings, and power can all be reviewed.", scores: { origin: 3 } },
       { id: "counterfactual", label: "It asks whether people with different lives would agree", detail: "Shared evidence and a fair discussion test old assumptions.", scores: { origin: 3 } },
     ],
   }),
   question({
     id: "challenge",
     phase: "mirror",
-    axis: "13 — Revision test",
+    axis: "13 — Can the system learn and change?",
     prompt: "How can people challenge and change the system?",
     context: "A system that changes whenever convenient drifts. A system that cannot change under any pressure hardens.",
     why: "A good system needs both steady rules and a clear way to fix mistakes.",
     dimensions: ["revision"],
     choices: [
-      { id: "closed", label: "Core conclusions cannot be challenged", detail: "Applications may vary, but the authority and central categories are settled.", scores: { revision: 0 } },
+      { id: "closed", label: "The main conclusions cannot be challenged", detail: "Small details may change, but the source and main ideas are settled.", scores: { revision: 0 } },
       { id: "leaders", label: "Trusted leaders decide when change is needed", detail: "Questions and corrections must go through approved leaders or experts.", scores: { revision: 1 } },
-      { id: "appeal", label: "Affected people have protected standing to appeal", detail: "Facts, categories, applications, weights, and procedures can be challenged.", scores: { revision: 3 } },
+      { id: "appeal", label: "People affected can object without being punished", detail: "They can challenge the facts, labels, priorities, decision, and process.", scores: { revision: 3 } },
       { id: "disciplined", label: "It clearly says what can and cannot change", detail: "It names who decides, what evidence matters, how people are protected, and when a case may reopen.", scores: { revision: 3 } },
     ],
   }),
   question({
     id: "repair",
     phase: "mirror",
-    axis: "13 — Revision test",
+    axis: "13 — Can the system learn and change?",
     prompt: "The system admits it caused harm. What happens next?",
-    context: "“Lessons were learned” can be an exit from responsibility rather than an entrance to repair.",
-    why: "Revision becomes real only when it changes future behavior and addresses residue.",
+    context: "Saying “lessons were learned” means little if no one repairs the harm or changes what will happen next.",
+    why: "Learning is real only when it changes behavior and responds to the harm that remains.",
     dimensions: ["revision", "status", "usability"],
     choices: [
-      { id: "verdict", label: "Find the guilty party and give a deserved penalty", detail: "A penalty that fits the act restores accountability and closure.", scores: { revision: 1, status: 1, usability: 2 } },
-      { id: "apology", label: "Acknowledge the error and apologize", detail: "Recognition and regret are the central corrective acts.", scores: { revision: 2, status: 2, usability: 2 } },
-      { id: "repair", label: "Name, repair, redesign, and monitor", detail: "Explanation, restitution, policy change, anti-retaliation, and review are specified.", scores: { revision: 3, status: 3, usability: 3 } },
+      { id: "verdict", label: "Find who is guilty and give a fitting penalty", detail: "The penalty is meant to restore responsibility and close the case.", scores: { revision: 1, status: 1, usability: 2 } },
+      { id: "apology", label: "Admit the error and apologize", detail: "Being honest about the harm and showing regret are the main response.", scores: { revision: 2, status: 2, usability: 2 } },
+      { id: "repair", label: "Name the harm, repair it, change the system, and check again", detail: "Explain what happened, repay losses, change the rule, protect people from payback, and review the fix.", scores: { revision: 3, status: 3, usability: 3 } },
       { id: "context", label: "Choose repair that fits what remains", detail: "Personal blame, system causes, payment, protection, and prevention are kept separate.", scores: { revision: 3, status: 3, usability: 3 } },
     ],
   }),
@@ -500,6 +596,8 @@ const els = {
   why: document.querySelector("#whyThisMatters"),
   plainExplanation: document.querySelector("#plainExplanation"),
   plainExplanationText: document.querySelector("#plainExplanationText"),
+  plainExampleText: document.querySelector("#plainExampleText"),
+  plainRevealText: document.querySelector("#plainRevealText"),
   back: document.querySelector("#backButton"),
   liveSystemName: document.querySelector("#liveSystemName"),
   liveScore: document.querySelector("#liveScore"),
@@ -598,13 +696,13 @@ function detectTensions() {
     add("desert-return", "Deserved punishment returns through the back door", "The system rejects universal moral labels but still jumps to guilt and deserved pain instead of naming goals such as protection, prevention, or repair.");
   }
   if (a.scenarioTruth === "truth" && a.valueCenter === "welfare") {
-    add("truth-welfare", "The pressure case reverses the declared center", "Welfare is the center of gravity, yet truth remains exceptionless when severe foreseeable harm is at stake.");
+    add("truth-welfare", "The story goes against the system’s main concern", "The system says reducing suffering matters most, yet it still requires the truth when serious harm is easy to predict.");
   }
   if (a.scenarioScarcity === "favorite" && a.similarCases === "criteria") {
-    add("scarcity-discretion", "Public symmetry becomes private discretion", "The system endorses relevance criteria in general but leaves the scarcity decision to an unstructured compelling-case judgment.");
+    add("scarcity-discretion", "A clear public rule becomes a private guess", "The system says the same standards should apply to everyone, but leaves the medicine choice to whichever case feels strongest to the medical team.");
   }
   if (["protect", "believe"].includes(a.scenarioLoyalty) && ["criteria", "audit"].includes(a.similarCases)) {
-    add("loyalty-exception", "The shared standard breaks at the group boundary", "The system promises symmetric treatment but changes evidence or process for a trusted leader.", "high");
+    add("loyalty-exception", "The rule changes for a trusted insider", "The system promises the same treatment for similar cases but changes the proof or process for a leader in its own group.", "high");
   }
 
   return tensions;
@@ -646,7 +744,7 @@ function renderLiveDiagnostic() {
 
   els.tensionCount.textContent = tensions.length;
   if (!tensions.length) {
-    els.tensionList.innerHTML = '<p class="empty-tensions">No structural tension detected yet. The engine is listening.</p>';
+    els.tensionList.innerHTML = '<p class="empty-tensions">No answers clash yet. The check is listening.</p>';
     return;
   }
   els.tensionList.innerHTML = tensions
@@ -679,7 +777,10 @@ function renderQuestion() {
   els.questionPrompt.textContent = q.prompt;
   els.questionContext.textContent = q.context;
   els.plainExplanation.open = false;
-  els.plainExplanationText.textContent = PLAIN_EXPLANATIONS[q.id] || q.why;
+  const guide = QUESTION_GUIDES[q.id];
+  els.plainExplanationText.textContent = guide?.plain || q.why;
+  els.plainExampleText.textContent = guide?.example || q.context;
+  els.plainRevealText.textContent = guide?.reveals || q.why;
   els.why.textContent = q.why;
   els.back.style.visibility = state.index === 0 ? "hidden" : "visible";
 
@@ -704,8 +805,7 @@ function renderQuestion() {
   els.choiceList.querySelectorAll(".choice-button").forEach((button) => {
     button.addEventListener("click", () => selectAnswer(q, button.dataset.choice));
   });
-  const questionTop = document.querySelector("#questionCard").offsetTop;
-  window.scrollTo({ top: Math.max(0, questionTop - 96), behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
   renderLiveDiagnostic();
 }
 
@@ -719,16 +819,16 @@ function selectAnswer(q, choiceId) {
 }
 
 function classification(score) {
-  if (score >= 75) return { label: "Solvent", className: "solvent" };
-  if (score >= 50) return { label: "Strained", className: "strained" };
-  return { label: "Debt", className: "debt" };
+  if (score >= 75) return { label: "Clear", className: "solvent" };
+  if (score >= 50) return { label: "Needs work", className: "strained" };
+  return { label: "Major gap", className: "debt" };
 }
 
 function verdictFor(score) {
-  if (score >= 82) return "Architecturally disciplined";
-  if (score >= 68) return "Coherent, with exposed debts";
-  if (score >= 48) return "Structurally strained";
-  return "Insolvent under pressure";
+  if (score >= 82) return "The main parts are clear and fit together";
+  if (score >= 68) return "Mostly clear, with some open questions";
+  if (score >= 48) return "Several parts need more explanation";
+  return "Many parts break down or clash";
 }
 
 function formatSystemType(systemType) {
@@ -748,7 +848,7 @@ function showResults() {
   document.querySelector("#resultsTitle").textContent = `${state.systemName}: the structure revealed`;
   document.querySelector("#resultsSummary").textContent = tensions.length
     ? `The test found ${tensions.length} places where the system’s answers pull against each other. The score rewards clear boundaries, stable meanings, explained reasoning steps, careful use of facts, and real ways to fix mistakes.`
-    : "This path did not trigger a direct contradiction. The score still shows which parts of the system are explained more clearly than others.";
+    : "No two answers directly clashed on this path. The scores still show which parts are clear and which parts need more explanation.";
   document.querySelector("#finalScore").textContent = overall;
   document.querySelector("#finalVerdict").textContent = verdictFor(overall);
   document.querySelector("#strongestAxis").textContent = DIMENSIONS[strongKey].name;
@@ -775,13 +875,13 @@ function showResults() {
         .map(
           (tension) => `
             <article class="final-tension ${tension.severity}">
-              <span class="severity">${tension.severity} tension</span>
+              <span class="severity">${tension.severity === "high" ? "Strong clash" : "Possible clash"}</span>
               <h3>${tension.title}</h3>
               <p>${tension.detail}</p>
             </article>`,
         )
         .join("")
-    : '<p class="no-final-tensions">This path did not trigger a direct contradiction. That is not proof of truth or completeness; it means your answers kept their principal boundaries and procedures mutually compatible.</p>';
+    : '<p class="no-final-tensions">No two answers directly clashed. This does not prove that the system is true or complete. It only means the answers given here fit together.</p>';
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -791,15 +891,15 @@ function buildTextReport() {
   const tensions = detectTensions();
   const overall = calculateOverall(scores, tensions) ?? 0;
   const lines = [
-    "THE COHERENCE ENGINE — DIAGNOSTIC",
+    "THE COHERENCE ENGINE — REPORT",
     state.systemName,
-    `Coherence index: ${overall}/100 — ${verdictFor(overall)}`,
+    `How well the parts fit: ${overall}/100 — ${verdictFor(overall)}`,
     "",
     "THIRTEEN TESTS",
     ...Object.entries(DIMENSIONS).map(([key, dimension], index) => `${String(index + 1).padStart(2, "0")}. ${dimension.name}: ${scores[key] ?? 0}/100`),
     "",
-    "DETECTED TENSIONS",
-    ...(tensions.length ? tensions.map((tension) => `- ${tension.title}: ${tension.detail}`) : ["- No direct contradiction triggered on this path."]),
+    "ANSWERS THAT MAY CLASH",
+    ...(tensions.length ? tensions.map((tension) => `- ${tension.title}: ${tension.detail}`) : ["- No answers directly clashed on this path."]),
     "",
     "LIMIT",
     "A clear and consistent system is not automatically true, fair, kind, wise, or morally binding. This test only checks whether the system explains its own structure and uses it consistently.",
@@ -815,7 +915,7 @@ els.launchForm.addEventListener("submit", (event) => {
   state.scenario = form.get("scenario");
   state.answers = {};
   state.index = 0;
-  els.liveSystemName.textContent = `${state.systemName} under test`;
+  els.liveSystemName.textContent = state.systemName;
   els.intro.classList.add("hidden");
   els.results.classList.add("hidden");
   els.survey.classList.remove("hidden");
@@ -849,11 +949,11 @@ document.querySelector("#copyReportButton").addEventListener("click", async (eve
   const button = event.currentTarget;
   try {
     await navigator.clipboard.writeText(buildTextReport());
-    button.textContent = "Diagnostic copied";
+    button.textContent = "Report copied";
   } catch {
     button.textContent = "Copy unavailable";
   }
-  window.setTimeout(() => (button.textContent = "Copy diagnostic"), 1800);
+  window.setTimeout(() => (button.textContent = "Copy report"), 1800);
 });
 
 renderAxisGrid();
