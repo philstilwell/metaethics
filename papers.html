@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A plain-language reading room for moral non-realism, error theory, expressivism, fictionalism, and life after moral realism."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>Papers — The Coherence Engine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Coherence Engine home">
+        <span class="brand-mark" aria-hidden="true">CE</span>
+        <span>The Coherence Engine</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Test a system</a>
+        <a href="papers.html" aria-current="page">Papers</a>
+      </nav>
+    </header>
+
+    <main class="papers-page">
+      <section class="papers-hero">
+        <div>
+          <p class="kicker">The non-realist reading room</p>
+          <h1>Ideas for a world <em>without a moral realm.</em></h1>
+        </div>
+        <p class="papers-intro">
+          Moral non-realists agree that morality is not a set of special facts built into the universe.
+          They disagree about what moral language is doing and what we should do next. This collection
+          begins with the two papers behind the tool, then opens into several major non-realist paths.
+        </p>
+      </section>
+
+      <div class="papers-layout">
+        <section aria-labelledby="libraryHeading">
+          <div class="library-tools">
+            <div>
+              <p class="kicker">Curated bibliography</p>
+              <h2 id="libraryHeading" class="visually-hidden">Papers on moral non-realism</h2>
+            </div>
+            <div class="library-search">
+              <label for="paperSearch">Search the papers</label>
+              <input id="paperSearch" type="search" placeholder="Search by title, author, or idea" />
+              <span aria-hidden="true">⌕</span>
+            </div>
+            <div class="filter-row" id="filterRow" aria-label="Filter papers by approach"></div>
+            <p class="library-count" id="libraryCount" aria-live="polite"></p>
+          </div>
+          <div class="paper-grid" id="paperGrid"></div>
+        </section>
+
+        <aside class="add-paper-panel">
+          <p class="kicker">Build your own shelf</p>
+          <h2>Add a paper</h2>
+          <p>
+            Add another non-realist paper for your own use. It will be saved only in this browser and
+            will not change the public site or send anything to a server.
+          </p>
+          <form class="paper-form" id="paperForm">
+            <label for="paperTitle">Title</label>
+            <input id="paperTitle" name="title" required maxlength="180" />
+
+            <label for="paperAuthor">Author or authors</label>
+            <input id="paperAuthor" name="author" required maxlength="120" />
+
+            <label for="paperYear">Year</label>
+            <input id="paperYear" name="year" type="number" min="1800" max="2100" required />
+
+            <label for="paperUrl">Link</label>
+            <input id="paperUrl" name="url" type="url" placeholder="https://…" required />
+
+            <label for="paperApproach">Approach</label>
+            <select id="paperApproach" name="approach">
+              <option value="Error theory">Error theory</option>
+              <option value="Expressivism">Expressivism</option>
+              <option value="Fictionalism">Fictionalism</option>
+              <option value="Abolitionism">Abolitionism</option>
+              <option value="Constructivism">Constructivism</option>
+              <option value="Post-error practice">Post-error practice</option>
+              <option value="Other non-realism">Other non-realism</option>
+            </select>
+
+            <label for="paperNote">Why it belongs here</label>
+            <textarea id="paperNote" name="note" maxlength="420" required></textarea>
+
+            <button class="primary-button" type="submit">Add to this browser</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        The collection presents several kinds of moral non-realism. Inclusion does not mean that The
+        Coherence Engine accepts every argument in a paper.
+      </p>
+      <p><a href="index.html">Return to the coherence test</a></p>
+    </footer>
+
+    <script src="papers.js"></script>
+  </body>
+</html>

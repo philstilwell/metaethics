@@ -20,6 +20,8 @@ The survey operationalizes thirteen tests drawn from Phil Stilwell’s work:
 
 The diagnostic uses explicit scoring and contradiction rules in `app.js`. It treats coherence as structural solvency, not as truth, legitimacy, kindness, wisdom, or objective moral authority.
 
+The `papers.html` reading room includes the project’s source papers and a curated set of work on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can add papers to a private shelf stored in their own browser.
+
 ## Run locally
 
 Serve the repository root with any static server, for example:
