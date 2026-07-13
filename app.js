@@ -78,9 +78,9 @@ const PHASES = {
 
 const QUESTION_GUIDES = {
   stance: {
-    plain: "Before we test the rules, we need to know where the system thinks they come from. It may say the rules are true for everyone. It may trust a sacred source or leader. It may build rules through agreement. Or it may simply organize the goals that people choose.",
-    example: "A rule against cheating might be described as a fact that is always true, a command from God, an agreement made by a school, or a useful rule for protecting trust. Those are four different starting points.",
-    reveals: "Your answer shows what kind of support the system owes us. A universal fact needs a way to be known. A command needs a trusted source. A shared rule needs a fair process. A chosen goal needs a clear owner and purpose.",
+    plain: "Before we test the rules, we need to know what kind of claim the system makes. It may claim a truth for everyone, rely on a trusted source, create rules by agreement, avoid taking a view about moral facts, or deny that objective moral facts exist.",
+    example: "A rule against cheating might be presented as a universal truth, a command from God, a school agreement, a useful way to protect trust without discussing moral facts, or a human tool used because no objective moral truth exists.",
+    reveals: "Each answer creates a different test. A universal fact needs a way to be known. A command needs a trusted source. An agreement needs a defined process and reach. A system that avoids the question about moral facts needs clearly named goals. A non-realist system needs stated human aims and limits.",
   },
   groundSource: {
     plain: "The system says some rules are true even when people disagree. We are asking how anyone can find those truths and tell a good answer from a mistake.",
@@ -199,6 +199,105 @@ const QUESTION_GUIDES = {
   },
 };
 
+const QUESTION_BOUNDARIES = {
+  stance: {
+    definition: "“Come from” means what gives the rules their claimed force: a truth that exists without us, a trusted source, a shared agreement, a practical goal that takes no position on moral facts, or an explicit denial of objective moral facts.",
+    scope: "Choose only the system’s basic view about the source of its rules. Do not judge yet whether the rules are kind, useful, true, or followed consistently.",
+  },
+  groundSource: {
+    definition: "“Know” means the method used to tell a true universal rule from a strong feeling, inherited belief, or mistake.",
+    scope: "This asks only how a claim of universal truth is checked. It does not ask whether the rule produces good results or whether most people accept it.",
+  },
+  authorityAccess: {
+    definition: "A “correction method” is a stated way to decide between conflicting readings and to admit that an accepted reading was wrong.",
+    scope: "Focus on disagreement among people who sincerely accept the same source. Do not assume that greater rank, confidence, or popularity proves one reading correct.",
+  },
+  constructionAuthority: {
+    definition: "A rule “binds” someone when the system says that person must follow it even though they did not personally agree.",
+    scope: "Judge only why the decision process has power over non-consenting people. Do not judge the rule’s content or whether breaking it will be punished.",
+  },
+  indexDiscipline: {
+    definition: "To “name whose values are speaking” is to state the person, group, goal, role, or institution from which a judgment gets its force.",
+    scope: "Judge only whether the system keeps human commitments separate from claims about universal moral facts. Do not judge how strongly anyone holds those commitments.",
+  },
+  scope: {
+    definition: "To “matter for their own sake” means that a being’s needs can count directly, not only because helping that being benefits someone else.",
+    scope: "Identify who enters the system’s first circle of concern. Do not decide how much weight each member receives or what action should follow.",
+  },
+  boundary: {
+    definition: "An “enemy or outsider” is someone opposed to, excluded from, or not protected by the group using the system.",
+    scope: "Ask whether basic consideration survives group conflict. This does not ask whether threats must be ignored or whether everyone must receive identical treatment.",
+  },
+  objectFocus: {
+    definition: "The “part being judged” may be the action, intention, motive, result, rule, institution, relationship, character, omission, or attempted repair.",
+    scope: "Identify which part receives each judgment. Do not combine a good result with a good motive, or an individual act with the institution around it, unless the system explains that link.",
+  },
+  valueCenter: {
+    definition: "A “main concern” is what the system treats as important before it turns that concern into a rule or judgment.",
+    scope: "Name what receives attention, not how it should be measured or what action it requires. Those questions come later.",
+  },
+  valueRole: {
+    definition: "A concern’s “job” may be a goal to increase, a line never to cross, a normal starting point, a tie-breaker, or a reason to repair harm.",
+    scope: "State how the main concern operates when making choices. Do not merely repeat that the concern is important.",
+  },
+  termStability: {
+    definition: "A word is “stable” when the same stated signs or tests control its use across friends, opponents, easy cases, and hard cases.",
+    scope: "Judge the meaning of the system’s key words, not whether you like the conclusions reached with those words.",
+  },
+  statusGrammar: {
+    definition: "A “type of judgment” is the exact label placed on an act, person, result, or response—for example harmful, forbidden, excused, illegal, tragic, or in need of repair.",
+    scope: "Ask whether the system keeps these judgments separate. Do not assume that harm proves guilt, or that permission proves approval.",
+  },
+  bridge: {
+    definition: "The “steps from concern to rule” are the stated facts, limits, comparisons, and decision process that connect what matters to what someone must or may do.",
+    scope: "Judge only that connection. Do not treat naming a value—such as safety or freedom—as a complete argument.",
+  },
+  reasonOffer: {
+    definition: "A “reason” explains how a rule connects to stated goals, facts, roles, relationships, or likely results. A command or threat may cause obedience without providing that explanation.",
+    scope: "Consider what can be said to a person who does not already trust the system’s source. Do not require that every person must finally agree.",
+  },
+  similarCases: {
+    definition: "Cases are “similar” when they match on every feature the system has already said matters to the judgment.",
+    scope: "Ask whether identity, friendship, status, or group membership changes the answer without being a stated relevant difference. Identical treatment is not required when a real difference has been named.",
+  },
+  conflictMethod: {
+    definition: "A “clash” occurs when two concerns supported by the same system point toward actions that cannot both be completed.",
+    scope: "Judge the method used to choose under that clash. Do not assume that a hard choice must have a perfectly clean result with no loss.",
+  },
+  scenarioTruth: {
+    definition: "The case assumes the danger is immediate and believable, your answer may affect whether your friend is found, and no authority is available in time.",
+    scope: "Choose what the system permits in this exact emergency. Do not answer about ordinary lies, uncertain rumors, or minor embarrassment.",
+  },
+  scenarioScarcity: {
+    definition: "The case assumes one indivisible dose, five eligible patients, no time to obtain more, and medically reliable information about need and likely benefit.",
+    scope: "Choose the rule for selecting one patient. Do not answer how the shortage arose or whether the health system should later be changed.",
+  },
+  scenarioLoyalty: {
+    definition: "A “serious accusation” means a specific report with enough support to require investigation, but not enough proof to decide guilt in advance.",
+    scope: "Choose the process used while facts are gathered. Do not decide whether the leader or accuser is already guilty, truthful, or lying.",
+  },
+  facts: {
+    definition: "A “factual claim” describes what exists, happened, causes an effect, or is likely to happen. It can be supported or weakened by observation and evidence.",
+    scope: "Judge how the system handles factual claims used in its reasoning. Do not ask evidence alone to decide which goals or values people should choose.",
+  },
+  finiteAgent: {
+    definition: "A “real person” has limited time, knowledge, attention, emotional control, and power, and may have to decide before uncertainty disappears.",
+    scope: "Judge whether the system gives usable guidance under those limits. Do not judge how an all-knowing or perfectly calm person would act.",
+  },
+  genealogy: {
+    definition: "The system’s “origin” includes the history, culture, emotions, interests, power relations, and experiences that shaped what it treats as obvious or important.",
+    scope: "Ask whether those influences may be examined. Finding an influence does not by itself prove a belief true or false.",
+  },
+  challenge: {
+    definition: "A “revision path” states who may object, what kind of evidence can change a decision, who decides, what stays fixed, and when a settled case may reopen.",
+    scope: "Judge whether correction is possible without making every rule change whenever someone complains.",
+  },
+  repair: {
+    definition: "“Repair” means the concrete response after admitted harm: protection, explanation, restored losses, corrected records, changed behavior, changed rules, and later review as needed.",
+    scope: "Choose what follows an admitted failure. Do not re-decide whether the original act happened or whether the system should have prevented every possible harm.",
+  },
+};
+
 const question = (config) => config;
 
 const QUESTIONS = [
@@ -208,14 +307,14 @@ const QUESTIONS = [
     axis: "Where the rules come from",
     prompt: "Where does this system think its rules come from?",
     context:
-      "Pick the answer that best fits. The rules may be universal truths, commands from a trusted source, agreements people make, or tools for reaching chosen goals.",
+      "Choose the one claim the system makes about its rules: universal truth, trusted command, agreement, goal-based guidance that takes no view on moral facts, or a human tool based on denying objective moral facts.",
     why: "Your answer decides which follow-up questions you will see.",
     dimensions: ["reason", "origin"],
     choices: [
       { id: "objective", label: "The rules are true for everyone", detail: "They stay true even if every person and group disagrees.", scores: { reason: 1, origin: 1 } },
       { id: "authority", label: "The rules come from a trusted source", detail: "The source may be God, a sacred text, tradition, nature, a leader, or an institution.", scores: { reason: 1, origin: 1 } },
-      { id: "constructed", label: "People build fair rules together", detail: "The rules come from agreement, discussion, or a fair decision process.", scores: { reason: 2, origin: 2 } },
-      { id: "indexed", label: "The rules help people reach chosen goals", detail: "The system clearly says whose goals, needs, or group it serves.", scores: { reason: 3, origin: 3 } },
+      { id: "constructed", label: "People create the rules through an agreed decision process", detail: "The rule gets its authority from consent, voting, representation, bargaining, or another named procedure.", scores: { reason: 2, origin: 2 } },
+      { id: "indexed", label: "The system takes no position on objective moral facts", detail: "It only asks which rules serve the named goals, needs, or practices of a person or group.", scores: { reason: 3, origin: 3 } },
     ],
   }),
   question({
@@ -274,11 +373,12 @@ const QUESTIONS = [
     context: "“We strongly oppose this” is not the same claim as “this is wrong for everyone everywhere.”",
     why: "Strong feelings do not become facts for everyone just because stronger words are used.",
     dimensions: ["meaning", "reason"],
-    when: (a) => a.stance === "indexed",
+    when: (a) => ["indexed", "nonrealist"].includes(a.stance),
     choices: [
       { id: "slips", label: "Sometimes it talks as if its values bind everyone", detail: "Stronger moral language is used when the issue feels very serious.", scores: { meaning: 1, reason: 1 } },
-      { id: "mostly", label: "It usually says which goals matter", detail: "Some words such as “right” and “wrong” are still left loose.", scores: { meaning: 2, reason: 2 } },
+      { id: "mostly", label: "It names the source of its goals but not of its moral verdicts", detail: "The goals have an owner, but words such as “right” and “wrong” are used without saying whose judgment they express.", scores: { meaning: 2, reason: 2 } },
       { id: "always", label: "It always names the people, goals, and setting", detail: "The reader can tell where each judgment comes from and how far it reaches.", scores: { meaning: 3, reason: 3 } },
+      { id: "translates", label: "It uses moral shorthand, then gives an exact translation", detail: "When challenged, “wrong” is restated as a named person’s opposition, a broken rule, or an action that blocks a stated goal.", scores: { meaning: 3, reason: 3 } },
     ],
   }),
   question({
@@ -293,7 +393,7 @@ const QUESTIONS = [
       { id: "tribe", label: "Members, citizens, believers, or chosen insiders", detail: "Outsiders matter mainly through their effects on the group.", scores: { domain: 1 } },
       { id: "human", label: "All human beings", detail: "Every human matters simply because they are human.", scores: { domain: 2 } },
       { id: "sentient", label: "Every being that can feel or experience", detail: "This may include animals, future people, and possible future minds.", scores: { domain: 3 } },
-      { id: "layered", label: "Different beings matter in different ways", detail: "The system gives a clear reason for each difference.", scores: { domain: 3 } },
+      { id: "layered", label: "It uses a stated ranking instead of one equal circle", detail: "Species, ability to feel, dependence, relationship, or future effects place beings at named levels of concern.", scores: { domain: 3 } },
     ],
   }),
   question({
@@ -307,8 +407,8 @@ const QUESTIONS = [
     choices: [
       { id: "excluded", label: "They can stop counting", detail: "A serious threat, betrayal, or disagreement can move them outside the circle.", scores: { domain: 0, similarity: 0 } },
       { id: "reduced", label: "They count, but by a lower standard", detail: "Insiders retain stronger protection even in otherwise similar cases.", scores: { domain: 1, similarity: 1 } },
-      { id: "criteria", label: "Only clear differences in the case matter", detail: "A threat may change the response, but it does not erase the person’s basic needs.", scores: { domain: 3, similarity: 3 } },
-      { id: "same", label: "The same basic rule applies to everyone", detail: "Any exception must have a public reason that is not based only on identity.", scores: { domain: 3, similarity: 3 } },
+      { id: "criteria", label: "Protection changes only with a measured threat or relevant conduct", detail: "The response may become more restrictive when named evidence shows greater danger; outsider identity alone changes nothing.", scores: { domain: 3, similarity: 3 } },
+      { id: "same", label: "Certain minimum protections can never be removed from anyone", detail: "Even an active enemy keeps the system’s listed protections, such as freedom from torture, basic care, and review by the same rules.", scores: { domain: 3, similarity: 3 } },
     ],
   }),
   question({
@@ -321,7 +421,7 @@ const QUESTIONS = [
     dimensions: ["object"],
     choices: [
       { id: "single", label: "One part usually decides the whole case", detail: "The result, intention, character, or rule normally settles everything.", scores: { object: 1 } },
-      { id: "intuitive", label: "The situation tells us which part matters", detail: "People use judgment to focus on the right part of each case.", scores: { object: 2 } },
+      { id: "intuitive", label: "There is no fixed test; the decision-maker chooses the focus case by case", detail: "The person reviewing the case decides whether motive, act, result, character, or institution should control the judgment.", scores: { object: 2 } },
       { id: "plural", label: "The system judges each part separately", detail: "The act, motive, result, rule, institution, relationship, and repair can get different answers.", scores: { object: 3 } },
       { id: "shifts", label: "It focuses on whichever part supports its answer", detail: "The motive matters in one case and the result in another, with no clear reason for the switch.", scores: { object: 0 } },
     ],
@@ -337,7 +437,7 @@ const QUESTIONS = [
     choices: [
       { id: "welfare", label: "Less suffering and better lives", detail: "What happens to the people or beings affected comes first.", scores: { value: 2 } },
       { id: "agency", label: "Freedom, choice, and consent", detail: "People should have control over their own lives.", scores: { value: 2 } },
-      { id: "order", label: "Order, loyalty, purity, or sacred rules", detail: "Belonging, stability, and keeping important traditions come first.", scores: { value: 2 } },
+      { id: "order", label: "Group order and inherited rules", detail: "Keeping the group stable, loyal, united, pure, or faithful to a sacred tradition receives first priority.", scores: { value: 2 } },
       { id: "plural", label: "Several clearly named concerns", detail: "Care, safety, freedom, trust, fairness, truth, and belonging each have a different job.", scores: { value: 3 } },
     ],
   }),
@@ -383,7 +483,7 @@ const QUESTIONS = [
       { id: "binary", label: "Only right or wrong", detail: "Two clear choices keep the system simple and forceful.", scores: { status: 0 } },
       { id: "three", label: "Required, allowed, or forbidden", detail: "These three labels handle most cases.", scores: { status: 2 } },
       { id: "rich", label: "It uses several separate judgments", detail: "An act can be allowed, excused, harmful, sad, admirable, illegal, or in need of repair in different combinations.", scores: { status: 3 } },
-      { id: "expressive", label: "It names the response instead of giving a moral label", detail: "It says whether to warn, oppose, limit, leave, punish, protect, or repair.", scores: { status: 3 } },
+      { id: "expressive", label: "It gives a moral status and then chooses a separate response", detail: "First it says required, allowed, or forbidden; then it separately says whether to warn, limit, excuse, protect, punish, or repair.", scores: { status: 3 } },
     ],
   }),
   question({
@@ -426,7 +526,7 @@ const QUESTIONS = [
     dimensions: ["similarity"],
     choices: [
       { id: "loyalty", label: "Friends and insiders may receive better treatment", detail: "The system allows different standards based on loyalty and relationship.", scores: { similarity: 1 } },
-      { id: "intuition", label: "The full situation decides", detail: "A wise person judges which differences matter in each case.", scores: { similarity: 2 } },
+      { id: "intuition", label: "There is no fixed comparison test; a trusted person decides", detail: "That person reviews the whole case and decides which differences justify treating friend and opponent differently.", scores: { similarity: 2 } },
       { id: "criteria", label: "The same clear standards apply to both", detail: "Different treatment needs a difference that was named before knowing who benefits.", scores: { similarity: 3 } },
       { id: "audit", label: "The system checks itself for favoritism", detail: "It compares evidence rules, exceptions, burdens, and mercy across both sides.", scores: { similarity: 3 } },
     ],
@@ -441,7 +541,7 @@ const QUESTIONS = [
     dimensions: ["conflict"],
     choices: [
       { id: "denial", label: "A correct system has no real clash", detail: "The problem only looks like a conflict because someone has misunderstood it.", scores: { conflict: 0 } },
-      { id: "judgment", label: "A wise person balances the concerns", detail: "No fixed formula can replace careful human judgment.", scores: { conflict: 2 } },
+      { id: "judgment", label: "There is no fixed priority; a trusted decision-maker balances the case", detail: "The decision-maker weighs the competing concerns without a rule that determines which one must lead.", scores: { conflict: 2 } },
       { id: "priority", label: "The order, limits, and exceptions are stated", detail: "The method is clear before anyone knows which person or group will benefit.", scores: { conflict: 3 } },
       { id: "remainder", label: "A clear process decides and records what was lost", detail: "The system can act while admitting harm, tragedy, and the need for repair.", scores: { conflict: 3 } },
     ],
@@ -472,7 +572,7 @@ const QUESTIONS = [
     dimensions: ["conflict", "value", "similarity"],
     when: (_, state) => state.scenario === "scarcity",
     choices: [
-      { id: "favorite", label: "Let the medical team choose the strongest case", detail: "The team considers need, likely benefit, family role, and the full situation.", scores: { conflict: 2, value: 2, similarity: 1 } },
+      { id: "favorite", label: "Let the medical team choose without a fixed ranking or tie-breaker", detail: "The team may consider need, likely benefit, age, dependents, and arrival time in any order it judges appropriate.", scores: { conflict: 2, value: 2, similarity: 1 } },
       { id: "lottery", label: "Use a lottery among people who meet a clear need level", detail: "Everyone above that level has an equal chance.", scores: { conflict: 3, value: 3, similarity: 3 } },
       { id: "benefit", label: "Give it to the person most likely to benefit", detail: "A public medical rule uses the best available estimate of recovery.", scores: { conflict: 2, value: 2, similarity: 3 } },
       { id: "layered", label: "Use several public steps in order", detail: "Need, likely benefit, people who depend on the patient, fairness, and a final tie-breaker each have a stated place.", scores: { conflict: 3, value: 3, similarity: 3 } },
@@ -519,7 +619,7 @@ const QUESTIONS = [
     dimensions: ["usability"],
     choices: [
       { id: "ideal", label: "A correct choice needs full understanding", detail: "Mistakes made by people with limited knowledge do not count against the ideal system.", scores: { usability: 0 } },
-      { id: "virtue", label: "A wise and caring person will see the answer", detail: "Good habits and experience supply the judgment that rules cannot give.", scores: { usability: 2 } },
+      { id: "virtue", label: "The system relies on the trained judgment of an experienced person", detail: "It gives no complete decision procedure; habits, practice, and case experience supply what written rules leave open.", scores: { usability: 2 } },
       { id: "rules", label: "It gives safe starting rules and emergency steps", detail: "Simple guidance comes with clear exceptions and a way to repair mistakes.", scores: { usability: 3 } },
       { id: "institutions", label: "It says who decides and who checks the decision", detail: "Clear roles, calls for help, written records, and later review support limited people.", scores: { usability: 3 } },
     ],
@@ -566,10 +666,164 @@ const QUESTIONS = [
       { id: "verdict", label: "Find who is guilty and give a fitting penalty", detail: "The penalty is meant to restore responsibility and close the case.", scores: { revision: 1, status: 1, usability: 2 } },
       { id: "apology", label: "Admit the error and apologize", detail: "Being honest about the harm and showing regret are the main response.", scores: { revision: 2, status: 2, usability: 2 } },
       { id: "repair", label: "Name the harm, repair it, change the system, and check again", detail: "Explain what happened, repay losses, change the rule, protect people from payback, and review the fix.", scores: { revision: 3, status: 3, usability: 3 } },
-      { id: "context", label: "Choose repair that fits what remains", detail: "Personal blame, system causes, payment, protection, and prevention are kept separate.", scores: { revision: 3, status: 3, usability: 3 } },
+      { id: "context", label: "Choose from a defined repair menu after measuring what remains", detail: "Documented loss, continuing danger, personal action, system causes, and recurrence risk determine which payment, protection, prevention, or review steps apply.", scores: { revision: 3, status: 3, usability: 3 } },
     ],
   }),
 ];
+
+const NON_REALIST_CHOICES = {
+  stance: {
+    id: "nonrealist",
+    label: "There are no objective moral facts; the rules are human tools",
+    detail: "Words such as “right” and “wrong” summarize attitudes, chosen goals, shared rules, or practical decisions—not truths built into reality.",
+    scores: { reason: 3, origin: 3 },
+  },
+  groundSource: {
+    id: "nonrealist",
+    label: "It withdraws the claim that the rules are universally true",
+    detail: "After reflection, it treats them as chosen human commitments or practical rules, not facts that exist independently of people.",
+    scores: { reason: 3, evidence: 3 },
+  },
+  authorityAccess: {
+    id: "nonrealist",
+    label: "No source or interpreter is treated as morally infallible",
+    detail: "Every reading is a human proposal, tested against its stated aims, evidence, effects, and openness to correction.",
+    scores: { evidence: 3, revision: 3 },
+  },
+  constructionAuthority: {
+    id: "nonrealist",
+    label: "The rule has no objective moral authority over them",
+    detail: "It is a human agreement with a stated legal, social, or practical reach; its force comes from that arrangement, not from a moral fact.",
+    scores: { reason: 3, domain: 3 },
+  },
+  indexDiscipline: {
+    id: "nonrealist",
+    label: "It makes no claim that objective moral facts exist",
+    detail: "It translates moral words into the named attitudes, goals, rules, relationships, institutions, and practical responses that give them meaning.",
+    scores: { meaning: 3, reason: 3 },
+  },
+  scope: {
+    id: "nonrealist",
+    label: "No one has objective moral standing; the system states whose interests it will count",
+    detail: "It names the people or beings included in this decision and gives a human reason—such as concern, agreement, or a chosen goal—for including them.",
+    scores: { domain: 3 },
+  },
+  boundary: {
+    id: "nonrealist",
+    label: "No one has objective moral status; the same stated policy criteria still apply",
+    detail: "Threat, risk, and conduct may change the response, but being an enemy or outsider does not silently change the announced practical rule.",
+    scores: { domain: 3, similarity: 3 },
+  },
+  objectFocus: {
+    id: "nonrealist",
+    label: "It assigns no moral property and describes each part separately",
+    detail: "It reports the act, motive, result, rule, institution, and response in factual or goal-relative terms without calling any part objectively right or wrong.",
+    scores: { object: 3 },
+  },
+  valueCenter: {
+    id: "nonrealist",
+    label: "There are no objective values; it names the concerns held by actual subjects",
+    detail: "Preferences, needs, attachments, aversions, and chosen aims matter only as the concerns of identified people, groups, or other experiencing beings.",
+    scores: { value: 3 },
+  },
+  valueRole: {
+    id: "nonrealist",
+    label: "Values are chosen inputs, not commands built into reality",
+    detail: "The system states which person or group holds each value and whether it functions as a goal, limit, default rule, tie-breaker, or reason for repair.",
+    scores: { value: 3, conflict: 3 },
+  },
+  termStability: {
+    id: "nonrealist",
+    label: "It replaces moral terms with specific non-moral descriptions",
+    detail: "Instead of relying on “wrong” or “unjust,” it names observable harm, risk, consent, law, preference, role, broken agreement, or chosen response.",
+    scores: { meaning: 3 },
+  },
+  statusGrammar: {
+    id: "nonrealist",
+    label: "It assigns no objective moral status and names the response directly",
+    detail: "It separately states facts such as illegal, harmful, unwanted, risky, opposed, restricted, excused, punished, protected, or repaired.",
+    scores: { status: 3 },
+  },
+  bridge: {
+    id: "nonrealist",
+    label: "It creates no moral duty; it states a conditional practical rule",
+    detail: "The form is: if these people choose goal G and accept rule R, then action A serves that goal under conditions C and limits L.",
+    scores: { generation: 3 },
+  },
+  reasonOffer: {
+    id: "nonrealist",
+    label: "It claims no reason that must move every possible person",
+    detail: "Each reason is explicitly tied to the listener’s aims, roles, relationships, agreements, or the rules of an institution they are dealing with.",
+    scores: { reason: 3 },
+  },
+  similarCases: {
+    id: "nonrealist",
+    label: "It gives no objective moral verdict and applies the same announced criteria",
+    detail: "It uses the same factual, legal, or policy tests for friend and opponent unless a previously stated practical difference applies.",
+    scores: { similarity: 3 },
+  },
+  conflictMethod: {
+    id: "nonrealist",
+    label: "It negotiates among stated human aims rather than discovering the true moral priority",
+    detail: "The decision uses an announced procedure, records whose aims were favored, and admits that a different group could choose another rule.",
+    scores: { conflict: 3 },
+  },
+  scenarioTruth: {
+    id: "nonrealist",
+    label: "No answer is objectively permitted or forbidden; act from the stated aim of protection",
+    detail: "Given the immediate credible danger, conceal the location, then describe the lie, expected harm, protected interest, and any remaining cost without a moral verdict.",
+    scores: { conflict: 3, generation: 3, status: 3 },
+  },
+  scenarioScarcity: {
+    id: "nonrealist",
+    label: "There is no morally correct recipient; use a public human procedure",
+    detail: "Choose a rule for named aims—such as survival, equal opportunity, or protecting dependents—apply it consistently, and admit that other procedures remain possible.",
+    scores: { conflict: 3, value: 3, similarity: 3 },
+  },
+  scenarioLoyalty: {
+    id: "nonrealist",
+    label: "Assume no objective guilt; use independent fact-finding and temporary protection",
+    detail: "Apply the same evidence rules to insiders and outsiders, reduce immediate risk while investigating, and revise the response as the facts change.",
+    scores: { similarity: 3, evidence: 3, revision: 3 },
+  },
+  facts: {
+    id: "nonrealist",
+    label: "Moral claims are not facts, but every factual claim used in a decision remains testable",
+    detail: "Claims about events, causes, risk, harm, behavior, and likely results must change when reliable observation and evidence count against them.",
+    scores: { evidence: 3 },
+  },
+  finiteAgent: {
+    id: "nonrealist",
+    label: "It offers simple rules tied to chosen goals, not a perfect moral algorithm",
+    detail: "Limited people receive starting rules, assigned roles, escalation steps, records, and repair procedures that serve stated practical aims.",
+    scores: { usability: 3 },
+  },
+  genealogy: {
+    id: "nonrealist",
+    label: "Human origins are expected, so the system keeps them visible",
+    detail: "It examines whose feelings, interests, training, history, and power produced the rules and who benefits or bears their costs.",
+    scores: { origin: 3 },
+  },
+  challenge: {
+    id: "nonrealist",
+    label: "Affected people can revise human-made rules through a stated procedure",
+    detail: "No rule is protected as an objective moral truth; objections, evidence, decision authority, fixed limits, and reopening conditions are named in advance.",
+    scores: { revision: 3 },
+  },
+  repair: {
+    id: "nonrealist",
+    label: "It assumes no objective guilt or deserved suffering and separates the practical tasks",
+    detail: "It identifies cause, danger, loss, protection, restitution, prevention, relationship, and future procedure without turning them into one moral verdict.",
+    scores: { revision: 3, status: 3, usability: 3 },
+  },
+};
+
+QUESTIONS.forEach((surveyQuestion) => {
+  const nonRealistChoice = NON_REALIST_CHOICES[surveyQuestion.id];
+  if (!nonRealistChoice) throw new Error(`Missing non-realist answer for ${surveyQuestion.id}`);
+  surveyQuestion.choices.push({ ...nonRealistChoice, nonRealist: true });
+  if (surveyQuestion.choices.length !== 5) throw new Error(`${surveyQuestion.id} must have exactly five answers`);
+});
 
 const state = {
   systemName: "",
@@ -592,6 +846,8 @@ const els = {
   questionAxis: document.querySelector("#questionAxis"),
   questionPrompt: document.querySelector("#questionPrompt"),
   questionContext: document.querySelector("#questionContext"),
+  questionDefinition: document.querySelector("#questionDefinition"),
+  questionScope: document.querySelector("#questionScope"),
   choiceList: document.querySelector("#choiceList"),
   why: document.querySelector("#whyThisMatters"),
   plainExplanation: document.querySelector("#plainExplanation"),
@@ -647,7 +903,7 @@ function detectTensions() {
   if (["objective", "authority"].includes(a.stance) && ["intuition", "tradition"].includes(a.groundSource) && ["none", "experts"].includes(a.authorityAccess)) {
     add("sealed-authority", "Big authority, but no public way to check it", "The system says its rules come from beyond human choice, but disagreements are settled by feelings, tradition, or approved interpreters instead of evidence that anyone can check.", "high");
   }
-  if (a.stance === "indexed" && a.indexDiscipline === "slips") {
+  if (["indexed", "nonrealist"].includes(a.stance) && a.indexDiscipline === "slips") {
     add("index-slip", "The source disappears when the system wants more force", "The system says its values come from people or practices, but sometimes talks as if those values were facts that apply to everyone.", "high");
   }
   if (["human", "sentient"].includes(a.scope) && ["excluded", "reduced"].includes(a.boundary)) {
@@ -692,7 +948,7 @@ function detectTensions() {
   if (a.challenge === "closed") {
     add("no-revision-door", "A mistake has no way back into the system", "People affected by the rules cannot challenge the main ideas, priorities, or ways the rules are used.", "high");
   }
-  if (a.repair === "verdict" && a.stance === "indexed") {
+  if (a.repair === "verdict" && ["indexed", "nonrealist"].includes(a.stance)) {
     add("desert-return", "Deserved punishment returns through the back door", "The system rejects universal moral labels but still jumps to guilt and deserved pain instead of naming goals such as protection, prevention, or repair.");
   }
   if (a.scenarioTruth === "truth" && a.valueCenter === "welfare") {
@@ -776,6 +1032,9 @@ function renderQuestion() {
   els.questionAxis.textContent = q.axis;
   els.questionPrompt.textContent = q.prompt;
   els.questionContext.textContent = q.context;
+  const boundary = QUESTION_BOUNDARIES[q.id];
+  els.questionDefinition.textContent = boundary.definition;
+  els.questionScope.textContent = boundary.scope;
   els.plainExplanation.open = false;
   const guide = QUESTION_GUIDES[q.id];
   els.plainExplanationText.textContent = guide?.plain || q.why;
@@ -789,14 +1048,14 @@ function renderQuestion() {
     .map(
       (choice, index) => `
         <button
-          class="choice-button ${currentAnswer === choice.id ? "selected" : ""}"
+          class="choice-button ${choice.nonRealist ? "nonrealist-choice" : ""} ${currentAnswer === choice.id ? "selected" : ""}"
           type="button"
           role="radio"
           aria-checked="${currentAnswer === choice.id}"
           data-choice="${choice.id}"
         >
           <span class="choice-key">${String.fromCharCode(65 + index)}</span>
-          <span class="choice-copy"><strong>${choice.label}</strong><span>${choice.detail}</span></span>
+          <span class="choice-copy"><strong>${choice.label}</strong>${choice.nonRealist ? '<small class="choice-stance">Moral non-realist answer</small>' : ""}<span>${choice.detail}</span></span>
           <span class="choice-arrow" aria-hidden="true">→</span>
         </button>`,
     )
