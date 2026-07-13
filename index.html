@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A branching, non-realist diagnostic for testing the structural coherence of a proposed moral system."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>The Coherence Engine — Test a Moral System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="The Coherence Engine home">
+        <span class="brand-mark" aria-hidden="true">CE</span>
+        <span>The Coherence Engine</span>
+      </a>
+      <button class="text-button" id="methodButton" type="button">Method &amp; limits</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="introView">
+        <div class="hero-copy">
+          <p class="kicker">A clear test for a system of values</p>
+          <h1>Your principles sound clear.<br /><em>Will they survive contact?</em></h1>
+          <p class="hero-lede">
+            Put a personal code, ethical theory, institution, or inherited tradition under pressure.
+            This tool does not tell you what is morally true. It checks whether your system can
+            explain and support its own claims.
+          </p>
+          <div class="thesis-strip" aria-label="The method in three steps">
+            <span>01 — Name what matters</span>
+            <span>02 — Expose the bridges</span>
+            <span>03 — Stress the exceptions</span>
+          </div>
+        </div>
+
+        <form class="launch-card" id="launchForm">
+          <div class="card-number" aria-hidden="true">00</div>
+          <h2>Choose your subject</h2>
+          <p>Give the system a name. You can test your own outlook or one you are investigating.</p>
+
+          <label for="systemName">System name</label>
+          <input
+            id="systemName"
+            name="systemName"
+            type="text"
+            maxlength="70"
+            placeholder="e.g. Compassionate individualism"
+            required
+          />
+
+          <label for="systemType">What kind of system is it?</label>
+          <select id="systemType" name="systemType">
+            <option value="personal code">A personal code</option>
+            <option value="ethical theory">An ethical theory</option>
+            <option value="religious framework">A religious framework</option>
+            <option value="institutional code">An institutional code</option>
+            <option value="political philosophy">A political philosophy</option>
+          </select>
+
+          <fieldset>
+            <legend>Choose a pressure case</legend>
+            <div class="scenario-grid">
+              <label class="scenario-option">
+                <input type="radio" name="scenario" value="truth" checked />
+                <span><strong>The dangerous truth</strong>Truth, trust, and protection collide.</span>
+              </label>
+              <label class="scenario-option">
+                <input type="radio" name="scenario" value="scarcity" />
+                <span><strong>The last dose</strong>Need, equality, and consequence collide.</span>
+              </label>
+              <label class="scenario-option">
+                <input type="radio" name="scenario" value="loyalty" />
+                <span><strong>The loyal witness</strong>Belonging, evidence, and accountability collide.</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="primary-button" type="submit">
+            Begin the stress test
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="time-note">About 8–12 minutes · No data leaves your browser</p>
+        </form>
+      </section>
+
+      <section class="workspace hidden" id="surveyView" aria-live="polite">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="phaseLabel">Ground floor</span>
+              <span id="progressLabel">1 / 18</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card" id="questionCard">
+            <div class="question-heading">
+              <span class="question-number" id="questionNumber">01</span>
+              <div>
+                <p class="question-axis" id="questionAxis">Metaethical claim</p>
+                <h2 id="questionPrompt"></h2>
+              </div>
+            </div>
+            <p class="question-context" id="questionContext"></p>
+            <details class="plain-explanation" id="plainExplanation">
+              <summary>What does this question mean?</summary>
+              <p id="plainExplanationText"></p>
+            </details>
+            <div class="choice-list" id="choiceList" role="radiogroup"></div>
+            <div class="question-footer">
+              <button class="text-button" id="backButton" type="button">← Back</button>
+              <p id="whyThisMatters"></p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="live-panel" aria-label="Live coherence diagnostic">
+          <div class="live-header">
+            <div>
+              <p class="kicker">Live system map</p>
+              <h2 id="liveSystemName">Untitled system</h2>
+            </div>
+            <div class="pulse-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="coherence-orb" id="coherenceOrb">
+            <div>
+              <strong id="liveScore">—</strong>
+              <span>provisional</span>
+            </div>
+          </div>
+
+          <div class="axis-grid" id="axisGrid" aria-label="Scores across thirteen coherence tests"></div>
+
+          <div class="tension-block">
+            <div class="tension-heading">
+              <h3>Detected tensions</h3>
+              <span id="tensionCount">0</span>
+            </div>
+            <div class="tension-list" id="tensionList">
+              <p class="empty-tensions">No structural tension detected yet. The engine is listening.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="results hidden" id="resultsView">
+        <div class="results-hero">
+          <p class="kicker">Diagnostic complete</p>
+          <h1 id="resultsTitle">Your system’s structure</h1>
+          <p id="resultsSummary"></p>
+        </div>
+
+        <div class="scoreboard">
+          <div class="score-card score-card-primary">
+            <span>Coherence index</span>
+            <strong id="finalScore">0</strong>
+            <p id="finalVerdict"></p>
+          </div>
+          <div class="score-card">
+            <span>Strongest beam</span>
+            <strong id="strongestAxis">—</strong>
+            <p id="strongestCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Largest debt</span>
+            <strong id="weakestAxis">—</strong>
+            <p id="weakestCopy"></p>
+          </div>
+        </div>
+
+        <div class="results-grid">
+          <section class="report-section">
+            <div class="section-heading">
+              <p class="kicker">Thirteen tests</p>
+              <h2>Solvency ledger</h2>
+            </div>
+            <div class="ledger" id="ledger"></div>
+          </section>
+
+          <section class="report-section">
+            <div class="section-heading">
+              <p class="kicker">Where claims collide</p>
+              <h2>Tension report</h2>
+            </div>
+            <div class="final-tensions" id="finalTensions"></div>
+          </section>
+        </div>
+
+        <section class="interpretation">
+          <div>
+            <p class="kicker">Read this carefully</p>
+            <h2>Coherence is not vindication.</h2>
+          </div>
+          <p>
+            A system can be logically consistent and still be false, cruel, based on bad facts, unfairly
+            imposed, unrealistic, or badly motivated. This score only checks whether the system clearly
+            explains its boundaries, reasoning steps, evidence, and ways to correct mistakes.
+          </p>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="copyReportButton" type="button">Copy diagnostic</button>
+          <button class="secondary-button" id="restartButton" type="button">Test another system</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Based on Phil Stilwell’s
+        <a href="https://www.academia.edu/169114427/_How_to_Test_a_Moral_System_A_Field_Guide_to_Metaethics_Value_Disagreement_and_the_Architecture_of_Values" target="_blank" rel="noreferrer">field guide to moral systems</a>
+        and
+        <a href="https://www.academia.edu/169490990/_The_Parsimonious_World_of_the_Moral_Non_Realist_Illegitimate_Questions_Surviving_Values_and_Life_Without_a_Moral_Realm" target="_blank" rel="noreferrer">the parsimonious non-realist framework</a>.
+      </p>
+      <p>Runs entirely in your browser. No AI, account, or tracking.</p>
+    </footer>
+
+    <dialog id="methodDialog">
+      <button class="dialog-close" id="closeMethodButton" type="button" aria-label="Close">×</button>
+      <p class="kicker">Method &amp; limits</p>
+      <h2>A solvency audit, not a truth machine</h2>
+      <p>
+        The test does not assume that moral facts exist outside human minds and practices. It treats
+        “moral” and “immoral” as labels that need explanation. A system must say who counts, what is
+        being judged, what matters, what its words mean, and how it reaches a conclusion.
+      </p>
+      <p>
+        The thirteen tests check who counts, what is judged, what matters, what words and verdicts mean,
+        how values become rules, which reasons are offered, whether like cases are treated alike, how
+        conflicts are handled, whether facts are checked, whether people can use the system, where it
+        came from, and how it can change. Clear rules in this page score the answers. Nothing is sent to
+        a server, and no AI reads the answers.
+      </p>
+      <p>
+        A high score means the proposed system has made more of its architecture visible and stable.
+        It does not establish objective moral facts, prove that the system is humane, or authorize anyone
+        to impose it.
+      </p>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
