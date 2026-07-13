@@ -42,18 +42,8 @@
 
         <form class="launch-card" id="launchForm">
           <div class="card-number" aria-hidden="true">00</div>
-          <h2>Choose your subject</h2>
-          <p>Give the system a name. You can test your own outlook or one you are investigating.</p>
-
-          <label for="systemName">System name</label>
-          <input
-            id="systemName"
-            name="systemName"
-            type="text"
-            maxlength="70"
-            placeholder="e.g. Compassionate individualism"
-            required
-          />
+          <h2>Choose what to test</h2>
+          <p>Start with your own outlook, a familiar theory, or a system you want to understand better.</p>
 
           <label for="systemType">What kind of system is it?</label>
           <select id="systemType" name="systemType">
@@ -65,25 +55,38 @@
           </select>
 
           <fieldset>
-            <legend>Choose a pressure case</legend>
+            <legend>Choose a story to explore</legend>
+            <p class="scenario-intro">
+              There is no right choice here. Each story tests a different kind of hard decision.
+              Pick the one that sounds most interesting to you.
+            </p>
             <div class="scenario-grid">
               <label class="scenario-option">
                 <input type="radio" name="scenario" value="truth" checked />
-                <span><strong>The dangerous truth</strong>Truth, trust, and protection collide.</span>
+                <span>
+                  <strong>Truth under pressure</strong>
+                  Someone dangerous asks where your friend is hiding. Does protecting a person justify a lie?
+                </span>
               </label>
               <label class="scenario-option">
                 <input type="radio" name="scenario" value="scarcity" />
-                <span><strong>The last dose</strong>Need, equality, and consequence collide.</span>
+                <span>
+                  <strong>Sharing the last dose</strong>
+                  Only one dose of medicine remains, but several people need it. How should a fair system choose?
+                </span>
               </label>
               <label class="scenario-option">
                 <input type="radio" name="scenario" value="loyalty" />
-                <span><strong>The loyal witness</strong>Belonging, evidence, and accountability collide.</span>
+                <span>
+                  <strong>Trusting your own group</strong>
+                  A trusted leader is accused of harm. Can the group protect people and judge its own leader fairly?
+                </span>
               </label>
             </div>
           </fieldset>
 
           <button class="primary-button" type="submit">
-            Begin the stress test
+            Begin the coherence check
             <span aria-hidden="true">↗</span>
           </button>
           <p class="time-note">About 8–12 minutes · No data leaves your browser</p>

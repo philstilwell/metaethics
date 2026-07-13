@@ -290,6 +290,14 @@ main {
   border: 0;
 }
 
+.scenario-intro {
+  margin: 0 0 12px !important;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .scenario-grid {
   display: grid;
   gap: 8px;
@@ -313,14 +321,17 @@ main {
   border: 1px solid var(--line);
   background: #f7f5ef;
   color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.35;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.45;
   text-transform: none;
 }
 
 .scenario-option strong {
   color: var(--ink);
-  font-size: 0.8rem;
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .scenario-option input:checked + span {

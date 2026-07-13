@@ -353,7 +353,7 @@ const QUESTIONS = [
   question({
     id: "scenarioTruth",
     phase: "pressure",
-    axis: "Pressure case — dangerous truth",
+    axis: "Your story — truth under pressure",
     prompt: "A violent pursuer asks where your friend is hiding. What does the system permit?",
     context: "Truth supports trust. Protection resists foreseeable harm. The case tests whether a favored value has an articulated limit.",
     why: "This is a targeted stress test of your conflict and bridge rules.",
@@ -369,7 +369,7 @@ const QUESTIONS = [
   question({
     id: "scenarioScarcity",
     phase: "pressure",
-    axis: "Pressure case — the last dose",
+    axis: "Your story — sharing the last dose",
     prompt: "One dose remains. Five need it. What decides?",
     context: "One patient is sickest, one will benefit most, one arrived first, one is a child, and one is the only caregiver for three dependents.",
     why: "Scarcity exposes hidden metrics, domain weights, and tie-breakers.",
@@ -385,7 +385,7 @@ const QUESTIONS = [
   question({
     id: "scenarioLoyalty",
     phase: "pressure",
-    axis: "Pressure case — the loyal witness",
+    axis: "Your story — trusting your own group",
     prompt: "A trusted leader in your group is credibly accused. What standard applies?",
     context: "The accusation is serious but incomplete. Public judgment could harm both the accuser and the accused.",
     why: "Loyalty becomes corruption when it silently changes evidence and revision standards.",
@@ -731,6 +731,10 @@ function verdictFor(score) {
   return "Insolvent under pressure";
 }
 
+function formatSystemType(systemType) {
+  return systemType.charAt(0).toUpperCase() + systemType.slice(1);
+}
+
 function showResults() {
   const scores = calculateScores();
   const tensions = detectTensions();
@@ -788,7 +792,7 @@ function buildTextReport() {
   const overall = calculateOverall(scores, tensions) ?? 0;
   const lines = [
     "THE COHERENCE ENGINE — DIAGNOSTIC",
-    `${state.systemName} (${state.systemType})`,
+    state.systemName,
     `Coherence index: ${overall}/100 — ${verdictFor(overall)}`,
     "",
     "THIRTEEN TESTS",
@@ -806,12 +810,12 @@ function buildTextReport() {
 els.launchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = new FormData(els.launchForm);
-  state.systemName = form.get("systemName").trim();
   state.systemType = form.get("systemType");
+  state.systemName = formatSystemType(state.systemType);
   state.scenario = form.get("scenario");
   state.answers = {};
   state.index = 0;
-  els.liveSystemName.textContent = state.systemName;
+  els.liveSystemName.textContent = `${state.systemName} under test`;
   els.intro.classList.add("hidden");
   els.results.classList.add("hidden");
   els.survey.classList.remove("hidden");
@@ -837,7 +841,7 @@ document.querySelector("#restartButton").addEventListener("click", () => {
   state.index = 0;
   els.results.classList.add("hidden");
   els.intro.classList.remove("hidden");
-  document.querySelector("#systemName").focus();
+  document.querySelector("#systemType").focus();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
