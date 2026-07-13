@@ -727,11 +727,25 @@ main {
   100% { box-shadow: 0 0 0 0 rgba(215, 243, 106, 0); }
 }
 
+.live-score-figure {
+  margin: 10px 24px 22px;
+}
+
+.live-score-label {
+  margin: 0;
+  color: #c5cdc7;
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .coherence-orb {
   display: grid;
   width: 164px;
   height: 164px;
-  margin: 16px auto 24px;
+  margin: 10px auto 14px;
   place-items: center;
   border-radius: 50%;
   background: conic-gradient(var(--acid) 0deg, #343c36 0deg);
@@ -768,6 +782,15 @@ main {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.live-score-explanation {
+  max-width: 310px;
+  margin: 0 auto;
+  color: #9ca69e;
+  font-size: 0.68rem;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .axis-grid {

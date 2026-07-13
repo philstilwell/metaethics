@@ -159,12 +159,27 @@
             <div class="pulse-dot" aria-hidden="true"></div>
           </div>
 
-          <div class="coherence-orb" id="coherenceOrb">
-            <div>
-              <strong id="liveScore">—</strong>
-              <span>clarity so far</span>
+          <figure class="live-score-figure">
+            <p class="live-score-label">Provisional clarity and consistency</p>
+            <div
+              class="coherence-orb"
+              id="coherenceOrb"
+              role="meter"
+              aria-label="Provisional clarity and consistency score"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuetext="No scored questions answered yet"
+              aria-describedby="liveScoreExplanation"
+            >
+              <div>
+                <strong id="liveScore">—</strong>
+                <span>answered only</span>
+              </div>
             </div>
-          </div>
+            <figcaption class="live-score-explanation" id="liveScoreExplanation">
+              This uses only the scored questions answered so far; unanswered areas are left out. Detected conflicts and explicitly missing profile definitions are already subtracted. It becomes final only when the check is complete.
+            </figcaption>
+          </figure>
 
           <div class="axis-grid" id="axisGrid" aria-label="Scores across thirteen parts of the system"></div>
 

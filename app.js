@@ -1015,6 +1015,13 @@ function renderLiveDiagnostic() {
 
   els.liveScore.textContent = overall === null ? "—" : overall;
   els.coherenceOrb.style.background = `conic-gradient(var(--acid) ${(overall || 0) * 3.6}deg, #343c36 0deg)`;
+  if (overall === null) {
+    els.coherenceOrb.removeAttribute("aria-valuenow");
+    els.coherenceOrb.setAttribute("aria-valuetext", "No scored questions answered yet");
+  } else {
+    els.coherenceOrb.setAttribute("aria-valuenow", overall);
+    els.coherenceOrb.setAttribute("aria-valuetext", `${overall} out of 100, based on answered scored questions only`);
+  }
 
   Object.entries(scores).forEach(([key, score]) => {
     const row = els.axisGrid.querySelector(`[data-dimension="${key}"]`);
