@@ -9,6 +9,7 @@
     />
     <meta name="theme-color" content="#151a17" />
     <title>The Coherence Engine — Test a Moral System</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -161,7 +162,7 @@
           <div class="coherence-orb" id="coherenceOrb">
             <div>
               <strong id="liveScore">—</strong>
-              <span>so far</span>
+              <span>clarity so far</span>
             </div>
           </div>
 
@@ -173,7 +174,7 @@
               <span id="tensionCount">0</span>
             </div>
             <div class="tension-list" id="tensionList">
-              <p class="empty-tensions">No answers clash yet. The check is listening.</p>
+              <p class="empty-tensions">No cross-answer conflict detected yet.</p>
             </div>
           </div>
         </aside>
@@ -186,11 +187,14 @@
           <p id="resultsSummary"></p>
         </div>
 
+        <div class="result-profile" id="resultProfile" aria-label="Descriptive profile of the system"></div>
+
         <div class="scoreboard">
           <div class="score-card score-card-primary">
-            <span>How well the parts fit</span>
+            <span>Clarity and consistency</span>
             <strong id="finalScore">0</strong>
             <p id="finalVerdict"></p>
+            <small id="scoreFormula"></small>
           </div>
           <div class="score-card">
             <span>Clearest part</span>
@@ -215,8 +219,8 @@
 
           <section class="report-section">
             <div class="section-heading">
-              <p class="kicker">Where claims collide</p>
-              <h2>Where the answers clash</h2>
+              <p class="kicker">Cross-answer consistency</p>
+              <h2>Where two or more answers conflict</h2>
             </div>
             <div class="final-tensions" id="finalTensions"></div>
           </section>
@@ -261,15 +265,22 @@
         being judged, what matters, what its words mean, and how it reaches a conclusion.
       </p>
       <p>
-        The thirteen tests check who counts, what is judged, what matters, what important words and judgments mean,
+        Three profile questions record the system’s foundation, stated circle, and leading concern. The
+        content of those answers does not raise or lower the score. If an answer explicitly says the circle
+        or leading concern is not yet specified, that missing definition subtracts 5 points. The thirteen scored tests check whether
+        that circle stays stable, what is judged, whether concerns have clear roles, what important words and judgments mean,
         how values become rules, which reasons are offered, whether like cases are treated alike, how
         conflicts are handled, whether facts are checked, whether people can use the system, where it
         came from, and how it can change. Clear rules in this page score the answers. Nothing is sent to
         a server, and no AI reads the answers.
       </p>
       <p>
-        A high score means more of the system is clear and its parts fit together. It does not prove that
-        the system is true, kind, fair, or something other people must accept.
+        Each scored part is converted to 0–100, and the thirteen parts receive equal weight. The overall
+        score starts with their average, then subtracts 4 points for each strong cross-answer conflict,
+        2 points for each possible conflict, and 5 points for each profile field explicitly left unspecified.
+        Scores are floored at 0. A high score therefore means more of the system is explicit
+        and fewer answers pull against one another. It does not prove that the system is true, kind, fair,
+        or something other people must accept.
       </p>
     </dialog>
 

@@ -2,9 +2,9 @@
 
 const DIMENSIONS = {
   domain: {
-    name: "Who counts",
-    short: "The circle of concern",
-    debt: "The system needs a steady line around who matters and a reason for anyone left out.",
+    name: "Stable scope",
+    short: "Whether the stated circle stays stable",
+    debt: "State who is included, then use the same boundary unless a relevant difference has been named.",
   },
   object: {
     name: "What is judged",
@@ -12,9 +12,9 @@ const DIMENSIONS = {
     debt: "Separate the action, reason, result, rule, institution, relationship, and person.",
   },
   value: {
-    name: "What matters",
-    short: "Main concerns",
-    debt: "Name the concerns doing the work and explain the job each one has.",
+    name: "Roles for values",
+    short: "Whether each concern has a defined job",
+    debt: "Explain whether each concern is a goal, limit, default, tie-breaker, or reason for repair.",
   },
   meaning: {
     name: "Clear words",
@@ -57,8 +57,8 @@ const DIMENSIONS = {
     debt: "Give limited people useful guidance when time and facts are missing.",
   },
   origin: {
-    name: "Where it came from",
-    short: "History and influence",
+    name: "Origins under review",
+    short: "Whether history and influence can be examined",
     debt: "Show how history, feelings, power, identity, and institutions shaped the system.",
   },
   revision: {
@@ -75,6 +75,19 @@ const PHASES = {
   pressure: "Hard cases",
   mirror: "Origins and change",
 };
+
+const PROFILE_FIELDS = [
+  { id: "stance", label: "Foundation" },
+  { id: "scope", label: "Stated circle" },
+  { id: "valueCenter", label: "Leading concern" },
+];
+
+const TENSION_PENALTIES = {
+  high: 4,
+  medium: 2,
+};
+
+const PROFILE_GAP_PENALTY = 5;
 
 const QUESTION_GUIDES = {
   stance: {
@@ -103,7 +116,7 @@ const QUESTION_GUIDES = {
     reveals: "Your answer shows whether the system honestly names whose values are speaking, or gives human choices the sound of universal facts.",
   },
   scope: {
-    plain: "Imagine drawing a circle around everyone whose needs matter in their own right. Who is inside the circle? Who is outside it? The circle can include people, animals, future people, or other living systems.",
+    plain: "Imagine drawing a circle around everyone whose needs the system chooses to count directly. Who is inside? Who is outside? Answers A–D can be chosen by a realist or non-realist; they describe the circle, not whether that circle exists as an objective moral fact.",
     example: "When a city builds a dam, should it count only current taxpayers? What about nearby families, animals, people living downstream, and children who will live there later?",
     reveals: "Your answer shows how wide the system’s concern reaches and whether it can explain where it draws the line.",
   },
@@ -118,7 +131,7 @@ const QUESTION_GUIDES = {
     reveals: "Your answer shows whether the system can keep these parts separate or jumps between them to protect the answer it already wants.",
   },
   valueCenter: {
-    plain: "A value is simply something the system treats as important. Common values include safety, freedom, care, honesty, loyalty, fairness, and less suffering.",
+    plain: "A value is simply something the system treats as important. Answers A–D can be chosen by a realist or non-realist; they identify the concern that leads without claiming that concern is objectively valuable.",
     example: "A school phone ban may protect attention and safety, but reduce freedom and contact with family. Which concern gets noticed first tells us a lot about the system.",
     reveals: "Your answer names the system’s main concern. It also points to concerns the system may overlook.",
   },
@@ -303,18 +316,19 @@ const question = (config) => config;
 const QUESTIONS = [
   question({
     id: "stance",
+    kind: "profile",
     phase: "ground",
     axis: "Where the rules come from",
     prompt: "Where does this system think its rules come from?",
     context:
       "Choose the one claim the system makes about its rules: universal truth, trusted command, agreement, goal-based guidance that takes no view on moral facts, or a human tool based on denying objective moral facts.",
     why: "Your answer decides which follow-up questions you will see.",
-    dimensions: ["reason", "origin"],
+    dimensions: [],
     choices: [
-      { id: "objective", label: "The rules are true for everyone", detail: "They stay true even if every person and group disagrees.", scores: { reason: 1, origin: 1 } },
-      { id: "authority", label: "The rules come from a trusted source", detail: "The source may be God, a sacred text, tradition, nature, a leader, or an institution.", scores: { reason: 1, origin: 1 } },
-      { id: "constructed", label: "People create the rules through an agreed decision process", detail: "The rule gets its authority from consent, voting, representation, bargaining, or another named procedure.", scores: { reason: 2, origin: 2 } },
-      { id: "indexed", label: "The system takes no position on objective moral facts", detail: "It only asks which rules serve the named goals, needs, or practices of a person or group.", scores: { reason: 3, origin: 3 } },
+      { id: "objective", label: "The rules are true for everyone", detail: "They stay true even if every person and group disagrees." },
+      { id: "authority", label: "The rules come from a trusted source", detail: "The source may be God, a sacred text, tradition, nature, a leader, or an institution." },
+      { id: "constructed", label: "People create the rules through an agreed decision process", detail: "The rule gets its authority from consent, voting, representation, bargaining, or another named procedure." },
+      { id: "indexed", label: "The system takes no position on objective moral facts", detail: "It only asks which rules serve the named goals, needs, or practices of a person or group." },
     ],
   }),
   question({
@@ -362,7 +376,7 @@ const QUESTIONS = [
       { id: "must", label: "Any reasonable person should accept it", detail: "People who reject the rule are treated as unreasonable.", scores: { reason: 1, domain: 1 } },
       { id: "majority", label: "The group’s decision is enough", detail: "Once most people decide, everyone must follow the rule.", scores: { reason: 1, domain: 1 } },
       { id: "affected", label: "People affected by the rule get a voice", detail: "They can hear the reasons, describe the costs, and object safely.", scores: { reason: 3, domain: 3 } },
-      { id: "limited", label: "It applies only inside the named group or institution", detail: "The rule has clear limits, ways to object, and ways to leave when possible.", scores: { reason: 3, domain: 2 } },
+      { id: "limited", label: "It applies only inside the named group or institution", detail: "The rule has clear limits, ways to object, and ways to leave when possible.", scores: { reason: 3, domain: 3 } },
     ],
   }),
   question({
@@ -383,17 +397,18 @@ const QUESTIONS = [
   }),
   question({
     id: "scope",
+    kind: "profile",
     phase: "circle",
     axis: "01 — Who is included?",
     prompt: "Who matters for their own sake?",
-    context: "Choose what the system really does, not what its nicest slogan seems to promise.",
+    context: "Choose what the system really does, not what its nicest slogan promises. Answers A–D describe a chosen scope and do not assume objective moral standing.",
     why: "A system must say whose needs count before it can judge a choice.",
-    dimensions: ["domain"],
+    dimensions: [],
     choices: [
-      { id: "tribe", label: "Members, citizens, believers, or chosen insiders", detail: "Outsiders matter mainly through their effects on the group.", scores: { domain: 1 } },
-      { id: "human", label: "All human beings", detail: "Every human matters simply because they are human.", scores: { domain: 2 } },
-      { id: "sentient", label: "Every being that can feel or experience", detail: "This may include animals, future people, and possible future minds.", scores: { domain: 3 } },
-      { id: "layered", label: "It uses a stated ranking instead of one equal circle", detail: "Species, ability to feel, dependence, relationship, or future effects place beings at named levels of concern.", scores: { domain: 3 } },
+      { id: "tribe", label: "Members, citizens, believers, or chosen insiders", detail: "Outsiders matter mainly through their effects on the group." },
+      { id: "human", label: "All human beings", detail: "Every human matters simply because they are human." },
+      { id: "sentient", label: "Every being that can feel or experience", detail: "This may include animals, future people, and possible future minds." },
+      { id: "layered", label: "It uses a stated ranking instead of one equal circle", detail: "Species, ability to feel, dependence, relationship, or future effects place beings at named levels of concern." },
     ],
   }),
   question({
@@ -420,25 +435,26 @@ const QUESTIONS = [
     why: "A system can protect its favorite answer by quietly switching from one part of the case to another.",
     dimensions: ["object"],
     choices: [
-      { id: "single", label: "One part usually decides the whole case", detail: "The result, intention, character, or rule normally settles everything.", scores: { object: 1 } },
-      { id: "intuitive", label: "There is no fixed test; the decision-maker chooses the focus case by case", detail: "The person reviewing the case decides whether motive, act, result, character, or institution should control the judgment.", scores: { object: 2 } },
+      { id: "single", label: "One named part always controls the judgment", detail: "The system consistently uses the outcome, intention, rule, character, or another specified part as its deciding test.", scores: { object: 3 } },
+      { id: "intuitive", label: "There is no fixed test; the decision-maker chooses the focus case by case", detail: "The person reviewing the case decides whether motive, act, result, character, or institution should control the judgment.", scores: { object: 1 } },
       { id: "plural", label: "The system judges each part separately", detail: "The act, motive, result, rule, institution, relationship, and repair can get different answers.", scores: { object: 3 } },
       { id: "shifts", label: "It focuses on whichever part supports its answer", detail: "The motive matters in one case and the result in another, with no clear reason for the switch.", scores: { object: 0 } },
     ],
   }),
   question({
     id: "valueCenter",
+    kind: "profile",
     phase: "circle",
     axis: "03 — What matters most?",
     prompt: "What does the system care about most?",
-    context: "Choose the concern that most often guides its attention and choices.",
+    context: "Choose the concern that most often guides its attention and choices. Answers A–D do not assume that objective values exist.",
     why: "The main concern shows us what the system notices and what it may miss.",
-    dimensions: ["value"],
+    dimensions: [],
     choices: [
-      { id: "welfare", label: "Less suffering and better lives", detail: "What happens to the people or beings affected comes first.", scores: { value: 2 } },
-      { id: "agency", label: "Freedom, choice, and consent", detail: "People should have control over their own lives.", scores: { value: 2 } },
-      { id: "order", label: "Group order and inherited rules", detail: "Keeping the group stable, loyal, united, pure, or faithful to a sacred tradition receives first priority.", scores: { value: 2 } },
-      { id: "plural", label: "Several clearly named concerns", detail: "Care, safety, freedom, trust, fairness, truth, and belonging each have a different job.", scores: { value: 3 } },
+      { id: "welfare", label: "Less suffering and better lives", detail: "What happens to the people or beings affected comes first." },
+      { id: "agency", label: "Freedom, choice, and consent", detail: "People should have control over their own lives." },
+      { id: "order", label: "Group order and inherited rules", detail: "Keeping the group stable, loyal, united, pure, or faithful to a sacred tradition receives first priority." },
+      { id: "plural", label: "Several clearly named concerns", detail: "Care, safety, freedom, trust, fairness, truth, and belonging each have a different job." },
     ],
   }),
   question({
@@ -450,9 +466,9 @@ const QUESTIONS = [
     why: "Naming a concern is not enough. The system must explain what the concern does.",
     dimensions: ["value", "conflict"],
     choices: [
-      { id: "absolute", label: "It can never be set aside", detail: "Choosing against it would betray the whole system.", scores: { value: 1, conflict: 0 } },
-      { id: "maximize", label: "The system tries to produce as much of it as possible", detail: "Other concerns matter mainly when they help or hurt this one.", scores: { value: 2, conflict: 1 } },
-      { id: "threshold", label: "It sets a clear limit or danger line", detail: "The system says what changes when that line is crossed.", scores: { value: 3, conflict: 2 } },
+      { id: "absolute", label: "It can never be set aside", detail: "Choosing against it would betray the whole system.", scores: { value: 3, conflict: 3 } },
+      { id: "maximize", label: "The system tries to produce as much of it as possible", detail: "Other concerns matter mainly when they help or hurt this one.", scores: { value: 3, conflict: 3 } },
+      { id: "threshold", label: "It sets a clear limit or danger line", detail: "The system says what changes when that line is crossed.", scores: { value: 3, conflict: 3 } },
       { id: "roles", label: "Different concerns have different jobs", detail: "The system says which are goals, limits, starting rules, tie-breakers, or reasons for repair.", scores: { value: 3, conflict: 3 } },
     ],
   }),
@@ -556,7 +572,7 @@ const QUESTIONS = [
     dimensions: ["conflict", "generation", "status"],
     when: (_, state) => state.scenario === "truth",
     choices: [
-      { id: "truth", label: "Tell the truth", detail: "Lying stays forbidden even when another person is making a threat.", scores: { conflict: 1, generation: 2, status: 2 } },
+      { id: "truth", label: "Tell the truth", detail: "Lying stays forbidden even when another person is making a threat.", scores: { conflict: 3, generation: 3, status: 2 } },
       { id: "lie", label: "Lie, and treat the case as fully settled", detail: "Protecting your friend completely outweighs honesty here.", scores: { conflict: 2, generation: 2, status: 1 } },
       { id: "protect", label: "Lie only when the danger passes a clear line", detail: "The danger must be close, serious, well supported, and hard to prevent another way.", scores: { conflict: 3, generation: 3, status: 3 } },
       { id: "refuse", label: "Refuse to answer or send the person away", detail: "Try to protect your friend without saying something false.", scores: { conflict: 3, generation: 3, status: 3 } },
@@ -574,7 +590,7 @@ const QUESTIONS = [
     choices: [
       { id: "favorite", label: "Let the medical team choose without a fixed ranking or tie-breaker", detail: "The team may consider need, likely benefit, age, dependents, and arrival time in any order it judges appropriate.", scores: { conflict: 2, value: 2, similarity: 1 } },
       { id: "lottery", label: "Use a lottery among people who meet a clear need level", detail: "Everyone above that level has an equal chance.", scores: { conflict: 3, value: 3, similarity: 3 } },
-      { id: "benefit", label: "Give it to the person most likely to benefit", detail: "A public medical rule uses the best available estimate of recovery.", scores: { conflict: 2, value: 2, similarity: 3 } },
+      { id: "benefit", label: "Give it to the person most likely to benefit", detail: "A public medical rule uses the best available estimate of recovery.", scores: { conflict: 3, value: 3, similarity: 3 } },
       { id: "layered", label: "Use several public steps in order", detail: "Need, likely benefit, people who depend on the patient, fairness, and a final tie-breaker each have a stated place.", scores: { conflict: 3, value: 3, similarity: 3 } },
     ],
   }),
@@ -676,7 +692,6 @@ const NON_REALIST_CHOICES = {
     id: "nonrealist",
     label: "There are no objective moral facts; the rules are human tools",
     detail: "Words such as “right” and “wrong” summarize attitudes, chosen goals, shared rules, or practical decisions—not truths built into reality.",
-    scores: { reason: 3, origin: 3 },
   },
   groundSource: {
     id: "nonrealist",
@@ -704,9 +719,9 @@ const NON_REALIST_CHOICES = {
   },
   scope: {
     id: "nonrealist",
-    label: "No one has objective moral standing; the system states whose interests it will count",
-    detail: "It names the people or beings included in this decision and gives a human reason—such as concern, agreement, or a chosen goal—for including them.",
-    scores: { domain: 3 },
+    label: "Non-realism alone does not decide who is included",
+    detail: "The system must still choose a scope such as A–D or state another one. Select this only if it has not yet said whose interests it will count.",
+    unresolved: true,
   },
   boundary: {
     id: "nonrealist",
@@ -722,9 +737,9 @@ const NON_REALIST_CHOICES = {
   },
   valueCenter: {
     id: "nonrealist",
-    label: "There are no objective values; it names the concerns held by actual subjects",
-    detail: "Preferences, needs, attachments, aversions, and chosen aims matter only as the concerns of identified people, groups, or other experiencing beings.",
-    scores: { value: 3 },
+    label: "Non-realism alone does not decide which concerns lead",
+    detail: "The system must still choose a concern such as A–D or name another one. Select this only if its leading aims or preferences are not yet specified.",
+    unresolved: true,
   },
   valueRole: {
     id: "nonrealist",
@@ -823,6 +838,16 @@ QUESTIONS.forEach((surveyQuestion) => {
   if (!nonRealistChoice) throw new Error(`Missing non-realist answer for ${surveyQuestion.id}`);
   surveyQuestion.choices.push({ ...nonRealistChoice, nonRealist: true });
   if (surveyQuestion.choices.length !== 5) throw new Error(`${surveyQuestion.id} must have exactly five answers`);
+  surveyQuestion.choices.forEach((choice) => {
+    const scoreKeys = Object.keys(choice.scores || {}).sort();
+    const expectedKeys = [...surveyQuestion.dimensions].sort();
+    if (scoreKeys.join("|") !== expectedKeys.join("|")) {
+      throw new Error(`${surveyQuestion.id}/${choice.id} scores ${scoreKeys.join(",") || "nothing"}; expected ${expectedKeys.join(",") || "a profile-only answer"}`);
+    }
+    Object.values(choice.scores || {}).forEach((score) => {
+      if (!Number.isInteger(score) || score < 0 || score > 3) throw new Error(`${surveyQuestion.id}/${choice.id} has an invalid score`);
+    });
+  });
 });
 
 const state = {
@@ -865,7 +890,12 @@ const els = {
 };
 
 function buildPath() {
-  state.path = QUESTIONS.filter((q) => !q.when || q.when(state.answers, state));
+  const activePath = QUESTIONS.filter((q) => !q.when || q.when(state.answers, state));
+  const activeIds = new Set(activePath.map((q) => q.id));
+  Object.keys(state.answers).forEach((questionId) => {
+    if (!activeIds.has(questionId)) delete state.answers[questionId];
+  });
+  state.path = activePath;
 }
 
 function getChoice(questionId) {
@@ -900,8 +930,8 @@ function detectTensions() {
   const tensions = [];
   const add = (id, title, detail, severity = "medium") => tensions.push({ id, title, detail, severity });
 
-  if (["objective", "authority"].includes(a.stance) && ["intuition", "tradition"].includes(a.groundSource) && ["none", "experts"].includes(a.authorityAccess)) {
-    add("sealed-authority", "Big authority, but no public way to check it", "The system says its rules come from beyond human choice, but disagreements are settled by feelings, tradition, or approved interpreters instead of evidence that anyone can check.", "high");
+  if (["objective", "authority"].includes(a.stance) && a.groundSource === "nonrealist") {
+    add("foundation-reversal", "The system withdraws its own starting claim", "It first says its rules are universal truths or authoritative commands, then answers the follow-up by denying that such a truth claim applies. One of those answers must change.", "high");
   }
   if (["indexed", "nonrealist"].includes(a.stance) && a.indexDiscipline === "slips") {
     add("index-slip", "The source disappears when the system wants more force", "The system says its values come from people or practices, but sometimes talks as if those values were facts that apply to everyone.", "high");
@@ -909,67 +939,61 @@ function detectTensions() {
   if (["human", "sentient"].includes(a.scope) && ["excluded", "reduced"].includes(a.boundary)) {
     add("shrinking-circle", "A wide circle with an easy exit", "The system says many beings count, yet enemies or outsiders can lose basic protection when including them becomes difficult.", "high");
   }
-  if (a.objectFocus === "shifts") {
-    add("object-slide", "The target of judgment keeps moving", "The system switches between motive, action, outcome, and institution without a clear rule for why the switch matters.", "high");
+  if (a.valueRole === "absolute" && a.conflictMethod === "judgment") {
+    add("absolute-balanced", "An absolute value is later treated as negotiable", "The system first says its main concern can never be set aside, then says a decision-maker may balance it against other concerns without a fixed priority.", "high");
   }
-  if (a.valueRole === "absolute" && ["judgment", "denial"].includes(a.conflictMethod)) {
-    add("master-value", "The top value has no clear limit", "The main value is absolute, but the system either denies conflicts or leaves them to personal judgment without rules.", "high");
+  if ((a.valueCenter === "plural" || a.valueRole === "roles") && a.conflictMethod === "denial") {
+    add("plural-no-conflict", "Many values, but somehow no conflict", "The system gives several values independent roles, then says those roles never produce a real clash. It may need to explain how the roles are ordered or kept apart.");
   }
-  if (a.valueCenter === "plural" && a.conflictMethod === "denial") {
-    add("plural-no-conflict", "Many values, but somehow no conflict", "The system names several values but says they never truly clash. This hides which value actually comes first.", "high");
+  if (["criteria", "same"].includes(a.boundary) && a.similarCases === "loyalty") {
+    add("special-pleading", "The boundary rule changes for friends", "The system says identity alone cannot remove basic protection, but later permits better treatment for friends and insiders without requiring another relevant difference.", "high");
   }
-  if (a.termStability === "elastic") {
-    add("elastic-terms", "Important words stretch to fit the answer", "Words such as harm, freedom, dignity, or care do not have clear meanings that limit how they are used.");
-  }
-  if (a.statusGrammar === "binary") {
-    add("binary-verdict", "Two choices erase important differences", "Right and wrong alone cannot separate harm from blame, being allowed from being admirable, tragedy from guilt, or repair from punishment.");
-  }
-  if (a.bridge === "automatic") {
-    add("bridge-gap", "A missing step between value and rule", "The system moves from “this matters” straight to “you must” without explaining limits, other values, roles, or decision steps.", "high");
-  }
-  if (a.reasonOffer === "authority") {
-    add("compliance-reason", "Obedience is standing in for a reason", "The source can demand agreement, but the system has not explained itself to someone who does not accept that source.");
-  }
-  if (a.similarCases === "loyalty" || a.boundary === "excluded") {
-    add("special-pleading", "Friends and opponents face different standards", "Being an ally, enemy, insider, or outsider changes the answer even though the system has not shown why that difference matters.", "high");
-  }
-  if (a.conflictMethod === "denial") {
-    add("conflict-denial", "A real conflict is called a misunderstanding", "The system has no decision process for cases in which it cannot fully protect all the values it claims to hold.");
-  }
-  if (["conviction", "supportive"].includes(a.facts)) {
-    add("evidence-shield", "Wanted facts are protected from correction", "Facts can be filtered through the system’s favorite ideas or pushed aside by strong belief.", a.facts === "conviction" ? "high" : "medium");
-  }
-  if (a.finiteAgent === "ideal") {
-    add("ideal-agent", "The system works only after the hard moment has passed", "Using it correctly requires more facts, time, or skill than real people have when they must act.");
-  }
-  if (a.genealogy === "sacred" && ["closed", "leaders"].includes(a.challenge)) {
-    add("sealed-system", "People cannot inspect its past or change its future", "The system blocks questions about what shaped it, and corrections are closed or controlled by insiders.", "high");
-  }
-  if (a.challenge === "closed") {
-    add("no-revision-door", "A mistake has no way back into the system", "People affected by the rules cannot challenge the main ideas, priorities, or ways the rules are used.", "high");
-  }
-  if (a.repair === "verdict" && ["indexed", "nonrealist"].includes(a.stance)) {
-    add("desert-return", "Deserved punishment returns through the back door", "The system rejects universal moral labels but still jumps to guilt and deserved pain instead of naming goals such as protection, prevention, or repair.");
+  if (["criteria", "audit"].includes(a.similarCases) && ["excluded", "reduced"].includes(a.boundary)) {
+    add("boundary-exception", "The comparison rule and the outsider rule disagree", "The system promises the same stated standards for similar cases, yet lowers protection for outsiders even when no relevant difference besides identity has been named.", "high");
   }
   if (a.scenarioTruth === "truth" && a.valueCenter === "welfare") {
     add("truth-welfare", "The story goes against the system’s main concern", "The system says reducing suffering matters most, yet it still requires the truth when serious harm is easy to predict.");
   }
-  if (a.scenarioScarcity === "favorite" && a.similarCases === "criteria") {
+  if (a.conflictMethod === "remainder" && a.scenarioTruth === "lie") {
+    add("missing-remainder", "A promised record of loss disappears in the hard case", "The system says hard choices should record what was sacrificed, but then treats the protective lie as fully settled with no remaining cost to honesty or trust.");
+  }
+  if (a.scenarioScarcity === "favorite" && ["criteria", "audit"].includes(a.similarCases)) {
     add("scarcity-discretion", "A clear public rule becomes a private guess", "The system says the same standards should apply to everyone, but leaves the medicine choice to whichever case feels strongest to the medical team.");
   }
-  if (["protect", "believe"].includes(a.scenarioLoyalty) && ["criteria", "audit"].includes(a.similarCases)) {
+  if (a.scenarioLoyalty === "protect" && ["criteria", "audit"].includes(a.similarCases)) {
     add("loyalty-exception", "The rule changes for a trusted insider", "The system promises the same treatment for similar cases but changes the proof or process for a leader in its own group.", "high");
   }
 
   return tensions;
 }
 
-function calculateOverall(scores, tensions = detectTensions()) {
+function calculateBaseScore(scores) {
   const answeredScores = Object.values(scores).filter((score) => score !== null);
   if (!answeredScores.length) return null;
-  const average = answeredScores.reduce((sum, score) => sum + score, 0) / answeredScores.length;
-  const penalty = tensions.reduce((sum, tension) => sum + (tension.severity === "high" ? 3 : 1.5), 0);
-  return Math.max(0, Math.round(average - penalty));
+  return Math.round(answeredScores.reduce((sum, score) => sum + score, 0) / answeredScores.length);
+}
+
+function calculateTensionPenalty(tensions = detectTensions()) {
+  return tensions.reduce((sum, tension) => sum + TENSION_PENALTIES[tension.severity], 0);
+}
+
+function unresolvedProfileChoices() {
+  return PROFILE_FIELDS.map(({ id }) => getChoice(id)).filter((choice) => choice?.unresolved);
+}
+
+function calculateProfilePenalty() {
+  return unresolvedProfileChoices().length * PROFILE_GAP_PENALTY;
+}
+
+function calculateOverall(scores, tensions = detectTensions()) {
+  const base = calculateBaseScore(scores);
+  if (base === null) return null;
+  return Math.max(0, base - calculateTensionPenalty(tensions) - calculateProfilePenalty());
+}
+
+function formatScoreFormula(baseScore, tensionPenalty, profilePenalty, overall) {
+  const rawScore = baseScore - tensionPenalty - profilePenalty;
+  return `Base clarity ${baseScore} − conflict adjustment ${tensionPenalty} − unspecified-profile adjustment ${profilePenalty} = ${overall}${rawScore < 0 ? " (floored at 0)" : ""}`;
 }
 
 function renderAxisGrid() {
@@ -1000,7 +1024,7 @@ function renderLiveDiagnostic() {
 
   els.tensionCount.textContent = tensions.length;
   if (!tensions.length) {
-    els.tensionList.innerHTML = '<p class="empty-tensions">No answers clash yet. The check is listening.</p>';
+    els.tensionList.innerHTML = '<p class="empty-tensions">No cross-answer conflict detected yet.</p>';
     return;
   }
   els.tensionList.innerHTML = tensions
@@ -1083,11 +1107,40 @@ function classification(score) {
   return { label: "Major gap", className: "debt" };
 }
 
-function verdictFor(score) {
-  if (score >= 82) return "The main parts are clear and fit together";
-  if (score >= 68) return "Mostly clear, with some open questions";
-  if (score >= 48) return "Several parts need more explanation";
-  return "Many parts break down or clash";
+function verdictFor(score, tensions = [], unresolvedCount = 0) {
+  if (score >= 82 && unresolvedCount && tensions.length) return "Clear scored parts, with profile gaps and a conflict to resolve";
+  if (score >= 82 && unresolvedCount) return "Clear scored parts, with profile definitions still missing";
+  if (score >= 82) return "Clear structure with few cross-answer conflicts";
+  if (score >= 68) return "Mostly clear, with some gaps or conflicts";
+  if (score >= 48) return "Several structural parts need more support";
+  return "Major gaps or cross-answer conflicts remain";
+}
+
+function scoreExtremes(scores) {
+  const measured = Object.entries(scores).filter(([, score]) => score !== null);
+  const highest = Math.max(...measured.map(([, score]) => score));
+  const lowest = Math.min(...measured.map(([, score]) => score));
+  return {
+    highest,
+    lowest,
+    strongest: measured.filter(([, score]) => score === highest).map(([key]) => key),
+    weakest: measured.filter(([, score]) => score === lowest).map(([key]) => key),
+  };
+}
+
+function formatDimensionNames(keys) {
+  return keys.map((key) => DIMENSIONS[key].name).join(", ");
+}
+
+function renderResultProfile() {
+  document.querySelector("#resultProfile").innerHTML = PROFILE_FIELDS.map(({ id, label }) => {
+    const choice = getChoice(id);
+    return `
+      <div class="profile-item ${choice?.unresolved ? "unresolved" : ""}">
+        <span>${label} · ${choice?.unresolved ? "definition missing" : "content not scored"}</span>
+        <strong>${choice?.unresolved ? "Not yet specified" : choice?.label || "No answer"}</strong>
+      </div>`;
+  }).join("");
 }
 
 function formatSystemType(systemType) {
@@ -1097,23 +1150,53 @@ function formatSystemType(systemType) {
 function showResults() {
   const scores = calculateScores();
   const tensions = detectTensions();
+  const baseScore = calculateBaseScore(scores) ?? 0;
+  const tensionPenalty = calculateTensionPenalty(tensions);
+  const profilePenalty = calculateProfilePenalty();
   const overall = calculateOverall(scores, tensions) ?? 0;
-  const ranked = Object.entries(scores).sort((a, b) => (b[1] ?? -1) - (a[1] ?? -1));
-  const [strongKey, strongScore] = ranked[0];
-  const [weakKey, weakScore] = ranked[ranked.length - 1];
+  const extremes = scoreExtremes(scores);
 
   els.survey.classList.add("hidden");
   els.results.classList.remove("hidden");
   document.querySelector("#resultsTitle").textContent = `${state.systemName}: the structure revealed`;
-  document.querySelector("#resultsSummary").textContent = tensions.length
-    ? `The test found ${tensions.length} places where the system’s answers pull against each other. The score rewards clear boundaries, stable meanings, explained reasoning steps, careful use of facts, and real ways to fix mistakes.`
-    : "No two answers directly clashed on this path. The scores still show which parts are clear and which parts need more explanation.";
+  const unresolvedCount = unresolvedProfileChoices().length;
+  document.querySelector("#resultsSummary").textContent = [
+    tensions.length
+      ? `The test found ${tensions.length} cross-answer ${tensions.length === 1 ? "conflict" : "conflicts"}.`
+      : "No cross-answer conflicts were detected on this path.",
+    unresolvedCount
+      ? `${unresolvedCount} descriptive profile ${unresolvedCount === 1 ? "field is" : "fields are"} still unspecified.`
+      : "The three descriptive profile fields are specified.",
+    "Standalone weaknesses lower only their own part scores.",
+  ].join(" ");
+  renderResultProfile();
   document.querySelector("#finalScore").textContent = overall;
-  document.querySelector("#finalVerdict").textContent = verdictFor(overall);
-  document.querySelector("#strongestAxis").textContent = DIMENSIONS[strongKey].name;
-  document.querySelector("#strongestCopy").textContent = `${strongScore}/100 — ${DIMENSIONS[strongKey].short} is the clearest part of the system.`;
-  document.querySelector("#weakestAxis").textContent = DIMENSIONS[weakKey].name;
-  document.querySelector("#weakestCopy").textContent = `${weakScore}/100 — ${DIMENSIONS[weakKey].debt}`;
+  document.querySelector("#finalVerdict").textContent = verdictFor(overall, tensions, unresolvedCount);
+  document.querySelector("#scoreFormula").textContent = formatScoreFormula(baseScore, tensionPenalty, profilePenalty, overall);
+
+  if (extremes.strongest.length === Object.keys(DIMENSIONS).length) {
+    document.querySelector("#strongestAxis").textContent = "All parts tied";
+    document.querySelector("#strongestCopy").textContent = `Every scored part received ${extremes.highest}/100.`;
+  } else {
+    document.querySelector("#strongestAxis").textContent = extremes.strongest.length === 1 ? DIMENSIONS[extremes.strongest[0]].name : "Several parts tied";
+    document.querySelector("#strongestCopy").textContent = `${extremes.highest}/100 — ${formatDimensionNames(extremes.strongest)} received the highest score.`;
+  }
+
+  if (unresolvedCount) {
+    const missingLabels = PROFILE_FIELDS
+      .filter(({ id }) => getChoice(id)?.unresolved)
+      .map(({ label }) => label.toLowerCase());
+    document.querySelector("#weakestAxis").textContent = unresolvedCount === 1 ? "Missing profile definition" : "Missing profile definitions";
+    document.querySelector("#weakestCopy").textContent = `${missingLabels.join(" and ")} ${unresolvedCount === 1 ? "is" : "are"} unspecified, producing a ${profilePenalty}-point adjustment.`;
+  } else if (extremes.weakest.length === Object.keys(DIMENSIONS).length) {
+    document.querySelector("#weakestAxis").textContent = "No single weakest part";
+    document.querySelector("#weakestCopy").textContent = "All scored parts are tied; review any cross-answer conflicts instead of treating one part as the main gap.";
+  } else {
+    document.querySelector("#weakestAxis").textContent = extremes.weakest.length === 1 ? DIMENSIONS[extremes.weakest[0]].name : "Several parts tied";
+    document.querySelector("#weakestCopy").textContent = extremes.weakest.length === 1
+      ? `${extremes.lowest}/100 — ${DIMENSIONS[extremes.weakest[0]].debt}`
+      : `${extremes.lowest}/100 — ${formatDimensionNames(extremes.weakest)} share the lowest score.`;
+  }
 
   document.querySelector("#ledger").innerHTML = Object.entries(DIMENSIONS)
     .map(([key, dimension], index) => {
@@ -1140,7 +1223,7 @@ function showResults() {
             </article>`,
         )
         .join("")
-    : '<p class="no-final-tensions">No two answers directly clashed. This does not prove that the system is true or complete. It only means the answers given here fit together.</p>';
+    : '<p class="no-final-tensions">No cross-answer conflicts were detected. This does not prove that the system is true or complete; it only means this rule set found no direct conflict between the answers given.</p>';
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -1148,17 +1231,27 @@ function showResults() {
 function buildTextReport() {
   const scores = calculateScores();
   const tensions = detectTensions();
+  const baseScore = calculateBaseScore(scores) ?? 0;
+  const tensionPenalty = calculateTensionPenalty(tensions);
+  const profilePenalty = calculateProfilePenalty();
   const overall = calculateOverall(scores, tensions) ?? 0;
   const lines = [
     "THE COHERENCE ENGINE — REPORT",
     state.systemName,
-    `How well the parts fit: ${overall}/100 — ${verdictFor(overall)}`,
+    `Clarity and consistency: ${overall}/100 — ${verdictFor(overall, tensions, unresolvedProfileChoices().length)}`,
+    `Formula: ${formatScoreFormula(baseScore, tensionPenalty, profilePenalty, overall)}`,
     "",
-    "THIRTEEN TESTS",
+    "DESCRIPTIVE PROFILE — NOT SCORED",
+    ...PROFILE_FIELDS.map(({ id, label }) => {
+      const choice = getChoice(id);
+      return `${label}: ${choice?.unresolved ? "Not yet specified" : choice?.label || "No answer"}`;
+    }),
+    "",
+    "THIRTEEN SCORED PARTS",
     ...Object.entries(DIMENSIONS).map(([key, dimension], index) => `${String(index + 1).padStart(2, "0")}. ${dimension.name}: ${scores[key] ?? 0}/100`),
     "",
-    "ANSWERS THAT MAY CLASH",
-    ...(tensions.length ? tensions.map((tension) => `- ${tension.title}: ${tension.detail}`) : ["- No answers directly clashed on this path."]),
+    "CROSS-ANSWER CONFLICTS",
+    ...(tensions.length ? tensions.map((tension) => `- ${tension.title}: ${tension.detail}`) : ["- No cross-answer conflicts were detected on this path."]),
     "",
     "LIMIT",
     "A clear and consistent system is not automatically true, fair, kind, wise, or morally binding. This test only checks whether the system explains its own structure and uses it consistently.",

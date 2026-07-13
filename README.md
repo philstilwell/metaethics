@@ -18,7 +18,7 @@ The survey operationalizes thirteen tests drawn from Phil Stilwell’s work:
 12. Origin
 13. Revision
 
-The diagnostic uses explicit scoring and contradiction rules in `app.js`. It treats coherence as structural solvency, not as truth, legitimacy, kindness, wisdom, or objective moral authority.
+The diagnostic uses explicit scoring and cross-answer conflict rules in `app.js`. Three descriptive profile questions—foundation, stated circle, and leading concern—do not reward one philosophical position over another. The thirteen scored parts receive equal weight. The overall result starts with their average, subtracts 4 points per strong cross-answer conflict, 2 per possible conflict, and 5 for each profile definition the user explicitly leaves unspecified, with a floor of 0. It treats coherence as structural clarity and consistency, not as truth, legitimacy, kindness, wisdom, or objective moral authority.
 
 The `papers.html` reading room includes the project’s source papers and a curated set of work on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can add papers to a private shelf stored in their own browser.
 
@@ -31,6 +31,12 @@ python3 -m http.server 4173
 ```
 
 Then open `http://localhost:4173`.
+
+Run the measurement-logic audit with:
+
+```sh
+node tests/logic-audit.cjs
+```
 
 ## Sources
 
