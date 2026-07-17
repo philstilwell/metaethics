@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="An interactive test of whether social disapproval, punishment, or agreement can establish a universal moral obligation."
+      content="An interactive test of what social disapproval, punishment, agreement, and added foundations can establish about moral obligation."
     />
     <meta name="theme-color" content="#151a17" />
     <title>The Missing Ought — The Moral Compass</title>
@@ -26,13 +26,14 @@
     </header>
 
     <main id="top">
+      <p class="visually-hidden" id="obligationLiveStatus" role="status" aria-live="polite"></p>
       <section class="obligation-hero">
         <div class="obligation-hero-copy">
           <p class="kicker">The missing ought</p>
           <h1>When “wrong” only means <em>“we disapprove.”</em></h1>
           <p>
             A community can condemn, shame, exclude, fine, or imprison. Those are real forces. But
-            what turns any of them into an obligation that binds someone who rejects the community’s rule?
+            what turns any of them into a duty that still binds someone who rejects the community’s rule?
           </p>
           <a class="primary-button" href="#obligationLab">Test the claim <span aria-hidden="true">↓</span></a>
         </div>
@@ -42,7 +43,7 @@
           <h2>Pressure can explain obedience without establishing authority.</h2>
           <p>
             “They will punish me” explains why I might comply. It does not yet explain why their rule
-            is truly right or why I am morally bound to obey it.
+            has authority over me when punishment, agreement, and approval are removed.
           </p>
         </aside>
       </section>
@@ -50,7 +51,7 @@
       <section class="obligation-distinction" aria-labelledby="distinctionHeading">
         <div>
           <p class="kicker">Before the test</p>
-          <h2 id="distinctionHeading">A social code and a universal moral claim are not the same thing.</h2>
+          <h2 id="distinctionHeading">A social code and an approval-independent duty are not the same claim.</h2>
         </div>
         <div class="distinction-grid">
           <article>
@@ -59,23 +60,31 @@
             <p>A group can share values, demand conduct, and enforce consequences. That can be coherent and useful.</p>
           </article>
           <article>
-            <span>Universal moral claim</span>
-            <h3>“Everyone is truly bound.”</h3>
-            <p>This stronger claim must explain why outsiders, secret violators, and principled dissenters are also obligated.</p>
+            <span>Approval-independent duty</span>
+            <h3>“The rule binds beyond approval.”</h3>
+            <p>This stronger claim must explain why the duty remains when people reject the rule, escape punishment, or stand outside the group.</p>
           </article>
         </div>
         <details class="obligation-definition">
-          <summary>What does “universal obligation” mean here?</summary>
-          <p>
-            It means a demand that applies even when a person dislikes it, gains from breaking it,
-            rejects the community, and can escape every punishment. This page asks whether social
-            disapproval alone can supply that kind of authority. It does not deny that shared rules,
-            commitments, laws, and consequences matter in human life.
-          </p>
+          <summary>Exactly what claim does this lab test?</summary>
+          <div class="definition-copy">
+            <p>
+              An <strong>approval-independent duty</strong> does not become binding merely because a
+              community approves it, and it does not stop binding merely because that approval disappears.
+              It is meant to survive rejection, secrecy, and changes in public opinion.
+            </p>
+            <p>
+              This is not a test of every kind of moral non-realism. A non-realist may appeal to harm,
+              consistency, fair agreement, idealized reasoning, or other standards that are more than a
+              report of what a community currently likes. “Beyond disapproval” also does not automatically
+              mean supernatural or mind-independent. The lab tests one narrow inference: whether the fact
+              that a group disapproves is enough, by itself, to create a duty with wider authority.
+            </p>
+          </div>
         </details>
       </section>
 
-      <section class="workspace obligation-workspace" id="obligationLab" aria-live="polite">
+      <section class="workspace obligation-workspace" id="obligationLab">
         <div class="survey-column">
           <div class="progress-shell">
             <div class="progress-meta">
@@ -85,7 +94,15 @@
                 <span id="obligationProgress">1 / 7</span>
               </div>
             </div>
-            <div class="progress-track" aria-hidden="true">
+            <div
+              class="progress-track"
+              id="obligationProgressTrack"
+              role="progressbar"
+              aria-label="Obligation lab progress"
+              aria-valuemin="1"
+              aria-valuemax="7"
+              aria-valuenow="1"
+            >
               <span id="obligationProgressBar"></span>
             </div>
           </div>
@@ -126,9 +143,14 @@
                 </div>
               </div>
             </details>
-            <div class="choice-list" id="obligationChoices" role="radiogroup" aria-labelledby="obligationQuestionPrompt"></div>
+            <fieldset class="choice-list" id="obligationChoices" aria-labelledby="obligationQuestionPrompt">
+              <legend class="visually-hidden">Choose one answer</legend>
+            </fieldset>
             <div class="question-footer">
-              <button class="text-button" id="obligationBackButton" type="button">← Back</button>
+              <div class="question-navigation">
+                <button class="text-button" id="obligationBackButton" type="button">← Back</button>
+                <button class="secondary-button" id="obligationNextButton" type="button" disabled>Next question →</button>
+              </div>
               <p id="obligationWhy"></p>
             </div>
           </article>
@@ -139,20 +161,20 @@
             <div class="live-header">
               <div>
                 <p class="kicker">Your answer path</p>
-                <h2 id="forceMapHeading">What kind of force are you relying on?</h2>
+                <h2 id="forceMapHeading">What kind of basis are you using?</h2>
               </div>
               <div class="pulse-dot" aria-hidden="true"></div>
             </div>
             <p class="force-map-basis" id="forceMapBasis">0 of 7 answers classified</p>
-            <div class="force-ladder" id="forceLadder" aria-label="Answer classifications from personal commitment to claimed universal obligation"></div>
+            <div class="force-ladder" id="forceLadder" role="img" aria-label="Answer categories used in the obligation lab"></div>
             <p class="force-map-note">
-              Each marker is one answer. Moving upward shows a broader claim—not a better or stronger score.
+              These are different kinds of basis, not ranks. Each count shows how many answers used that category.
             </p>
           </aside>
         </div>
       </section>
 
-      <section class="results obligation-results hidden" id="obligationResults" aria-live="polite">
+      <section class="results obligation-results hidden" id="obligationResults">
         <div class="results-hero">
           <p class="kicker">Obligation diagnostic</p>
           <h1 id="obligationResultTitle">—</h1>
@@ -161,19 +183,19 @@
 
         <div class="scoreboard obligation-scoreboard">
           <div class="score-card score-card-primary">
-            <span>Strongest support actually supplied</span>
+            <span>Final answer category</span>
             <strong id="supportedCeiling">—</strong>
             <p id="supportedCeilingCopy"></p>
           </div>
           <div class="score-card">
-            <span>Universal obligation</span>
+            <span>Assessment under the stated assumptions</span>
             <strong id="universalStatus">—</strong>
             <p id="universalStatusCopy"></p>
           </div>
           <div class="score-card">
-            <span>Unsupported jumps</span>
-            <strong id="leapCount">—</strong>
-            <p>Answers that treated social facts as enough to create universal moral authority.</p>
+            <span>Direct inferences needing support</span>
+            <strong id="directGapCount">—</strong>
+            <p>Selected answers that asked disapproval, location, later praise, or force to create wider authority by itself.</p>
           </div>
         </div>
 
@@ -181,8 +203,8 @@
           <div class="result-force-map-mount" id="resultForceMapMount"></div>
           <section class="report-section bridge-report-section" aria-labelledby="bridgeReportHeading">
             <div class="section-heading">
-              <p class="kicker">Claims needing another step</p>
-              <h2 id="bridgeReportHeading">Where the “ought” is still missing</h2>
+              <p class="kicker">Argument audit</p>
+              <h2 id="bridgeReportHeading">What follows, what changed, and what still needs support</h2>
             </div>
             <div id="bridgeReport"></div>
           </section>
@@ -199,9 +221,32 @@
         <section class="interpretation obligation-conclusion">
           <div>
             <p class="kicker">The central result</p>
-            <h2 id="obligationConclusionHeading">A social code can be coherent without becoming universal morality.</h2>
+            <h2 id="obligationConclusionHeading">A social code can be coherent without claiming wider authority.</h2>
           </div>
           <p id="obligationConclusionCopy"></p>
+        </section>
+
+        <section class="report-section ai-probe-section" aria-labelledby="obligationAIHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Continue the inquiry</p>
+              <h2 id="obligationAIHeading">Ask an AI to examine the missing steps</h2>
+            </div>
+            <p>
+              This prompt includes the exact cases, fixed assumptions, your answers, direct inference
+              gaps, proposed foundations, and any change between your opening and final claim.
+            </p>
+          </div>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="obligationAIProbePrompt">Your ready-to-use interview prompt</label>
+          <textarea id="obligationAIProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyObligationPromptButton" type="button">Copy AI prompt</button>
+            <p id="obligationPromptCopyStatus" aria-live="polite">The prompt contains your answers but no name or account information.</p>
+          </div>
         </section>
 
         <div class="result-actions">
@@ -213,12 +258,15 @@
 
     <footer>
       <p>
-        This page distinguishes social pressure from universal authority. It does not deny the real
+        This page distinguishes social pressure from approval-independent authority. It does not deny the real
         importance of human commitments, laws, relationships, harms, or shared rules.
       </p>
       <p><a href="papers.html">Explore the non-realist reading room</a></p>
     </footer>
 
+    <noscript>
+      <p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p>
+    </noscript>
     <script src="obligation.js"></script>
   </body>
 </html>

@@ -28,13 +28,13 @@ const FORCE_LEVELS = {
   },
   bridge: {
     index: "?",
-    name: "A further bridge is required",
-    short: "The argument must add something beyond social reaction.",
+    name: "Additional foundation proposed",
+    short: "The answer adds a standard beyond current social reaction.",
   },
-  leap: {
+  universal: {
     index: "!",
-    name: "Universal obligation claimed",
-    short: "Social facts are being asked to create authority over everyone.",
+    name: "Approval-independent duty asserted",
+    short: "The answer claims authority that survives rejection or changing approval.",
   },
 };
 
@@ -43,26 +43,27 @@ const OBLIGATION_QUESTIONS = [
     id: "meaning",
     phase: "Defining the claim",
     axis: "What does “obligated” mean?",
-    prompt: "When you say that everyone is morally obligated to obey a community rule, what exactly are you claiming?",
+    prompt: "When you say that a community rule morally obligates everyone it reaches, which claim do you mean?",
     context:
-      "Imagine a community with a deeply held rule. People strongly condemn anyone who breaks it. For now, assume no divine command, objective moral fact, or universal law of reason has been established.",
+      "Imagine a community with a deeply held rule. People strongly condemn anyone who breaks it. For now, no divine command, stance-independent moral fact, or rule required by reason has been established as part of the argument.",
     assumptions:
       "The rule is genuinely popular and socially enforced. This question asks what the word “obligated” adds beyond that description.",
     scope:
       "Choose the statement closest to what you mean. Do not yet argue that the rule itself is wise, kind, or harmful.",
     why: "This opening answer fixes the strength and reach of the claim that the later cases will test.",
     guide: {
-      plain: "Are you reporting a social fact, giving practical advice, expressing a commitment, or claiming a duty that applies to everyone?",
-      separate: "A person can have a powerful reason to obey without being universally morally obligated to obey.",
+      plain: "Are you reporting a social fact, giving practical advice, expressing a commitment, naming a conditional duty, or claiming authority that survives disapproval?",
+      separate: "A person can have a powerful reason to obey without the rule having approval-independent authority over that person.",
       reveal: "Your answer establishes how far your use of “obligation” is meant to reach.",
     },
     choices: [
       {
         id: "universal",
-        label: "The rule binds every person, even secret violators and outsiders",
-        detail: "Breaking it would remain morally wrong even without agreement, discovery, punishment, or concern for the community.",
-        level: "leap",
-        interpretation: "This makes a universal claim. The remaining questions test whether social disapproval can supply authority that broad.",
+        label: "The rule binds even people who reject it, cannot be caught, or stand outside the group",
+        detail: "Its authority would survive disagreement, secrecy, changing public opinion, and the absence of any accepted role or agreement.",
+        level: "universal",
+        directGap: null,
+        interpretation: "This defines an approval-independent claim. It is not yet marked mistaken; the remaining questions test what foundation, if any, supports authority that broad.",
       },
       {
         id: "member",
@@ -81,14 +82,14 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "social",
         label: "It means that the community strongly requires and defends the rule",
-        detail: "The statement describes a shared social code without claiming a truth that binds every person everywhere.",
+        detail: "The statement describes a shared social code without claiming authority that survives rejection or a change in the community’s view.",
         level: "social",
-        interpretation: "This honestly describes a social rule while leaving universal moral authority unclaimed.",
+        interpretation: "This clearly describes a social rule while leaving approval-independent moral authority unclaimed.",
       },
       {
         id: "commitment",
         label: "It expresses a value I support and want other people to share",
-        detail: "I am voicing a commitment rather than reporting a mind-independent obligation.",
+        detail: "I am voicing a commitment and inviting agreement rather than reporting an authority created independently of anyone’s values.",
         level: "commitment",
         interpretation: "This grounds the demand in an openly stated human commitment and does not claim that the commitment creates authority over every person.",
       },
@@ -98,40 +99,46 @@ const OBLIGATION_QUESTIONS = [
     id: "secret",
     phase: "Removing the audience",
     axis: "Case — the unheard song",
-    prompt: "If social disapproval is the highest source of obligation, what remains when nobody can disapprove of the act?",
+    prompt: "If the town’s disapproval is the only stated basis for its ban, what does that basis establish when nobody discovers the act?",
     context:
       "A town forbids the funeral songs of an expelled minority. Lio quietly sings one of those songs at his mother’s grave inside a soundproof memorial room. No recording exists. Nobody will ever learn what happened, and the act changes no later event.",
     assumptions:
-      "The town would strongly condemn Lio if it knew. In fact, no one discovers the act, so he faces no shame, exclusion, punishment, or effect on his reputation.",
+      "The town would strongly condemn Lio if it knew. In fact, no one discovers the act, so he faces no shame, exclusion, punishment, or effect on his reputation. Lio’s own private commitments are not specified.",
     scope:
       "Ask what follows from the town’s disapproval itself. Do not add a hidden audience or a supernatural observer.",
     why: "A secret act separates a standing social rule from the actual pressure created when other people react.",
     guide: {
-      plain: "Would the act still be wrong merely because the community has a rule against it?",
-      separate: "Violating a local rule, risking punishment, and violating a universal obligation are three different claims.",
+      plain: "What follows from a standing social rule after every actual social reaction has been removed?",
+      separate: "Violating a local rule, expecting punishment, following a private commitment, and violating an approval-independent duty are different claims.",
       reveal: "Your answer shows whether social acceptance defines wrongness, merely pressures behavior, or needs another standard.",
     },
     choices: [
       {
         id: "communityMakesWrong",
-        label: "The song is still universally wrong because the town condemns it",
-        detail: "A community’s settled disapproval is enough to make its rule morally binding even when no one reacts to the violation.",
-        level: "leap",
-        interpretation: "This treats the existence of a social rule as enough to create universal authority.",
+        label: "The standing social rule makes the song morally wrong even without discovery or reaction",
+        detail: "The town’s settled disapproval is treated as enough, by itself, to create a duty that remains when no one can respond to the violation.",
+        level: "universal",
+        directGap: {
+          id: "standing-code-authority",
+          title: "A standing code was asked to create wider authority by itself",
+          detail: "The premise establishes that the town has a rule. A further premise is needed to show why the rule binds someone independently of detection, reaction, or accepted membership.",
+          severity: "high",
+        },
+        interpretation: "This moves directly from the existence of a standing social rule to approval-independent authority; within this test, that connection still needs support.",
       },
       {
         id: "localViolation",
         label: "It violates the town’s code, but that is the whole claim",
         detail: "The act is “wrong by this town’s rules” without being wrong for every person independently of those rules.",
         level: "social",
-        interpretation: "This preserves a coherent local code without inflating it into universal morality.",
+        interpretation: "This preserves a coherent local code without inflating it into approval-independent authority.",
       },
       {
         id: "noPressure",
-        label: "The town gives Lio no practical reason to comply when discovery is impossible",
-        detail: "Social disapproval changes behavior through expected reactions, and those reactions are absent here.",
+        label: "No enforcement-based reason remains, although Lio might still have reasons of his own",
+        detail: "Expected social reactions cannot influence this secret act. Private loyalty, identity, or commitment could still matter, but those reasons are not supplied by enforcement.",
         level: "pressure",
-        interpretation: "This treats disapproval as a practical pressure whose force depends on being detected.",
+        interpretation: "This limits the conclusion carefully: discovery-dependent pressure is absent, while possible personal reasons remain open.",
       },
       {
         id: "unjustRule",
@@ -143,9 +150,9 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "myCommitment",
         label: "I support Lio’s choice, but that judgment expresses my values",
-        detail: "I oppose the town’s rule without claiming that my opposition reports a universal moral fact.",
+        detail: "I oppose the town’s rule without claiming that my opposition reports an approval-independent moral fact.",
         level: "commitment",
-        interpretation: "This answers the case through an explicit personal commitment rather than hidden universal authority.",
+        interpretation: "This answers the case through an explicit personal commitment rather than hidden approval-independent authority.",
       },
     ],
   },
@@ -153,33 +160,39 @@ const OBLIGATION_QUESTIONS = [
     id: "towns",
     phase: "Changing the community",
     axis: "Case — the two bridge towns",
-    prompt: "Can opposite community rules both become universal obligations merely because each community strongly approves its own rule?",
+    prompt: "When two equally supported communities adopt opposite rules, what can community approval alone establish?",
     context:
       "Two towns share one bridge and face identical corruption. Eastbridge requires citizens to expose a corrupt official. Westbridge condemns disclosure as betrayal. The evidence, risks, harms, and likely results are otherwise the same.",
     assumptions:
       "Each rule has equal support, history, and enforcement. Only the community’s accepted rule changes; every other relevant fact is held fixed.",
     scope:
-      "Decide what community approval alone can establish when two communities demand opposite actions in matching circumstances.",
-    why: "Opposite norms test whether approval creates universal truth or only identifies the rule used inside a group.",
+      "Decide what community approval alone can establish when two communities demand opposite actions in matching circumstances. A context-relative rule and a rule that binds merely because of location are not the same claim.",
+    why: "Opposite norms test whether approval identifies local codes or also creates authority over every person placed under each code.",
     guide: {
-      plain: "If approval makes a rule universally right, the same facts produce two opposite universal duties.",
-      separate: "A rule can govern a place without becoming true for every person in every place.",
+      plain: "Does living under a town’s rule make that opposite rule binding solely because the town approves it?",
+      separate: "Two statements can both be true—“Eastbridge requires disclosure” and “Westbridge forbids it”—without either town’s approval creating moral authority over everyone there.",
       reveal: "Your answer shows how you handle conflicts between equally supported social codes.",
     },
     choices: [
       {
         id: "bothUniversal",
-        label: "Both opposite rules are universally binding within their own towns",
-        detail: "Eastbridge’s approval makes disclosure truly required there, while Westbridge’s approval makes the same disclosure truly forbidden there.",
-        level: "leap",
-        interpretation: "This uses the word “universal” for two opposite demands whose only difference is location, leaving the claimed universality unexplained.",
+        label: "Each town’s approval makes its opposite rule morally binding on every person located there",
+        detail: "Disclosure becomes a duty in Eastbridge and a forbidden act in Westbridge solely because each town strongly accepts and enforces its own code.",
+        level: "universal",
+        directGap: {
+          id: "location-authority",
+          title: "Location was asked to create opposite duties by itself",
+          detail: "The case establishes two opposite local codes. Another premise is needed to show why merely being under one town’s approval gives that code moral authority over every person there.",
+          severity: "high",
+        },
+        interpretation: "This is a location-relative authority claim, not a universal truth claim. It still needs an account of why local approval binds every person within the location.",
       },
       {
         id: "localCodes",
-        label: "Each town has a local code, but neither code becomes universally true",
+        label: "Each town has a local code, but approval alone gives neither code wider authority",
         detail: "The disagreement shows which rule each group uses, not which rule binds everyone independently of group acceptance.",
         level: "social",
-        interpretation: "This treats the rules as coherent local conventions rather than opposite universal truths.",
+        interpretation: "This treats the rules as coherent local conventions without claiming that approval itself gives either rule authority over every person.",
       },
       {
         id: "memberDuties",
@@ -191,9 +204,9 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "followCosts",
         label: "A person has practical reason to follow whichever town can punish them",
-        detail: "The safest action changes with enforcement, even though moral truth has not been established.",
+        detail: "The safest action changes with enforcement, even though the towns’ wider authority has not been established.",
         level: "pressure",
-        interpretation: "This explains compliance through expected social costs rather than universal obligation.",
+        interpretation: "This explains compliance through expected social costs rather than approval-independent obligation.",
       },
       {
         id: "outsideStandard",
@@ -208,26 +221,26 @@ const OBLIGATION_QUESTIONS = [
     id: "reformer",
     phase: "Testing moral reform",
     axis: "Case — the medal for disobedience",
-    prompt: "Could a reformer be right while the entire community still condemned her?",
+    prompt: "What does this reformer’s case show about treating current approval as the whole basis of moral status?",
     context:
       "A colony once prohibited girls from studying engineering. Asha secretly taught them and was condemned by nearly everyone. Twenty years later, the colony ended the rule and gave Asha its highest medal for doing what it had once forbidden.",
     assumptions:
       "At the time of Asha’s defiance, the rule was clear, popular, and enforced. She did not know that public opinion would later change.",
     scope:
-      "Judge the source of Asha’s status at the time she acted, not merely how later citizens remember her.",
-    why: "Moral reform is difficult to explain if current approval is the highest possible source of right and wrong.",
+      "State exactly what can be said about Asha at the time she acted, not merely how later citizens remember her. You may describe a social change, express a commitment, or add a further standard.",
+    why: "Reform tests whether current approval is only a social fact or also your complete test of moral status.",
     guide: {
-      plain: "Was Asha wrong until the vote changed, or could the community itself already be mistaken?",
-      separate: "Later praise can change reputation without reaching backward and creating an earlier obligation.",
-      reveal: "Your answer shows whether a community can be criticized by anything beyond its current standards.",
+      plain: "Are you describing two social codes, endorsing Asha, or judging the old code by another standard?",
+      separate: "Later praise can change reputation and the current code without automatically proving an earlier approval-independent duty.",
+      reveal: "Your answer shows whether current approval is your whole description or whether another standard does the critical work.",
     },
     choices: [
       {
         id: "wrongThen",
-        label: "Asha was wrong then and became right only after the community changed",
-        detail: "Right and wrong track the community’s current code, so the same act changes status when public approval changes.",
+        label: "Asha violated the code then and is honored under the new code now; that is the whole claim",
+        detail: "The description tracks the colony’s social rules at each time without adding an approval-independent judgment that the old rule was morally mistaken.",
         level: "social",
-        interpretation: "This is a consistent social-code answer, though it cannot say the former community was mistaken by a standard beyond itself.",
+        interpretation: "This is a consistent social-code answer. It records a change in rules without claiming that the former community violated a further standard.",
       },
       {
         id: "rightBeyond",
@@ -248,14 +261,20 @@ const OBLIGATION_QUESTIONS = [
         label: "The colony’s own promise of equal citizenship gave Asha a limited case",
         detail: "Her challenge exposed a conflict between the colony’s stated commitments and its exclusionary rule.",
         level: "conditional",
-        interpretation: "This criticizes the rule from standards the community already claimed, without yet establishing a universal duty.",
+        interpretation: "This criticizes the rule from standards the community already claimed, without yet establishing an approval-independent duty.",
       },
       {
         id: "futureProof",
-        label: "The later medal proves that Asha had always been universally right",
-        detail: "The community’s later approval is treated as proof of the act’s moral status even before that approval existed.",
-        level: "leap",
-        interpretation: "This asks a later social reaction to create or prove an earlier universal obligation without explaining how.",
+        label: "The later medal proves that Asha’s earlier action already had approval-independent moral authority",
+        detail: "The community’s later approval is treated as enough, by itself, to prove the act’s moral status at a time when that approval did not yet exist.",
+        level: "universal",
+        directGap: {
+          id: "future-approval",
+          title: "Later approval was used as proof of an earlier duty",
+          detail: "The medal establishes how the colony judges Asha later. Another premise is needed to show why that later reaction proves an approval-independent status at the earlier time.",
+          severity: "medium",
+        },
+        interpretation: "This asks a later social reaction to prove an earlier approval-independent status without explaining how the later attitude reaches backward.",
       },
     ],
   },
@@ -269,27 +288,33 @@ const OBLIGATION_QUESTIONS = [
     assumptions:
       "The custom was not disclosed before rescue, the traveler made no promise, and refusing causes no loss beyond offense at seeing the custom rejected.",
     scope:
-      "Ask whether disapproval itself creates an obligation for a nonmember. Courtesy, safety, gratitude, and universal morality should be kept separate.",
+      "Ask whether disapproval itself creates an obligation for a nonmember. Courtesy, safety, gratitude, and approval-independent authority should be kept separate.",
     why: "An outsider tests whether a group’s authority extends beyond agreement, membership, and accepted roles.",
     guide: {
       plain: "Does being surrounded by people who condemn an act make their rule morally binding on you?",
-      separate: "It may be wise or courteous to comply even when the community lacks universal authority.",
+      separate: "It may be wise or courteous to comply even when the community lacks authority over a nonmember.",
       reveal: "Your answer identifies the reach you think a community rule can have over nonmembers.",
     },
     choices: [
       {
         id: "disapprovalBinds",
-        label: "The refusal is universally wrong because the colony strongly condemns it",
-        detail: "A community’s settled reaction creates a moral obligation even for an outsider who never accepted the rule.",
-        level: "leap",
-        interpretation: "This extends local disapproval into authority over a nonmember without an agreement or further bridge.",
+        label: "The colony’s strong disapproval makes refusal morally wrong even for this nonmember",
+        detail: "The community’s settled reaction is treated as enough, by itself, to create a duty for an outsider who never accepted or knowingly benefited under the rule.",
+        level: "universal",
+        directGap: {
+          id: "outsider-scope",
+          title: "A local reaction was extended to a nonmember",
+          detail: "The traveler made no agreement and the case supplies no harm beyond offense. A separate premise is needed to explain why the colony’s disapproval has moral authority over this outsider.",
+          severity: "medium",
+        },
+        interpretation: "This extends local disapproval into authority over a nonmember without an agreement or another stated foundation.",
       },
       {
         id: "avoidConflict",
         label: "The traveler should probably kneel to avoid conflict and exclusion",
-        detail: "Compliance is practical advice based on likely social costs, not proof that the custom is universally binding.",
+        detail: "Compliance is practical advice based on likely social costs, not proof that the custom has approval-independent authority.",
         level: "pressure",
-        interpretation: "This recognizes a practical social reason while withholding a claim of universal duty.",
+        interpretation: "This recognizes a practical social reason while withholding a claim of approval-independent duty.",
       },
       {
         id: "guestRole",
@@ -303,7 +328,7 @@ const OBLIGATION_QUESTIONS = [
         label: "There is no obligation, though kneeling could be a generous courtesy",
         detail: "A person may voluntarily show respect without admitting that the group has moral authority over them.",
         level: "commitment",
-        interpretation: "This makes respectful conduct a chosen value rather than a universal requirement created by offense.",
+        interpretation: "This makes respectful conduct a chosen value rather than an approval-independent requirement created by offense.",
       },
       {
         id: "dignityLimit",
@@ -336,8 +361,14 @@ const OBLIGATION_QUESTIONS = [
         id: "forceMakesRight",
         label: "Certain enforcement makes wearing the badge morally obligatory",
         detail: "Because the city can guarantee obedience, its demand becomes a genuine duty rather than merely a threat.",
-        level: "leap",
-        interpretation: "This turns superior power into moral authority without supplying the missing reason that power should be obeyed.",
+        level: "universal",
+        directGap: {
+          id: "force-authority",
+          title: "Certain punishment was treated as moral authority",
+          detail: "Perfect enforcement explains why refusal is dangerous. It does not explain why the ruler is entitled to obedience unless another account of legitimacy is added.",
+          severity: "high",
+        },
+        interpretation: "This turns superior power into moral authority without supplying the further reason that power should be obeyed.",
       },
       {
         id: "practicalOnly",
@@ -365,7 +396,7 @@ const OBLIGATION_QUESTIONS = [
         label: "I oppose forced praise as a human commitment I am willing to defend",
         detail: "My resistance rests on openly held values rather than a claim that punishment somehow creates morality.",
         level: "commitment",
-        interpretation: "This supplies a clear basis for resistance without disguising a commitment as an established universal fact.",
+        interpretation: "This supplies a clear basis for resistance without disguising a commitment as an established approval-independent fact.",
       },
     ],
   },
@@ -373,38 +404,44 @@ const OBLIGATION_QUESTIONS = [
     id: "finalSource",
     phase: "Naming the highest authority",
     axis: "The final bridge",
-    prompt: "If strong community disapproval is the highest fact available, what kind of obligation can honestly be claimed?",
+    prompt: "Given only the stated fact of strong community disapproval, which conclusion follows without adding another premise?",
     context:
-      "Assume no God, objective moral fact, built-in purpose, universal law of reason, or prior agreement has been established. The remaining fact is that a community strongly supports a rule and condemns violations.",
+      "For this question, no divine command, stance-independent moral fact, built-in purpose, rule required by reason, or prior agreement has been established as a premise. The stated fact is only that a community strongly supports a rule and condemns violations.",
     assumptions:
-      "The social reaction is real and may influence behavior. The question is whether that reaction creates authority over every person or only describes human attitudes and institutions.",
+      "The social reaction is real and may influence behavior. The question is what follows from that reaction alone. Other foundations may exist, but they must be added and defended rather than silently assumed.",
     scope:
       "Choose the strongest conclusion that actually follows from social disapproval alone. If you add another foundation, say so openly.",
     why: "This final answer identifies whether your conclusion stays within the evidence or crosses the missing “ought” without support.",
     guide: {
-      plain: "What can “we strongly disapprove” prove without adding another moral premise?",
-      separate: "The importance of a shared rule is not the same as universal authority for that rule.",
+      plain: "What can “we strongly disapprove” establish without adding another premise about why that reaction has authority?",
+      separate: "A shared rule can be important, useful, and strongly enforced without thereby becoming an approval-independent duty.",
       reveal: "Your answer sets the final ceiling of the obligation claim.",
     },
     choices: [
       {
         id: "universalFromDisapproval",
-        label: "Universal moral obligation follows from collective disapproval itself",
-        detail: "When a community’s opposition is strong and settled enough, it creates a duty that binds members, outsiders, and secret violators.",
-        level: "leap",
-        interpretation: "This crosses from a fact about attitudes to universal authority without supplying an additional bridge.",
+        label: "An approval-independent moral duty follows from collective disapproval itself",
+        detail: "When a community’s opposition is strong and settled enough, that reaction alone creates a duty that survives secrecy, rejection, nonmembership, and later changes in opinion.",
+        level: "universal",
+        directGap: {
+          id: "missing-ought",
+          title: "The final conclusion crosses the missing “ought”",
+          detail: "The premise says that a community disapproves. The conclusion says that the rule has authority beyond that approval. A further reason is needed to connect those statements.",
+          severity: "high",
+        },
+        interpretation: "This moves directly from a fact about attitudes to approval-independent authority without supplying an additional premise.",
       },
       {
         id: "socialCodeOnly",
-        label: "A real social code follows, but no universal obligation follows",
-        detail: "The community has values, expectations, and institutions it can defend without claiming that everyone is objectively bound.",
+        label: "A real social code follows, but no approval-independent duty follows",
+        detail: "The community has values, expectations, and institutions it can defend without claiming that its disapproval alone creates wider moral authority.",
         level: "social",
         interpretation: "This is a coherent and candid social-code conclusion that does not claim more authority than its source supplies.",
       },
       {
         id: "conditionalMembers",
-        label: "A limited obligation may follow from fair participation or reciprocity",
-        detail: "People who knowingly accept a role or benefit from a fair system may acquire duties that do not automatically bind everyone.",
+        label: "A limited obligation could follow if fair participation or reciprocity were added",
+        detail: "People who knowingly accept a role or fairly benefit from a system may acquire duties, but those conditions are additional premises and do not bind everyone automatically.",
         level: "conditional",
         interpretation: "This proposes a conditional obligation and accepts that its reach depends on further facts about membership and fairness.",
       },
@@ -413,12 +450,12 @@ const OBLIGATION_QUESTIONS = [
         label: "Only practical reasons to avoid social costs follow",
         detail: "People may comply to avoid shame, exclusion, or punishment without accepting the community’s moral authority.",
         level: "pressure",
-        interpretation: "This treats disapproval as an effective human pressure rather than a source of universal duty.",
+        interpretation: "This treats disapproval as an effective human pressure rather than a source of approval-independent duty.",
       },
       {
         id: "needBeyond",
-        label: "A universal obligation would require a further source beyond disapproval",
-        detail: "Harm, rights, rational necessity, divine authority, or another proposed bridge must be added and defended separately.",
+        label: "An approval-independent duty would require a further foundation beyond disapproval",
+        detail: "Harm, rights, rational consistency, idealized agreement, divine authority, or another proposed foundation must be added and defended separately.",
         level: "bridge",
         interpretation: "This identifies the missing step instead of pretending that social reaction already supplied it.",
       },
@@ -453,82 +490,72 @@ function answeredObligationCount() {
   return OBLIGATION_QUESTIONS.filter((question) => obligationChoice(question.id)).length;
 }
 
-function detectObligationGaps() {
-  const gaps = [];
-  const add = (id, title, detail, severity = "medium") => gaps.push({ id, title, detail, severity });
+function selectedObligationAnswers() {
+  return OBLIGATION_QUESTIONS.flatMap((question) => {
+    const choice = obligationChoice(question.id);
+    return choice ? [{ question, choice }] : [];
+  });
+}
+
+function collectDirectGaps() {
+  return selectedObligationAnswers().flatMap(({ question, choice }) =>
+    choice.directGap
+      ? [{ ...choice.directGap, questionId: question.id, questionAxis: question.axis, answer: choice.label }]
+      : [],
+  );
+}
+
+function collectBridgeInvocations() {
+  return selectedObligationAnswers()
+    .filter(({ choice }) => choice.level === "bridge")
+    .map(({ question, choice }) => ({
+      id: `bridge-${question.id}`,
+      questionId: question.id,
+      questionAxis: question.axis,
+      title: choice.label,
+      detail: choice.interpretation,
+    }));
+}
+
+function detectPathChanges() {
   const opening = obligationState.answers.meaning;
   const final = obligationState.answers.finalSource;
+  if (!opening || !final) return [];
 
-  if (opening === "universal" && final && final !== "needBeyond") {
-    add(
-      "claim-outruns-source",
-      "The opening claim outruns the final source",
-      "You began with an obligation that binds everyone, but your final foundation did not add an authority beyond social reaction, limited participation, or practical cost.",
-      "high",
-    );
+  const broadOpening = opening === "universal";
+  const broadFinal = final === "universalFromDisapproval";
+  const narrowedFinal = ["socialCodeOnly", "conditionalMembers", "practicalReasons"].includes(final);
+  const changes = [];
+
+  if (broadOpening && narrowedFinal) {
+    changes.push({
+      id: "scope-narrowed",
+      title: "Your final answer narrowed the opening claim",
+      detail: "You began with a duty meant to survive rejection and nonmembership, then ended with a social, conditional, or practical conclusion. That may be a considered revision rather than an inconsistency.",
+    });
+  } else if (!broadOpening && broadFinal) {
+    changes.push({
+      id: "scope-broadened",
+      title: "Your final answer broadened the opening claim",
+      detail: "Your opening answer did not claim approval-independent authority, but your final answer did. The direct-inference note identifies the additional premise that broader conclusion needs.",
+    });
   }
 
-  if (obligationState.answers.towns === "bothUniversal") {
-    add(
-      "opposite-universals",
-      "Opposite local rules were both called universal",
-      "The two towns demand opposite actions while every non-social fact is held fixed. Their approval can identify two local codes, but it cannot make both demands universally binding in the same sense.",
-      "high",
-    );
-  }
-
-  if (obligationState.answers.reformer === "futureProof") {
-    add(
-      "future-approval",
-      "Later praise cannot supply an earlier obligation by itself",
-      "The medal explains how the community judges Asha now. Another premise is needed to show why that later reaction proves she was universally right before the reaction existed.",
-    );
-  }
-
-  if (obligationState.answers.enforcer === "forceMakesRight") {
-    add(
-      "force-authority",
-      "Certain punishment was treated as moral authority",
-      "Perfect enforcement explains why refusal is dangerous. It does not explain why the ruler is entitled to obedience unless another account of legitimacy is added.",
-      "high",
-    );
-  }
-
-  if (obligationState.answers.outsider === "disapprovalBinds") {
-    add(
-      "outsider-scope",
-      "A local reaction was extended to a nonmember",
-      "The traveler made no agreement and caused no harm beyond offense. The claim that local disapproval binds this outsider needs a separate account of the colony’s authority over nonmembers.",
-    );
-  }
-
-  if (final === "universalFromDisapproval") {
-    add(
-      "missing-ought",
-      "The final conclusion crosses the missing “ought”",
-      "The premise says that a community disapproves. The conclusion says that every person is obligated. A further reason is required to connect those two statements.",
-      "high",
-    );
-  }
-
-  if (obligationState.answers.reformer === "rightBeyond" && ["socialCodeOnly", "practicalReasons"].includes(final)) {
-    add(
-      "reformer-source",
-      "The reformer answer used a source the final answer removed",
-      "You judged the old community by equality or harm beyond its approval, then ended with only a social code or practical pressure. The extra standard needs to remain in the final explanation.",
-    );
-  }
-
-  return gaps;
+  return changes;
 }
 
 function obligationDiagnosis() {
   const finalChoice = obligationChoice("finalSource");
   const counts = forceCounts();
+  const directGaps = collectDirectGaps();
+  const bridges = collectBridgeInvocations();
+  const pathChanges = detectPathChanges();
   const shared = {
     counts,
-    leapCount: counts.leap,
-    gaps: detectObligationGaps(),
+    directGapCount: directGaps.length,
+    directGaps,
+    bridges,
+    pathChanges,
   };
 
   if (!finalChoice) {
@@ -540,72 +567,159 @@ function obligationDiagnosis() {
       ceiling: "Not yet identified",
       ceilingCopy: "The final source question has not been answered.",
       universal: "Not yet assessed",
-      universalCopy: "No final claim has been recorded.",
+      universalCopy: "No final answer has been recorded.",
+      conclusionHeading: "The test is still in progress.",
       conclusion: "The test is still in progress.",
     };
   }
 
   const diagnoses = {
-    leap: {
-      key: "leap",
+    universal: {
+      key: "universal",
       title: "The missing “ought” remains.",
-      summary: "Your conclusion asks social disapproval to do more than describe a group’s attitudes, rules, and power: it asks those facts to create authority over everyone.",
-      ceiling: "Socially enforced rule",
-      ceilingCopy: "The evidence establishes a shared demand and possible sanctions. It does not establish universal authority by itself.",
-      universal: "Claimed, not established",
-      universalCopy: "The conclusion is broader than the social facts offered in support of it.",
-      conclusion: "A community can insist, condemn, and punish. Calling those reactions a universal obligation changes the label without supplying the missing authority.",
+      summary: "Your final answer asks social disapproval to do more than describe a group’s attitudes, rules, and power: it asks that reaction to create authority that survives rejection.",
+      ceiling: "Approval-independent duty asserted",
+      ceilingCopy: "This is the category of your final answer, not a score or proof that the claim succeeds.",
+      universal: "Needs another premise",
+      universalCopy: "The stated facts establish a shared demand and possible social costs, but not wider authority by themselves.",
+      conclusionHeading: "A stronger label cannot supply the missing authority.",
+      conclusion: "A community can insist, condemn, and punish. To establish a duty that remains when those reactions are rejected or removed, the argument must add and defend another source of authority.",
     },
     social: {
       key: "social",
-      title: "A social code, honestly labeled.",
-      summary: "Your conclusion stays within what community approval can establish: a real human rule that a group supports and may enforce.",
+      title: "A social code, clearly labeled.",
+      summary: "Your final conclusion stays within what community approval can establish by itself: a real human rule that a group supports and may enforce.",
       ceiling: "Shared social code",
-      ceilingCopy: "The rule can coordinate behavior and express collective values without becoming true for every person independently of the group.",
-      universal: "Not claimed",
-      universalCopy: "You did not pretend that social agreement automatically binds outsiders or secret dissenters.",
-      conclusion: "This position can be coherent as a non-realist social system. Its honesty lies in not presenting “our rule” as “a universal duty” without another argument.",
+      ceilingCopy: "This is the category of your final answer: a group rule, not an overall score for the seven answers.",
+      universal: "Follows within scope",
+      universalCopy: "A community’s approval is enough to establish that the community has an accepted code.",
+      conclusionHeading: "A social code can be coherent without claiming wider authority.",
+      conclusion: "This position can be coherent as a non-realist social system. It presents “our rule” as a real social fact while leaving any approval-independent duty to a separate argument.",
     },
     conditional: {
       key: "conditional",
-      title: "A limited obligation, not a universal one.",
-      summary: "Your conclusion grounds duties in participation, roles, fair benefits, or reciprocity. Those facts may matter, but their reach depends on who actually meets the conditions.",
-      ceiling: "Agreement or role",
-      ceilingCopy: "The strongest support offered applies to participants under stated fairness or membership conditions.",
-      universal: "Not established",
-      universalCopy: "Outsiders and people who never accepted the arrangement still require a separate argument.",
-      conclusion: "Conditional duties may be substantial and coherent. They do not become universal merely because a community uses moral language for them.",
+      title: "A conditional duty has been proposed.",
+      summary: "Your final answer adds participation, roles, fair benefits, or reciprocity. Those conditions may matter, but they were not part of the final question’s starting facts.",
+      ceiling: "Conditional duty",
+      ceilingCopy: "This is the category of your final answer: a duty that applies only when added conditions are met.",
+      universal: "Depends on added conditions",
+      universalCopy: "The argument must establish fair participation or reciprocity and identify who actually meets those conditions.",
+      conclusionHeading: "Conditional duties need clear entry conditions and limits.",
+      conclusion: "A role-based duty may be substantial and coherent. Its authority comes from the proposed conditions, not from community disapproval alone, and it does not automatically extend to outsiders.",
     },
     pressure: {
       key: "pressure",
       title: "A practical reason to comply.",
-      summary: "Your conclusion explains behavior through shame, exclusion, conflict, or punishment rather than through independent moral authority.",
-      ceiling: "Social pressure",
-      ceilingCopy: "The community can make refusal costly and compliance sensible for someone who wants to avoid those costs.",
-      universal: "Not established",
-      universalCopy: "A reason to avoid consequences disappears or changes when detection, punishment, or concern for membership disappears.",
-      conclusion: "Pressure can be powerful enough to control a life. Its intensity does not turn it into a universal moral obligation.",
+      summary: "Your final answer explains behavior through shame, exclusion, conflict, or punishment rather than through approval-independent authority.",
+      ceiling: "Practical social reason",
+      ceilingCopy: "This is the category of your final answer: advice about consequences, not an overall score.",
+      universal: "Follows if costs apply",
+      universalCopy: "The reason changes when discovery, punishment, or the person’s concern about those costs changes.",
+      conclusionHeading: "Pressure explains compliance, not authority.",
+      conclusion: "Social pressure can be powerful enough to control a life. Its practical force should be taken seriously without treating intensity as proof of an approval-independent duty.",
     },
     bridge: {
       key: "bridge",
-      title: "The argument must leave social disapproval behind.",
-      summary: "You recognized that a universal duty would require another foundation—such as harm, rights, rational necessity, or divine authority—rather than community reaction alone.",
-      ceiling: "A further source required",
-      ceilingCopy: "Social facts reach a shared and enforceable code. The proposed extra source must carry any stronger conclusion.",
-      universal: "Still to be defended",
-      universalCopy: "Naming a possible bridge is the beginning of an argument, not yet proof that the bridge binds everyone.",
-      conclusion: "This path identifies the exact philosophical debt. Any universal moral system must explain and defend the source that crosses from “we disapprove” to “everyone is bound.”",
+      title: "A further foundation is needed.",
+      summary: "Your final answer recognizes that a wider duty would require another foundation—such as harm, rights, rational consistency, idealized agreement, or divine authority—rather than current community reaction alone.",
+      ceiling: "Additional foundation required",
+      ceilingCopy: "This is the category of your final answer: it identifies an open argument rather than claiming that the argument is complete.",
+      universal: "Open argument",
+      universalCopy: "Naming a possible foundation is the beginning of an explanation, not yet proof that it has the claimed authority.",
+      conclusionHeading: "The missing step has been named, not yet crossed.",
+      conclusion: "This path identifies the philosophical work still required. Any approval-independent system must explain why its added foundation has authority and who falls within its scope.",
     },
   };
 
-  return { ...shared, ...diagnoses[finalChoice.level] };
+  const diagnosis = { ...shared, ...diagnoses[finalChoice.level] };
+  if (directGaps.length && finalChoice.level !== "universal") {
+    diagnosis.summary += ` ${directGaps.length} earlier ${directGaps.length === 1 ? "answer still makes" : "answers still make"} a direct move from a social fact to wider authority.`;
+  }
+  return diagnosis;
+}
+
+function buildObligationAIProbePrompt() {
+  const diagnosis = obligationDiagnosis();
+  const answerSummary = selectedObligationAnswers().map(({ question, choice }, index) => [
+    `${index + 1}. ${question.axis}`,
+    `Question: ${question.prompt}`,
+    `Full case or setup: ${question.context}`,
+    `Facts held fixed: ${question.assumptions}`,
+    `Scope of the question: ${question.scope}`,
+    `Selected answer: ${choice.label}.`,
+    `What that answer means: ${choice.detail}`,
+    `Survey category: ${FORCE_LEVELS[choice.level].name}.`,
+    `What the answer establishes in this test: ${choice.interpretation}`,
+  ].join("\n"));
+  const gapSummary = diagnosis.directGaps.length
+    ? diagnosis.directGaps.map((gap, index) => `${index + 1}. ${gap.title}\n   ${gap.detail}`).join("\n")
+    : "No selected answer made a direct social-fact-to-wider-duty inference as coded by this lab.";
+  const bridgeSummary = diagnosis.bridges.length
+    ? diagnosis.bridges.map((bridge, index) => `${index + 1}. ${bridge.title}\n   ${bridge.detail}`).join("\n")
+    : "No additional foundation was explicitly invoked in the case answers.";
+  const pathSummary = diagnosis.pathChanges.length
+    ? diagnosis.pathChanges.map((change, index) => `${index + 1}. ${change.title}\n   ${change.detail}`).join("\n")
+    : "The opening and final answers did not create a coded change in the scope of the claim.";
+
+  return [
+    "Act as a careful, neutral interviewer helping me examine an argument about moral obligation.",
+    "",
+    "IMPORTANT RULES",
+    "- Ask one question at a time and wait for my answer.",
+    "- Use plain language and define any philosophy term before using it.",
+    "- Do not assume that universal, objective, stance-independent, mind-independent, and approval-independent all mean the same thing. Ask me which claim I intend.",
+    "- Do not treat moral non-realism as the same as cultural relativism or as the view that only social disapproval matters.",
+    "- Separate a personal commitment, a shared rule, a practical reason, a threat, a role-based duty, and an approval-independent duty.",
+    "- Treat each case’s stated facts as fixed. If I add a fact or foundation, name it explicitly.",
+    "- A proposed bridge such as harm, fairness, rational consistency, idealized agreement, or divine authority is not an error. Ask why it has authority and who it binds.",
+    "- A flagged direct inference is a request for the missing premise, not proof that my conclusion is false.",
+    "- Allow me to say that I revised or narrowed my view during the test.",
+    "",
+    "WHAT THIS LAB TESTED",
+    "- It tested one narrow inference: whether current community disapproval is enough by itself to create a duty whose authority survives rejection, secrecy, nonmembership, or changing approval.",
+    "- It did not test every form of moral realism, anti-realism, constructivism, contractualism, relativism, or expressivism.",
+    "- Its seven categories are different kinds of basis, not a ranking from weak to strong and not a personality score.",
+    "- A direct inference was flagged only when my selected answer explicitly treated a social fact as sufficient for wider authority without another premise.",
+    "- The lab cannot prove that any proposed foundation succeeds or fails. It can only expose which premise must do the work.",
+    "",
+    "MY RESULT",
+    `Final answer category: ${diagnosis.ceiling}.`,
+    `Assessment under the stated assumptions: ${diagnosis.universal}.`,
+    `Direct inferences needing support: ${diagnosis.directGapCount}.`,
+    `Summary: ${diagnosis.summary}`,
+    "",
+    "MY SEVEN ANSWERS",
+    ...answerSummary,
+    "",
+    "DIRECT INFERENCES THE LAB FLAGGED",
+    gapSummary,
+    "",
+    "ADDITIONAL FOUNDATIONS I INVOKED",
+    bridgeSummary,
+    "",
+    "CHANGES BETWEEN MY OPENING AND FINAL CLAIM",
+    pathSummary,
+    "",
+    "HOW TO INTERVIEW ME",
+    "1. Start with the strongest flagged direct inference. If none was flagged, start with the first additional foundation I invoked. If neither exists, ask what practical purpose I want my social code to serve.",
+    "2. State the premise and conclusion you are comparing in two short sentences.",
+    "3. Ask me for the missing connecting premise rather than supplying one for me.",
+    "4. Test whether that premise is descriptive, practical, conditional, or approval-independent.",
+    "5. Ask what would make the premise apply to a dissenter, an outsider, or an undetected act.",
+    "6. If I invoke a foundation, ask why it has authority, what its limits are, and whether it depends on any values or agreements.",
+    "7. At the end, report: my final claim, its scope, the premises supporting it, any openly accepted limits, and any step still undefended.",
+    "",
+    "Begin with a two-sentence explanation of what you will examine, followed by your first single question.",
+  ].join("\n");
 }
 
 const obligationEls = {
   workspace: document.querySelector("#obligationLab"),
   results: document.querySelector("#obligationResults"),
+  liveStatus: document.querySelector("#obligationLiveStatus"),
   phase: document.querySelector("#obligationPhase"),
   progress: document.querySelector("#obligationProgress"),
+  progressTrack: document.querySelector("#obligationProgressTrack"),
   progressBar: document.querySelector("#obligationProgressBar"),
   number: document.querySelector("#obligationQuestionNumber"),
   axis: document.querySelector("#obligationQuestionAxis"),
@@ -620,6 +734,7 @@ const obligationEls = {
   choices: document.querySelector("#obligationChoices"),
   why: document.querySelector("#obligationWhy"),
   back: document.querySelector("#obligationBackButton"),
+  next: document.querySelector("#obligationNextButton"),
   forceMap: document.querySelector("#forceMapCard"),
   liveMapMount: document.querySelector("#liveForceMapMount"),
   resultMapMount: document.querySelector("#resultForceMapMount"),
@@ -630,38 +745,59 @@ const obligationEls = {
 function renderForceMap() {
   const counts = forceCounts();
   const answered = answeredObligationCount();
-  obligationEls.mapBasis.textContent = `${answered} of ${OBLIGATION_QUESTIONS.length} answers classified · markers show answer types, not moral strength`;
+  const gapCount = collectDirectGaps().length;
+  obligationEls.mapBasis.textContent = `${answered} of ${OBLIGATION_QUESTIONS.length} answers classified · categories, not ranks · ${gapCount} direct ${gapCount === 1 ? "inference needs" : "inferences need"} support`;
   const lowerLevels = ["commitment", "social", "pressure", "sanction", "conditional"];
-  const upperLevels = ["bridge", "leap"];
+  const upperLevels = ["bridge", "universal"];
   const rung = (key) => {
     const level = FORCE_LEVELS[key];
     const count = counts[key];
     return `
-      <div class="force-rung ${count ? "active" : ""} ${key === "leap" ? "force-rung-leap" : ""}" data-force="${key}">
+      <div class="force-rung ${count ? "active" : ""}" data-force="${key}">
         <span class="force-index">${level.index}</span>
         <div><strong>${level.name}</strong><small>${level.short}</small></div>
-        <b aria-label="${count} answers">${count}</b>
+        <b aria-hidden="true">${count}</b>
       </div>`;
   };
   obligationEls.ladder.innerHTML = `
     <div class="force-branch force-branch-human">
-      ${lowerLevels.map(rung).join("")}
+      <span class="force-group-label">Human sources and limited duties</span>
+      <div class="force-source-grid">${lowerLevels.map(rung).join("")}</div>
     </div>
     <div class="ought-gap" role="separator">
-      <span>The missing ought</span>
-      <small>More pressure does not automatically create universal authority.</small>
+      <span>A wider claim needs another premise</span>
+      <small>More agreement, disapproval, or force does not automatically create approval-independent authority.</small>
     </div>
     <div class="force-branch force-branch-claim">
-      ${upperLevels.map(rung).join("")}
+      <span class="force-group-label">Claims beyond current approval</span>
+      <div class="force-source-grid force-source-grid-upper">${upperLevels.map(rung).join("")}</div>
     </div>`;
+  const spokenCounts = Object.entries(FORCE_LEVELS)
+    .filter(([key]) => counts[key])
+    .map(([key, level]) => `${level.name}: ${counts[key]}`)
+    .join("; ");
+  obligationEls.ladder.setAttribute(
+    "aria-label",
+    `${answered} of ${OBLIGATION_QUESTIONS.length} answers classified. These categories are not ranked. ${spokenCounts || "No answers classified yet"}. ${gapCount} direct ${gapCount === 1 ? "inference needs" : "inferences need"} support.`,
+  );
 }
 
-function renderObligationQuestion({ scroll = true } = {}) {
+function preferredScrollBehavior() {
+  return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+}
+
+function scrollToElement(element, offset) {
+  window.scrollTo({ top: Math.max(0, element.offsetTop - offset), behavior: preferredScrollBehavior() });
+}
+
+function renderObligationQuestion({ scroll = true, announce = true } = {}) {
   const question = OBLIGATION_QUESTIONS[obligationState.index];
   const selectedId = obligationState.answers[question.id];
   const number = obligationState.index + 1;
   obligationEls.phase.textContent = question.phase;
   obligationEls.progress.textContent = `${number} / ${OBLIGATION_QUESTIONS.length}`;
+  obligationEls.progressTrack.setAttribute("aria-valuenow", String(number));
+  obligationEls.progressTrack.setAttribute("aria-valuetext", `Question ${number} of ${OBLIGATION_QUESTIONS.length}`);
   obligationEls.progressBar.style.width = `${(number / OBLIGATION_QUESTIONS.length) * 100}%`;
   obligationEls.number.textContent = String(number).padStart(2, "0");
   obligationEls.axis.textContent = question.axis;
@@ -676,62 +812,88 @@ function renderObligationQuestion({ scroll = true } = {}) {
   obligationEls.explanation.open = false;
   obligationEls.back.disabled = obligationState.index === 0;
   obligationEls.back.classList.toggle("invisible-control", obligationState.index === 0);
-  obligationEls.choices.innerHTML = question.choices
+  obligationEls.next.disabled = !selectedId;
+  obligationEls.next.textContent = number === OBLIGATION_QUESTIONS.length ? "See my diagnostic →" : "Next question →";
+  obligationEls.choices.innerHTML = `<legend class="visually-hidden">Choose one answer for question ${number}</legend>${question.choices
     .map(
       (choice, index) => `
-        <button class="choice-button obligation-choice ${selectedId === choice.id ? "selected" : ""}" type="button" role="radio" aria-checked="${selectedId === choice.id}" data-choice="${choice.id}">
+        <label class="choice-button obligation-choice ${selectedId === choice.id ? "selected" : ""}">
+          <input class="choice-radio" type="radio" name="obligation-answer-${question.id}" value="${choice.id}" ${selectedId === choice.id ? "checked" : ""}>
           <span class="choice-key">${String.fromCharCode(65 + index)}</span>
           <span class="choice-copy"><strong>${choice.label}</strong><span>${choice.detail}</span></span>
           <span class="choice-arrow" aria-hidden="true">→</span>
-        </button>`,
+        </label>`,
     )
-    .join("");
-  obligationEls.choices.querySelectorAll(".obligation-choice").forEach((button) => {
-    button.addEventListener("click", () => selectObligationAnswer(question.id, button.dataset.choice));
+    .join("")}`;
+  obligationEls.choices.querySelectorAll(".choice-radio").forEach((input) => {
+    input.addEventListener("change", () => selectObligationAnswer(question.id, input.value));
   });
   renderForceMap();
-  if (scroll) window.scrollTo({ top: obligationEls.workspace.offsetTop - 82, behavior: "smooth" });
+  if (announce) obligationEls.liveStatus.textContent = `Question ${number} of ${OBLIGATION_QUESTIONS.length}: ${question.prompt}`;
+  if (scroll) scrollToElement(obligationEls.workspace, 82);
 }
 
 function selectObligationAnswer(questionId, choiceId) {
   obligationState.answers[questionId] = choiceId;
+  obligationEls.choices.querySelectorAll(".obligation-choice").forEach((label) => {
+    label.classList.toggle("selected", label.querySelector(".choice-radio").checked);
+  });
+  obligationEls.next.disabled = false;
   renderForceMap();
-  window.setTimeout(() => {
-    if (obligationState.index >= OBLIGATION_QUESTIONS.length - 1) {
-      showObligationResults();
-      return;
-    }
-    obligationState.index += 1;
-    renderObligationQuestion();
-  }, 140);
+  obligationEls.liveStatus.textContent = `Answer selected for question ${obligationState.index + 1}. Choose Next when ready.`;
 }
 
-function renderBridgeReport(gaps) {
+function renderBridgeReport(diagnosis) {
   const target = document.querySelector("#bridgeReport");
-  if (!gaps.length) {
-    target.innerHTML = `
-      <p class="no-final-tensions">No direct conflict appeared between your claim, cases, and final source. This means your labels stayed aligned inside this test; it does not prove that every premise is true.</p>`;
-    return;
-  }
-  target.innerHTML = gaps
-    .map(
+  const directGapCopy = diagnosis.directGaps.length
+    ? diagnosis.directGaps.map(
       (gap) => `
         <article class="final-tension ${gap.severity}">
-          <span class="severity">${gap.severity === "high" ? "Major missing step" : "Needs another bridge"}</span>
+          <span class="severity">${gap.severity === "high" ? "Direct inference gap" : "Missing connecting premise"}</span>
           <h3>${gap.title}</h3>
           <p>${gap.detail}</p>
         </article>`,
-    )
-    .join("");
+    ).join("")
+    : '<p class="no-final-tensions">No selected answer directly treated a social fact as sufficient for wider authority. This does not prove every premise; it reports only the inferences coded in this lab.</p>';
+  const bridgeCopy = diagnosis.bridges.length
+    ? diagnosis.bridges.map((bridge) => `
+        <article class="argument-note bridge-note">
+          <span class="argument-note-label">Additional foundation proposed</span>
+          <h3>${bridge.title}</h3>
+          <p>${bridge.detail}</p>
+        </article>`).join("")
+    : '<p class="argument-empty">No answer explicitly added a foundation beyond current approval.</p>';
+  const pathCopy = diagnosis.pathChanges.length
+    ? diagnosis.pathChanges.map((change) => `
+        <article class="argument-note path-note">
+          <span class="argument-note-label">Scope change, not automatic incoherence</span>
+          <h3>${change.title}</h3>
+          <p>${change.detail}</p>
+        </article>`).join("")
+    : '<p class="argument-empty">Your opening and final answers did not create a coded change in the claim’s scope.</p>';
+  target.innerHTML = `
+    <section class="argument-report-group" aria-labelledby="directGapHeading">
+      <h3 id="directGapHeading">Direct inferences needing support</h3>
+      <div class="argument-report-list">${directGapCopy}</div>
+    </section>
+    <section class="argument-report-group" aria-labelledby="bridgeUseHeading">
+      <h3 id="bridgeUseHeading">Additional foundations you invoked</h3>
+      <div class="argument-report-list">${bridgeCopy}</div>
+    </section>
+    <section class="argument-report-group" aria-labelledby="scopeChangeHeading">
+      <h3 id="scopeChangeHeading">Change between opening and final scope</h3>
+      <div class="argument-report-list">${pathCopy}</div>
+    </section>`;
 }
 
 function renderAnswerPath() {
   document.querySelector("#obligationAnswerGrid").innerHTML = OBLIGATION_QUESTIONS.map((question, index) => {
     const choice = obligationChoice(question.id);
     const level = FORCE_LEVELS[choice.level];
+    const status = choice.directGap ? "Needs another premise" : choice.level === "bridge" ? "Additional foundation proposed" : "No direct inference gap coded";
     return `
-      <article class="obligation-answer-card ${choice.level === "leap" ? "answer-card-leap" : ""}">
-        <span>${String(index + 1).padStart(2, "0")} · ${level.name}</span>
+      <article class="obligation-answer-card ${choice.directGap ? "answer-card-gap" : ""} ${choice.level === "bridge" ? "answer-card-bridge" : ""}">
+        <span>${String(index + 1).padStart(2, "0")} · ${level.name} · ${status}</span>
         <h3>${question.axis}</h3>
         <strong>${choice.label}</strong>
         <p>${choice.interpretation}</p>
@@ -753,11 +915,14 @@ function showObligationResults() {
   document.querySelector("#supportedCeilingCopy").textContent = diagnosis.ceilingCopy;
   document.querySelector("#universalStatus").textContent = diagnosis.universal;
   document.querySelector("#universalStatusCopy").textContent = diagnosis.universalCopy;
-  document.querySelector("#leapCount").textContent = `${diagnosis.leapCount} / ${OBLIGATION_QUESTIONS.length}`;
+  document.querySelector("#directGapCount").textContent = String(diagnosis.directGapCount);
+  document.querySelector("#obligationConclusionHeading").textContent = diagnosis.conclusionHeading;
   document.querySelector("#obligationConclusionCopy").textContent = diagnosis.conclusion;
-  renderBridgeReport(diagnosis.gaps);
+  document.querySelector("#obligationAIProbePrompt").value = buildObligationAIProbePrompt();
+  renderBridgeReport(diagnosis);
   renderAnswerPath();
-  window.scrollTo({ top: obligationEls.results.offsetTop - 70, behavior: "smooth" });
+  obligationEls.liveStatus.textContent = `Diagnostic ready: ${diagnosis.title}`;
+  scrollToElement(obligationEls.results, 70);
 }
 
 function resetObligationTest() {
@@ -767,7 +932,7 @@ function resetObligationTest() {
   obligationEls.workspace.classList.remove("hidden");
   obligationEls.liveMapMount.append(obligationEls.forceMap);
   obligationEls.forceMap.classList.remove("result-force-map");
-  renderObligationQuestion();
+  renderObligationQuestion({ announce: true });
 }
 
 obligationEls.back.addEventListener("click", () => {
@@ -776,10 +941,41 @@ obligationEls.back.addEventListener("click", () => {
   renderObligationQuestion();
 });
 
+obligationEls.next.addEventListener("click", () => {
+  const question = OBLIGATION_QUESTIONS[obligationState.index];
+  if (!obligationState.answers[question.id]) return;
+  if (obligationState.index >= OBLIGATION_QUESTIONS.length - 1) {
+    showObligationResults();
+    return;
+  }
+  obligationState.index += 1;
+  renderObligationQuestion();
+});
+
 document.querySelector("#resetObligationButton").addEventListener("click", () => {
-  if (window.confirm("Reset every answer in the obligation test?")) resetObligationTest();
+  if (!answeredObligationCount() || window.confirm("Reset every answer in the obligation test?")) resetObligationTest();
 });
 
 document.querySelector("#restartObligationButton").addEventListener("click", resetObligationTest);
 
-renderObligationQuestion({ scroll: false });
+document.querySelector("#copyObligationPromptButton").addEventListener("click", async (event) => {
+  const button = event.currentTarget;
+  const prompt = document.querySelector("#obligationAIProbePrompt");
+  const status = document.querySelector("#obligationPromptCopyStatus");
+  try {
+    await navigator.clipboard.writeText(prompt.value);
+    button.textContent = "AI prompt copied";
+    status.textContent = "Ready to paste into the AI service you choose.";
+  } catch {
+    prompt.focus();
+    prompt.select();
+    button.textContent = "Select and copy";
+    status.textContent = "Automatic copying is unavailable. The full prompt is selected for manual copying.";
+  }
+  window.setTimeout(() => {
+    button.textContent = "Copy AI prompt";
+    status.textContent = "The prompt contains your answers but no name or account information.";
+  }, 2400);
+});
+
+renderObligationQuestion({ scroll: false, announce: false });
