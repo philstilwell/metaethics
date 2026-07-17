@@ -28,6 +28,8 @@ The final diagnostic includes a responsive radar map of the eight associated phi
 
 The [Missing Ought obligation lab](obligation.html) is a sister interactive. Seven cases separate personal commitment, shared rules, social pressure, punishment, conditional duties, proposed additional foundations, and approval-independent claims. These are displayed as peer categories rather than a scale. The diagnostic counts only explicit social-fact-to-duty inferences, reports added foundations separately from errors, notes changes between the opening and final scope, and generates a full optional AI interview prompt without sending any data.
 
+The [What Do You Mean by Wrong? meaning lab](wrong.html) is a seven-question branching diagnostic about moral language. The first answer selects one of four deeper routes—fact claims, practical commitments, standards and procedures, or language used as a tool—while every question continues to offer the same six balanced interpretations. Results map independent moral facts, error theory, expressivism, standard-relative readings, constructivism, and fictionalism; compare the opening and final definitions; identify semantic combinations worth clarifying; and generate a complete optional AI interview prompt. The tool explicitly notes that relativism is not automatically anti-realism and that constructivism’s classification is disputed.
+
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
@@ -45,6 +47,7 @@ Run the measurement-logic audit with:
 ```sh
 node tests/logic-audit.cjs
 node tests/obligation-audit.cjs
+node tests/meaning-audit.cjs
 ```
 
 ## Sources
