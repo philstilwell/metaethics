@@ -704,12 +704,10 @@ main {
 .live-header h2 {
   max-width: 260px;
   margin: 0;
-  overflow: hidden;
   font-family: var(--serif);
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   font-weight: 500;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.08;
 }
 
 .pulse-dot {
@@ -791,6 +789,27 @@ main {
   font-size: 0.68rem;
   line-height: 1.45;
   text-align: center;
+}
+
+.live-profile-note {
+  display: grid;
+  gap: 5px;
+  margin: 8px 26px 24px;
+  padding: 14px 0 0;
+  border-top: 1px solid #3c443e;
+}
+
+.live-profile-note strong {
+  color: var(--acid);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.live-profile-note span {
+  color: #9ca69e;
+  font-size: 0.7rem;
+  line-height: 1.45;
 }
 
 .axis-grid {
@@ -1016,6 +1035,19 @@ main {
   line-height: 1.4;
 }
 
+.profile-scoreboard .score-card strong {
+  font-size: clamp(1.75rem, 3.2vw, 3.35rem);
+  line-height: 1;
+}
+
+.section-note {
+  max-width: 680px;
+  margin: -12px 0 22px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
 .results-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1070,8 +1102,17 @@ main {
 }
 
 .ledger-name span {
+  display: block;
   color: var(--muted);
   font-size: 0.67rem;
+}
+
+.ledger-name small {
+  display: block;
+  margin-top: 3px;
+  color: var(--ink-soft);
+  font-size: 0.64rem;
+  line-height: 1.35;
 }
 
 .ledger-bar {
@@ -1145,6 +1186,90 @@ main {
   background: var(--acid);
   font-family: var(--serif);
   line-height: 1.5;
+}
+
+.overlap-card {
+  padding: 24px;
+  border: 1px solid var(--ink);
+  background: var(--acid);
+}
+
+.overlap-card strong {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.overlap-card p,
+.overlap-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.overlap-note {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.context-section,
+.tension-report-section {
+  margin-top: 28px;
+}
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.context-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: #f6f3ec;
+}
+
+.context-card > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.context-card h3 {
+  min-height: 2.6em;
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.context-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.reason-tag {
+  display: inline-flex;
+  padding: 5px 8px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .interpretation {
@@ -1619,6 +1744,10 @@ dialog p:not(.kicker) {
   .score-card-primary {
     grid-column: 1 / -1;
   }
+
+  .context-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -1701,6 +1830,10 @@ dialog p:not(.kicker) {
 
   .score-card-primary {
     grid-column: auto;
+  }
+
+  .context-grid {
+    grid-template-columns: 1fr;
   }
 
   .ledger-row {

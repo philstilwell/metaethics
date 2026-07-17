@@ -11,7 +11,7 @@ const CURATED_PAPERS = [
     approach: "Project source",
     core: true,
     url: "https://www.academia.edu/169114427/_How_to_Test_a_Moral_System_A_Field_Guide_to_Metaethics_Value_Disagreement_and_the_Architecture_of_Values",
-    note: "The main source for the tool. It develops thirteen tests for checking who counts, what matters, how rules are made, how facts enter, and how a system can correct itself.",
+    note: "A source and methodological counterpoint for the tool. It develops thirteen tests for checking who counts, what matters, how rules are made, how facts enter, and how a system can correct itself.",
   },
   {
     id: "parsimonious-world",

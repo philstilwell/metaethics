@@ -1,26 +1,30 @@
-# The Coherence Engine
+# The Moral Compass
 
-A static, branching diagnostic for testing the structural coherence of proposed moral systems. It is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static, scenario-based profile of the kinds of moral reasons a person uses. It is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
-The survey operationalizes thirteen tests drawn from Phil Stilwell’s work:
+The survey presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
-1. Domain
-2. Object
-3. Value
-4. Meaning
-5. Status
-6. Generation
-7. Reason
-8. Similarity
-9. Conflict
-10. Evidence
-11. Usability
-12. Origin
-13. Revision
+1. What should be done in this exact case?
+2. Which offered reason is doing the most work in that judgment?
 
-The diagnostic uses explicit scoring and cross-answer conflict rules in `app.js`. Three descriptive profile questions—foundation, stated circle, and leading concern—do not reward one philosophical position over another. The thirteen scored parts receive equal weight. The overall result starts with their average, subtracts 4 points per strong cross-answer conflict, 2 per possible conflict, and 5 for each profile definition the user explicitly leaves unspecified, with a floor of 0. It treats coherence as structural clarity and consistency, not as truth, legitimacy, kindness, wisdom, or objective moral authority.
+The selected reasons form a profile across eight tendencies:
 
-The `papers.html` reading room includes the project’s source papers and a curated set of work on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can add papers to a private shelf stored in their own browser.
+1. Outcomes and welfare
+2. Rules and duties
+3. Rights and autonomy
+4. Care and relationships
+5. Character and integrity
+6. Fairness and procedure
+7. Loyalty and belonging
+8. Authority and tradition
+
+These tendencies are associated with recognizable philosophical families, but the tool does not infer a complete moral theory from one action. It reports each signal as “times chosen / times offered,” since not every reason fits every scenario. A mixed profile is treated as plural or context-sensitive reasoning, not as incoherence by itself.
+
+Potential tensions are deliberately narrow. The tool flags an action when the exact reason selected does not readily support it as described. It also compares a stated identity-neutral rule with an earlier exception explicitly based on loyalty alone. A flag asks for another explanatory bridge; it is not a proof of irrationality.
+
+The final metaethical question—realism, authority-grounded morality, constructivism, relativism, or non-realism—is reported separately. It never raises or lowers a reasoning tendency.
+
+The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
 
