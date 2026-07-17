@@ -541,13 +541,22 @@ function buildAIProbePrompt() {
   const comparisonAnswers = ["ruleConflict", "impartiality"].map((questionId) => {
     const question = getQuestion(questionId);
     const choice = getChoice(questionId);
-    return `- ${question.prompt}\n  Answer: ${choice?.label || "No answer recorded"}\n  Meaning selected: ${choice?.detail || "No explanation recorded"}`;
+    const tendency = choice?.signal ? TENDENCIES[choice.signal] : null;
+    return [
+      question.axis.toUpperCase(),
+      `Question: ${question.prompt}`,
+      `Situation to imagine: ${question.context}`,
+      `Key definition: ${question.definition}`,
+      `Scope: ${question.scope}`,
+      `Selected answer: ${choice?.label || "No answer recorded"}.`,
+      `Selected answer's meaning: ${choice?.detail || "No explanation recorded"}`,
+      `Reason family recorded by the survey: ${tendency ? `${tendency.name} — ${tendency.family}` : "Not identified"}.`,
+    ].join("\n");
   });
-  const leading = ranked
-    .filter(([, entry]) => entry.hits > 0)
-    .slice(0, 3)
-    .map(([key, entry]) => `${TENDENCIES[key].name} (${entry.hits} of ${entry.opportunities} times offered)`)
-    .join("; ");
+  const signalSummary = ranked.map(([key, entry], index) => {
+    const tendency = TENDENCIES[key];
+    return `${index + 1}. ${tendency.name}: ${entry.rate || 0}% (${entry.hits} of ${entry.opportunities} times offered). Associated family: ${tendency.theory}. Meaning: ${tendency.description}`;
+  });
 
   const tensionSummary = orderedTensions.length
     ? orderedTensions.map((tension, index) => `${index + 1}. ${tension.title}\n   Why it was flagged: ${tension.detail}`).join("\n")
@@ -565,25 +574,48 @@ function buildAIProbePrompt() {
     "- Do not treat a mixed or plural moral profile as incoherent merely because it draws on more than one theory.",
     "- Do not debate me or try to move me toward your preferred moral view.",
     "- Separate four things: the action I chose, the reason I gave, the factual assumptions I relied on, and the scope or exceptions of my rule.",
+    "- Treat each scenario's stated facts and fixed assumptions as true while testing my answer. If a relevant fact is missing, ask me about it instead of silently inventing it.",
     "- A tension is a request for clarification, not proof that I am irrational or wrong.",
     "- If a tension disappears after I add a clear limit or factual belief, say so. If it remains, explain exactly which two claims still pull apart.",
     "",
-    "MY CURRENT PROFILE",
+    "WHAT THIS SURVEY DID",
+    "- It presented six fixed moral situations. In each one, I first chose an action and then chose the one offered reason doing the most work in that judgment.",
+    "- The 'main reason' was defined as the consideration that would be hardest to remove without changing my answer. I had to choose one even if several reasons mattered.",
+    "- Actions alone did not add points to a moral theory. Each selected reason added one signal to an associated family of moral reasoning.",
+    "- A signal rate means 'times I selected this kind of reason divided by the questions where it was offered.' It is not a probability, grade, or percentage of my personality.",
+    "- Theory names are useful associations, not a claim that one answer proves I belong to a complete philosophical theory.",
+    "- The survey used only two narrow tension checks: whether my selected main reason readily supports my selected action as coded, and whether an identity-neutral rule conflicts with an earlier exception based on loyalty alone.",
+    "- The survey cannot prove complete coherence or incoherence. It does not test every implication, factual belief, priority rule, or possible case.",
+    "",
+    "MY CURRENT PROFILE SUMMARY",
     `Profile shape: ${shape.label}. ${shape.copy}`,
-    `Most visible reasoning signals: ${leading || "No reasoning signal recorded"}.`,
-    `Metaethical stance: ${meta?.name || "Not specified"}. ${meta?.description || ""}`,
+    "",
+    "ALL EIGHT REASONING SIGNALS",
+    ...signalSummary,
+    "",
+    "MY METAETHICAL ANSWER — REPORTED SEPARATELY",
+    `Question: ${getQuestion("metaStance").prompt}`,
+    `Key definition: ${getQuestion("metaStance").definition}`,
+    `Scope: ${getQuestion("metaStance").scope}`,
+    `Selected answer: ${metaChoice?.label || "No answer recorded"}.`,
+    `Selected answer's meaning: ${metaChoice?.detail || "No explanation recorded"}`,
+    `Survey category: ${meta?.name || "Not specified"}. ${meta?.description || ""}`,
     "Treat my metaethical stance separately from the everyday kinds of reasons I used. For example, moral non-realism does not prevent a person from caring about outcomes, rights, duties, or relationships.",
     "",
-    "MY SIX SCENARIO ANSWERS",
+    "MY SIX SCENARIOS AND ANSWERS",
     ...scenarios.map((scenario, index) => {
       const decision = getChoice(`${scenario.id}Decision`);
       const reason = getChoice(`${scenario.id}Reason`);
       const theory = reason?.signal ? TENDENCIES[reason.signal] : null;
       return [
         `${index + 1}. ${scenario.title}`,
-        `   Action: ${decision?.label || "No decision recorded"}.`,
-        `   Main reason: ${reason?.label || "No reason recorded"}.`,
-        `   Reason family used by the survey: ${theory ? `${theory.name} — ${theory.family}` : "Not identified"}.`,
+        `   Full situation: ${scenario.story}`,
+        `   Fixed assumptions: ${scenario.assumptions}`,
+        `   Selected action: ${decision?.label || "No decision recorded"}.`,
+        `   What that action means: ${decision?.detail || "No action explanation recorded"}`,
+        `   Selected main reason: ${reason?.label || "No reason recorded"}.`,
+        `   What that reason means: ${reason?.detail || "No reason explanation recorded"}`,
+        `   Reason family recorded by the survey: ${theory ? `${theory.name} — ${theory.family}` : "Not identified"}.`,
       ].join("\n");
     }),
     "",
@@ -596,11 +628,12 @@ function buildAIProbePrompt() {
     "HOW TO PROCEED",
     "1. Start with the strongest specific tension listed above. If none is listed, start with the pair of answers whose limits seem least clear.",
     "2. Briefly say which two answers you want to compare and why. Do not call them contradictory yet.",
-    "3. Ask me one concrete question that could reveal whether the difference comes from a factual belief, a change in principle, a relationship, an exception, or the scope of a rule.",
-    "4. After each reply, restate my answer in one short sentence and ask me to correct it if needed before moving deeper.",
-    "5. Use a carefully matched identity swap or counterexample only when it tests a rule I actually claimed. Keep all other relevant facts fixed and name what you are holding fixed.",
-    "6. When we finish one tension, tell me whether it was resolved, narrowed, or still open before moving to another.",
-    "7. At the end, give me: (a) my clearest current principle, (b) its stated limits or exceptions, (c) any factual beliefs it depends on, and (d) any remaining trade-offs I accept.",
+    "3. First test whether a short bridge principle could connect my selected action to my selected reason. Ask me to state that bridge rather than supplying it for me.",
+    "4. Ask me one concrete question that could reveal whether the difference comes from a factual belief, a change in principle, a relationship, an exception, or the scope of a rule.",
+    "5. After each reply, restate my answer in one short sentence and ask me to correct it if needed before moving deeper.",
+    "6. Use a carefully matched identity swap or counterexample only when it tests a rule I actually claimed. Keep all other relevant facts fixed and name what you are holding fixed.",
+    "7. When we finish one tension, tell me whether it was resolved, narrowed, or still open before moving to another.",
+    "8. At the end, give me: (a) my clearest current principle, (b) its stated limits or exceptions, (c) any factual beliefs it depends on, and (d) any remaining trade-offs I accept.",
     "",
     "Begin with a two-sentence explanation of what you will examine, followed by your first single question.",
   ].join("\n");

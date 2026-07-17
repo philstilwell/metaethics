@@ -145,7 +145,22 @@ assert.equal(
   8,
   "each reason-bearing question must add exactly one signal",
 );
-assert.match(buildAIProbePrompt(), /Moral non-realism/, "the AI prompt must include a selected non-realist stance without changing the reasoning profile");
+const contextualPrompt = buildAIProbePrompt();
+assert.match(contextualPrompt, /Moral non-realism/, "the AI prompt must include a selected non-realist stance without changing the reasoning profile");
+assert.ok(tendencyKeys.every((key) => contextualPrompt.includes(TENDENCIES[key].name)), "the AI prompt must report all eight reasoning signals, not only the leaders");
+assert.ok(SCENARIOS.every((scenario) => contextualPrompt.includes(scenario.story) && contextualPrompt.includes(scenario.assumptions)), "the AI prompt must include every scenario's full facts and fixed assumptions");
+assert.ok(SCENARIOS.every((scenario) => {
+  const decision = scenario.decisions.find((choice) => choice.id === mixedCompatible[`${scenario.id}Decision`]);
+  const reason = scenario.reasons.find((choice) => choice.id === mixedCompatible[`${scenario.id}Reason`]);
+  return contextualPrompt.includes(decision.detail) && contextualPrompt.includes(reason.detail);
+}), "the AI prompt must include the meaning of every selected action and reason");
+assert.match(contextualPrompt, /Actions alone did not add points to a moral theory/, "the AI prompt must explain how the survey produced the profile");
+assert.match(contextualPrompt, /cannot prove complete coherence or incoherence/, "the AI prompt must disclose the tension check's limits");
+for (const questionId of ["ruleConflict", "impartiality"]) {
+  const question = QUESTION_BANK[questionId];
+  assert.ok(contextualPrompt.includes(question.definition) && contextualPrompt.includes(question.scope), `${questionId} must carry its definition and scope into the AI prompt`);
+}
+assert.ok(contextualPrompt.includes(metaQuestion.definition) && contextualPrompt.includes(metaQuestion.scope), "the metaethical answer must carry its definition and scope into the AI prompt");
 
 const beforeMetaChange = plain(computeSignals());
 state.answers.metaStance = "objective";
