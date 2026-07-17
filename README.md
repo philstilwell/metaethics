@@ -24,7 +24,7 @@ Potential tensions are deliberately narrow. The tool flags an action when the ex
 
 The final metaethical question—realism, authority-grounded morality, constructivism, relativism, or non-realism—is reported separately. It never raises or lowers a reasoning tendency.
 
-The final diagnostic includes a responsive radar map of the eight associated philosophical families. Users can reset all answers either during the survey or from the results page.
+The final diagnostic includes a responsive radar map of the eight associated philosophical families. It also builds a copyable AI interview prompt from the user's exact choices, reasons, metaethical stance, and any narrow tensions detected. The site makes no AI call and sends nothing; the user decides whether to paste the prompt into another service. Users can reset all answers either during the survey or from the results page.
 
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 

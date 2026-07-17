@@ -267,6 +267,29 @@
           </p>
         </section>
 
+        <section class="report-section ai-probe-section" aria-labelledby="aiProbeHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Continue the inquiry</p>
+              <h2 id="aiProbeHeading">Ask an AI to test the difficult parts</h2>
+            </div>
+            <p>
+              This prompt includes your choices and the possible tensions found by this survey. It asks
+              an AI to interview you carefully, one question at a time, so you can make your reasons clearer.
+            </p>
+          </div>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="aiProbePrompt">Your ready-to-use interview prompt</label>
+          <textarea id="aiProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyPromptButton" type="button">Copy AI prompt</button>
+            <p id="promptCopyStatus" aria-live="polite">The prompt contains your survey answers but no name or account information.</p>
+          </div>
+        </section>
+
         <div class="result-actions">
           <button class="primary-button" id="copyReportButton" type="button">Copy profile</button>
           <button class="secondary-button" id="restartButton" type="button">Reset all answers</button>
@@ -281,7 +304,7 @@
         and
         <a href="https://www.academia.edu/169490990/_The_Parsimonious_World_of_the_Moral_Non_Realist_Illegitimate_Questions_Surviving_Values_and_Life_Without_a_Moral_Realm" target="_blank" rel="noreferrer">the parsimonious non-realist framework</a>.
       </p>
-      <p>Runs entirely in your browser. No AI, account, or tracking.</p>
+      <p>Runs entirely in your browser. No built-in AI, account, or tracking.</p>
     </footer>
 
     <dialog id="methodDialog">

@@ -529,6 +529,83 @@ function profileShape(profile = computeSignals()) {
   };
 }
 
+function buildAIProbePrompt() {
+  const profile = computeSignals();
+  const ranked = rankSignals(profile);
+  const shape = profileShape(profile);
+  const tensions = detectTensions();
+  const metaChoice = getChoice("metaStance");
+  const meta = META_STANCES[metaChoice?.meta];
+  const scenarios = ROUTES[state.opener].map((id) => scenarioById[id]);
+  const orderedTensions = [...tensions].sort((a, b) => (b.severity === "high") - (a.severity === "high"));
+  const comparisonAnswers = ["ruleConflict", "impartiality"].map((questionId) => {
+    const question = getQuestion(questionId);
+    const choice = getChoice(questionId);
+    return `- ${question.prompt}\n  Answer: ${choice?.label || "No answer recorded"}\n  Meaning selected: ${choice?.detail || "No explanation recorded"}`;
+  });
+  const leading = ranked
+    .filter(([, entry]) => entry.hits > 0)
+    .slice(0, 3)
+    .map(([key, entry]) => `${TENDENCIES[key].name} (${entry.hits} of ${entry.opportunities} times offered)`)
+    .join("; ");
+
+  const tensionSummary = orderedTensions.length
+    ? orderedTensions.map((tension, index) => `${index + 1}. ${tension.title}\n   Why it was flagged: ${tension.detail}`).join("\n")
+    : [
+        "No direct action-and-reason mismatch was found by the survey's built-in comparisons.",
+        "Do not assume this proves full consistency. Look gently for unclear limits, hidden factual assumptions, or principles that may change between similar cases.",
+      ].join("\n");
+
+  return [
+    "Act as a careful, non-judgmental interviewer helping me understand my own moral reasoning.",
+    "",
+    "IMPORTANT RULES FOR THE INTERVIEW",
+    "- Ask only one question at a time, then wait for my answer.",
+    "- Use plain language. Explain any philosophy term before using it.",
+    "- Do not treat a mixed or plural moral profile as incoherent merely because it draws on more than one theory.",
+    "- Do not debate me or try to move me toward your preferred moral view.",
+    "- Separate four things: the action I chose, the reason I gave, the factual assumptions I relied on, and the scope or exceptions of my rule.",
+    "- A tension is a request for clarification, not proof that I am irrational or wrong.",
+    "- If a tension disappears after I add a clear limit or factual belief, say so. If it remains, explain exactly which two claims still pull apart.",
+    "",
+    "MY CURRENT PROFILE",
+    `Profile shape: ${shape.label}. ${shape.copy}`,
+    `Most visible reasoning signals: ${leading || "No reasoning signal recorded"}.`,
+    `Metaethical stance: ${meta?.name || "Not specified"}. ${meta?.description || ""}`,
+    "Treat my metaethical stance separately from the everyday kinds of reasons I used. For example, moral non-realism does not prevent a person from caring about outcomes, rights, duties, or relationships.",
+    "",
+    "MY SIX SCENARIO ANSWERS",
+    ...scenarios.map((scenario, index) => {
+      const decision = getChoice(`${scenario.id}Decision`);
+      const reason = getChoice(`${scenario.id}Reason`);
+      const theory = reason?.signal ? TENDENCIES[reason.signal] : null;
+      return [
+        `${index + 1}. ${scenario.title}`,
+        `   Action: ${decision?.label || "No decision recorded"}.`,
+        `   Main reason: ${reason?.label || "No reason recorded"}.`,
+        `   Reason family used by the survey: ${theory ? `${theory.name} — ${theory.family}` : "Not identified"}.`,
+      ].join("\n");
+    }),
+    "",
+    "MY GENERAL COMPARISON ANSWERS",
+    ...comparisonAnswers,
+    "",
+    "POSSIBLE TENSIONS FOUND BY THE SURVEY",
+    tensionSummary,
+    "",
+    "HOW TO PROCEED",
+    "1. Start with the strongest specific tension listed above. If none is listed, start with the pair of answers whose limits seem least clear.",
+    "2. Briefly say which two answers you want to compare and why. Do not call them contradictory yet.",
+    "3. Ask me one concrete question that could reveal whether the difference comes from a factual belief, a change in principle, a relationship, an exception, or the scope of a rule.",
+    "4. After each reply, restate my answer in one short sentence and ask me to correct it if needed before moving deeper.",
+    "5. Use a carefully matched identity swap or counterexample only when it tests a rule I actually claimed. Keep all other relevant facts fixed and name what you are holding fixed.",
+    "6. When we finish one tension, tell me whether it was resolved, narrowed, or still open before moving to another.",
+    "7. At the end, give me: (a) my clearest current principle, (b) its stated limits or exceptions, (c) any factual beliefs it depends on, and (d) any remaining trade-offs I accept.",
+    "",
+    "Begin with a two-sentence explanation of what you will examine, followed by your first single question.",
+  ].join("\n");
+}
+
 function renderTendencyGrid() {
   els.tendencyGrid.innerHTML = Object.entries(TENDENCIES)
     .map(
@@ -763,6 +840,7 @@ function showResults() {
   document.querySelector("#shapeCopy").textContent = shape.copy;
   document.querySelector("#metaStance").textContent = meta.name;
   document.querySelector("#metaCopy").textContent = meta.description;
+  document.querySelector("#aiProbePrompt").value = buildAIProbePrompt();
 
   document.querySelector("#profileLedger").innerHTML = ranked
     .map(([key, entry], index) => `
@@ -880,6 +958,23 @@ document.querySelector("#copyReportButton").addEventListener("click", async (eve
     button.textContent = "Copy unavailable";
   }
   window.setTimeout(() => (button.textContent = "Copy profile"), 1800);
+});
+
+document.querySelector("#copyPromptButton").addEventListener("click", async (event) => {
+  const button = event.currentTarget;
+  const status = document.querySelector("#promptCopyStatus");
+  try {
+    await navigator.clipboard.writeText(document.querySelector("#aiProbePrompt").value);
+    button.textContent = "AI prompt copied";
+    status.textContent = "Ready to paste into the AI service you choose.";
+  } catch {
+    button.textContent = "Copy unavailable";
+    status.textContent = "Select the text in the box and copy it manually.";
+  }
+  window.setTimeout(() => {
+    button.textContent = "Copy AI prompt";
+    status.textContent = "The prompt contains your survey answers but no name or account information.";
+  }, 2200);
 });
 
 renderTendencyGrid();

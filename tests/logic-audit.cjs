@@ -18,7 +18,7 @@ vm.runInContext(
    globalThis.audit = {
      TENDENCIES, META_STANCES, SCENARIOS, CALIBRATION_QUESTIONS, ROUTES,
      QUESTION_BANK, state, buildPath, computeSignals, rankSignals, leadingSignals,
-     answeredSignalQuestionCount, detectTensions, profileShape
+     answeredSignalQuestionCount, detectTensions, profileShape, buildAIProbePrompt
    };`,
   context,
 );
@@ -38,6 +38,7 @@ const {
   answeredSignalQuestionCount,
   detectTensions,
   profileShape,
+  buildAIProbePrompt,
 } = context.audit;
 
 const tendencyKeys = Object.keys(TENDENCIES);
@@ -144,18 +145,33 @@ assert.equal(
   8,
   "each reason-bearing question must add exactly one signal",
 );
+assert.match(buildAIProbePrompt(), /Moral non-realism/, "the AI prompt must include a selected non-realist stance without changing the reasoning profile");
 
 const beforeMetaChange = plain(computeSignals());
 state.answers.metaStance = "objective";
 assert.deepEqual(plain(computeSignals()), beforeMetaChange, "changing metaethical stance must not change the reasoning profile");
+assert.match(buildAIProbePrompt(), /Moral realism/, "the AI prompt must include the selected metaethical stance");
 
 reset({ voiceDecision: "use", voiceReason: "rights" });
 assert.equal(detectTensions()[0]?.id, "voice-reason-gap", "an explanation that points away from the selected action must be flagged");
 assert.equal(detectTensions()[0]?.severity, "medium", "an action–reason gap asks for explanation rather than declaring incoherence");
+assert.match(buildAIProbePrompt(), /The borrowed voice: the action and reason need another bridge/, "the AI prompt must carry an exact flagged tension into the interview");
+assert.match(buildAIProbePrompt(), /Ask only one question at a time/, "the AI prompt must require a deliberate one-question-at-a-time interview");
 
 reset({ quietDecision: "secret", quietReason: "loyalty", impartiality: "same" });
 assert.equal(detectTensions().filter((tension) => tension.id === "identity-swap").length, 1, "loyalty alone must conflict with a later identity-neutral rule");
 assert.equal(detectTensions().find((tension) => tension.id === "identity-swap")?.severity, "high", "a direct cross-answer rule conflict must be prominent");
+
+reset({
+  quietDecision: "secret",
+  quietReason: "loyalty",
+  voiceDecision: "use",
+  voiceReason: "rights",
+  impartiality: "same",
+});
+const multiTensionPrompt = buildAIProbePrompt();
+assert.ok(multiTensionPrompt.indexOf("1. The identity rule") < multiTensionPrompt.indexOf("2. The borrowed voice"), "the AI prompt must put a strong cross-answer conflict before a narrower explanation gap");
+assert.doesNotMatch(multiTensionPrompt, /sentence\.,2\./, "multiple tensions must be separated by a line break rather than array punctuation");
 
 reset({ quietDecision: "secret", quietReason: "care", impartiality: "same" });
 assert.equal(detectTensions().length, 0, "care for named vulnerabilities must not be mistaken for identity alone");
