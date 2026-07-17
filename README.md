@@ -26,6 +26,8 @@ The final metaethical question—realism, authority-grounded morality, construct
 
 The final diagnostic includes a responsive radar map of the eight associated philosophical families. It also builds a copyable AI interview prompt containing the full scenario facts and fixed assumptions, the user's exact choices and answer meanings, all eight signal rates, the separate metaethical stance, the survey's method and limits, and any narrow tensions detected. The site makes no AI call and sends nothing; the user decides whether to paste the prompt into another service. Users can reset all answers either during the survey or from the results page.
 
+The [Missing Ought obligation lab](obligation.html) is a sister interactive. Seven cases separate personal commitment, shared rules, social pressure, punishment, conditional duties, proposed extra-social foundations, and unsupported jumps to universal authority. Its diagnostic shows the strongest conclusion a user's answers actually support and identifies where social disapproval is being asked to create an obligation over members, outsiders, secret violators, or reformers without another bridge.
+
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
@@ -42,6 +44,7 @@ Run the measurement-logic audit with:
 
 ```sh
 node tests/logic-audit.cjs
+node tests/obligation-audit.cjs
 ```
 
 ## Sources

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive test of whether social disapproval, punishment, or agreement can establish a universal moral obligation."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>The Missing Ought — The Moral Compass</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Moral profile</a>
+        <a href="obligation.html" aria-current="page">Obligation lab</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="obligation-hero">
+        <div class="obligation-hero-copy">
+          <p class="kicker">The missing ought</p>
+          <h1>When “wrong” only means <em>“we disapprove.”</em></h1>
+          <p>
+            A community can condemn, shame, exclude, fine, or imprison. Those are real forces. But
+            what turns any of them into an obligation that binds someone who rejects the community’s rule?
+          </p>
+          <a class="primary-button" href="#obligationLab">Test the claim <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="obligation-thesis-card">
+          <span class="card-number" aria-hidden="true">01</span>
+          <p class="kicker">The central distinction</p>
+          <h2>Pressure can explain obedience without establishing authority.</h2>
+          <p>
+            “They will punish me” explains why I might comply. It does not yet explain why their rule
+            is truly right or why I am morally bound to obey it.
+          </p>
+        </aside>
+      </section>
+
+      <section class="obligation-distinction" aria-labelledby="distinctionHeading">
+        <div>
+          <p class="kicker">Before the test</p>
+          <h2 id="distinctionHeading">A social code and a universal moral claim are not the same thing.</h2>
+        </div>
+        <div class="distinction-grid">
+          <article>
+            <span>Social code</span>
+            <h3>“These are our rules.”</h3>
+            <p>A group can share values, demand conduct, and enforce consequences. That can be coherent and useful.</p>
+          </article>
+          <article>
+            <span>Universal moral claim</span>
+            <h3>“Everyone is truly bound.”</h3>
+            <p>This stronger claim must explain why outsiders, secret violators, and principled dissenters are also obligated.</p>
+          </article>
+        </div>
+        <details class="obligation-definition">
+          <summary>What does “universal obligation” mean here?</summary>
+          <p>
+            It means a demand that applies even when a person dislikes it, gains from breaking it,
+            rejects the community, and can escape every punishment. This page asks whether social
+            disapproval alone can supply that kind of authority. It does not deny that shared rules,
+            commitments, laws, and consequences matter in human life.
+          </p>
+        </details>
+      </section>
+
+      <section class="workspace obligation-workspace" id="obligationLab" aria-live="polite">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="obligationPhase">Defining the claim</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetObligationButton" type="button">Reset</button>
+                <span id="obligationProgress">1 / 7</span>
+              </div>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="obligationProgressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card" id="obligationQuestionCard">
+            <div class="question-heading">
+              <span class="question-number" id="obligationQuestionNumber">01</span>
+              <div>
+                <p class="question-axis" id="obligationQuestionAxis"></p>
+                <h2 id="obligationQuestionPrompt"></h2>
+              </div>
+            </div>
+            <p class="question-context" id="obligationQuestionContext"></p>
+            <div class="question-boundaries">
+              <div>
+                <strong>Hold these facts fixed</strong>
+                <p id="obligationAssumptions"></p>
+              </div>
+              <div>
+                <strong>What this question tests</strong>
+                <p id="obligationScope"></p>
+              </div>
+            </div>
+            <details class="plain-explanation" id="obligationExplanation">
+              <summary>Example and further explanation</summary>
+              <div class="explanation-body">
+                <div class="explanation-part">
+                  <strong>In plain words</strong>
+                  <p id="obligationPlain"></p>
+                </div>
+                <div class="explanation-part explanation-example">
+                  <strong>Keep separate</strong>
+                  <p id="obligationSeparate"></p>
+                </div>
+                <div class="explanation-part">
+                  <strong>What your answer can establish</strong>
+                  <p id="obligationReveal"></p>
+                </div>
+              </div>
+            </details>
+            <div class="choice-list" id="obligationChoices" role="radiogroup" aria-labelledby="obligationQuestionPrompt"></div>
+            <div class="question-footer">
+              <button class="text-button" id="obligationBackButton" type="button">← Back</button>
+              <p id="obligationWhy"></p>
+            </div>
+          </article>
+        </div>
+
+        <div id="liveForceMapMount">
+          <aside class="live-panel obligation-live-panel" id="forceMapCard" aria-labelledby="forceMapHeading">
+            <div class="live-header">
+              <div>
+                <p class="kicker">Your answer path</p>
+                <h2 id="forceMapHeading">What kind of force are you relying on?</h2>
+              </div>
+              <div class="pulse-dot" aria-hidden="true"></div>
+            </div>
+            <p class="force-map-basis" id="forceMapBasis">0 of 7 answers classified</p>
+            <div class="force-ladder" id="forceLadder" aria-label="Answer classifications from personal commitment to claimed universal obligation"></div>
+            <p class="force-map-note">
+              Each marker is one answer. Moving upward shows a broader claim—not a better or stronger score.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results obligation-results hidden" id="obligationResults" aria-live="polite">
+        <div class="results-hero">
+          <p class="kicker">Obligation diagnostic</p>
+          <h1 id="obligationResultTitle">—</h1>
+          <p id="obligationResultSummary"></p>
+        </div>
+
+        <div class="scoreboard obligation-scoreboard">
+          <div class="score-card score-card-primary">
+            <span>Strongest support actually supplied</span>
+            <strong id="supportedCeiling">—</strong>
+            <p id="supportedCeilingCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Universal obligation</span>
+            <strong id="universalStatus">—</strong>
+            <p id="universalStatusCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Unsupported jumps</span>
+            <strong id="leapCount">—</strong>
+            <p>Answers that treated social facts as enough to create universal moral authority.</p>
+          </div>
+        </div>
+
+        <div class="obligation-result-grid">
+          <div class="result-force-map-mount" id="resultForceMapMount"></div>
+          <section class="report-section bridge-report-section" aria-labelledby="bridgeReportHeading">
+            <div class="section-heading">
+              <p class="kicker">Claims needing another step</p>
+              <h2 id="bridgeReportHeading">Where the “ought” is still missing</h2>
+            </div>
+            <div id="bridgeReport"></div>
+          </section>
+        </div>
+
+        <section class="report-section obligation-answer-report" aria-labelledby="answerPathHeading">
+          <div class="section-heading">
+            <p class="kicker">All seven answers</p>
+            <h2 id="answerPathHeading">What each answer establishes</h2>
+          </div>
+          <div class="obligation-answer-grid" id="obligationAnswerGrid"></div>
+        </section>
+
+        <section class="interpretation obligation-conclusion">
+          <div>
+            <p class="kicker">The central result</p>
+            <h2 id="obligationConclusionHeading">A social code can be coherent without becoming universal morality.</h2>
+          </div>
+          <p id="obligationConclusionCopy"></p>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="restartObligationButton" type="button">Run the test again</button>
+          <a class="secondary-button" href="index.html">Map your moral reasoning</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This page distinguishes social pressure from universal authority. It does not deny the real
+        importance of human commitments, laws, relationships, harms, or shared rules.
+      </p>
+      <p><a href="papers.html">Explore the non-realist reading room</a></p>
+    </footer>
+
+    <script src="obligation.js"></script>
+  </body>
+</html>

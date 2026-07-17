@@ -1858,6 +1858,387 @@ dialog p:not(.kicker) {
   font-size: 0.7rem !important;
 }
 
+/* The Missing Ought */
+
+.obligation-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: clamp(40px, 7vw, 110px);
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(70px, 9vw, 130px) clamp(20px, 5vw, 72px) clamp(64px, 8vw, 110px);
+}
+
+.obligation-hero-copy h1 {
+  max-width: 900px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.05rem, 6.2vw, 6.45rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.obligation-hero-copy h1 em {
+  color: #53652d;
+  font-weight: 400;
+}
+
+.obligation-hero-copy > p:not(.kicker) {
+  max-width: 760px;
+  margin: 32px 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.obligation-hero .primary-button {
+  width: fit-content;
+  text-decoration: none;
+}
+
+.obligation-thesis-card {
+  position: relative;
+  padding: clamp(30px, 4vw, 48px);
+  border: 1px solid var(--ink);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow);
+}
+
+.obligation-thesis-card h2 {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 2.8vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.obligation-thesis-card > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.obligation-distinction {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(34px, 6vw, 90px);
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 72px) clamp(60px, 8vw, 100px);
+}
+
+.obligation-distinction > div:first-child h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.distinction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+}
+
+.distinction-grid article {
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--paper-bright);
+}
+
+.distinction-grid article:last-child {
+  background: var(--acid);
+}
+
+.distinction-grid span {
+  display: block;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.distinction-grid h3 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.distinction-grid p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.obligation-definition {
+  grid-column: 2;
+  margin-top: -34px;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.obligation-definition summary {
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.obligation-definition summary:focus-visible {
+  outline: 3px solid rgba(215, 243, 106, 0.8);
+  outline-offset: 3px;
+}
+
+.obligation-definition p {
+  max-width: 800px;
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  line-height: 1.65;
+}
+
+.obligation-workspace {
+  border-top: 1px solid rgba(21, 26, 23, 0.2);
+  padding-top: clamp(52px, 6vw, 80px);
+}
+
+.obligation-choice .choice-copy strong {
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.invisible-control {
+  visibility: hidden;
+}
+
+.obligation-live-panel {
+  overflow: visible;
+}
+
+.force-map-basis {
+  margin: 4px 26px 18px;
+  color: #aeb7b0;
+  font-size: 0.67rem;
+  line-height: 1.45;
+}
+
+.force-ladder {
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: 1px solid #3c443e;
+  border-bottom: 1px solid #3c443e;
+}
+
+.force-branch {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.force-rung {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 30px;
+  gap: 10px;
+  align-items: center;
+  min-height: 60px;
+  padding: 10px 18px;
+  border-top: 1px solid #303832;
+  background: var(--ink);
+}
+
+.force-rung:first-child {
+  border-top: 0;
+}
+
+.force-rung.active {
+  box-shadow: inset 4px 0 0 var(--acid);
+  background: #202821;
+}
+
+.force-rung-leap.active {
+  box-shadow: inset 4px 0 0 var(--red);
+}
+
+.force-index {
+  color: #778179;
+  font-family: var(--serif);
+  font-size: 0.76rem;
+}
+
+.force-rung strong,
+.force-rung small {
+  display: block;
+}
+
+.force-rung strong {
+  color: #f3f1eb;
+  font-size: 0.72rem;
+}
+
+.force-rung small {
+  margin-top: 3px;
+  color: #99a39b;
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.force-rung b {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid #505a52;
+  border-radius: 50%;
+  color: #89938b;
+  font-family: var(--serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.force-rung.active b {
+  border-color: var(--acid);
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.force-rung-leap.active b {
+  border-color: #f3b4a8;
+  background: var(--red);
+  color: #fff;
+}
+
+.ought-gap {
+  display: grid;
+  gap: 4px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--acid);
+  border-bottom: 1px solid var(--acid);
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.ought-gap span {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ought-gap small {
+  font-family: var(--serif);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.force-map-note {
+  margin: 0;
+  padding: 16px 26px 22px;
+  color: #8f9991;
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.obligation-results {
+  scroll-margin-top: 72px;
+}
+
+.obligation-scoreboard .score-card strong {
+  font-size: clamp(1.55rem, 2.8vw, 2.9rem);
+  line-height: 1;
+}
+
+.obligation-result-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.75fr) minmax(0, 1.25fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.result-force-map-mount .obligation-live-panel {
+  position: relative;
+  top: 0;
+}
+
+.bridge-report-section {
+  min-height: 100%;
+}
+
+.bridge-report-section #bridgeReport {
+  display: grid;
+  gap: 10px;
+}
+
+.obligation-answer-report {
+  margin-top: 28px;
+}
+
+.obligation-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.obligation-answer-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #f6f3ec;
+}
+
+.obligation-answer-card.answer-card-leap {
+  border-left: 4px solid var(--red);
+  background: #f7ece8;
+}
+
+.obligation-answer-card > span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.obligation-answer-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  font-weight: 500;
+}
+
+.obligation-answer-card strong {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.obligation-answer-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.obligation-conclusion {
+  margin-top: 28px;
+}
+
+.obligation-results .secondary-button {
+  text-decoration: none;
+}
+
 @media (max-width: 1040px) {
   .papers-layout {
     grid-template-columns: 1fr;
@@ -1867,6 +2248,14 @@ dialog p:not(.kicker) {
     position: relative;
     top: 0;
     max-width: 680px;
+  }
+
+  .obligation-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-force-map-mount {
+    max-width: 620px;
   }
 }
 
@@ -1891,6 +2280,25 @@ dialog p:not(.kicker) {
 
   .paper-card {
     min-height: 290px;
+  }
+
+  .obligation-hero,
+  .obligation-distinction {
+    grid-template-columns: 1fr;
+  }
+
+  .obligation-hero {
+    align-items: start;
+  }
+
+  .obligation-definition {
+    grid-column: 1;
+    margin-top: 0;
+  }
+
+  .distinction-grid,
+  .obligation-answer-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1947,10 +2355,22 @@ dialog p:not(.kicker) {
 @media (max-width: 680px) {
   .site-header {
     min-height: 62px;
+    padding-right: 12px;
+    padding-left: 12px;
   }
 
   .brand > span:last-child {
     display: none;
+  }
+
+  .site-nav {
+    gap: 10px;
+  }
+
+  .site-nav a,
+  .site-nav .text-button {
+    font-size: 0.61rem;
+    letter-spacing: 0.035em;
   }
 
   .hero {
@@ -1960,6 +2380,18 @@ dialog p:not(.kicker) {
 
   .hero h1 {
     font-size: clamp(2.65rem, 13vw, 4.7rem);
+  }
+
+  .obligation-hero-copy h1 {
+    font-size: clamp(2.55rem, 12.5vw, 4.4rem);
+  }
+
+  .obligation-hero {
+    padding-top: 52px;
+  }
+
+  .obligation-thesis-card {
+    margin-top: 12px;
   }
 
   .question-card {
