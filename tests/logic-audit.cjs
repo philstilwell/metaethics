@@ -55,6 +55,7 @@ function plain(value) {
 
 assert.equal(SCENARIOS.length, 6, "the profile must use six moral scenarios");
 assert.equal(tendencyKeys.length, 8, "the result must distinguish eight reasoning tendencies");
+assert.equal(new Set(Object.values(TENDENCIES).map((tendency) => tendency.theory)).size, 8, "each reasoning tendency must have a distinct theory-map label");
 assert.equal(Object.keys(META_STANCES).length, 5, "the separate metaethical result must offer five stances");
 
 const scenarioIds = SCENARIOS.map((scenario) => scenario.id);

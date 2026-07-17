@@ -89,7 +89,10 @@
           <div class="progress-shell">
             <div class="progress-meta">
               <span id="phaseLabel">Moral situations</span>
-              <span id="progressLabel">1 / 15</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetSurveyButton" type="button">Reset</button>
+                <span id="progressLabel">1 / 15</span>
+              </div>
             </div>
             <div class="progress-track" aria-hidden="true">
               <span id="progressBar"></span>
@@ -193,6 +196,26 @@
           </div>
         </div>
 
+        <section class="report-section theory-map-section" aria-labelledby="theoryMapHeading">
+          <div class="section-heading theory-map-heading">
+            <div>
+              <p class="kicker">A graphical view</p>
+              <h2 id="theoryMapHeading">Your moral theory map</h2>
+            </div>
+            <p>
+              Each spoke names a philosophical family associated with one kind of reason. Farther
+              from the center means you selected that reason more often when it was available.
+            </p>
+          </div>
+          <figure class="theory-map-figure">
+            <div id="theoryMap"></div>
+            <figcaption>
+              The outer ring means “selected every time offered.” This map shows patterns in these
+              eight questions—not certainty that you belong to a theory.
+            </figcaption>
+          </figure>
+        </section>
+
         <div class="results-grid profile-results-grid">
           <section class="report-section">
             <div class="section-heading">
@@ -246,7 +269,7 @@
 
         <div class="result-actions">
           <button class="primary-button" id="copyReportButton" type="button">Copy profile</button>
-          <button class="secondary-button" id="restartButton" type="button">Try the scenarios again</button>
+          <button class="secondary-button" id="restartButton" type="button">Reset all answers</button>
         </div>
       </section>
     </main>

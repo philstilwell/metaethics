@@ -3,48 +3,56 @@
 const TENDENCIES = {
   outcome: {
     name: "Outcomes & welfare",
+    theory: "Consequentialism",
     family: "Often associated with consequentialism",
     short: "What happens because of the choice",
     description: "This reasoning judges a choice by its likely effects on suffering, safety, opportunity, or overall well-being.",
   },
   duty: {
     name: "Rules & duties",
+    theory: "Deontology",
     family: "Often associated with deontology",
     short: "What a person must or must not do",
     description: "This reasoning looks for a rule, promise, or role-based duty that should hold even when breaking it could help.",
   },
   rights: {
     name: "Rights & autonomy",
+    theory: "Rights-based ethics",
     family: "Often associated with rights-based ethics",
     short: "What may not be done to a person",
     description: "This reasoning protects consent, personal control, or limits on using someone for another goal.",
   },
   care: {
     name: "Care & relationships",
+    theory: "Care ethics",
     family: "Often associated with care ethics",
     short: "Who is vulnerable and who depends on whom",
     description: "This reasoning focuses on concrete needs, dependency, trust, and responsibilities created by relationships.",
   },
   virtue: {
     name: "Character & integrity",
+    theory: "Virtue ethics",
     family: "Often associated with virtue ethics",
     short: "What an honest or responsible person would become",
     description: "This reasoning asks what courage, honesty, humility, mercy, or practical wisdom requires of the person acting.",
   },
   justice: {
     name: "Fairness & procedure",
+    theory: "Contractualism",
     family: "Often associated with contractualism",
     short: "Whether the rule could be applied fairly",
     description: "This reasoning relies on equal standards, impartial procedures, agreements, and rules chosen before knowing who benefits.",
   },
   loyalty: {
     name: "Loyalty & belonging",
+    theory: "Communitarianism",
     family: "Often associated with communitarian and particularist ethics",
     short: "What we owe our people and shared commitments",
     description: "This reasoning gives moral weight to friendship, family, group membership, promises of trust, and standing by others.",
   },
   authority: {
     name: "Authority & tradition",
+    theory: "Authority-based ethics",
     family: "Often associated with authority- and tradition-based ethics",
     short: "Who has legitimate standing to decide",
     description: "This reasoning looks to legitimate offices, institutions, inherited practices, expertise, or accepted sources of authority.",
@@ -675,6 +683,60 @@ function renderOverlap(profile, shape) {
     <p class="overlap-note">Agreement between theories is common. A rights-based and an outcome-based argument may support the same action for different reasons.</p>`;
 }
 
+function renderTheoryMap(profile) {
+  const entries = Object.entries(TENDENCIES);
+  const center = 300;
+  const radius = 188;
+  const labelRadius = 240;
+  const angleFor = (index) => -Math.PI / 2 + (index * Math.PI * 2) / entries.length;
+  const pointAt = (index, distance) => {
+    const angle = angleFor(index);
+    return [center + Math.cos(angle) * distance, center + Math.sin(angle) * distance];
+  };
+  const polygon = (fraction) => entries.map((_, index) => pointAt(index, radius * fraction).map((value) => value.toFixed(1)).join(",")).join(" ");
+  const dataPoints = entries.map(([key], index) => pointAt(index, radius * ((profile[key].rate || 0) / 100)));
+  const dataPolygon = dataPoints.map((point) => point.map((value) => value.toFixed(1)).join(",")).join(" ");
+  const summary = entries.map(([key, tendency]) => `${tendency.theory}: ${profile[key].rate || 0}%`).join("; ");
+
+  document.querySelector("#theoryMap").innerHTML = `
+    <svg class="theory-radar" viewBox="0 0 600 600" role="img" aria-label="Moral theory map. ${summary}">
+      <title>Your moral theory map</title>
+      <desc>Eight spokes show how often each kind of moral reason was selected when offered. Greater distance from the center means a higher selection rate.</desc>
+      <g class="radar-grid">
+        ${[0.25, 0.5, 0.75, 1].map((fraction) => `<polygon points="${polygon(fraction)}"></polygon>`).join("")}
+        ${entries.map((_, index) => {
+          const [x, y] = pointAt(index, radius);
+          return `<line x1="${center}" y1="${center}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"></line>`;
+        }).join("")}
+      </g>
+      <polygon class="radar-shape" points="${dataPolygon}"></polygon>
+      <g class="radar-points">
+        ${dataPoints.map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5"></circle>`).join("")}
+      </g>
+      <g class="radar-labels">
+        ${entries.map(([key, tendency], index) => {
+          const [x, y] = pointAt(index, labelRadius);
+          const anchor = x < center - 18 ? "end" : x > center + 18 ? "start" : "middle";
+          return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anchor}"><tspan x="${x.toFixed(1)}" dy="-0.2em">${tendency.theory}</tspan><tspan class="radar-value" x="${x.toFixed(1)}" dy="1.35em">${profile[key].rate || 0}% · ${profile[key].hits}/${profile[key].opportunities}</tspan></text>`;
+        }).join("")}
+      </g>
+      <g class="radar-indices" aria-hidden="true">
+        ${entries.map((_, index) => {
+          const [x, y] = pointAt(index, 216);
+          return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${String(index + 1).padStart(2, "0")}</text>`;
+        }).join("")}
+      </g>
+    </svg>
+    <div class="theory-map-key" aria-hidden="true">
+      ${entries.map(([key, tendency], index) => `
+        <div class="theory-key-item">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          <strong>${tendency.theory}</strong>
+          <em>${profile[key].rate || 0}% · ${profile[key].hits}/${profile[key].opportunities}</em>
+        </div>`).join("")}
+    </div>`;
+}
+
 function showResults() {
   const profile = computeSignals();
   const ranked = rankSignals(profile);
@@ -713,6 +775,7 @@ function showResults() {
     .join("");
 
   renderOverlap(profile, shape);
+  renderTheoryMap(profile);
   renderContextGrid();
 
   document.querySelector("#finalTensions").innerHTML = tensions.length
@@ -791,15 +854,22 @@ els.methodDialog.addEventListener("click", (event) => {
   if (event.target === els.methodDialog) els.methodDialog.close();
 });
 
-document.querySelector("#restartButton").addEventListener("click", () => {
+function resetAllAnswers() {
   state.answers = {};
   state.path = [];
   state.index = 0;
+  els.survey.classList.add("hidden");
   els.results.classList.add("hidden");
   els.intro.classList.remove("hidden");
   document.querySelector('input[name="opener"]:checked').focus();
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.querySelector("#resetSurveyButton").addEventListener("click", () => {
+  if (window.confirm("Reset every answer and return to the beginning?")) resetAllAnswers();
 });
+
+document.querySelector("#restartButton").addEventListener("click", resetAllAnswers);
 
 document.querySelector("#copyReportButton").addEventListener("click", async (event) => {
   const button = event.currentTarget;

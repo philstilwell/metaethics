@@ -419,6 +419,30 @@ main {
   text-transform: uppercase;
 }
 
+.progress-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.progress-reset {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.progress-reset:hover,
+.progress-reset:focus-visible {
+  color: var(--ink);
+}
+
 .progress-track {
   height: 3px;
   background: #cbc9c1;
@@ -1038,6 +1062,102 @@ main {
 .profile-scoreboard .score-card strong {
   font-size: clamp(1.75rem, 3.2vw, 3.35rem);
   line-height: 1;
+}
+
+.theory-map-section {
+  margin: 28px 0;
+}
+
+.theory-map-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+  gap: 36px;
+  align-items: end;
+}
+
+.theory-map-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.theory-map-heading > p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.theory-map-figure {
+  display: grid;
+  justify-items: center;
+  margin: 0;
+}
+
+#theoryMap {
+  width: min(100%, 720px);
+}
+
+.theory-radar {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.radar-grid polygon,
+.radar-grid line {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1.25;
+}
+
+.radar-shape {
+  fill: rgba(215, 243, 106, 0.48);
+  stroke: var(--green);
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.radar-points circle {
+  fill: var(--green);
+  stroke: var(--paper-bright);
+  stroke-width: 2;
+}
+
+.radar-labels text {
+  fill: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.radar-labels .radar-value {
+  fill: var(--muted);
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.radar-indices,
+.theory-map-key {
+  display: none;
+}
+
+.theory-map-figure figcaption {
+  max-width: 700px;
+  margin-top: -8px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .section-note {
@@ -1830,6 +1950,80 @@ dialog p:not(.kicker) {
 
   .score-card-primary {
     grid-column: auto;
+  }
+
+  .theory-map-heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .theory-map-heading > p {
+    font-size: 0.9rem;
+  }
+
+  .theory-map-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .radar-labels text {
+    font-size: 15px;
+  }
+
+  .radar-labels .radar-value {
+    font-size: 14px;
+  }
+
+  .radar-labels {
+    display: none;
+  }
+
+  .radar-indices {
+    display: block;
+  }
+
+  .radar-indices text {
+    fill: var(--ink);
+    font-family: var(--sans);
+    font-size: 22px;
+    font-weight: 850;
+  }
+
+  .theory-map-key {
+    display: grid;
+    width: 100%;
+    margin-top: 4px;
+    border-top: 1px solid var(--line);
+  }
+
+  .theory-key-item {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 8px;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .theory-key-item > span {
+    color: var(--muted);
+    font-family: var(--serif);
+    font-size: 0.75rem;
+  }
+
+  .theory-key-item strong {
+    font-size: 0.72rem;
+  }
+
+  .theory-key-item em {
+    color: var(--muted);
+    font-family: var(--serif);
+    font-size: 0.72rem;
+    font-style: normal;
+  }
+
+  .theory-map-figure figcaption {
+    margin-top: 16px;
   }
 
   .context-grid {
