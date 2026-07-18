@@ -9,6 +9,7 @@ const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
 const pages = ["index.html", "profile.html", "obligation.html", "wrong.html", "after.html", "papers.html"];
 const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html"];
+const faviconFiles = ["favicon-32.png", "favicon.png", "favicon.ico", "apple-touch-icon.png"];
 
 assert.match(html, /Four labs\. Four layers of moral thought\./, "the hub must state its four-layer architecture");
 assert.match(html, /They take apart one familiar moral sentence\./, "the hub must explain how the tools interact");
@@ -41,11 +42,20 @@ for (const page of pages) {
   const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
   assert.match(pageHtml, /href="index\.html"[^>]*>Home<\/a>/, `${page} must link to the central home page`);
   assert.match(pageHtml, /href="profile\.html"/, `${page} must link to the relocated Moral Profile`);
+  for (const favicon of faviconFiles) {
+    assert.match(pageHtml, new RegExp(`href="${favicon.replace(".", "\\.")}"`), `${page} must use ${favicon}`);
+  }
   for (const href of [...pageHtml.matchAll(/href="([^"#][^"]*)"/g)].map((match) => match[1])) {
     if (/^(?:https?:|mailto:|data:)/.test(href)) continue;
     const target = href.split("#")[0];
     assert.ok(fs.existsSync(path.join(root, target)), `${page} links to missing local target ${target}`);
   }
+}
+
+for (const favicon of faviconFiles) {
+  const faviconPath = path.join(root, favicon);
+  assert.ok(fs.existsSync(faviconPath), `${favicon} must exist`);
+  assert.ok(fs.statSync(faviconPath).size > 1000, `${favicon} must contain a real image asset`);
 }
 
 const currentMarkers = pages.map((page) => {
