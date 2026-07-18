@@ -19,11 +19,11 @@ A reader who expects objective morality to be constructible is led through a sus
 
 ## Scope and estimated length
 
-- Main text: 145,000–175,000 words
-- Exercises and inspections: 35,000–45,000 words of the total
+- Main text: 155,000–190,000 words
+- Exercises and inspections: 40,000–50,000 words of the total
 - Notes and bibliography: 12,000–18,000 words
 - Appendices and reusable worksheets: 15,000–20,000 words
-- Expected finished length: approximately 500–650 trade-paperback pages, depending on trim and exercise layout
+- Expected finished length: approximately 540–700 trade-paperback pages, depending on trim and exercise layout
 
 The book should feel long because the reader performs the construction, not because the prose repeats the thesis.
 
@@ -32,11 +32,11 @@ The book should feel long because the reader performs the construction, not beca
 The argument unfolds in six movements.
 
 1. **Specification.** Ordinary moral talk combines several aspirations: truth, universality, authority, knowability, consistency, and action guidance. The reader states which of these an objective moral system must possess.
-2. **Construction.** The reader supplies a domain, objects of judgment, values, definitions, verdict types, generation rules, reasons, conflict procedures, empirical inputs, and revision rules.
+2. **Construction.** The reader supplies a domain and grounds of direct standing, objects of judgment, values, definitions, verdict types, generation rules, reasons, methods for comparing unlike values, empirical inputs, and revision rules.
 3. **Authority audit.** The book separates motivation, social pressure, legal force, conditional commitments, and practical support from the approval-independent authority the system promised.
-4. **Stress tests.** Major moral families and hybrids are given their strongest repairs. Each can preserve important human concerns, but none preserves the full specification without an unpaid bridge or a sacrificed aspiration.
+4. **Access and stress tests.** The reader asks what could give evidence normative force before using evidence to test moral knowledge. Major moral families and hybrids then receive their strongest repairs. Each can preserve important human concerns, but none preserves the full specification without an unpaid bridge or a sacrificed aspiration.
 5. **Conclusion.** A general grounding analysis shows why the failures recur. A foundation must be stance-dependent, non-evaluative, brute-evaluative, rationally constitutive, authoritative, or hybrid. Each route either stops short of objective moral content or recreates one of the debts already exposed. No coherent objective moral system has been found.
-6. **Redirection.** Human life retains pain, pleasure, fear, attachment, trust, betrayal, agency, conflict, evidence, institutions, and power. Rather than seeking doctrinal compromise among moral systems, public reasoning should begin from shared or mutually legible emotional and valuational primitives and translate them into evidence-sensitive, power-aware, revisable policy.
+6. **Redirection.** Human life retains pain, pleasure, fear, attachment, trust, betrayal, agency, conflict, evidence, moralized emotions, institutions, and power. Rather than seeking doctrinal compromise among moral systems, public reasoning should begin from shared or mutually legible emotional and valuational primitives and translate them into evidence-sensitive, power-aware, revisable policy.
 
 The conclusion is not “nothing matters.” It is that mattering begins in valuing creatures and their forms of life, not in a moral status hovering beyond every stance.
 
@@ -146,11 +146,15 @@ The reader now constructs the visible architecture of a moral system. The aim is
 
 **Driving question:** Who or what counts directly?
 
+**Possible grounds:** felt experience; agency and self-direction; interests that can be helped or harmed; relationship and dependence; membership and participation; approval-independent moral status; a defensible constructed inclusion rule; or denial of direct standing on the facts supplied.
+
 **Candidates:** current people, future people, sentient animals, rational agents, infants, cognitively disabled people, communities, species, ecosystems, artificial minds, the dead, outsiders, and enemies.
 
 **Construction task:** Draw the Candidate System's domain and distinguish direct standing, indirect relevance, and no standing.
 
-**Pressure cases:** a conscious digital copy; an ecosystem without sentient life; a future population whose existence depends on the present rule; an enemy patient.
+**Pressure cases:** a short-lived sentient animal without plans; an isolated newborn; an advance directive after consciousness ends; conscious software; possible future people; a coordinated collective agent with no single conscious subject; and an ecosystem with no conscious or goal-directed subject.
+
+**Boundary discipline:** Direct standing, comparative weight, and the final outcome are three questions. To count for one's own sake is not automatically to count equally, receive identical treatment, or defeat every competing concern.
 
 **Debt entry:** The property used to draw the circle must be defended without excluding inconvenient cases or expanding opportunistically.
 
@@ -192,7 +196,21 @@ The reader now constructs the visible architecture of a moral system. The aim is
 
 **Debt entry:** The transition from value to rule contains selectors about thresholds, agents, time, risk, and priority. Those selectors cannot remain invisible.
 
-## Chapter 10 — Like Cases, Exceptions, and Identity
+## Chapter 10 — Choosing Without a Common Measure
+
+**Driving question:** What can make one choice better supported when protecting something important sets back something else important?
+
+**Comparison methods:** a common-scale total; extra priority to the worse off; a protected boundary; a boundary with an emergency threshold; lexical or discontinuous priority; plural contextual judgment; a fair decision procedure; and a chosen or negotiated settlement without an objective ranking.
+
+**Core distinctions:** comparing values; settling what will be done; and proving that one value is objectively greater. A procedure may settle action without completing the comparison. A commitment may guide action without discovering a universal order.
+
+**Pressure cases:** one million mild headaches versus one permanent loss of sight; universal memory privacy versus preventing serious injuries; a relied-upon promise versus five additional lives; unique cultural achievement versus temporary illness; one death versus forty severe but temporary illnesses; two equally central but unlike abilities; and jobs, homes, local self-rule, sentient animals, and species loss.
+
+**Construction task:** Give the Candidate System a comparison protocol. State the unit, priority, boundary, threshold, secondary rule, procedural limit, or chosen commitment that makes each decision possible.
+
+**Debt entry:** No method receives a free tie-breaker. Aggregation needs a unit; priority needs a strength; constraints need scope; thresholds need placement; lexical ranks need same-rank rules; plural judgment needs discipline; procedure needs limits; chosen settlement must disclose commitment and power.
+
+## Chapter 11 — Like Cases, Exceptions, and Identity
 
 **Driving question:** What makes two cases relevantly similar?
 
@@ -206,7 +224,7 @@ The reader now constructs the visible architecture of a moral system. The aim is
 
 ### Inspection Report II — The First Constitution
 
-The reader assembles the domain, object set, value table, status grammar, generation rules, and exception criteria into a two-page constitution. A red-team worksheet searches for omitted beings, overloaded terms, unsupported transitions, and asymmetric exceptions.
+The reader assembles the grounds and boundaries of standing, object set, value table, status grammar, generation rules, comparison protocol, and exception criteria into a two-page constitution. A red-team worksheet searches for omitted beings, standing/weight collapse, overloaded terms, unsupported transitions, hidden common measures, incomplete tie-breakers, and asymmetric exceptions.
 
 ---
 
@@ -214,7 +232,7 @@ The reader assembles the domain, object set, value table, status grammar, genera
 
 This is the book's central maze. The reader has built a system with content, but content is not authority. The chapters separate the different things ordinarily called reasons or obligations.
 
-## Chapter 11 — Three Different Things Called a Reason
+## Chapter 12 — Three Different Things Called a Reason
 
 **Driving question:** Does a consideration explain an action, motivate the agent, or genuinely count in favor of the action?
 
@@ -224,7 +242,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** Causation, motivation, and practical support can overlap, but none may silently substitute for another.
 
-## Chapter 12 — Current Aims and Better-Informed Aims
+## Chapter 13 — Current Aims and Better-Informed Aims
 
 **Driving question:** Can an agent's desires generate all of their reasons?
 
@@ -236,7 +254,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** Idealization needs a standard. If the standard is chosen because it produces humane answers, the humane selector is doing the real work.
 
-## Chapter 13 — Commitments, Promises, and Roles
+## Chapter 14 — Commitments, Promises, and Roles
 
 **Driving question:** Can voluntary commitment create a reason that survives current desire and detection?
 
@@ -246,7 +264,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** A commitment can structure a life without binding every outsider or explaining why the act of choosing has objective authority.
 
-## Chapter 14 — Fair Terms and Constructed Reasons
+## Chapter 15 — Fair Terms and Constructed Reasons
 
 **Driving question:** Can a fair procedure generate reasons for those who lose or reject the outcome?
 
@@ -256,7 +274,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** The choice of fairness conditions, participant set, vetoes, and outcome constraints imports evaluative selectors. Procedure organizes them; it does not summon them from nowhere.
 
-## Chapter 15 — Reasons That Apply Whether You Care or Not
+## Chapter 16 — Reasons That Apply Whether You Care or Not
 
 **Driving question:** Can suffering, agency, evidence, or another fact count in favor for a person wholly unmoved by it?
 
@@ -271,7 +289,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** Renaming an objective moral demand “a practical reason” does not pay the grounding debt.
 
-## Chapter 16 — From Approval to Obligation
+## Chapter 17 — From Approval to Obligation
 
 **Driving question:** What does social acceptance actually establish?
 
@@ -283,7 +301,7 @@ This is the book's central maze. The reader has built a system with content, but
 
 **Debt entry:** Force can secure obedience. Approval can define a local code. Neither fact alone produces approval-independent authority.
 
-## Chapter 17 — God, Nature, and Rational Necessity
+## Chapter 18 — God, Nature, and Rational Necessity
 
 **Driving question:** Can authority enter from beyond human approval?
 
@@ -305,7 +323,23 @@ The reader fills a seven-column authority audit: commitment, convention, pressur
 
 Even a real moral order cannot guide if no method distinguishes discovery from projection. This part tests epistemic access without claiming that causal influence automatically refutes belief.
 
-## Chapter 18 — Intuition and the Feeling of Obviousness
+## Chapter 19 — Does Evidence Have Authority?
+
+**Driving question:** A consideration may reliably indicate truth, but what—if anything—makes that relation a reason to believe?
+
+**Possible sources:** truth-directed evidence; the constitutive aim or function of belief; an agent's truth-seeking project; practical usefulness; accepted rules of inquiry; a defensible public procedure; or rejection of any literal epistemic ought.
+
+**Core distinctions:** truth versus justification; evidence versus a cause of belief; a belief's function versus a person's desire; reliable method versus lucky truth; private support versus publicly usable justification; moral skepticism versus epistemic anti-normativism.
+
+**Pressure cases:** a comforting false belief with no harmful consequence; a useless mathematical truth; unanimous experts who prefer a forecast rejected by a better instrument; a lucky conspiracy belief; forgotten but once decisive evidence; a beneficial placebo belief; and a perfectly competent agent indifferent to truth and consistency.
+
+**Construction task:** State why the book's reader should follow evidence during the remaining inquiry. The answer may be stance-independent, constitutive, desire-dependent, instrumental, practice-based, procedural, or openly anti-normativist.
+
+**Boundary:** Objective moral skepticism does not establish or refute objective epistemic reasons. The moral argument may be conditional on truth-seeking aims and inquiry rules even if no stance-independent epistemic ought is assumed.
+
+**Debt entry:** Saying that evidence bears on truth explains an important relation. It does not by itself explain why truth normatively governs an agent who rejects every truth-seeking aim.
+
+## Chapter 20 — Intuition and the Feeling of Obviousness
 
 **Driving question:** What is an intuition evidence of?
 
@@ -317,7 +351,7 @@ Even a real moral order cannot guide if no method distinguishes discovery from p
 
 **Debt entry:** Calling a response self-evident identifies its phenomenology, not yet a truth-tracking mechanism.
 
-## Chapter 19 — Where Values Come From
+## Chapter 21 — Where Values Come From
 
 **Driving question:** What follows from the genealogy of a conviction?
 
@@ -329,7 +363,7 @@ Even a real moral order cannot guide if no method distinguishes discovery from p
 
 **Debt entry:** A causal origin does not entail falsehood. But a claimed faculty of moral knowledge owes an explanation of why its formation is appropriately connected to stance-independent truth.
 
-## Chapter 20 — Disagreement and Convergence
+## Chapter 22 — Disagreement and Convergence
 
 **Driving question:** Does persistent disagreement count against objective morality?
 
@@ -341,7 +375,7 @@ Even a real moral order cannot guide if no method distinguishes discovery from p
 
 **Debt entry:** Disagreement is not a refutation, but an epistemology must explain expected convergence, rational peer conflict, and correction.
 
-## Chapter 21 — Facts Enter; Values Select
+## Chapter 23 — Facts Enter; Values Select
 
 **Driving question:** What can empirical evidence settle?
 
@@ -353,7 +387,7 @@ Even a real moral order cannot guide if no method distinguishes discovery from p
 
 **Debt entry:** More facts can expose mistakes and constrain means, but facts do not silently choose the terminal criterion.
 
-## Chapter 22 — Novel Cases, Uncertainty, and Correction
+## Chapter 24 — Novel Cases, Uncertainty, and Correction
 
 **Driving question:** How does an objective system respond when its application is uncertain or its concepts are new?
 
@@ -367,7 +401,7 @@ Even a real moral order cannot guide if no method distinguishes discovery from p
 
 ### Inspection Report IV — The Access Audit
 
-The reader must state what would count as evidence for and against each foundational claim. “Nothing could count against it” is permitted but recorded as insulation rather than confirmation. The report separates failure of access from proof of nonexistence.
+The reader must first state what gives evidence force within the inquiry, then identify what would count as evidence for and against each foundational claim. “Nothing could count against it” is permitted but recorded as insulation rather than confirmation. The report separates truth indication from epistemic authority, public procedure from truth, and failure of moral access from proof of moral nonexistence.
 
 ---
 
@@ -375,7 +409,7 @@ The reader must state what would count as evidence for and against each foundati
 
 The reader now applies the completed audit to major theory families. Each chapter begins with the problem that made the theory compelling and gives it its strongest natural refinements.
 
-## Chapter 23 — Count the Consequences
+## Chapter 25 — Count the Consequences
 
 **Attraction:** suffering and flourishing are real to the beings who experience them; outcomes cannot responsibly be ignored.
 
@@ -387,7 +421,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** disciplined attention to effects and counterfactuals.
 
-## Chapter 24 — Respect the Rule and the Person
+## Chapter 26 — Respect the Rule and the Person
 
 **Attraction:** individuals should not become mere containers in an aggregate calculation.
 
@@ -399,7 +433,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** explicit boundaries against instrumentalization and opportunistic exception.
 
-## Chapter 25 — Character, Care, and Belonging
+## Chapter 27 — Character, Care, and Belonging
 
 **Attraction:** actual life is relational, emotionally textured, and dependent on judgment that no algorithm captures.
 
@@ -411,7 +445,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** perception of vulnerability, relationship, character formation, and context.
 
-## Chapter 26 — Receive the Moral Order
+## Chapter 28 — Receive the Moral Order
 
 **Attraction:** a created or teleological order promises authority without human invention.
 
@@ -423,7 +457,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** durable communities, narratives of meaning, disciplined practice, and attention to human dependency—none of which by itself establishes objective moral truth.
 
-## Chapter 27 — Build What No One Could Reasonably Reject
+## Chapter 29 — Build What No One Could Reasonably Reject
 
 **Attraction:** rules should be justifiable to those they govern, not imposed from a private standpoint.
 
@@ -435,7 +469,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** public justification, representation, reciprocity, and procedural accountability.
 
-## Chapter 28 — Let Standards Remain Local or Plural
+## Chapter 30 — Let Standards Remain Local or Plural
 
 **Attraction:** humility toward difference and resistance to imperial claims of universal truth.
 
@@ -447,7 +481,7 @@ The reader now applies the completed audit to major theory families. Each chapte
 
 **Surviving contribution:** explicit standpoint, historical awareness, and suspicion of false universality.
 
-## Chapter 29 — The Hybrid Rescue
+## Chapter 31 — The Hybrid Rescue
 
 **Driving question:** Can a plural or layered system keep the strengths and avoid the failures?
 
@@ -469,7 +503,7 @@ This report refuses winner-take-all comparison. The reader records the real huma
 
 This part does not simply repeat objections. It tests whether social criticism, responsibility, and code construction require the missing objective layer, then explains why the same grounding debts recur across candidates.
 
-## Chapter 30 — Criticize the World You Inherited
+## Chapter 32 — Criticize the World You Inherited
 
 **Driving question:** If current approval is not objective truth, what supports reform and dissent?
 
@@ -481,7 +515,7 @@ This part does not simply repeat objections. It tests whether social criticism, 
 
 **Result:** Effective criticism can expose facts, broken commitments, harms, domination, exclusions, and conflicts without first proving objective moral status. Its force may remain conditional on values, audiences, and power.
 
-## Chapter 31 — Build a Public Code Without the Missing Layer
+## Chapter 33 — Build a Public Code Without the Missing Layer
 
 **Driving question:** What survives if no objective moral fact settles institutional design?
 
@@ -493,7 +527,7 @@ This part does not simply repeat objections. It tests whether social criticism, 
 
 **Result:** A code can be coherent, defensible to many, enforceable, and revisable without being objectively ordained. Support, compliance, and approval-independent obligation remain different.
 
-## Chapter 32 — Power, Dissent, and the Person Who Still Says No
+## Chapter 34 — Power, Dissent, and the Person Who Still Says No
 
 **Driving question:** What happens when persuasion and shared value fail?
 
@@ -505,7 +539,7 @@ This part does not simply repeat objections. It tests whether social criticism, 
 
 **Result:** Political necessity does not become objective moral authority. Sometimes societies constrain people because others care intensely about the stakes and possess coordinated power. Honesty about this is not approval of arbitrary force; it is the start of controlling it.
 
-## Chapter 33 — Responsibility Without Cosmic Payback
+## Chapter 35 — Responsibility Without Cosmic Payback
 
 **Driving question:** What remains of blame if suffering is not deserved for its own sake?
 
@@ -517,7 +551,21 @@ This part does not simply repeat objections. It tests whether social criticism, 
 
 **Result:** Removing basic desert does not remove causal agency, intention, danger, evidence, repair, trust, protest, or change. It removes one alleged reason for suffering.
 
-## Chapter 34 — No Candidate Returns Intact
+## Chapter 36 — Moral Emotions Without Moral Desert
+
+**Driving question:** What can support, redirect, regulate, or retire guilt, shame, resentment, indignation, gratitude, and pride when intrinsic desert is not assumed?
+
+**Possible jobs:** tracking harm or benefit; answering to trust, dependence, and relationship; protesting and setting boundaries; supporting acknowledgment and repair; expressing commitments and coordinating expectations; regulating attention and action; or replacing a moralized emotion with regret, concern, caution, appreciation, grief, or another response.
+
+**Core distinctions:** the cause of an emotion; the accuracy of its appraisal; its current function; whether and how it should be expressed; its fitting intensity; and its duration. An involuntary feeling can be understandable without being accurate, useful, or worth cultivating.
+
+**Pressure cases:** guilt after a faultless accident and completed repair; learned shame about a harmless trait; resentment after serious betrayal and complete repair; indignation toward a vanished injustice with no remaining target or task; gratitude for a deliberately controlling gift; personal pride in an achievement one did not help produce; and remorse after abandoning belief in objective promise-breaking.
+
+**Construction task:** For each emotion, identify the object, appraisal, audience, purpose, effect, safeguard, and stopping or revision condition.
+
+**Result:** Removing intrinsic moral desert does not require emotional flattening. Recognition, relationship, protest, repair, expression, and self-regulation may survive. Some moralized forms may lose their support when they become self-punishment, conformity, manipulation, empty display, or punishment after every task is complete.
+
+## Chapter 37 — No Candidate Returns Intact
 
 **Driving question:** Is the recurring failure accidental, or does it follow from the kinds of foundations available?
 
@@ -540,6 +588,8 @@ This part does not simply repeat objections. It tests whether social criticism, 
 - Rational requirements can expose inconsistency and means–end failure. Substantive moral content arrives only when ends, standing, or impartiality are added.
 - Brute evaluative facts preserve objectivity by stipulation but owe an account of identity, access, authority, conflict, and projection. Calling them basic halts the explanation where the project most needed it.
 - Hybrids inherit the debts of their parts and add an ordering debt.
+
+**Epistemic boundary:** The audit does not infer moral non-realism from epistemic anti-normativism or infer epistemic anti-normativism from moral non-realism. Evidence may track truth, serve the constitutive function of belief, advance truth-seeking projects, support practical aims, discipline an inquiry practice, or provide public justification. The book's evidential conclusions remain available to readers who participate in any of those truth-responsive routes. A stance-independent epistemic reason, if one exists, does not supply the missing moral content by itself.
 
 **Logical conclusion:** No route inspected yields a system that is simultaneously stance-independent, contentful, authoritative for rejectors, knowable, coherent through conflict, and usable without importing an unsupported selector. A coherent code can be built by lowering the objective ambition. An objective claim can be preserved by leaving decisive debts unpaid. No coherent objective moral system has been found.
 
@@ -566,7 +616,7 @@ The blank space at the center is now understood, not merely felt.
 
 The final part must be expansive enough to prevent nihilism and concrete enough to change how readers approach political disagreement. It does not offer another total moral theory under a new name.
 
-## Chapter 35 — Decide What to Do with Moral Language
+## Chapter 38 — Decide What to Do with Moral Language
 
 **Driving question:** If ordinary moral claims overstate their grounding, should we stop, pretend, continue, revise, reconstruct, or translate?
 
@@ -578,9 +628,9 @@ The final part must be expansive enough to prevent nihilism and concrete enough 
 
 **Result:** Rejecting objective facts does not itself select a language policy. Different uses may be more honest or useful in different settings.
 
-## Chapter 36 — Everything That Did Not Disappear
+## Chapter 39 — Everything That Did Not Disappear
 
-**Inventory:** pain; pleasure; fear; attachment; grief; trust; betrayal; dependence; agency; humiliation; coercion; scarcity; evidence; causal responsibility; institutions; laws; agreements; identities; power; repair; imagination; hope.
+**Inventory:** pain; pleasure; fear; attachment; grief; trust; betrayal; dependence; agency; humiliation; coercion; scarcity; evidence and truth-responsive practices; guilt; shame; resentment; indignation; gratitude; pride; causal responsibility; institutions; laws; agreements; identities; power; repair; imagination; hope.
 
 **Driving question:** Which alleged losses were carried by objective morality, and which were present all along?
 
@@ -588,7 +638,7 @@ The final part must be expansive enough to prevent nihilism and concrete enough 
 
 **Guardrails:** Non-realism does not entail equal preference strength, indifference, selfishness, legal abolition, inability to criticize, or skepticism about empirical truth.
 
-## Chapter 37 — Begin with the Primitives
+## Chapter 40 — Begin with the Primitives
 
 **Thesis:** Practical and political reasoning begins in creatures who care and react. Emotions and values are the primitives from which reasons are articulated, coalitions are formed, conflicts become salient, and policies acquire purposes.
 
@@ -600,7 +650,7 @@ The final part must be expansive enough to prevent nihilism and concrete enough 
 
 1. Name the felt response without moral inflation.
 2. Identify the concrete stake it may be tracking.
-3. Check the factual model and listen to affected people.
+3. Check the factual model through a stated truth-responsive method and listen to affected people.
 4. State the value in operational terms.
 5. Identify who shares it, who does not, and who bears the cost.
 6. Design a policy aimed at that value.
@@ -609,7 +659,7 @@ The final part must be expansive enough to prevent nihilism and concrete enough 
 
 **Running case:** A city responds to youth violence. Fear points toward immediate safety; resentment points toward unequal enforcement; care points toward prevention and trauma; autonomy points against indiscriminate surveillance; belonging points toward trusted public space. The task is not to compromise among utilitarianism, rights theory, care ethics, and virtue ethics. It is to make these human stakes explicit and design testable policies.
 
-## Chapter 38 — Stop Reconciling Moral Systems
+## Chapter 41 — Stop Reconciling Moral Systems
 
 **The admonition:** Stop beginning political inquiry by searching for doctrinal common ground between moral systems or by allocating each theory a portion of the compromise. The theories are downstream abstractions. Their apparent overlap often hides different meanings, authorities, constituencies, and priorities.
 
@@ -639,7 +689,7 @@ Begin instead with questions such as:
 
 ## Appendix A — The Candidate System Workbook
 
-Reproducible pages for the specification sheet, domain map, status grammar, value table, generation rules, similarity criteria, authority audit, access audit, genealogy, institutional charter, blame response, and final classification.
+Reproducible pages for the specification sheet, direct-standing map, status grammar, value table, generation rules, comparison protocol, similarity criteria, authority audit, epistemic-force statement, access audit, genealogy, institutional charter, responsibility response, moral-emotion audit, and final classification.
 
 ## Appendix B — Pressure Cases
 
@@ -647,7 +697,7 @@ All cases in clean form, followed by optional variations that change one fact at
 
 ## Appendix C — Common Repairs and Their Debts
 
-A field guide to responses such as “it is self-evident,” “everyone knows,” “a rational person would agree,” “God is goodness,” “human nature determines it,” “society decides,” “maximize everything that matters,” “balance the values,” and “use practical wisdom.”
+A field guide to responses such as “it is self-evident,” “the evidence speaks for itself,” “everyone knows,” “a rational person would agree,” “God is goodness,” “human nature determines it,” “society decides,” “everything that matters can be added,” “protect the boundary until the emergency is big enough,” “balance the values,” and “use practical wisdom.”
 
 ## Appendix D — The Civic Stakes Brief
 
@@ -655,10 +705,11 @@ A reusable public-policy template:
 
 - decision and jurisdiction;
 - affected parties and standing;
-- emotions and reported experiences;
+- the proposed ground of standing and any uncertainty about it;
+- emotions, their appraisals, and reported experiences;
 - operational values;
 - empirical claims and confidence;
-- priority conflicts;
+- comparison method and unresolved priority conflicts;
 - available resources;
 - power and enforcement;
 - policy alternatives;
@@ -669,7 +720,7 @@ A reusable public-policy template:
 
 ## Appendix E — Glossary and Position Map
 
-Plain-language definitions of realism, error theory, expressivism, fictionalism, constructivism, relativism, reasons internalism and externalism, basic desert, consequentialism, deontology, contractualism, virtue ethics, care ethics, and value pluralism. The map must make clear that these positions answer different questions and cannot be plotted on one line.
+Plain-language definitions of realism, error theory, expressivism, fictionalism, constructivism, relativism, practical and epistemic reasons internalism and externalism, epistemic anti-normativism, direct standing, sentience and agency accounts, incommensurability, aggregation, prioritarianism, thresholds, lexical priority, basic desert, consequentialism, deontology, contractualism, virtue ethics, care ethics, and value pluralism. The map must make clear that these positions answer different questions and cannot be plotted on one line.
 
 ## Appendix F — Notes on the Limits of the Conclusion
 

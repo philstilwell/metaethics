@@ -54,7 +54,24 @@ The book may climb only when the required additional premises are stated. In par
 - social construction does not entail worthlessness;
 - lack of motivation does not by itself show lack of reasons;
 - moral non-realism does not entail global skepticism about evidence or practical reasoning;
-- rejection of basic desert does not erase agency, danger, trust, repair, or accountability.
+- evidence bearing on truth does not by itself settle whether truth supplies a stance-independent epistemic reason;
+- direct standing does not entail equal weight, identical treatment, or victory in a conflict;
+- comparing values, settling an action, and proving one value objectively greater are different achievements;
+- rejection of basic desert does not erase agency, danger, trust, repair, or accountability;
+- explaining the cause of an emotion does not settle the accuracy of its appraisal, its present function, whether it should be expressed, or how long it should continue.
+
+## The bounded-claim rule
+
+Each exercise must state four things visibly:
+
+1. the exact question being asked;
+2. the facts the reader must hold fixed;
+3. what a selected answer can establish;
+4. what the answer leaves open.
+
+An observed pattern is not a complete philosophy. A classification check is not a judgment of character. A seam is a request to explain the relation between two claims, not automatically a contradiction. A conclusion reached inside a stipulated premise need not survive rejection of that premise.
+
+The book does not score readers. Repeated choices may reveal a pattern worth examining, but no frequency is evidence that an account is true, virtuous, psychologically deep, or exhaustive.
 
 ## Terminology
 
@@ -69,6 +86,14 @@ The book may climb only when the required additional premises are stated. In par
 **Value**: an object of care, attachment, protection, pursuit, aversion, admiration, or identity for an agent or community. Values are treated as psychologically and socially real without assuming that they are stance-independent properties.
 
 **Primitive**: a starting response or concern that supplies practical orientation without being inferred from a prior moral theory. Examples include pain aversion, attachment, fear, compassion, resentment of domination, delight, curiosity, loyalty, and the desire for agency or security. “Primitive” means starting point, not simple, infallible, universal, or beyond criticism.
+
+**Epistemic reason**: a consideration that genuinely counts in favor of believing something. A fact may indicate that a claim is true, cause belief, aid a practical project, satisfy a rule of inquiry, or receive public procedural support; the manuscript must not assume these are one relation.
+
+**Direct standing**: counting for one's own sake rather than only through usefulness, ownership, admiration, ecological function, or connection to someone else. Standing identifies entry into consideration; it does not settle comparative weight or the final action.
+
+**Value comparison**: a method for responding when protecting one value sets back another. A common scale, priority rule, constraint, threshold, lexical order, plural judgment, procedure, or chosen settlement can guide action without necessarily revealing an objectively correct ranking.
+
+**Moralized emotion**: guilt, shame, resentment, indignation, gratitude, or pride when the emotion presents an act or person as blameworthy, shameful, admirable, or deserving. Its cause, appraisal, function, expression, intensity, and duration must be considered separately.
 
 ## Prose
 
@@ -102,7 +127,7 @@ The constructive ending must not say that policy follows directly from emotion. 
 
 > felt response → named stake → stated value → factual claim → proposed rule → institutional safeguard → review
 
-Emotions reveal salience; they do not certify facts, settle scope, aggregate competing interests, or immunize a group from manipulation. Evidence corrects factual beliefs. Procedures coordinate people whose values do not fully converge. Safeguards constrain power. Revision responds to error.
+Emotions reveal salience; they do not certify facts, settle scope, aggregate competing interests, or immunize a group from manipulation. Truth-responsive methods use evidence to test and correct factual beliefs; the source and scope of their epistemic force must remain explicit. Procedures coordinate people whose values do not fully converge. Safeguards constrain power. Revision responds to error.
 
 The final admonition is therefore:
 

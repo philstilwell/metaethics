@@ -14,7 +14,7 @@ To call the policy *wrong* seems to do more than report that we oppose it. We wa
 
 Objective morality seems to promise all of that.
 
-It also promises guidance. We do not only want a verdict about obvious atrocity. We want to know what to do when the claims are difficult: whether to tell a protective lie, how to distribute a scarce treatment, whether loyalty can justify an exception, how much present sacrifice is required for future strangers, when punishment becomes cruelty, which beings have standing, and how a society should act when every available policy imposes serious costs on someone.
+It also promises guidance. We do not only want a verdict about obvious atrocity. We want to know what to do when the claims are difficult: whether to tell a protective lie, how to distribute a scarce treatment, whether loyalty can justify an exception, how much present sacrifice is required for future strangers, when punishment becomes cruelty, which beings have standing, how much weight standing receives, and how unlike values can be compared when every available policy imposes serious costs on someone.
 
 And it promises authority. A moral system is expected to do something that a prediction, preference, or threat does not. “People will punish you” may influence behavior. “I hate what you did” may express a stance. “Our rules forbid it” may classify an act. “You promised” may invoke a relationship. A moral demand seems to claim more: that a consideration genuinely counts in favor of acting, whether or not the agent is moved by it.
 
@@ -72,7 +72,7 @@ They seem like the beginnings of a moral system. In fact, each is a bundle of un
 
 “Cruelty is wrong” does not yet tell us what cruelty is. Does cruelty require an intention to cause suffering? Can indifference be cruel? Can an institution be cruel when no participant intends the total effect? Is humiliating someone cruel if it causes no lasting injury? Is frightening a child during necessary medical treatment cruel? Does cruelty make an act forbidden, blameworthy, punishable, regrettable, or all four?
 
-“People deserve equal respect” leaves different questions. Who qualifies as a person? Does a fetus? Does a person in irreversible unconsciousness? Does a conscious artificial agent? Does equal respect require identical treatment, equal rights, equal consideration, equal resources, or an explanation for relevant differences? Can respect for one person's agency conflict with protection of another person's security? What settles the conflict?
+“People deserve equal respect” leaves different questions. Who qualifies as a person? Does a fetus? Does a person in irreversible unconsciousness? Does a conscious artificial agent? Is the ground felt experience, agency, interests, relationship, membership, a constructed inclusion rule, or an approval-independent status? Does equal respect require identical treatment, equal rights, equal consideration, equal resources, or an explanation for relevant differences? Can respect for one person's agency conflict with protection of another person's security? What settles the conflict?
 
 “Promises should be kept” also needs an architecture. Does a coerced promise count? A deceived promise? A forgotten promise? A promise made to someone now dead? A promise whose fulfillment would cause a disaster? Does the duty arise from the speaker's act of commitment, the listener's reliance, a beneficial social practice, an objective property of promising, or a rule no one could reasonably reject? When may a person release themselves?
 
@@ -118,7 +118,7 @@ This is the hope that correction is possible.
 
 ### Guidance
 
-The system should help with more than cases described to trigger immediate agreement. It should define terms, distinguish verdicts, handle exceptions, prioritize conflicts, and respond to new facts. If it says every value matters but never tells us what to do when values collide, it preserves sensitivity by surrendering direction.
+The system should help with more than cases described to trigger immediate agreement. It should define terms, distinguish verdicts, handle exceptions, prioritize conflicts, and respond to new facts. When values collide, it must say whether it uses a common scale, priority to the worse off, a protected boundary, an emergency threshold, lexical rank, plural judgment, fair procedure, or an openly chosen settlement. If it says every value matters but never explains how action is settled, it preserves sensitivity by surrendering direction.
 
 This is the hope that moral truth can organize action.
 

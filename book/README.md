@@ -34,12 +34,13 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [architecture.md](architecture.md) — the complete argument and chapter architecture.
 - [method-and-voice.md](method-and-voice.md) — standards for fairness, terminology, exercises, and prose.
 - [research/source-map.md](research/source-map.md) — internal coverage map connecting the manuscript to the suite and source literature. This file may name the tools; the manuscript may not.
+- [research/site-alignment-audit.md](research/site-alignment-audit.md) — records the site revision currently covered by the book and the update procedure for future conceptual additions.
 - [manuscript/00-prologue.md](manuscript/00-prologue.md) — drafted prologue.
 - [manuscript/01-the-promise.md](manuscript/01-the-promise.md) — drafted first chapter.
 - [manuscript/02-what-objective-must-mean.md](manuscript/02-what-objective-must-mean.md) — drafted second chapter.
 
 ## Current drafting status
 
-The book architecture is complete at the chapter level. The prologue and first two chapters establish the reader contract, the construction notebook, and the success conditions that later chapters will test.
+The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and first two chapters establish the reader contract, the construction notebook, and the success conditions that later chapters will test.
 
 The working title is intentionally invitational rather than conclusory. It can be replaced without changing the architecture.
