@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of seven interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with two positions reserved for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of eight interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with one position reserved for a future addition. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -11,6 +11,7 @@ The current tools work together without forming a required sequence:
 5. [The Disagreement Decoder](decoder.html) separates the factual, verbal, practical, procedural, and metaethical layers hidden inside opposite moral verdicts.
 6. [The Value Genealogy Lab](genealogy.html) traces possible influences on a conviction and distinguishes explanation, process distrust, content-level criticism, and burden-of-proof shifts.
 7. [Build a Morality Without Moral Facts](build.html) lets users draft a nine-rule community code, apply it to six pressure cases, and see which human bases carry its rules.
+8. [Can You Criticize Your Own Society?](criticize.html) distinguishes eight grounds on which a dissenter can challenge an accepted practice without treating social approval, human reasons, and objective moral truth as the same claim.
 
 The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
@@ -48,7 +49,9 @@ The [After Moral Facts practical lab](after.html) begins by holding moral error 
 
 [Build a Morality Without Moral Facts](build.html) holds fixed the absence of objective moral facts while preserving ordinary facts about harm, scarcity, preference, agreement, institutions, and power. Users draft nine parts of the orbital city Lantern’s code: its primary goal, protected interests, decision procedure, dissent rule, membership condition, enforcement limit, revision procedure, treatment of outsiders, and protection against majority abuse. Six unusual cases then compare each selected response with the exact relevant rules rather than a hidden moral answer. The final diagnostic displays eight opportunity-normalized bases—mutual advantage, fair agreement, shared commitments, idealized preferences, harm reduction, democratic legitimacy, stability and coordination, and coercive power—while keeping support, compliance, and approval-independent obligation separate. It also reports exact design seams and builds a full optional AI interview prompt.
 
-The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
+[Can You Criticize Your Own Society?](criticize.html) examines the challenge that reform and dissent pose to simple current-majority relativism without treating that simple view as every form of relativism. Users state a general definition of valid criticism, enter six societies involving inherited caste, a unanimous safety cover-up, judgment across time, overlapping communities, a broken equal-citizenship promise, and an openly pro-conquest culture, then state the definition again. Every case answer maps transparently to exactly one of eight grounds: current majority approval, subcommunity standards, internal inconsistency, previously promised rights, personal commitment, harm or autonomy, idealized agreement, and approval-independent moral truth. The diagnostic reports selections divided by opportunities, keeps four broad routes non-ordinal, audits what each answer establishes and leaves open, flags only exact definition mismatches, isolates the society-boundary problem, and generates a complete optional AI interview prompt.
+
+The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, evolutionary challenges to realism, and post-error practice. It notes that not every constructivist or relativist uses the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
 
@@ -70,6 +73,7 @@ node tests/after-audit.cjs
 node tests/decoder-audit.cjs
 node tests/genealogy-audit.cjs
 node tests/builder-audit.cjs
+node tests/criticize-audit.cjs
 node tests/hub-audit.cjs
 ```
 
@@ -80,3 +84,4 @@ node tests/hub-audit.cjs
 - [Irrealism and the Genealogy of Morals](https://catalogimages.wiley.com/images/db/pdf/9781118837412.excerpt.pdf)
 - [Morality and Evolutionary Biology](https://plato.stanford.edu/entries/morality-biology/)
 - [Constructivism in Metaethics](https://plato.stanford.edu/entries/constructivism-metaethics/)
+- [Moral Relativism](https://plato.stanford.edu/entries/moral-relativism/)
