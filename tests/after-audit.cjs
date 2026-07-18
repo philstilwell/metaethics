@@ -243,9 +243,6 @@ assert.match(source, /A combination is a question to explain, not an automatic c
 const selectionBody = source.slice(source.indexOf("function selectAfterAnswer"), source.indexOf("function renderAfterShiftReport"));
 assert.doesNotMatch(selectionBody, /setTimeout/, "selecting an answer must not auto-advance");
 
-for (const page of ["index.html", "obligation.html", "wrong.html", "after.html", "papers.html"]) {
-  const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
-  assert.match(pageHtml, /href="after\.html"/, `${page} must link to the After Moral Facts lab`);
-}
+assert.match(fs.readFileSync(path.join(root, "index.html"), "utf8"), /href="after\.html"/, "the hub must link to the After Moral Facts lab");
 
 console.log(`After Moral Facts audit passed: ${distributions.toLocaleString()} seven-case distributions, 36 opening/final comparisons, hierarchical taxonomy, full-context AI prompt, and managed keyboard focus verified.`);

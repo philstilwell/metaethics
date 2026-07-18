@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of four interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different layers of moral thought and reserves two equal module spaces for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of five interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with four positions reserved for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -8,6 +8,7 @@ The current tools work together without forming a required sequence:
 2. [What Do You Mean by Wrong?](wrong.html) examines what a user takes moral claims to mean or do.
 3. [The Missing Ought](obligation.html) tests what could give a demand authority beyond social pressure or approval.
 4. [After Moral Facts](after.html) asks what should happen to moral language and practice if objective moral facts are held to be absent.
+5. [The Disagreement Decoder](decoder.html) separates the factual, verbal, practical, procedural, and metaethical layers hidden inside opposite moral verdicts.
 
 The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
@@ -39,6 +40,8 @@ The [What Do You Mean by Wrong? meaning lab](wrong.html) is a seven-question bra
 
 The [After Moral Facts practical lab](after.html) begins by holding moral error theory fixed and asking what should happen next. Nine questions cover a general opening policy, promises, parenting, friendship, blame, criminal law, political reform, public persuasion, and a final general policy. Every question offers the same six response strategies, but the tool does not present them as six theories at one level: abolitionism, revolutionary fictionalism, and conservationism are the classic post-error responses; expressivist revision, constructivist revision, and ordinary-language pragmatism are broader replacements or reinterpretations. The main profile counts only the seven practical cases, while the repeated opening and final general answers are compared separately. Results report exact, non-ordinal counts; explain five selected belief-and-language differences without automatically calling them incoherent; visualize all six strategies; and create a complete optional AI interview prompt containing every full situation, fixed assumption, and question scope.
 
+[The Disagreement Decoder](decoder.html) starts with two opposite claims about assisted dying and then reveals one carefully bounded dispute at a time. Its opening checkpoint teaches that slogans alone underdetermine the source of a disagreement. Eight further checkpoints isolate definitions or framing, empirical predictions, whose interests matter, priority among shared values, personal attitudes and commitments, social-coordination rules, decision procedures, and alleged objective moral facts. The result compares each user classification with the layer explicitly stated in the dialogue, groups the layers by the kinds of work that may move them, and never treats a moral position as correct or incorrect. Its graphical map carefully distinguishes evidence-responsive questions from guaranteed empirical resolution, practical settlements from moral agreement, and institutional decisions from objective moral truth. A full optional AI prompt includes the case definition, every excerpt, every selected and intended layer, and instructions for decoding another real disagreement one question at a time.
+
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
@@ -58,6 +61,8 @@ node tests/logic-audit.cjs
 node tests/obligation-audit.cjs
 node tests/meaning-audit.cjs
 node tests/after-audit.cjs
+node tests/decoder-audit.cjs
+node tests/hub-audit.cjs
 ```
 
 ## Sources

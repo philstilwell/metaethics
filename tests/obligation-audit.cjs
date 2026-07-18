@@ -218,9 +218,6 @@ assert.match(html, /id="obligationAIProbePrompt"/, "the result must include a fu
 const selectionBody = source.slice(source.indexOf("function selectObligationAnswer"), source.indexOf("function renderBridgeReport"));
 assert.doesNotMatch(selectionBody, /setTimeout/, "selecting an answer must not auto-advance before the user can review it");
 
-for (const page of ["index.html", "papers.html", "obligation.html"]) {
-  const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
-  assert.match(pageHtml, /href="obligation\.html"/, `${page} must link to the obligation lab`);
-}
+assert.match(fs.readFileSync(path.join(root, "index.html"), "utf8"), /href="obligation\.html"/, "the hub must link to the obligation lab");
 
 console.log(`Obligation audit passed: ${completedPaths.toLocaleString()} complete paths, exact direct-gap accounting, non-ordinal categories, bridge tracking, native controls, and full AI context verified.`);

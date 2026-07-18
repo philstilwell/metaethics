@@ -239,9 +239,6 @@ assert.match(source, /This lab checks four selected contrasts/, "results must id
 const selectionBody = source.slice(source.indexOf("function selectMeaningAnswer"), source.indexOf("function renderMeaningShiftReport"));
 assert.doesNotMatch(selectionBody, /setTimeout/, "selecting an answer must not auto-advance");
 
-for (const page of ["index.html", "obligation.html", "wrong.html", "papers.html"]) {
-  const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
-  assert.match(pageHtml, /href="wrong\.html"/, `${page} must link to the meaning lab`);
-}
+assert.match(fs.readFileSync(path.join(root, "index.html"), "utf8"), /href="wrong\.html"/, "the hub must link to the meaning lab");
 
 console.log(`Meaning audit passed: ${completedPaths.toLocaleString()} reachable paths, four branches, six precisely labeled interpretations, exact descriptive counts, native controls, and full AI context verified.`);

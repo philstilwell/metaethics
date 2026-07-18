@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A plain-language lab for separating factual, verbal, practical, procedural, and metaethical parts of a moral disagreement."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>The Disagreement Decoder — The Moral Compass</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#decoderLab">Skip to the disagreement lab</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#toolkit" aria-current="location">All labs</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <p class="visually-hidden" id="decoderLiveStatus" role="status" aria-live="polite"></p>
+
+      <section class="meaning-hero decoder-hero">
+        <div class="meaning-hero-copy decoder-hero-copy">
+          <p class="kicker">One argument can hide several different arguments.</p>
+          <h1>Decode what people <em>actually disagree about.</em></h1>
+          <p>
+            Two people can use opposite moral words while disputing facts, definitions, priorities,
+            public rules, or something deeper. Follow one assisted-dying debate layer by layer and
+            choose the next move that fits the exact disagreement in front of you.
+          </p>
+          <a class="primary-button" href="#decoderLab">Open the argument <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="meaning-quote-card decoder-quote-card">
+          <span class="card-number" aria-hidden="true">05</span>
+          <p class="kicker">The surface clash</p>
+          <blockquote>
+            <span>“Assisted dying is wrong.”</span>
+            <span>“No, it isn’t.”</span>
+          </blockquote>
+          <p>Those sentences conflict. By themselves, they do not tell us what kind of conflict produced them.</p>
+        </aside>
+      </section>
+
+      <section class="meaning-intro decoder-intro" aria-labelledby="decoderIntroHeading">
+        <div>
+          <p class="kicker">The decoder’s rule</p>
+          <h2 id="decoderIntroHeading">Do not ask one method to solve every kind of disagreement.</h2>
+        </div>
+        <div class="decoder-method-preview">
+          <article>
+            <span>Check</span>
+            <h3>Facts and predictions</h3>
+            <p>Records and studies can test some claims, although uncertain evidence may not settle them completely.</p>
+          </article>
+          <article>
+            <span>Clarify</span>
+            <h3>Words and scope</h3>
+            <p>People must identify the same policy before their verdicts can be compared cleanly.</p>
+          </article>
+          <article>
+            <span>Work through</span>
+            <h3>Interests, priorities, and plans</h3>
+            <p>Evidence can inform these disputes, but it cannot choose everyone’s priorities for them.</p>
+          </article>
+          <article>
+            <span>Examine</span>
+            <h3>Claims about moral facts</h3>
+            <p>A claim of objective moral truth is a further metaethical claim, not a label for every unresolved conflict.</p>
+          </article>
+        </div>
+        <details class="meaning-definition decoder-definition">
+          <summary>What case does “assisted dying” mean in this lab?</summary>
+          <div class="definition-copy">
+            <p>
+              Unless a question says otherwise, the phrase means one narrow proposed policy: an adult with
+              decision-making capacity has a terminal illness, makes repeated voluntary requests, receives a
+              prescription after a regulated review, and personally takes the medication. The lab separates this
+              from a clinician directly administering medication and from requests based only on psychiatric suffering.
+            </p>
+            <p>
+              The invented dialogue does not take a side on assisted dying and does not claim that either speaker’s
+              predictions are true. It uses a serious public disagreement to teach a method: first locate the dispute,
+              then use evidence, clarification, deliberation, institutional design, or metaethical argument where each fits.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <section class="workspace meaning-workspace decoder-workspace" id="decoderLab">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="decoderPhase">Read the slogans</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetDecoderButton" type="button">Reset</button>
+                <span id="decoderProgress">1 / 9</span>
+              </div>
+            </div>
+            <div
+              class="progress-track"
+              id="decoderProgressTrack"
+              role="progressbar"
+              aria-label="Disagreement Decoder progress"
+              aria-valuemin="1"
+              aria-valuemax="9"
+              aria-valuenow="1"
+            >
+              <span id="decoderProgressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card decoder-question-card" id="decoderQuestionCard">
+            <div class="question-heading">
+              <span class="question-number" id="decoderQuestionNumber">01</span>
+              <div>
+                <p class="question-axis" id="decoderQuestionAxis"></p>
+                <h2 id="decoderQuestionPrompt" tabindex="-1"></h2>
+              </div>
+            </div>
+            <div class="decoder-dialogue" id="decoderDialogue" aria-label="Dialogue excerpt"></div>
+            <p class="question-context" id="decoderQuestionContext"></p>
+            <div class="question-boundaries">
+              <div>
+                <strong>Hold these details fixed</strong>
+                <p id="decoderAssumptions"></p>
+              </div>
+              <div>
+                <strong>Choose only this</strong>
+                <p id="decoderScope"></p>
+              </div>
+            </div>
+            <details class="plain-explanation" id="decoderExplanation">
+              <summary>Why this distinction matters</summary>
+              <div class="explanation-body">
+                <div class="explanation-part">
+                  <strong>In plain words</strong>
+                  <p id="decoderPlain"></p>
+                </div>
+                <div class="explanation-part explanation-example">
+                  <strong>Keep separate</strong>
+                  <p id="decoderSeparate"></p>
+                </div>
+                <div class="explanation-part">
+                  <strong>What your answer tests</strong>
+                  <p id="decoderReveal"></p>
+                </div>
+              </div>
+            </details>
+            <fieldset class="choice-list meaning-choice-list" id="decoderChoices" aria-labelledby="decoderQuestionPrompt">
+              <legend class="visually-hidden">Choose the best way to classify or investigate this disagreement</legend>
+            </fieldset>
+            <div class="question-footer">
+              <div class="question-navigation">
+                <button class="text-button" id="decoderBackButton" type="button">← Back</button>
+                <button class="secondary-button" id="decoderNextButton" type="button" disabled>Next layer →</button>
+              </div>
+              <p id="decoderWhy"></p>
+            </div>
+          </article>
+        </div>
+
+        <div id="liveDecoderMapMount">
+          <aside class="live-panel meaning-live-panel decoder-live-panel" id="decoderMapCard" aria-labelledby="decoderMapHeading">
+            <div class="live-header">
+              <div>
+                <p class="kicker" id="decoderMapKicker">Your decoding so far</p>
+                <h2 id="decoderMapHeading">Which layers have you kept separate?</h2>
+              </div>
+              <div class="pulse-dot" aria-hidden="true"></div>
+            </div>
+            <p class="meaning-route-note" id="decoderMapNote">Each answer compares your selected next move with the exact information stated in that dialogue.</p>
+            <p class="meaning-map-basis" id="decoderMapBasis">0 of 9 checkpoints classified</p>
+            <div class="decoder-live-meter" role="img" id="decoderLiveMeter" aria-label="No checkpoints classified yet">
+              <span id="decoderLiveMeterBar"></span>
+            </div>
+            <div class="decoder-live-counts" aria-hidden="true">
+              <div><strong id="decoderMatchedCount">0</strong><span>separated</span></div>
+              <div><strong id="decoderOpenCount">0</strong><span>to revisit</span></div>
+            </div>
+            <div class="decoder-layer-list" id="decoderLayerList" aria-hidden="true"></div>
+            <p class="meaning-map-note">This measures how you classified the stated dialogue. It does not score your position on assisted dying, intelligence, or moral character.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results meaning-results decoder-results hidden" id="decoderResults">
+        <div class="results-hero">
+          <p class="kicker">Disagreement diagnostic</p>
+          <h1 id="decoderResultTitle" tabindex="-1">—</h1>
+          <p id="decoderResultSummary"></p>
+        </div>
+
+        <div class="scoreboard meaning-scoreboard">
+          <div class="score-card score-card-primary">
+            <span>Checkpoints separated</span>
+            <strong id="decoderScore">—</strong>
+            <p id="decoderScoreCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Evidence boundary</span>
+            <strong id="decoderEvidenceStatus">—</strong>
+            <p id="decoderEvidenceCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Metaethical boundary</span>
+            <strong id="decoderMoralStatus">—</strong>
+            <p id="decoderMoralCopy"></p>
+          </div>
+        </div>
+
+        <section class="report-section decoder-map-section" aria-labelledby="decoderFinalMapHeading">
+          <div class="section-heading decoder-map-heading">
+            <div>
+              <p class="kicker">The full disagreement map</p>
+              <h2 id="decoderFinalMapHeading">Eight layers hidden by two short slogans</h2>
+            </div>
+            <p>Every row names the dispute explicitly stated at that checkpoint, the best-matched method, and how you classified it.</p>
+          </div>
+          <div class="decoder-final-map" id="decoderFinalMap"></div>
+        </section>
+
+        <section class="report-section decoder-method-section" aria-labelledby="decoderMethodHeading">
+          <div class="section-heading">
+            <p class="kicker">What can move each dispute?</p>
+            <h2 id="decoderMethodHeading">Different problems need different kinds of work</h2>
+          </div>
+          <div class="decoder-method-grid" id="decoderMethodGrid"></div>
+        </section>
+
+        <section class="report-section meaning-answer-report" aria-labelledby="decoderAnswerHeading">
+          <div class="section-heading">
+            <p class="kicker">Your nine decisions</p>
+            <h2 id="decoderAnswerHeading">Where you separated a layer—and where two were blended</h2>
+          </div>
+          <div class="meaning-answer-grid decoder-answer-grid" id="decoderAnswerGrid"></div>
+        </section>
+
+        <section class="interpretation meaning-conclusion decoder-conclusion">
+          <div>
+            <p class="kicker">The main lesson</p>
+            <h2>A decision can be reached without every disagreement disappearing.</h2>
+          </div>
+          <p>
+            Better evidence may narrow predictions. Clearer words may end a verbal dispute. Deliberation may
+            expose a compromise, and a public procedure may produce a rule. None of those results by itself proves
+            an objective moral fact. Conversely, rejecting objective moral facts does not erase conflicts over
+            suffering, interests, commitments, or which rules people will build together.
+          </p>
+        </section>
+
+        <section class="report-section ai-probe-section" aria-labelledby="decoderAIHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Continue the inquiry</p>
+              <h2 id="decoderAIHeading">Ask an AI to decode a real disagreement with you</h2>
+            </div>
+            <p>
+              The prompt includes the full case definition, every dialogue excerpt, your classifications,
+              the intended layers, and strict instructions not to collapse a practical settlement into moral truth.
+            </p>
+          </div>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="decoderAIProbePrompt">Your ready-to-use decoder prompt</label>
+          <textarea id="decoderAIProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyDecoderPromptButton" type="button">Copy AI prompt</button>
+            <p id="decoderPromptCopyStatus" aria-live="polite">The prompt contains your answers but no name or account information.</p>
+          </div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="restartDecoderButton" type="button">Decode the argument again</button>
+          <a class="secondary-button" href="papers.html">Read about moral disagreement</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        The distinction between conflicts of belief and conflicts of attitude follows
+        <a href="https://plato.stanford.edu/entries/stevenson/" target="_blank" rel="noreferrer">C. L. Stevenson’s account</a>.
+        The wider metaethical framing follows the
+        <a href="https://plato.stanford.edu/entries/disagreement-moral/" target="_blank" rel="noreferrer">Stanford Encyclopedia of Philosophy on moral disagreement</a>.
+        The narrow case definition is informed by the
+        <a href="https://www.bma.org.uk/advice-and-support/ethics/end-of-life/physician-assisted-dying" target="_blank" rel="noreferrer">British Medical Association’s terminology</a>.
+      </p>
+      <p><a href="papers.html">Explore the non-realist reading room</a></p>
+    </footer>
+
+    <noscript>
+      <p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p>
+    </noscript>
+    <script src="decoder.js"></script>
+  </body>
+</html>
