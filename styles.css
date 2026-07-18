@@ -2707,6 +2707,13 @@ dialog p:not(.kicker) {
   gap: 12px;
 }
 
+.meaning-combination-intro {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .argument-note.stable-note {
   border-left-color: var(--green);
   background: #eaf3ed;

@@ -3,12 +3,12 @@
 const MEANING_FAMILIES = {
   realism: {
     index: "01",
-    name: "Independent moral fact",
-    theory: "Moral realism",
+    name: "Approval-independent moral fact",
+    theory: "Robust moral realism",
     group: "fact",
-    resultPhrase: "a claim about an independent moral fact",
+    resultPhrase: "a claim about a moral fact that approval does not create",
     short: "The sentence describes a moral status that is not created by anyone’s approval or chosen standard.",
-    note: "This is the comparison view in a mostly non-realist lab. Realists disagree about whether moral facts are natural, non-natural, or grounded in other facts.",
+    note: "This lab measures the robust or objective version of realism: at least some moral facts are not created by anyone’s approval. Broader, minimal uses of “realism” require less than this.",
   },
   error: {
     index: "02",
@@ -17,16 +17,16 @@ const MEANING_FAMILIES = {
     group: "fact",
     resultPhrase: "a fact-like claim that the world does not make true",
     short: "The sentence tries to report an objective moral status, but no such status exists, so the literal claim fails.",
-    note: "Error theorists treat ordinary moral assertions as truth-directed but systematically untrue. They still disagree about what language should replace or preserve them.",
+    note: "Error theorists say ordinary moral claims try to state facts but never succeed. They still disagree about whether people should replace, revise, or knowingly preserve moral language.",
   },
   express: {
     index: "03",
-    name: "Commitment or plan",
-    theory: "Expressivism",
+    name: "Commitment, norm, or plan",
+    theory: "Plan/norm expressivism",
     group: "stance",
     resultPhrase: "an expression of commitment and a plan for action",
-    short: "The sentence primarily condemns, endorses a norm, or expresses a plan rather than detecting a special property.",
-    note: "Modern expressivism is more than saying “boo.” It can treat moral judgments as sophisticated commitments, plans, and accepted norms that support reasoning.",
+    short: "The sentence mainly condemns, accepts a rule, or expresses a plan rather than detecting a special property.",
+    note: "This lab measures plan- and norm-centered expressivism. Sophisticated expressivists may still use words such as “true” and “fact”; they explain that language without treating moral judgment mainly as detection of an independent property.",
   },
   relative: {
     index: "04",
@@ -39,21 +39,21 @@ const MEANING_FAMILIES = {
   },
   construct: {
     index: "05",
-    name: "Reasoned construction",
-    theory: "Constructivism",
+    name: "Idealized reasoning procedure",
+    theory: "Idealized-procedure constructivism",
     group: "standard",
     resultPhrase: "a conclusion produced by a specified process of reasoning",
     short: "The sentence reports what follows from a fair or rational procedure, not merely what people currently approve.",
-    note: "Constructivists disagree about the correct procedure and about whether their view counts as realism, anti-realism, or an alternative to that division.",
+    note: "This is one narrow family of constructivism: a carefully specified reasoning procedure sets the answer. Other constructivists build from agency, practical reason, society, or other starting points, and philosophers dispute where these views belong.",
   },
   fiction: {
     index: "06",
-    name: "Useful moral fiction",
-    theory: "Moral fictionalism",
+    name: "Deliberate moral fiction",
+    theory: "Revolutionary moral fictionalism",
     group: "tool",
     resultPhrase: "a useful fiction or practical shorthand",
     short: "The speaker knowingly talks as if moral properties existed because the familiar language serves a practical purpose.",
-    note: "Fictionalists must explain when the pretense is useful, whether it can be honest, and what happens when its costs become greater than its benefits.",
+    note: "This lab measures revolutionary fictionalism: a speaker knowingly adopts or preserves moral make-believe after rejecting literal moral properties. It does not separately score hermeneutic fictionalism, which says ordinary moral talk was already fiction-like.",
   },
 };
 
@@ -63,7 +63,7 @@ const MEANING_GROUPS = [
   { id: "fact", name: "Fact-like readings", families: ["realism", "error"] },
   { id: "stance", name: "Practical stance", families: ["express"] },
   { id: "standard", name: "Standards and procedures", families: ["relative", "construct"] },
-  { id: "tool", name: "Deliberate device", families: ["fiction"] },
+  { id: "tool", name: "Deliberate language tool", families: ["fiction"] },
 ];
 
 function meaningChoices(values) {
@@ -91,12 +91,12 @@ const OPENING_QUESTION = {
     realism: {
       label: "She is stating that the practice has a real moral status that no person or group creates",
       detail: "Her sentence is meant to describe something that can be true even if every person approves of the greenhouse and no society has a rule against it.",
-      interpretation: "This treats the sentence as a truth-directed claim about approval-independent moral reality, which is the central realist reading used in this lab.",
+      interpretation: "This treats the sentence as a claim about a moral fact that can be true even when nobody approves of it. That is the robust realist reading used in this lab.",
     },
     error: {
       label: "She is trying to state that kind of moral fact, but no action actually has such a status",
       detail: "Her sentence aims to report objective wrongness, yet the world contains no property that could make this ordinary moral claim literally true.",
-      interpretation: "This accepts the fact-like meaning of ordinary moral language while denying that any positive moral assertion succeeds, the core error-theory combination.",
+      interpretation: "This says ordinary moral language tries to state facts while denying that any positive moral claim succeeds. That combination is the core of moral error theory.",
     },
     express: {
       label: "She is condemning the practice and committing herself to a rule or plan against it",
@@ -106,7 +106,7 @@ const OPENING_QUESTION = {
     relative: {
       label: "She is saying that the practice violates a particular person’s or group’s actual standards",
       detail: "The sentence can be true relative to Sera’s standards, or another named code, without claiming that the same verdict holds under every possible standard.",
-      interpretation: "This gives the sentence truth conditions supplied by an actual standard and therefore requires the speaker to make clear whose standard controls the claim.",
+      interpretation: "This lets an actual standard decide when the sentence is true, so the speaker must make clear whose standard controls the answer.",
     },
     construct: {
       label: "She is saying that the practice would be rejected by a specified fair process of reasoning",
@@ -127,7 +127,7 @@ const VALUE_CHANGE_QUESTION = {
   axis: "Case — the overnight reversal",
   prompt: "A device reverses Sera’s values while every fact about the greenhouse stays the same. What changed between her two moral judgments?",
   context:
-    "A neural device safely rewrites Sera’s strongest preferences overnight. Yesterday she opposed the greenhouse and called it morally wrong. Today she remembers every fact and every argument but sincerely approves of it and says it is not morally wrong. No new evidence appeared, and nobody reasoned better or worse during the change.",
+    "A neural device safely rewrites Sera’s strongest preferences overnight. Yesterday she opposed the greenhouse and called it morally wrong. Today she remembers every fact and every argument but sincerely approves of it and says it is morally permissible. No new evidence appeared, and nobody reasoned better or worse during the change.",
   assumptions:
     "Only Sera’s practical attitudes and priorities changed. Her memory, intelligence, factual knowledge, and ability to reason stayed intact. For the standard-relative answer, use Sera’s own current standards.",
   scope:
@@ -142,12 +142,12 @@ const VALUE_CHANGE_QUESTION = {
     realism: {
       label: "Her opinion changed, but that alone does not change the independent moral status she was describing",
       detail: "At least one judgment may be mistaken because both sentences concern the same moral reality, and a device changing her preferences does not alter that reality.",
-      interpretation: "This keeps moral truth independent of Sera’s attitudes and treats the reversal as a change in belief or motivation rather than a change in the truth-maker.",
+      interpretation: "This keeps moral truth independent of Sera’s attitudes. Her belief or motivation changed, but whatever makes the moral sentence true did not change merely because her preferences did.",
     },
     error: {
       label: "She exchanged one fact-like moral claim for another, but neither is made true by a moral property",
-      detail: "The positive claim of wrongness and any positive claim of moral permission both reach for objective moral status that the world does not contain.",
-      interpretation: "This treats the reversal as movement between ordinary moral assertions while retaining the error theorist’s rejection of their supposed moral truth-makers.",
+      detail: "Her claim of wrongness and her new claim of moral permission both assign an objective moral status that the world does not contain.",
+      interpretation: "This treats both statements as ordinary moral claims while saying that neither has the moral property it would need to be true.",
     },
     express: {
       label: "Her practical stance changed from condemnation to approval; no moral discovery occurred merely because of that",
@@ -167,7 +167,7 @@ const VALUE_CHANGE_QUESTION = {
     fiction: {
       label: "The literal moral story remained untrue, while Sera changed whether using that story served her purposes",
       detail: "Yesterday she found the fiction of wrongness useful for opposition; today she may abandon it or use a different fiction to support approval.",
-      interpretation: "This holds the fictionalist view of literal truth fixed while allowing the usefulness and chosen content of moral discourse to change with practical aims.",
+      interpretation: "This continues to deny the literal moral claim while allowing the usefulness and content of the moral story to change with practical aims.",
     },
   }),
 };
@@ -188,7 +188,7 @@ const CLAIM_ROUTE_QUESTIONS = [
     guide: {
       plain: "Would you expect moral wrongness to appear as one more thing in a scientific inventory, or is the sentence doing a different kind of work?",
       separate: "Not finding a separate moral particle is different from showing that no moral fact can be grounded in ordinary facts or reasoning.",
-      reveal: "Your answer clarifies what kind of truth-maker, if any, you think a sentence using “wrong” needs.",
+      reveal: "Your answer clarifies what, if anything, you think could make a sentence using “wrong” true.",
     },
     choices: meaningChoices({
       realism: {
@@ -219,7 +219,7 @@ const CLAIM_ROUTE_QUESTIONS = [
       fiction: {
         label: "The missing property confirms the literal story, not the practical usefulness of continuing to speak that way",
         detail: "People may knowingly retain the sentence as a simple and motivating fiction even after accepting that no separate wrongness appears in reality.",
-        interpretation: "This rejects the apparent ontology of ordinary moral talk while treating the decision to preserve that talk as a further practical question.",
+        interpretation: "This rejects the moral properties that ordinary moral talk seems to describe, while treating the decision to preserve that talk as a separate practical question.",
       },
     }),
   },
@@ -244,11 +244,11 @@ const CLAIM_ROUTE_QUESTIONS = [
       realism: {
         label: "It states that her treatment has an independent moral status even in a world with no social code",
         detail: "The children’s suffering and her reasons can ground a truth about wrongness that does not depend on anyone approving, enforcing, or describing it.",
-        interpretation: "This is a direct realist reading: the disappearance of communities does not remove the truth conditions of the moral claim.",
+        interpretation: "This is a direct robust-realist reading: the disappearance of communities does not remove whatever makes the moral claim true or false.",
       },
       error: {
         label: "It still tries to state an objective moral fact, but even this terrible case contains no such property",
-        detail: "Fear, cruelty, and preference are real, yet the further assertion of moral wrongness remains literally untrue on the error-theory account.",
+        detail: "Fear, cruelty, and preference are real, yet the added claim of moral wrongness remains literally untrue on the error-theory account.",
         interpretation: "This preserves a sharp distinction between rejecting moral properties and denying the natural facts that make the case horrifying to many people.",
       },
       express: {
@@ -280,13 +280,13 @@ const COMMITMENT_ROUTE_QUESTIONS = [
     id: "translation",
     phase: "Commitment route",
     axis: "Case — the forbidden word",
-    prompt: "A government bans moral vocabulary. Which translation best preserves what “erasing the witnesses is wrong” was doing?",
+    prompt: "A government bans moral vocabulary. Which replacement best preserves what “erasing the witnesses is wrong” was doing?",
     context:
       "A government plans to erase the memories of people who saw its secret prison. It also bans the words right, wrong, good, evil, duty, and obligation from public messages. A resistance group must replace its sentence “Erasing the witnesses is morally wrong” with wording that states its intended meaning as clearly as possible.",
     assumptions:
-      "Everyone already knows what the erasure will do. The new sentence must be honest and understandable without using moral terms. The question asks for semantic translation, not the slogan most likely to win.",
+      "Everyone already knows what the erasure will do. The new sentence must be honest and understandable without using a moral label. The question asks what the original sentence meant, not which slogan is most likely to win.",
     scope:
-      "Choose the replacement that preserves your account of the original sentence. Do not select an option merely because you personally support the resistance.",
+      "Choose the replacement that comes closest to preserving your account of the original sentence. Do not select an option merely because you personally support the resistance.",
     why: "Removing moral vocabulary forces the hidden fact claim, practical stance, standard, procedure, or fiction into explicit language.",
     guide: {
       plain: "If you could not say “wrong,” what longer sentence would say the same thing you intended?",
@@ -295,14 +295,14 @@ const COMMITMENT_ROUTE_QUESTIONS = [
     },
     choices: meaningChoices({
       realism: {
-        label: "“The erasure has a condemnable status that is true independently of anyone’s approval or rules”",
-        detail: "This awkward translation preserves the idea that the original sentence described an independent feature rather than merely announcing a reaction.",
-        interpretation: "This makes the realist commitment explicit, though a complete account would still explain the independent status in clearer non-moral terms if possible.",
+        label: "“There is a fact, independent of anyone’s rules or approval, that counts decisively against erasing the witnesses”",
+        detail: "This replacement preserves the claim that something beyond reactions and current rules counts against the erasure, without quietly substituting a report about what the group dislikes.",
+        interpretation: "This makes the robust realist claim explicit. A fuller realist theory would still need to explain what that independent fact is and how people could know it.",
       },
       error: {
         label: "No truthful translation preserves the literal claim; instead list the memory loss and say that we oppose it",
         detail: "The original aimed at a moral fact that does not exist, so honest replacement separates the real effects from the resistance group’s practical stance.",
-        interpretation: "This is an abolitionist-friendly response to error theory: remove the failed assertion while preserving factual information and human opposition.",
+        interpretation: "This fits an error theorist who wants to stop making failed moral claims while preserving factual information and human opposition.",
       },
       express: {
         label: "“We oppose the erasure, and we commit ourselves to preventing practices of this kind”",
@@ -347,10 +347,10 @@ const COMMITMENT_ROUTE_QUESTIONS = [
       realism: {
         label: "They hold incompatible beliefs about one moral status, so at least one belief about the searches is mistaken",
         detail: "Their practical attitudes may also clash, but the sentences contradict each other about a truth that does not change with either copy’s priorities.",
-        interpretation: "This gives moral disagreement the structure of an ordinary dispute over one subject matter with incompatible truth-directed beliefs.",
+        interpretation: "This treats moral disagreement like an ordinary factual dispute: the two people hold beliefs about the same subject, and both beliefs cannot be correct.",
       },
       error: {
-        label: "Their positive moral assertions both fail to report real moral properties, while their policy attitudes still conflict",
+        label: "Their positive moral claims both fail to report real moral properties, while their policy attitudes still conflict",
         detail: "The language presents a fact-like dispute, but error theory relocates the actionable conflict to preferences, plans, and non-moral claims.",
         interpretation: "This preserves the practical seriousness of the hearing while denying that either side possesses the objective moral fact it appears to assert.",
       },
@@ -389,7 +389,7 @@ const STANDARDS_ROUTE_QUESTIONS = [
     assumptions:
       "Both charters are internally consistent and based on the same factual evidence. The first records actual public standards. The second results from the stated fair-review procedure. They cannot both govern the same memory removal.",
     scope:
-      "Explain what determines the truth or function of “forced removal is wrong.” Keep current acceptance separate from the output of an idealized procedure.",
+      "Explain what determines the truth or function of “forced removal is wrong.” Keep current acceptance separate from the result of the carefully designed fair-review process.",
     why: "Opposite charters expose the difference between actual standards and standards constructed under chosen conditions.",
     guide: {
       plain: "Does the current rule settle the sentence, does the fair procedure settle it, or is neither what gives the word its meaning?",
@@ -414,13 +414,13 @@ const STANDARDS_ROUTE_QUESTIONS = [
       },
       relative: {
         label: "Relative to the city’s actual charter it is permitted; relative to the review charter it is wrong",
-        detail: "The sentence has no complete truth condition until the speaker identifies which existing or stipulated standard is being applied.",
+        detail: "We cannot tell whether the sentence is true until the speaker identifies which existing or proposed standard is being applied.",
         interpretation: "This is the clean standard-relative result: opposite verdicts can each be true under different explicitly indexed codes.",
       },
       construct: {
         label: "The fair-review charter supplies the answer because the specified decision procedure constructs the standard",
         detail: "The actual vote does not settle the verdict when the theory defines the relevant principles by informed reasoning under fair representation.",
-        interpretation: "This gives the idealized procedure constitutive force, while opening it to criticism about why these conditions are the correct ones.",
+        interpretation: "This gives the fair-review process the power to set the answer, while leaving open why those conditions should control the decision.",
       },
       fiction: {
         label: "Either charter can anchor a moral fiction; choose the one whose use best serves the city’s practical aims",
@@ -455,7 +455,7 @@ const STANDARDS_ROUTE_QUESTIONS = [
       error: {
         label: "The visitor’s literal moral claim is still untrue, though the manipulation and caste structure are real grounds for opposition",
         detail: "A complete criticism can describe control, hierarchy, suffering, and the visitor’s aims without adding an objective property of wrongness.",
-        interpretation: "This separates strong non-moral criticism and commitment from a moral assertion the error theorist thinks cannot be made true.",
+        interpretation: "This separates strong non-moral criticism and commitment from a moral claim the error theorist thinks cannot be made true.",
       },
       express: {
         label: "The visitor is rejecting the caste rule and inviting others to share a plan that ends engineered hierarchy",
@@ -470,7 +470,7 @@ const STANDARDS_ROUTE_QUESTIONS = [
       construct: {
         label: "The rule is wrong because informed and equally represented people would reject it under the specified process",
         detail: "Engineered actual acceptance is not decisive when the relevant standard is constructed through deliberation without the manipulation and caste advantage.",
-        interpretation: "This grounds criticism in an idealized procedure and makes the justification of removing those influences a central part of the argument.",
+        interpretation: "This bases the criticism on a carefully designed reasoning process and makes the removal of manipulation and caste advantage a central part of the argument.",
       },
       fiction: {
         label: "The visitor uses a fiction of wrongness to strengthen resistance, while judging that use by its practical effects",
@@ -486,14 +486,14 @@ const TOOL_ROUTE_QUESTIONS = [
     id: "broadcast",
     phase: "Language-as-tool route",
     axis: "Case — the twelve-second broadcast",
-    prompt: "A moral sentence saves time during an evacuation. What makes broadcasting it acceptable?",
+    prompt: "A moral sentence saves time during an evacuation. What is that sentence doing when the announcer broadcasts it?",
     context:
       "A station has twelve seconds to stop rescuers from abandoning unconscious children when an ash cloud arrives. Tests show that “Leaving a child behind is morally wrong” produces faster cooperation than a longer explanation of fear, loss, rescue capacity, and shared policy. The announcer rejects the existence of literal moral properties.",
     assumptions:
       "The shorter message reliably saves more children, the announcer knows this, and a complete factual explanation cannot fit. Listeners understand ordinary moral language in varied ways. No authority forces the announcer to use it.",
     scope:
-      "Explain what could make this exact utterance sincere, true, useful, or misleading. Do not decide solely from the good outcome; identify the sentence’s function.",
-    why: "Emergency persuasion tests whether moral language can be retained without realist belief and what conditions make that retention honest.",
+      "Identify the meaning or function of this exact utterance. Keep that separate from the further question of whether an emergency makes an insincere, untrue, or potentially misleading sentence acceptable to use.",
+    why: "Emergency persuasion tests whether urgency changes what a moral sentence means or only changes the speaker’s reason for using it.",
     guide: {
       plain: "Can someone who rejects moral properties still say “wrong” honestly, and why?",
       separate: "A sentence can be effective without being true, and it can express a genuine commitment without pretending to describe an independent property.",
@@ -501,24 +501,24 @@ const TOOL_ROUTE_QUESTIONS = [
     },
     choices: meaningChoices({
       realism: {
-        label: "The broadcast is straightforwardly acceptable only if the announcer believes the fact-like moral claim is true",
-        detail: "Its useful effect is welcome but does not change what the sentence asserts, so privately rejecting that assertion makes the utterance misleading.",
-        interpretation: "This keeps truth-directed realist semantics fixed across emergency and ordinary contexts instead of allowing usefulness to rewrite the claim.",
+        label: "It states an approval-independent moral fact, so the announcer says something she does not believe",
+        detail: "Its useful effect does not change what the sentence means. A separate argument might defend using an insincere warning in this emergency, but that would not make it sincere.",
+        interpretation: "This keeps the robust realist meaning fixed across emergency and ordinary settings instead of allowing usefulness to rewrite the claim.",
       },
       error: {
-        label: "The sentence remains literally untrue; honesty favors a brief non-moral command or factual warning instead",
-        detail: "Saving time supplies a reason to communicate forcefully, but it does not make the failed moral assertion true or erase the risk of misleading listeners.",
-        interpretation: "This combines error theory with a revisionary or abolitionist response rather than automatically moving from error theory to fictionalism.",
+        label: "It still makes a failed fact-like claim; the emergency may explain its use but does not make it true",
+        detail: "An error theorist could separately debate whether saving children justifies this wording or favors a brief non-moral command. That policy question does not change the sentence’s literal meaning.",
+        interpretation: "This keeps error theory separate from the later decision to replace, preserve, or permit a failed kind of moral claim.",
       },
       express: {
         label: "It is sincere because the announcer genuinely condemns abandonment and endorses the rescue plan",
         detail: "The utterance openly performs a practical stance the announcer really has, so no hidden belief in moral properties is needed for sincerity.",
-        interpretation: "This explains both motivation and honesty through expressivist function instead of treating the sentence as a useful false assertion.",
+        interpretation: "This explains both motivation and honesty by what the sentence expresses instead of treating it as a useful but false claim.",
       },
       relative: {
         label: "It can be true as an application of the rescuers’ shared rule that children must not be abandoned",
         detail: "The claim accurately invokes an actual emergency standard, provided that listeners understand which code is being applied.",
-        interpretation: "This gives the message standard-relative truth and makes the shared rescue code, rather than mere effectiveness, its semantic basis.",
+        interpretation: "This makes the message true relative to the shared rescue code. That code, rather than the message’s effectiveness, explains its meaning.",
       },
       construct: {
         label: "It reports the rule that informed and fairly represented participants would choose for the evacuation",
@@ -526,9 +526,9 @@ const TOOL_ROUTE_QUESTIONS = [
         interpretation: "This treats the sentence as shorthand for a constructed conclusion whose justification exists outside the broadcast.",
       },
       fiction: {
-        label: "It is acceptable as a useful pretense if its benefits, audience expectations, and risks of deception are defensible",
-        detail: "The announcer knowingly uses realist-sounding language for coordination while rejecting its literal surface claim and accepting responsibility for that choice.",
-        interpretation: "This is the central fictionalist option: practical success can justify make-believe moral discourse under conditions that still require scrutiny.",
+        label: "It deliberately uses a moral fiction to coordinate action while the announcer rejects the literal claim",
+        detail: "The benefits, audience expectations, and risks of deception matter to whether she should use the fiction, but its function is conscious make-believe for practical effect.",
+        interpretation: "This is the revolutionary fictionalist reading: the speaker intentionally uses realist-sounding moral language as a tool without believing its surface claim.",
       },
     }),
   },
@@ -547,18 +547,18 @@ const TOOL_ROUTE_QUESTIONS = [
     guide: {
       plain: "Is she contradicting herself, expressing a real commitment, applying a code, reporting a procedure, or knowingly maintaining a useful story?",
       separate: "Rejecting independent moral properties does not by itself tell us whether ordinary moral sentences are false, expressive, relative, or fictional.",
-      reveal: "Your answer explains how surface moral grammar relates to the speaker’s private metaethical view.",
+      reveal: "Your answer explains how the public wording relates to what the speaker privately believes moral language means.",
     },
     choices: meaningChoices({
       realism: {
         label: "The two statements conflict because her public sentence asserts a moral status she privately denies exists",
-        detail: "Practical benefit cannot by itself make the literal assertion honest; she should change either her private belief or her public wording.",
-        interpretation: "This applies a stable realist reading to her public grammar and therefore finds a direct belief-to-assertion mismatch.",
+        detail: "Practical benefit cannot by itself make the literal claim honest; she should change either her private belief or her public wording.",
+        interpretation: "This applies one stable realist meaning to her public sentence and therefore finds a direct mismatch between her belief and her claim.",
       },
       error: {
         label: "She recognizes the error but should avoid asserting it unless she clearly marks quotation, pretense, or revision",
         detail: "Error theory explains her private note; intellectual honesty then requires a separate policy about whether knowingly untrue moral talk is permissible.",
-        interpretation: "This keeps error theory distinct from fictionalism by refusing to infer that a useful false discourse should automatically be continued.",
+        interpretation: "This keeps error theory distinct from fictionalism: discovering that a kind of claim fails does not automatically mean people should keep using it as fiction.",
       },
       express: {
         label: "The statements fit because her public sentence sincerely expresses opposition rather than belief in a moral property",
@@ -592,25 +592,25 @@ const DISAGREEMENT_QUESTION = {
   context:
     "Two future cities are exact copies until one public decision. Both know that a museum can create conscious historical replicas who will suffer briefly and then be deleted. One city says creating them is morally wrong. The other says creating them is morally permissible. Both predict the same suffering, educational benefits, and public reaction.",
   assumptions:
-    "The cities use the same non-moral vocabulary, understand one another, and have equal reasoning ability. Their plans cannot both govern a shared museum. No missing empirical fact explains the disagreement.",
+    "The cities use the same non-moral vocabulary, understand one another, and have equal reasoning ability. Their plans cannot both govern a shared museum. No missing fact about the world explains the disagreement.",
   scope:
     "Identify what their opposing moral sentences disagree about. Keep a conflict in belief separate from a clash of plans, standards, procedures, or useful public frameworks.",
   why: "Persistent disagreement is one of the clearest places where rival theories give different accounts of what moral language is doing.",
   guide: {
     plain: "Are the cities contradicting each other about one fact, or are they expressing incompatible ways of evaluating and governing the museum?",
-    separate: "A practical conflict can be genuine and serious even if both standard-relative descriptions are true or both objective moral assertions fail.",
+    separate: "A practical conflict can be genuine and serious even if both standard-relative descriptions are true or both objective moral claims fail.",
     reveal: "Your answer shows what remains to be resolved when more scientific information will not settle the dispute.",
   },
   choices: meaningChoices({
     realism: {
       label: "They make incompatible claims about one independent moral status, so at least one city is mistaken",
       detail: "The shared facts do not guarantee moral knowledge, but “wrong” and “permissible” cannot both correctly describe the same act in the same conditions.",
-      interpretation: "This models moral disagreement as a conflict of truth-directed beliefs about one approval-independent subject matter.",
+      interpretation: "This treats moral disagreement as a conflict between beliefs about one moral reality that no person or group creates.",
     },
     error: {
       label: "Both cities make positive moral-status claims that fail, although their policies and reactions genuinely conflict",
       detail: "The dispute appears to concern objective properties, but the actionable remainder consists of real plans, preferences, institutions, and consequences.",
-      interpretation: "This uses error theory to reject both realist-seeming assertions without denying the need to negotiate or fight over one museum policy.",
+      interpretation: "This uses error theory to reject both realist-sounding claims without denying the need to negotiate or fight over one museum policy.",
     },
     express: {
       label: "They express incompatible plans or accepted norms: create the replicas versus forbid their creation",
@@ -646,7 +646,7 @@ const CORRECTION_QUESTION = {
     "You cannot answer only “more information” because all ordinary evidence is already available. You may identify a mistake in reasoning, standards, procedure, expression, or practical usefulness.",
   scope:
     "Choose what would make the moral judgment mistaken on your account. Separate changing your mind from learning that your earlier sentence failed by its own intended standard.",
-  why: "A theory of moral language should explain not only assertion and disagreement but also what error and improvement would mean.",
+  why: "A theory of moral language should explain not only claims and disagreements but also what error and improvement would mean.",
   guide: {
     plain: "What would count as a real correction: tracking the fact better, abandoning a failed claim, fixing an inconsistency, applying the right standard, repairing a procedure, or revising a harmful fiction?",
     separate: "Losing an argument, becoming less confident, and discovering that your sentence was false are not automatically the same event.",
@@ -655,13 +655,13 @@ const CORRECTION_QUESTION = {
   choices: meaningChoices({
     realism: {
       label: "Better moral reasoning could show that the plan lacks the independent status I attributed to it",
-      detail: "The correction would be a change in a truth-directed belief, even if identifying the reliable method for moral reasoning remains difficult.",
+      detail: "The correction would replace a belief that was meant to be true, even if finding a reliable method for moral reasoning remains difficult.",
       interpretation: "This treats moral error as failure to represent an independent moral reality and therefore owes an account of evidence and access.",
     },
     error: {
-      label: "Recognizing that no moral property can make the literal claim true would correct the entire style of assertion",
-      detail: "The repair is not switching to the opposite moral property but replacing or reinterpreting a discourse whose positive claims systematically fail.",
-      interpretation: "This makes metaethical recognition, rather than a new first-order verdict, the central correction proposed by error theory.",
+      label: "Recognizing that no moral property can make the literal claim true would correct this entire way of speaking",
+      detail: "The repair is not switching to the opposite moral property but replacing or reinterpreting a way of speaking whose positive claims always fail.",
+      interpretation: "For error theory, the central correction is realizing what ordinary moral claims wrongly assume—not choosing a different moral verdict about the memory sale.",
     },
     express: {
       label: "I could discover that the judgment conflicts with the broader commitments and plans I sincerely endorse",
@@ -670,7 +670,7 @@ const CORRECTION_QUESTION = {
     },
     relative: {
       label: "I could learn that I misstated or misapplied the actual standard my sentence was meant to use",
-      detail: "If the referenced code permits the sale, calling it wrong relative to that same code is a correctable descriptive or interpretive mistake.",
+      detail: "If the referenced code permits the sale, calling it wrong relative to that same code means I described or applied the code incorrectly.",
       interpretation: "This gives standard-relative claims ordinary error conditions while limiting correction to the standard that supplies those conditions.",
     },
     construct: {
@@ -680,8 +680,8 @@ const CORRECTION_QUESTION = {
     },
     fiction: {
       label: "I could learn that treating the plan as morally forbidden makes the shared fiction misleading or practically harmful",
-      detail: "Correction means revising or dropping a tool that no longer serves its justified purpose, while its literal moral ontology remains rejected.",
-      interpretation: "This evaluates moral discourse by the function of the fiction and therefore requires standards for benefit, harm, honesty, and audience consent.",
+      detail: "Correction means revising or dropping a tool that no longer serves its justified purpose, while still denying that literal moral properties exist.",
+      interpretation: "This evaluates moral language by how the fiction works and therefore needs clear standards for benefit, harm, honesty, and audience consent.",
     },
   }),
 };
@@ -696,7 +696,7 @@ const FINAL_QUESTION = {
   assumptions:
     "The sentence is yours, not a quotation. You may strongly oppose the conduct under every answer. Choose what you intend the moral word itself to contribute beyond the agreed facts.",
   scope:
-    "Give your final semantic definition, even if it differs from your opening answer. The result will report a change as a possible revision or context shift, not automatically as incoherence.",
+    "Give your final definition of what the sentence means, even if it differs from your opening answer. The result will report a change as a possible revision or change of context, not automatically as incoherence.",
   why: "Returning to a direct first-person use reveals which interpretation survives after the route, disagreement, and correction tests.",
   guide: {
     plain: "Complete the sentence as precisely as you can: “When I call this action wrong, I am really…”",
@@ -707,7 +707,7 @@ const FINAL_QUESTION = {
     realism: {
       label: "Claiming that the treatment has a real moral status that is not created by anyone’s approval",
       detail: "I mean that the sentence can be true even if the host, guest, speaker, and every community reject the judgment or use another code.",
-      interpretation: "Your final definition is realist: the sentence aims to describe approval-independent moral reality rather than only a stance or standard.",
+      interpretation: "Your final definition is robust realist: the sentence aims to describe a moral reality that no person or group creates, rather than only a stance or standard.",
     },
     error: {
       label: "Using an ordinary fact-like sentence that I now think is literally untrue because moral properties do not exist",
@@ -722,7 +722,7 @@ const FINAL_QUESTION = {
     relative: {
       label: "Saying that the treatment violates the actual standards I accept or another standard I have clearly named",
       detail: "The verdict is true relative to that code, and I do not mean that it has the same truth under every possible person’s or group’s standard.",
-      interpretation: "Your final definition is standard-relative: the sentence’s truth conditions depend on an identified actual code.",
+      interpretation: "Your final definition is standard-relative: whether the sentence is true depends on an identified actual code.",
     },
     construct: {
       label: "Reporting that the treatment would be rejected by the fair or rational procedure I take to set the standard",
@@ -732,7 +732,7 @@ const FINAL_QUESTION = {
     fiction: {
       label: "Deliberately using a helpful moral fiction while denying that the treatment literally has a property of wrongness",
       detail: "I retain the sentence because it organizes attention, emotion, and action more effectively than constantly restating the non-moral facts and commitments.",
-      interpretation: "Your final definition is fictionalist: familiar moral discourse is consciously preserved for its practical value without literal belief.",
+      interpretation: "Your final definition is revolutionary fictionalist: familiar moral language is consciously preserved for its practical value without literal belief.",
     },
   }),
 };
@@ -750,7 +750,7 @@ const ROUTES = {
   },
   standards: {
     name: "Standards route",
-    reason: "Your opening relied on a standard or procedure, so these cases separate actual acceptance from idealized construction.",
+    reason: "Your opening relied on a standard or reasoning process, so these cases separate actual acceptance from the result of a carefully designed process.",
     questions: STANDARDS_ROUTE_QUESTIONS,
   },
   tool: {
@@ -823,7 +823,7 @@ function openingFinalComparison() {
     return {
       stable: true,
       title: `${MEANING_FAMILIES[opening].name} → same meaning`,
-      detail: "Your opening and final definitions used the same semantic family across two direct first-person-style moral claims.",
+      detail: "Your opening and final definitions used the same meaning family across two direct personal uses of moral language.",
     };
   }
   return {
@@ -842,26 +842,26 @@ function collectMeaningCombinations() {
   add(
     "realism-error",
     ["realism", "error"],
-    "The same fact-like grammar received opposite truth verdicts",
+    "The same fact-shaped sentence received opposite answers about truth",
     "Some answers treated independent moral claims as capable of truth, while others treated that entire class of claims as systematically untrue. Clarify whether the difference was a revision or a feature of the case.",
   );
   add(
     "realism-express",
     ["realism", "express"],
-    "Description and practical expression both appeared",
+    "Description and practical commitment both appeared",
     "Some answers used “wrong” to describe an independent status and others used it primarily to condemn or plan. Both functions can occur in conversation, but one theory must explain how they relate.",
   );
   add(
     "relative-construct",
     ["relative", "construct"],
-    "Actual standards and idealized procedures both set answers",
+    "Current standards and fair-review procedures both set answers",
     "Some answers let an existing person or group supply the standard; others let a fair or rational procedure supply it. Explain when actual acceptance is enough and when it can be overruled.",
   );
   add(
     "error-fiction",
     ["error", "fiction"],
-    "Rejecting literal truth led to two different language policies",
-    "Some answers favored exposing or replacing failed moral assertions; others favored knowingly retaining them as useful fiction. The difference concerns what to do after accepting the alleged error.",
+    "Rejecting literal truth led to two different plans for moral language",
+    "Some answers favored exposing or replacing failed moral claims; others favored knowingly retaining them as useful fiction. The difference concerns what to do after accepting the alleged error.",
   );
   return combinations;
 }
@@ -880,21 +880,23 @@ function meaningDiagnostic() {
     const family = MEANING_FAMILIES[leaders[0]];
     primary = family.name;
     primaryCopy = `${family.theory} is the closest named family: ${maximum} of your 7 answers used this interpretation.`;
-    title = `“Wrong” mostly works as ${family.resultPhrase}.`;
+    title = `Your most-used reading treats “wrong” as ${family.resultPhrase}.`;
   } else if (leaders.length > 1) {
     primary = "Mixed meaning";
     primaryCopy = `${leaders.map((family) => MEANING_FAMILIES[family].name).join(" and ")} are tied at ${maximum} use${maximum === 1 ? "" : "s"} each.`;
     title = "You use “wrong” in more than one way.";
   }
 
-  let pattern = "Distributed";
-  let patternCopy = "No single interpretation accounts for most of your seven answers.";
-  if (maximum >= 5) {
-    pattern = "Mostly stable";
-    patternCopy = `One interpretation appears in ${maximum} of 7 answers. The remaining answers show where context or another function enters.`;
-  } else if (maximum >= 3) {
-    pattern = "Focused but flexible";
-    patternCopy = `Your leading interpretation appears ${maximum} times, with other meanings doing work in several cases.`;
+  let pattern = "No answers classified";
+  let patternCopy = "Complete all seven questions to see the exact pattern.";
+  if (leaders.length === 1) {
+    pattern = `${maximum} of 7 used one leading interpretation`;
+    patternCopy = maximum === 7
+      ? `${MEANING_FAMILIES[leaders[0]].name} appeared in all seven answers.`
+      : `${MEANING_FAMILIES[leaders[0]].name} appeared ${maximum} times. The other ${7 - maximum} answer${7 - maximum === 1 ? "" : "s"} used other interpretations.`;
+  } else if (leaders.length > 1) {
+    pattern = `${leaders.length}-way tie at ${maximum} of 7`;
+    patternCopy = `${leaders.map((family) => MEANING_FAMILIES[family].name).join(", ")} each appeared ${maximum} time${maximum === 1 ? "" : "s"}.`;
   }
 
   return {
@@ -929,10 +931,10 @@ function buildMeaningAIProbePrompt() {
   const countLines = MEANING_FAMILY_ORDER.map((family) => `- ${MEANING_FAMILIES[family].theory}: ${diagnosis.counts[family]} of 7 answers`).join("\n");
   const combinationLines = diagnosis.combinations.length
     ? diagnosis.combinations.map((item) => `- ${item.title}: ${item.detail}`).join("\n")
-    : "- No coded cross-family combination was triggered.";
+    : "- None of the four selected comparisons was triggered.";
 
   return [
-    "I completed a seven-question branching lab about what I mean when I use the moral word ‘wrong.’ Interview me to clarify the semantic and metaethical commitments in my answers.",
+    "I completed a seven-question branching lab about what I mean when I use the moral word ‘wrong.’ Interview me to clarify what my answers mean and what they assume about morality.",
     "",
     "INTERVIEW RULES",
     "- Ask one focused question at a time and wait for my reply.",
@@ -946,7 +948,7 @@ function buildMeaningAIProbePrompt() {
     "- If I make a truth claim, ask what could make it true and how I could be corrected. If I express a stance, ask how reasoning and disagreement work. If I use a standard or procedure, ask whose and why. If I use a fiction, ask about honesty and practical limits.",
     "",
     "METHOD AND LIMITS",
-    "The lab offered six simplified readings in every question: independent moral fact, failed fact claim, commitment or plan, actual standard applied, reasoned construction, and useful moral fiction. These are associations with philosophical families, not diagnoses. Counts show how often I selected each interpretation out of seven; they are not probabilities, rankings, or confidence scores.",
+    "The lab offered six simplified readings in every question: an approval-independent moral fact, a failed fact claim, a commitment or plan, an actual standard, an idealized reasoning procedure, and a deliberate moral fiction. These are associations with philosophical families, not diagnoses. Counts show how often I selected each interpretation out of seven; they are not probabilities, rankings, or confidence scores. The lab checks only four selected cross-family comparisons, so an unflagged combination is not proof that my overall view is coherent.",
     "",
     `ROUTE: ${diagnosis.route.name}`,
     diagnosis.route.reason,
@@ -957,13 +959,13 @@ function buildMeaningAIProbePrompt() {
     "OPENING TO FINAL",
     diagnosis.comparison ? `${diagnosis.comparison.title}. ${diagnosis.comparison.detail}` : "The final answer is incomplete.",
     "",
-    "COMBINATIONS TO EXAMINE",
+    "FOUR SELECTED COMPARISONS",
     combinationLines,
     "",
     "FULL CASES AND ANSWERS",
     answerSections,
     "",
-    "Begin by briefly restating the strongest semantic question raised by this exact pattern, then ask me the single best first question.",
+    "Begin by briefly restating the strongest question about meaning raised by this exact pattern, then ask me the single best first question.",
   ].join("\n");
 }
 
@@ -991,6 +993,7 @@ const meaningEls = {
   next: document.querySelector("#meaningNextButton"),
   map: document.querySelector("#meaningMap"),
   mapCard: document.querySelector("#meaningMapCard"),
+  mapKicker: document.querySelector("#meaningMapKicker"),
   routeNote: document.querySelector("#meaningRouteNote"),
   mapBasis: document.querySelector("#meaningMapBasis"),
   liveMapMount: document.querySelector("#liveMeaningMapMount"),
@@ -1006,6 +1009,7 @@ function renderMeaningMap() {
   const counts = meaningCounts();
   const answered = answeredMeaningCount();
   const route = ROUTES[meaningRouteKey()];
+  meaningEls.mapKicker.textContent = answered === 7 ? "Your seven answers" : "Your answers so far";
   meaningEls.routeNote.textContent = meaningState.answers.opening ? `${route.name}: ${route.reason}` : "Your first answer will select a deeper route.";
   meaningEls.mapBasis.textContent = `${answered} of 7 answers classified`;
   meaningEls.map.setAttribute(
@@ -1102,7 +1106,7 @@ function renderMeaningShiftReport(diagnosis) {
         <h3>${item.title}</h3>
         <p>${item.detail}</p>
       </article>`).join("")
-    : '<p class="argument-empty">No coded cross-family combination appeared. This means the narrow comparisons in this lab were not triggered; it is not proof of a complete theory.</p>';
+    : '<p class="argument-empty">None of the four selected comparisons appeared. This is not proof that every part of your view fits together.</p>';
   document.querySelector("#meaningShiftReport").innerHTML = `
     ${comparisonCopy}
     <article class="argument-note route-note">
@@ -1110,6 +1114,7 @@ function renderMeaningShiftReport(diagnosis) {
       <h3>${diagnosis.route.name}</h3>
       <p>${diagnosis.route.reason}</p>
     </article>
+    <p class="meaning-combination-intro">This lab checks four selected contrasts: independent fact versus failed fact claim, independent fact versus practical commitment, current standard versus fair-review procedure, and error theory versus deliberate fiction. It is not a complete test of every possible combination.</p>
     <div class="meaning-combination-list">${combinationCopy}</div>`;
 }
 

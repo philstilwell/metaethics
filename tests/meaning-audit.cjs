@@ -73,6 +73,10 @@ assert.deepEqual(
   ["realism", "error", "express", "relative", "construct", "fiction"],
   "the lab must preserve six separate semantic families",
 );
+assert.equal(MEANING_FAMILIES.realism.theory, "Robust moral realism", "the realist label must match the objective version being tested");
+assert.equal(MEANING_FAMILIES.express.theory, "Plan/norm expressivism", "the expressivist label must match the plan-and-norm options");
+assert.equal(MEANING_FAMILIES.construct.theory, "Idealized-procedure constructivism", "the constructivist label must disclose the narrow procedural model");
+assert.equal(MEANING_FAMILIES.fiction.theory, "Revolutionary moral fictionalism", "the fictionalist label must disclose deliberate rather than hermeneutic fiction");
 assert.deepEqual(
   Array.from(MEANING_GROUPS.flatMap((group) => group.families)),
   Array.from(MEANING_FAMILY_ORDER),
@@ -116,6 +120,16 @@ const everyQuestion = [
   FINAL_QUESTION,
 ];
 
+assert.match(VALUE_CHANGE_QUESTION.context, /morally permissible/i, "the reversal must use a positive permission claim");
+assert.doesNotMatch(VALUE_CHANGE_QUESTION.context, /not morally wrong/i, "the reversal must not equate negated wrongness with permission");
+const translationQuestion = COMMITMENT_ROUTE_QUESTIONS.find((question) => question.id === "translation");
+const translationRealism = translationQuestion.choices.find((choice) => choice.family === "realism");
+assert.doesNotMatch(translationRealism.label, /condemnable/i, "the no-moral-label translation must not smuggle in condemnability");
+assert.match(translationRealism.label, /independent of anyone’s rules or approval/i, "the translation must preserve the robust realist claim");
+const broadcastQuestion = TOOL_ROUTE_QUESTIONS.find((question) => question.id === "broadcast");
+assert.match(broadcastQuestion.prompt, /what is that sentence doing/i, "the broadcast case must ask about sentence function rather than permissibility");
+assert.match(broadcastQuestion.scope, /Keep that separate.*acceptable/i, "the broadcast case must separate meaning from permission to use it");
+
 assert.equal(new Set(everyQuestion.map((question) => question.id)).size, everyQuestion.length, "all question-bank ids must be unique");
 
 for (const question of everyQuestion) {
@@ -155,13 +169,14 @@ for (const family of MEANING_FAMILY_ORDER) {
   assert.equal(diagnosis.leaders.length, 1, `${family} uniform path must have one leader`);
   assert.equal(diagnosis.leaders[0], family, `${family} uniform path must lead with itself`);
   assert.equal(diagnosis.maximum, 7, `${family} uniform path must record seven uses`);
-  assert.equal(diagnosis.pattern, "Mostly stable", `${family} uniform path must be described as mostly stable`);
+  assert.equal(diagnosis.pattern, "7 of 7 used one leading interpretation", `${family} uniform path must report the exact count without an inferred stability label`);
   assert.equal(openingFinalComparison().stable, true, `${family} uniform path must have a stable opening/final definition`);
   const prompt = buildMeaningAIProbePrompt();
   assert.match(prompt, new RegExp(MEANING_FAMILIES[family].theory), `${family} AI context must name the associated family`);
   assert.match(prompt, /Ask one focused question at a time/i, "the AI prompt must require a paced interview");
   assert.match(prompt, /relativism is not automatically anti-realism/i, "the prompt must preserve the relativism distinction");
   assert.match(prompt, /classification of constructivism is disputed/i, "the prompt must preserve the constructivism caveat");
+  assert.match(prompt, /only four selected cross-family comparisons/i, "the prompt must disclose that its comparison set is not exhaustive");
 }
 
 reset({ opening: "realism", final: "express" });
@@ -216,6 +231,10 @@ assert.match(html, /id="meaningNextButton"[^>]+disabled/, "the lab must require 
 assert.match(html, /role="progressbar"/, "progress must be exposed to assistive technology");
 assert.match(html, /id="meaningLiveStatus"[^>]+role="status"/, "question changes must have a live announcement");
 assert.match(html, /id="meaningAIProbePrompt"/, "results must include the full AI follow-up prompt");
+assert.match(html, /id="meaningMapKicker">Your answers so far/, "the live map must say what its changing counts reflect");
+assert.doesNotMatch(html, /Your uses so far/, "the completed map must not retain an indefinite 'so far' label");
+assert.match(source, /answered === 7 \? "Your seven answers"/, "the map heading must become final when all seven answers are present");
+assert.match(source, /This lab checks four selected contrasts/, "results must identify the selected comparison set as non-exhaustive");
 
 const selectionBody = source.slice(source.indexOf("function selectMeaningAnswer"), source.indexOf("function renderMeaningShiftReport"));
 assert.doesNotMatch(selectionBody, /setTimeout/, "selecting an answer must not auto-advance");
@@ -225,4 +244,4 @@ for (const page of ["index.html", "obligation.html", "wrong.html", "papers.html"
   assert.match(pageHtml, /href="wrong\.html"/, `${page} must link to the meaning lab`);
 }
 
-console.log(`Meaning audit passed: ${completedPaths.toLocaleString()} reachable paths, four branches, six balanced interpretations, exact counts, native controls, and full AI context verified.`);
+console.log(`Meaning audit passed: ${completedPaths.toLocaleString()} reachable paths, four branches, six precisely labeled interpretations, exact descriptive counts, native controls, and full AI context verified.`);
