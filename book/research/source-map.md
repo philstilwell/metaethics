@@ -80,7 +80,7 @@ The manuscript must preserve these distinctions:
 
 ## Manuscript implementation status
 
-Parts I–III are now drafted through Chapter 18. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
+Parts I–V are now drafted through Chapter 31. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
 
 - Chapter 12 separates causal explanation, motivating considerations, evidence-relative support, fact-relative support, and aim-independent favoring force.
 - Chapter 13 tests present, coherent, informed, vividly appreciated, and identity-integrated aims without treating humane idealization as neutral correction.
@@ -89,7 +89,28 @@ Parts I–III are now drafted through Chapter 18. The authority sequence planned
 - Chapter 17 keeps personal commitment, convention, pressure, sanction, role, added foundation, and approval-independent duty non-ordinal and non-substitutable.
 - Chapter 18 tests divine command, divine nature, natural law, species flourishing, rational agency, constitutive standards, and self-evident axioms before conducting the seven-column authority audit.
 
-This implementation also preserves the expanded site's cross-part boundary: practical reasons do not settle epistemic reasons. Part III ends by handing the unresolved access question to the dedicated epistemic-normativity treatment in Chapter 19.
+The access sequence planned from `evidence-config.js`, `genealogy.js`, and `decoder.js` is implemented in Chapters 19–24:
+
+- Chapter 19 separates truth indication, belief's function, truth-seeking aims, usefulness, inquiry rules, public procedure, and epistemic anti-normativism across the seven bounded cases.
+- Chapter 20 treats intuitions as seemings requiring calibration rather than automatic detections of truth.
+- Chapter 21 preserves causal explanation, local process distrust, content-level argument, and burden shift as four non-interchangeable genealogical inferences.
+- Chapter 22 distinguishes the eight disagreement layers and tests both controlled convergence and persistent ideal peer disagreement.
+- Chapter 23 separates empirical prediction and measurement from standing, priority, proper function, distribution, and acceptable risk.
+- Chapter 24 carries artificial consciousness, memory editing, synthetic identity, population change, remote causal responsibility, and ecological thresholds into a versioned uncertainty and revision protocol.
+
+This implementation preserves the expanded site's cross-part boundary: practical reasons do not settle epistemic reasons. Inspection Report IV allows conditional truth-seeking inquiry without assuming stance-independent epistemic reasons and does not infer moral nonexistence from failed access.
+
+The major-theory sequence in Chapters 25–31 now gives equal argumentative weight to the suite's distinctions and the complementary coherence framework:
+
+- Chapter 25 tests act and rule consequentialism, several welfare currencies, priority, negative and sufficientarian refinements, demandingness, aggregation, population, and hidden distribution while retaining disciplined consequence forecasting.
+- Chapter 26 tests universalization, persons as ends, rights, side constraints, role and positive duties, conflicts, non-rational standing, and catastrophe thresholds while retaining explicit boundaries against opportunistic sacrifice.
+- Chapter 27 combines virtue, care, loyalty, stewardship, formation, and practical wisdom, then tests cultural exemplars, conflicting virtues, partiality, caregiver limits, and the risk of care becoming control.
+- Chapter 28 combines divine command and nature, natural law, objective flourishing, sacred tradition, conscience, and interpretation, preserving their strongest resistance to state approval while keeping goodness and access debts visible.
+- Chapter 29 separates contractualism, ideal-observer reasoning, Kantian and Humean constructivism, reciprocal agreement, and democratic legitimacy; its procedural table exposes participant, representation, idealization, reasonableness, and power selectors.
+- Chapter 30 keeps culture-relative truth, agreement-relative reasons, contextualism, plural values, personal commitment, and subcommunity standards distinct while testing boundary selection, reform, majority capture, outsiders, and criticism across time.
+- Chapter 31 constructs rights-and-welfare, virtue-and-rule, care-and-procedure, sacred-and-flourishing, plural-judgment, and reflective-equilibrium hybrids, then requires explicit ordering rules in a common evacuation case.
+
+Inspection Report V does not declare a theory winner. It records the concern protected, strongest mechanism, price of repair, remaining objective claim, and practice worth keeping. This creates the raw material for Parts VI–VII: the general grounding partition can audit the unresolved claims while the post-system alternative retains forecasting, boundaries, care, interpretation, representation, local knowledge, revision, and transparent settlement without treating those practices as proof of objective authority.
 
 ## Secondary literature already represented locally
 

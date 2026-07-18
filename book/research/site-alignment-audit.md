@@ -5,7 +5,7 @@
 - Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
 - Audit date: July 18, 2026
 - Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
-- Manuscript coverage status: Parts I–III drafted through Chapter 18
+- Manuscript coverage status: Parts I–V drafted through Chapter 31
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
 
@@ -32,6 +32,12 @@ The original book architecture already contained partial material on standing, v
 The revised architecture therefore contains forty-one chapters rather than thirty-eight. No new topic changes the book's intended conclusion, but each makes the route to that conclusion more complete and less vulnerable to charges of selective skepticism.
 
 The drafted manuscript now implements the full reasons-and-authority sequence in Chapters 12–18. It preserves the required distinction between causal, motivating, conditional, and aim-independent reasons; keeps social pressure and sanction separate from obligation; and ends with epistemic access still open for Chapter 19 rather than treating practical-reason skepticism as an answer to epistemic normativity.
+
+Chapters 19–24 now implement that epistemic-access sequence. Chapter 19 gives all seven proposed sources of evidential force separate treatment, while Chapters 20–24 preserve the required boundaries among intuition, genealogy, disagreement, empirical selection, practical settlement, uncertainty, and revision. The final access audit explicitly records insulation without calling it confirmation and failed access without inflating it into proof of nonexistence.
+
+Chapters 25–31 now carry the expanded material into direct comparison among the major candidate systems. Consequentialism separates entry, currency, aggregation, distribution, and threshold repairs. Deontology keeps direct standing distinct from the weight and outcome assigned after entry. Virtue and care make context, relationship, formation, and caregiver limits explicit. Received-order views undergo the same access and revision audit applied to other foundations. Constructive procedures distinguish representation, idealization, legitimate settlement, and objective discovery. Local and plural views distinguish indexed standards from approval-independent criticism. The hybrid chapter uses the tradeoff methods as declared ordering rules rather than allowing “balance” or “all things considered” to hide a universal measure.
+
+Inspection Report V confirms alignment at the level of method as well as topic. It compares candidates without a master score, preserves seams rather than automatically reporting contradictions, records bounded conclusions, and retains each theory's practical contribution even where objective authority remains unpaid. The new standing, tradeoff, and evidence material is therefore integrated into the main argument rather than isolated in dedicated chapters. The moral-emotions expansion remains architecturally assigned to Chapters 35–36 and the constructive ending.
 
 ## Future update procedure
 
