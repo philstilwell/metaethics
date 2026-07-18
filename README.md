@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of five interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with four positions reserved for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of six interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with three positions reserved for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -9,6 +9,7 @@ The current tools work together without forming a required sequence:
 3. [The Missing Ought](obligation.html) tests what could give a demand authority beyond social pressure or approval.
 4. [After Moral Facts](after.html) asks what should happen to moral language and practice if objective moral facts are held to be absent.
 5. [The Disagreement Decoder](decoder.html) separates the factual, verbal, practical, procedural, and metaethical layers hidden inside opposite moral verdicts.
+6. [The Value Genealogy Lab](genealogy.html) traces possible influences on a conviction and distinguishes explanation, process distrust, content-level criticism, and burden-of-proof shifts.
 
 The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
@@ -42,6 +43,8 @@ The [After Moral Facts practical lab](after.html) begins by holding moral error 
 
 [The Disagreement Decoder](decoder.html) starts with two opposite claims about assisted dying and then reveals one carefully bounded dispute at a time. Its opening checkpoint teaches that slogans alone underdetermine the source of a disagreement. Eight single-layer checkpoints isolate definitions or framing, empirical predictions, whose interests receive standing, priority among shared values, personal attitudes and commitments, social-coordination rules, decision procedures, and alleged objective moral facts. A tenth integration checkpoint asks users to identify several explicitly stated layers at once without adding familiar but unstated ones. The result separates the eight layer checks from the two restraint/integration checks, groups performance into five transparent skills, and never treats a moral position as correct or incorrect. Its graphical map distinguishes evidence-responsive questions from guaranteed empirical resolution, inclusion from priority, attitudes from beliefs about attitudes, practical settlements from moral agreement, and institutional decisions from objective moral truth. A reusable eight-question checklist and full optional AI prompt transfer the method to another real disagreement.
 
+[The Value Genealogy Lab](genealogy.html) has two deliberately separate diagnostics. First, users choose one conviction and rate nine possible influences: harm sensitivity, reciprocity, kinship or group loyalty, religion, parents and community, status incentives, historical institutions, personal experience, and deliberate reflection. These ratings generate a tentative origin map but never affect a truth score. Second, eight bounded cases test four conclusions: a causal explanation only, a local reason to distrust a formation process, an argument bearing on the belief’s content, and a broad burden-of-proof shift. Results report exact two-case skill counts, flag unsupported moves from origin to refutation, review every answer, and generate a complete optional AI interview prompt. The design follows Richard Joyce’s warning that even a powerful non-truth-tracking genealogy most directly supports a modest epistemological challenge; additional metaethical premises are needed to derive moral error theory.
+
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
@@ -62,6 +65,7 @@ node tests/obligation-audit.cjs
 node tests/meaning-audit.cjs
 node tests/after-audit.cjs
 node tests/decoder-audit.cjs
+node tests/genealogy-audit.cjs
 node tests/hub-audit.cjs
 ```
 
@@ -69,3 +73,5 @@ node tests/hub-audit.cjs
 
 - [How to Test a “Moral” System: A Field Guide to Metaethics, Value Disagreement, and the Architecture of Values](https://www.academia.edu/169114427/_How_to_Test_a_Moral_System_A_Field_Guide_to_Metaethics_Value_Disagreement_and_the_Architecture_of_Values)
 - [The Parsimonious World of the Moral Non-Realist: Illegitimate Questions, Surviving Values, and Life Without a Moral Realm](https://www.academia.edu/169490990/_The_Parsimonious_World_of_the_Moral_Non_Realist_Illegitimate_Questions_Surviving_Values_and_Life_Without_a_Moral_Realm)
+- [Irrealism and the Genealogy of Morals](https://catalogimages.wiley.com/images/db/pdf/9781118837412.excerpt.pdf)
+- [Morality and Evolutionary Biology](https://plato.stanford.edu/entries/morality-biology/)

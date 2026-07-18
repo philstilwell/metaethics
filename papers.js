@@ -69,6 +69,15 @@ const CURATED_PAPERS = [
     note: "Asks how moral realism can explain the large role evolution played in shaping human values. Street argues that anti-realism can explain that history without claiming evolution tracked independent moral truths.",
   },
   {
+    id: "joyce-irrealism-genealogy",
+    title: "Irrealism and the Genealogy of Morals",
+    author: "Richard Joyce",
+    year: 2014,
+    approach: "Evolutionary challenge",
+    url: "https://catalogimages.wiley.com/images/db/pdf/9781118837412.excerpt.pdf",
+    note: "The direct foundation for the Value Genealogy Lab. Joyce separates several debunking strategies and argues that the strongest genealogical route is comparatively modest: it shifts an epistemic burden rather than automatically proving that moral error theory is true.",
+  },
+  {
     id: "garner-abolishing",
     title: "Abolishing Morality",
     author: "Richard Garner",
