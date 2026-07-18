@@ -2928,6 +2928,43 @@ dialog p:not(.kicker) {
   background: #e7eed4;
 }
 
+.decoder-content-note {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.7fr) auto;
+  gap: 24px;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 18px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: #f3e8e3;
+}
+
+.decoder-content-note strong {
+  font-size: 0.74rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.decoder-content-note p {
+  margin: 0;
+  color: #545b56;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.decoder-content-note a {
+  padding: 8px 0;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.66rem;
+  font-weight: 850;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .decoder-quote-card blockquote {
   display: grid;
   gap: 14px;
@@ -2986,6 +3023,40 @@ dialog p:not(.kicker) {
 
 .decoder-definition {
   margin-top: 24px;
+}
+
+.decoder-word-guide {
+  margin-top: 0;
+}
+
+.decoder-glossary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 0 24px;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.decoder-glossary > div {
+  padding: 18px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: #f7f5ef;
+}
+
+.decoder-glossary dt {
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.decoder-glossary dd {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .decoder-question-card .question-heading h2 {
@@ -3083,7 +3154,7 @@ dialog p:not(.kicker) {
 
 .decoder-layer-list {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 5px;
   margin-bottom: 22px;
 }
@@ -3198,8 +3269,70 @@ dialog p:not(.kicker) {
 }
 
 .decoder-method-section,
-.decoder-map-section {
+.decoder-map-section,
+.decoder-skill-section,
+.decoder-transfer-section {
   margin-top: 22px;
+}
+
+.decoder-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.decoder-skill-card {
+  min-height: 230px;
+  padding: 22px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: #f7f5ef;
+}
+
+.decoder-skill-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.decoder-skill-card strong {
+  font-size: 0.73rem;
+  line-height: 1.35;
+}
+
+.decoder-skill-card b {
+  flex: 0 0 auto;
+  color: #607133;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.decoder-skill-meter {
+  display: block;
+  height: 10px;
+  margin: 22px 0;
+  border: 1px solid var(--ink);
+  background: #e5e3da;
+  overflow: hidden;
+}
+
+.decoder-skill-meter i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--acid);
+}
+
+.decoder-skill-card p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.86rem;
+  line-height: 1.48;
 }
 
 .decoder-method-grid {
@@ -3275,6 +3408,45 @@ dialog p:not(.kicker) {
 
 .decoder-answer-correction p {
   margin: 8px 0 0;
+}
+
+.decoder-transfer-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  list-style: none;
+}
+
+.decoder-transfer-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  min-height: 130px;
+  padding: 22px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: #f7f5ef;
+}
+
+.decoder-transfer-list li > span {
+  color: #667735;
+  font-family: var(--serif);
+  font-size: 0.76rem;
+}
+
+.decoder-transfer-list strong {
+  font-size: 0.78rem;
+}
+
+.decoder-transfer-list p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .decoder-conclusion {
@@ -3915,6 +4087,10 @@ dialog p:not(.kicker) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .decoder-skill-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .decoder-map-row {
     grid-template-columns: 50px minmax(210px, 1.2fr) minmax(150px, 0.8fr) minmax(150px, 0.8fr);
   }
@@ -3981,6 +4157,19 @@ dialog p:not(.kicker) {
 
   .decoder-method-preview {
     grid-template-columns: 1fr;
+  }
+
+  .decoder-glossary {
+    grid-template-columns: 1fr;
+  }
+
+  .decoder-content-note {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .decoder-content-note a {
+    width: fit-content;
   }
 }
 
@@ -4203,6 +4392,11 @@ dialog p:not(.kicker) {
   }
 
   .decoder-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decoder-skill-grid,
+  .decoder-transfer-list {
     grid-template-columns: 1fr;
   }
 

@@ -25,7 +25,7 @@ const DECODER_LAYERS = {
   interests: {
     index: "03",
     name: "Whose interests matter",
-    short: "The speakers place different affected people, risks, or relationships in the foreground.",
+    short: "The speakers disagree about whose interests must be included before any included interests are weighed.",
     zone: "deliberate",
     method: "Map everyone affected",
   },
@@ -64,39 +64,46 @@ const DECODER_LAYERS = {
     zone: "metaethical",
     method: "Make the metaethical case",
   },
+  mixed: {
+    index: "M",
+    name: "Several layers at once",
+    short: "One exchange contains more than one independently stated source of disagreement.",
+    zone: "diagnose",
+    method: "Name every stated layer",
+  },
 };
 
 const DECODER_LAYER_ORDER = ["scope", "evidence", "interests", "priority", "attitude", "coordination", "procedure", "moral"];
-const DECODER_CHECK_ORDER = ["surface", ...DECODER_LAYER_ORDER];
+const DECODER_CHECK_ORDER = ["surface", ...DECODER_LAYER_ORDER, "mixed"];
 
 const DECODER_ZONES = [
   {
     id: "evidence",
     name: "Evidence-responsive",
     layers: ["evidence"],
-    action: "Use records, comparative studies, and better predictions.",
-    limit: "Evidence may narrow uncertainty without removing it, and evidence alone does not set the acceptable level of risk.",
+    action: "Define the outcome, compare genuinely similar cases, check base rates, and ask what result would change each prediction.",
+    limit: "Evidence may fully resolve some claims and only narrow others. It does not, by itself, set an acceptable level of risk.",
   },
   {
     id: "clarify",
     name: "Clarify first",
     layers: ["scope"],
-    action: "Define the act, policy, population, and disputed words before comparing verdicts.",
-    limit: "Clear wording can remove a verbal dispute, but choosing a preferred frame may still reflect practical priorities.",
+    action: "Define the act, policy, population, and disputed words before comparing verdicts about one shared subject.",
+    limit: "Clear wording can remove confusion. But people may also have a substantive dispute about which definition or frame should guide public discussion.",
   },
   {
     id: "deliberate",
-    name: "Deliberative or negotiable",
+    name: "Deliberative / sometimes negotiable",
     layers: ["interests", "priority"],
     action: "Map affected parties, expose exclusions, compare tradeoffs, and look for revised priorities or compromise.",
-    limit: "Facts inform this work, but no dataset automatically decides how much weight each interest or value receives.",
+    limit: "Facts inform this work, but no dataset automatically grants standing or assigns weight. Deliberation may end in agreement, compromise, or a clearly stated impasse.",
   },
   {
     id: "commitment",
     name: "Commitment-dependent",
     layers: ["attitude"],
     action: "Use honest persuasion, changed experience, compromise, or explicit recognition that the practical stances remain opposed.",
-    limit: "A true report about each person’s attitude does not make the attitudes jointly satisfiable or identify an objective winner.",
+    limit: "A true report about each person’s attitude does not make the attitudes jointly satisfiable or identify an objective winner. A moral dispute may also contain belief disagreements at the same time.",
   },
   {
     id: "design",
@@ -110,7 +117,7 @@ const DECODER_ZONES = [
     name: "Procedure-dependent",
     layers: ["procedure"],
     action: "Decide who participates, what reasons count, how a decision is made, and when it is reviewed.",
-    limit: "A procedure can settle what a group will do while leaving disagreement about the procedure—and about morality—alive.",
+    limit: "A procedure can settle what a group will do while leaving disagreement about the procedure—and about morality—alive. The process’s authority must itself be defended.",
   },
   {
     id: "metaethical",
@@ -118,6 +125,39 @@ const DECODER_ZONES = [
     layers: ["moral"],
     action: "Ask what an objective moral claim means, what could make it true, and how anyone could know that it is true.",
     limit: "Calling a disagreement ‘moral’ does not establish that objective moral facts exist; denying such facts does not end the practical conflict.",
+  },
+];
+
+const DECODER_SKILL_GROUPS = [
+  {
+    id: "framing",
+    name: "Restraint and integration",
+    checks: ["surface", "mixed"],
+    note: "Do not guess a hidden dispute from slogans; when several layers are stated, name all of them.",
+  },
+  {
+    id: "factual",
+    name: "Words and checkable claims",
+    checks: ["scope", "evidence"],
+    note: "Separate a shared subject from predictions that evidence can support, weaken, or sometimes settle.",
+  },
+  {
+    id: "practical",
+    name: "Standing, priorities, and plans",
+    checks: ["interests", "priority", "attitude"],
+    note: "Keep who receives standing, how competing values are ranked, and what each person favors as three different questions.",
+  },
+  {
+    id: "institutional",
+    name: "Rules and decision processes",
+    checks: ["coordination", "procedure"],
+    note: "Separate the public rule a group will follow from the process and authority used to choose that rule.",
+  },
+  {
+    id: "metaethical",
+    name: "Objective moral claims",
+    checks: ["moral"],
+    note: "Reserve this layer for an actual claim about moral truth that is not created by approval, law, or procedure.",
   },
 ];
 
@@ -138,6 +178,7 @@ const DECODER_QUESTIONS = [
     scope:
       "Choose the strongest conclusion supported by the two slogans alone. The question is about what you know at this point, not which verdict you favor.",
     correct: "surface",
+    displayOrder: ["evidence", "attitude", "surface", "moral"],
     why: "Opposite verdicts reveal a clash, but not yet the layer that produced it.",
     guide: {
       plain: "Two people can reach opposite moral sentences for very different reasons. The first task is to avoid guessing which reason is present.",
@@ -177,7 +218,7 @@ const DECODER_QUESTIONS = [
     axis: "Layer 1 — definitions and framing",
     prompt: "Before Lina and Marcus compare moral verdicts, what is the most useful next move?",
     dialogue: [
-      { speaker: "Lina", text: "I mean a competent adult with a terminal illness, repeated voluntary requests, a regulated prescription, and self-administration." },
+      { speaker: "Lina", text: "I mean the lab’s narrow policy: terminal physical illness, two voluntary requests, two clinical assessments, a prescription, and the patient taking the medication." },
       { speaker: "Marcus", text: "I have been arguing against a wider policy that also includes clinician administration and requests based only on psychiatric suffering." },
     ],
     context:
@@ -187,10 +228,11 @@ const DECODER_QUESTIONS = [
     scope:
       "Choose what they must do before treating their opposite verdicts as answers about the same policy. Do not decide which definition is politically better.",
     correct: "scope",
+    displayOrder: ["scope", "evidence", "priority", "moral"],
     why: "Verdicts about different policies are not yet cleanly opposed verdicts about one shared subject.",
     guide: {
       plain: "They first need one exact case. Otherwise each person can defeat a position the other person did not take.",
-      separate: "Clarifying a term is different from proving a policy safe, ranking autonomy, or establishing a moral fact.",
+      separate: "Clarifying a term is different from proving a policy safe. After the mismatch is exposed, they may still disagree substantively about which definition should guide public debate.",
       reveal: "Your answer tests whether you repair a scope mismatch before moving to evidence or values.",
     },
     choices: [
@@ -236,6 +278,7 @@ const DECODER_QUESTIONS = [
     scope:
       "Classify only the stated difference in their predictions. Do not infer that evidence will settle their acceptable level of risk or their final moral verdict.",
     correct: "evidence",
+    displayOrder: ["scope", "attitude", "moral", "evidence"],
     why: "Claims about how often observable events will occur are empirical, even when they appear inside a moral argument.",
     guide: {
       plain: "They are predicting different things about the world. Better evidence can make those predictions more or less credible.",
@@ -275,40 +318,41 @@ const DECODER_QUESTIONS = [
     axis: "Layer 3 — the field of concern",
     prompt: "Suppose Lina and Marcus accept the same outcome estimates. What difference is most clearly revealed by these statements?",
     dialogue: [
-      { speaker: "Lina", text: "Begin with the competent patient’s suffering, control over the final days, and ability to refuse further decline." },
-      { speaker: "Marcus", text: "Begin with patients who may feel like burdens, family pressure, clinicians’ roles, and trust among people who will never request it." },
+      { speaker: "Lina", text: "Only the patient’s informed interests and the treating team’s role should receive direct standing. Effects on other people are relevant evidence, not separate stakeholder claims." },
+      { speaker: "Marcus", text: "Patients who may feel like burdens, clinicians who refuse, and people whose trust could change are also affected. Their interests should receive standing before we weigh anything." },
     ],
     context:
-      "Neither speaker denies that all of these people exist or can be affected. Their first descriptions place different people, risks, and relationships at the center of attention before any tradeoff is made.",
+      "They accept the same predictions about how the policy affects each named group. They disagree about which effects make someone a participant whose interests must enter the public decision, before assigning any final weight.",
     assumptions:
-      "Use the same narrow policy and the same empirical estimates for both speakers. Treat every named interest as real enough to consider; do not assume that mentioning an interest fixes its final weight.",
+      "Use the same narrow policy and empirical estimates. Lina does not deny that outsiders have reactions; Marcus does not yet say their interests outweigh the competent patient’s. The question is inclusion, not final priority.",
     scope:
-      "Identify what differs in the field of concern they foreground. Do not yet decide which interest should win when interests conflict.",
+      "Identify who each speaker says should receive standing in the decision. Keep that separate from the factual size of an effect and from the later question of which included interest should win.",
     correct: "interests",
+    displayOrder: ["evidence", "interests", "priority", "procedure"],
     why: "Before values are ranked, arguments can differ over who and what enters the picture at all.",
     guide: {
-      plain: "They are pointing the camera in different directions. A complete discussion should first place all affected people in the same frame.",
-      separate: "Naming an overlooked interest is different from deciding that it outweighs every competing interest.",
-      reveal: "Your answer tests whether you notice who is centered, who is missing, and which relationships receive attention.",
+      plain: "They disagree about who gets a place at the table before anyone decides whose concern is strongest.",
+      separate: "Evidence helps show who is affected. Granting an affected person standing is different from deciding that this person’s interest outweighs every competing interest.",
+      reveal: "Your answer tests whether you separate inclusion in the field of concern from the later ranking of included interests.",
     },
     choices: [
       {
         id: "interests",
         kind: "interests",
-        label: "They foreground different affected people and interests; build one shared stakeholder map before weighing them",
-        detail: "The next step is to list patients who request the option, patients who may feel pressure, families, clinicians, and wider trust, then check whether anyone important remains excluded.",
+        label: "They disagree about whose interests receive standing; build one shared list of included and excluded groups before weighing them",
+        detail: "They should state why requesting patients, non-requesting patients, families, clinicians, or the wider public do or do not count in this decision. Inclusion does not yet fix anyone’s final weight.",
       },
       {
         id: "evidence",
         kind: "evidence",
         label: "They are still making different numerical predictions, so another dataset alone will identify the missing side",
-        detail: "The context holds their estimates fixed. Evidence can describe effects on each group, but the present difference is which interests each speaker places in the foreground.",
+        detail: "The context holds their estimates fixed. Evidence can describe effects on each group, but the present dispute is whether those effects give each group standing in this decision.",
       },
       {
         id: "priority",
         kind: "priority",
         label: "They have already assigned final weights to every shared value, so stakeholder mapping would add nothing",
-        detail: "The speakers have not yet compared or ranked all interests. First making the field complete prevents a final priority from being built on an unnoticed omission.",
+        detail: "The speakers have not yet assigned final weights. They first disagree about which interests enter the comparison at all, so priority is a later layer.",
       },
       {
         id: "procedure",
@@ -334,6 +378,7 @@ const DECODER_QUESTIONS = [
     scope:
       "Classify the stated ordering of shared values. Do not reduce the dispute back to outcome estimates and do not assume one ordering is objectively correct.",
     correct: "priority",
+    displayOrder: ["evidence", "priority", "interests", "procedure"],
     why: "Agreement about which values matter can coexist with disagreement about what should lead when they cannot all be fully satisfied.",
     guide: {
       plain: "They own many of the same tools but reach for them in a different order when the case becomes hard.",
@@ -379,15 +424,16 @@ const DECODER_QUESTIONS = [
     context:
       "Lina and Marcus are no longer mistaken about what the other believes or wants. Their plans cannot both control the same public rule: one is for permission and the other is against it.",
     assumptions:
-      "Do not infer that either person is irrational, selfish, uninformed, or secretly using a different definition. They may still change through persuasion, experience, or compromise.",
+      "Do not infer that either person is irrational, selfish, uninformed, or secretly using a different definition. They may still change through persuasion, experience, or compromise, and they may also retain belief disagreements not shown here.",
     scope:
-      "Identify the practical opposition stated here. Distinguish disagreement in attitude from a factual disagreement about what attitudes the speakers have.",
+      "Identify the practical opposition stated here. Distinguish disagreement in attitude from a factual disagreement about what attitudes the speakers have. Do not infer that the whole moral dispute is only a clash of attitudes.",
     correct: "attitude",
+    displayOrder: ["scope", "evidence", "moral", "attitude"],
     why: "Two accurate reports about opposing commitments can both be true while the commitments themselves remain in conflict.",
     guide: {
       plain: "They understand each other and still pull in opposite directions. Learning another fact about who wants what does not automatically make the plans compatible.",
       separate: "“Lina supports permission” is a factual claim about Lina. Lina’s support and Marcus’s opposition are the practical attitudes that clash.",
-      reveal: "Your answer tests whether you can distinguish incompatible stances from incompatible beliefs about those stances.",
+      reveal: "Your answer tests whether you can distinguish incompatible stances from incompatible beliefs about those stances without denying that both may occur together.",
     },
     choices: [
       {
@@ -432,6 +478,7 @@ const DECODER_QUESTIONS = [
     scope:
       "Classify the need for a shared, predictable rule. Do not confuse the content of the rule with the separate procedure used to select it.",
     correct: "coordination",
+    displayOrder: ["coordination", "priority", "procedure", "evidence"],
     why: "A group needs rules for action even when the people governed by those rules do not share one moral theory.",
     guide: {
       plain: "The hospital cannot leave every case undefined. It needs a plan that people can follow, inspect, and revise.",
@@ -475,12 +522,13 @@ const DECODER_QUESTIONS = [
       { speaker: "Marcus", text: "A constitutional court should decide first because a temporary majority must not settle a question involving basic protections." },
     ],
     context:
-      "The speakers no longer dispute what the two policy options say. They dispute who has standing to decide, which institution should act first, what reasons receive a hearing, and when a decision may be reviewed.",
+      "The speakers no longer dispute what the two policy options say. They dispute who is authorized to decide, which institution should act first, what reasons receive a hearing, and when a decision may be reviewed.",
     assumptions:
       "Neither process is declared fair, lawful, or successful. Either process could produce Lina’s preferred policy, Marcus’s preferred policy, or a compromise.",
     scope:
       "Classify the disagreement about decision-making authority and process. Do not assume that a legitimate decision would create agreement or objective moral truth.",
     correct: "procedure",
+    displayOrder: ["coordination", "interests", "procedure", "moral"],
     why: "A process can settle who decides and what happens next even when it cannot settle every underlying belief or commitment.",
     guide: {
       plain: "They now disagree about the referee and the rules of the decision, not merely about the policy choices on the table.",
@@ -530,6 +578,7 @@ const DECODER_QUESTIONS = [
     scope:
       "Identify the metaethical issue created by these approval-independent claims. Do not choose which assisted-dying verdict is correct.",
     correct: "moral",
+    displayOrder: ["moral", "evidence", "attitude", "procedure"],
     why: "A claim about what remains morally true regardless of every approval is a claim about objective moral status, not merely a leftover practical dispute.",
     guide: {
       plain: "They are no longer only asking what happened, what people want, or what rule won. They are claiming that one answer is morally true independently of all of that.",
@@ -563,6 +612,60 @@ const DECODER_QUESTIONS = [
       },
     ],
   },
+  {
+    id: "mixed",
+    phase: "Put the layers together",
+    axis: "Final checkpoint — a mixed exchange",
+    prompt: "This final exchange states several sources of disagreement at once. Which answer lists every layer that is explicit, without adding an unstated one?",
+    dialogue: [
+      { speaker: "Lina", text: "Under our shared narrow policy, I predict the reviews will catch almost all pressure. I rank patient choice ahead of the remaining risk. I will campaign for my side. A citizens’ panel should decide." },
+      { speaker: "Marcus", text: "Under that same policy, I predict much pressure will stay hidden. I rank protection ahead of choice. I will campaign for my side. A constitutional court should decide." },
+    ],
+    context:
+      "The two speakers explicitly make different predictions, rank the same values differently, announce opposed practical commitments, and name different decision procedures. They use the same policy definition and include the same affected groups. Neither makes an approval-independent moral claim in this exchange.",
+    assumptions:
+      "Count only the types of statements actually made. Do not add a definition dispute, an excluded stakeholder, a detailed hospital rule, or an objective moral-fact claim merely because one appeared earlier in the lab.",
+    scope:
+      "Choose the complete set of explicit layers. Count the stated reasons and plans, not the background fact that a public policy will eventually need to be chosen.",
+    correct: "mixed",
+    displayOrder: ["scope", "mixed", "evidence", "moral"],
+    why: "Real moral arguments commonly contain several disputes at once, so a useful decode must name every supported layer and resist adding familiar but unstated ones.",
+    guide: {
+      plain: "This time there is no single layer to find. Read each sentence separately and keep a checklist of what it actually says.",
+      separate: "Several layers can appear together without becoming one blended problem. A missing layer should remain unknown, even if it appeared elsewhere in the debate.",
+      reveal: "Your answer tests whether you can combine the earlier distinctions when a realistic exchange moves across several layers quickly.",
+    },
+    choices: [
+      {
+        id: "mixed",
+        kind: "mixed",
+        resultName: "Predictions + priorities + attitudes + procedures",
+        label: "Empirical predictions, priority among shared values, practical attitudes, and decision procedures",
+        detail: "The exchange contains different forecasts, opposite value rankings, opposed plans to campaign, and different views about who should decide. It does not explicitly reopen definitions, stakeholder standing, or objective moral truth.",
+      },
+      {
+        id: "scope",
+        kind: "scope",
+        resultName: "Definitions + stakeholder standing + moral facts",
+        label: "Definitions or framing, whose interests receive standing, and alleged objective moral facts",
+        detail: "Those layers can matter in the wider debate, but this exchange says the policy and included groups are shared and contains no claim that a moral status exists independently of approval.",
+      },
+      {
+        id: "evidence",
+        kind: "evidence",
+        resultName: "Predictions only",
+        label: "Empirical predictions only, because every later sentence is merely another way to state a forecast",
+        detail: "The first sentence from each speaker is a prediction, but ranking values, announcing a campaign commitment, and choosing a court or panel are not additional forecasts about observable events.",
+      },
+      {
+        id: "moral",
+        kind: "moral",
+        resultName: "Public rules + objective moral facts",
+        label: "Rules for social coordination and alleged objective moral facts, with no factual or procedural disagreement",
+        detail: "The exchange does not design a detailed operating rule or allege an approval-independent moral fact. It explicitly includes conflicting forecasts and different decision procedures.",
+      },
+    ],
+  },
 ];
 
 const decoderState = {
@@ -578,6 +681,10 @@ function decoderChoice(question, choiceId) {
   return question.choices.find((choice) => choice.id === choiceId);
 }
 
+function decoderDisplayChoices(question) {
+  return question.displayOrder.map((choiceId) => decoderChoice(question, choiceId));
+}
+
 function decoderSelectedAnswers(answers = decoderState.answers) {
   return DECODER_QUESTIONS.filter((question) => answers[question.id]).map((question) => ({
     question,
@@ -590,17 +697,22 @@ function decoderDiagnostic(answers = decoderState.answers) {
   const selected = decoderSelectedAnswers(answers);
   const correctCount = selected.filter((answer) => answer.correct).length;
   const answered = selected.length;
-  const evidenceCorrect = answers.evidence === "evidence";
-  const moralCorrect = answers.moral === "moral";
+  const layerCorrectCount = DECODER_LAYER_ORDER.filter((id) => answers[id] === decoderQuestion(id).correct).length;
+  const framingCorrectCount = ["surface", "mixed"].filter((id) => answers[id] === decoderQuestion(id).correct).length;
+  const skills = DECODER_SKILL_GROUPS.map((group) => ({
+    ...group,
+    correct: group.checks.filter((id) => answers[id] === decoderQuestion(id).correct).length,
+    total: group.checks.length,
+  }));
   let title = "The argument still has hidden layers.";
   let summary = "Several choices treated one kind of dispute as if it were another. Your map below shows exactly where to slow down and change methods.";
-  if (correctCount === 9) {
-    title = "You kept all nine checkpoints separate.";
-    summary = "You identified the surface uncertainty and all eight stated layers without asking evidence, procedure, or metaethics to do a job outside its scope.";
-  } else if (correctCount >= 7) {
+  if (correctCount === 10) {
+    title = "You kept all ten checkpoints separate.";
+    summary = "You identified the opening uncertainty, all eight single layers, and the final mixed exchange without adding an unstated dispute.";
+  } else if (correctCount >= 8) {
     title = "You separated most of the disagreement.";
     summary = "Your classifications preserve most of the important boundaries. The few blended checkpoints below show where a different kind of question would help.";
-  } else if (correctCount >= 4) {
+  } else if (correctCount >= 5) {
     title = "Part of the argument is decoded.";
     summary = "You located several distinct disputes, while other choices still folded facts, values, procedures, or moral claims together.";
   }
@@ -609,8 +721,9 @@ function decoderDiagnostic(answers = decoderState.answers) {
     answered,
     correctCount,
     openCount: answered - correctCount,
-    evidenceCorrect,
-    moralCorrect,
+    layerCorrectCount,
+    framingCorrectCount,
+    skills,
     title,
     summary,
   };
@@ -620,7 +733,9 @@ function buildDecoderAIProbePrompt(answers = decoderState.answers) {
   const diagnosis = decoderDiagnostic(answers);
   const answerLines = diagnosis.selected.map(({ question, choice, correct }, index) => {
     const intended = DECODER_LAYERS[question.correct];
-    const selectedLayer = DECODER_LAYERS[choice.kind];
+    const selectedName = choice.resultName || DECODER_LAYERS[choice.kind].name;
+    const intendedChoice = decoderChoice(question, question.correct);
+    const intendedName = intendedChoice.resultName || intended.name;
     return [
       `${index + 1}. ${question.axis}`,
       `Question: ${question.prompt}`,
@@ -630,8 +745,8 @@ function buildDecoderAIProbePrompt(answers = decoderState.answers) {
       `Dialogue: ${question.dialogue.map((line) => `${line.speaker}: “${line.text}”`).join(" | ")}`,
       `My selected answer: ${choice.label}`,
       `My answer's meaning: ${choice.detail}`,
-      `Layer I selected: ${selectedLayer.name}`,
-      `Best-matched layer in the stated dialogue: ${intended.name}`,
+      `Classification I selected: ${selectedName}`,
+      `Best-matched classification in the stated dialogue: ${intendedName}`,
       `Match: ${correct ? "yes" : "no — examine why these layers were blended"}`,
     ].join("\n");
   }).join("\n\n");
@@ -640,13 +755,20 @@ function buildDecoderAIProbePrompt(answers = decoderState.answers) {
     `- ${zone.name} (${zone.layers.map((layer) => DECODER_LAYERS[layer].name).join(", ")}): ${zone.action} Limit: ${zone.limit}`,
   ).join("\n");
 
+  const skillLines = diagnosis.skills.map((skill) =>
+    `- ${skill.name}: ${skill.correct}/${skill.total}. ${skill.note}`,
+  ).join("\n");
+
   return `You are helping me analyze the structure of a moral disagreement. Act as a careful interviewer, not as a judge deciding assisted dying.
 
 THE CASE USED BY THE LAB
-“Assisted dying” normally means this narrow proposed policy: an adult with decision-making capacity has a terminal illness, makes repeated voluntary requests, receives a prescription after a regulated review, and personally takes the medication. It excludes clinician administration and requests based only on psychiatric suffering unless a checkpoint explicitly discusses that mismatch.
+“Assisted dying” normally means this invented, narrow policy: an adult is expected to die from an incurable physical illness within six months; can understand, compare, and communicate the choice; makes two voluntary requests at least fourteen days apart; is independently assessed by two clinicians for eligibility and signs of pressure; receives palliative-care information; and, if approved, personally takes prescribed life-ending medication. A clinician may refuse to participate. The policy excludes clinician administration and eligibility based only on psychiatric suffering unless a checkpoint explicitly discusses that mismatch.
 
 MY DECODER RESULT
-I matched ${diagnosis.correctCount} of 9 explicitly stated checkpoints. This is a classification result, not a score of my moral view, intelligence, or character.
+I matched ${diagnosis.correctCount} of 10 explicitly stated checkpoints: ${diagnosis.layerCorrectCount} of 8 single-layer checks and ${diagnosis.framingCorrectCount} of 2 restraint/integration checks. This is a classification result, not a score of my moral view, intelligence, or character.
+
+MY FIVE SKILL GROUPS
+${skillLines}
 
 MY COMPLETE ANSWER PATH
 ${answerLines}
@@ -659,15 +781,17 @@ INTERVIEW INSTRUCTIONS
 2. First ask me for a real moral disagreement I want to decode. Require exact quotations or careful paraphrases from both sides before classifying it.
 3. Test these layers separately: empirical predictions; definitions or framing; whose interests matter; priority among shared values; personal attitudes or commitments; rules for social coordination; procedures for reaching agreement; and alleged moral facts.
 4. Do not infer a hidden layer merely because it would be common in similar debates. Mark it as unknown until the speakers state enough to support it.
-5. For every factual prediction, say what evidence could bear on it and what uncertainty might remain. Never say evidence must fully resolve it.
+5. For every factual prediction, define the measured outcome, identify genuinely comparable cases, check relevant base rates, say what evidence could change each prediction, and state what uncertainty remains. Evidence may settle some factual disputes; do not promise that it must settle every one.
 6. For definitions, distinguish a fixable verbal mismatch from a substantive dispute about which framing should guide action.
-7. For interests and priorities, identify who is excluded, what tradeoff remains, and what might be negotiated. Do not pretend data mechanically assigns weights.
-8. Distinguish disagreement in attitude from disagreement about attitudes. Accurate reports of opposed plans can both be true while the plans remain incompatible.
-9. Distinguish the content of a coordination rule from the procedure that chooses the rule.
-10. Treat a vote, court ruling, agreement, or workable policy as a practical settlement unless a separate argument shows more. A decision procedure does not by itself create objective moral truth.
-11. Do not assume that an unresolved conflict concerns objective moral facts. Ask what moral claims mean, what could make them true, and how anyone could know only when that issue is actually raised.
-12. Do not assume moral realism or moral non-realism. Show how different metaethical views could interpret any genuine residual moral claim.
-13. End with a table that lists each layer, the evidence that it is present, the best next move, the likely limit of that move, and what disagreement would remain afterward.
+7. For interests, first use evidence to ask who is affected; then separately ask whose interests each speaker grants standing in the decision. Do not confuse inclusion with the later weight assigned to an included interest.
+8. For priorities, identify shared values, the exact tradeoff, and what reasons or compromise might change the ranking. Do not pretend data mechanically assigns weights.
+9. Distinguish disagreement in attitude from disagreement about attitudes. Accurate reports of opposed plans can both be true while the plans remain incompatible. Do not infer that a whole moral dispute is only a clash of attitudes; belief disagreement may also be present.
+10. Distinguish the content of a coordination rule from the procedure that chooses the rule.
+11. Treat a vote, court ruling, agreement, or workable policy as a practical settlement unless a separate argument shows more. Ask why the procedure has authority. A decision procedure does not by itself create objective moral truth.
+12. Do not assume that an unresolved conflict concerns objective moral facts. Ask what moral claims mean, what could make them true, and how anyone could know only when that issue is actually raised.
+13. Do not assume moral realism or moral non-realism. Show how different metaethical views could interpret any genuine residual moral claim.
+14. Expect several layers to occur in one exchange. List each layer supported by the words used, and keep common but unstated layers marked “unknown.”
+15. End with a table that lists each layer, the evidence that it is present, the best next move, the likely limit of that move, and what disagreement would remain afterward.
 
 Begin by asking me for the two opposing statements I want to decode.`;
 }
@@ -713,8 +837,8 @@ function scrollToDecoderElement(element, offset = 72) {
 function renderDecoderLiveMap() {
   const diagnosis = decoderDiagnostic();
   const percent = diagnosis.answered ? (diagnosis.correctCount / diagnosis.answered) * 100 : 0;
-  decoderEls.mapKicker.textContent = diagnosis.answered === 9 ? "Your completed decoding" : "Your decoding so far";
-  decoderEls.mapBasis.textContent = `${diagnosis.answered} of 9 checkpoints classified`;
+  decoderEls.mapKicker.textContent = diagnosis.answered === 10 ? "Your completed decoding" : "Your decoding so far";
+  decoderEls.mapBasis.textContent = `${diagnosis.answered} of 10 checkpoints classified`;
   decoderEls.liveMeterBar.style.width = `${percent}%`;
   decoderEls.liveMeter.setAttribute(
     "aria-label",
@@ -756,7 +880,7 @@ function renderDecoderQuestion({ scroll = false, announce = true } = {}) {
   decoderEls.back.classList.toggle("invisible-control", number === 1);
   decoderEls.next.disabled = !selectedId;
   decoderEls.next.textContent = number === DECODER_QUESTIONS.length ? "See the full map →" : "Next layer →";
-  decoderEls.choices.innerHTML = question.choices.map((choice, index) => `
+  decoderEls.choices.innerHTML = decoderDisplayChoices(question).map((choice, index) => `
     <label class="choice-button obligation-choice meaning-choice decoder-choice ${selectedId === choice.id ? "selected" : ""}" for="decoder-${question.id}-${choice.id}">
       <input class="choice-radio" type="radio" name="decoder-${question.id}" id="decoder-${question.id}-${choice.id}" value="${choice.id}" ${selectedId === choice.id ? "checked" : ""}>
       <span class="choice-key">${String.fromCharCode(65 + index)}</span>
@@ -781,7 +905,7 @@ function selectDecoderAnswer(questionId, choiceId) {
   decoderEls.liveStatus.textContent = `Answer selected for question ${decoderState.index + 1}. Choose Next when ready.`;
 }
 
-function renderDecoderFinalMap(diagnosis) {
+function renderDecoderFinalMap() {
   document.querySelector("#decoderFinalMap").innerHTML = DECODER_LAYER_ORDER.map((layerId) => {
     const layer = DECODER_LAYERS[layerId];
     const question = decoderQuestion(layerId);
@@ -805,6 +929,21 @@ function renderDecoderFinalMap(diagnosis) {
   }).join("");
 }
 
+function renderDecoderSkills(diagnosis) {
+  document.querySelector("#decoderSkillGrid").innerHTML = diagnosis.skills.map((skill) => {
+    const percent = (skill.correct / skill.total) * 100;
+    return `<article class="decoder-skill-card">
+      <div><strong>${skill.name}</strong><b>${skill.correct} / ${skill.total}</b></div>
+      <span class="decoder-skill-meter" aria-hidden="true"><i style="width: ${percent}%"></i></span>
+      <p>${skill.note}</p>
+    </article>`;
+  }).join("");
+  document.querySelector("#decoderSkillGrid").setAttribute(
+    "aria-label",
+    diagnosis.skills.map((skill) => `${skill.name}: ${skill.correct} of ${skill.total}`).join("; "),
+  );
+}
+
 function renderDecoderMethods() {
   document.querySelector("#decoderMethodGrid").innerHTML = DECODER_ZONES.map((zone) => `
     <article class="decoder-method-card">
@@ -819,13 +958,17 @@ function renderDecoderMethods() {
 function renderDecoderAnswers(diagnosis) {
   document.querySelector("#decoderAnswerGrid").innerHTML = diagnosis.selected.map(({ question, choice, correct }, index) => {
     const intended = DECODER_LAYERS[question.correct];
+    const intendedChoice = decoderChoice(question, question.correct);
+    const selectedName = choice.resultName || DECODER_LAYERS[choice.kind].name;
+    const intendedName = intendedChoice.resultName || intended.name;
+    const successTitle = question.id === "mixed" ? "Combination separated" : "Layer separated";
     return `<article class="meaning-answer-card decoder-answer-card ${correct ? "matched" : "revisit"}">
       <span>${String(index + 1).padStart(2, "0")} · ${question.phase}</span>
-      <h3>${correct ? "Layer separated" : "Two layers were blended"}</h3>
-      <strong>You chose: ${DECODER_LAYERS[choice.kind].name}</strong>
+      <h3>${correct ? successTitle : "Layers were blended or added"}</h3>
+      <strong>You chose: ${selectedName}</strong>
       <p>${choice.detail}</p>
       <div class="decoder-answer-correction">
-        <b>Best match: ${intended.name}</b>
+        <b>Best match: ${intendedName}</b>
         <p>${intended.short} ${correct ? "Your selected method fits this checkpoint." : `The clearer next move is: ${intended.method.toLowerCase()}.`}</p>
       </div>
     </article>`;
@@ -838,23 +981,20 @@ function showDecoderResults() {
   decoderEls.results.classList.remove("hidden");
   document.querySelector("#decoderResultTitle").textContent = diagnosis.title;
   document.querySelector("#decoderResultSummary").textContent = diagnosis.summary;
-  document.querySelector("#decoderScore").textContent = `${diagnosis.correctCount} / 9`;
-  document.querySelector("#decoderScoreCopy").textContent = "This count compares your classifications with the layer explicitly stated at each checkpoint. It is not a moral score.";
-  document.querySelector("#decoderEvidenceStatus").textContent = diagnosis.evidenceCorrect ? "Kept separate" : "Blended";
-  document.querySelector("#decoderEvidenceCopy").textContent = diagnosis.evidenceCorrect
-    ? "You treated observable predictions as evidence-responsive without claiming that evidence must decide the acceptable risk."
-    : "Revisit the prediction checkpoint: observable effects can be tested even when evidence cannot set priorities or guarantee certainty.";
-  document.querySelector("#decoderMoralStatus").textContent = diagnosis.moralCorrect ? "Kept separate" : "Blended";
-  document.querySelector("#decoderMoralCopy").textContent = diagnosis.moralCorrect
-    ? "You reserved metaethical analysis for an explicit claim of approval-independent moral status."
-    : "Revisit the final checkpoint: an objective moral claim needs its own account and is not created by evidence, attitude, or procedure alone.";
-  renderDecoderFinalMap(diagnosis);
+  document.querySelector("#decoderScore").textContent = `${diagnosis.correctCount} / 10`;
+  document.querySelector("#decoderScoreCopy").textContent = "This total combines eight single-layer checks with two checks of restraint and integration. It is not a moral score.";
+  document.querySelector("#decoderLayerScore").textContent = `${diagnosis.layerCorrectCount} / 8`;
+  document.querySelector("#decoderLayerScoreCopy").textContent = "Each of these exchanges was deliberately written to isolate one requested disagreement layer.";
+  document.querySelector("#decoderFrameScore").textContent = `${diagnosis.framingCorrectCount} / 2`;
+  document.querySelector("#decoderFrameScoreCopy").textContent = "These checks test whether you avoid guessing from slogans and can identify several explicit layers at once.";
+  renderDecoderSkills(diagnosis);
+  renderDecoderFinalMap();
   renderDecoderMethods();
   renderDecoderAnswers(diagnosis);
   document.querySelector("#decoderAIProbePrompt").value = buildDecoderAIProbePrompt();
   document.querySelector("#decoderResultTitle").focus({ preventScroll: true });
   scrollToDecoderElement(decoderEls.results, 72);
-  decoderEls.liveStatus.textContent = `Diagnostic ready. ${diagnosis.correctCount} of 9 checkpoints were kept separate.`;
+  decoderEls.liveStatus.textContent = `Diagnostic ready. ${diagnosis.correctCount} of 10 checkpoints were kept separate.`;
 }
 
 function resetDecoderLab() {

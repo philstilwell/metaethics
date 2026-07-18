@@ -54,6 +54,15 @@
         </aside>
       </section>
 
+      <aside class="decoder-content-note" aria-label="Content and method note">
+        <strong>This is a classification exercise, not a survey of your moral beliefs.</strong>
+        <p>
+          The invented case discusses terminal illness, coercion, and a medically assisted death. Each exchange is
+          deliberately written to have a best-matched layer. Real arguments may contain several layers at once.
+        </p>
+        <a href="index.html#toolkit">Choose a different lab</a>
+      </aside>
+
       <section class="meaning-intro decoder-intro" aria-labelledby="decoderIntroHeading">
         <div>
           <p class="kicker">The decoder’s rule</p>
@@ -85,17 +94,29 @@
           <summary>What case does “assisted dying” mean in this lab?</summary>
           <div class="definition-copy">
             <p>
-              Unless a question says otherwise, the phrase means one narrow proposed policy: an adult with
-              decision-making capacity has a terminal illness, makes repeated voluntary requests, receives a
-              prescription after a regulated review, and personally takes the medication. The lab separates this
-              from a clinician directly administering medication and from requests based only on psychiatric suffering.
+              Unless a question says otherwise, the phrase means one invented, narrow policy: an adult is expected
+              to die from an incurable physical illness within six months; can understand, compare, and communicate
+              the choice; makes two voluntary requests at least fourteen days apart; is separately assessed by two
+              clinicians for eligibility and signs of pressure; receives information about palliative care; and,
+              if approved, personally takes prescribed life-ending medication. A clinician may refuse to take part.
             </p>
             <p>
-              The invented dialogue does not take a side on assisted dying and does not claim that either speaker’s
-              predictions are true. It uses a serious public disagreement to teach a method: first locate the dispute,
-              then use evidence, clarification, deliberation, institutional design, or metaethical argument where each fits.
+              The lab separates that policy from a clinician directly administering medication and from eligibility
+              based only on psychiatric suffering. These details are teaching stipulations, not a claim about the best
+              law. The dialogue does not take a side or claim that either speaker’s predictions are true.
             </p>
           </div>
+        </details>
+        <details class="meaning-definition decoder-word-guide">
+          <summary>Quick guide to the few technical words</summary>
+          <dl class="decoder-glossary">
+            <div><dt>Empirical or checkable</dt><dd>A claim about what happens in the world and can be supported or weakened by observation, records, or experiments.</dd></div>
+            <div><dt>Standing</dt><dd>Being included as someone whose interests must enter the decision—not a guarantee that those interests will win.</dd></div>
+            <div><dt>Priority</dt><dd>The order given to included interests or values when they cannot all be fully satisfied.</dd></div>
+            <div><dt>Practical attitude</dt><dd>What someone favors, rejects, intends, or is prepared to act for—not merely a report about what is true.</dd></div>
+            <div><dt>Decision procedure</dt><dd>The process used to choose a rule: who takes part, who has authority, and how the result can be challenged or reviewed.</dd></div>
+            <div><dt>Objective moral claim</dt><dd>A claim that something is morally allowed or forbidden independently of what every person, law, or society approves.</dd></div>
+          </dl>
         </details>
       </section>
 
@@ -106,7 +127,7 @@
               <span id="decoderPhase">Read the slogans</span>
               <div class="progress-actions">
                 <button class="progress-reset" id="resetDecoderButton" type="button">Reset</button>
-                <span id="decoderProgress">1 / 9</span>
+                <span id="decoderProgress">1 / 10</span>
               </div>
             </div>
             <div
@@ -115,7 +136,7 @@
               role="progressbar"
               aria-label="Disagreement Decoder progress"
               aria-valuemin="1"
-              aria-valuemax="9"
+              aria-valuemax="10"
               aria-valuenow="1"
             >
               <span id="decoderProgressBar"></span>
@@ -181,8 +202,8 @@
               </div>
               <div class="pulse-dot" aria-hidden="true"></div>
             </div>
-            <p class="meaning-route-note" id="decoderMapNote">Each answer compares your selected next move with the exact information stated in that dialogue.</p>
-            <p class="meaning-map-basis" id="decoderMapBasis">0 of 9 checkpoints classified</p>
+            <p class="meaning-route-note" id="decoderMapNote">Each answer compares your selection with the information stated in that exchange.</p>
+            <p class="meaning-map-basis" id="decoderMapBasis">0 of 10 checkpoints classified</p>
             <div class="decoder-live-meter" role="img" id="decoderLiveMeter" aria-label="No checkpoints classified yet">
               <span id="decoderLiveMeterBar"></span>
             </div>
@@ -191,7 +212,7 @@
               <div><strong id="decoderOpenCount">0</strong><span>to revisit</span></div>
             </div>
             <div class="decoder-layer-list" id="decoderLayerList" aria-hidden="true"></div>
-            <p class="meaning-map-note">This measures how you classified the stated dialogue. It does not score your position on assisted dying, intelligence, or moral character.</p>
+            <p class="meaning-map-note">The ten checkpoints are one opening restraint check, eight single-layer checks, and one mixed-layer check. This does not score your position on assisted dying, intelligence, or moral character.</p>
           </aside>
         </div>
       </section>
@@ -210,16 +231,27 @@
             <p id="decoderScoreCopy"></p>
           </div>
           <div class="score-card">
-            <span>Evidence boundary</span>
-            <strong id="decoderEvidenceStatus">—</strong>
-            <p id="decoderEvidenceCopy"></p>
+            <span>Eight single-layer checks</span>
+            <strong id="decoderLayerScore">—</strong>
+            <p id="decoderLayerScoreCopy"></p>
           </div>
           <div class="score-card">
-            <span>Metaethical boundary</span>
-            <strong id="decoderMoralStatus">—</strong>
-            <p id="decoderMoralCopy"></p>
+            <span>Framing and integration</span>
+            <strong id="decoderFrameScore">—</strong>
+            <p id="decoderFrameScoreCopy"></p>
           </div>
         </div>
+
+        <section class="report-section decoder-skill-section" aria-labelledby="decoderSkillHeading">
+          <div class="section-heading decoder-map-heading">
+            <div>
+              <p class="kicker">Five decoding skills</p>
+              <h2 id="decoderSkillHeading">Your result, grouped by the work required</h2>
+            </div>
+            <p>These bars count only the checkpoints assigned to each group. They are not confidence levels or claims about your personality.</p>
+          </div>
+          <div class="decoder-skill-grid" id="decoderSkillGrid" role="group" aria-label="Five decoding skill results"></div>
+        </section>
 
         <section class="report-section decoder-map-section" aria-labelledby="decoderFinalMapHeading">
           <div class="section-heading decoder-map-heading">
@@ -227,7 +259,7 @@
               <p class="kicker">The full disagreement map</p>
               <h2 id="decoderFinalMapHeading">Eight layers hidden by two short slogans</h2>
             </div>
-            <p>Every row names the dispute explicitly stated at that checkpoint, the best-matched method, and how you classified it.</p>
+            <p>These eight rows show the single-layer checks. The opening restraint check and final mixed-layer check appear in your answer review.</p>
           </div>
           <div class="decoder-final-map" id="decoderFinalMap"></div>
         </section>
@@ -242,10 +274,30 @@
 
         <section class="report-section meaning-answer-report" aria-labelledby="decoderAnswerHeading">
           <div class="section-heading">
-            <p class="kicker">Your nine decisions</p>
-            <h2 id="decoderAnswerHeading">Where you separated a layer—and where two were blended</h2>
+            <p class="kicker">Your ten decisions</p>
+            <h2 id="decoderAnswerHeading">Where you separated layers—and where some were blended or added</h2>
           </div>
           <div class="meaning-answer-grid decoder-answer-grid" id="decoderAnswerGrid"></div>
+        </section>
+
+        <section class="report-section decoder-transfer-section" aria-labelledby="decoderTransferHeading">
+          <div class="section-heading decoder-map-heading">
+            <div>
+              <p class="kicker">Use the method anywhere</p>
+              <h2 id="decoderTransferHeading">Eight questions for your next real argument</h2>
+            </div>
+            <p>Do not mark a layer as present merely because it is common in similar debates. Ask what the speakers actually said, then mark unknowns as unknown.</p>
+          </div>
+          <ol class="decoder-transfer-list">
+            <li><span>01</span><div><strong>Same subject?</strong><p>What exact act, policy, group, and key words does each person mean?</p></div></li>
+            <li><span>02</span><div><strong>Different predictions?</strong><p>Which observable claims conflict, what evidence bears on them, and what uncertainty remains?</p></div></li>
+            <li><span>03</span><div><strong>Same field of concern?</strong><p>Who is affected, and whose interests does each person say should receive standing in the decision?</p></div></li>
+            <li><span>04</span><div><strong>Different priorities?</strong><p>Which values do they share, and which one leads when those values cannot all be satisfied?</p></div></li>
+            <li><span>05</span><div><strong>Opposed plans?</strong><p>What does each person favor, reject, intend, or ask the group to do?</p></div></li>
+            <li><span>06</span><div><strong>Different public rules?</strong><p>What common rule would each side build, including its scope, safeguards, and exceptions?</p></div></li>
+            <li><span>07</span><div><strong>Different ways to decide?</strong><p>Who participates, who has authority, what reasons are heard, and how can the decision be reviewed?</p></div></li>
+            <li><span>08</span><div><strong>An objective moral claim?</strong><p>Is anyone claiming a moral truth independent of every approval, and what could make that claim true or knowable?</p></div></li>
+          </ol>
         </section>
 
         <section class="interpretation meaning-conclusion decoder-conclusion">
@@ -297,6 +349,8 @@
         <a href="https://plato.stanford.edu/entries/stevenson/" target="_blank" rel="noreferrer">C. L. Stevenson’s account</a>.
         The wider metaethical framing follows the
         <a href="https://plato.stanford.edu/entries/disagreement-moral/" target="_blank" rel="noreferrer">Stanford Encyclopedia of Philosophy on moral disagreement</a>.
+        The warning that some word disputes are substantive follows
+        <a href="https://openresearch-repository.anu.edu.au/items/8e67e7f3-9a77-4821-a803-b0611d1b03d1" target="_blank" rel="noreferrer">Plunkett and Sundell on disagreements over language</a>.
         The narrow case definition is informed by the
         <a href="https://www.bma.org.uk/advice-and-support/ethics/end-of-life/physician-assisted-dying" target="_blank" rel="noreferrer">British Medical Association’s terminology</a>.
       </p>
