@@ -69,6 +69,15 @@ const CURATED_PAPERS = [
     note: "Asks how moral realism can explain the large role evolution played in shaping human values. Street argues that anti-realism can explain that history without claiming evolution tracked independent moral truths.",
   },
   {
+    id: "street-constructivism",
+    title: "What Is Constructivism in Ethics and Metaethics?",
+    author: "Sharon Street",
+    year: 2010,
+    approach: "Constructivism",
+    url: "https://doi.org/10.1111/j.1747-9991.2009.00280.x",
+    note: "A direct foundation for the community-code simulator. Street separates major forms of constructivism and develops the Humean idea that normative conclusions depend on what survives scrutiny from within an agent’s practical point of view, rather than on independent moral facts.",
+  },
+  {
     id: "joyce-irrealism-genealogy",
     title: "Irrealism and the Genealogy of Morals",
     author: "Richard Joyce",

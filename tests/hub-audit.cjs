@@ -7,12 +7,13 @@ const path = require("node:path");
 const root = path.join(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
-const pages = ["index.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "papers.html"];
-const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html"];
+const pages = ["index.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "build.html", "papers.html"];
+const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html"];
 const faviconFiles = ["favicon-32.png", "favicon.png", "favicon.ico", "apple-touch-icon.png"];
 
-assert.match(html, /Six labs\. Six ways to examine moral thought\./, "the hub must state its six-lab architecture");
+assert.match(html, /Seven labs\. Seven ways to examine moral thought\./, "the hub must state its seven-lab architecture");
 assert.match(html, /They take apart one familiar moral sentence\./, "the hub must explain how the tools interact");
+assert.match(html, /Community-Code Simulator tests construction\./, "the hub must explain how the seventh tool extends the suite");
 assert.match(html, /There is no required order\./, "the hub must not present the tools as a forced sequence");
 assert.match(html, /No account, tracking, or built-in AI/, "the hub must disclose its privacy model");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "the landing page must have one primary heading");
@@ -21,8 +22,8 @@ assert.equal(new Set(ids).size, ids.length, "the landing page must not reuse an 
 
 const toolCards = html.match(/<article class="hub-tool-card hub-tool-(?!reserved)[^"]+">/g) || [];
 const reservedCards = html.match(/<article class="hub-tool-card hub-tool-reserved"/g) || [];
-assert.equal(toolCards.length, 6, "the landing page must present six current tools");
-assert.equal(reservedCards.length, 3, "the nine-part grid must retain exactly three future module spaces");
+assert.equal(toolCards.length, 7, "the landing page must present seven current tools");
+assert.equal(reservedCards.length, 2, "the nine-part grid must retain exactly two future module spaces");
 assert.match(css, /\.hub-tool-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/s, "the wide hub must use a balanced three-column nine-card grid");
 assert.match(css, /@media \(max-width: 1100px\)[\s\S]*?\.hub-tool-grid\s*\{[^}]*repeat\(2,/s, "the hub must collapse to two columns at medium widths");
 assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.hub-tool-grid,[\s\S]*?grid-template-columns:\s*1fr/s, "the hub must collapse to one column on narrow screens");
@@ -63,6 +64,6 @@ const currentMarkers = pages.map((page) => {
   const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
   return [...pageHtml.matchAll(/aria-current="(?:page|location)"/g)].length;
 });
-assert.deepEqual(currentMarkers, [1, 1, 1, 1, 1, 1, 1, 1], "every main page must identify exactly one current navigation item");
+assert.deepEqual(currentMarkers, new Array(pages.length).fill(1), "every main page must identify exactly one current navigation item");
 
-console.log("Hub audit passed: six live tools, three reserved modules, interaction guidance, scalable navigation, privacy copy, and local links verified.");
+console.log("Hub audit passed: seven live tools, two reserved modules, interaction guidance, scalable navigation, privacy copy, and local links verified.");
