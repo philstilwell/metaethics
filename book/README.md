@@ -38,9 +38,12 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [manuscript/00-prologue.md](manuscript/00-prologue.md) — drafted prologue.
 - [manuscript/01-the-promise.md](manuscript/01-the-promise.md) — drafted first chapter.
 - [manuscript/02-what-objective-must-mean.md](manuscript/02-what-objective-must-mean.md) — drafted second chapter.
+- [manuscript/03-what-are-you-doing-when-you-say-wrong.md](manuscript/03-what-are-you-doing-when-you-say-wrong.md) — drafted third chapter.
+- [manuscript/04-the-specification-sheet.md](manuscript/04-the-specification-sheet.md) — drafted fourth chapter.
+- [manuscript/05-one-argument-eight-disagreements.md](manuscript/05-one-argument-eight-disagreements.md) — drafted fifth chapter and Part I inspection.
 
 ## Current drafting status
 
-The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and first two chapters establish the reader contract, the construction notebook, and the success conditions that later chapters will test.
+The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and all five chapters of Part I are drafted, taking the reader from the blank constitution through the definition of objectivity, the meaning of moral language, the construction specifications, and the eight layers of disagreement.
 
 The working title is intentionally invitational rather than conclusory. It can be replaced without changing the architecture.
