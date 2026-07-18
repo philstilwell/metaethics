@@ -382,23 +382,32 @@
           </p>
         </section>
 
-        <section class="ai-probe genealogy-ai-probe" aria-labelledby="genealogyAIProbeHeading">
-          <div class="ai-probe-copy">
-            <p class="kicker">Optional deeper inquiry</p>
-            <h2 id="genealogyAIProbeHeading">Take your conviction into a careful AI interview.</h2>
+        <section class="report-section ai-probe-section genealogy-ai-probe" aria-labelledby="genealogyAIProbeHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Optional deeper inquiry</p>
+              <h2 id="genealogyAIProbeHeading">Take your conviction into a careful AI interview.</h2>
+            </div>
             <p>
               The prompt includes your conviction, all nine influence estimates, every case answer, and rules that prevent a causal
-              story from being treated as an automatic refutation. This site sends nothing.
+              story from being treated as an automatic refutation.
             </p>
-            <button class="primary-button" id="copyGenealogyPromptButton" type="button">Copy AI prompt</button>
-            <p class="copy-status" id="genealogyPromptCopyStatus" aria-live="polite">The prompt contains your answers but no account information.</p>
           </div>
-          <textarea id="genealogyAIProbePrompt" readonly aria-label="AI prompt for a deeper value genealogy interview"></textarea>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="genealogyAIProbePrompt">Your ready-to-use genealogy interview prompt</label>
+          <textarea id="genealogyAIProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyGenealogyPromptButton" type="button">Copy AI prompt</button>
+            <p id="genealogyPromptCopyStatus" aria-live="polite">The prompt contains your answers but no account information.</p>
+          </div>
         </section>
 
-        <div class="results-actions">
-          <button class="secondary-button" id="restartGenealogyButton" type="button">Trace another conviction</button>
-          <a class="primary-button" href="index.html#toolkit">Return to all labs</a>
+        <div class="result-actions">
+          <button class="primary-button" id="restartGenealogyButton" type="button">Trace another conviction</button>
+          <a class="secondary-button" href="index.html#toolkit">Return to all labs</a>
         </div>
       </section>
     </main>

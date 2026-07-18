@@ -1512,7 +1512,10 @@ main {
 
 #aiProbePrompt,
 #obligationAIProbePrompt,
-#meaningAIProbePrompt {
+#meaningAIProbePrompt,
+#afterAIProbePrompt,
+#decoderAIProbePrompt,
+#genealogyAIProbePrompt {
   display: block;
   width: 100%;
   min-height: 390px;
@@ -4413,7 +4416,8 @@ dialog p:not(.kicker) {
   #obligationAIProbePrompt,
   #meaningAIProbePrompt,
   #afterAIProbePrompt,
-  #decoderAIProbePrompt {
+  #decoderAIProbePrompt,
+  #genealogyAIProbePrompt {
     min-height: 330px;
     padding: 14px;
     font-size: 0.72rem;
@@ -5269,6 +5273,15 @@ dialog p:not(.kicker) {
 .genealogy-conclusion {
   border-color: #6a7743;
   background: #edf1e2;
+  color: var(--ink);
+}
+
+.genealogy-conclusion .kicker {
+  color: #596737;
+}
+
+.genealogy-conclusion > p {
+  color: #465047;
 }
 
 @media (max-width: 1100px) {
