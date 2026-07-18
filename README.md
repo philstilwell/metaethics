@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of nine interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of ten interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -13,6 +13,9 @@ The current tools work together without forming a required sequence:
 7. [Build a Morality Without Moral Facts](build.html) lets users draft a nine-rule community code, apply it to six pressure cases, and see which human bases carry its rules.
 8. [Can You Criticize Your Own Society?](criticize.html) distinguishes eight grounds on which a dissenter can challenge an accepted practice without treating social approval, human reasons, and objective moral truth as the same claim.
 9. [The Blame Laboratory](blame.html) separates seven human purposes for adverse responses from retributive suffering and tests what responsibility practices remain without basic desert.
+10. [What Gives You a Reason?](reasons.html) separates explanation, motivation, and genuine practical support, then tests six accounts of what can count in favor after objective moral facts are set aside.
+
+Each result page offers an optional “Save to My Metaethical Map” control. [My Metaethical Map](map.html) stores only a result headline and three summary fields per lab in the current browser. It never saves full answers or AI prompts, never uploads data, and never compresses the suite into one coherence score. Users can compare related lab summaries, copy a readable report, download JSON, remove one result, or erase the entire map.
 
 The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
@@ -54,7 +57,9 @@ The [After Moral Facts practical lab](after.html) begins by holding moral error 
 
 [The Blame Laboratory](blame.html) is a conditional exercise that removes basic-desert suffering while preserving facts about causal agency, intention, harm, present risk, repair, trust, social standards, and possible change. Users state a general response policy, enter six cases involving life-support sabotage, a sold memory, a public rescue hoax, a reformed pilot, a coerced nurse, and a deadly workplace incentive, then face a zero-purpose control in which one minute of pain cannot benefit or inform anyone. Every practical case answer maps to exactly one of eight responses: protection, deterrence, restitution, rehabilitation, boundary-setting, withdrawal of trust, public condemnation, or retributive suffering. The diagnostic reports selections divided by opportunities, gives every response a safeguard and stopping rule, identifies any reintroduction of desert, compares opening and final policy, flags exact policy mismatches, and generates a full optional AI interview prompt. The page explicitly notes that moral non-realism and skepticism about free will or basic-desert responsibility are independent positions.
 
-The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, responsibility skepticism, evolutionary challenges to realism, and post-error practice. It notes that these neighboring debates do not all use the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
+[What Gives You a Reason?](reasons.html) holds fixed only the absence of objective moral facts. It first distinguishes explanatory reasons, motivating reasons, and normative or favoring reasons. Users then compare six possible sources across seven pressure cases: current aims, better-informed aims, chosen commitments, fair terms, aim-independent practical reasons, and skepticism about any literal favoring fact. Separate questions test the relation between reasons and motivation and whether moral skepticism extends to all practical or epistemic reasons. Results show selections divided by identical opportunities, preserve ties, audit what every answer establishes and leaves open, compare the opening and final definitions, flag only exact cross-answer seams, and create a fully contextual optional AI interview prompt. The lab does not infer that moral non-realism entails reasons internalism, externalism, constructivism, or global normative skepticism.
+
+The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, practical reasons, responsibility skepticism, evolutionary challenges to realism, and post-error practice. Every source is tagged with the lab or labs it supports, and the collection can be filtered by lab. It notes that these neighboring debates do not all use the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
 
@@ -78,6 +83,9 @@ node tests/genealogy-audit.cjs
 node tests/builder-audit.cjs
 node tests/criticize-audit.cjs
 node tests/blame-audit.cjs
+node tests/reasons-audit.cjs
+node tests/papers-audit.cjs
+node tests/suite-map-audit.cjs
 node tests/hub-audit.cjs
 ```
 
@@ -90,3 +98,7 @@ node tests/hub-audit.cjs
 - [Constructivism in Metaethics](https://plato.stanford.edu/entries/constructivism-metaethics/)
 - [Moral Relativism](https://plato.stanford.edu/entries/moral-relativism/)
 - [Skepticism About Moral Responsibility](https://plato.stanford.edu/entries/skepticism-moral-responsibility/)
+- [Reasons for Action: Justification, Motivation, Explanation](https://plato.stanford.edu/entries/reasons-just-vs-expl/)
+- [Reasons for Action: Internal vs. External](https://plato.stanford.edu/entries/reasons-internal-external/)
+- [Internal and External Reasons](https://doi.org/10.1017/CBO9781139165860.009)
+- [Constructivism about Reasons](https://doi.org/10.1093/oso/9780199542062.003.0009)

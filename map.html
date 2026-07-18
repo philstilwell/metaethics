@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A private, browser-only map that brings together summaries from The Moral Compass labs without turning them into one coherence score." />
+    <meta name="theme-color" content="#151a17" />
+    <title>My Metaethical Map — The Moral Compass</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="map-page">
+    <a class="skip-link" href="#mapMain">Skip to my saved map</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#toolkit">All labs</a>
+        <a href="map.html" aria-current="page">My map</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="mapMain">
+      <section class="map-hero" aria-labelledby="mapTitle">
+        <div>
+          <p class="kicker">Your private suite summary</p>
+          <h1 id="mapTitle">One map. <em>No final moral score.</em></h1>
+          <p>
+            Save a short result from any lab and bring the summaries together here. The map looks for questions worth comparing;
+            it does not declare your view coherent, incoherent, true, or false.
+          </p>
+        </div>
+        <aside class="map-privacy-card">
+          <strong>Saved only on this device</strong>
+          <p>No account or server is involved. Clearing this browser’s storage may erase the map.</p>
+          <span id="mapSavedCount">0 of 10 labs saved</span>
+        </aside>
+      </section>
+
+      <section class="map-controls" aria-label="Map controls">
+        <button class="primary-button" id="copyMapButton" type="button">Copy readable summary</button>
+        <button class="secondary-button" id="downloadMapButton" type="button">Download map data</button>
+        <button class="text-button" id="eraseMapButton" type="button">Erase all saved results</button>
+        <p id="mapControlStatus" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="map-results" aria-labelledby="savedLabsHeading">
+        <div class="hub-section-heading">
+          <div><p class="kicker">Saved lab summaries</p><h2 id="savedLabsHeading">The parts of your view examined so far</h2></div>
+          <p>Each card contains only the small summary you deliberately saved. Open a lab again to replace it with a newer result.</p>
+        </div>
+        <div class="map-lab-grid" id="mapLabGrid"></div>
+      </section>
+
+      <section class="map-connections" aria-labelledby="mapConnectionsHeading">
+        <div class="hub-section-heading">
+          <div><p class="kicker">Cross-lab questions</p><h2 id="mapConnectionsHeading">Where two results deserve a conversation</h2></div>
+          <p>These are prompts for clarification, never automatic contradictions. More appear as you save results from related labs.</p>
+        </div>
+        <div class="map-connection-grid" id="mapConnectionGrid"></div>
+      </section>
+
+      <section class="interpretation map-interpretation">
+        <div><p class="kicker">Read this carefully</p><h2>A map can expose a seam without deciding how to repair it.</h2></div>
+        <p>
+          A person may use different meanings, standards, or reasons in different settings. The useful next question is whether the change is deliberate,
+          defensible, and clearly stated—not whether every result can be compressed into one label.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>My Metaethical Map stores only opt-in summaries in this browser. It does not upload answers, create an account, or call an AI service.</p>
+      <p><a href="index.html#toolkit">Return to all labs</a></p>
+    </footer>
+    <script src="suite-map.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

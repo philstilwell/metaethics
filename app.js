@@ -374,6 +374,7 @@ const els = {
   results: document.querySelector("#resultsView"),
   phaseLabel: document.querySelector("#phaseLabel"),
   progressLabel: document.querySelector("#progressLabel"),
+  progressTrack: document.querySelector("#profileProgressTrack"),
   progressBar: document.querySelector("#progressBar"),
   questionNumber: document.querySelector("#questionNumber"),
   questionAxis: document.querySelector("#questionAxis"),
@@ -388,6 +389,7 @@ const els = {
   plainExampleText: document.querySelector("#plainExampleText"),
   plainRevealText: document.querySelector("#plainRevealText"),
   back: document.querySelector("#backButton"),
+  next: document.querySelector("#profileNextButton"),
   liveLeader: document.querySelector("#liveLeader"),
   liveBasis: document.querySelector("#liveBasis"),
   tendencyGrid: document.querySelector("#tendencyGrid"),
@@ -698,6 +700,8 @@ function renderQuestion() {
   const progress = ((state.index + 1) / state.path.length) * 100;
   els.phaseLabel.textContent = PHASES[question.phase];
   els.progressLabel.textContent = `${state.index + 1} / ${state.path.length}`;
+  els.progressTrack.setAttribute("aria-valuenow", String(state.index + 1));
+  els.progressTrack.setAttribute("aria-valuetext", `Question ${state.index + 1} of ${state.path.length}`);
   els.progressBar.style.width = `${progress}%`;
   els.questionNumber.textContent = String(state.index + 1).padStart(2, "0");
   els.questionAxis.textContent = resolve(question.axis);
@@ -710,39 +714,38 @@ function renderQuestion() {
   els.plainExampleText.textContent = resolve(question.guide.example);
   els.plainRevealText.textContent = resolve(question.guide.reveals);
   els.why.textContent = resolve(question.why);
-  els.back.style.visibility = state.index === 0 ? "hidden" : "visible";
-
   const currentAnswer = state.answers[question.id];
-  els.choiceList.innerHTML = question.choices
+  els.back.style.visibility = state.index === 0 ? "hidden" : "visible";
+  els.next.disabled = !currentAnswer;
+  els.next.textContent = state.index === state.path.length - 1 ? "See my profile →" : "Next question →";
+
+  els.choiceList.innerHTML = `<legend class="visually-hidden">Choose one answer for question ${state.index + 1}</legend>${question.choices
     .map(
       (choice, index) => `
-        <button
-          class="choice-button ${currentAnswer === choice.id ? "selected" : ""}"
-          type="button"
-          role="radio"
-          aria-checked="${currentAnswer === choice.id}"
-          data-choice="${choice.id}"
-        >
+        <label class="choice-button obligation-choice ${currentAnswer === choice.id ? "selected" : ""}" for="profile-${question.id}-${choice.id}">
+          <input class="choice-radio" type="radio" name="profile-${question.id}" id="profile-${question.id}-${choice.id}" value="${choice.id}" ${currentAnswer === choice.id ? "checked" : ""}>
           <span class="choice-key">${String.fromCharCode(65 + index)}</span>
           <span class="choice-copy"><strong>${choice.label}</strong><span>${choice.detail}</span></span>
           <span class="choice-arrow" aria-hidden="true">→</span>
-        </button>`,
+        </label>`,
     )
-    .join("");
+    .join("")}`;
 
-  els.choiceList.querySelectorAll(".choice-button").forEach((button) => {
-    button.addEventListener("click", () => selectAnswer(question, button.dataset.choice));
+  els.choiceList.querySelectorAll(".choice-radio").forEach((input) => {
+    input.addEventListener("change", () => selectAnswer(question, input.value));
   });
   window.scrollTo({ top: 0, behavior: "smooth" });
   renderLiveProfile();
+  els.questionPrompt.focus({ preventScroll: true });
 }
 
 function selectAnswer(question, choiceId) {
   state.answers[question.id] = choiceId;
-  window.setTimeout(() => {
-    state.index += 1;
-    renderQuestion();
-  }, 140);
+  els.choiceList.querySelectorAll(".obligation-choice").forEach((label) => {
+    label.classList.toggle("selected", label.querySelector(".choice-radio").checked);
+  });
+  els.next.disabled = false;
+  renderLiveProfile();
 }
 
 function signalBand(entry) {
@@ -903,6 +906,7 @@ function showResults() {
     : '<p class="no-final-tensions">No selected action directly conflicted with its stated main reason, and no later identity rule contradicted an earlier exception. This does not prove complete consistency; it reports only the comparisons built into this survey.</p>';
 
   window.scrollTo({ top: 0, behavior: "smooth" });
+  document.querySelector("#profileResultTitle").focus({ preventScroll: true });
 }
 
 function buildTextReport() {
@@ -956,6 +960,17 @@ els.launchForm.addEventListener("submit", (event) => {
 els.back.addEventListener("click", () => {
   if (state.index <= 0) return;
   state.index -= 1;
+  renderQuestion();
+});
+
+els.next.addEventListener("click", () => {
+  const question = state.path[state.index];
+  if (!question || !state.answers[question.id]) return;
+  if (state.index >= state.path.length - 1) {
+    showResults();
+    return;
+  }
+  state.index += 1;
   renderQuestion();
 });
 

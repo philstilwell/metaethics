@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#papersMain">Skip to the reading room</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Moral Compass home">
         <span class="brand-mark" aria-hidden="true">MC</span>
@@ -24,11 +25,12 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="index.html#toolkit">All labs</a>
+        <a href="map.html">My map</a>
         <a href="papers.html" aria-current="page">Papers</a>
       </nav>
     </header>
 
-    <main class="papers-page">
+    <main class="papers-page" id="papersMain">
       <section class="papers-hero">
         <div>
           <p class="kicker">The non-realist reading room</p>
@@ -52,6 +54,22 @@
               <label for="paperSearch">Search the papers</label>
               <input id="paperSearch" type="search" placeholder="Search by title, author, or idea" />
               <span aria-hidden="true">⌕</span>
+            </div>
+            <div class="library-lab-filter">
+              <label for="paperLabFilter">Show sources used by</label>
+              <select id="paperLabFilter">
+                <option value="All">All labs</option>
+                <option value="profile">Moral Profile</option>
+                <option value="meaning">What Do You Mean by Wrong?</option>
+                <option value="obligation">The Missing Ought</option>
+                <option value="after">After Moral Facts</option>
+                <option value="decoder">Disagreement Decoder</option>
+                <option value="genealogy">Value Genealogy Lab</option>
+                <option value="builder">Build a Morality</option>
+                <option value="criticize">Criticize Your Own Society</option>
+                <option value="blame">Blame Laboratory</option>
+                <option value="reasons">What Gives You a Reason?</option>
+              </select>
             </div>
             <div class="filter-row" id="filterRow" aria-label="Filter papers by approach"></div>
             <p class="library-count" id="libraryCount" aria-live="polite"></p>
@@ -90,6 +108,21 @@
               <option value="Responsibility skepticism">Responsibility skepticism</option>
               <option value="Post-error practice">Post-error practice</option>
               <option value="Other non-realism">Other non-realism</option>
+            </select>
+
+            <label for="paperLab">Most relevant lab</label>
+            <select id="paperLab" name="lab">
+              <option value="">General reading</option>
+              <option value="profile">Moral Profile</option>
+              <option value="meaning">What Do You Mean by Wrong?</option>
+              <option value="obligation">The Missing Ought</option>
+              <option value="after">After Moral Facts</option>
+              <option value="decoder">Disagreement Decoder</option>
+              <option value="genealogy">Value Genealogy Lab</option>
+              <option value="builder">Build a Morality</option>
+              <option value="criticize">Criticize Your Own Society</option>
+              <option value="blame">Blame Laboratory</option>
+              <option value="reasons">What Gives You a Reason?</option>
             </select>
 
             <label for="paperNote">Why it belongs here</label>

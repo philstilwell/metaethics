@@ -830,7 +830,10 @@ function renderObligationQuestion({ scroll = true, announce = true } = {}) {
   });
   renderForceMap();
   if (announce) obligationEls.liveStatus.textContent = `Question ${number} of ${OBLIGATION_QUESTIONS.length}: ${question.prompt}`;
-  if (scroll) scrollToElement(obligationEls.workspace, 82);
+  if (scroll) {
+    scrollToElement(obligationEls.workspace, 82);
+    obligationEls.prompt.focus({ preventScroll: true });
+  }
 }
 
 function selectObligationAnswer(questionId, choiceId) {
@@ -923,6 +926,7 @@ function showObligationResults() {
   renderAnswerPath();
   obligationEls.liveStatus.textContent = `Diagnostic ready: ${diagnosis.title}`;
   scrollToElement(obligationEls.results, 70);
+  document.querySelector("#obligationResultTitle").focus({ preventScroll: true });
 }
 
 function resetObligationTest() {

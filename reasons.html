@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A plain-language lab about what can count in favor of an action when objective moral facts are set aside: desires, informed aims, commitments, fair terms, independent reasons, or skepticism." />
+    <meta name="theme-color" content="#151a17" />
+    <title>What Gives You a Reason? — The Moral Compass</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="reasons-page" data-lab-id="reasons">
+    <a class="skip-link" href="#reasonsLab">Skip to the Reasons Lab</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#toolkit" aria-current="location">All labs</a>
+        <a href="map.html">My map</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <p class="visually-hidden" id="reasonsLiveStatus" role="status" aria-live="polite"></p>
+
+      <section class="reasons-hero">
+        <div class="reasons-hero-copy">
+          <p class="kicker">What gives a consideration practical force?</p>
+          <h1>What gives you <em>a reason?</em></h1>
+          <p>
+            Suppose there are no objective moral facts. What, if anything, can still count in favor of doing one thing rather than another?
+          </p>
+          <a class="primary-button" href="#reasonsLab">Enter the lab <span aria-hidden="true">↓</span></a>
+          <p class="time-note">About 12–16 minutes · Introductory-to-intermediate · 7 cases</p>
+        </div>
+        <aside class="reasons-premise-card" aria-labelledby="reasonsPremiseHeading">
+          <span class="card-number" aria-hidden="true">10</span>
+          <p class="kicker">The premise</p>
+          <h2 id="reasonsPremiseHeading">Moral facts are set aside. The rest is still open.</h2>
+          <p>
+            Desires, pain, promises, evidence, relationships, procedures, and consequences remain real. The question is what—if anything—turns one of those facts into a consideration in favor of acting.
+          </p>
+          <dl>
+            <div><dt>Questions</dt><dd>12</dd></div>
+            <div><dt>Source accounts</dt><dd>6</dd></div>
+            <div><dt>Case audits</dt><dd>7</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="reasons-intro" aria-labelledby="reasonsIntroHeading">
+        <div class="hub-section-heading">
+          <div><p class="kicker">One word, three jobs</p><h2 id="reasonsIntroHeading">“Reason” can answer three different questions.</h2></div>
+          <p>The lab keeps these jobs separate before asking where a reason’s force might come from.</p>
+        </div>
+        <div class="reasons-role-grid">
+          <article><span>01</span><h3>What explains it?</h3><p>A cause or background fact helps us understand why the action happened.</p></article>
+          <article><span>02</span><h3>What moved the person?</h3><p>The person acted while taking a belief or consideration as a reason.</p></article>
+          <article><span>03</span><h3>What counted in favor?</h3><p>A consideration supported the action, whether or not the person noticed or cared.</p></article>
+        </div>
+        <p class="reasons-role-note">These roles can overlap. A person’s motivating reason often helps explain the action, but a belief can motivate even when it is false and therefore does not genuinely support what was done.</p>
+
+        <details class="meaning-definition reasons-definition">
+          <summary>Does rejecting objective moral facts remove every kind of reason?</summary>
+          <div>
+            <p>
+              No conclusion follows automatically. A moral non-realist may accept desire-based reasons, reasons produced by commitments or fair procedures,
+              non-moral reasons that apply independently of desire, or no literal reason-giving facts at all.
+            </p>
+            <p>
+              The lab therefore holds only one premise fixed: no objective <em>moral</em> facts. It does not quietly assume that all practical or rational reasons disappear.
+            </p>
+          </div>
+        </details>
+        <details class="meaning-definition reasons-definition">
+          <summary>What does “counts in favor” mean here?</summary>
+          <div>
+            <p>
+              It means that a fact supports choosing an action or makes a case for it. A fact can count somewhat in favor without settling the final choice;
+              another reason may oppose it or carry more weight.
+            </p>
+            <p>“This would achieve my goal” and “this is what I ultimately ought to do” are therefore not the same claim.</p>
+          </div>
+        </details>
+        <details class="meaning-definition reasons-definition">
+          <summary>What will the result bars mean?</summary>
+          <div>
+            <p>
+              Each bar will show how often you used one account across the seven cases. The bars are not probabilities, moral grades, or proof that the leading account is your complete theory.
+            </p>
+            <p>Your definition, motivation answer, and view about the scope of skepticism are reported separately.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="workspace reasons-workspace" id="reasonsLab">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="reasonsPhase">Defining a reason</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetReasonsButton" type="button">Reset</button>
+                <span id="reasonsProgress">1 / 12</span>
+              </div>
+            </div>
+            <div class="progress-track" id="reasonsProgressTrack" role="progressbar" aria-label="Reasons Lab progress" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1">
+              <span id="reasonsProgressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card" id="reasonsQuestionCard">
+            <div class="question-heading">
+              <span class="question-number" id="reasonsQuestionNumber">01</span>
+              <div><p class="question-axis" id="reasonsQuestionAxis"></p><h2 id="reasonsQuestionPrompt" tabindex="-1"></h2></div>
+            </div>
+            <p class="question-context" id="reasonsQuestionContext"></p>
+            <div class="case-file reasons-case-file hidden" id="reasonsCaseFile" aria-label="Case file"></div>
+            <div class="question-boundaries">
+              <div><strong>Hold these details fixed</strong><p id="reasonsAssumptions"></p></div>
+              <div><strong>What this question asks</strong><p id="reasonsScope"></p></div>
+            </div>
+            <details class="plain-explanation" id="reasonsExplanation">
+              <summary>Plain-language guide and example</summary>
+              <div class="explanation-body">
+                <div class="explanation-part"><strong>In plain words</strong><p id="reasonsPlain"></p></div>
+                <div class="explanation-part explanation-example"><strong>Keep separate</strong><p id="reasonsSeparate"></p></div>
+                <div class="explanation-part"><strong>What your answer can show</strong><p id="reasonsReveal"></p></div>
+              </div>
+            </details>
+            <fieldset class="choice-list reasons-choice-list" id="reasonsChoices" aria-labelledby="reasonsQuestionPrompt">
+              <legend class="visually-hidden">Choose one answer</legend>
+            </fieldset>
+            <div class="question-footer">
+              <div class="question-navigation">
+                <button class="text-button" id="reasonsBackButton" type="button">← Back</button>
+                <button class="secondary-button" id="reasonsNextButton" type="button" disabled>Next question →</button>
+              </div>
+              <p id="reasonsWhy"></p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="live-panel reasons-live-panel" aria-labelledby="reasonsMapHeading">
+          <div class="live-header">
+            <div><p class="kicker">Your reason map so far</p><h2 id="reasonsMapHeading">What is giving the consideration force?</h2></div>
+            <div class="pulse-dot" aria-hidden="true"></div>
+          </div>
+          <p class="force-map-basis" id="reasonsMapBasis">0 of 7 cases classified</p>
+          <div class="reason-source-map" id="reasonsLiveMap" aria-label="Reason source accounts selected so far"></div>
+          <div class="reasons-live-stats">
+            <div><strong id="reasonsCaseCount">0 / 7</strong><span>cases answered</span></div>
+            <div><strong id="reasonsExternalCount">0</strong><span>aim-independent answers</span></div>
+            <div><strong id="reasonsNoneCount">0</strong><span>no-favoring answers</span></div>
+          </div>
+          <p class="force-map-note">Counts reflect only the seven cases. The opening definition, role check, motivation question, and scope question do not change these bars.</p>
+        </aside>
+      </section>
+
+      <section class="results reasons-results hidden" id="reasonsResults">
+        <div class="results-hero">
+          <p class="kicker">Reasons diagnostic</p>
+          <h1 id="reasonsResultTitle" tabindex="-1">—</h1>
+          <p id="reasonsResultSummary"></p>
+        </div>
+
+        <div class="scoreboard reasons-scoreboard">
+          <div class="score-card score-card-primary"><span>Most-used account</span><strong id="reasonsPrimarySource">—</strong><p id="reasonsPrimaryCopy"></p></div>
+          <div class="score-card"><span>Reason and motivation</span><strong id="reasonsMotivationResult">—</strong><p id="reasonsMotivationCopy"></p></div>
+          <div class="score-card"><span>Scope of skepticism</span><strong id="reasonsScopeResult">—</strong><p id="reasonsScopeCopy"></p></div>
+        </div>
+
+        <section class="report-section" aria-labelledby="reasonsSourceHeading">
+          <div class="section-heading"><div><p class="kicker">Six exact accounts</p><h2 id="reasonsSourceHeading">What made a fact count in favor—or kept it from doing so</h2></div><p>Every bar is selected ÷ offered across seven cases.</p></div>
+          <div class="reason-source-ledger" id="reasonsSourceLedger"></div>
+        </section>
+
+        <div class="reasons-result-grid">
+          <section class="report-section" aria-labelledby="reasonsRoleHeading">
+            <div class="section-heading"><p class="kicker">Three jobs of “reason”</p><h2 id="reasonsRoleHeading">Did explanation, motivation, and support stay separate?</h2></div>
+            <div id="reasonsRoleReport"></div>
+          </section>
+          <section class="report-section" aria-labelledby="reasonsAlignmentHeading">
+            <div class="section-heading"><p class="kicker">Definition audit</p><h2 id="reasonsAlignmentHeading">Opening claim, final claim, and exact seams</h2></div>
+            <div id="reasonsAlignmentReport"></div>
+          </section>
+        </div>
+
+        <section class="report-section" aria-labelledby="reasonsCaseHeading">
+          <div class="section-heading"><div><p class="kicker">Seven cases</p><h2 id="reasonsCaseHeading">What each answer establishes—and what remains unpaid</h2></div><p>The report does not silently turn a desire, promise, procedure, or harm into a reason.</p></div>
+          <div class="reasons-case-grid" id="reasonsCaseGrid"></div>
+        </section>
+
+        <section class="interpretation reasons-conclusion">
+          <div><p class="kicker">The main lesson</p><h2>A world without objective moral facts does not answer the wider question about reasons.</h2></div>
+          <p>
+            A desire can explain an aim. A promise can create a commitment. A fair process can organize claims. Another person’s pain can matter to them.
+            The remaining philosophical question is which of those facts, if any, genuinely counts in favor for this agent—and why.
+          </p>
+        </section>
+
+        <section class="report-section ai-probe-section" aria-labelledby="reasonsAIHeading">
+          <div class="section-heading ai-probe-heading">
+            <div><p class="kicker">Optional deeper inquiry</p><h2 id="reasonsAIHeading">Ask an AI to test the source and reach of your reasons.</h2></div>
+            <p>The prompt includes every full case, fixed detail, answer, definition, result count, motivation view, scope claim, and exact seam found by the lab.</p>
+          </div>
+          <div class="ai-privacy-note"><strong>Nothing is sent by this site.</strong><span>Copy the prompt only if you choose to paste it into an AI service.</span></div>
+          <label class="ai-prompt-label" for="reasonsAIProbePrompt">Your ready-to-use interview prompt</label>
+          <textarea id="reasonsAIProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyReasonsPromptButton" type="button">Copy AI prompt</button>
+            <p id="reasonsPromptCopyStatus" aria-live="polite">The prompt contains your answers but no account information.</p>
+          </div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="restartReasonsButton" type="button">Run the Reasons Lab again</button>
+          <a class="secondary-button" href="index.html#toolkit">Return to all labs</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        The conceptual framing draws on the Stanford Encyclopedia of Philosophy entries on
+        <a href="https://plato.stanford.edu/entries/reasons-just-vs-expl/" target="_blank" rel="noreferrer">reasons that explain, motivate, and favor actions</a>,
+        <a href="https://plato.stanford.edu/entries/reasons-internal-external/" target="_blank" rel="noreferrer">internal and external reasons</a>, and
+        <a href="https://plato.stanford.edu/entries/moral-motivation/" target="_blank" rel="noreferrer">moral motivation</a>, together with Bernard Williams’s
+        <a href="https://doi.org/10.1017/CBO9781139165860.009" target="_blank" rel="noreferrer">“Internal and External Reasons”</a> and Richard Joyce’s
+        <a href="https://www.richard-joyce.com/the-myth-of-morality" target="_blank" rel="noreferrer"><cite>The Myth of Morality</cite></a>.
+      </p>
+      <p>This conditional lab does not assume that moral non-realism, reasons internalism, reasons externalism, or skepticism about all normativity follows from any other.</p>
+    </footer>
+    <noscript><p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p></noscript>
+    <script src="reasons.js"></script>
+    <script src="suite-map.js"></script>
+  </body>
+</html>

@@ -7,15 +7,16 @@ const path = require("node:path");
 const root = path.join(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
-const pages = ["index.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "papers.html"];
-const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html"];
+const pages = ["index.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html", "map.html", "papers.html"];
+const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html"];
 const faviconFiles = ["favicon-32.png", "favicon.png", "favicon.ico", "apple-touch-icon.png"];
 
-assert.match(html, /Nine labs\. Nine ways to examine moral thought\./, "the hub must state its nine-lab architecture");
+assert.match(html, /Ten labs\. Ten ways to examine moral thought\./, "the hub must state its ten-lab architecture");
 assert.match(html, /They take apart one familiar moral sentence\./, "the hub must explain how the tools interact");
 assert.match(html, /Community-Code Simulator tests construction\./, "the hub must explain how the seventh tool extends the suite");
 assert.match(html, /Social Criticism Lab tests reform\./, "the hub must explain how the eighth tool extends the suite");
 assert.match(html, /Blame Laboratory tests response\./, "the hub must explain how the ninth tool extends the suite");
+assert.match(html, /Reasons Lab tests the favoring relation\./, "the hub must explain how the tenth tool extends the suite");
 assert.match(html, /There is no required order\./, "the hub must not present the tools as a forced sequence");
 assert.match(html, /No account, tracking, or built-in AI/, "the hub must disclose its privacy model");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "the landing page must have one primary heading");
@@ -24,9 +25,10 @@ assert.equal(new Set(ids).size, ids.length, "the landing page must not reuse an 
 
 const toolCards = html.match(/<article class="hub-tool-card hub-tool-(?!reserved)[^"]+">/g) || [];
 const reservedCards = html.match(/<article class="hub-tool-card hub-tool-reserved"/g) || [];
-assert.equal(toolCards.length, 9, "the landing page must present nine current tools");
-assert.equal(reservedCards.length, 0, "all nine current grid positions must now be live tools");
-assert.match(css, /\.hub-tool-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/s, "the wide hub must use a balanced three-column nine-card grid");
+assert.equal(toolCards.length, 10, "the landing page must present ten current tools");
+assert.equal(reservedCards.length, 0, "all current grid positions must be live tools");
+assert.match(css, /\.hub-tool-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/s, "the wide hub must retain a scalable three-column grid");
+assert.match(css, /\.hub-tool-reasons\s*\{[^}]*grid-column:\s*1\s*\/\s*-1/s, "the tenth card must form a deliberate full-width capstone row");
 assert.match(css, /@media \(max-width: 1100px\)[\s\S]*?\.hub-tool-grid\s*\{[^}]*repeat\(2,/s, "the hub must collapse to two columns at medium widths");
 assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.hub-tool-grid,[\s\S]*?grid-template-columns:\s*1fr/s, "the hub must collapse to one column on narrow screens");
 
@@ -45,6 +47,7 @@ for (const page of pages) {
   const pageHtml = fs.readFileSync(path.join(root, page), "utf8");
   assert.match(pageHtml, /href="index\.html"[^>]*>Home<\/a>/, `${page} must link to the central home page`);
   assert.match(pageHtml, /href="index\.html#toolkit"[^>]*>All labs<\/a>/, `${page} must use the scalable all-labs navigation link`);
+  assert.match(pageHtml, /href="map\.html"[^>]*>My map<\/a>/, `${page} must link to the optional suite map`);
   assert.match(pageHtml, /href="papers\.html"[^>]*>Papers<\/a>/, `${page} must link to the reading room`);
   for (const favicon of faviconFiles) {
     assert.match(pageHtml, new RegExp(`href="${favicon.replace(".", "\\.")}"`), `${page} must use ${favicon}`);
@@ -68,4 +71,4 @@ const currentMarkers = pages.map((page) => {
 });
 assert.deepEqual(currentMarkers, new Array(pages.length).fill(1), "every main page must identify exactly one current navigation item");
 
-console.log("Hub audit passed: nine live tools, expandable module grid, interaction guidance, scalable navigation, privacy copy, and local links verified.");
+console.log("Hub audit passed: ten live tools, deliberate capstone row, interaction guidance, suite map, scalable navigation, privacy copy, and local links verified.");

@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="criticize-page">
+  <body class="criticize-page" data-lab-id="criticize">
     <a class="skip-link" href="#criticizeLab">Skip to the cases</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Moral Compass home">
@@ -25,6 +25,7 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="index.html#toolkit" aria-current="location">All labs</a>
+        <a href="map.html">My map</a>
         <a href="papers.html">Papers</a>
       </nav>
     </header>
@@ -357,6 +358,8 @@
       <p>This lab runs entirely in your browser. No answer is uploaded, stored by the site, or sent to an AI service.</p>
     </footer>
 
+    <noscript><p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p></noscript>
     <script src="criticize.js"></script>
+    <script src="suite-map.js"></script>
   </body>
 </html>

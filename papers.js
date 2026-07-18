@@ -2,6 +2,44 @@
 
 const STORAGE_KEY = "coherence-engine-papers-v1";
 
+const LAB_NAMES = {
+  profile: "Moral Profile",
+  meaning: "Meaning Lab",
+  obligation: "Missing Ought",
+  after: "After Moral Facts",
+  decoder: "Disagreement Decoder",
+  genealogy: "Value Genealogy",
+  builder: "Community-Code Simulator",
+  criticize: "Social Criticism Lab",
+  blame: "Blame Laboratory",
+  reasons: "Reasons Lab",
+};
+
+const LAB_SUPPORT = {
+  "field-guide": Object.keys(LAB_NAMES),
+  "parsimonious-world": Object.keys(LAB_NAMES),
+  "conditions-coherence": ["profile", "obligation", "builder", "criticize"],
+  "stevenson-emotive-meaning": ["meaning", "decoder"],
+  "harman-relativism": ["meaning", "criticize"],
+  "williams-truth-relativism": ["meaning", "criticize"],
+  "pereboom-without-desert": ["blame"],
+  "pereboom-regret-protest": ["blame"],
+  "caruso-quarantine": ["blame"],
+  "plunkett-sundell-disagreement": ["decoder"],
+  "blackburn-antirealist": ["meaning", "after"],
+  "street-darwinian": ["genealogy"],
+  "street-constructivism": ["builder", "reasons"],
+  "joyce-irrealism-genealogy": ["genealogy"],
+  "garner-abolishing": ["after"],
+  "joyce-fictionalism": ["after"],
+  "joyce-what-next": ["after"],
+  "joyce-error-to-fiction": ["after"],
+  "jaquet-naar-conservation": ["after"],
+  "kohler-ridge-expressivism": ["after"],
+  "jaquet-sorting-solutions": ["after"],
+  "eriksson-olson": ["after"],
+};
+
 const CURATED_PAPERS = [
   {
     id: "field-guide",
@@ -203,17 +241,79 @@ const CURATED_PAPERS = [
     url: "https://philpapers.org/rec/ERIMPA",
     note: "Offers a practical answer to life after error theory. Instead of one perfect replacement, it argues for context-sensitive negotiation around the concerns people actually have.",
   },
+  {
+    id: "sep-reasons-roles",
+    title: "Reasons for Action: Justification, Motivation, Explanation",
+    author: "Stanford Encyclopedia of Philosophy",
+    year: 2016,
+    approach: "Reasons and normativity",
+    labs: ["reasons"],
+    url: "https://plato.stanford.edu/entries/reasons-just-vs-expl/",
+    note: "The Reasons Lab’s first distinction comes from this entry: a fact may explain an action, move an agent who treats it as a reason, or genuinely count in favor of acting. These roles can overlap without being identical.",
+  },
+  {
+    id: "sep-internal-external",
+    title: "Reasons for Action: Internal vs. External",
+    author: "Stanford Encyclopedia of Philosophy",
+    year: 2022,
+    approach: "Reasons and normativity",
+    labs: ["reasons"],
+    url: "https://plato.stanford.edu/entries/reasons-internal-external/",
+    note: "Maps a family of disputes over whether a practical reason must connect to an agent’s motivations or could apply independently of them. The entry warns that ‘internal’ and ‘external’ name several different claims.",
+  },
+  {
+    id: "williams-internal-external",
+    title: "Internal and External Reasons",
+    author: "Bernard Williams",
+    year: 1981,
+    approach: "Reasons internalism",
+    labs: ["reasons"],
+    url: "https://doi.org/10.1017/CBO9781139165860.009",
+    note: "A classic argument that an agent’s reasons must be reachable through sound deliberation from the agent’s existing motivational set. It supplies one major background to the lab’s better-informed-aims route.",
+  },
+  {
+    id: "street-constructivism-reasons",
+    title: "Constructivism about Reasons",
+    author: "Sharon Street",
+    year: 2008,
+    approach: "Constructivism",
+    labs: ["reasons", "builder"],
+    url: "https://doi.org/10.1093/oso/9780199542062.003.0009",
+    note: "Develops a constructivist account on which truths about reasons are understood from within a practical point of view rather than as independent normative facts waiting to be discovered.",
+  },
+  {
+    id: "schroeder-slaves-passions",
+    title: "Slaves of the Passions",
+    author: "Mark Schroeder",
+    year: 2007,
+    approach: "Reasons internalism",
+    labs: ["reasons"],
+    url: "https://doi.org/10.1093/acprof:oso/9780199299508.001.0001",
+    note: "A systematic defense of a desire-based theory of reasons. It is useful for testing the lab’s current-aim route against hard cases involving weak, distorted, cruel, or absent desires.",
+  },
+  {
+    id: "joyce-myth-morality",
+    title: "The Myth of Morality",
+    author: "Richard Joyce",
+    year: 2001,
+    approach: "Error theory",
+    labs: ["obligation", "after", "reasons"],
+    url: "https://www.richard-joyce.com/the-myth-of-morality",
+    note: "Connects moral error theory to questions about practical authority, instrumental reasons, and whether morality claims an inescapable force that ordinary human aims cannot supply by themselves.",
+  },
 ];
 
 const state = {
   query: "",
   filter: "All",
+  labFilter: "All",
   userPapers: loadUserPapers(),
 };
 
 const els = {
   grid: document.querySelector("#paperGrid"),
   search: document.querySelector("#paperSearch"),
+  labFilter: document.querySelector("#paperLabFilter"),
   filterRow: document.querySelector("#filterRow"),
   count: document.querySelector("#libraryCount"),
   form: document.querySelector("#paperForm"),
@@ -239,7 +339,10 @@ function saveUserPapers() {
 }
 
 function allPapers() {
-  return [...CURATED_PAPERS, ...state.userPapers.map((paper) => ({ ...paper, user: true }))];
+  return [
+    ...CURATED_PAPERS.map((paper) => ({ ...paper, labs: paper.labs || LAB_SUPPORT[paper.id] || [] })),
+    ...state.userPapers.map((paper) => ({ ...paper, labs: Array.isArray(paper.labs) ? paper.labs : [], user: true })),
+  ];
 }
 
 function approaches() {
@@ -267,8 +370,10 @@ function filteredPapers() {
   const query = state.query.trim().toLowerCase();
   return allPapers().filter((paper) => {
     const matchesFilter = state.filter === "All" || paper.approach === state.filter;
-    const haystack = `${paper.title} ${paper.author} ${paper.approach} ${paper.note}`.toLowerCase();
-    return matchesFilter && (!query || haystack.includes(query));
+    const matchesLab = state.labFilter === "All" || paper.labs.includes(state.labFilter);
+    const labNames = paper.labs.map((lab) => LAB_NAMES[lab] || lab).join(" ");
+    const haystack = `${paper.title} ${paper.author} ${paper.approach} ${paper.note} ${labNames}`.toLowerCase();
+    return matchesFilter && matchesLab && (!query || haystack.includes(query));
   });
 }
 
@@ -295,6 +400,23 @@ function createPaperCard(paper) {
   note.className = "paper-note";
   note.textContent = paper.note;
 
+  const labUse = document.createElement("div");
+  labUse.className = "paper-lab-use";
+  const labLabel = document.createElement("strong");
+  labLabel.textContent = "Used by";
+  labUse.append(labLabel);
+  if (paper.labs.length) {
+    paper.labs.forEach((lab) => {
+      const badge = document.createElement("span");
+      badge.textContent = LAB_NAMES[lab] || lab;
+      labUse.append(badge);
+    });
+  } else {
+    const badge = document.createElement("span");
+    badge.textContent = "General reading";
+    labUse.append(badge);
+  }
+
   const actions = document.createElement("div");
   actions.className = "paper-actions";
   const link = document.createElement("a");
@@ -320,7 +442,7 @@ function createPaperCard(paper) {
     actions.append(remove);
   }
 
-  article.append(top, title, author, note, actions);
+  article.append(top, title, author, note, labUse, actions);
   return article;
 }
 
@@ -339,6 +461,11 @@ function renderPapers() {
 
 els.search.addEventListener("input", () => {
   state.query = els.search.value;
+  renderPapers();
+});
+
+els.labFilter.addEventListener("change", () => {
+  state.labFilter = els.labFilter.value;
   renderPapers();
 });
 
@@ -363,6 +490,7 @@ els.form.addEventListener("submit", (event) => {
     url: parsed.href,
     approach: String(data.get("approach")),
     note: String(data.get("note")).trim(),
+    labs: data.get("lab") ? [String(data.get("lab"))] : [],
   };
 
   state.userPapers.unshift(paper);
@@ -373,8 +501,10 @@ els.form.addEventListener("submit", (event) => {
   }
 
   state.filter = "All";
+  state.labFilter = "All";
   state.query = "";
   els.search.value = "";
+  els.labFilter.value = "All";
   els.form.reset();
   els.status.textContent = "Paper added to this browser.";
   renderFilters();

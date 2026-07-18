@@ -1076,7 +1076,10 @@ function renderMeaningQuestion({ scroll = true, announce = true } = {}) {
   });
   renderMeaningMap();
   if (announce) meaningEls.liveStatus.textContent = `Question ${number} of ${questions.length}: ${question.prompt}`;
-  if (scroll) scrollToMeaningElement(meaningEls.workspace, 82);
+  if (scroll) {
+    scrollToMeaningElement(meaningEls.workspace, 82);
+    meaningEls.prompt.focus({ preventScroll: true });
+  }
 }
 
 function selectMeaningAnswer(questionId, choiceId) {
@@ -1164,6 +1167,7 @@ function showMeaningResults() {
   renderMeaningFamilyGuide(diagnosis);
   meaningEls.liveStatus.textContent = `Meaning diagnostic ready: ${diagnosis.title}`;
   scrollToMeaningElement(meaningEls.results, 70);
+  document.querySelector("#meaningResultTitle").focus({ preventScroll: true });
 }
 
 function resetMeaningLab() {

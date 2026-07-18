@@ -15,7 +15,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-lab-id="obligation">
+    <a class="skip-link" href="#obligationLab">Skip to the obligation lab</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Moral Compass home">
         <span class="brand-mark" aria-hidden="true">MC</span>
@@ -24,6 +25,7 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="index.html#toolkit" aria-current="location">All labs</a>
+        <a href="map.html">My map</a>
         <a href="papers.html">Papers</a>
       </nav>
     </header>
@@ -115,7 +117,7 @@
               <span class="question-number" id="obligationQuestionNumber">01</span>
               <div>
                 <p class="question-axis" id="obligationQuestionAxis"></p>
-                <h2 id="obligationQuestionPrompt"></h2>
+                <h2 id="obligationQuestionPrompt" tabindex="-1"></h2>
               </div>
             </div>
             <p class="question-context" id="obligationQuestionContext"></p>
@@ -180,7 +182,7 @@
       <section class="results obligation-results hidden" id="obligationResults">
         <div class="results-hero">
           <p class="kicker">Obligation diagnostic</p>
-          <h1 id="obligationResultTitle">—</h1>
+          <h1 id="obligationResultTitle" tabindex="-1">—</h1>
           <p id="obligationResultSummary"></p>
         </div>
 
@@ -271,5 +273,6 @@
       <p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p>
     </noscript>
     <script src="obligation.js"></script>
+    <script src="suite-map.js"></script>
   </body>
 </html>
