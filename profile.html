@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A scenario-based profile of the moral reasons you use across difficult cases."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>Moral Profile — The Moral Compass</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#introView">Skip to the moral profile</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="profile.html" aria-current="page">Profile</a>
+        <a href="obligation.html">Obligation</a>
+        <a href="wrong.html">Meaning</a>
+        <a href="after.html">After</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="introView">
+        <div class="hero-copy">
+          <p class="kicker">Six dilemmas. Your reasons. A moral profile.</p>
+          <h1>What kind of moral reasons<br /><em>move you?</em></h1>
+          <p class="hero-lede">
+            You do not need to know any philosophy. Make a choice in six unusual moral situations,
+            then tell us why. The result maps the kinds of reasons you return to—and where your
+            answers may need another explanation.
+          </p>
+          <div class="thesis-strip" aria-label="The method in three steps">
+            <span>01 — Enter the situation</span>
+            <span>02 — Choose your reason</span>
+            <span>03 — See the pattern</span>
+          </div>
+        </div>
+
+        <form class="launch-card" id="launchForm">
+          <div class="card-number" aria-hidden="true">00</div>
+          <h2>Where should we begin?</h2>
+          <p>You will see all six situations. This choice only changes which kind of dilemma comes first.</p>
+
+          <fieldset>
+            <legend>Choose your opening scene</legend>
+            <p class="scenario-intro">
+              There is no correct starting point. Pick the story that immediately makes you curious.
+            </p>
+            <div class="scenario-grid">
+              <label class="scenario-option">
+                <input type="radio" name="opener" value="quiet" checked />
+                <span>
+                  <strong>A friend’s stolen future</strong>
+                  Your closest friend confesses that a stolen exam answer won the only scholarship.
+                </span>
+              </label>
+              <label class="scenario-option">
+                <input type="radio" name="opener" value="floodgate" />
+                <span>
+                  <strong>Twenty seconds at the floodgate</strong>
+                  Save a town by redirecting deadly water toward one occupied farmhouse.
+                </span>
+              </label>
+              <label class="scenario-option">
+                <input type="radio" name="opener" value="replica" />
+                <span>
+                  <strong>The copy who refuses deletion</strong>
+                  A conscious digital replica has reached the end of its thirty-day contract.
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="primary-button" type="submit">
+            Begin the moral profile
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="time-note">About 8–10 minutes · No data leaves your browser</p>
+          <button class="text-button launch-method-button" id="methodButton" type="button" aria-label="Method and limits">Read the method and limits</button>
+        </form>
+      </section>
+
+      <section class="workspace hidden" id="surveyView" aria-live="polite">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="phaseLabel">Moral situations</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetSurveyButton" type="button">Reset</button>
+                <span id="progressLabel">1 / 15</span>
+              </div>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card" id="questionCard">
+            <div class="question-heading">
+              <span class="question-number" id="questionNumber">01</span>
+              <div>
+                <p class="question-axis" id="questionAxis">The situation</p>
+                <h2 id="questionPrompt"></h2>
+              </div>
+            </div>
+            <p class="question-context" id="questionContext"></p>
+            <div class="question-boundaries">
+              <div>
+                <strong>What to assume</strong>
+                <p id="questionDefinition"></p>
+              </div>
+              <div>
+                <strong>What this question asks</strong>
+                <p id="questionScope"></p>
+              </div>
+            </div>
+            <details class="plain-explanation" id="plainExplanation">
+              <summary>Example and further explanation</summary>
+              <div class="explanation-body">
+                <div class="explanation-part">
+                  <strong>In plain words</strong>
+                  <p id="plainExplanationText"></p>
+                </div>
+                <div class="explanation-part explanation-example">
+                  <strong>Keep separate</strong>
+                  <p id="plainExampleText"></p>
+                </div>
+                <div class="explanation-part">
+                  <strong>What your answer shows</strong>
+                  <p id="plainRevealText"></p>
+                </div>
+              </div>
+            </details>
+            <div class="choice-list" id="choiceList" role="radiogroup" aria-labelledby="questionPrompt"></div>
+            <div class="question-footer">
+              <button class="text-button" id="backButton" type="button">← Back</button>
+              <p id="whyThisMatters"></p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="live-panel" aria-label="Live moral reasoning profile">
+          <div class="live-header">
+            <div>
+              <p class="kicker">Profile forming</p>
+              <h2 id="liveLeader">Waiting for your reasons</h2>
+            </div>
+            <div class="pulse-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="live-profile-note">
+            <strong id="liveBasis">0 reason questions answered</strong>
+            <span>Decisions alone do not identify a moral theory. The map changes when you explain why.</span>
+          </div>
+
+          <div class="axis-grid tendency-grid" id="tendencyGrid" aria-label="Current moral reasoning signals"></div>
+
+          <div class="tension-block">
+            <div class="tension-heading">
+              <h3>Answers needing explanation</h3>
+              <span id="tensionCount">0</span>
+            </div>
+            <div class="tension-list" id="tensionList">
+              <p class="empty-tensions">No action-and-reason tension detected yet.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="results hidden" id="resultsView">
+        <div class="results-hero">
+          <p class="kicker">Profile complete</p>
+          <h1>Your moral reasoning has a shape.</h1>
+          <p id="resultsSummary"></p>
+        </div>
+
+        <div class="scoreboard profile-scoreboard">
+          <div class="score-card score-card-primary">
+            <span id="primaryLabel">Strongest reasoning signal</span>
+            <strong id="primaryTendency">—</strong>
+            <p id="primaryCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Profile shape</span>
+            <strong id="profileShape">—</strong>
+            <p id="shapeCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Metaethical stance</span>
+            <strong id="metaStance">—</strong>
+            <p id="metaCopy"></p>
+          </div>
+        </div>
+
+        <section class="report-section theory-map-section" aria-labelledby="theoryMapHeading">
+          <div class="section-heading theory-map-heading">
+            <div>
+              <p class="kicker">A graphical view</p>
+              <h2 id="theoryMapHeading">Your moral theory map</h2>
+            </div>
+            <p>
+              Each spoke names a philosophical family associated with one kind of reason. Farther
+              from the center means you selected that reason more often when it was available.
+            </p>
+          </div>
+          <figure class="theory-map-figure">
+            <div id="theoryMap"></div>
+            <figcaption>
+              The outer ring means “selected every time offered.” This map shows patterns in these
+              eight questions—not certainty that you belong to a theory.
+            </figcaption>
+          </figure>
+        </section>
+
+        <div class="results-grid profile-results-grid">
+          <section class="report-section">
+            <div class="section-heading">
+              <p class="kicker">Eight kinds of reasons</p>
+              <h2>Your reasoning signals</h2>
+            </div>
+            <p class="section-note">
+              These bars show how often you selected each kind of reason when it was offered. They are
+              not probabilities, grades, or percentages of your personality.
+            </p>
+            <div class="ledger" id="profileLedger"></div>
+          </section>
+
+          <section class="report-section">
+            <div class="section-heading">
+              <p class="kicker">Overlap without alarm</p>
+              <h2>How your tendencies combine</h2>
+            </div>
+            <div id="overlapReport"></div>
+          </section>
+        </div>
+
+        <section class="report-section context-section">
+          <div class="section-heading">
+            <p class="kicker">The six situations</p>
+            <h2>Where your reasoning changed with the context</h2>
+          </div>
+          <div class="context-grid" id="contextGrid"></div>
+        </section>
+
+        <section class="report-section tension-report-section">
+          <div class="section-heading">
+            <p class="kicker">Potential tensions</p>
+            <h2>Where an action and its stated reason pull apart</h2>
+          </div>
+          <div class="final-tensions" id="finalTensions"></div>
+        </section>
+
+        <section class="interpretation">
+          <div>
+            <p class="kicker">Read this carefully</p>
+            <h2>A mixed profile is not an incoherent profile.</h2>
+          </div>
+          <p>
+            Different moral traditions often support the same action, and one person may reasonably use
+            different kinds of reasons in different settings. This tool reports recurring patterns. It
+            flags only places where your selected action and selected explanation appear to point in
+            different directions, or where a later rule conflicts with an earlier exception.
+          </p>
+        </section>
+
+        <section class="report-section ai-probe-section" aria-labelledby="aiProbeHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Continue the inquiry</p>
+              <h2 id="aiProbeHeading">Ask an AI to test the difficult parts</h2>
+            </div>
+            <p>
+              This prompt includes the full situations, fixed assumptions, your choices, and the possible
+              tensions found by this survey. It asks an AI to interview you carefully, one question at a time,
+              so you can make your reasons clearer.
+            </p>
+          </div>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="aiProbePrompt">Your ready-to-use interview prompt</label>
+          <textarea id="aiProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyPromptButton" type="button">Copy AI prompt</button>
+            <p id="promptCopyStatus" aria-live="polite">The prompt contains your survey answers but no name or account information.</p>
+          </div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="copyReportButton" type="button">Copy profile</button>
+          <button class="secondary-button" id="restartButton" type="button">Reset all answers</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Inspired by Phil Stilwell’s
+        <a href="https://www.academia.edu/169114427/_How_to_Test_a_Moral_System_A_Field_Guide_to_Metaethics_Value_Disagreement_and_the_Architecture_of_Values" target="_blank" rel="noreferrer">field guide to moral systems</a>
+        and
+        <a href="https://www.academia.edu/169490990/_The_Parsimonious_World_of_the_Moral_Non_Realist_Illegitimate_Questions_Surviving_Values_and_Life_Without_a_Moral_Realm" target="_blank" rel="noreferrer">the parsimonious non-realist framework</a>.
+      </p>
+      <p>Runs entirely in your browser. No built-in AI, account, or tracking.</p>
+    </footer>
+
+    <dialog id="methodDialog">
+      <button class="dialog-close" id="closeMethodButton" type="button" aria-label="Close">×</button>
+      <p class="kicker">Method &amp; limits</p>
+      <h2>A reasoning profile, not a moral diagnosis</h2>
+      <p>
+        Each situation asks first what you would endorse and then which reason matters most. The reason—not
+        the action by itself—adds a signal to the profile. The same action can be supported by consequences,
+        rights, duties, care, character, fairness, loyalty, or authority.
+      </p>
+      <p>
+        A signal rate means “chosen out of the questions where this reason was offered.” It is not the chance
+        that you belong to a theory, and it is not a moral score. Several strong signals indicate plural or
+        context-sensitive reasoning, not automatic incoherence.
+      </p>
+      <p>
+        Moral realism and non-realism answer a different question from consequentialism, deontology, care
+        ethics, or virtue ethics. The final metaethical answer is therefore reported separately and never
+        raises or lowers a reasoning tendency.
+      </p>
+      <p>
+        A potential tension appears only when a chosen reason does not readily support the chosen action, or
+        when a later rule conflicts with an earlier identity-based exception. Such a flag asks for another
+        explanation; it does not prove the user is irrational.
+      </p>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,8 +1,15 @@
 # The Moral Compass
 
-A static, scenario-based profile of the kinds of moral reasons a person uses. It is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of four interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different layers of moral thought and reserves two equal module spaces for future additions. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
-The survey presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
+The current tools work together without forming a required sequence:
+
+1. The [Moral Profile](profile.html) maps the kinds of reasons a user selects across difficult choices.
+2. [What Do You Mean by Wrong?](wrong.html) examines what a user takes moral claims to mean or do.
+3. [The Missing Ought](obligation.html) tests what could give a demand authority beyond social pressure or approval.
+4. [After Moral Facts](after.html) asks what should happen to moral language and practice if objective moral facts are held to be absent.
+
+The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
 1. What should be done in this exact case?
 2. Which offered reason is doing the most work in that judgment?
