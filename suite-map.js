@@ -124,6 +124,54 @@
         ["Scope of skepticism", "#reasonsScopeResult"],
       ],
     },
+    evidence: {
+      title: "Why Follow the Evidence?",
+      href: "evidence.html",
+      resultSelector: "#caseResults",
+      headlineSelector: "#caseResultTitle",
+      summarySelector: "#caseResultSummary",
+      metrics: [
+        ["Most-used account", "#casePrimary"],
+        ["Case pattern", "#casePattern"],
+        ["Opening → final", "#caseOpeningFinal"],
+      ],
+    },
+    standing: {
+      title: "Who Gets Counted?",
+      href: "standing.html",
+      resultSelector: "#caseResults",
+      headlineSelector: "#caseResultTitle",
+      summarySelector: "#caseResultSummary",
+      metrics: [
+        ["Most-used ground", "#casePrimary"],
+        ["Case pattern", "#casePattern"],
+        ["Opening → final", "#caseOpeningFinal"],
+      ],
+    },
+    tradeoffs: {
+      title: "When Values Won’t Add Up",
+      href: "tradeoffs.html",
+      resultSelector: "#caseResults",
+      headlineSelector: "#caseResultTitle",
+      summarySelector: "#caseResultSummary",
+      metrics: [
+        ["Most-used method", "#casePrimary"],
+        ["Case pattern", "#casePattern"],
+        ["Opening → final", "#caseOpeningFinal"],
+      ],
+    },
+    emotions: {
+      title: "Moral Emotions After Moral Facts",
+      href: "emotions.html",
+      resultSelector: "#caseResults",
+      headlineSelector: "#caseResultTitle",
+      summarySelector: "#caseResultSummary",
+      metrics: [
+        ["Most-used account", "#casePrimary"],
+        ["Case pattern", "#casePattern"],
+        ["Opening → final", "#caseOpeningFinal"],
+      ],
+    },
   };
 
   function cleanText(value, limit = 1200) {

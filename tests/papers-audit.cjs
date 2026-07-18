@@ -19,7 +19,7 @@ vm.runInContext(
 
 const { LAB_NAMES, LAB_SUPPORT, CURATED_PAPERS } = context.audit;
 const labIds = Object.keys(LAB_NAMES);
-assert.equal(labIds.length, 10, "the reading room must know all ten labs");
+assert.equal(labIds.length, 14, "the reading room must know all fourteen labs");
 assert.equal(new Set(CURATED_PAPERS.map((paper) => paper.id)).size, CURATED_PAPERS.length, "curated source ids must be unique");
 
 for (const paper of CURATED_PAPERS) {
@@ -46,9 +46,23 @@ for (const id of reasonSources) {
   assert.ok((paper.labs || []).includes("reasons"), `${id} must be tagged for the Reasons Lab`);
 }
 
+const newLabSources = {
+  evidence: ["callahan-epistemic-normative", "kiesewetter-epistemic-reasons", "joyce-companions-guilt"],
+  standing: ["sep-grounds-moral-status"],
+  tradeoffs: ["sep-weighing-reasons", "sep-incommensurable-values"],
+  emotions: ["sep-blame", "sep-moral-responsibility"],
+};
+for (const [labId, ids] of Object.entries(newLabSources)) {
+  ids.forEach((id) => {
+    const paper = CURATED_PAPERS.find((item) => item.id === id);
+    assert.ok(paper, `${id} must be in the curated reading room`);
+    assert.ok((paper.labs || LAB_SUPPORT[id] || []).includes(labId), `${id} must be tagged for ${labId}`);
+  });
+}
+
 assert.match(html, /id="paperLabFilter"/, "the reading room must be filterable by lab");
-assert.equal((html.match(/<option value="(?:profile|meaning|obligation|after|decoder|genealogy|builder|criticize|blame|reasons)">/g) || []).length, 20, "both the public filter and private-paper form must list all ten labs");
+assert.equal((html.match(/<option value="(?:profile|meaning|obligation|after|decoder|genealogy|builder|criticize|blame|reasons|evidence|standing|tradeoffs|emotions)">/g) || []).length, 28, "both the public filter and private-paper form must list all fourteen labs");
 assert.match(source, /paper\.labs\.includes\(state\.labFilter\)/, "lab filtering must use explicit source tags");
 assert.match(source, /className = "paper-lab-use"/, "cards must disclose which labs use a source");
 
-console.log(`Papers audit passed: ${CURATED_PAPERS.length} curated sources, ten lab filters, complete source tagging, and six Reasons Lab foundations verified.`);
+console.log(`Papers audit passed: ${CURATED_PAPERS.length} curated sources, fourteen lab filters, complete source tagging, and dedicated foundations for all new labs verified.`);

@@ -107,15 +107,45 @@ function buildConnections(map) {
     `The Reasons Lab most often used “${metric(map.reasons, "Most-used source")}.” Your community code relied most on “${metric(map.builder, "Leading foundations")}.” Ask whether that source gives each resident a reason, merely supports a public justification, or does different work for different people.`,
     ["Reasons Lab", "Community-Code Simulator"],
   ));
+  if (has("reasons", "evidence")) items.push(connection(
+    "Practical and epistemic reasons",
+    `Your action cases most often used “${metric(map.reasons, "Most-used source")}.” Your belief cases most often used “${metric(map.evidence, "Most-used account")}.” Ask whether these are two forms of the same favoring relation or whether evidence receives a different source and scope.`,
+    ["Reasons Lab", "Evidence Lab"],
+  ));
   if (has("builder", "criticize")) items.push(connection(
     "Building and criticizing rules",
     `Your code leaned on “${metric(map.builder, "Leading foundations")}.” Your social criticism most often used “${metric(map.criticize, "Most-used ground")}.” Would that ground also permit criticism of the code you built?`,
     ["Community-Code Simulator", "Social Criticism Lab"],
   ));
+  if (has("standing", "builder")) items.push(connection(
+    "Standing and code membership",
+    `The Standing Lab most often used “${metric(map.standing, "Most-used ground")}.” Your community code relied most on “${metric(map.builder, "Leading foundations")}.” Ask whether everyone with direct standing is represented by the code, and whether membership creates standing or only institutional protection.`,
+    ["Standing Lab", "Community-Code Simulator"],
+  ));
+  if (has("standing", "tradeoffs")) items.push(connection(
+    "Inclusion and comparison",
+    `Your standing boundary most often used “${metric(map.standing, "Most-used ground")}.” Your value conflicts most often used “${metric(map.tradeoffs, "Most-used method")}.” Ask how an included claim enters that comparison and whether any method quietly excludes parties the standing lab counted.`,
+    ["Standing Lab", "Value Conflict Lab"],
+  ));
+  if (has("profile", "tradeoffs")) items.push(connection(
+    "Choice signals and comparison rules",
+    `Your Moral Profile’s leading reason was “${metric(map.profile, "Leading reason")}.” The Value Conflict Lab most often used “${metric(map.tradeoffs, "Most-used method")}.” Ask whether the comparison rule explains that signal across cases or changes when another value becomes salient.`,
+    ["Moral Profile", "Value Conflict Lab"],
+  ));
   if (has("after", "blame")) items.push(connection(
     "Blame language and blame’s purpose",
     `Your post-error practice leaned toward “${metric(map.after, "Most-used strategy")}.” In the Blame Laboratory, your most-used response was “${metric(map.blame, "Most-used response")},” and the zero-purpose control was “${metric(map.blame, "Pure-desert control")}.” Ask what your blame words communicate about purpose and desert.`,
     ["After Moral Facts", "Blame Laboratory"],
+  ));
+  if (has("blame", "emotions")) items.push(connection(
+    "Blame responses and emotional roles",
+    `Your blame cases most often used “${metric(map.blame, "Most-used response")}.” Your emotion cases most often used “${metric(map.emotions, "Most-used account")}.” Ask whether the emotion serves that same human purpose, communicates a different one, or preserves desert after the policy has rejected it.`,
+    ["Blame Laboratory", "Moral Emotions Lab"],
+  ));
+  if (has("after", "emotions")) items.push(connection(
+    "Post-error language and emotion",
+    `Your post-error language policy leaned toward “${metric(map.after, "Most-used strategy")}.” Your moral-emotion cases most often used “${metric(map.emotions, "Most-used account")}.” Ask whether the emotion’s expression matches the meaning and honesty rules of that language policy.`,
+    ["After Moral Facts", "Moral Emotions Lab"],
   ));
   if (has("genealogy", "reasons")) items.push(connection(
     "Origins and reasons",
@@ -130,7 +160,7 @@ function buildConnections(map) {
 
   if (!items.length) items.push(connection(
     "Save two related labs to begin",
-    "Good starting pairs are Meaning → After Moral Facts, Missing Ought → Reasons, Build → Criticize, and After Moral Facts → Blame.",
+    "Good starting pairs are Meaning → After Moral Facts, Reasons → Evidence, Standing → Value Conflict, Build → Criticize, and Blame → Moral Emotions.",
     ["Suggested route"],
   ));
   return items;

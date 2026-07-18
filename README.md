@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of ten interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of fourteen interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. A four-question [lab finder](find.html) offers three starting points without acting as a personality test, while the public [Method & Limits page](method.html) states exactly what every diagnostic measures, does not measure, and flags. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -14,6 +14,10 @@ The current tools work together without forming a required sequence:
 8. [Can You Criticize Your Own Society?](criticize.html) distinguishes eight grounds on which a dissenter can challenge an accepted practice without treating social approval, human reasons, and objective moral truth as the same claim.
 9. [The Blame Laboratory](blame.html) separates seven human purposes for adverse responses from retributive suffering and tests what responsibility practices remain without basic desert.
 10. [What Gives You a Reason?](reasons.html) separates explanation, motivation, and genuine practical support, then tests six accounts of what can count in favor after objective moral facts are set aside.
+11. [Why Follow the Evidence?](evidence.html) separates truth-directed support, belief’s aim, truth-seeking projects, usefulness, inquiry rules, public procedure, and epistemic anti-normativism.
+12. [Who Gets Counted?](standing.html) tests eight boundaries of direct standing without confusing inclusion, equal weight, and the final outcome.
+13. [When Values Won’t Add Up](tradeoffs.html) compares eight ways of handling value conflict when no universal measuring unit is assumed.
+14. [Moral Emotions After Moral Facts](emotions.html) asks what can support, redirect, or retire guilt, shame, resentment, indignation, gratitude, and pride after basic desert is removed.
 
 Each result page offers an optional “Save to My Metaethical Map” control. [My Metaethical Map](map.html) stores only a result headline and three summary fields per lab in the current browser. It never saves full answers or AI prompts, never uploads data, and never compresses the suite into one coherence score. Users can compare related lab summaries, copy a readable report, download JSON, remove one result, or erase the entire map.
 
@@ -59,7 +63,15 @@ The [After Moral Facts practical lab](after.html) begins by holding moral error 
 
 [What Gives You a Reason?](reasons.html) holds fixed only the absence of objective moral facts. It first distinguishes explanatory reasons, motivating reasons, and normative or favoring reasons. Users then compare six possible sources across seven pressure cases: current aims, better-informed aims, chosen commitments, fair terms, aim-independent practical reasons, and skepticism about any literal favoring fact. Separate questions test the relation between reasons and motivation and whether moral skepticism extends to all practical or epistemic reasons. Results show selections divided by identical opportunities, preserve ties, audit what every answer establishes and leaves open, compare the opening and final definitions, flag only exact cross-answer seams, and create a fully contextual optional AI interview prompt. The lab does not infer that moral non-realism entails reasons internalism, externalism, constructivism, or global normative skepticism.
 
-The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, practical reasons, responsibility skepticism, evolutionary challenges to realism, and post-error practice. Every source is tagged with the lab or labs it supports, and the collection can be filtered by lab. It notes that these neighboring debates do not all use the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
+[Why Follow the Evidence?](evidence.html) asks why evidence should guide belief rather than assuming that truth indication automatically supplies normative force. Seven cases separate truth-directed reasons, belief’s constitutive aim, truth-seeking desires, practical usefulness, inquiry practices, publicly defensible procedures, and epistemic anti-normativism. The cases include comforting error, a useless mathematical truth, unanimous expert preference against a reliable instrument, lucky true belief, inaccessible past evidence, a beneficial placebo belief, and a fully indifferent believer. Results count only the seven case selections, compare opening and final accounts separately, preserve ties, flag exact scope seams, and keep moral skepticism distinct from conclusions about epistemic normativity.
+
+[Who Gets Counted?](standing.html) defines direct standing as counting for one’s own sake rather than merely because one is useful, owned, admired, or connected to someone else. Users test felt experience, agency, interests, relationships, membership, approval-independent status, constructed inclusion, and denial of direct standing across a short-lived sentient animal, isolated newborn, advance directive, conscious software, future people, non-conscious collective agent, and untouched ecosystem. The diagnostic keeps standing separate from weight and outcome, identifies exact boundary seams, and does not announce which entities really possess moral status.
+
+[When Values Won’t Add Up](tradeoffs.html) tests how conflicts can be handled when safety, privacy, loyalty, life, culture, community, and welfare do not arrive in one unit. Its eight methods are common-scale aggregation, priority to the worse off, protected boundaries, emergency thresholds, lexical priority, plural judgment, fair procedure, and chosen settlement without an objective ranking. Results distinguish comparing values, settling action, and proving one value objectively greater; they also show where a stated general method needs a secondary rule, threshold, or public procedure.
+
+[Moral Emotions After Moral Facts](emotions.html) examines guilt, shame, resentment, indignation, gratitude, and pride under the conditional removal of approval-independent moral desert. Seven cases separate desert-tracking emotion, harm recognition, relational accountability, protest, repair, expression and coordination, personal regulation, and revision or retirement of the moralized response. The lab distinguishes an emotion’s cause, appraisal, function, expression, intensity, and duration. It is philosophical and educational rather than a mental-health assessment.
+
+The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, practical and epistemic reasons, moral standing, value pluralism, blame, moral emotions, responsibility skepticism, evolutionary challenges to realism, and post-error practice. Every source is tagged with the lab or labs it supports, and the collection can be filtered by lab. It notes that these neighboring debates do not all use the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
 
@@ -84,6 +96,12 @@ node tests/builder-audit.cjs
 node tests/criticize-audit.cjs
 node tests/blame-audit.cjs
 node tests/reasons-audit.cjs
+node tests/finder-audit.cjs
+node tests/method-audit.cjs
+node tests/evidence-audit.cjs
+node tests/standing-audit.cjs
+node tests/tradeoffs-audit.cjs
+node tests/emotions-audit.cjs
 node tests/papers-audit.cjs
 node tests/suite-map-audit.cjs
 node tests/hub-audit.cjs
@@ -102,3 +120,9 @@ node tests/hub-audit.cjs
 - [Reasons for Action: Internal vs. External](https://plato.stanford.edu/entries/reasons-internal-external/)
 - [Internal and External Reasons](https://doi.org/10.1017/CBO9781139165860.009)
 - [Constructivism about Reasons](https://doi.org/10.1093/oso/9780199542062.003.0009)
+- [Why Are Epistemic Reasons Normative?](https://doi.org/10.1017/epi.2023.13)
+- [Are Epistemic Reasons Normative?](https://doi.org/10.1111/nous.12379)
+- [The Grounds of Moral Status](https://plato.stanford.edu/entries/grounds-moral-status/)
+- [Weighing Reasons](https://plato.stanford.edu/entries/weighing-reasons/)
+- [Incommensurable Values](https://plato.stanford.edu/entries/value-incommensurable/)
+- [Blame](https://plato.stanford.edu/entries/blame/)

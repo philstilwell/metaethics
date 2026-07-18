@@ -8,7 +8,7 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const source = fs.readFileSync(path.join(root, "suite-map.js"), "utf8");
 const mapHtml = fs.readFileSync(path.join(root, "map.html"), "utf8");
-const labPages = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html"];
+const labPages = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html", "evidence.html", "standing.html", "tradeoffs.html", "emotions.html"];
 const storage = new Map();
 const context = {
   localStorage: {
@@ -30,8 +30,8 @@ vm.runInContext(source, context);
 const api = context.window.MoralCompassSuiteMap;
 
 assert.ok(api, "the shared map API must be available");
-assert.equal(Object.keys(api.LABS).length, 10, "the map must know all ten labs");
-assert.equal(new Set(Object.values(api.LABS).map((lab) => lab.href)).size, 10, "each lab must have one unique route");
+assert.equal(Object.keys(api.LABS).length, 14, "the map must know all fourteen labs");
+assert.equal(new Set(Object.values(api.LABS).map((lab) => lab.href)).size, 14, "each lab must have one unique route");
 for (const [labId, lab] of Object.entries(api.LABS)) {
   const labHtml = fs.readFileSync(path.join(root, lab.href), "utf8");
   assert.equal(lab.metrics.length, 3, `${labId} must save exactly three transparent summary metrics`);
@@ -62,4 +62,4 @@ assert.match(mapHtml, /id="eraseMapButton"/, "the map must provide an erase-all 
 assert.match(mapHtml, /id="downloadMapButton"/, "the map must provide an export control");
 assert.match(source, /not your full answers or AI prompt/, "the opt-in control must disclose its limited payload");
 
-console.log("Suite-map audit passed: ten opt-in summaries, three transparent metrics each, local round-trip, export/erase controls, and no global score verified.");
+console.log("Suite-map audit passed: fourteen opt-in summaries, three transparent metrics each, local round-trip, export/erase controls, and no global score verified.");

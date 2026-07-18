@@ -1,0 +1,20 @@
+"use strict";
+const assert = require("node:assert/strict");
+const { auditCaseLab } = require("./case-lab-audit-helper.cjs");
+const result = auditCaseLab({ configFile: "standing-config.js", htmlFile: "standing.html", expectedId: "standing", expectedFamilies: 8 });
+const { api, config, reset } = result;
+const uniform = (family) => Object.fromEntries(config.cases.map((question) => [question.id, family]));
+
+reset({ opening: "none", final: "none", ...uniform("experience") });
+assert.ok(api.caseLabSeams().some((seam) => seam.id === "denial-reach"), "a final denial must be compared with positive case-level standing");
+reset({ opening: "agency", final: "agency", ...uniform("agency"), infant: "experience" });
+assert.ok(api.caseLabSeams().some((seam) => seam.id === "pre-agency-infant"), "an included newborn must be compared with an agency-only final boundary");
+reset({ opening: "experience", final: "experience", ...uniform("experience"), ecosystem: "membership" });
+assert.ok(api.caseLabSeams().some((seam) => seam.id === "nonconscious-nature"), "a non-conscious ecosystem must be compared with an experience-only final boundary");
+reset({ opening: "constructed", final: "constructed", ...uniform("constructed"), animal: "objective", infant: "objective" });
+assert.ok(api.caseLabSeams().some((seam) => seam.id === "discovered-inside-constructed"), "repeated objective status must be compared with a constructed final boundary");
+reset({ opening: "none", final: "none", ...uniform("none") });
+assert.equal(api.caseLabSeams().length, 0, "a uniform direct-standing denial must not receive an invented seam");
+assert.match(result.html, /Having standing is not the same as getting equal weight/, "the lab must separate standing from weight");
+assert.match(config.opening.context, /not only because a human owns it/, "the opening must define direct rather than instrumental standing");
+console.log(`Standing audit passed: ${result.profiles.toLocaleString()} complete case profiles, eight exact grounds, direct/indirect and standing/weight boundaries, scope seams, and full AI context verified.`);

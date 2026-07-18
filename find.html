@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Answer four plain-language questions and find the Moral Compass labs most relevant to what is bothering you." />
+    <meta name="theme-color" content="#151a17" />
+    <title>Find a Lab — The Moral Compass</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="finder-page">
+    <a class="skip-link" href="#finderMain">Skip to the lab finder</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home"><span class="brand-mark" aria-hidden="true">MC</span><span>The Moral Compass</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="find.html" aria-current="page">Find a lab</a>
+        <a href="index.html#toolkit">All labs</a>
+        <a href="map.html">My map</a>
+        <a href="method.html">Method</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="finderMain">
+      <section class="finder-hero" aria-labelledby="finderTitle">
+        <div>
+          <p class="kicker">A sixty-second starting point</p>
+          <h1 id="finderTitle">Which question is <em>really bothering you?</em></h1>
+          <p>Answer four short questions. You will receive three suggested labs and a plain explanation of why each one fits. This is routing—not a personality test or diagnosis.</p>
+        </div>
+        <aside>
+          <strong>4 questions</strong>
+          <span>About 60 seconds</span>
+          <span>No answer is saved</span>
+        </aside>
+      </section>
+
+      <section class="finder-shell" id="finderSurvey" aria-labelledby="finderQuestion">
+        <div class="finder-progress">
+          <div><span id="finderStep">1 / 4</span><button id="finderReset" type="button">Reset</button></div>
+          <div role="progressbar" id="finderProgress" aria-label="Lab finder progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span id="finderProgressBar"></span></div>
+        </div>
+        <article class="finder-question-card">
+          <p class="kicker" id="finderAxis">Your starting point</p>
+          <h2 id="finderQuestion" tabindex="-1"></h2>
+          <p id="finderContext"></p>
+          <fieldset id="finderChoices" aria-labelledby="finderQuestion"><legend class="visually-hidden">Choose one answer</legend></fieldset>
+          <div class="finder-navigation">
+            <button class="text-button" id="finderBack" type="button">← Back</button>
+            <button class="primary-button" id="finderNext" type="button" disabled>Next question →</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="finder-results hidden" id="finderResults" aria-labelledby="finderResultTitle">
+        <div class="results-hero finder-results-hero">
+          <p class="kicker">Your suggested route</p>
+          <h1 id="finderResultTitle" tabindex="-1">Start with the question closest to yours.</h1>
+          <p>These suggestions reflect only the four routing answers you selected. They do not describe your moral position.</p>
+        </div>
+        <div class="finder-result-grid" id="finderResultGrid"></div>
+        <section class="interpretation finder-interpretation">
+          <div><p class="kicker">No forced sequence</p><h2>One lab may change which question you want to ask next.</h2></div>
+          <p>The first recommendation is the closest match, not a required starting point. You can open any lab, return here, or browse the complete suite.</p>
+        </section>
+        <div class="result-actions">
+          <button class="primary-button" id="finderAgain" type="button">Choose again</button>
+          <a class="secondary-button" href="index.html#toolkit">Browse every lab</a>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>The lab finder runs entirely in this page. It stores and sends nothing.</p><p><a href="method.html">See how the diagnostics work</a></p></footer>
+    <noscript><p class="noscript-note">The lab finder needs JavaScript to calculate suggestions. You can still browse every lab from the home page.</p></noscript>
+    <script src="find.js"></script>
+  </body>
+</html>
