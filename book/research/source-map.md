@@ -80,7 +80,7 @@ The manuscript must preserve these distinctions:
 
 ## Manuscript implementation status
 
-Parts I–VI are now drafted through Chapter 37. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
+Parts I–VII are now drafted through Chapter 41, completing the main manuscript. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
 
 - Chapter 12 separates causal explanation, motivating considerations, evidence-relative support, fact-relative support, and aim-independent favoring force.
 - Chapter 13 tests present, coherent, informed, vividly appreciated, and identity-integrated aims without treating humane idealization as neutral correction.
@@ -122,6 +122,15 @@ The last-repairs sequence planned from `criticize.js`, `build.js`, `blame.js`, `
 - Chapter 37 performs the general grounding partition across actual stances, idealized stances, authorities, non-evaluative natural facts, rational or conceptual requirements, brute evaluative facts or aim-independent reasons, and hybrids. It explicitly preserves the epistemic-normativity boundary and distinguishes failure to earn the requested system from proof that no logically possible moral fact exists.
 
 Inspection Report VI returns to the original nine-part specification and classifies every surviving clause by the kind of support it has actually earned. The section's result is therefore cumulative rather than a repeated objection: useful criticism, public construction, constrained power, responsibility practices, and emotional literacy survive, while the approval-independent moral warrant remains unpaid.
+
+The post-search sequence planned from `after.js`, `build.js`, `emotions-config.js`, the comparison material, and the method register is implemented in Chapters 38–41:
+
+- Chapter 38 keeps abolition, conscious fiction, conservation, expressivist revision, constructivist revision, and ordinary-language pragmatism as separate language policies. Promises, parenting, friendship, blame, criminal law, reform, and public persuasion receive context-specific treatment, with mandatory translation triggers for coercion and serious misunderstanding.
+- Chapter 39 inventories pain, pleasure, fear, attachment, grief, trust, betrayal, dependence, agency, humiliation, domination, scarcity, evidence, moralized emotions, causal responsibility, institutions, law, agreement, identity, power, repair, imagination, and hope. Ten worked translations show that removing objective language need not weaken concrete stakes.
+- Chapter 40 defines primitive emotions and values as actual practical starting points without making them infallible, universal, biologically fixed, immune from evidence, or automatically fit for law. The Lark Square case implements the full sequence from reported response through stake, factual model, operational value, distribution, policy mechanism, safeguard, measurement, review, and repair.
+- Chapter 41 delivers the final admonition against treating moral theories as sovereign constituencies entitled to portions of a policy compromise. It preserves theories as attention directors and counterexample generators while relocating public standing to affected beings. The fourteen-part Civic Stakes Brief integrates standing, emotions, values, evidence, comparison, resources, power, alternatives, safeguards, measures, sunset, and repair.
+
+The constructive ending explicitly rejects a direct emotion-to-law inference. Shared emotions and values create possible alliances; they do not certify facts, settle scope, rank tradeoffs, generate consensus, or erase power. When common concern fails, the manuscript names bargaining, procedure, coercion, and force rather than redescribing them as agreement. This makes the final values-to-policy method more demanding than the source material while preserving its core distinctions.
 
 ## Secondary literature already represented locally
 

@@ -5,7 +5,7 @@
 - Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
 - Audit date: July 18, 2026
 - Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
-- Manuscript coverage status: Parts I–VI drafted through Chapter 37
+- Manuscript coverage status: Parts I–VII drafted through Chapter 41; main manuscript complete
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
 
@@ -41,7 +41,11 @@ Inspection Report V confirms alignment at the level of method as well as topic. 
 
 Chapters 32–37 now implement the remaining pre-constructive alignment commitments. Chapter 32 uses the criticism grounds without converting their non-ordinal categories into a single scale. Chapter 33 implements the community-code decisions and preserves support, compliance, legitimacy, jurisdiction, and objective obligation as non-substitutable. Chapter 34 makes coercion and force explicit while adding the required safeguards and stopping rules. Chapter 35 separates responsibility practices from basic desert. Chapter 36 fully implements the moral-emotions expansion rather than treating it as an appendix to blame. Chapter 37 carries epistemic normativity, standing, comparison, desert, and hybrid ordering into the general grounding audit.
 
-The resulting Part VI conclusion remains within the site's inference discipline: no examined route earns a system that is simultaneously stance-independent, contentful, authoritative for rejecters, accessible, coherent through conflict, and usable without an unsupported selector. The manuscript does not inflate this into a deductive proof that no possible objective moral property exists. Inspection Report VI labels what survives as factual, instrumental, expressive, commitment-based, agreement- or role-based, procedural, enforced, or objectively asserted but unpaid. This completes alignment through the general result; the remaining site-derived work is the Part VII transition from primitive emotions and values to public policy without reinstating an abstract moral sovereign.
+The resulting Part VI conclusion remains within the site's inference discipline: no examined route earns a system that is simultaneously stance-independent, contentful, authoritative for rejecters, accessible, coherent through conflict, and usable without an unsupported selector. The manuscript does not inflate this into a deductive proof that no possible objective moral property exists. Inspection Report VI labels what survives as factual, instrumental, expressive, commitment-based, agreement- or role-based, procedural, enforced, or objectively asserted but unpaid.
+
+Chapters 38–41 now complete the Part VII transition from primitive emotions and values to public policy without reinstating an abstract moral sovereign. Chapter 38 preserves the non-ordinal post-error language options and makes policy choice context-sensitive. Chapter 39 prevents the nihilist inference by inventorying the concrete phenomena that survive. Chapter 40 treats emotions as salience signals whose appraisals require factual testing and whose values require explicit scope and comparison before policy. Chapter 41's Civic Stakes Brief integrates the expanded standing, comparison, evidence, emotion, code-construction, criticism, responsibility, and power material into one reusable institutional procedure.
+
+The final admonition is therefore aligned with both the audited revision and the book's governing promise: stop allocating public compromise among abstract moral systems; begin with lived responses and operational values, test their factual models, represent affected parties, expose unresolved tradeoffs and coercion, add safeguards, and revise against evidence. Partial agreement remains partial. Policies are presented as supported, constructed, enforced, and corrigible rather than objectively certified.
 
 ## Future update procedure
 
