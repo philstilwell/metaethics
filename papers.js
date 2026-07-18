@@ -78,6 +78,15 @@ const CURATED_PAPERS = [
     note: "A clear map of moral error theory and the main choices that follow it: ending moral talk, preserving it as a fiction, or keeping parts of present practice.",
   },
   {
+    id: "joyce-error-to-fiction",
+    title: "Morality: From Error to Fiction",
+    author: "Richard Joyce",
+    year: 2024,
+    approach: "Post-error practice",
+    url: "https://www.richard-joyce.com/morality-from-error-to-fiction",
+    note: "A book-length account of the practical question behind the After Moral Facts lab. It develops moral fictionalism as one response to error theory and places it beside abolitionist alternatives.",
+  },
+  {
     id: "eriksson-olson",
     title: "Moral Practice after Error Theory: Negotiationism",
     author: "Björn Eriksson & Jonas Olson",

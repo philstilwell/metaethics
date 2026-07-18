@@ -30,6 +30,8 @@ The [Missing Ought obligation lab](obligation.html) is a sister interactive. Sev
 
 The [What Do You Mean by Wrong? meaning lab](wrong.html) is a seven-question branching diagnostic about moral language. The first answer selects one of four deeper routes—fact claims, practical commitments, standards and procedures, or language used as a tool—while every question continues to offer the same six interpretations. Results map robust moral realism, error theory, plan/norm expressivism, standard-relative readings, idealized-procedure constructivism, and revolutionary moral fictionalism; compare the opening and final definitions; report exact answer counts; examine four explicitly selected cross-family combinations; and generate a complete optional AI interview prompt. The tool notes that these are narrow comparison families rather than complete definitions, relativism is not automatically anti-realism, and constructivism’s classification is disputed.
 
+The [After Moral Facts practical lab](after.html) begins by holding moral error theory fixed and asking what should happen next. Nine questions cover a general opening policy, promises, parenting, friendship, blame, criminal law, political reform, public persuasion, and a final general policy. Every case offers the same six post-error responses: abolitionism, revolutionary fictionalism, conservationism, expressivist revision, constructivist revision, and ordinary-language pragmatism. Results report exact, non-ordinal counts; compare the opening and final recommendation; explain five selected cross-policy combinations without automatically calling them incoherent; visualize all six policies; and create a complete optional AI interview prompt. The final three families are explicitly presented as broad revision strategies used by the lab rather than mutually exclusive canonical theories.
+
 The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, evolutionary challenges to realism, and post-error practice. Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
@@ -48,6 +50,7 @@ Run the measurement-logic audit with:
 node tests/logic-audit.cjs
 node tests/obligation-audit.cjs
 node tests/meaning-audit.cjs
+node tests/after-audit.cjs
 ```
 
 ## Sources

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A practical, plain-language lab about what to do with moral language if objective moral facts do not exist."
+    />
+    <meta name="theme-color" content="#151a17" />
+    <title>After Moral Facts — The Moral Compass</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Moral Compass home">
+        <span class="brand-mark" aria-hidden="true">MC</span>
+        <span>The Moral Compass</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Profile</a>
+        <a href="obligation.html">Obligation</a>
+        <a href="wrong.html">Meaning</a>
+        <a href="after.html" aria-current="page">After</a>
+        <a href="papers.html">Papers</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <p class="visually-hidden" id="afterLiveStatus" role="status" aria-live="polite"></p>
+
+      <section class="meaning-hero after-hero">
+        <div class="meaning-hero-copy after-hero-copy">
+          <p class="kicker">The error would be a beginning, not an ending.</p>
+          <h1>After moral facts, <em>what comes next?</em></h1>
+          <p>
+            Suppose there are no objective moral facts. What should we do with moral language?
+            Nine choices test how you would speak, teach, promise, blame, govern, reform, and persuade.
+          </p>
+          <a class="primary-button" href="#afterLab">Begin with the premise <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="meaning-quote-card after-quote-card">
+          <span class="card-number" aria-hidden="true">03</span>
+          <p class="kicker">The working premise</p>
+          <blockquote>“No action has an objective moral status.”</blockquote>
+          <p>Harms, promises, laws, values, trust, love, and conflict would still be real. The question is how to talk about them.</p>
+        </aside>
+      </section>
+
+      <section class="meaning-intro after-intro" aria-labelledby="afterIntroHeading">
+        <div>
+          <p class="kicker">The “what next?” problem</p>
+          <h2 id="afterIntroHeading">Rejecting objective moral facts does not choose a language policy for us.</h2>
+        </div>
+        <div class="meaning-job-grid after-policy-grid">
+          <article>
+            <span>Retire</span>
+            <h3>“Stop making literal moral claims.”</h3>
+            <p>Describe harm, rules, promises, aims, and opposition directly instead of calling things objectively right or wrong.</p>
+          </article>
+          <article>
+            <span>Preserve</span>
+            <h3>“Keep the familiar practice.”</h3>
+            <p>Continue ordinary moral belief, or knowingly retain moral talk as a useful fiction.</p>
+          </article>
+          <article>
+            <span>Revise</span>
+            <h3>“Give the words a clearer job.”</h3>
+            <p>Use them openly for commitments, shared procedures, agreements, or practical shorthand.</p>
+          </article>
+        </div>
+        <details class="meaning-definition after-definition">
+          <summary>What exactly are we assuming?</summary>
+          <div class="definition-copy">
+            <p>
+              Treat the premise as settled only for this lab: there are no moral properties that make an
+              action objectively right, wrong, required, forbidden, or deserved regardless of every person’s
+              values and standards. The lab does not claim to prove that premise.
+            </p>
+            <p>
+              It also does not assume that pain, agreements, legal rules, social pressure, love, or human
+              commitments disappear. The six answers are possible policies for thought and language. They can
+              overlap in real life, and the last three are broad revision strategies rather than single,
+              universally accepted philosophical theories.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <section class="workspace meaning-workspace after-workspace" id="afterLab">
+        <div class="survey-column">
+          <div class="progress-shell">
+            <div class="progress-meta">
+              <span id="afterPhase">Starting policy</span>
+              <div class="progress-actions">
+                <button class="progress-reset" id="resetAfterButton" type="button">Reset</button>
+                <span id="afterProgress">1 / 9</span>
+              </div>
+            </div>
+            <div
+              class="progress-track"
+              id="afterProgressTrack"
+              role="progressbar"
+              aria-label="After Moral Facts progress"
+              aria-valuemin="1"
+              aria-valuemax="9"
+              aria-valuenow="1"
+            >
+              <span id="afterProgressBar"></span>
+            </div>
+          </div>
+
+          <article class="question-card" id="afterQuestionCard">
+            <div class="question-heading">
+              <span class="question-number" id="afterQuestionNumber">01</span>
+              <div>
+                <p class="question-axis" id="afterQuestionAxis"></p>
+                <h2 id="afterQuestionPrompt"></h2>
+              </div>
+            </div>
+            <p class="question-context" id="afterQuestionContext"></p>
+            <div class="question-boundaries">
+              <div>
+                <strong>Hold these facts fixed</strong>
+                <p id="afterAssumptions"></p>
+              </div>
+              <div>
+                <strong>What this question tests</strong>
+                <p id="afterScope"></p>
+              </div>
+            </div>
+            <details class="plain-explanation" id="afterExplanation">
+              <summary>Example and further explanation</summary>
+              <div class="explanation-body">
+                <div class="explanation-part">
+                  <strong>In plain words</strong>
+                  <p id="afterPlain"></p>
+                </div>
+                <div class="explanation-part explanation-example">
+                  <strong>Keep separate</strong>
+                  <p id="afterSeparate"></p>
+                </div>
+                <div class="explanation-part">
+                  <strong>What your answer shows</strong>
+                  <p id="afterReveal"></p>
+                </div>
+              </div>
+            </details>
+            <fieldset class="choice-list meaning-choice-list" id="afterChoices" aria-labelledby="afterQuestionPrompt">
+              <legend class="visually-hidden">Choose one language policy</legend>
+            </fieldset>
+            <div class="question-footer">
+              <div class="question-navigation">
+                <button class="text-button" id="afterBackButton" type="button">← Back</button>
+                <button class="secondary-button" id="afterNextButton" type="button" disabled>Next question →</button>
+              </div>
+              <p id="afterWhy"></p>
+            </div>
+          </article>
+        </div>
+
+        <div id="liveAfterMapMount">
+          <aside class="live-panel meaning-live-panel after-live-panel" id="afterMapCard" aria-labelledby="afterMapHeading">
+            <div class="live-header">
+              <div>
+                <p class="kicker" id="afterMapKicker">Your answers so far</p>
+                <h2 id="afterMapHeading">What happens to moral language?</h2>
+              </div>
+              <div class="pulse-dot" aria-hidden="true"></div>
+            </div>
+            <p class="meaning-route-note" id="afterMapNote">Each answer records one practical language policy.</p>
+            <p class="meaning-map-basis" id="afterMapBasis">0 of 9 answers classified</p>
+            <div class="meaning-map" id="afterMap" role="img" aria-label="No language policies classified yet"></div>
+            <p class="meaning-map-note">Counts show how often you chose each policy. They are not grades, confidence scores, or claims about your personality.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results meaning-results after-results hidden" id="afterResults">
+        <div class="results-hero">
+          <p class="kicker">Post-error diagnostic</p>
+          <h1 id="afterResultTitle">—</h1>
+          <p id="afterResultSummary"></p>
+        </div>
+
+        <div class="scoreboard meaning-scoreboard">
+          <div class="score-card score-card-primary">
+            <span>Most-used policy</span>
+            <strong id="afterPrimary">—</strong>
+            <p id="afterPrimaryCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Pattern across nine answers</span>
+            <strong id="afterPattern">—</strong>
+            <p id="afterPatternCopy"></p>
+          </div>
+          <div class="score-card">
+            <span>Opening → final policy</span>
+            <strong id="afterOpeningFinal">—</strong>
+            <p id="afterOpeningFinalCopy"></p>
+          </div>
+        </div>
+
+        <div class="meaning-result-grid">
+          <div class="result-meaning-map-mount" id="resultAfterMapMount"></div>
+          <section class="report-section meaning-shift-section" aria-labelledby="afterShiftHeading">
+            <div class="section-heading">
+              <p class="kicker">Policy check</p>
+              <h2 id="afterShiftHeading">Five selected differences worth explaining</h2>
+            </div>
+            <div id="afterShiftReport"></div>
+          </section>
+        </div>
+
+        <section class="report-section meaning-answer-report" aria-labelledby="afterAnswerHeading">
+          <div class="section-heading">
+            <p class="kicker">All nine answers</p>
+            <h2 id="afterAnswerHeading">What you chose to preserve, revise, or retire</h2>
+          </div>
+          <div class="meaning-answer-grid" id="afterAnswerGrid"></div>
+        </section>
+
+        <section class="report-section meaning-family-section" aria-labelledby="afterFamilyHeading">
+          <div class="section-heading meaning-family-heading">
+            <div>
+              <p class="kicker">Six possible policies</p>
+              <h2 id="afterFamilyHeading">The names behind the plain-language answers</h2>
+            </div>
+            <p>These are practical policy families, not personality types. A defensible policy may combine them or use different ones in different settings.</p>
+          </div>
+          <div class="meaning-family-grid" id="afterFamilyGrid"></div>
+        </section>
+
+        <section class="interpretation meaning-conclusion after-conclusion">
+          <div>
+            <p class="kicker">Read this carefully</p>
+            <h2>Losing objective facts would not remove the need to choose.</h2>
+          </div>
+          <p>
+            Every policy still depends on aims: honesty, cooperation, protection, freedom, trust, stability,
+            or something else people value. This lab maps how you would use language after the premise. It
+            does not turn those aims into objective obligations or prove that one policy must govern every case.
+          </p>
+        </section>
+
+        <section class="report-section ai-probe-section" aria-labelledby="afterAIHeading">
+          <div class="section-heading ai-probe-heading">
+            <div>
+              <p class="kicker">Continue the inquiry</p>
+              <h2 id="afterAIHeading">Ask an AI to test your post-error policy</h2>
+            </div>
+            <p>
+              The prompt includes every case, fixed assumption, selected answer, exact count, opening-to-final
+              change, and selected policy conflict. It requests a careful interview rather than a quick verdict.
+            </p>
+          </div>
+          <div class="ai-privacy-note">
+            <strong>Nothing is sent by this site.</strong>
+            <span>Copy the prompt only if you choose to paste it into an AI service.</span>
+          </div>
+          <label class="ai-prompt-label" for="afterAIProbePrompt">Your ready-to-use interview prompt</label>
+          <textarea id="afterAIProbePrompt" rows="18" readonly spellcheck="false"></textarea>
+          <div class="ai-prompt-actions">
+            <button class="primary-button" id="copyAfterPromptButton" type="button">Copy AI prompt</button>
+            <p id="afterPromptCopyStatus" aria-live="polite">The prompt contains your answers but no name or account information.</p>
+          </div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-button" id="restartAfterButton" type="button">Run the practical lab again</button>
+          <a class="secondary-button" href="papers.html">Read the “what next?” papers</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This lab’s core contrast follows Richard Joyce’s
+        <a href="https://www.richard-joyce.com/morality-from-error-to-fiction" target="_blank" rel="noreferrer">account of moving from moral error to moral fiction</a>,
+        the <a href="https://plato.stanford.edu/entries/moral-anti-realism/" target="_blank" rel="noreferrer">Stanford Encyclopedia discussion of fictionalism and abolitionism</a>,
+        and the wider post-error debate collected in
+        <a href="https://www.richard-joyce.com/end-of-morality" target="_blank" rel="noreferrer"><cite>The End of Morality</cite></a>.
+      </p>
+      <p><a href="papers.html">Explore the non-realist reading room</a></p>
+    </footer>
+
+    <noscript>
+      <p class="noscript-note">This interactive lab needs JavaScript to display its questions and diagnostic.</p>
+    </noscript>
+    <script src="after.js"></script>
+  </body>
+</html>

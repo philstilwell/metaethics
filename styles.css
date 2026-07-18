@@ -2845,6 +2845,42 @@ dialog p:not(.kicker) {
   text-decoration: none;
 }
 
+/* After Moral Facts */
+
+.after-hero .meaning-quote-card {
+  background: linear-gradient(145deg, var(--acid) 0 18%, var(--paper-bright) 18% 100%);
+}
+
+.after-hero .meaning-quote-card blockquote {
+  max-width: 500px;
+  font-size: clamp(1.65rem, 2.8vw, 2.75rem);
+}
+
+.after-policy-grid article:nth-child(2) {
+  background: #eef2df;
+}
+
+.after-policy-grid article:nth-child(3) {
+  background: var(--acid);
+}
+
+.after-live-panel .meaning-route-note {
+  min-height: auto;
+}
+
+.after-choice .choice-copy strong {
+  font-size: 0.82rem;
+}
+
+.after-results .meaning-combination-list {
+  margin-top: 12px;
+}
+
+.after-conclusion {
+  border-color: #667735;
+  background: #edf2df;
+}
+
 .noscript-note {
   margin: 0;
   padding: 18px clamp(20px, 5vw, 72px);
@@ -3136,7 +3172,8 @@ dialog p:not(.kicker) {
 
   #aiProbePrompt,
   #obligationAIProbePrompt,
-  #meaningAIProbePrompt {
+  #meaningAIProbePrompt,
+  #afterAIProbePrompt {
     min-height: 330px;
     padding: 14px;
     font-size: 0.72rem;
