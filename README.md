@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of eight interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought and uses a nine-module grid with one position reserved for a future addition. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of nine interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -12,6 +12,7 @@ The current tools work together without forming a required sequence:
 6. [The Value Genealogy Lab](genealogy.html) traces possible influences on a conviction and distinguishes explanation, process distrust, content-level criticism, and burden-of-proof shifts.
 7. [Build a Morality Without Moral Facts](build.html) lets users draft a nine-rule community code, apply it to six pressure cases, and see which human bases carry its rules.
 8. [Can You Criticize Your Own Society?](criticize.html) distinguishes eight grounds on which a dissenter can challenge an accepted practice without treating social approval, human reasons, and objective moral truth as the same claim.
+9. [The Blame Laboratory](blame.html) separates seven human purposes for adverse responses from retributive suffering and tests what responsibility practices remain without basic desert.
 
 The Moral Profile presents six unusual moral situations involving emergency sacrifice, a dead person’s synthetic voice, loyalty and cheating, animal suffering and extinction, memory erasure, and a conscious digital replica. Each situation asks two separate questions:
 
@@ -51,7 +52,9 @@ The [After Moral Facts practical lab](after.html) begins by holding moral error 
 
 [Can You Criticize Your Own Society?](criticize.html) examines the challenge that reform and dissent pose to simple current-majority relativism without treating that simple view as every form of relativism. Users state a general definition of valid criticism, enter six societies involving inherited caste, a unanimous safety cover-up, judgment across time, overlapping communities, a broken equal-citizenship promise, and an openly pro-conquest culture, then state the definition again. Every case answer maps transparently to exactly one of eight grounds: current majority approval, subcommunity standards, internal inconsistency, previously promised rights, personal commitment, harm or autonomy, idealized agreement, and approval-independent moral truth. The diagnostic reports selections divided by opportunities, keeps four broad routes non-ordinal, audits what each answer establishes and leaves open, flags only exact definition mismatches, isolates the society-boundary problem, and generates a complete optional AI interview prompt.
 
-The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, evolutionary challenges to realism, and post-error practice. It notes that not every constructivist or relativist uses the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
+[The Blame Laboratory](blame.html) is a conditional exercise that removes basic-desert suffering while preserving facts about causal agency, intention, harm, present risk, repair, trust, social standards, and possible change. Users state a general response policy, enter six cases involving life-support sabotage, a sold memory, a public rescue hoax, a reformed pilot, a coerced nurse, and a deadly workplace incentive, then face a zero-purpose control in which one minute of pain cannot benefit or inform anyone. Every practical case answer maps to exactly one of eight responses: protection, deterrence, restitution, rehabilitation, boundary-setting, withdrawal of trust, public condemnation, or retributive suffering. The diagnostic reports selections divided by opportunities, gives every response a safeguard and stopping rule, identifies any reintroduction of desert, compares opening and final policy, flags exact policy mismatches, and generates a full optional AI interview prompt. The page explicitly notes that moral non-realism and skepticism about free will or basic-desert responsibility are independent positions.
+
+The [papers page](papers.html) includes the project’s source papers and a curated reading room on expressivism, error theory, abolitionism, fictionalism, constructivism, moral relativism, responsibility skepticism, evolutionary challenges to realism, and post-error practice. It notes that these neighboring debates do not all use the label “non-realist.” Visitors can also add papers to a private shelf stored only in their browser.
 
 ## Run locally
 
@@ -74,6 +77,7 @@ node tests/decoder-audit.cjs
 node tests/genealogy-audit.cjs
 node tests/builder-audit.cjs
 node tests/criticize-audit.cjs
+node tests/blame-audit.cjs
 node tests/hub-audit.cjs
 ```
 
@@ -85,3 +89,4 @@ node tests/hub-audit.cjs
 - [Morality and Evolutionary Biology](https://plato.stanford.edu/entries/morality-biology/)
 - [Constructivism in Metaethics](https://plato.stanford.edu/entries/constructivism-metaethics/)
 - [Moral Relativism](https://plato.stanford.edu/entries/moral-relativism/)
+- [Skepticism About Moral Responsibility](https://plato.stanford.edu/entries/skepticism-moral-responsibility/)
