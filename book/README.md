@@ -41,9 +41,15 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [manuscript/03-what-are-you-doing-when-you-say-wrong.md](manuscript/03-what-are-you-doing-when-you-say-wrong.md) — drafted third chapter.
 - [manuscript/04-the-specification-sheet.md](manuscript/04-the-specification-sheet.md) — drafted fourth chapter.
 - [manuscript/05-one-argument-eight-disagreements.md](manuscript/05-one-argument-eight-disagreements.md) — drafted fifth chapter and Part I inspection.
+- [manuscript/06-draw-the-circle.md](manuscript/06-draw-the-circle.md) — drafted sixth chapter on direct standing and boundary discipline.
+- [manuscript/07-decide-what-receives-a-verdict.md](manuscript/07-decide-what-receives-a-verdict.md) — drafted seventh chapter on objects of evaluation and moral status grammar.
+- [manuscript/08-name-what-matters.md](manuscript/08-name-what-matters.md) — drafted eighth chapter on value families, roles, and priority classes.
+- [manuscript/09-turn-values-into-guidance.md](manuscript/09-turn-values-into-guidance.md) — drafted ninth chapter on generation rules, selectors, and exceptions.
+- [manuscript/10-choosing-without-a-common-measure.md](manuscript/10-choosing-without-a-common-measure.md) — drafted tenth chapter on comparison and settlement methods.
+- [manuscript/11-like-cases-exceptions-and-identity.md](manuscript/11-like-cases-exceptions-and-identity.md) — drafted eleventh chapter and Part II inspection.
 
 ## Current drafting status
 
-The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and all five chapters of Part I are drafted, taking the reader from the blank constitution through the definition of objectivity, the meaning of moral language, the construction specifications, and the eight layers of disagreement.
+The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and all eleven chapters of Parts I and II are drafted, totaling approximately 35,800 words. The reader has moved from the blank constitution through the definition of objectivity, the meaning of moral language, the construction specifications, and the eight layers of disagreement, then built the first complete Candidate System by specifying standing, verdicts, values, guidance, comparison, and relevance rules.
 
 The working title is intentionally invitational rather than conclusory. It can be replaced without changing the architecture.
