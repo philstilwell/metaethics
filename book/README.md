@@ -47,9 +47,16 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [manuscript/09-turn-values-into-guidance.md](manuscript/09-turn-values-into-guidance.md) — drafted ninth chapter on generation rules, selectors, and exceptions.
 - [manuscript/10-choosing-without-a-common-measure.md](manuscript/10-choosing-without-a-common-measure.md) — drafted tenth chapter on comparison and settlement methods.
 - [manuscript/11-like-cases-exceptions-and-identity.md](manuscript/11-like-cases-exceptions-and-identity.md) — drafted eleventh chapter and Part II inspection.
+- [manuscript/12-three-different-things-called-a-reason.md](manuscript/12-three-different-things-called-a-reason.md) — drafted twelfth chapter separating causal, motivating, and favoring relations.
+- [manuscript/13-current-aims-and-better-informed-aims.md](manuscript/13-current-aims-and-better-informed-aims.md) — drafted thirteenth chapter on desire-based reasons and idealization.
+- [manuscript/14-commitments-promises-and-roles.md](manuscript/14-commitments-promises-and-roles.md) — drafted fourteenth chapter on commitment-generated and role-based reasons.
+- [manuscript/15-fair-terms-and-constructed-reasons.md](manuscript/15-fair-terms-and-constructed-reasons.md) — drafted fifteenth chapter on fair procedures and constructed authority.
+- [manuscript/16-reasons-that-apply-whether-you-care-or-not.md](manuscript/16-reasons-that-apply-whether-you-care-or-not.md) — drafted sixteenth chapter on aim-independent practical reasons.
+- [manuscript/17-from-approval-to-obligation.md](manuscript/17-from-approval-to-obligation.md) — drafted seventeenth chapter separating social acceptance, pressure, law, and obligation.
+- [manuscript/18-god-nature-and-rational-necessity.md](manuscript/18-god-nature-and-rational-necessity.md) — drafted eighteenth chapter and Part III authority inspection.
 
 ## Current drafting status
 
-The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and all eleven chapters of Parts I and II are drafted, totaling approximately 35,800 words. The reader has moved from the blank constitution through the definition of objectivity, the meaning of moral language, the construction specifications, and the eight layers of disagreement, then built the first complete Candidate System by specifying standing, verdicts, values, guidance, comparison, and relevance rules.
+The book architecture is complete at the chapter level. It currently contains forty-one chapters, including dedicated treatments of epistemic normativity, direct standing, value comparison, and moral emotions after desert. The prologue and all eighteen chapters of Parts I–III are drafted, totaling approximately 57,600 words. The reader has moved from the blank constitution through the first complete Candidate System, then audited desire, idealization, commitment, procedure, social authority, aim-independent reasons, divine foundations, natural goods, and rational necessity as possible sources of objective authority. Inspection Report III records the strongest kind of authority each clause has earned and carries every unsupported objective claim forward as a promissory note.
 
 The working title is intentionally invitational rather than conclusory. It can be replaced without changing the architecture.

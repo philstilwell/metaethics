@@ -1,0 +1,273 @@
+# Chapter 16 — Reasons That Apply Whether You Care or Not
+
+An enemy soldier lay in the dust outside Port Meridian’s wall.
+
+The fighting had ended. The soldier was disarmed, conscious, and dying from a poison that produced intense pain before stopping the heart. Iona held the antidote. Administering it would take one minute, create no danger, consume a dose that would otherwise expire, and return the soldier to secure detention.
+
+Iona understood every fact. The soldier had killed no one she knew. There was no strategic benefit to rescue, no legal penalty for walking away, no witness, no promise, and no professional role. Iona felt no compassion. She did not enjoy the suffering. It simply did not enter her aims.
+
+The soldier gasped, “You have a reason to help me.”
+
+Does she?
+
+This is not a question about what would move Iona. By stipulation, the pain does not. It is not a question about what Port Meridian can require by law or what the soldier wants. It is not a question about what *we* would do.
+
+The question is whether the soldier’s preventable suffering itself counts in favor of administering the antidote **for Iona**, independently of her actual desires, commitments, approval, and likelihood of detection.
+
+If the answer is yes, we have reached an **aim-independent practical reason**.
+
+This is the bridge the objective moral project has been seeking. We should neither cross it by definition nor burn it because the structure looks unfamiliar.
+
+## What an aim-independent reason claims
+
+The claim has four parts:
+
+1. A fact obtains: the soldier is in preventable agony.
+2. An action is available: Iona can administer the antidote safely and easily.
+3. A favoring relation holds: the fact counts in favor of that action for Iona.
+4. The relation does not depend for its existence on Iona already valuing relief, the soldier, morality, consistency, reciprocity, reputation, or any related end.
+
+Iona may have stronger reasons that defeat rescue in a different case. Perhaps the antidote is needed for a child or rescue would restart the war. Here those routes are closed. The case isolates application: can another being’s suffering supply practical support to an unmoved agent?
+
+We can distinguish this from an **objective moral fact**. An objective moral fact assigns or grounds a moral status: perhaps “allowing this agony is wrong.” An aim-independent practical reason is a relation of support between a fact, an agent, and an option: the pain counts in favor of rescue for Iona.
+
+The two may connect. The moral fact might be true because the reason exists. The reason might exist because suffering has objective disvalue. A broader moral theory might ground both. But renaming “objective moral demand” as “practical reason” does not explain the relation. The Candidate System needs the bridge, not a new plaque.
+
+## Why believe the bridge is real?
+
+The strongest case for aim-independent reasons does not begin with metaphysical machinery. It begins with deliberation and interpersonal address.
+
+### Some ends seem criticizable, not merely inefficient
+
+We do not only tell the tyrant that torture is a poor means to his aims. We tell him the victims’ agony is a consideration he is failing to recognize. If his plans become more coherent and successful, we do not regard the criticism as answered.
+
+### Victims can address agents from outside the agents’ projects
+
+The soldier’s plea is not naturally translated as “Please acquire a new desire that would make my pain relevant.” It claims standing now. The plea presents the suffering as a consideration Iona can recognize, not as a motivational product she must manufacture.
+
+### Deliberation appears able to correct aims
+
+We sometimes conclude not merely that our means were mistaken but that an end was unworthy, cruel, shallow, or based on treating another person as negligible. Reflection can feel like discovery about what matters, not only rearrangement of desire.
+
+### Approval can be mistaken
+
+The reformer’s conviction that a popular cruelty remains wrong under unanimous celebration is central to the objectivity threshold from Chapter 2. Aim-independent reasons explain how an entire society can fail to respond to considerations that still apply.
+
+### Reasons need not motivate automatically
+
+Evidence can support a conclusion a stubborn thinker refuses to believe. Likewise, a practical consideration may support an action without producing motivation. Iona’s indifference does not refute the reason any more than closing one’s eyes extinguishes the lighthouse.
+
+These points do not prove the view. They show why it is not an ornamental philosophical invention. It articulates ordinary practices of criticism, demand, regret, and reform.
+
+## The reasons-first proposal
+
+One powerful answer treats the reason relation as basic.
+
+Why does agony count against an action? Because agony is a reason-giving feature. Why does a promise count in favor of performance? Because valid assurance and reliance are reason-giving. Not every legitimate explanation reduces to nonnormative ingredients. At some point, any theory reaches fundamentals.
+
+Call this the **reasons-first** proposal:
+
+> Certain natural facts stand in irreducible support relations to actions. Competent agents can recognize those relations, weigh them with others, and act correctly or incorrectly in response.
+
+The proposal avoids deriving values from desires, commands, conventions, or procedures. It explains their authority by placing favoring force in reality itself.
+
+An immediate objection says, “But how can a natural fact generate a reason?” The reasons-first theorist replies that *generate* already assumes an unnecessary two-step picture. The pain fact does not first exist as normatively blank and then enter a reason machine. Its being a reason is a fundamental truth about that fact in those circumstances.
+
+This reply deserves respect. Explanations cannot continue forever. Physics has fundamental relations. Logic does not derive validity from popularity. A demand that normative facts reduce to nonnormative facts may simply assume the conclusion against them.
+
+The reply also defines the burden precisely. The Candidate System may take some reason relations as basic. It must then state their content, scope, structure, conflicts, and method of recognition. “Basic” can stop a regress. It cannot turn every confident intuition into a fundamental property.
+
+## Four accounts of the support relation
+
+Aim-independent reasons can be understood in several ways.
+
+### Reasons as fundamental facts
+
+On the purest version, it is simply true that certain facts count in favor of certain responses. The soldier’s pain favors relief. No agent’s attitude constitutes this relation.
+
+Strength: the account preserves full stance independence and directly answers the soldier.
+
+Debt: which facts are reasons, with what weight, and how do finite agents distinguish recognition from projection?
+
+### Reasons grounded in objective value
+
+Perhaps suffering is objectively bad, agency objectively valuable, or persons possess objective status. Reasons arise because actions promote or respect these values.
+
+Strength: a value theory organizes many reasons and explains patterns.
+
+Debt: what makes the value objective, and how does value become support for this agent? “Pain is bad, therefore alleviate it” still contains a practical transition.
+
+### Reasons grounded in the good of the affected being
+
+The soldier has a welfare interest in relief. Because he has direct standing, his good supplies reasons to agents able to affect it.
+
+Strength: the account locates the demand in a real subject whose life can go better or worse, rather than in an abstract moral mist.
+
+Debt: direct standing identifies whose good enters. It does not by itself establish that another agent must treat that good as support. That was the boundary discipline of Chapter 6.
+
+### Reasons grounded in rational agency
+
+Perhaps acting for reasons commits an agent to consistency, universalization, respect for agency, or terms others could accept. By participating in practical reasoning, Iona cannot coherently exempt herself from standards implicit in agency.
+
+Strength: authority is not an alien force; it arises from what agents do whenever they deliberate.
+
+Debt: instrumental consistency alone may leave substantive ends untouched. A coherent tyrant reasons effectively. Chapter 18 will test whether rational agency contains equal regard or whether that value has been added to the account of rationality.
+
+These accounts can combine. They should not form a circle in which standing is grounded by reasons, reasons by value, value by standing, and the entire circuit is then presented as a power source.
+
+## Reason, rationality, and responsibility
+
+Suppose the soldier’s pain genuinely gives Iona a reason to help. Three further questions remain.
+
+### Is Iona irrational if she refuses?
+
+If rationality means responding correctly to all practical reasons, then yes by definition. But that definition does not independently establish which reasons exist. If rationality means coherence and effective pursuit of aims, Iona may be instrumentally rational while ignoring the soldier.
+
+Calling her *irrational* can therefore either record a failure to respond to an established reason or attempt to establish the reason by classification. Only the first route is legitimate.
+
+### Is Iona blameworthy?
+
+Blame depends on more than the existence of a reason. Did she recognize it? Could she respond? Was the demand clear? Did fear, trauma, coercion, or incapacity interfere? How grave was the failure, and what expectations fairly applied?
+
+A hidden fact may supply fact-relative support while its absence from available evidence excuses the agent. The poisonous eastern tunnel gave Sela a fact-relative reason not to enter, but blaming her for missing an inaccessible fact would be perverse.
+
+### May anyone compel Iona?
+
+Even a decisive reason for rescue does not automatically authorize every third party to use force. Enforcement needs jurisdiction, proportionality, evidence, institutional competence, and attention to abuse. A state may permissibly require easy rescue, or it may avoid such laws because officials cannot distinguish safe from dangerous cases reliably.
+
+This preserves the status grammar from Chapter 7:
+
+> reason → all-things-considered requirement → responsibility → blame → enforceability
+
+Each arrow needs conditions. Objective reasons, if they exist, do not collapse the chain.
+
+Now reverse the case. Suppose Iona helps because she falsely believes the soldier is her brother. The soldier’s suffering may genuinely favor aid, but it is not the consideration that moves her. Her action can conform to the reason without being performed **for** it. Moral worth, correct action, and appropriate motivation may come apart.
+
+The realist candidate is strongest when it claims only what it has earned: a favoring relation. Additional verdicts require the rest of the Candidate System.
+
+## The unmoved antidote holder
+
+Change the case. A stranger named Jalen possesses the only antidote to a child’s poisoning. Giving it up costs Jalen nothing. Jalen understands the child’s terror, the parents’ attachment, the loss of an entire future, and the ease of rescue. He refuses because he does not care.
+
+Three responses are available.
+
+### Response one: Jalen has a decisive reason
+
+The child’s grave interest and trivial cost make rescue strongly supported. Jalen’s indifference is a failure to respond to the reason, not evidence of its absence.
+
+This preserves the ordinary verdict and the objectivity aspiration. It owes an account of why the child’s interest applies to Jalen, how its weight is known, and what relation makes it practical support rather than merely an outcome we deplore.
+
+### Response two: Jalen has a reason only if a concern connects
+
+Perhaps Jalen cares about avoiding conflict, honoring law, seeing himself as decent, or preserving a society in which others rescue children. Any of these can connect the facts to his aims.
+
+If all connections are removed, the account says no practical reason remains for him. We can still have reasons to seize the antidote, condemn him under our code, distrust him, and protect others from him. The loss is the claim that rescue counts in favor from his practical standpoint.
+
+### Response three: the question falsely isolates agents
+
+Perhaps persons are socially constituted, inevitably dependent, and already embedded in relations of recognition. Jalen’s supposed independence is a fiction. His language, safety, identity, and resources depend on others.
+
+This insight reveals actual connections. But the case can stipulate that Jalen accepts dependence as a historical fact while rejecting reciprocity. Dependence may give others leverage or grounds for exclusion. Whether it creates a reason for him still requires a principle connecting benefit, membership, or relationship to support.
+
+The case cannot force a theory to accept aim-independent reasons. It can force the theory to state what disappears without them.
+
+## Kest returns
+
+The coherent tyrant from Chapter 13 understands the new proposal.
+
+“You say their suffering counts against my action,” Kest says. “I say it does not. You call the relation fundamental. I call your attitude intense.”
+
+What can the reasons-first theorist say?
+
+First, Kest’s rejection is not decisive. Disagreement does not erase facts. A person can reject valid inference, reliable evidence, or the existence of a distant country.
+
+Second, Kest’s motivational stability is irrelevant if reasons need not motivate. His coherence shows only that instrumental rationality can serve cruel ends.
+
+Third, the victims’ experiences are not projections. Their pain is a natural fact with a point of view at its center. The dispute concerns whether that fact has favoring force for Kest, not whether the suffering occurs.
+
+Fourth, Kest can be challenged for inconsistency if he demands that others treat his suffering as reason-giving while denying the reciprocal claim. If he accepts that nobody has aim-independent reason to relieve *his* pain, the inconsistency route closes. His position remains brutal but structurally coherent.
+
+The final dispute is now visible. The theorist affirms a fundamental support relation; Kest denies it. More description of the pain need not settle the normative relation, though vivid evidence may move actual people. More coherence need not generate concern. A social coalition can defeat Kest without proving he recognized a reason.
+
+This does not show the theorist is wrong. It shows that assertion, phenomenological obviousness, and ordinary practice have not yet provided a non-question-begging method for establishing the relation to a fully informed denier. Part IV will examine possible knowledge of normative facts.
+
+## Objections that do not settle the matter
+
+A fair audit must reject several shortcuts.
+
+### “Objective reasons are strange”
+
+Strangeness is not an argument. Many true relations are unlike ordinary physical objects. The objection must specify an incoherence, explanatory failure, causal problem, or epistemic defect.
+
+### “Reasons cannot move an indifferent agent”
+
+The view does not claim that reasons are forces. Support and motivation were separated in Chapter 12. Inertness is expected in a resistant agent.
+
+### “Cultures disagree”
+
+Disagreement can create an epistemic burden, not a deductive refutation. Cultures disagree about medicine and astronomy too. The relevant question is whether a method predicts correction or merely tracks formation.
+
+### “Reason talk just expresses emotion”
+
+That is a semantic proposal from Chapter 3, not an observation that proves itself. It may explain practical language, but it must account for the apparent truth conditions and disagreement practices of reason claims.
+
+### “Suffering obviously matters”
+
+This reports powerful seeming and may identify a basic truth. It does not by itself discriminate objective recognition from near-universal aversion and compassion. The distinction is precisely what the Candidate System must examine.
+
+## Take the fork
+
+The notebook now divides.
+
+### If you accept aim-independent practical reasons
+
+Write the strongest clause you can:
+
+> Fact __________ counts in favor of action __________ for agent __________ independently of __________ because __________.
+
+Then specify:
+
+- **source:** fundamental relation, objective value, standing, rational agency, or other;
+- **application:** which agents are reached and why;
+- **scope:** which facts and actions bear the relation;
+- **strength:** how reasons compare and aggregate;
+- **defeat:** which competing reasons can override them;
+- **access:** how agents identify the relation and correct error;
+- **motivation:** whether recognition normally motivates and what failure implies.
+
+Apply the clause to Iona, Jalen, and Kest. If it applies by definition, explain why the definition corresponds to a truth rather than a stipulation. If the relation is fundamental, mark epistemic access as the next debt rather than disguising it as self-evidence.
+
+### If you reject aim-independent practical reasons
+
+Rewrite criticism without borrowing their grammar:
+
+- “Kest has a reason not to dominate” becomes __________.
+- “Jalen should surrender the antidote” becomes __________.
+- “The soldier’s pain makes a demand on Iona” becomes __________.
+
+You may say:
+
+- *We abhor and oppose Kest’s conduct from values we share.*
+- *Jalen’s refusal marks him as dangerous to people who value mutual protection.*
+- *We will seize the antidote under a public rule designed to protect vulnerable lives.*
+- *The soldier’s plea expresses an urgent stake that compassion and reciprocity make motivationally powerful for us.*
+
+These are substantial claims. Do not append “and therefore Kest objectively has reason to agree” unless you restore the bridge.
+
+Then ask what is lost: universal criticism from the agent’s standpoint, an approval-independent duty, or only a particular vocabulary? Ask what is retained: values, coordination, resistance, protection, law, emotion, and public justification among agents with relevant concerns.
+
+Neither fork may borrow the advantages of the other without paying its debts.
+
+## The sixteenth debt
+
+Add this entry:
+
+> **Debt 16 — Aim-independent support:** What makes a fact count in favor for an agent who rejects every connected aim, how are the relation’s application and weight determined, and how can recognition be distinguished from projection?
+
+The bridge may be real. The Candidate System has not demolished it. It has identified the load it must bear.
+
+Most societies do not wait for agreement about this bridge. They classify conduct, teach norms, reward conformity, condemn violations, negotiate rules, and use law. These practices create powerful reasons in familiar senses: motives, risks, commitments, and terms of membership.
+
+The next chamber is crowded. Everyone is voting, praising, shaming, threatening, and declaring that consensus has settled the matter.
+
+We will ask exactly what it has settled.

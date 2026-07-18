@@ -78,6 +78,19 @@ The manuscript must preserve these distinctions:
 - an emotion's involuntary cause, evaluative appraisal, social or relational function, expression, intensity, and duration;
 - recognition, protest, repair, coordination, and emotional regulation versus intrinsic desert.
 
+## Manuscript implementation status
+
+Parts I–III are now drafted through Chapter 18. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
+
+- Chapter 12 separates causal explanation, motivating considerations, evidence-relative support, fact-relative support, and aim-independent favoring force.
+- Chapter 13 tests present, coherent, informed, vividly appreciated, and identity-integrated aims without treating humane idealization as neutral correction.
+- Chapters 14–15 distinguish commitment, role, and fair procedural legitimacy from universal authority.
+- Chapter 16 gives fundamental aim-independent reasons their strongest hearing and preserves the separate questions of source, application, weight, and access.
+- Chapter 17 keeps personal commitment, convention, pressure, sanction, role, added foundation, and approval-independent duty non-ordinal and non-substitutable.
+- Chapter 18 tests divine command, divine nature, natural law, species flourishing, rational agency, constitutive standards, and self-evident axioms before conducting the seven-column authority audit.
+
+This implementation also preserves the expanded site's cross-part boundary: practical reasons do not settle epistemic reasons. Part III ends by handing the unresolved access question to the dedicated epistemic-normativity treatment in Chapter 19.
+
 ## Secondary literature already represented locally
 
 The repository's reading room supplies a starting bibliography: C. L. Stevenson, Gilbert Harman, Bernard Williams, Simon Blackburn, Sharon Street, Richard Joyce, Richard Garner, Derk Pereboom, Gregg Caruso, David Plunkett and Timothy Sundell, François Jaquet, Hichem Naar, Sebastian Köhler, Michael Ridge, Björn Eriksson, Jonas Olson, Mark Schroeder, Laura Frances Callahan, Benjamin Kiesewetter, and Stanford Encyclopedia entries on constructivism, relativism, practical and epistemic reasons, moral status, weighing reasons, incommensurable values, blame, moral responsibility, and responsibility skepticism. These sources support accuracy and historical context; they do not determine the book's architecture.

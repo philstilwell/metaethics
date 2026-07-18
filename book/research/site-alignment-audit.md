@@ -4,7 +4,8 @@
 
 - Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
 - Audit date: July 18, 2026
-- Book baseline: `3e92978` — *Begin objective morality book*
+- Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
+- Manuscript coverage status: Parts I–III drafted through Chapter 18
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
 
@@ -29,6 +30,8 @@ The original book architecture already contained partial material on standing, v
 - Moral emotions may survive as recognition, protest, relationship, repair, expression, or regulation even when intrinsic desert does not.
 
 The revised architecture therefore contains forty-one chapters rather than thirty-eight. No new topic changes the book's intended conclusion, but each makes the route to that conclusion more complete and less vulnerable to charges of selective skepticism.
+
+The drafted manuscript now implements the full reasons-and-authority sequence in Chapters 12–18. It preserves the required distinction between causal, motivating, conditional, and aim-independent reasons; keeps social pressure and sanction separate from obligation; and ends with epistemic access still open for Chapter 19 rather than treating practical-reason skepticism as an answer to epistemic normativity.
 
 ## Future update procedure
 
