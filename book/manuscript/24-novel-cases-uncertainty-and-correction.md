@@ -56,7 +56,7 @@ The Candidate System must separate:
 
 An experience-based standing rule may say: protect when credible evidence of valenced consciousness crosses a precautionary threshold. An agency rule may grant some protection already because Sable plans and bargains. A constructed rule may represent uncertain subjects to prevent catastrophic exclusion.
 
-None may write “obviously conscious” or “merely software” as though a noun settled the evidence.
+None may write “obviously conscious” or “merely an engineered program” as though a noun settled the evidence.
 
 ## Case two: the edited memory
 

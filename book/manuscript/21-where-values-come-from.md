@@ -221,7 +221,7 @@ For every supported influence, choose the strongest warranted inference:
 - argument against a premise or content;
 - broad burden shift.
 
-Do not assign numbers and add them into a truth score. One decisive document can defeat a premise while nine strong causal influences leave truth open. Epistemic conclusions are structured, not averaged.
+Do not assign numbers and average them into a verdict about truth. One decisive document can defeat a premise while nine strong causal influences leave truth open. Epistemic conclusions are structured, not averaged.
 
 Finish with two headings:
 

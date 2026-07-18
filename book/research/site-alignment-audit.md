@@ -5,7 +5,7 @@
 - Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
 - Audit date: July 18, 2026
 - Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
-- Manuscript coverage status: Parts I–V drafted through Chapter 31
+- Manuscript coverage status: Parts I–VI drafted through Chapter 37
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
 
@@ -37,7 +37,11 @@ Chapters 19–24 now implement that epistemic-access sequence. Chapter 19 gives 
 
 Chapters 25–31 now carry the expanded material into direct comparison among the major candidate systems. Consequentialism separates entry, currency, aggregation, distribution, and threshold repairs. Deontology keeps direct standing distinct from the weight and outcome assigned after entry. Virtue and care make context, relationship, formation, and caregiver limits explicit. Received-order views undergo the same access and revision audit applied to other foundations. Constructive procedures distinguish representation, idealization, legitimate settlement, and objective discovery. Local and plural views distinguish indexed standards from approval-independent criticism. The hybrid chapter uses the tradeoff methods as declared ordering rules rather than allowing “balance” or “all things considered” to hide a universal measure.
 
-Inspection Report V confirms alignment at the level of method as well as topic. It compares candidates without a master score, preserves seams rather than automatically reporting contradictions, records bounded conclusions, and retains each theory's practical contribution even where objective authority remains unpaid. The new standing, tradeoff, and evidence material is therefore integrated into the main argument rather than isolated in dedicated chapters. The moral-emotions expansion remains architecturally assigned to Chapters 35–36 and the constructive ending.
+Inspection Report V confirms alignment at the level of method as well as topic. It compares candidates without a master score, preserves seams rather than automatically reporting contradictions, records bounded conclusions, and retains each theory's practical contribution even where objective authority remains unpaid. The new standing, tradeoff, and evidence material is therefore integrated into the main argument rather than isolated in dedicated chapters. The moral-emotions expansion is carried forward into Chapters 35–36 and the constructive ending.
+
+Chapters 32–37 now implement the remaining pre-constructive alignment commitments. Chapter 32 uses the criticism grounds without converting their non-ordinal categories into a single scale. Chapter 33 implements the community-code decisions and preserves support, compliance, legitimacy, jurisdiction, and objective obligation as non-substitutable. Chapter 34 makes coercion and force explicit while adding the required safeguards and stopping rules. Chapter 35 separates responsibility practices from basic desert. Chapter 36 fully implements the moral-emotions expansion rather than treating it as an appendix to blame. Chapter 37 carries epistemic normativity, standing, comparison, desert, and hybrid ordering into the general grounding audit.
+
+The resulting Part VI conclusion remains within the site's inference discipline: no examined route earns a system that is simultaneously stance-independent, contentful, authoritative for rejecters, accessible, coherent through conflict, and usable without an unsupported selector. The manuscript does not inflate this into a deductive proof that no possible objective moral property exists. Inspection Report VI labels what survives as factual, instrumental, expressive, commitment-based, agreement- or role-based, procedural, enforced, or objectively asserted but unpaid. This completes alignment through the general result; the remaining site-derived work is the Part VII transition from primitive emotions and values to public policy without reinstating an abstract moral sovereign.
 
 ## Future update procedure
 

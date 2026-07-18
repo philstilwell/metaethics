@@ -171,7 +171,7 @@ This is stronger. It connects agency to equal status. The pressure question is w
 
 ### Respect for agency as a condition of justification
 
-Perhaps action is not fully justified unless its principle can be offered to every affected agent as a free and equal co-author. Domination fails because it treats another source of reasons as a mere tool.
+Perhaps action is not fully justified unless its principle can be offered to every affected agent as a free and equal co-author. Domination fails because it treats another source of reasons as a mere instrument.
 
 This gives rationality moral substance. It can ground rights, consent, and fair procedure. It also builds “free and equal,” “source of reasons,” and “justifiable to each” into the standard. These may be correct objective principles. Calling the full package *rationality* does not reduce its grounding debt.
 
@@ -199,7 +199,7 @@ The geometry classroom contains one final possibility. Every proof begins somewh
 
 - suffering counts against an action;
 - like interests deserve like consideration;
-- persons must not be used merely as tools;
+- persons must not be used merely as instruments;
 - a valid promise normally gives a reason to perform;
 - arbitrary domination is wrong.
 
@@ -382,7 +382,7 @@ The clause assigns approval-independent moral status and claims practical author
 
 State the foundation, semantic meaning, standing rule, value basis, generation rule, comparison method, exception structure, reason relation, and epistemic route. Every dependency must refer to an earlier clause rather than disappear into the word *moral*.
 
-The final two columns are not automatically stronger versions of the first five. They make different claims. A law can govern action effectively while an unrecognized objective duty is politically powerless. A personal commitment can shape a life more deeply than an abstract principle. The audit classifies authority; it does not score importance.
+The final two columns are not automatically stronger versions of the first five. They make different claims. A law can govern action effectively while an unrecognized objective duty is politically powerless. A personal commitment can shape a life more deeply than an abstract principle. The audit classifies authority; it does not rank importance.
 
 ## Build the authority matrix
 

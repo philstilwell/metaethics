@@ -80,7 +80,7 @@ The manuscript must preserve these distinctions:
 
 ## Manuscript implementation status
 
-Parts I–V are now drafted through Chapter 31. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
+Parts I–VI are now drafted through Chapter 37. The authority sequence planned from `obligation.js` and `reasons.js` is implemented in Chapters 12–18 rather than remaining only architectural:
 
 - Chapter 12 separates causal explanation, motivating considerations, evidence-relative support, fact-relative support, and aim-independent favoring force.
 - Chapter 13 tests present, coherent, informed, vividly appreciated, and identity-integrated aims without treating humane idealization as neutral correction.
@@ -111,6 +111,17 @@ The major-theory sequence in Chapters 25–31 now gives equal argumentative weig
 - Chapter 31 constructs rights-and-welfare, virtue-and-rule, care-and-procedure, sacred-and-flourishing, plural-judgment, and reflective-equilibrium hybrids, then requires explicit ordering rules in a common evacuation case.
 
 Inspection Report V does not declare a theory winner. It records the concern protected, strongest mechanism, price of repair, remaining objective claim, and practice worth keeping. This creates the raw material for Parts VI–VII: the general grounding partition can audit the unresolved claims while the post-system alternative retains forecasting, boundaries, care, interpretation, representation, local knowledge, revision, and transparent settlement without treating those practices as proof of objective authority.
+
+The last-repairs sequence planned from `criticize.js`, `build.js`, `blame.js`, `emotions-config.js`, and the cross-suite method is implemented in Chapters 32–37:
+
+- Chapter 32 keeps majority standards, subcommunity standards, factual exposure, internal inconsistency, prior promise, personal commitment, harm and agency, idealized agreement, and objective condemnation as distinct grounds of criticism. Its cases include inherited caste, a unanimous cross-border safety cover-up, broken equal-citizenship terms, an openly conquering culture, and judgment across time.
+- Chapter 33 implements the community charter around primary goals, protected interests, decision procedure, dissent, membership, enforcement limits, revision, outsiders, and majority-abuse protections. Each clause is labeled as factual, instrumental, commitment-based, agreement-based, procedural, enforced, or objectively claimed.
+- Chapter 34 separates reason-giving, bargaining, coordination, procedural legitimacy, legal jurisdiction, coercion, force, and structural domination. The coercion warrant adds evidence, proportionality, less intrusive means, review, stopping conditions, and repair after error.
+- Chapter 35 gives basic desert its strongest personhood and proportionality case, then separates protection, deterrence, restitution, rehabilitation, boundary-setting, withdrawal of trust, public condemnation, and retributive suffering. The zero-purpose pain case isolates the final desert claim without erasing causal agency, intention, risk, repair, or trust.
+- Chapter 36 implements the full moral-emotions framework. Guilt, shame, resentment, indignation, gratitude, and pride are audited by cause, factual and evaluative appraisal, audience, present function, expression, intensity, duration, effect, and revision or stopping condition.
+- Chapter 37 performs the general grounding partition across actual stances, idealized stances, authorities, non-evaluative natural facts, rational or conceptual requirements, brute evaluative facts or aim-independent reasons, and hybrids. It explicitly preserves the epistemic-normativity boundary and distinguishes failure to earn the requested system from proof that no logically possible moral fact exists.
+
+Inspection Report VI returns to the original nine-part specification and classifies every surviving clause by the kind of support it has actually earned. The section's result is therefore cumulative rather than a repeated objection: useful criticism, public construction, constrained power, responsibility practices, and emotional literacy survive, while the approval-independent moral warrant remains unpaid.
 
 ## Secondary literature already represented locally
 
