@@ -5,7 +5,7 @@
 - Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
 - Audit date: July 18, 2026
 - Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
-- Manuscript coverage status: Parts I–VII drafted through Chapter 41; main manuscript complete
+- Manuscript coverage status: Parts I–VII and Appendices A–F drafted; complete book draft
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
 
@@ -46,6 +46,8 @@ The resulting Part VI conclusion remains within the site's inference discipline:
 Chapters 38–41 now complete the Part VII transition from primitive emotions and values to public policy without reinstating an abstract moral sovereign. Chapter 38 preserves the non-ordinal post-error language options and makes policy choice context-sensitive. Chapter 39 prevents the nihilist inference by inventorying the concrete phenomena that survive. Chapter 40 treats emotions as salience signals whose appraisals require factual testing and whose values require explicit scope and comparison before policy. Chapter 41's Civic Stakes Brief integrates the expanded standing, comparison, evidence, emotion, code-construction, criticism, responsibility, and power material into one reusable institutional procedure.
 
 The final admonition is therefore aligned with both the audited revision and the book's governing promise: stop allocating public compromise among abstract moral systems; begin with lived responses and operational values, test their factual models, represent affected parties, expose unresolved tradeoffs and coercion, add safeguards, and revise against evidence. Partial agreement remains partial. Policies are presented as supported, constructed, enforced, and corrigible rather than objectively certified.
+
+Appendices A–F complete the support layer required for durable alignment. The workbook preserves every expanded distinction as a non-ordinal artifact; the pressure deck uses bounded inference; the repair guide prevents familiar slogans from functioning as hidden bridges; the Civic Stakes Brief integrates standing, evidence, comparison, emotion, power, and revision; the position map prevents cross-question category errors; and the limits statement preserves the exact epistemic scope of the conclusion. Future site revisions can now be mapped to both a chapter location and a corresponding reusable appendix artifact.
 
 ## Future update procedure
 
