@@ -28,7 +28,7 @@ The sentences look like mirror images. It is tempting to imagine one disagreemen
 
 That appearance is misleading.
 
-Arin and Bela may disagree about the meaning of a term, a factual prediction, whose interests count, which admitted value takes priority, what attitude to express, which public rule to adopt, who should decide, whether an objective moral fact exists, or several of these at once.
+Arin and Bela may disagree about the meaning of a term, a factual prediction, whose interests count, or which admitted value takes priority. They may instead disagree about what attitude to express, which public rule to adopt, who should decide, whether an objective moral fact exists, or several of these at once.
 
 Until we know which layer is active, an argument can continue indefinitely while each side answers a question the other side is not asking.
 

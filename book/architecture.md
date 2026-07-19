@@ -1,11 +1,11 @@
 # Book Architecture
 
-## Working title
+## Final title
 
 **The Objective Morality Project**  
-*A Guided Attempt to Build a Moral System That Everyone Has Reason to Obey*
+*An Expedition to Build a Moral System Everyone Has Reason to Obey*
 
-Alternative titles to retain for later testing:
+Titles considered during development:
 
 - *Building Moral North*
 - *The Last Moral System*
@@ -19,10 +19,10 @@ A reader who expects objective morality to be constructible is led through a sus
 
 ## Scope and current length
 
-- Complete main-text draft, including embedded exercises and inspections: approximately 120,200 words
-- Complete appendices and reusable worksheets: approximately 17,700 words
-- Notes and bibliography still anticipated: approximately 12,000–18,000 words
-- Expected finished length after line editing and notes: approximately 145,000–158,000 words, or roughly 500–650 trade-paperback pages depending on trim, tables, and exercise layout
+- Complete main text, including embedded exercises and inspections: approximately 120,350 words
+- Complete appendices and reusable worksheets: approximately 17,770 words
+- Notes and bibliography: approximately 2,900 words
+- Expected finished length with front matter: approximately 142,000 words, or roughly 500–650 trade-paperback pages depending on trim, tables, and exercise layout
 
 The book should feel long because the reader performs the construction, not because the prose repeats the thesis.
 

@@ -232,6 +232,4 @@ Niko may continue to wake at three in the morning. He can meet the feeling witho
 
 The emotional ledger closes without reaching zero.
 
-One debt remains larger than any single feeling. We have tested domains, values, rules, reasons, evidence, authority, theories, reform, codes, power, responsibility, and emotional life. The same missing support has appeared in different clothes.
-
-Was that repetition an accident?
+One debt remains larger than any single feeling. We have tested domains, values, rules, reasons, evidence, authority, theories, reform, codes, power, responsibility, and emotional life. The same missing support has appeared in different clothes. Was that repetition an accident?

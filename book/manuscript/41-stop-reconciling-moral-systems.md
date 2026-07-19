@@ -236,11 +236,11 @@ Every major proposal must complete it before receiving a vote.
 
 > Which descriptions and predictions support each proposal? What evidence, method, baseline, comparison, and uncertainty apply? What evidence would decrease confidence?
 
-### 6. Comparison and unresolved conflict
+### 6. Comparison method and unresolved conflicts
 
 > Which stakes align? Which conflict? Is the method aggregation, priority, protected minimum, constraint, threshold, lexical order, plural judgment, procedure, or chosen settlement? Who selected it? What loss remains after choice?
 
-### 7. Resources
+### 7. Available resources and constraints
 
 > What money, personnel, time, land, infrastructure, information, and administrative capacity are available? Which opportunity costs follow?
 
@@ -260,7 +260,7 @@ Every major proposal must complete it before receiving a vote.
 
 > What outcomes, distributions, process indicators, unintended effects, and reported experiences will be tracked? Who controls the data? What cannot be measured well?
 
-### 12. Review and sunset
+### 12. Review, failure, and sunset
 
 > When will the policy be reconsidered? Which provisions expire automatically? Who can trigger early review? What counts as failure, partial success, or unacceptable collateral effect?
 
@@ -268,7 +268,7 @@ Every major proposal must complete it before receiving a vote.
 
 > If officials were mistaken or caused avoidable loss, how will records be corrected, people notified, damage compensated, authority changed, and recurrence reduced?
 
-### 14. Support statement
+### 14. Support and dissent statement
 
 > Who supports the proposal, and on what actual basis: shared value, interest, commitment, agreement, role, procedure, prediction, or objective claim? Who remains opposed? Do not write *the community agrees* when the community has dissenters.
 

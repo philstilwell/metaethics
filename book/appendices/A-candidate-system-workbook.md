@@ -31,7 +31,7 @@ Use a fresh copy for each complete candidate. Never erase an earlier answer. Dat
 >
 > **Current largest unresolved debt:** __________
 
-## Page 1 — The specification sheet
+## Worksheet 1 — The specification sheet
 
 Mark each condition **Essential**, **Negotiable**, or **Unnecessary** before pressure-testing the foundation.
 
@@ -74,7 +74,7 @@ Complete the sentences.
 >
 > **Signed:** __________
 
-## Page 2 — Objectivity and meaning
+## Worksheet 2 — Objectivity and meaning
 
 ### Objectivity threshold
 
@@ -115,7 +115,7 @@ When the system says “Action A is wrong,” it primarily:
 >
 > **When translation is mandatory:** __________
 
-## Page 3 — The direct-standing map
+## Worksheet 3 — The direct-standing map
 
 List every candidate bearer before assigning weight or outcome.
 
@@ -148,7 +148,7 @@ For every entry, complete:
 - An artificial system of uncertain consciousness: __________
 - An outsider who rejects the community: __________
 
-## Page 4 — Objects and status grammar
+## Worksheet 4 — Objects and status grammar
 
 ### Objects of evaluation
 
@@ -188,7 +188,7 @@ Check the separations:
 - [ ] Tragedy and wrongdoing are not collapsed.
 - [ ] Repair and punishment are not collapsed.
 
-## Page 5 — The value table
+## Worksheet 5 — The value table
 
 | Value or concern | Bearer | Object protected | Intrinsic, instrumental, constitutive, relational, or symbolic? | Primary, protected, or defeasible? | Evidence relevant to application | Source or selector |
 |---|---|---|---|---|---|---|
@@ -211,7 +211,7 @@ Check the separations:
 >
 > **Ground and access route:** __________
 
-## Page 6 — Generation rules
+## Worksheet 6 — Generation rules
 
 Complete one form for every move from “matters” to “act.”
 
@@ -239,7 +239,7 @@ Complete one form for every move from “matters” to “act.”
 >
 > **Ground of the generation rule:** __________
 
-## Page 7 — Comparison protocol
+## Worksheet 7 — Comparison protocol
 
 > **Values in conflict:** __________ and __________
 >
@@ -261,7 +261,7 @@ Complete one form for every move from “matters” to “act.”
 >
 > **Ground for any objective rank claimed:** __________
 
-## Page 8 — Similarity, relevance, and exception rules
+## Worksheet 8 — Similarity, relevance, and exception rules
 
 > **Baseline rule:** __________
 >
@@ -294,7 +294,7 @@ Mirror tests:
 - [ ] Residue
 - [ ] Adversary's explanation
 
-## Page 9 — Reasons and authority audit
+## Worksheet 9 — Reasons and authority audit
 
 ### Reason type
 
@@ -328,7 +328,7 @@ Mirror tests:
 
 > Consideration __________ applies to agent __________ because __________. Its application does not depend on __________. Content is identified through __________. Conflict is resolved by __________. Error is corrected through __________. The informed rejecter is __________ because __________.
 
-## Page 10 — Epistemic-force statement
+## Worksheet 10 — Epistemic-force statement
 
 Mark every route you accept and do not blend them.
 
@@ -351,7 +351,7 @@ Mark every route you accept and do not blend them.
 >
 > **How moral and epistemic normativity remain separate:** __________
 
-## Page 11 — Access, genealogy, and correction
+## Worksheet 11 — Access, genealogy, and correction
 
 ### Access route
 
@@ -394,7 +394,7 @@ Mark every route you accept and do not blend them.
 >
 > **Repair after error:** __________
 
-## Page 12 — Disagreement dossier
+## Worksheet 12 — Disagreement dossier
 
 | Layer | Disagreement | Evidence or process | Settlement available | What remains |
 |---|---|---|---|---|
@@ -415,7 +415,7 @@ Mark every route you accept and do not blend them.
 >
 > **What convergence would and would not establish:** __________
 
-## Page 13 — Institutional charter
+## Worksheet 13 — Institutional charter
 
 > **Primary goal:** __________
 >
@@ -450,7 +450,7 @@ Label each clause:
 - **E** — enforced;
 - **O** — objectively asserted.
 
-## Page 14 — Coercion warrant
+## Worksheet 14 — Coercion warrant
 
 > **Conduct constrained:** __________
 >
@@ -482,7 +482,7 @@ Label each clause:
 >
 > **Objective authority claimed, if any:** __________
 
-## Page 15 — Responsibility response
+## Worksheet 15 — Responsibility response
 
 | Question | Entry |
 |---|---|
@@ -502,7 +502,7 @@ Label each clause:
 
 > **Purpose-deletion finding:** If every nonretributive purpose were removed, the response would / would not remain because __________.
 
-## Page 16 — Moral-emotion dossier
+## Worksheet 16 — Moral-emotion dossier
 
 > **Emotion:** guilt / shame / resentment / indignation / gratitude / pride / other: __________
 >
@@ -530,7 +530,7 @@ Label each clause:
 >
 > **Desert claim remaining:** __________
 
-## Page 17 — Language policy
+## Worksheet 17 — Language policy
 
 | Context | Abolish, fictionalize, conserve, express, construct, or translate? | Intended function | Translation trigger | Risk |
 |---|---|---|---|---|
@@ -544,7 +544,7 @@ Label each clause:
 
 > I use the term __________ to mean or do __________. I do not infer __________ from that use. When coercion or serious conflict enters, I will translate the claim into __________.
 
-## Page 18 — Primitive-to-policy chain
+## Worksheet 18 — Primitive-to-policy chain
 
 > **Felt response:** __________
 >
@@ -572,7 +572,7 @@ Label each clause:
 >
 > **Repair:** __________
 
-## Page 19 — Final classification
+## Worksheet 19 — Final classification
 
 Classify every surviving clause.
 

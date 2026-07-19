@@ -12,7 +12,7 @@ To call the policy *wrong* seems to do more than report that we oppose it. We wa
 
 Objective morality seems to promise all of that.
 
-It also promises guidance. We do not only want a verdict about obvious atrocity. We want to know what to do when the claims are difficult: whether to tell a protective lie, how to distribute a scarce treatment, whether loyalty can justify an exception, how much present sacrifice is required for future strangers, when punishment becomes cruelty, which beings have standing, how much weight standing receives, and how unlike values can be compared when every available policy imposes serious costs on someone.
+It also promises guidance. We do not only want a verdict about obvious atrocity. We want to know what to do when the claims are difficult: whether to tell a protective lie, how to distribute a scarce treatment, whether loyalty can justify an exception, and how much present sacrifice is required for future strangers. We also need to know when punishment becomes cruelty, which beings have standing, how much weight that standing receives, and how unlike values can be compared when every available policy imposes serious costs on someone.
 
 And it promises authority. A moral system is expected to do something that a prediction, preference, or threat does not. “People will punish you” may influence behavior. “I hate what you did” may express a stance. “Our rules forbid it” may classify an act. “You promised” may invoke a relationship. A moral demand seems to claim more: that a consideration genuinely counts in favor of acting, whether or not the agent is moved by it.
 

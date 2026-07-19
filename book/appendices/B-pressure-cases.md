@@ -1,11 +1,13 @@
 # Appendix B — Pressure Cases
 
-This appendix removes the surrounding argument and presents the book's pressure cases as a reusable deck. Each card contains four elements:
+This appendix removes the surrounding argument and presents the book's pressure cases as a reusable deck. A standard card contains four elements:
 
 1. **Fixed facts** — hold these constant during the first answer;
 2. **Exact question** — answer only this question;
 3. **One-variable variations** — change one fact at a time;
 4. **Inference tested** — the seam under inspection, not an answer key.
+
+Four composite cards gather several miniature cases under one question. They state the fixed conditions in the numbered cases and omit any field that would merely repeat the same instruction. Their inference target remains bounded in exactly the same way.
 
 Use the anti-rigging options after every card:
 

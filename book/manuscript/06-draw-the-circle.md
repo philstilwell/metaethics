@@ -150,7 +150,7 @@ These questions do not refute approval-independent status. They place a large en
 
 ### A defensible constructed rule
 
-The seventh proposal was to construct a rule of inclusion under conditions designed to prevent bias: perhaps by asking what boundary free and equal participants would accept without knowing which kind of being they would be, or what rule could be publicly justified to all affected agents.
+The seventh proposal was to construct a rule of inclusion under conditions designed to prevent bias. We might ask what boundary free and equal participants would accept without knowing which kind of being they would be, or what rule could be publicly justified to all affected agents.
 
 Construction can discipline self-interest. If you do not know whether you will be powerful, disabled, foreign, young, or vulnerable, you may choose protections that do not conveniently track present advantage.
 

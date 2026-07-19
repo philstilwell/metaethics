@@ -54,7 +54,11 @@ Or perhaps you would resist beginning with any one of these. Suffering matters, 
 
 That may be the sensible place to begin. But it is only the beginning.
 
-If suffering controls the answer, whose suffering counts? How do you compare one person's terror with a thousand people's inconvenience? May a painless violation be ignored? May a person be sacrificed when enough others benefit? If respect controls the answer, what counts as a person? What does respect require when two people make incompatible demands? If freedom controls the answer, which freedoms matter, and what happens when the exercise of one person's freedom creates another person's dependence? If fair agreement controls the answer, who participates in the agreement, what makes the conditions fair, and why is the agreement authoritative for someone excluded from it? If God controls the answer, how is the command known, how are rival interpretations resolved, and does goodness explain why the command has authority—or does the command define goodness? If flourishing controls the answer, who decides what counts as a flourishing life, and how does a fact about a species become a demand addressed to each member?
+If suffering controls the answer, whose suffering counts? How do you compare one person's terror with a thousand people's inconvenience? May a painless violation be ignored? May a person be sacrificed when enough others benefit?
+
+If respect controls the answer, what counts as a person? What does respect require when two people make incompatible demands? If freedom controls the answer, which freedoms matter, and what happens when the exercise of one person's freedom creates another person's dependence? If fair agreement controls the answer, who participates, what makes the conditions fair, and why is the agreement authoritative for someone excluded from it?
+
+If God controls the answer, how is the command known, how are rival interpretations resolved, and does goodness explain why the command has authority—or does the command define goodness? If flourishing controls the answer, who decides what counts as a flourishing life, and how does a fact about a species become a demand addressed to each member?
 
 The blank page was easier.
 

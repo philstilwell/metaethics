@@ -1,0 +1,22 @@
+lang: en-US
+documentclass: book
+has-frontmatter: false
+fontsize: 10pt
+classoption:
+  - openany
+  - twoside
+geometry:
+  - letterpaper
+  - inner=0.66in
+  - outer=0.66in
+  - top=0.70in
+  - bottom=0.72in
+  - headheight=14pt
+  - headsep=0.18in
+  - footskip=0.34in
+colorlinks: true
+linkcolor: black
+urlcolor: black
+citecolor: black
+linestretch: 1.02
+pagestyle: headings

@@ -12,7 +12,7 @@ You know which *it* she means.
 
 Not merely a compassionate code. Not a stable agreement, expressive vocabulary, inherited practice, useful fiction, personal commitment, or defensible political settlement. Those have appeared in abundance.
 
-She means the system requested at the beginning: true in a way that survives every actual rejection, contentful enough to guide action, authoritative for agents who do not share its values, knowable by a defensible method, coherent through conflict, usable by finite beings, and corrigible without becoming whatever current power prefers.
+She means the system requested at the beginning: true in a way that survives every actual rejection, contentful enough to guide action, and authoritative for agents who do not share its values. It must also be knowable by a defensible method, coherent through conflict, usable by finite beings, and corrigible without becoming whatever current power prefers.
 
 Before answering, we need one final inspection.
 
