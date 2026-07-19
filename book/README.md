@@ -93,11 +93,13 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [appendices/D-civic-stakes-brief.md](appendices/D-civic-stakes-brief.md) — standalone fourteen-section public-policy brief with reviewer and public-summary pages.
 - [appendices/E-glossary-and-position-map.md](appendices/E-glossary-and-position-map.md) — beginner-facing definitions and a multidimensional map of positions.
 - [appendices/F-limits-of-the-conclusion.md](appendices/F-limits-of-the-conclusion.md) — compact formal restatement of the grounding partition and the conclusion's limits.
-- [production/build-book.sh](production/build-book.sh) — reproducibly assembles the front cover, trade PDF, companion workbook, and EPUB.
+- [production/build-book.sh](production/build-book.sh) — reproducibly assembles the front cover, print-interior PDF, illustrated reader PDF, companion workbook, and EPUB.
+- [production/assemble-reader-pdf.py](production/assemble-reader-pdf.py) — replaces the interior title page with the one-page illustrated cover while retaining PDF metadata, page count, and navigation.
 - [production/COVER-DESIGN.md](production/COVER-DESIGN.md) — records the cover concept, palette, typography, and full-wrap production boundary.
 - [production/publication-metadata.md](production/publication-metadata.md) — title record, descriptions, audience, categories, and keywords.
 - [production/release-checklist.md](production/release-checklist.md) — separates completed editorial work from publication-account decisions.
 - [../output/pdf/the-objective-morality-project.pdf](../output/pdf/the-objective-morality-project.pdf) — 7 × 10 inch final print proof.
+- [../output/pdf/the-objective-morality-project-with-cover.pdf](../output/pdf/the-objective-morality-project-with-cover.pdf) — 7 × 10 inch complete reader edition with the illustrated front cover as its title page.
 - [../output/pdf/the-objective-morality-project-companion-workbook.pdf](../output/pdf/the-objective-morality-project-companion-workbook.pdf) — letter-size reproducible companion workbook.
 - [../output/cover/the-objective-morality-project-front-cover.pdf](../output/cover/the-objective-morality-project-front-cover.pdf) — trim-size 7 × 10 inch vector-type front cover.
 - [../output/cover/the-objective-morality-project-front-cover.jpg](../output/cover/the-objective-morality-project-front-cover.jpg) — 300 DPI front-cover preview and EPUB cover image.

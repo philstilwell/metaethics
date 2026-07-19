@@ -112,6 +112,11 @@ python3 "$LATEX_HELPER" \
 
 cp -f "$BUILD_DIR/main-out/main.pdf" "$PDF_DIR/the-objective-morality-project.pdf"
 
+python3 "$PRODUCTION_DIR/assemble-reader-pdf.py" \
+  "$COVER_DIR/the-objective-morality-project-front-cover.pdf" \
+  "$PDF_DIR/the-objective-morality-project.pdf" \
+  "$PDF_DIR/the-objective-morality-project-with-cover.pdf"
+
 workbook_inputs=(
   "$PROJECT_ROOT/book/front-matter/copyright.md"
   "$PRODUCTION_DIR/contents.md"
@@ -161,6 +166,7 @@ pandoc "${epub_inputs[@]}" \
 unzip -t "$EBOOK_DIR/the-objective-morality-project.epub"
 
 pdfinfo "$PDF_DIR/the-objective-morality-project.pdf" | sed -n '1,20p'
+pdfinfo "$PDF_DIR/the-objective-morality-project-with-cover.pdf" | sed -n '1,20p'
 pdfinfo "$PDF_DIR/the-objective-morality-project-companion-workbook.pdf" | sed -n '1,20p'
 pdfinfo "$COVER_DIR/the-objective-morality-project-front-cover.pdf" | sed -n '1,20p'
 

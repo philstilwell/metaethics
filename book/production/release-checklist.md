@@ -11,6 +11,7 @@
 - [x] Notes and bibliography complete
 - [x] Final title and subtitle selected
 - [x] Final 7 × 10 print PDF compiled and visually approved
+- [x] Complete 7 × 10 reader PDF assembled with the illustrated front cover as its title page
 - [x] Standalone letter-size reproducible workbook compiled and visually approved
 - [x] Reflowable EPUB 3 assembled with navigation and scrollable tables
 - [x] Palette-matched front cover, color interior system, and companion-workbook styling completed
