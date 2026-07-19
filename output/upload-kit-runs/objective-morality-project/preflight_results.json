@@ -1,0 +1,46 @@
+{
+  "status": "ready",
+  "checked_at": "2026-07-19T15:28:53.717Z",
+  "signature": "3d8d1924e45da0298382e245f5f87b41828f599189073420b78be471db67e1e3",
+  "rows": [
+    {
+      "sheet_row": 156,
+      "sheet_physical_row": 158,
+      "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+      "academia": {
+        "totalWorks": 238,
+        "explicit": [],
+        "exact": [
+          {
+            "work_id": "170447309",
+            "title": "The objective morality project with cover",
+            "work_url": "https://www.academia.edu/170447309/The_objective_morality_project_with_cover",
+            "edit_url": "https://suj.academia.edu/works/170447309/edit",
+            "download_url": "https://www.academia.edu/attachments/133506464/download_file?s=profile",
+            "attachment_name": "the_objective_morality_project_with_cover.pdf",
+            "thumbnail": "https://attachments.academia-assets.com/133506464/thumbnails/1.jpg",
+            "has_real_thumbnail": true
+          }
+        ],
+        "partial": [],
+        "selected": {
+          "matchType": "exact_title",
+          "work": {
+            "work_id": "170447309",
+            "title": "The objective morality project with cover",
+            "work_url": "https://www.academia.edu/170447309/The_objective_morality_project_with_cover",
+            "edit_url": "https://suj.academia.edu/works/170447309/edit",
+            "download_url": "https://www.academia.edu/attachments/133506464/download_file?s=profile",
+            "attachment_name": "the_objective_morality_project_with_cover.pdf",
+            "thumbnail": "https://attachments.academia-assets.com/133506464/thumbnails/1.jpg",
+            "has_real_thumbnail": true
+          }
+        },
+        "blocker": null,
+        "collision": false
+      },
+      "philarchive": null,
+      "blocked": false
+    }
+  ]
+}

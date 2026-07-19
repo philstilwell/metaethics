@@ -1,0 +1,532 @@
+{
+  "started_at": "2026-07-19T15:25:48.888Z",
+  "items": [
+    {
+      "sheet_row": 156,
+      "sheet_project_number": 156,
+      "sheet_physical_row": 158,
+      "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+      "pdf_path": "/Users/philstilwell/Documents/Metaethics Tool/output/pdf/the-objective-morality-project-with-cover.pdf",
+      "pdf_bytes": 4737732,
+      "started_at": "2026-07-19T15:29:10.833Z",
+      "academia": {
+        "reusedExisting": true,
+        "repairedPartial": true,
+        "matchType": "exact_title",
+        "work": {
+          "work_id": "170447309",
+          "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+          "work_url": "https://www.academia.edu/170447309/The_Objective_Morality_Project_An_Expedition_to_Build_a_Moral_System_Everyone_Has_Reason_to_Obey",
+          "edit_url": "https://suj.academia.edu/works/170447309/edit",
+          "download_url": "https://www.academia.edu/attachments/133506464/download_file?s=profile",
+          "attachment_name": "the_objective_morality_project_with_cover.pdf",
+          "thumbnail": "https://attachments.academia-assets.com/133506464/thumbnails/1.jpg",
+          "has_real_thumbnail": true
+        },
+        "url": "https://www.academia.edu/170447309/The_Objective_Morality_Project_An_Expedition_to_Build_a_Moral_System_Everyone_Has_Reason_to_Obey",
+        "editUrl": "https://suj.academia.edu/works/170447309/edit",
+        "newWorkId": "170447309",
+        "thumbnail": "https://attachments.academia-assets.com/133506464/thumbnails/1.jpg",
+        "hasRealThumbnail": true,
+        "attachment_name": "the_objective_morality_project_with_cover.pdf",
+        "repair": {
+          "work_id": "170447309",
+          "repaired": true,
+          "metadata": {
+            "mode": "edit",
+            "interestUpdates": [
+              {
+                "interest": "Meta-Ethics",
+                "ok": true,
+                "matched": "Meta-Ethics"
+              },
+              {
+                "interest": "Moral Anti-Realism",
+                "ok": true,
+                "matched": "Moral anti-realism"
+              },
+              {
+                "interest": "Moral Error Theory",
+                "ok": true,
+                "matched": "Moral Error Theory"
+              },
+              {
+                "interest": "Moral Epistemology",
+                "ok": true,
+                "matched": "Moral Epistemology"
+              },
+              {
+                "interest": "Moral Psychology",
+                "ok": true,
+                "matched": "Moral Psychology"
+              },
+              {
+                "interest": "Moral Responsibility",
+                "ok": true,
+                "matched": "Moral Responsibility"
+              },
+              {
+                "interest": "Normativity",
+                "ok": true,
+                "matched": "Normativity"
+              },
+              {
+                "interest": "Practical Reason",
+                "ok": true,
+                "matched": "Practical Reason"
+              },
+              {
+                "interest": "Epistemology of Disagreement",
+                "ok": true,
+                "matched": "Epistemology of Disagreement"
+              },
+              {
+                "interest": "Ethics of Belief",
+                "ok": true,
+                "matched": "Ethics of Belief"
+              },
+              {
+                "interest": "Political Philosophy",
+                "ok": true,
+                "matched": "Political Philosophy"
+              },
+              {
+                "interest": "Political Legitimacy",
+                "ok": true,
+                "matched": "Political Legitimacy"
+              },
+              {
+                "interest": "Political Authority",
+                "ok": true,
+                "matched": "Political Authority"
+              },
+              {
+                "interest": "Public Reason",
+                "ok": true,
+                "matched": "Public Reason"
+              },
+              {
+                "interest": "Social and Political Philosophy",
+                "ok": true,
+                "matched": "Social and Political Philosophy"
+              },
+              {
+                "interest": "Philosophy of Law",
+                "ok": true,
+                "matched": "Philosophy Of Law"
+              },
+              {
+                "interest": "Philosophy of Religion",
+                "ok": true,
+                "matched": "Philosophy Of Religion"
+              }
+            ],
+            "editorVerification": {
+              "titleValue": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+              "abstractLength": 1477,
+              "interests": [
+                "Meta-Ethics",
+                "Moral anti-realism",
+                "Moral Error Theory",
+                "Moral Epistemology",
+                "Moral Psychology",
+                "Moral Responsibility",
+                "Normativity",
+                "Practical Reason",
+                "Epistemology of Disagreement",
+                "Ethics of Belief",
+                "Political Philosophy",
+                "Political Legitimacy",
+                "Political Authority",
+                "Public Reason",
+                "Social and Political Philosophy",
+                "Philosophy Of Law",
+                "Philosophy Of Religion"
+              ],
+              "missingInterests": [],
+              "titleBaseOk": true,
+              "titlePrefixOk": true,
+              "titleOk": true,
+              "abstractOk": true,
+              "yearValue": "2026",
+              "yearOk": true
+            }
+          }
+        },
+        "editorCheck": {
+          "available": true,
+          "titleValue": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+          "abstractLength": 1477,
+          "interests": [
+            "Political Philosophy",
+            "Philosophy Of Religion",
+            "Meta-Ethics",
+            "Moral Psychology",
+            "Philosophy Of Law",
+            "Public Reason",
+            "Political Legitimacy",
+            "Ethics of Belief",
+            "Normativity",
+            "Social and Political Philosophy",
+            "Moral anti-realism",
+            "Moral Epistemology",
+            "Epistemology of Disagreement",
+            "Practical Reason",
+            "Moral Responsibility",
+            "Political Authority",
+            "Moral Error Theory"
+          ],
+          "missingInterests": [],
+          "titleBaseOk": true,
+          "titlePrefixOk": true,
+          "titleOk": true,
+          "abstractOk": true,
+          "yearValue": "2026",
+          "yearOk": true
+        },
+        "publicCheck": {
+          "hasTitleCore": true,
+          "hasAbstractOpening": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false
+        },
+        "verified": true,
+        "verificationWarnings": []
+      },
+      "manifestCheckpoint": {
+        "academia_work_id": "170447309",
+        "philarchive_record_id": "STITOM",
+        "philarchive_verified": true,
+        "philpapers_metadata_checkpoint": {
+          "categoriesAfter": [
+            "Moral Epistemology, Misc",
+            "Moral Disagreement",
+            "Moral Skepticism",
+            "Moral Emotion, Misc",
+            "Moral Reasons",
+            "Moral Constructivism",
+            "Moral Objectivity",
+            "Political Legitimacy",
+            "Moral Error Theories and Fictionalism",
+            "Meta-Ethics, General Works"
+          ],
+          "keywordsAfter": [
+            "metaethics",
+            "objective morality",
+            "moral realism",
+            "moral anti-realism",
+            "moral skepticism",
+            "moral authority",
+            "practical reason",
+            "moral epistemology",
+            "moral disagreement",
+            "moral constructivism",
+            "value pluralism"
+          ]
+        }
+      },
+      "philarchive": {
+        "sheet_row": 156,
+        "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+        "uploadStatus": 200,
+        "submitStatus": 200,
+        "upsession": "1784475064-Zt82lDQJG.pdf",
+        "parsed": {
+          "status": "success",
+          "msg": null,
+          "errors": null,
+          "id": "STITOM"
+        },
+        "saveText": "{\"status\":\"success\",\"msg\":null,\"errors\":null,\"id\":\"STITOM\"}",
+        "category_ids": [
+          "6831",
+          "4557",
+          "4545",
+          "4555",
+          "4568",
+          "4565",
+          "4588",
+          "4570",
+          "16241",
+          "5061"
+        ],
+        "metadata": {
+          "available": true,
+          "categoryUpdates": [
+            {
+              "name": "Meta-Ethics, General Works",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Objectivity",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Error Theories and Fictionalism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Constructivism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Skepticism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Disagreement",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Reasons",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Epistemology, Misc",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Moral Emotion, Misc",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "name": "Political Legitimacy",
+              "ok": true,
+              "alreadyPresent": true
+            }
+          ],
+          "keywordUpdates": [
+            {
+              "keyword": "metaethics",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "objective morality",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral realism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral anti-realism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral skepticism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral authority",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "practical reason",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral epistemology",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral disagreement",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "moral constructivism",
+              "ok": true,
+              "alreadyPresent": true
+            },
+            {
+              "keyword": "value pluralism",
+              "ok": true,
+              "alreadyPresent": true
+            }
+          ],
+          "categoriesAfter": [
+            "Moral Epistemology, Misc",
+            "Moral Disagreement",
+            "Moral Skepticism",
+            "Moral Emotion, Misc",
+            "Moral Reasons",
+            "Moral Constructivism",
+            "Moral Objectivity",
+            "Political Legitimacy",
+            "Moral Error Theories and Fictionalism",
+            "Meta-Ethics, General Works"
+          ],
+          "keywordsAfter": [
+            "metaethics",
+            "objective morality",
+            "moral realism",
+            "moral anti-realism",
+            "moral skepticism",
+            "moral authority",
+            "practical reason",
+            "moral epistemology",
+            "moral disagreement",
+            "moral constructivism",
+            "value pluralism"
+          ],
+          "requestedCategories": [
+            "Meta-Ethics, General Works",
+            "Moral Objectivity",
+            "Moral Error Theories and Fictionalism",
+            "Moral Constructivism",
+            "Moral Skepticism",
+            "Moral Disagreement",
+            "Moral Reasons",
+            "Moral Epistemology, Misc",
+            "Moral Emotion, Misc",
+            "Political Legitimacy"
+          ],
+          "requestedKeywords": [
+            "metaethics",
+            "objective morality",
+            "moral realism",
+            "moral anti-realism",
+            "moral skepticism",
+            "moral authority",
+            "practical reason",
+            "moral epistemology",
+            "moral disagreement",
+            "moral constructivism",
+            "value pluralism"
+          ],
+          "missingCategories": [],
+          "missingKeywords": [],
+          "editorRoute": "https://philpapers.org/edit/STITOM#categorization",
+          "readbackRoute": "https://philpapers.org/edit/STITOM#categorization"
+        },
+        "recordId": "STITOM",
+        "philpapers_url": "https://philpapers.org/rec/STITOM",
+        "philarchive_url": "https://philarchive.org/rec/STITOM",
+        "publicCheck": {
+          "url": "https://philarchive.org/rec/STITOM",
+          "blockedByAntiBot": true,
+          "skippedDirectCheck": true,
+          "hasDownloadText": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false
+        },
+        "philarchiveCheck": {
+          "url": "https://philarchive.org/rec/STITOM",
+          "blockedByAntiBot": true,
+          "skippedDirectCheck": true,
+          "hasDownloadText": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false
+        },
+        "philpapersCheck": {
+          "url": "https://philpapers.org/rec/STITOM",
+          "documentTitle": "Phil Stilwell, The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey - PhilPapers",
+          "hasTitle": true,
+          "hasAbstractOpening": true,
+          "hasAuthor": true,
+          "hasDownloadText": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false,
+          "blockedByAntiBot": false
+        },
+        "philpeopleCheck": {
+          "url": "https://philpeople.org/profiles/phil-stilwell-1/publications",
+          "hasTitle": true,
+          "hasRecordLink": true,
+          "hasDownloadLink": true,
+          "links": [
+            {
+              "text": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+              "href": "https://philpapers.org/rec/STITOM"
+            },
+            {
+              "text": "Download from PhilArchive",
+              "href": "https://philpapers.org/go.pl?aid=STITOM"
+            },
+            {
+              "text": "Edit this publication",
+              "href": "https://philpapers.org/edit/STITOM"
+            },
+            {
+              "text": "This is a duplicate",
+              "href": "https://philpapers.org/utils/duplicate.pl?eId=STITOM"
+            }
+          ]
+        },
+        "proxyVerified": true,
+        "verified": true,
+        "verificationWarnings": [],
+        "verificationNotes": [
+          "PhilArchive direct readback was blocked by anti-bot protection; PhilPapers and PhilPeople proxy checks were used."
+        ]
+      },
+      "repository": {
+        "skipped": false,
+        "repositoryPath": "/Users/philstilwell/Library/CloudStorage/Dropbox/Academic Papers",
+        "destination": "/Users/philstilwell/Library/CloudStorage/Dropbox/Academic Papers/The Objective Morality Project - An Expedition to Build a Moral System Everyone Has Reason to Obey.pdf",
+        "fileName": "The Objective Morality Project - An Expedition to Build a Moral System Everyone Has Reason to Obey.pdf",
+        "source": "/Users/philstilwell/Documents/Metaethics Tool/output/pdf/the-objective-morality-project-with-cover.pdf",
+        "before": {
+          "exists": false
+        },
+        "after": {
+          "exists": true,
+          "bytes": 4737732,
+          "mtimeMs": 1784475087486.277
+        }
+      },
+      "verification": {
+        "academia": true,
+        "philarchive": true,
+        "readyForRepositoryAndSheet": true
+      },
+      "finished_at": "2026-07-19T15:31:27.487Z"
+    }
+  ],
+  "cleanup": {
+    "removed": false,
+    "path": "/Users/philstilwell/Documents/Metaethics Tool/output/upload-kit-runs/objective-morality-project/upload_sources"
+  },
+  "sheetUpdate": {
+    "skipped": false,
+    "updatedRows": [
+      {
+        "row": 158,
+        "sheet_row": 156,
+        "sheet_project_number": 156,
+        "sheet_physical_row": 158,
+        "paper_name": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+        "sheet_title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+        "published_date": "2026-07-19",
+        "source_url": "https://github.com/philstilwell/metaethics/blob/main/output/pdf/the-objective-morality-project-with-cover.pdf",
+        "summary": "Constructs and pressure-tests the components required for an objective moral system, explains why no examined candidate earns the promised combination of truth, authority, access, and guidance, and develops a public-reasoning method grounded in explicit human stakes, evidence, safeguards, dissent, and repair.",
+        "academia_url": "https://www.academia.edu/170447309/The_Objective_Morality_Project_An_Expedition_to_Build_a_Moral_System_Everyone_Has_Reason_to_Obey",
+        "philarchive_url": "https://philarchive.org/rec/STITOM",
+        "done": true,
+        "_resolved_sheet_physical_row": 158,
+        "_sheet_row_warning": null
+      }
+    ],
+    "targetRowWarnings": [],
+    "beforeRows": "\"156\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"",
+    "afterRows": "\"156\",\"\",\"TRUE\",\"\",\"The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey\",\"2026-07-19\",\"https://github.com/philstilwell/metaethics/blob/main/output/pdf/the-objective-morality-project-with-cover.pdf\",\"Constructs and pressure-tests the components required for an objective moral system, explains why no examined candidate earns the promised combination of truth, authority, access, and guidance, and develops a public-reasoning method grounded in explicit human stakes, evidence, safeguards, dissent, and repair.\",\"\",\"https://www.academia.edu/170447309/The_Objective_Morality_Project_An_Expedition_to_Build_a_Moral_System_Everyone_Has_Reason_to_Obey\",\"https://philarchive.org/rec/STITOM\""
+  },
+  "finished_at": "2026-07-19T15:32:02.173Z"
+}

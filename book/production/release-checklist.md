@@ -36,3 +36,12 @@
 - [x] Keep wide ebook tables horizontally scrollable and provide the fixed-layout companion workbook
 - [ ] Confirm that no development-only editorial or research files appear in the edition
 - [ ] Archive the exact release source, PDF, cover, metadata, and checksums
+
+## Academic repository release
+
+- [x] Publish the complete illustrated reader PDF to Academia.edu
+- [x] File the verified Academia.edu work in the Books section
+- [x] Publish and verify the PhilArchive, PhilPapers, and PhilPeople records
+- [x] Verify all ten PhilPapers categories and all eleven keywords after reload
+- [x] Copy the byte-identical reader PDF to the current academic-PDF repository
+- [x] Populate and read back Insights project 156, including both destination URLs and Done status

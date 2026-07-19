@@ -1,0 +1,127 @@
+{
+  "checked_at": "2026-07-19T15:35:14.741Z",
+  "checks": [
+    {
+      "sheet_row": 156,
+      "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+      "academia": {
+        "foundOnProfile": false,
+        "hasRealThumbnail": false,
+        "profileWork": null,
+        "publicCheck": null,
+        "editorCheck": null
+      },
+      "philarchive": {
+        "recordId": "STITOM",
+        "philarchiveUrl": "https://philarchive.org/rec/STITOM",
+        "philpapersUrl": "https://philpapers.org/rec/STITOM",
+        "philarchiveCheck": {
+          "url": "https://philarchive.org/rec/STITOM",
+          "documentTitle": "Phil Stilwell, The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey - PhilArchive",
+          "hasTitle": true,
+          "hasAbstractOpening": true,
+          "hasAuthor": true,
+          "hasDownloadText": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false,
+          "blockedByAntiBot": false
+        },
+        "philpapersCheck": {
+          "url": "https://philpapers.org/rec/STITOM",
+          "documentTitle": "Phil Stilwell, The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey - PhilPapers",
+          "hasTitle": true,
+          "hasAbstractOpening": true,
+          "hasAuthor": true,
+          "hasDownloadText": true,
+          "containsFreeOfFaith": false,
+          "containsFreeoffaithUrl": false,
+          "blockedByAntiBot": false
+        },
+        "philpeopleCheck": {
+          "url": "https://philpeople.org/profiles/phil-stilwell-1/publications",
+          "hasTitle": true,
+          "hasRecordLink": true,
+          "hasDownloadLink": true,
+          "links": [
+            {
+              "text": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+              "href": "https://philpapers.org/rec/STITOM"
+            },
+            {
+              "text": "Download from PhilArchive",
+              "href": "https://philpapers.org/go.pl?aid=STITOM"
+            },
+            {
+              "text": "Edit this publication",
+              "href": "https://philpapers.org/edit/STITOM"
+            },
+            {
+              "text": "This is a duplicate",
+              "href": "https://philpapers.org/utils/duplicate.pl?eId=STITOM"
+            }
+          ]
+        },
+        "metadataCheck": {
+          "available": true,
+          "editorRoute": "https://philpapers.org/edit/STITOM#categorization",
+          "categories": [
+            "Moral Epistemology, Misc",
+            "Moral Disagreement",
+            "Moral Skepticism",
+            "Moral Emotion, Misc",
+            "Moral Reasons",
+            "Moral Constructivism",
+            "Moral Objectivity",
+            "Political Legitimacy",
+            "Moral Error Theories and Fictionalism",
+            "Meta-Ethics, General Works"
+          ],
+          "keywords": [
+            "metaethics",
+            "objective morality",
+            "moral realism",
+            "moral anti-realism",
+            "moral skepticism",
+            "moral authority",
+            "practical reason",
+            "moral epistemology",
+            "moral disagreement",
+            "moral constructivism",
+            "value pluralism"
+          ],
+          "requestedCategories": [
+            "Meta-Ethics, General Works",
+            "Moral Objectivity",
+            "Moral Error Theories and Fictionalism",
+            "Moral Constructivism",
+            "Moral Skepticism",
+            "Moral Disagreement",
+            "Moral Reasons",
+            "Moral Epistemology, Misc",
+            "Moral Emotion, Misc",
+            "Political Legitimacy"
+          ],
+          "requestedKeywords": [
+            "metaethics",
+            "objective morality",
+            "moral realism",
+            "moral anti-realism",
+            "moral skepticism",
+            "moral authority",
+            "practical reason",
+            "moral epistemology",
+            "moral disagreement",
+            "moral constructivism",
+            "value pluralism"
+          ],
+          "missingCategories": [],
+          "missingKeywords": []
+        },
+        "verified": true,
+        "proxyVerified": false,
+        "warnings": [],
+        "notes": []
+      }
+    }
+  ]
+}

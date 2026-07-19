@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-07-19T15:29:00.654Z",
+  "validation": [
+    {
+      "sheet_row": 156,
+      "sheet_project_number": 156,
+      "sheet_physical_row": 156,
+      "title": "The Objective Morality Project: An Expedition to Build a Moral System Everyone Has Reason to Obey",
+      "errors": [],
+      "warnings": [
+        "Using sheet_row as the physical spreadsheet row. If sheet_row is only the project/index number, add sheet_physical_row."
+      ]
+    }
+  ]
+}

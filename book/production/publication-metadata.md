@@ -51,3 +51,12 @@ metaethics; objective morality; moral realism; moral skepticism; practical reaso
 ## External identifiers and commercial fields
 
 ISBNs, imprint, territorial rights, list prices, retailer description limits, and distributor-specific categories remain unset because they require publication-account choices rather than editorial judgment.
+
+## Academic repository records
+
+- **Academia.edu:** [work 170447309](https://www.academia.edu/170447309/The_Objective_Morality_Project_An_Expedition_to_Build_a_Moral_System_Everyone_Has_Reason_to_Obey), filed in the author's Books section
+- **PhilArchive:** [record STITOM](https://philarchive.org/rec/STITOM)
+- **PhilPapers:** [record STITOM](https://philpapers.org/rec/STITOM)
+- **PhilPeople:** listed on [Phil Stilwell's publications page](https://philpeople.org/profiles/phil-stilwell-1/publications)
+- **Repository edition:** `the-objective-morality-project-with-cover.pdf`, 4,737,732 bytes, SHA-256 `b3c381ef1d75065ac8789e87c54c2d892729be2b8d03233d4c3d13bc7aaf1a8c`
+- **Published to repositories:** July 19, 2026
