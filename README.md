@@ -1,6 +1,6 @@
 # The Moral Compass
 
-A static collection of fourteen interactive metaethics tools. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. A four-question [lab finder](find.html) offers three starting points without acting as a personality test, while the public [Method & Limits page](method.html) states exactly what every diagnostic measures, does not measure, and flags. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
+A static collection of fourteen interactive metaethics tools and a complete book-length synthesis. The central [project hub](index.html) explains how the tools examine different parts of moral thought in an expandable module grid. [The Objective Morality Project](book.html) connects those focused questions into a prologue, forty-one chapters, seven parts, and six appendices that construct and pressure-test an objective moral system from beginning to end. A four-question [lab finder](find.html) offers three starting points without acting as a personality test, while the public [Method & Limits page](method.html) states exactly what every diagnostic measures, does not measure, and flags. The site is designed for GitHub Pages and runs entirely in the browser with no AI calls, analytics, accounts, or backend.
 
 The current tools work together without forming a required sequence:
 
@@ -105,6 +105,7 @@ node tests/emotions-audit.cjs
 node tests/papers-audit.cjs
 node tests/suite-map-audit.cjs
 node tests/hub-audit.cjs
+node tests/book-audit.cjs
 ```
 
 ## Sources

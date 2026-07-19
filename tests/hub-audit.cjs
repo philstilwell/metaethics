@@ -7,7 +7,7 @@ const path = require("node:path");
 const root = path.join(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
-const pages = ["index.html", "find.html", "method.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html", "evidence.html", "standing.html", "tradeoffs.html", "emotions.html", "map.html", "papers.html"];
+const pages = ["index.html", "find.html", "method.html", "book.html", "profile.html", "obligation.html", "wrong.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html", "evidence.html", "standing.html", "tradeoffs.html", "emotions.html", "map.html", "papers.html"];
 const toolLinks = ["profile.html", "wrong.html", "obligation.html", "after.html", "decoder.html", "genealogy.html", "build.html", "criticize.html", "blame.html", "reasons.html", "evidence.html", "standing.html", "tradeoffs.html", "emotions.html"];
 const faviconFiles = ["favicon-32.png", "favicon.png", "favicon.ico", "apple-touch-icon.png"];
 
@@ -23,6 +23,9 @@ assert.match(html, /Value Conflict Lab tests comparison\./, "the hub must explai
 assert.match(html, /Moral Emotions Lab tests the remainder\./, "the hub must explain how the fourteenth tool extends the suite");
 assert.match(html, /There is no required order\./, "the hub must not present the tools as a forced sequence");
 assert.match(html, /No account, tracking, or built-in AI/, "the hub must disclose its privacy model");
+assert.match(html, /The complete project in one sustained argument/, "the hub must present the book as the comprehensive synthesis");
+assert.match(html, /href="book\.html"/, "the hub must link to the dedicated book page");
+assert.match(html, /the-objective-morality-project-with-cover\.pdf/, "the hub must link directly to the complete illustrated book");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "the landing page must have one primary heading");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(ids).size, ids.length, "the landing page must not reuse an element id");
@@ -54,6 +57,7 @@ for (const page of pages) {
   assert.match(pageHtml, /href="index\.html#toolkit"[^>]*>All labs<\/a>/, `${page} must use the scalable all-labs navigation link`);
   assert.match(pageHtml, /href="map\.html"[^>]*>My map<\/a>/, `${page} must link to the optional suite map`);
   assert.match(pageHtml, /href="method\.html"[^>]*>Method<\/a>/, `${page} must link to the public method page`);
+  assert.match(pageHtml, /href="book\.html"[^>]*>Book<\/a>/, `${page} must link to the comprehensive book`);
   assert.match(pageHtml, /href="papers\.html"[^>]*>Papers<\/a>/, `${page} must link to the reading room`);
   for (const favicon of faviconFiles) {
     assert.match(pageHtml, new RegExp(`href="${favicon.replace(".", "\\.")}"`), `${page} must use ${favicon}`);
@@ -77,4 +81,4 @@ const currentMarkers = pages.map((page) => {
 });
 assert.deepEqual(currentMarkers, new Array(pages.length).fill(1), "every main page must identify exactly one current navigation item");
 
-console.log("Hub audit passed: fourteen live tools, guided finder, method page, deliberate final row, interaction guidance, suite map, scalable navigation, privacy copy, and local links verified.");
+console.log("Hub audit passed: fourteen live tools, comprehensive book, guided finder, method page, interaction guidance, suite map, scalable navigation, privacy copy, and local links verified.");
