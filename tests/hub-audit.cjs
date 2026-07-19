@@ -64,7 +64,7 @@ for (const page of pages) {
   }
   for (const href of [...pageHtml.matchAll(/href="([^"#][^"]*)"/g)].map((match) => match[1])) {
     if (/^(?:https?:|mailto:|data:)/.test(href)) continue;
-    const target = href.split("#")[0];
+    const target = href.split(/[?#]/)[0];
     assert.ok(fs.existsSync(path.join(root, target)), `${page} links to missing local target ${target}`);
   }
 }

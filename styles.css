@@ -8853,6 +8853,7 @@ dialog p:not(.kicker) {
   --book-olive: #424739;
   --book-red: #b92f1f;
   --book-ochre: #db9733;
+  --book-page-gutter: clamp(12px, 1.7vw, 32px);
 }
 
 .hub-book-feature {
@@ -8994,14 +8995,26 @@ dialog p:not(.kicker) {
 }
 
 .book-page main {
+  width: auto;
   overflow: hidden;
+  margin: var(--book-page-gutter) var(--book-page-gutter) 0;
+  border: 1px solid rgba(21, 26, 23, 0.45);
+  border-bottom: 0;
+  box-shadow: 0 24px 70px rgba(22, 27, 24, 0.1);
+}
+
+.book-page footer {
+  margin: 0 var(--book-page-gutter) var(--book-page-gutter);
+  border: 1px solid rgba(21, 26, 23, 0.45);
+  background: rgba(251, 250, 246, 0.74);
 }
 
 .book-hero {
   display: grid;
-  grid-template-columns: minmax(260px, 0.54fr) minmax(0, 1fr);
-  gap: clamp(52px, 9vw, 140px);
+  grid-template-columns: minmax(250px, 420px) minmax(0, 800px);
+  gap: clamp(48px, 7vw, 100px);
   align-items: center;
+  justify-content: center;
   min-height: calc(100vh - 73px);
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 120px);
   background:
@@ -9280,8 +9293,9 @@ dialog p:not(.kicker) {
 
 .book-result {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1fr);
-  gap: clamp(48px, 9vw, 140px);
+  grid-template-columns: minmax(0, 520px) minmax(420px, 680px);
+  gap: clamp(48px, 7vw, 100px);
+  justify-content: center;
   padding: clamp(80px, 10vw, 142px) clamp(20px, 8vw, 120px);
   background:
     linear-gradient(150deg, rgba(185, 47, 31, 0.1), transparent 40%),
@@ -9409,7 +9423,7 @@ dialog p:not(.kicker) {
 
 @media (max-width: 1050px) {
   .book-hero {
-    grid-template-columns: minmax(240px, 0.48fr) minmax(0, 1fr);
+    grid-template-columns: minmax(240px, 380px) minmax(0, 720px);
   }
 
   .book-facts {
@@ -9443,7 +9457,7 @@ dialog p:not(.kicker) {
   .hub-book-cover,
   .book-cover-figure {
     width: min(72vw, 430px);
-    justify-self: start;
+    justify-self: center;
   }
 
   .book-hero {
@@ -9503,6 +9517,10 @@ dialog p:not(.kicker) {
 }
 
 @media (max-width: 520px) {
+  .book-page {
+    --book-page-gutter: 6px;
+  }
+
   .hub-book-cover,
   .book-cover-figure {
     width: calc(100% - 24px);

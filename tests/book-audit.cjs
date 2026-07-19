@@ -27,6 +27,7 @@ assert.match(html, /Prologue \+ 41 chapters/, "the page must state the complete 
 assert.equal((html.match(/<li class="book-part-card">/g) || []).length, 7, "the page must present all seven parts");
 assert.equal((html.match(/<article class="book-edition-card(?: [^"]+)?">/g) || []).length, 4, "the page must offer four publication formats");
 assert.doesNotMatch(html, /<script\b/, "the book page must remain a static, no-tracking document");
+assert.match(html, /styles\.css\?v=20260719-book-margin/, "the book page must bypass stale pre-book stylesheets");
 
 const cover = html.match(/<img[\s\S]*?front-cover\.jpg[\s\S]*?>/);
 assert.ok(cover, "the finished cover must appear on the book page");
@@ -41,11 +42,12 @@ for (const asset of assets) {
 
 for (const href of [...html.matchAll(/href="([^"#][^"]*)"/g)].map((match) => match[1])) {
   if (/^(?:https?:|mailto:|data:)/.test(href)) continue;
-  const target = href.split("#")[0];
+  const target = href.split(/[?#]/)[0];
   assert.ok(fs.existsSync(path.join(root, target)), `book.html links to missing local target ${target}`);
 }
 
 assert.match(css, /\.book-hero\s*\{[^}]*grid-template-columns:/s, "the book page must have a deliberate wide hero");
+assert.match(css, /\.book-page main\s*\{[^}]*margin:\s*var\(--book-page-gutter\)/s, "the book page must retain an explicit outer frame");
 assert.match(css, /\.book-part-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,/s, "the seven-part journey must use a wide grid");
 assert.match(css, /\.book-edition-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4,/s, "the edition choices must use a wide grid");
 assert.match(css, /@media \(max-width: 700px\)[\s\S]*?\.book-part-grid,[\s\S]*?grid-template-columns:\s*1fr/s, "the journey must collapse to one column on narrow screens");
