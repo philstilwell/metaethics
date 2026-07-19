@@ -224,6 +224,32 @@ Choose one row from your value table. Complete this template:
 >
 > **Review rule:** A decision can be challenged or corrected through __________.
 
+### Worked example: medical confidentiality
+
+Carry the model value from Chapter 8 through the template:
+
+> **Value:** Medical confidentiality.
+>
+> **Bearer or beneficiary:** A patient whose identifiable information was disclosed in care.
+>
+> **Generation route:** Protect confidentiality and embody a relationship in which vulnerable disclosure has declared limits.
+>
+> **Guidance rule:** A clinic worker must not disclose identifiable patient information without authorization when the information was obtained through care.
+>
+> **Evidence standard:** The rule applies when the information identifies or can reasonably reidentify a patient and no valid authorization covers the disclosure.
+>
+> **Scope:** It applies to current and former patients, including after the immediate episode of care.
+>
+> **Ordinary exception:** It yields for the minimum disclosure required for the patient's treatment, billing, or a lawfully specified public-health report, with notice and access controls where feasible.
+>
+> **Emergency exception:** It yields when evidence supports an imminent threat of serious harm to an identifiable person and no less intrusive protective alternative is available.
+>
+> **Conflict rule:** If confidentiality collides with protection from imminent serious harm, disclose only the information necessary under the emergency threshold and record the decision for review.
+>
+> **Review rule:** A privacy officer or independent reviewer can inspect the evidence, necessity, scope of disclosure, notice, and available repair.
+
+This example shows what the blanks demand: an addressed agent, an observable trigger, a scope, exceptions, a threshold, and a review route. It does not prove that this is the correct confidentiality policy or that every worker has a stance-independent reason to follow it. Those are later questions.
+
 If several blanks remain, leave them visible. A blank is a problem you can work on. A vague word posing as a solution is a problem that has stolen a uniform.
 
 ## The shelter disclosure case

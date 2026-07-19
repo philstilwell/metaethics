@@ -202,15 +202,47 @@ Avoid labeling every value protected. If two absolute protections conflict, the 
 
 **Purpose.** Convert attractive value names into explicit roles, grounds, and bearers; completing the table identifies the system's materials but does not yet generate or rank its rules.
 
-Create a value table:
+### What one row is expected to do
 
-| Value | Family | Why admitted | Intrinsic, instrumental, constitutive, relational, or symbolic | Primary, protected, or defeasible | Bearer or beneficiary |
+Begin with four to eight values that your Candidate System actually uses. One row should name one sufficiently specific concern. If *dignity* means both protection from humiliation and control over one's body, split it into two rows; the grounds, bearers, and limits may differ.
+
+Complete the columns from left to right:
+
+- **Value:** Use a specific concern such as *freedom from severe pain*, *control over one's medical decisions*, or *reliable promises*. A grand label such as *justice* needs an operational description.
+- **Family:** Choose one or two of the eight families described above. Multiple families are allowed when each does visible work.
+- **Proposed ground:** State why the concern enters the system. Name the experience, capacity, relationship, practice, commitment, procedure, or alleged objective fact doing the work. Do not write “because it is valuable.”
+- **Value role(s):** Choose intrinsic, instrumental, constitutive, relational, or symbolic. List more than one only when you can explain each route.
+- **System role(s):** Choose primary, protected, or defeasible. If you write *protected*, later chapters will require a boundary and an exception rule.
+- **Bearer or beneficiary:** Name who or what has the experience, interest, relationship, practice, or protected domain. “Society” is too broad unless the relevant institution or members are specified.
+
+### Worked row: medical confidentiality
+
+One defensible entry might read:
+
+> **Value:** Medical confidentiality. **Family:** Care and relationship; rules and duties. **Proposed ground:** Patients expose vulnerable facts in reliance on clinicians, and care becomes less trustworthy and less effective when those disclosures are casually released. **Value roles:** Constitutive of a trusting clinical relationship and instrumental to effective care. **System roles:** Protected, but defeasible under a declared imminent-threat exception. **Bearers or beneficiaries:** Patients who disclose, people exposed to a sufficiently evidenced threat, and the clinical relationship itself.
+
+This is a model of the form, not an answer the book requires. A system could reject confidentiality as intrinsic, define a different emergency threshold, or ground it in autonomy rather than relationship. What it may not do is write “confidentiality matters because confidentiality is important” and call the row complete.
+
+Now create your table. Use short phrases in the cells; put longer explanations beneath it.
+
+| Value | Family | Proposed ground | Value role(s) | System role(s) | Bearer or beneficiary |
 |---|---|---|---|---|---|
 |  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
-For every value, complete this sentence:
+: **Value inventory.** Each row records one concern, the proposed reason for admitting it, the roles it plays, and whose life or practice carries the stake.
+
+After drafting the table, test the proposed ground in every row by completing this sentence:
 
 > This matters because __________, and not merely because I approve of it.
+
+For the model row, a useful completion would be:
+
+> Medical confidentiality matters because patients must expose vulnerable information to receive care, reliable limits on disclosure partly constitute the relationship they are entering, and unauthorized release can place their projects and safety at risk—not merely because I approve of confidentiality.
+
+The sentence does not have to establish stance-independent value. It has to reveal the best ground the system currently possesses so a later chapter can test whether that ground supplies commitment, public justification, conditional reasons, or objective authority.
 
 You may not yet have a successful completion. Write the best candidate. “It is self-evident” is allowed only if you later explain what self-evidence establishes and how error is detected. “Humans generally care about it” is valuable evidence about shared attitudes and coordination, but it does not by itself satisfy the objectivity threshold from Chapter 2.
 

@@ -9,6 +9,15 @@ Use a fresh copy for each complete candidate. Never erase an earlier answer. Dat
 - **Repair** — a pressure case required a new bridge, exception, or procedure;
 - **Surrender** — the revised project no longer claims a property originally treated as essential.
 
+## How to complete the tables
+
+- Use one row for one bearer, object, value, rule, or claim. Split a row when the same label has different grounds, limits, or confidence levels.
+- Work from left to right. Later cells should explain or qualify the item named in the first cell rather than introduce a new subject.
+- Prefer short operational phrases to attractive labels. Put longer reasoning in the space beneath the table.
+- Write **not yet specified**, **uncertain**, or **not applicable** when that is the honest result. A visible gap is part of the audit trail; an invented answer is not progress.
+- When a column permits several categories, list more than one only if each performs a stated role.
+- Model entries in the main text and this workbook demonstrate the required form. They are not an answer key or a recommendation to adopt the example's verdict.
+
 ## Cover sheet
 
 **Purpose.** Identify the candidate, its intended reach, its central promise, and its largest known debt so later revisions can be compared with the project that actually began.
@@ -202,7 +211,11 @@ Check the separations:
 
 **Purpose.** Translate attractive value labels into protected bearers, operational content, roles, limits, and evidence; listing a value does not yet generate a rule or priority.
 
-| Value or concern | Bearer | Object protected | Intrinsic, instrumental, constitutive, relational, or symbolic? | Primary, protected, or defeasible? | Evidence relevant to application | Source or selector |
+Complete four or more rows. Use **Concrete interest or practice** to say what the value protects in observable terms. **Value role(s)** records intrinsic, instrumental, constitutive, relational, or symbolic value. **System role(s)** records primary, protected, or defeasible status. **Source or selector** names why the candidate admits the value—for example, an alleged objective ground, a declared commitment, a relationship, a fair procedure, or a chosen public priority.
+
+**Model row, not a required answer:** *Medical confidentiality*; bearer: *patient who disclosed identifiable information*; concrete practice: *controlled disclosure within care*; value roles: *constitutive and instrumental*; system roles: *protected but defeasible under an imminent-threat exception*; evidence: *identifiability, authorization, threat, alternatives*; source: *clinical reliance and declared institutional commitment*.
+
+| Value or concern | Bearer | Concrete interest or practice | Value role(s) | System role(s) | Evidence relevant to application | Source or selector |
 |---|---|---|---|---|---|---|
 | __________ | __________ | __________ | __________ | __________ | __________ | __________ |
 | __________ | __________ | __________ | __________ | __________ | __________ | __________ |
@@ -228,6 +241,10 @@ Check the separations:
 **Purpose.** Display every move from “this matters” to “therefore do this” and expose the bridge, selector, or exception that makes the move possible.
 
 Complete one form for every move from “matters” to “act.”
+
+Use a value from Worksheet 5. The completed form must name an agent, an action or policy, the evidence that triggers it, the rule for risk or conflict, and the condition under which it yields. If the value generates two different actions, use two forms rather than joining them with *and so on*.
+
+**Model move, not a required answer:** Medical confidentiality → protect → clinic staff must limit identifiable disclosure → exception only at a stated imminent-threat threshold with no less intrusive alternative → independent privacy review.
 
 > **Value:** __________
 >

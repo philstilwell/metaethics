@@ -28,6 +28,7 @@ The audit asked six questions:
 - Shortened an early exercise label whose wording was visually unwieldy while preserving the distinction the exercise tests.
 - Expanded the five requested Chapter 3 sections with complete worked translations, paired agreement examples, stable and unstable Semantic Rules, a filled Debt Ledger entry, explicit guardrails, and statements of what each exercise does not establish.
 - Added shorter worked entries to the analogous Part I construction and debt sections so readers learn how to complete the recurring artifacts before later chapters increase the pressure.
+- Clarified the Chapter 6–9 construction tables and their workbook counterparts with column-by-column instructions, model rows, operational guardrails, and explicit statements of the intended output.
 
 ### Exercises and tables
 
@@ -35,6 +36,7 @@ The audit asked six questions:
 - Gave the ten-column Access Audit a dedicated width profile so foundational claims remain legible and the completed table fits on one landscape page.
 - Added keep-with-content controls for pressure-deck section headings and confirmed that no section title is stranded at a page foot.
 - Corrected the remaining compact-table wording that produced an overfull line in Appendix D.
+- Shortened dense value-table headers, assigned content-sensitive widths to the domain, status, and value tables, increased cell padding, and expanded workbook rows into practical handwriting space.
 
 ### Digital and production integrity
 
@@ -42,7 +44,7 @@ The audit asked six questions:
 - Added the complete copyright page to the EPUB.
 - Added an explicit accessible title to the EPUB cover image while preserving the required uncompressed-first `mimetype` entry.
 - Updated the build to normalize and validate the EPUB after Pandoc creates it.
-- Corrected publication metadata and support documents to the final 523-page edition and to approximately 149,600 words. The Markdown build inputs contain 149,582 source words before generated contents entries and title-page typography.
+- Corrected publication metadata and support documents to the final 528-page edition and to approximately 151,100 words. The Markdown build inputs contain 151,072 source words before generated contents entries and title-page typography.
 
 ## Verification record
 
@@ -61,11 +63,11 @@ The audit asked six questions:
 
 | Artifact | Final result |
 |---|---|
-| Main print proof | 523 pages, 7 × 10 inches; 506 portrait pages and 17 intentional landscape table pages |
-| Illustrated reader edition | 523 pages, 7 × 10 inches; illustrated cover replaces the interior title page |
+| Main print proof | 528 pages, 7 × 10 inches; 511 portrait pages and 17 intentional landscape table pages |
+| Illustrated reader edition | 528 pages, 7 × 10 inches; illustrated cover replaces the interior title page |
 | Companion workbook | 68 US-letter pages; 55 portrait pages and 13 intentional landscape table pages |
 
-- The 517-page baseline received a complete page-by-page contact-sheet inspection. After the worked-example revision, every changed or reflowed Part I page and the new blank verso were rendered again; the dense Chapter 3 examples were inspected at full resolution. The recto reset leaves the previously inspected Parts II–VII and appendices unchanged apart from physical page numbering.
+- The 517-page baseline received a complete page-by-page contact-sheet inspection. After the worked-example revision, every changed or reflowed Part I page and the new blank verso were rendered again; the dense Chapter 3 examples were inspected at full resolution. After the table-instruction revision, every changed or reflowed Part II page, the revised Appendix A pages, and the corresponding workbook pages were rendered again; both value inventories were inspected at full resolution. Recto starts preserve the previously inspected layouts beyond each local revision boundary.
 - Main-edition outlines contain 58 navigable entries; the workbook outline contains four.
 - All fonts are embedded, subset, and Unicode-mapped.
 - Final TeX logs contain no error, missing-character warning, undefined control sequence, or alignment overfull box.

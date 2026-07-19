@@ -5,7 +5,7 @@
 - **Title:** *The Objective Morality Project*
 - **Subtitle:** *An Expedition to Build a Moral System Everyone Has Reason to Obey*
 - **Author:** Phil Stilwell
-- **Publication text:** approximately 149,600 words
+- **Publication text:** approximately 151,100 words
 - **Main structure:** Prologue, seven parts, forty-one chapters, six appendices, notes, and bibliography
 - **Companion structure:** nineteen construction worksheets, forty-five pressure cases, eighteen repair entries, and the fourteen-section Civic Stakes Brief
 
@@ -13,8 +13,8 @@
 
 | Artifact | Format | Dimensions or behavior | Length | Status |
 |---|---|---|---:|---|
-| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 523 pages | Approved |
-| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 523 pages | Approved |
+| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 528 pages | Approved |
+| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 528 pages | Approved |
 | Companion workbook | PDF 1.7 | US letter, two-sided, portrait with intentional rotated wide tables | 68 pages | Approved |
 | Digital edition | EPUB 3 | Reflowable text; wide tables scroll horizontally; chapter navigation | 52 content documents plus title page | Approved |
 
@@ -28,6 +28,7 @@
 - Verified that the conclusion remains an earned construction result, not a claim of metaphysical impossibility, actual nonexistence, global skepticism, or practical nihilism.
 - Verified exercise progression and all appendix counts and correspondences.
 - Completed the full-book orientation and significance audit across chapter entries, section movements, reader actions, reusable forms, and transitions.
+- Expanded ambiguous construction tables with explicit row-level instructions, worked models, guardrails, and clearer statements of what each exercise does and does not establish.
 
 ## Layout and visual inspection
 
@@ -47,7 +48,7 @@ The print-interior PDF, illustrated reader edition, and workbook were compiled o
 
 The contents is restricted to part, chapter, appendix, notes, and bibliography entries. Table fills, rules, and cell contents remain inside the intended text block in both portrait and landscape orientations; no measured table edge crosses a page margin. Tables with seven or more columns rotate without changing trim dimensions. Workbook stages begin on fresh pages, and the term *worksheet* avoids making a false one-stage/one-physical-page promise.
 
-The complete baseline contact-sheet audit covered all pages of the main, illustrated, and workbook editions. The later worked-example expansion increased the main editions from 517 to 523 pages. Every changed or reflowed Part I page, each affected section boundary, and the new recto-start verso were rendered again; the dense Chapter 3 examples were also checked at full resolution. Parts II–VII and the appendices begin after the recto reset and retain their inspected layouts. The seven blank pages in the main edition and the single blank workbook page are intentional versos created by recto-start rules; none contains a running head, folio, or stray mark.
+The complete baseline contact-sheet audit covered all pages of the main, illustrated, and workbook editions. A worked-example expansion increased the main editions from 517 to 523 pages; every changed or reflowed Part I page, each affected section boundary, and the new recto-start verso were rendered again, with the dense Chapter 3 examples also checked at full resolution. The subsequent table-instruction pass increased the main editions to 528 pages. Every changed or reflowed Part II page, the revised Appendix A pages, and the corresponding workbook pages were rendered again; the redesigned value inventories and their writing margins were checked at full resolution. Recto starts isolate later parts and appendices from the local reflow. The seven blank pages in the main edition and the single blank workbook page are intentional versos created by recto-start rules; none contains a running head, folio, or stray mark.
 
 All PDF fonts are embedded and Unicode-mapped. No missing glyph, replacement character, unresolved reference, visible clipping, shaded-row spill, or partial terminal stripe was found. The final TeX logs contain no errors, font warnings, or alignment overfull boxes.
 

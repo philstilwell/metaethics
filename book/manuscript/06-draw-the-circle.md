@@ -198,7 +198,17 @@ There are overwhelming reasons to protect it even if the watershed lacks direct 
 
 **Purpose.** Make every admission to or exclusion from direct standing rest on a named ground; the map does not yet assign equal weight or decide conflicts among those admitted.
 
-Open the Candidate System notebook and make a domain map with four columns:
+Open the Candidate System notebook and make a domain map. Complete one candidate at a time, moving from left to right:
+
+- **Proposed ground:** Name the feature or relation that allegedly makes this candidate count—for example, felt experience, agency, an interest, a relationship, membership, or an independently grounded status. “Because it matters” repeats the conclusion.
+- **Direct, indirect, or unestablished:** Write **direct** if the candidate counts for its own sake, **indirect** if it matters through effects on another bearer or through a valued practice, and **unestablished** if the system has not earned either route.
+- **Confidence and uncertainty rule:** State both your confidence and what protection follows before certainty arrives. “Uncertain” alone does not tell the system what to do.
+
+A model row—not a required verdict—might read:
+
+> **Candidate:** Sentient animals. **Proposed ground:** Capacity for positively or negatively felt experience. **Status:** Direct when credible evidence supports sentience; unestablished for entities with no evidence of experience. **Confidence rule:** High for mammals and birds; where evidence is serious but incomplete, avoid irreversible high-suffering practices unless a competing stake and evidence threshold are stated.
+
+The row does four jobs: identifies the candidate, names the admission ground, assigns a provisional status, and converts uncertainty into a precaution. It does not say that every admitted bearer receives equal weight.
 
 | Candidate | Proposed ground | Direct, indirect, or unestablished | Confidence and uncertainty rule |
 |---|---|---|---|

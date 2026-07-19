@@ -204,7 +204,20 @@ Repair looks toward victims, losses, relationships, and future conditions. Punis
 
 **Purpose.** Apply separate status terms to each relevant object in one difficult event; a complete table prevents one adverse label from silently deciding justification, excuse, character, repair, and punishment at once.
 
-Choose a difficult event from public life, history, or your own experience. If using a personal case, change identifying details. Make one row for each relevant object:
+Choose a difficult event from public life, history, or your own experience. If using a personal case, change identifying details. Describe the event once, then make one row for each object you are evaluating—not one row for each person mentioned.
+
+In each row:
+
+- **Description** records only the feature of that object relevant to the assessment.
+- **Status** uses a term from the chapter's grammar rather than the all-purpose word *wrong*.
+- **Rule used** states the condition connecting the description to the status.
+- **Confidence** says **high**, **medium**, or **low** and names the missing fact when confidence is not high.
+
+For example, in the missing-medicine case one row could read:
+
+> **Object:** Action. **Description:** Sora knowingly altered the allocation record and diverted the assigned dose. **Status:** Forbidden by the clinic rule; blameworthy if her knowledge and freedom from coercion are confirmed. **Rule used:** Staff may not secretly replace the published allocation result for personal benefit. **Confidence:** High on the rule violation; medium on blame until pressure and alternatives are checked.
+
+If two statuses require different rules or confidence levels, give them separate clauses as the example does—or use two rows. Do not let “Action: wrong” decide the motive, person, institution, remedy, and punishment by itself.
 
 | Object | Description | Status | Rule used | Confidence |
 |---|---|---|---|---|

@@ -19,10 +19,10 @@ A reader who expects objective morality to be constructible is led through a sus
 
 ## Scope and current length
 
-- Complete main text, including embedded exercises and inspections: approximately 127,000 words
-- Complete appendices and reusable worksheets: approximately 18,700 words
+- Complete main text, including embedded exercises and inspections: approximately 128,150 words
+- Complete appendices and reusable worksheets: approximately 19,050 words
 - Notes and bibliography: approximately 2,900 words
-- Finished publication text with front matter: approximately 149,600 words; the current 7 × 10 inch print proof is 523 pages
+- Finished publication text with front matter: approximately 151,100 words; the current 7 × 10 inch print proof is 528 pages
 
 The book should feel long because the reader performs the construction, not because the prose repeats the thesis.
 
