@@ -2,9 +2,9 @@
 
 ## Concept
 
-The cover treats the book as an expedition through a maze of plausible moral constructions. Multiple routes enter, fork, overlap, and continue past one another. The quiet central chamber remains open: the promised objective foundation is not waiting there. The image communicates inquiry and lucidity rather than collapse. It deliberately avoids scales, gavels, religious emblems, and other stock moral imagery.
+The cover treats the book as an expedition through monumental architectures of plausible moral construction. Rules, pages, bridges, corridors, and incomplete systems rise above a small explorer. Their many routes surround a quiet central chamber that remains open: the promised objective foundation is not waiting there. Beneath the formal architecture, vermilion and ochre human currents represent the emotions, attachments, aversions, hopes, and shared stakes that survive the search. The image communicates inquiry and lucidity rather than collapse. It deliberately avoids scales, gavels, religious emblems, and other stock moral imagery.
 
-The abstract artwork was generated in Google Gemini for this project. Production typography, borders, color fields, and the final cover composition are controlled in LaTeX so the title remains exact and sharp. The source artwork contains no generated title text.
+The current illustrative artwork was generated with OpenAI's native image generator for this project. Production typography, borders, color fields, and the final cover composition are controlled in LaTeX so the title remains exact and sharp. The source artwork contains no generated title text. The earlier geometric Gemini artwork remains archived in the production assets as an alternate concept.
 
 ## Palette
 
