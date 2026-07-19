@@ -90,7 +90,7 @@ end
 local function style_header_cells(tbl)
   local header_size = #tbl.colspecs >= 7 and '\\scriptsize' or '\\footnotesize'
   local header_style = '\\cellcolor{PaletteOlive}\\color{PalettePaper}\\sffamily\\bfseries' ..
-    header_size .. '\\RaggedRight '
+    header_size .. '\\RaggedRight\\hyphenpenalty=10000 '
 
   for _, row in ipairs(tbl.head.rows) do
     for _, cell in ipairs(row.cells) do

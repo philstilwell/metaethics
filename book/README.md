@@ -95,6 +95,7 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 - [appendices/E-glossary-and-position-map.md](appendices/E-glossary-and-position-map.md) — beginner-facing definitions and a multidimensional map of positions.
 - [appendices/F-limits-of-the-conclusion.md](appendices/F-limits-of-the-conclusion.md) — compact formal restatement of the grounding partition and the conclusion's limits.
 - [production/build-book.sh](production/build-book.sh) — reproducibly assembles the front cover, print-interior PDF, illustrated reader PDF, companion workbook, and EPUB.
+- [production/normalize-table-tex.py](production/normalize-table-tex.py) — corrects Pandoc's generated table headers so wrapped and single-line labels share consistent vertical alignment.
 - [production/assemble-reader-pdf.py](production/assemble-reader-pdf.py) — replaces the interior title page with the one-page illustrated cover while retaining PDF metadata, page count, and navigation.
 - [production/COVER-DESIGN.md](production/COVER-DESIGN.md) — records the cover concept, palette, typography, and full-wrap production boundary.
 - [production/publication-metadata.md](production/publication-metadata.md) — title record, descriptions, audience, categories, and keywords.

@@ -104,6 +104,8 @@ pandoc "${main_inputs[@]}" \
   --lua-filter="$PRODUCTION_DIR/layout.lua" \
   --output="$BUILD_DIR/main.tex"
 
+python3 "$PRODUCTION_DIR/normalize-table-tex.py" "$BUILD_DIR/main.tex"
+
 python3 "$LATEX_HELPER" \
   --compiler=texlive \
   --engine=xelatex \
@@ -137,6 +139,8 @@ pandoc "${workbook_inputs[@]}" \
   --include-before-body="$PRODUCTION_DIR/workbook-title.tex" \
   --lua-filter="$PRODUCTION_DIR/layout.lua" \
   --output="$BUILD_DIR/workbook.tex"
+
+python3 "$PRODUCTION_DIR/normalize-table-tex.py" "$BUILD_DIR/workbook.tex"
 
 python3 "$LATEX_HELPER" \
   --compiler=texlive \
