@@ -313,6 +313,18 @@ Then complete the associated sentence.
 
 > A claim or application may be challenged by __________ using __________, and acknowledged error requires __________.
 
+### Two model entries
+
+For **Accessibility**, a reader might write:
+
+> **Essential.** A sincere inquirer improves judgment by checking public evidence, comparing the case with declared principles, seeking criticism from affected parties, and revising when a predicted effect or factual premise fails. “A reliable person simply sees the truth” is insufficient unless the system explains how reliability is identified without using agreement with the answer as the test.
+
+For **Determinacy**, the same reader might write:
+
+> **Negotiable.** The system may leave a case unsettled when evidence is poor or admitted values remain incomparable, but not merely when officials would prefer to avoid responsibility. An unsettled result must still identify the live options, risks, and lawful decision procedure.
+
+These are examples of completed specifications, not recommended rankings. The useful features are their observable conditions and stopping points. “The system should be accessible and determinate enough” sounds agreeable but gives the later audit nothing to inspect.
+
 If you added humaneness or another substantive condition, define it without using *good*, *right*, *wrong*, *just*, or *moral* as an unexplained shortcut.
 
 ## Pressure exercise: Choose the failure
@@ -339,6 +351,12 @@ If your rankings differ, do not force them together. The difference shows why me
 Add this entry to the ledger:
 
 > **Debt 4 — Joint performance:** Can the Candidate System satisfy its essential conditions at the same time, or does each repair preserve one promise by surrendering another?
+
+A model entry might read:
+
+> **Current tension:** I marked stance independence and reliable accessibility as essential. Declaring an axiom self-evident protects its alleged independence only by weakening the public error check. Defining the verdict as what an ideal procedure would select improves access and correction, but may make the result depend on the procedure's humanly chosen selectors. I have not yet shown how one candidate satisfies both conditions.
+
+The point is not to predict defeat. It is to prevent a repair in one column from being celebrated while its cost in another column is quietly erased.
 
 Then copy your essential conditions onto a clean page titled **Bill of Specifications**.
 

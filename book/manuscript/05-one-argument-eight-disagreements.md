@@ -443,6 +443,12 @@ Now add answers:
 - Procedures will be judged or selected by __________.
 - Objective moral claims will require __________.
 
+For a dispute over the clinic lottery, a provisional completed protocol might say:
+
+> Factual claims will be assessed through allocation records, medical evidence, testimony, and an appeal process. Direct standing includes each patient whose treatment prospect changes. Conflicts will first be described in terms of urgency, expected benefit, prior allocation, reliance, and unequal burden; a published lottery governs ties. Shared action will be coordinated by the clinic rule subject to independent review. Any claim that the lottery is *objectively required* must identify a ground beyond the facts that staff adopted it and patients can inspect it.
+
+This example does not install a lottery as the correct policy. It shows the level of specificity required. “Facts by evidence, values by morality, disputes by fairness” merely renames the blanks.
+
 Several blanks will remain. That is expected. Later chapters supply candidate answers.
 
 ## The fifth debt
@@ -452,6 +458,12 @@ Add this entry to the ledger:
 > **Debt 5 — Layer discipline:** Which part of a moral conclusion comes from facts, standing, priority, attitude, coordination, procedure, or alleged objective truth, and has any one layer been asked to perform another's work without a bridge?
 
 The debt is methodological. A system can reach a conclusion for several reasons. It must show the route.
+
+For example:
+
+> **Current route:** We support the housing evacuation because tests show serious exposure, residents bear the health risk, we prioritize avoiding irreversible injury, and the emergency charter authorizes temporary relocation with compensation and appeal. The test results support the prediction; the charter supplies legal authority; the priority rule supplies the choice. None of those, separately or together, yet establishes that every informed rejecter has a stance-independent reason to endorse the policy.
+
+That entry may later acquire a further ground. Until then, it keeps evidence, priority, law, and objective authority from exchanging uniforms in the corridor.
 
 ## Inspection Report I — The Bill of Specifications
 

@@ -258,6 +258,16 @@ Then complete:
 
 > I would still consider the project successful if its verdicts were not stance-independent but were __________.
 
+Here is one complete threshold statement:
+
+> My Candidate System ceases to count as objective morality if its central verdicts are made true by actual approval or by whatever an idealized group would choose. I would still consider the practical project successful if its standards were informed, impartial among represented parties, publicly defensible, stable enough to guide action, and corrigible when evidence or exclusion is exposed. I would call that result a defensible public code, not stance-independent moral truth.
+
+That answer draws a strict boundary. A different reader might count idealized response-dependence as objective because the relevant response is constrained by full information and impartiality. If so, the reader should write something like:
+
+> Idealized agreement is sufficient for my use of *objective* only when the participants, information, and admissible reasons are fixed by independently defended criteria. Actual popularity is insufficient.
+
+The two readers do not merely disagree about a label. Their systems incur different debts. The first owes a practical defense of the code without objective certification. The second also owes a defense of the idealization selectors.
+
 You may answer “I would not.” You may also discover that what you most want is impartiality, defensibility, stability, humane content, or public legitimacy rather than stance independence. Record that discovery. Do not rename it objective truth merely to preserve the original label.
 
 ## A fair standard for the search
@@ -287,6 +297,12 @@ This discipline protects both sides. It prevents the skeptic from dismissing eve
 Add a second line to the **Debt Ledger**:
 
 > **Debt 2 — Independence:** Which parts of the Candidate System remain true under universal rejection, and what makes their truth independent of the attitudes used to identify or apply them?
+
+For example:
+
+> **Current answer:** If everyone rejects the clinic lottery, it remains true that the written policy uses a lottery, that Sora altered the record, and that the stranger lost the allocated dose. Whether the policy is legitimate depends on institutional facts and a defended procedure. Whether Sora had a stance-independent obligation to obey remains unanswered. Universal rejection does not erase the first facts, but their independence cannot be transferred to the final obligation without an additional argument.
+
+The example separates three things that are easily bundled: facts about the event, truth relative to an existing rule, and the authority of that rule.
 
 Beside it, add a warning:
 

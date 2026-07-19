@@ -249,6 +249,12 @@ For each property below, mark it **essential**, **desirable**, or **unnecessary*
 
 Now choose the three properties for which you most want objective morality. Write why.
 
+For example, Mira marks independence under rejection, reliable access, and reasons for an unwilling agent as **essential**. She marks determinacy as **desirable**, because she would rather admit a hard case than receive a crisp answer from a system she cannot check. Her note reads:
+
+> I want objective morality chiefly to explain why a powerful person has a reason not to abuse someone even when the law permits it, the public applauds, and the powerful person feels no sympathy. A system I cannot distinguish from confident invention would not keep that promise. I can tolerate some unresolved conflicts; I cannot tolerate authority with no route of correction.
+
+Mira has not proved that such a system exists. She has made the job testable. Another reader might rank ordinary usability above determinate answers, or conclude that reliable public justification matters more than stance independence. The exercise needs your actual priorities, not Mira's philosophically tidy handwriting.
+
 Do not choose what seems easiest to defend. Choose the promise that matters to you. The construction should be judged by the job you actually want it to perform.
 
 ## Inspection note
@@ -267,5 +273,11 @@ But several distinctions are now on the table:
 Add the first line to the **Debt Ledger**:
 
 > **Debt 1 — Added status:** What does an objective moral verdict add to the concrete facts, values, commitments, rules, and responses already identified?
+
+A useful entry names the proposed addition rather than repeating the verdict. For example:
+
+> **Current answer:** The family-separation policy causes fear, loss, domination, and broken trust; it violates the reformers' commitments and the protections they want enacted. Calling it *objectively wrong* is meant to add that every informed supporter has a genuine reason to stop, even if the supporter rejects those commitments and faces no sanction. The system has stated that additional claim but has not yet supplied its ground.
+
+This note preserves everything already established and isolates the extra work. “Objective wrongness adds that the policy is really wrong” would only send the invoice back in the envelope.
 
 In the next chapter, we decide exactly what the word *objective* is allowed to promise.
