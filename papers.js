@@ -1,7 +1,5 @@
 "use strict";
 
-const STORAGE_KEY = "coherence-engine-papers-v1";
-
 const LAB_NAMES = {
   profile: "Moral Profile",
   meaning: "Meaning Lab",
@@ -391,7 +389,6 @@ const state = {
   query: "",
   filter: "All",
   labFilter: "All",
-  userPapers: loadUserPapers(),
 };
 
 const els = {
@@ -400,33 +397,10 @@ const els = {
   labFilter: document.querySelector("#paperLabFilter"),
   filterRow: document.querySelector("#filterRow"),
   count: document.querySelector("#libraryCount"),
-  form: document.querySelector("#paperForm"),
-  status: document.querySelector("#formStatus"),
 };
 
-function loadUserPapers() {
-  try {
-    const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    return Array.isArray(value) ? value : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveUserPapers() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.userPapers));
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 function allPapers() {
-  return [
-    ...CURATED_PAPERS.map((paper) => ({ ...paper, labs: paper.labs || LAB_SUPPORT[paper.id] || [] })),
-    ...state.userPapers.map((paper) => ({ ...paper, labs: Array.isArray(paper.labs) ? paper.labs : [], user: true })),
-  ];
+  return CURATED_PAPERS.map((paper) => ({ ...paper, labs: paper.labs || LAB_SUPPORT[paper.id] || [] }));
 }
 
 function approaches() {
@@ -463,13 +437,13 @@ function filteredPapers() {
 
 function createPaperCard(paper) {
   const article = document.createElement("article");
-  article.className = `paper-card${paper.core ? " core" : ""}${paper.user ? " user-paper" : ""}`;
+  article.className = `paper-card${paper.core ? " core" : ""}`;
 
   const top = document.createElement("div");
   top.className = "paper-card-top";
   const type = document.createElement("span");
   type.className = "paper-type";
-  type.textContent = paper.user ? `${paper.approach} · Your shelf` : paper.approach;
+  type.textContent = paper.approach;
   const year = document.createElement("span");
   year.className = "paper-year";
   year.textContent = paper.year;
@@ -511,21 +485,6 @@ function createPaperCard(paper) {
   link.textContent = "Open paper ↗";
   actions.append(link);
 
-  if (paper.user) {
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.className = "remove-paper";
-    remove.textContent = "Remove";
-    remove.addEventListener("click", () => {
-      state.userPapers = state.userPapers.filter((item) => item.id !== paper.id);
-      saveUserPapers();
-      if (!approaches().includes(state.filter)) state.filter = "All";
-      renderFilters();
-      renderPapers();
-    });
-    actions.append(remove);
-  }
-
   article.append(top, title, author, note, labUse, actions);
   return article;
 }
@@ -550,48 +509,6 @@ els.search.addEventListener("input", () => {
 
 els.labFilter.addEventListener("change", () => {
   state.labFilter = els.labFilter.value;
-  renderPapers();
-});
-
-els.form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(els.form);
-  const url = String(data.get("url")).trim();
-  let parsed;
-  try {
-    parsed = new URL(url);
-    if (!["http:", "https:"].includes(parsed.protocol)) throw new Error("Unsupported link");
-  } catch {
-    els.status.textContent = "Please enter a full http or https link.";
-    return;
-  }
-
-  const paper = {
-    id: `user-${Date.now()}`,
-    title: String(data.get("title")).trim(),
-    author: String(data.get("author")).trim(),
-    year: Number(data.get("year")),
-    url: parsed.href,
-    approach: String(data.get("approach")),
-    note: String(data.get("note")).trim(),
-    labs: data.get("lab") ? [String(data.get("lab"))] : [],
-  };
-
-  state.userPapers.unshift(paper);
-  if (!saveUserPapers()) {
-    state.userPapers.shift();
-    els.status.textContent = "This browser blocked local saving.";
-    return;
-  }
-
-  state.filter = "All";
-  state.labFilter = "All";
-  state.query = "";
-  els.search.value = "";
-  els.labFilter.value = "All";
-  els.form.reset();
-  els.status.textContent = "Paper added to this browser.";
-  renderFilters();
   renderPapers();
 });
 

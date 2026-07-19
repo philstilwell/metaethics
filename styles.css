@@ -1639,13 +1639,6 @@ dialog p:not(.kicker) {
   line-height: 1.65;
 }
 
-.papers-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 390px);
-  gap: clamp(28px, 4vw, 54px);
-  align-items: start;
-}
-
 .library-tools {
   display: grid;
   gap: 18px;
@@ -1769,10 +1762,6 @@ dialog p:not(.kicker) {
   background: var(--acid);
 }
 
-.paper-card.user-paper {
-  border-style: dashed;
-}
-
 .paper-card-top {
   display: flex;
   align-items: center;
@@ -1870,17 +1859,6 @@ dialog p:not(.kicker) {
   text-transform: uppercase;
 }
 
-.remove-paper {
-  padding: 4px 0;
-  border: 0;
-  border-bottom: 1px solid currentColor;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 0.63rem;
-  text-transform: uppercase;
-}
-
 .empty-library {
   grid-column: 1 / -1;
   padding: 38px;
@@ -1888,89 +1866,6 @@ dialog p:not(.kicker) {
   font-family: var(--serif);
   font-size: 1.15rem;
   text-align: center;
-}
-
-.add-paper-panel {
-  position: sticky;
-  top: 94px;
-  padding: 30px;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: #f8f6ef;
-  box-shadow: var(--shadow);
-}
-
-.add-paper-panel .kicker {
-  color: #a9b2ab;
-  margin-bottom: 8px;
-}
-
-.add-paper-panel h2 {
-  margin: 0 0 10px;
-  font-family: var(--serif);
-  font-size: 2.05rem;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-
-.add-paper-panel > p {
-  margin: 0 0 24px;
-  color: #b9c1bb;
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-
-.paper-form {
-  display: grid;
-  gap: 8px;
-}
-
-.paper-form label {
-  margin-top: 8px;
-  color: #c7cfc9;
-  font-size: 0.63rem;
-  font-weight: 850;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.paper-form input,
-.paper-form select,
-.paper-form textarea {
-  width: 100%;
-  padding: 11px 12px;
-  border: 1px solid #586159;
-  border-radius: 0;
-  outline: none;
-  background: #222923;
-  color: #fff;
-}
-
-.paper-form textarea {
-  min-height: 92px;
-  resize: vertical;
-  line-height: 1.45;
-}
-
-.paper-form input:focus,
-.paper-form select:focus,
-.paper-form textarea:focus {
-  border-color: var(--acid);
-  box-shadow: 0 0 0 2px rgba(215, 243, 106, 0.22);
-}
-
-.paper-form .primary-button {
-  margin-top: 16px;
-  border-color: var(--acid);
-  background: var(--acid);
-  color: var(--ink);
-}
-
-.form-status {
-  min-height: 20px;
-  margin: 4px 0 0 !important;
-  color: var(--acid) !important;
-  font-size: 0.7rem !important;
 }
 
 /* The Missing Ought */
@@ -4147,16 +4042,6 @@ dialog p:not(.kicker) {
 }
 
 @media (max-width: 1040px) {
-  .papers-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .add-paper-panel {
-    position: relative;
-    top: 0;
-    max-width: 680px;
-  }
-
   .obligation-result-grid {
     grid-template-columns: 1fr;
   }

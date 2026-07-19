@@ -45,84 +45,21 @@
         </p>
       </section>
 
-      <div class="papers-layout">
-        <section aria-labelledby="libraryHeading">
-          <div class="library-tools">
-            <div>
-              <p class="kicker">Curated bibliography</p>
-              <h2 id="libraryHeading" class="visually-hidden">Papers on moral non-realism</h2>
-            </div>
-            <div class="library-search">
-              <label for="paperSearch">Search the papers</label>
-              <input id="paperSearch" type="search" placeholder="Search by title, author, or idea" />
-              <span aria-hidden="true">⌕</span>
-            </div>
-            <div class="library-lab-filter">
-              <label for="paperLabFilter">Show sources used by</label>
-              <select id="paperLabFilter">
-                <option value="All">All labs</option>
-                <option value="profile">Moral Profile</option>
-                <option value="meaning">What Do You Mean by Wrong?</option>
-                <option value="obligation">The Missing Ought</option>
-                <option value="after">After Moral Facts</option>
-                <option value="decoder">Disagreement Decoder</option>
-                <option value="genealogy">Value Genealogy Lab</option>
-                <option value="builder">Build a Morality</option>
-                <option value="criticize">Criticize Your Own Society</option>
-                <option value="blame">Blame Laboratory</option>
-                <option value="reasons">What Gives You a Reason?</option>
-                <option value="evidence">Why Follow the Evidence?</option>
-                <option value="standing">Who Gets Counted?</option>
-                <option value="tradeoffs">When Values Won’t Add Up</option>
-                <option value="emotions">Moral Emotions After Moral Facts</option>
-              </select>
-            </div>
-            <div class="filter-row" id="filterRow" aria-label="Filter papers by approach"></div>
-            <p class="library-count" id="libraryCount" aria-live="polite"></p>
+      <section class="papers-library" aria-labelledby="libraryHeading">
+        <div class="library-tools">
+          <div>
+            <p class="kicker">Curated bibliography</p>
+            <h2 id="libraryHeading" class="visually-hidden">Papers on moral non-realism</h2>
           </div>
-          <div class="paper-grid" id="paperGrid"></div>
-        </section>
-
-        <aside class="add-paper-panel">
-          <p class="kicker">Build your own shelf</p>
-          <h2>Add a paper</h2>
-          <p>
-            Add another non-realist paper for your own use. It will be saved only in this browser and
-            will not change the public site or send anything to a server.
-          </p>
-          <form class="paper-form" id="paperForm">
-            <label for="paperTitle">Title</label>
-            <input id="paperTitle" name="title" required maxlength="180" />
-
-            <label for="paperAuthor">Author or authors</label>
-            <input id="paperAuthor" name="author" required maxlength="120" />
-
-            <label for="paperYear">Year</label>
-            <input id="paperYear" name="year" type="number" min="1800" max="2100" required />
-
-            <label for="paperUrl">Link</label>
-            <input id="paperUrl" name="url" type="url" placeholder="https://…" required />
-
-            <label for="paperApproach">Approach</label>
-            <select id="paperApproach" name="approach">
-              <option value="Error theory">Error theory</option>
-              <option value="Expressivism">Expressivism</option>
-              <option value="Fictionalism">Fictionalism</option>
-              <option value="Abolitionism">Abolitionism</option>
-              <option value="Constructivism">Constructivism</option>
-              <option value="Moral relativism">Moral relativism</option>
-              <option value="Responsibility skepticism">Responsibility skepticism</option>
-              <option value="Post-error practice">Post-error practice</option>
-              <option value="Epistemic normativity">Epistemic normativity</option>
-              <option value="Moral status">Moral status</option>
-              <option value="Value pluralism">Value pluralism</option>
-              <option value="Moral emotions">Moral emotions</option>
-              <option value="Other non-realism">Other non-realism</option>
-            </select>
-
-            <label for="paperLab">Most relevant lab</label>
-            <select id="paperLab" name="lab">
-              <option value="">General reading</option>
+          <div class="library-search">
+            <label for="paperSearch">Search the papers</label>
+            <input id="paperSearch" type="search" placeholder="Search by title, author, or idea" />
+            <span aria-hidden="true">⌕</span>
+          </div>
+          <div class="library-lab-filter">
+            <label for="paperLabFilter">Show sources used by</label>
+            <select id="paperLabFilter">
+              <option value="All">All labs</option>
               <option value="profile">Moral Profile</option>
               <option value="meaning">What Do You Mean by Wrong?</option>
               <option value="obligation">The Missing Ought</option>
@@ -138,15 +75,12 @@
               <option value="tradeoffs">When Values Won’t Add Up</option>
               <option value="emotions">Moral Emotions After Moral Facts</option>
             </select>
-
-            <label for="paperNote">Why it belongs here</label>
-            <textarea id="paperNote" name="note" maxlength="420" required></textarea>
-
-            <button class="primary-button" type="submit">Add to this browser</button>
-            <p class="form-status" id="formStatus" aria-live="polite"></p>
-          </form>
-        </aside>
-      </div>
+          </div>
+          <div class="filter-row" id="filterRow" aria-label="Filter papers by approach"></div>
+          <p class="library-count" id="libraryCount" aria-live="polite"></p>
+        </div>
+        <div class="paper-grid" id="paperGrid"></div>
+      </section>
     </main>
 
     <footer>

@@ -61,8 +61,10 @@ for (const [labId, ids] of Object.entries(newLabSources)) {
 }
 
 assert.match(html, /id="paperLabFilter"/, "the reading room must be filterable by lab");
-assert.equal((html.match(/<option value="(?:profile|meaning|obligation|after|decoder|genealogy|builder|criticize|blame|reasons|evidence|standing|tradeoffs|emotions)">/g) || []).length, 28, "both the public filter and private-paper form must list all fourteen labs");
+assert.equal((html.match(/<option value="(?:profile|meaning|obligation|after|decoder|genealogy|builder|criticize|blame|reasons|evidence|standing|tradeoffs|emotions)">/g) || []).length, 14, "the public filter must list all fourteen labs exactly once");
 assert.match(source, /paper\.labs\.includes\(state\.labFilter\)/, "lab filtering must use explicit source tags");
 assert.match(source, /className = "paper-lab-use"/, "cards must disclose which labs use a source");
+assert.doesNotMatch(html, /Add a paper|paperForm|add-paper-panel|paper-form/, "the reading room must not expose a paper-submission feature");
+assert.doesNotMatch(source, /localStorage|userPapers|FormData|saveUserPapers|loadUserPapers/, "paper-submission storage and form behavior must be fully removed");
 
-console.log(`Papers audit passed: ${CURATED_PAPERS.length} curated sources, fourteen lab filters, complete source tagging, and dedicated foundations for all new labs verified.`);
+console.log(`Papers audit passed: ${CURATED_PAPERS.length} curated sources, fourteen lab filters, complete source tagging, no paper-submission feature, and dedicated foundations for all new labs verified.`);
