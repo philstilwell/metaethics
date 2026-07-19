@@ -339,7 +339,7 @@ The Candidate System has now completed its access inquiry. It has a charter for 
 
 It is time to inspect not whether the objective clauses are attractive, but whether there is a defensible route from reality to belief.
 
-## Inspection Report IV: The access audit
+## Inspection Report IV — The Access Audit
 
 Begin with the sentence written in Chapter 19:
 

@@ -336,7 +336,7 @@ The question is not whether these corridors are useful. It is whether any one ro
 
 It is time to inspect the bridge.
 
-## Inspection Report III: The missing bridge
+## Inspection Report III — The Missing Bridge
 
 Open the two-page constitution from Inspection Report II. Take every clause that contains *reason*, *ought*, *must*, *duty*, *authority*, *binding*, *required*, or *forbidden*. Assign it to the strongest column it has earned.
 

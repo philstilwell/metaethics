@@ -1,6 +1,4 @@
-# Prologue
-
-## The Blank Constitution
+# Prologue — The Blank Constitution
 
 The first page is blank.
 

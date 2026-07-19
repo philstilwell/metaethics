@@ -120,7 +120,7 @@ Possibilities include:
 - disclosure should be partial and accompanied by repair;
 - the conflict is tragic and no option is untainted.
 
-Practical wisdom may reach one of these. The Candidate System still needs to know what makes the perception wise. If the answer is “the wise person sees the right balance,” wisdom has become the black box that “all things considered” occupied in Chapter 31’s warning.
+Practical wisdom may reach one of these. The Candidate System still needs to know what makes the perception wise. If the answer is “the wise person sees the right balance,” wisdom has become the black box that the hybrid rescue in Chapter 31 will label “all things considered.”
 
 Disciplined practical judgment should state decisive features, compare precedents, invite criticism, track outcomes, and explain why nearby cases differ. It may remain nonalgorithmic without becoming inarticulate.
 

@@ -1,6 +1,4 @@
-# Chapter 2
-
-## What “Objective” Must Mean
+# Chapter 2 — What “Objective” Must Mean
 
 The word *objective* is useful partly because it is generous.
 

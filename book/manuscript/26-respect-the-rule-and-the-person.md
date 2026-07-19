@@ -199,6 +199,4 @@ Add this entry:
 
 The second architect leaves the boundary marker beside the ledger.
 
-The third architect does not approach either object.
-
-She walks first to the exhausted clerk, asks whether he has eaten, and notices that every chair in the hall faces the speakers rather than the caregivers.
+The third architect does not approach either object. She looks past the speakers toward the people keeping the hall alive.

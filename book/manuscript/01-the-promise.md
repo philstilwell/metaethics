@@ -1,6 +1,4 @@
-# Chapter 1
-
-## The Promise
+# Chapter 1 — The Promise
 
 Objective morality is attractive before it is philosophical.
 

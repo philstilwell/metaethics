@@ -20,7 +20,7 @@ The question is what must be placed inside the procedure before that result can 
 
 ## The complaint rather than the sum
 
-Return to the tunnel from Chapter 25. Flooding one occupied chamber will save five workers elsewhere. A simple aggregate favors the five. A rights theory may prohibit deliberately killing the one.
+Consider a tunnel with six occupied chambers. Flooding one chamber will save five workers elsewhere. A simple aggregate favors the five. A rights theory may prohibit deliberately killing the one.
 
 Contractualism asks a different question. What principles could each person reasonably reject? The isolated worker has an intense complaint against a principle permitting her death for others' benefit. Each of the five has an intense complaint against a principle forbidding rescue. We compare the complaints of individuals, not a pile of anonymous units.
 

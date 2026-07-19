@@ -59,3 +59,9 @@ For each later site revision:
 4. Add a chapter only when the concept changes the cumulative argument; otherwise revise an existing chapter.
 5. Search the manuscript for interface language such as “lab,” “tool,” “diagnostic,” “score,” and “suite.”
 6. Record the new baseline commit and the exact alignment action here.
+
+## Structural-pass confirmation
+
+The July 18, 2026 full-book structural editorial pass changed navigation, heading hierarchy, transition language, and editorial support material without changing the conceptual coverage recorded above. A repository path comparison confirms that no non-book source changed after the audited site revision `c8db8b8`. The publication-facing contents page now exposes the complete seven-part route and offers focused routes without assigning readers to philosophical identities. Recurring cases remain organized around stable thematic characters, and the six Inspection Reports now use a single title pattern.
+
+The pass also reconfirmed the publication boundary: the manuscript and appendices contain no references to the site, its implementation, or its interactive apparatus. Later conceptual revisions should continue to enter through the mapping procedure above rather than through interface language in the book.

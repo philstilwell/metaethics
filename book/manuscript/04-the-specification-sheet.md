@@ -1,6 +1,4 @@
-# Chapter 4
-
-## The Specification Sheet
+# Chapter 4 — The Specification Sheet
 
 Port Meridian's assembly has now received three pages from you.
 

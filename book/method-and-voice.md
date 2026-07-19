@@ -106,6 +106,15 @@ The book does not score readers. Repeated choices may reveal a pattern worth exa
 - Do not equate skepticism with cynicism, apathy, selfishness, or political quietism.
 - Do not promise emotional liberation as a logical consequence. Some readers will experience loss.
 
+## Navigation and continuity
+
+- Use one level-one heading for each chapter, including its number and full title. Reserve level-two headings for movements within the chapter.
+- Treat the six Inspection Reports as structural landings. Each must inventory what the preceding part built, what survived pressure, and what debt the next part inherits.
+- Write references to later chapters prospectively and references to earlier chapters retrospectively. A reader should never have to wonder whether a chapter has been skipped.
+- Repeated characters are thematic anchors, not interchangeable names. Ren carries identity and autonomy cases; Nara carries promise and loyalty cases; Iona carries role and impartiality cases; Asha carries reform; Kest carries principled rejection; Vale carries power and coercion; Niko carries responsibility and moral emotion.
+- A chapter may briefly recover the fact needed from the previous chapter, but it should not replay the previous chapter's closing scene.
+- Alternate reading routes are shortcuts through questions, not reader types or philosophical camps. The cumulative route remains the default.
+
 ## Exercise grammar
 
 Every substantive chapter should contain most of the following:

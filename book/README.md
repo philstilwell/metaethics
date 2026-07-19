@@ -31,8 +31,10 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 
 ## Files
 
+- [front-matter/contents-and-reading-routes.md](front-matter/contents-and-reading-routes.md) — publication-facing contents map and optional focused routes through the cumulative argument.
 - [architecture.md](architecture.md) — the complete argument and chapter architecture.
 - [method-and-voice.md](method-and-voice.md) — standards for fairness, terminology, exercises, and prose.
+- [editorial/structural-editorial-pass.md](editorial/structural-editorial-pass.md) — records the full-book structural audit, continuity decisions, and retained length asymmetries.
 - [research/source-map.md](research/source-map.md) — internal coverage map connecting the manuscript to the suite and source literature. This file may name the tools; the manuscript may not.
 - [research/site-alignment-audit.md](research/site-alignment-audit.md) — records the site revision currently covered by the book and the update procedure for future conceptual additions.
 - [manuscript/00-prologue.md](manuscript/00-prologue.md) — drafted prologue.
@@ -86,6 +88,8 @@ Exercises are part of the argument, not optional comprehension quizzes. The read
 
 ## Current drafting status
 
-The complete book draft now includes the prologue, all forty-one chapters across Parts I–VII, and six appendices, totaling approximately 137,900 words. The main journey moves from the blank constitution through the strongest objective candidates and into a post-search public method. The appendices make that journey reusable through a full workbook, pressure-case deck, repair guide, Civic Stakes Brief, glossary and position map, and formal limits statement. Chapter 37 retains the restrained construction result: no route examined has earned the full objective specification, though this does not deductively disprove every logically possible objective moral fact. Chapters 38–41 inventory what survives and build a concrete alternative from primitive emotions and values through factual inquiry, explicit comparison, institutional safeguards, review, and repair. The next stage is a full-book editorial pass covering architecture, repetition, terminology, case continuity, prose, and publication structure.
+The complete book draft includes the prologue, all forty-one chapters across Parts I–VII, and six appendices, totaling approximately 137,900 words. The main journey moves from the blank constitution through the strongest objective candidates and into a post-search public method. The appendices make that journey reusable through a full workbook, pressure-case deck, repair guide, Civic Stakes Brief, glossary and position map, and formal limits statement. Chapter 37 retains the restrained construction result: no route examined has earned the full objective specification, though this does not deductively disprove every logically possible objective moral fact. Chapters 38–41 inventory what survives and build a concrete alternative from primitive emotions and values through factual inquiry, explicit comparison, institutional safeguards, review, and repair.
+
+The full-book structural editorial pass is complete. It standardized publication headings and Inspection Reports, exposed the seven-part route in front matter, checked chapter and part transitions, corrected misleading forward references, formalized recurring-character continuity, audited repeated argumentative machinery, and retained the longer inspection chapters where their synthesis function justifies the asymmetry. The next editorial stage is sentence-level line editing, citation and notes development, and final title testing.
 
 The working title is intentionally invitational rather than conclusory. It can be replaced without changing the architecture.

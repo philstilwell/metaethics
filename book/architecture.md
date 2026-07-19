@@ -17,13 +17,12 @@ Alternative titles to retain for later testing:
 
 A reader who expects objective morality to be constructible is led through a sustained, exercise-driven attempt to build it, repair it, and apply it—until every remaining candidate either loses objectivity or fails to become a coherent, knowable, authoritative system—after which the reader learns a practical method for moving from shared human emotions and values to revisable social policy.
 
-## Scope and estimated length
+## Scope and current length
 
-- Main text: 155,000–190,000 words
-- Exercises and inspections: 40,000–50,000 words of the total
-- Notes and bibliography: 12,000–18,000 words
-- Appendices and reusable worksheets: 15,000–20,000 words
-- Expected finished length: approximately 540–700 trade-paperback pages, depending on trim and exercise layout
+- Complete main-text draft, including embedded exercises and inspections: approximately 120,200 words
+- Complete appendices and reusable worksheets: approximately 17,700 words
+- Notes and bibliography still anticipated: approximately 12,000–18,000 words
+- Expected finished length after line editing and notes: approximately 145,000–158,000 words, or roughly 500–650 trade-paperback pages depending on trim, tables, and exercise layout
 
 The book should feel long because the reader performs the construction, not because the prose repeats the thesis.
 
@@ -120,7 +119,7 @@ This part prevents the inquiry from drifting between meanings of “objective,�
 
 **Debt entry:** Coherence is necessary for the stated project but is neither truth nor humaneness.
 
-## Chapter 5 — One Argument, Eight Possible Disagreements
+## Chapter 5 — One Argument, Eight Disagreements
 
 **Driving question:** When moral opponents disagree, what exactly is in dispute?
 

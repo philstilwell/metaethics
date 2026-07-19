@@ -223,7 +223,7 @@ The construction floor is now quiet. The circle has inhabitants. The cabinet has
 
 It is time to assemble the first constitution.
 
-## Inspection Report II: The first constitution
+## Inspection Report II — The First Constitution
 
 Do not aim for eloquence. A beautiful constitution can conceal debt in calligraphy. Aim for two pages of compressed structure, plus appendices containing the tables you built.
 

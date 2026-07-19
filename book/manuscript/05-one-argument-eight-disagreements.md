@@ -1,6 +1,4 @@
-# Chapter 5
-
-## One Argument, Eight Disagreements
+# Chapter 5 — One Argument, Eight Disagreements
 
 The first full meeting of Port Meridian's constitutional assembly begins at nine in the morning.
 
@@ -447,7 +445,7 @@ Add this entry to the ledger:
 
 The debt is methodological. A system can reach a conclusion for several reasons. It must show the route.
 
-## Inspection Report I: The bill of specifications
+## Inspection Report I — The Bill of Specifications
 
 Part I is complete. Before entering the construction floor, assemble the following pages.
 

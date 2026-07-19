@@ -122,7 +122,7 @@ The first seven can be true under the fixed facts. The eighth reports a social s
 
 Would translating the sentence weaken Sal's protest? Not necessarily. “You created a danger after asking me to rely on you, and I will not place myself in that position again” may be more powerful than *wrong*. But Sal may reasonably prefer the shared compression of ordinary language.
 
-The policy question is whether Eren and Sal understand the compression. If Eren replies, “Objective duties do not exist, therefore your fear is irrelevant,” Eren has repeated the inference error from Chapter 39 before reaching it. If Sal replies, “Because you acted wrongly, any suffering I impose is deserved,” Sal has added a desert claim not contained in reliance.
+The policy question is whether Eren and Sal understand the compression. If Eren replies, “Objective duties do not exist, therefore your fear is irrelevant,” Eren has made the nihilist inference Chapter 39 will dismantle. If Sal replies, “Because you acted wrongly, any suffering I impose is deserved,” Sal has added a desert claim not contained in reliance.
 
 Translation prevents both expansions.
 

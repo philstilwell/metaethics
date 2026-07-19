@@ -1,6 +1,4 @@
-# Chapter 3
-
-## What Are You Doing When You Say “Wrong”?
+# Chapter 3 — What Are You Doing When You Say “Wrong”?
 
 *Wrong* is a small word with impressive luggage.
 
