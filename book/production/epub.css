@@ -1,7 +1,11 @@
+/* Core palette: graphite #646665, ink #1E1E22, olive #424739,
+   vermilion #B92F1F, ochre #DB9733, paper #F2EFE7. */
+
 body {
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.48;
   margin: 5%;
+  color: #1E1E22;
 }
 
 h1, h2, h3, h4 {
@@ -11,17 +15,40 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  border-bottom: 0.08em solid #222;
+  border-bottom: 0.14em solid #DB9733;
+  color: #1E1E22;
   padding-bottom: 0.35em;
 }
 
+h2 {
+  color: #424739;
+}
+
+h3 {
+  color: #B92F1F;
+}
+
+h4 {
+  color: #646665;
+  font-variant: small-caps;
+  letter-spacing: 0.025em;
+}
+
+a {
+  color: #B92F1F;
+  text-decoration-color: #DB9733;
+}
+
 blockquote {
-  border-left: 0.18em solid #777;
+  background: #F2EFE7;
+  border-left: 0.24em solid #B92F1F;
+  color: #424739;
   margin-left: 0.5em;
-  padding-left: 1em;
+  padding: 0.55em 0.8em 0.55em 1em;
 }
 
 table {
+  border: 0.08em solid #646665;
   border-collapse: collapse;
   display: block;
   font-size: 0.82em;
@@ -31,20 +58,36 @@ table {
 }
 
 th, td {
-  border-bottom: 0.06em solid #aaa;
-  padding: 0.3em 0.45em;
+  border-bottom: 0.06em solid #646665;
+  padding: 0.42em 0.5em;
   text-align: left;
   vertical-align: top;
 }
 
+th {
+  background: #424739;
+  color: #F2EFE7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f0e2;
+}
+
 .part-divider {
+  background: #1E1E22;
+  border-top: 0.35em solid #DB9733;
+  color: #F2EFE7;
   margin-top: 20%;
+  padding: 2.4em 1.8em 2.7em;
   page-break-before: always;
   page-break-after: always;
 }
 
 .part-divider h1 {
   border: 0;
+  color: #F2EFE7;
   font-size: 2em;
   margin-top: 0.35em;
 }
@@ -52,11 +95,14 @@ th, td {
 .part-label {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  color: #DB9733;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .part-intro {
+  border-left: 0.22em solid #B92F1F;
   font-size: 1.1em;
   font-style: italic;
+  padding-left: 0.85em;
 }

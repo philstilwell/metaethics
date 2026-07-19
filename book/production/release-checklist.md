@@ -13,6 +13,7 @@
 - [x] Final 7 × 10 print PDF compiled and visually approved
 - [x] Standalone letter-size reproducible workbook compiled and visually approved
 - [x] Reflowable EPUB 3 assembled with navigation and scrollable tables
+- [x] Palette-matched front cover, color interior system, and companion-workbook styling completed
 - [x] Final proof regression checks passed
 
 ## Publication-account decisions
@@ -22,7 +23,7 @@
 - [ ] Confirm printer support for the selected 7 × 10 trim; select paper, binding, and distribution channels
 - [ ] Set regional prices and publication date
 - [ ] Supply author biography, author photograph if desired, and contact or website line
-- [ ] Commission or approve final cover after spine width is known
+- [ ] Build the final full-wrap printer cover from the approved front cover after spine width is known
 - [ ] Order and inspect a physical proof before release
 
 ## Final upload checks

@@ -6,9 +6,27 @@ PRODUCTION_DIR="$PROJECT_ROOT/book/production"
 BUILD_DIR="$PROJECT_ROOT/tmp/pdfs/objective-morality-project"
 PDF_DIR="$PROJECT_ROOT/output/pdf"
 EBOOK_DIR="$PROJECT_ROOT/output/ebook"
+COVER_DIR="$PROJECT_ROOT/output/cover"
 LATEX_HELPER="/Users/philstilwell/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py"
 
-mkdir -p "$BUILD_DIR/main-out" "$BUILD_DIR/workbook-out" "$PDF_DIR" "$EBOOK_DIR"
+mkdir -p "$BUILD_DIR/cover-out" "$BUILD_DIR/main-out" "$BUILD_DIR/workbook-out" "$PDF_DIR" "$EBOOK_DIR" "$COVER_DIR"
+
+python3 "$LATEX_HELPER" \
+  --compiler=texlive \
+  --engine=xelatex \
+  --output-directory="$BUILD_DIR/cover-out" \
+  "$PRODUCTION_DIR/cover.tex"
+
+cp -f "$BUILD_DIR/cover-out/cover.pdf" "$COVER_DIR/the-objective-morality-project-front-cover.pdf"
+
+pdftoppm \
+  -f 1 \
+  -singlefile \
+  -r 300 \
+  -jpeg \
+  -jpegopt quality=95 \
+  "$COVER_DIR/the-objective-morality-project-front-cover.pdf" \
+  "$COVER_DIR/the-objective-morality-project-front-cover"
 
 main_inputs=(
   "$PROJECT_ROOT/book/front-matter/copyright.md"
@@ -134,6 +152,7 @@ pandoc "${epub_inputs[@]}" \
   --to=epub3 \
   --metadata-file="$PRODUCTION_DIR/epub-metadata.yml" \
   --css="$PRODUCTION_DIR/epub.css" \
+  --epub-cover-image="$COVER_DIR/the-objective-morality-project-front-cover.jpg" \
   --toc \
   --toc-depth=1 \
   --split-level=1 \
@@ -143,3 +162,11 @@ unzip -t "$EBOOK_DIR/the-objective-morality-project.epub"
 
 pdfinfo "$PDF_DIR/the-objective-morality-project.pdf" | sed -n '1,20p'
 pdfinfo "$PDF_DIR/the-objective-morality-project-companion-workbook.pdf" | sed -n '1,20p'
+pdfinfo "$COVER_DIR/the-objective-morality-project-front-cover.pdf" | sed -n '1,20p'
+
+(
+  cd "$PROJECT_ROOT/output"
+  find cover ebook pdf -type f -print | LC_ALL=C sort | while IFS= read -r artifact; do
+    shasum -a 256 "$artifact"
+  done
+) > "$PROJECT_ROOT/output/SHA256SUMS"

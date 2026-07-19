@@ -23,8 +23,37 @@ local function equalize_unspecified_widths(tbl)
   end
 end
 
+local function style_header_cells(tbl)
+  local header_size = #tbl.colspecs >= 7 and '\\scriptsize' or '\\footnotesize'
+  local header_style = '\\cellcolor{PaletteOlive}\\color{PalettePaper}\\sffamily\\bfseries' ..
+    header_size .. '\\RaggedRight '
+
+  for _, row in ipairs(tbl.head.rows) do
+    for _, cell in ipairs(row.cells) do
+      local styled = false
+      for _, block in ipairs(cell.contents) do
+        if block.t == 'Plain' or block.t == 'Para' then
+          table.insert(block.content, 1,
+            pandoc.RawInline('latex', header_style))
+          styled = true
+          break
+        end
+      end
+
+      if not styled then
+        cell.contents = {
+          pandoc.Plain({
+            pandoc.RawInline('latex', header_style)
+          })
+        }
+      end
+    end
+  end
+end
+
 function Table(tbl)
   equalize_unspecified_widths(tbl)
+  style_header_cells(tbl)
   local count = #tbl.colspecs
 
   if count >= 7 then

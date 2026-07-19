@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[paperwidth=7in,paperheight=10in,margin=0in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\definecolor{PaletteGraphite}{HTML}{646665}
+\definecolor{PaletteInk}{HTML}{1E1E22}
+\definecolor{PaletteOlive}{HTML}{424739}
+\definecolor{PaletteRed}{HTML}{B92F1F}
+\definecolor{PaletteOchre}{HTML}{DB9733}
+\definecolor{PalettePaper}{HTML}{F2EFE7}
+
+\setsansfont[
+  Path=/Users/philstilwell/Library/Fonts/,
+  UprightFont=LibertinusSans-Regular.otf,
+  BoldFont=LibertinusSans-Bold.otf,
+  ItalicFont=LibertinusSans-Italic.otf
+]{LibertinusSans-Regular.otf}
+\newfontfamily\displayfont[
+  Path=/Users/philstilwell/Library/Fonts/,
+  UprightFont=LibertinusSerifDisplay-Regular.otf
+]{LibertinusSerifDisplay-Regular.otf}
+
+\hypersetup{
+  pdftitle={The Objective Morality Project - Front Cover},
+  pdfauthor={Phil Stilwell},
+  pdfsubject={Front cover for a metaethical expedition}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=center,inner sep=0] at (current page.center) {%
+    \includegraphics[width=\paperwidth,height=\paperheight]{assets/gemini-labyrinth-artwork.png}%
+  };
+
+  \fill[PalettePaper]
+    (current page.north west)
+    rectangle ([yshift=-2.34in]current page.north east);
+
+  \fill[PaletteInk]
+    (current page.south west)
+    rectangle ([yshift=0.96in]current page.south east);
+  \fill[PaletteRed]
+    ([yshift=0.96in]current page.south west)
+    rectangle ([xshift=0.92in,yshift=1.03in]current page.south west);
+  \fill[PaletteOchre]
+    ([xshift=0.92in,yshift=0.96in]current page.south west)
+    rectangle ([xshift=2.10in,yshift=1.03in]current page.south west);
+  \fill[PaletteOlive]
+    ([xshift=2.10in,yshift=0.96in]current page.south west)
+    rectangle ([xshift=7in,yshift=1.03in]current page.south west);
+
+  \node[
+    anchor=north west,
+    text width=6.02in,
+    align=left,
+    inner sep=0,
+    text=PaletteRed
+  ] at ([xshift=0.49in,yshift=-0.34in]current page.north west) {%
+    \sffamily\bfseries\fontsize{9.5}{11}\selectfont\addfontfeatures{LetterSpace=8}
+    A METAETHICAL EXPEDITION
+  };
+
+  \node[
+    anchor=north west,
+    text width=6.02in,
+    align=left,
+    inner sep=0,
+    text=PaletteInk
+  ] at ([xshift=0.46in,yshift=-0.68in]current page.north west) {%
+    \sffamily\bfseries\fontsize{32}{31.5}\selectfont\addfontfeatures{LetterSpace=1.8}
+    THE OBJECTIVE\\MORALITY PROJECT
+  };
+
+  \node[
+    anchor=north west,
+    text width=5.96in,
+    align=left,
+    inner sep=0,
+    text=PaletteOlive
+  ] at ([xshift=0.49in,yshift=-1.64in]current page.north west) {%
+    \displayfont\fontsize{12.1}{14.2}\selectfont
+    An Expedition to Build a Moral System\\Everyone Has Reason to Obey
+  };
+
+  \node[
+    anchor=center,
+    text=PalettePaper,
+    inner sep=0
+  ] at ([yshift=0.46in]current page.south) {%
+    \sffamily\bfseries\fontsize{15}{17}\selectfont\addfontfeatures{LetterSpace=6}
+    PHIL STILWELL
+  };
+
+  \draw[PaletteInk,line width=0.7pt]
+    ([xshift=0.15in,yshift=-0.15in]current page.north west)
+    rectangle
+    ([xshift=-0.15in,yshift=0.15in]current page.south east);
+\end{tikzpicture}
+\null
+\end{document}
