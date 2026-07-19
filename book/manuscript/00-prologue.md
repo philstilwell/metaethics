@@ -112,18 +112,23 @@ Leave space beneath each answer. You will return to them many times.
 
 ## The first pressure
 
-Imagine that every person in Port Meridian comes to approve your standard. They teach it in schools, encode it in law, celebrate it in stories, and enforce it consistently. One resident still rejects it. She can break one of its rules in perfect secrecy. No one will discover the act. There will be no punishment, shame, loss of trust, or future social effect.
+Suppose everyone in Port Meridian except one resident approves your standard. The city teaches it in schools, writes it into law, celebrates it in stories, and enforces it consistently.
 
-What remains of her obligation?
+The dissenter understands the standard and the reasons offered for it, but she still rejects it. She can violate one of its rules in complete secrecy. By stipulation, no one will discover the act, and it will bring her no punishment, shame, loss of trust, or later social consequence.
 
-Do not answer the practical question yet. Do not decide whether she has another personal reason to comply or whether the secret act causes harm. Ask only what unanimous public approval contributes after every reaction to this act has been removed.
+For the moment, set aside every other consideration. Do not ask whether the act causes harm, breaks a promise, or conflicts with one of her own aims. Any of those might give her a separate reason to refrain. We are testing one claim only:
 
-Write one sentence in the ledger:
+> Does the agreement of all the other residents, by itself, obligate the dissenter to comply?
 
-> Agreement gives the system ________, but objective authority requires ________.
+Social agreement can accomplish a great deal. It can give a standard clarity, coordination, predictability, public legitimacy, stability, motivational force, and shared meaning. The question is whether any of those achievements also supplies the objective authority the assembly requested: authority that reaches someone who understands the standard, rejects it, and can evade every social response.
 
-The first blank may contain several things: clarity, coordination, predictability, legitimacy, stability, motivation, shared meaning, or something else. The second blank is the work ahead.
+Record the distinction in the Debt Ledger:
+
+> Agreement provides ________.\
+> To bind an informed dissenter, the system still needs ________.
+
+Fill the first blank with whatever social agreement genuinely provides. Fill the second with whatever must connect that achievement to an obligation for the rejecter. If you think agreement itself supplies the connection, state why. That explanation becomes the first entry in the Debt Ledger.
 
 The page is no longer blank.
 
-Neither is the debt ledger.
+Neither is the Debt Ledger.
