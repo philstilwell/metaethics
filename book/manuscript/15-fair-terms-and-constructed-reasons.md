@@ -25,6 +25,8 @@ This is not relativism in the casual sense of accepting every actual convention.
 
 The central questions are what makes the procedure fair, who receives a chair, what the procedure can authorize, and why its result binds someone who loses or rejects it.
 
+**Where this chapter is headed.** We will ask what fair procedures can create, reveal, coordinate, or legitimate. Construction can settle rules among participants, but it must still explain who participates, which conditions count as fair, and what reaches an informed rejecter.
+
 ## The fair lottery
 
 Two patients, Aven and Bira, need the last dose of a medicine. Their conditions, prognoses, waiting times, and relevant responsibilities are identical. Dividing the dose will save neither. Both agree in advance to a transparent lottery administered by an independent nurse.
@@ -141,6 +143,8 @@ Representation also raises fidelity questions. A proxy for future people or anim
 
 ## Design the strongest fair procedure
 
+**Purpose.** Specify every choice that gives a procedure content—participants, information, representation, constraints, decision rule, and appeal—so fairness is not asked to design itself.
+
 Construct a procedure for adopting the Candidate System’s public rules. Do not begin with “everyone votes.” Fill every field.
 
 ### Participants
@@ -190,6 +194,8 @@ Once the fields are filled, write the authority clause:
 Do not write “because the procedure is fair” unless you next explain why fairness counts in favor for the rejecter.
 
 ## Turn the procedural dials
+
+**Purpose.** Change one procedural selector at a time and observe which outcome changes; sensitivity reveals where substantive judgment enters, not that the resulting procedure is defective.
 
 A procedure can be impeccably administered and still owe its result to contestable design choices. To see this, give four councils the same decision.
 

@@ -24,6 +24,8 @@ Self-evidence is not “I feel strongly.” It is the proposal that some truths 
 
 We will apply the steelman rule: insight first, sophisticated form second, best repair third, and only then pressure.
 
+**Where this chapter is headed.** We will give divine authority, natural law, human flourishing, rational necessity, constitutive agency, and self-evident truth their strongest hearing. The aim is to see exactly which part of objective authority each foundation supplies and which part it leaves for the access audit.
+
 ## The divine command
 
 Begin with the strongest motivating insight.
@@ -286,6 +288,8 @@ Nor does failure of one combined argument establish that no combination could su
 
 ## The external-foundation audit
 
+**Purpose.** Compare each proposed foundation by source, content, authority, access, reach, conflict rule, and remaining debt; a completed row is an analysis, not a refutation.
+
 For each candidate, complete one row:
 
 | Candidate | Source of status | Source of authority | Method for content | Reach to rejecter | Conflict rule | Natural stopping point | Remaining debt |
@@ -338,6 +342,8 @@ It is time to inspect the bridge.
 
 ## Inspection Report III — The Missing Bridge
 
+**Purpose.** Reclassify every authoritative word in the Candidate System by the strongest support it has earned, preserving practical achievements without inflating them into objective obligation.
+
 Open the two-page constitution from Inspection Report II. Take every clause that contains *reason*, *ought*, *must*, *duty*, *authority*, *binding*, *required*, or *forbidden*. Assign it to the strongest column it has earned.
 
 ### Column 1 — Commitment
@@ -386,6 +392,8 @@ The final two columns are not automatically stronger versions of the first five.
 
 ## Build the authority matrix
 
+**Purpose.** Place each clause across commitment, convention, pressure, sanction, conditional reason, aim-independent support, objective obligation, or promissory note so no column borrows another's label.
+
 Use this table:
 
 | Candidate System clause | Commitment | Convention | Pressure | Sanction | Conditional reason | Aim-independent support | Objective obligation | Promissory note |
@@ -407,6 +415,8 @@ For every check in Column 6 or 7, attach an **authority warrant**:
 If you cannot complete a blank, move the claim to **Promissory note**. Do not delete it. The aim is an honest inspection, not a clean scorecard.
 
 ## The adversarial bridge test
+
+**Purpose.** Test the matrix against informed rejecters with different aims and allegiances; the imagined readers expose reach and hidden premises rather than standing in for every actual dissenter.
 
 Give the matrix to four imagined readers.
 

@@ -20,6 +20,8 @@ The recurring debts may be an accident of the candidates chosen. Perhaps we kept
 
 We will sort the possible foundations—not to prove that imagination has reached its modal limit, but to show where every route examined deposits its cargo.
 
+**Where this chapter is headed.** We will place every examined grounding route into seven families and compare what each supplies with the original specification. This is the cumulative audit: its conclusion concerns what the project has earned, not what no possible philosophy could ever establish.
+
 ## The seven foundation families
 
 A moral system's decisive content must come from somewhere. In the candidates we have studied, the final selector belongs to one or more of seven families.
@@ -327,6 +329,8 @@ Add the final entry of the construction phase:
 You may choose to defend that premise in a separate argument. You may preserve realist hope. You may suspend judgment. What the ledger does not permit is treating an unfinished bridge as completed because the far shore feels important.
 
 ## Inspection Report VI — The Unfinished Constitution
+
+**Purpose.** Compare the final Candidate System with Version 0.1 and classify every surviving clause, revision, surrender, and debt; the report supports a bounded construction result, not a proof of metaphysical impossibility.
 
 Retrieve Candidate System 0.1 from Inspection Report I. Do not rewrite it from memory. Place it beside every revision you made.
 

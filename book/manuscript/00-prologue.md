@@ -92,7 +92,11 @@ Do not decide in advance.
 
 For now, take the blank page.
 
+**Where the prologue is headed.** You will make a first attempt before the book supplies theory, then expose that attempt to one controlled pressure. The point is to create an honest starting record—not to pass a test or guess the author's conclusion.
+
 ## The first entry
+
+**Purpose.** Create an unrevised baseline in your own words; the entry records what first seems promising and is not graded for sophistication or agreement with the book.
 
 Use a notebook, a document, or the margins of this book. Write the heading **Candidate System, Version 0.1**.
 

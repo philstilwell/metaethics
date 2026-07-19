@@ -24,6 +24,8 @@ This distinction is the entrance to Part III. The Candidate System already conta
 
 If we fail to separate the three rooms, we can enter one and announce that we have explored them all.
 
+**Where this chapter is headed.** We will separate causes of action, considerations that motivate an agent, and facts claimed to count in favor. The distinction is essential because explaining why someone acted does not yet justify the act or establish a reason that applies to someone else.
+
 ## Room one: what caused the action?
 
 An **explanatory reason** identifies something that helps explain why an event or action occurred. It places the action in a causal story.
@@ -193,6 +195,8 @@ Promoting cooperation may supply a practical consideration if cooperation is val
 Condemnation creates a prudential consideration for anyone who wishes to avoid it. It may motivate through fear. It does not establish that the rule’s content is morally sound or that compliance remains supported when violation is secret. Chapter 17 will keep these relations in separate columns.
 
 ## The reason ledger
+
+**Purpose.** Classify each alleged reason by the relation it actually bears—causal, motivating, evidence-relative, fact-relative, or aim-independent—before asking it to justify a verdict.
 
 Take five clauses from your Candidate System. Include one value rule, one constraint, one role duty, one comparison rule, and one exception. For each, complete this table:
 

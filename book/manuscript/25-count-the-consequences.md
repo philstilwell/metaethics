@@ -18,6 +18,8 @@ Sophisticated consequentialism is not simply “do arithmetic and sacrifice the 
 
 We will let it build in stages.
 
+**Where this chapter is headed.** We will build the strongest consequence-centered candidate, including its humane refinements, before auditing its currency, aggregation, distribution, and limits. The question is not whether consequences matter, but what must be added before they select a complete verdict.
+
 ## The act-centered machine
 
 **Act consequentialism** evaluates each available action by its expected consequences and selects the best.
@@ -156,6 +158,8 @@ Total welfare, average welfare, person-affecting principles, critical levels, an
 This does not refute consequence-centered reasoning. It shows that “best outcome” does not identify one population value. The theory needs an account of which possible persons count, how existence is compared with nonexistence, and whether distribution across lives matters.
 
 ## The consequence ledger
+
+**Purpose.** Build the strongest outcome-centered candidate and label every humane refinement, so the audit can distinguish what consequence-counting supplies from what distribution, rights, care, or thresholds add.
 
 Build the strongest outcome-centered version of the Candidate System:
 

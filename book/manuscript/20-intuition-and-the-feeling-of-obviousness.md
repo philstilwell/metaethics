@@ -18,6 +18,8 @@ Intuitions are also not automatically revelations. A seeming can reflect emotion
 
 The question is not whether intuitions exist. They plainly do. The question is what they are evidence of.
 
+**Where this chapter is headed.** We will examine what an immediate moral seeming can establish and how such seemings might be calibrated without an independent answer key. The goal is neither to dismiss intuition nor to let confidence certify its own reliability.
+
 ## Seven things that can feel obvious
 
 When a judgment arrives without visible inference, separate seven possible sources.
@@ -195,6 +197,8 @@ Use a **rotation test**:
 A stable intuition after rotation earns more confidence as a considered response. It does not automatically earn status as perception of objective fact.
 
 ## Three obvious judgments
+
+**Purpose.** Audit three of your own immediate judgments for stability, framing, formation, conflict, and possible correction; the exercise tests entitlement to confidence, not the truth of the verdict by itself.
 
 Open the Candidate System notebook and record three judgments you currently find obvious:
 

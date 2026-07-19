@@ -12,6 +12,8 @@ The discovery that no objective system has been earned is easy to mishear becaus
 
 We need an inventory.
 
+**Where this chapter is headed.** We will inventory what survives the loss of an earned objective foundation: experience, attachment, evidence, agency, institutions, power, responsibility, repair, and hope. The inventory prevents a narrow metaethical conclusion from expanding into nihilism.
+
 ## Sensation and affect remain
 
 Pain is an experience creatures commonly avoid. Pleasure attracts attention and pursuit. Fear changes the body, narrows options, and prepares action. Relief arrives when danger recedes. Grief registers loss. Loneliness, delight, disgust, curiosity, boredom, comfort, and awe continue their unruly careers.
@@ -167,6 +169,8 @@ The point is accuracy: these losses do not include sensation, attachment, eviden
 
 ## Ten translations
 
+**Purpose.** Preserve the factual, emotional, relational, and practical force of ten moral sentences after removing compressed status words; translation should reveal content rather than lower the stakes.
+
 Rewrite each sentence without using *moral*, *immoral*, *right*, *wrong*, *good*, *evil*, *just*, *unjust*, *duty*, *ought*, or *deserves*. Preserve its emotional seriousness.
 
 ### 1. “It is wrong to poison children.”
@@ -215,6 +219,8 @@ The aim is not to ban old language. It is to know what the old language was carr
 
 ## Six false inferences
 
+**Purpose.** Block six conclusions the construction audit does not support, especially nihilism, quietism, arbitrary factual belief, and the disappearance of responsibility or care.
+
 Before leaving the inventory, cross out six conclusions the audit does not support.
 
 ### “All preferences are equally strong”
@@ -242,6 +248,8 @@ Chapter 32 identified factual, internal, commitment-based, relational, procedura
 Moral non-realism is not global factual skepticism. The relation between evidence and belief received its own audit. Bridge failure, disease prevalence, and policy effects remain truth-directed questions.
 
 ## The survivor's declaration
+
+**Purpose.** Record the experiences, beliefs, attachments, commitments, institutions, criticisms, and hopes you retain so the next chapter begins from an explicit practical inventory.
 
 Complete these sentences.
 

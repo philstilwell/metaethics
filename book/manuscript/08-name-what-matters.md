@@ -32,6 +32,8 @@ In this chapter we will ask three questions:
 
 The third question will lead into the next two chapters. For now, our task is to identify the materials accurately enough that we do not mistake a pile of bricks for a house.
 
+**Where this chapter is headed.** We will turn the phrase *what matters* into an explicit value inventory, then distinguish the roles values can play. Naming a value is necessary for guidance, but it does not yet rank that value, define its bearer, or generate a rule.
+
 ## Eight families at the reunion
 
 Values travel in families. Members of the same family may quarrel, and one value may have relatives in several families. The point of the classification is not to produce a perfect taxonomy. It is to reveal the different questions that moral theories ask.
@@ -197,6 +199,8 @@ A **defeasible value** genuinely counts but can be outweighed or overridden unde
 These categories can overlap. Welfare may be primary, bodily autonomy protected, and promise-keeping defeasible. A protected value may admit emergency exceptions. A primary value need not always win.
 
 Avoid labeling every value protected. If two absolute protections conflict, the system needs a rule for impossible compliance. A constitution in which every clause is supreme is a polite description of civil war.
+
+**Purpose.** Convert attractive value names into explicit roles, grounds, and bearers; completing the table identifies the system's materials but does not yet generate or rank its rules.
 
 Create a value table:
 

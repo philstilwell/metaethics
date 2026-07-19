@@ -22,6 +22,8 @@ Every generation rule also needs an **exception rule**. The exception may be “
 
 If exceptions are not written in advance, they tend to appear precisely when the rule inconveniences its author. This is one of morality’s less charming seasonal migrations.
 
+**Where this chapter is headed.** We will examine the rules that convert a value into an instruction, permission, priority, or exception. The conversion matters because *care about this* does not contain a complete answer to *do what, for whom, at what cost?*
+
 ## Ten routes from importance to action
 
 The delegates place ten route cards on the table. A value may use more than one route, but each route produces a different structure.
@@ -198,6 +200,8 @@ A safety rule may depend on “credible risk.” Without an evidence standard, o
 
 ## From one value to a full rule
 
+**Purpose.** Expose every selector needed to move from an admitted value to action-guidance; visible blanks are unresolved decisions, not permission to let a vague word choose silently.
+
 Choose one row from your value table. Complete this template:
 
 > **Value:** __________.
@@ -249,6 +253,8 @@ Now vary one feature at a time:
 If your verdict changes, identify the selector that changed it. If the verdict does not change, identify the rule that makes the varied feature irrelevant.
 
 ## Generation audit
+
+**Purpose.** Test the full set of guidance rules for route-switching, convenient exceptions, impossible demands, hidden selectors, and borrowed authority; the audit checks architecture rather than proving the values objective.
 
 Apply the template to every primary and protected value in your table. Then inspect the set as a whole.
 

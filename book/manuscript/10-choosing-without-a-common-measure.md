@@ -30,6 +30,8 @@ A procedure can settle action without completing the comparison. A commitment ca
 
 Confusing these achievements makes practical success look metaphysically larger than it is—and makes philosophical uncertainty look practically fatal when it is not.
 
+**Where this chapter is headed.** We will test several ways of settling conflicts among values that lack an obvious common unit. A method can guide a choice without proving that one value is objectively greater, so practical settlement and metaphysical ranking must remain separate.
+
 ## Eight bridges across the canyon
 
 There is no single method called “balancing.” There are several comparison or settlement methods, each with its own structure and debt.
@@ -182,6 +184,8 @@ Begin with standing: who is represented directly or indirectly? Then separate va
 The case may remain difficult after every distinction. That is not evidence that distinctions failed. A clear map does not flatten a mountain.
 
 ## Build a comparison protocol
+
+**Purpose.** State how the Candidate System settles value conflict and what remains unresolved; a usable protocol may coordinate action without discovering an objectively correct common measure.
 
 The Candidate System needs more than an instruction to “balance all relevant factors.” Write a protocol with these fields:
 

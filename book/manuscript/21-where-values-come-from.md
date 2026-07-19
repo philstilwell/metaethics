@@ -14,6 +14,8 @@ Sometimes very little about truth. Sometimes a specific reason to distrust a pro
 
 “That belief has a cause” is not a refutation. Uncaused beliefs would not be more trustworthy. The relevant question is whether the cause or process responds appropriately to the facts or reasons the belief claims to track.
 
+**Where this chapter is headed.** We will trace the formation of values without confusing a causal history with a refutation. Genealogy becomes epistemically significant only when an additional premise connects the formation process to reliability, distortion, or the absence of truth tracking.
+
 ## Nine families of influence
 
 Begin by mapping possible influences without treating their presence as guilt.
@@ -195,6 +197,8 @@ This layered result blocks a symmetrical mistake. The skeptic may not say every 
 Apply this to deliberate reflection. Ask not whether reflection occurred, but whether it was sensitive, counterfactual, independent, corrigible, and matched to the proposition claimed. A beautiful argument built only to protect its conclusion has a genealogy too.
 
 ## A genealogy of one conviction
+
+**Purpose.** Trace the formation of a conviction you take seriously and identify which influences bear on reliability; causal influence alone is neither guilt nor vindication.
 
 Choose a considered conviction from the Candidate System. Avoid selecting one you regard as obviously foolish; the exercise is not an archaeological attack on an enemy.
 

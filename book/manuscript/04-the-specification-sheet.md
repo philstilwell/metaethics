@@ -28,6 +28,8 @@ A serious construction needs a specification sheet written before the favorite t
 
 We therefore need success conditions.
 
+**Where this chapter is headed.** We will turn the book's opening aspirations into explicit conditions of success. The specification sheet prevents us from adding a requirement only when a rival fails it or quietly dropping one when a favored theory cannot supply it.
+
 ## Nine demands on the finished system
 
 The following nine demands do not come from nowhere. They are drawn from the promises identified in Chapter 1 and the meanings separated in Chapters 2 and 3. Not every reader will require all nine. That choice is part of the exercise.
@@ -263,6 +265,8 @@ Surrender is not necessarily defeat. Discovering that what you need is a defensi
 
 ## Construction exercise: Your bill of specifications
 
+**Purpose.** Freeze the Candidate System's essential, negotiable, and unnecessary conditions before theory testing begins; your rankings define success for this project, not success for every possible moral practice.
+
 Create a table with the nine conditions.
 
 For each one, mark:
@@ -312,6 +316,8 @@ Then complete the associated sentence.
 If you added humaneness or another substantive condition, define it without using *good*, *right*, *wrong*, *just*, or *moral* as an unexplained shortcut.
 
 ## Pressure exercise: Choose the failure
+
+**Purpose.** Reveal which failure matters most when no option satisfies every specification; preference among the options identifies priorities but does not establish which system is objectively true.
 
 Imagine you must choose one of these systems for Port Meridian:
 

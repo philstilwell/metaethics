@@ -14,6 +14,8 @@ The chief engineer removes the seven labels.
 
 She turns the chairs toward the people.
 
+**Where this chapter is headed.** We will replace negotiation among abstract moral systems with a public method that begins from affected lives and named stakes. The final test is practical: can disagreement become more honest, constrained, revisable, and answerable without pretending that policy has received a cosmic endorsement?
+
 ## The final admonition
 
 Stop beginning public inquiry by searching for common propositions among moral systems.
@@ -305,6 +307,8 @@ Apply the brief to the coastal town.
 The brief does not yield one inevitable answer. It makes each answer pay in public detail.
 
 ## The final exercise
+
+**Purpose.** Produce a complete Civic Stakes Brief that makes one live controversy answerable to affected lives, evidence, tradeoffs, power, safeguards, dissent, and revision rather than to an unexplained moral label.
 
 Choose one live controversy: housing, policing, migration, education, health, climate, speech, work, technology, family policy, punishment, or another issue close enough to matter.
 

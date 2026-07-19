@@ -19,6 +19,8 @@ This family includes several views that should not be collapsed.
 
 These views can be combined, but they answer different questions. Pluralism need not imply that cruelty becomes good when approved. Contextualism need not say every community has its own truth. A role-relative duty need not exhaust the person's reasons. Keeping the varieties separate prevents the usual carnival game in which one ball labeled *relativism* is thrown at every moving target.
 
+**Where this chapter is headed.** We will ask what becomes possible when standards remain local, relational, or plural rather than universal. Locality can improve fit and humility, but overlapping memberships, outsiders, reformers, and power make every boundary answerable.
+
 ## Why locality matters
 
 Consider truth-telling.
@@ -35,7 +37,7 @@ Local knowledge also resists imperial confidence. Outsiders have often called th
 
 ## Which culture?
 
-Now return to the maps.
+A local standard cannot guide until the relevant *locality* is identified. For a person who belongs to several overlapping communities, that choice is already part of the theory.
 
 Nemi lives in Dock Ward, speaks the river dialect at home, works under the Mariners' Code, attends a transnational temple, belongs to a disability-rights group, and participates in a private online community whose members live on four continents. Which culture determines the truth of a claim about her obligations?
 
@@ -128,6 +130,8 @@ The decision problem remains. If values are incommensurable, an agent may use ju
 “Balance the values” is an invitation to think, not a completed theory. A chef who is told to balance salt, acid, sweetness, and heat has received excellent advice and no recipe.
 
 ## Declare the standpoint
+
+**Purpose.** State whose standard is being applied, where its jurisdiction ends, how overlapping memberships are handled, and how insiders, reformers, and outsiders may challenge it.
 
 For any local or plural judgment, complete this declaration:
 

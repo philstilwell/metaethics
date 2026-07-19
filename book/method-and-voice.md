@@ -109,6 +109,8 @@ The book does not score readers. Repeated choices may reveal a pattern worth exa
 ## Navigation and continuity
 
 - Use one level-one heading for each chapter, including its number and full title. Reserve level-two headings for movements within the chapter.
+- After the opening scene and before the first level-two heading, include a brief **Where this chapter is headed** annotation. It must name both the immediate task and why that task matters to the cumulative construction without announcing more than the chapter earns.
+- A section must make its local function recoverable from its heading, opening movement, and payoff. Add an explicit significance sentence only when those elements leave a careful reader asking why the material is present; do not turn every section into a labeled summary.
 - Treat the six Inspection Reports as structural landings. Each must inventory what the preceding part built, what survived pressure, and what debt the next part inherits.
 - Write references to later chapters prospectively and references to earlier chapters retrospectively. A reader should never have to wonder whether a chapter has been skipped.
 - Repeated characters are thematic anchors, not interchangeable names. Ren carries identity and autonomy cases; Nara carries promise and loyalty cases; Iona carries role and impartiality cases; Asha carries reform; Kest carries principled rejection; Vale carries power and coercion; Niko carries responsibility and moral emotion.
@@ -129,6 +131,8 @@ Every substantive chapter should contain most of the following:
 - **Revision** — keep, amend, narrow, or remove the clause.
 
 Exercises should produce artifacts that carry forward. By the end, the reader should possess a visible history of the attempted construction and know exactly where its objective ambitions were lost.
+
+Reusable worksheets and policy templates begin with a one-sentence **Purpose** annotation. It identifies the artifact being produced, its role in the larger inquiry, and—where confusion is likely—the conclusion that completion does not establish.
 
 ## The final turn
 

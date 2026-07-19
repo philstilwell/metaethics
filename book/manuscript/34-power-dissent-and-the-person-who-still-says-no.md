@@ -14,6 +14,8 @@ Words such as *authority*, *legitimacy*, *necessity*, and *justice* begin to glo
 
 Removing objective moral authority does not eliminate power. It eliminates one proposed description of power as the enforcement of requirements already binding every agent from outside all stances. What remains can be defensible, constrained, tragic, reckless, or monstrous. It cannot become clean merely because the paperwork is excellent.
 
+**Where this chapter is headed.** We will follow public rules into enforcement, where persuasion, bargaining, pressure, law, coercion, and force cease to be verbal distinctions. The permanent dissenter tests whether power is constrained honestly when universal moral authority remains unearned.
+
 ## Seven ways conduct changes
 
 Keep these mechanisms apart.
@@ -215,6 +217,8 @@ Dena may never become morally persuaded. The institution's success is not measur
 This is less grand than universal moral authority and often more humane than trying to produce it by force.
 
 ## The coercion warrant
+
+**Purpose.** Require each coercive act to name the conduct constrained, stake protected, evidence, necessity, proportionality, less restrictive alternative, safeguard, appeal, and repair.
 
 For every proposed coercive act, complete a warrant.
 

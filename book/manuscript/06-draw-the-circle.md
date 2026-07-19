@@ -58,6 +58,8 @@ We therefore need three boxes:
 
 The third box should be labeled carefully. “No established standing” is more honest than “worthless.” A theory can fail to find a basis for direct standing without proving that no such basis exists.
 
+**Where this chapter is headed.** We will decide who or what enters the Candidate System as a direct object of concern. This is only a rule of admission: it does not yet determine equal weight, identical treatment, or the outcome when admitted interests conflict.
+
 ## Admission is not victory
 
 Before the applicants approach the gate, we need a rule that will prevent a great deal of confusion:
@@ -158,7 +160,7 @@ But a procedure needs participants, information, constraints, and aims. Can anim
 
 ## The applicants arrive
 
-Now let us test the keys.
+The seven keys are proposed grounds of admission, not yet a defensible boundary. The next cases test what each key admits, excludes, or leaves dependent on an unacknowledged second ground.
 
 ### The silent directive
 
@@ -193,6 +195,8 @@ A watershed contains forests, wetlands, predators, prey, fungal networks, and mi
 There are overwhelming reasons to protect it even if the watershed lacks direct standing. Alternatively, a system might treat ecological wholes as direct bearers of value. Either route is available. What is not available is moving between them mid-argument: speaking of the ecosystem as a rights-bearing whole when that strengthens protection, then as a collection of resources when extraction becomes convenient.
 
 ## Draw your circle
+
+**Purpose.** Make every admission to or exclusion from direct standing rest on a named ground; the map does not yet assign equal weight or decide conflicts among those admitted.
 
 Open the Candidate System notebook and make a domain map with four columns:
 

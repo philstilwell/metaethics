@@ -18,6 +18,8 @@ Their shared insight is formidable:
 
 The question is what must be placed inside the procedure before that result can come out.
 
+**Where this chapter is headed.** We will test whether fair choice, reasonable rejection, reciprocity, or ideal agreement can construct principles with public authority. The decisive questions concern the participants, information, constraints, complaint standards, and reach beyond those who accept the procedure.
+
 ## The complaint rather than the sum
 
 Consider a tunnel with six occupied chambers. Flooding one chamber will save five workers elsewhere. A simple aggregate favors the five. A rights theory may prohibit deliberately killing the one.
@@ -147,6 +149,8 @@ The first and some logical exclusions can be relatively formal. The others depen
 Do not hide those judgments in the adjective *reasonable*. Adjectives are terrible safes.
 
 ## Build the public table
+
+**Purpose.** Construct the strongest procedural candidate by specifying its participants, representation, information, constraints, complaint standard, outcome rule, and reach; the table makes its inputs visible.
 
 Construct the strongest procedural system you can.
 

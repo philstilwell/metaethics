@@ -14,6 +14,8 @@ Call these responses and concerns **primitives**. A primitive is a starting sour
 
 The constructive method begins there and then does a great deal more.
 
+**Where this chapter is headed.** We will begin public reasoning with concrete fears, attachments, aversions, hopes, and valued capacities, then carry them through evidence, comparison, policy design, safeguards, and review. Primitives identify stakes; they do not certify facts or legislate by themselves.
+
 ## What a primitive is not
 
 Before building, remove seven attractive mistakes.
@@ -353,6 +355,8 @@ They endorse the same rule for different reasons.
 This **overlapping support** can stabilize policy without pretending everyone shares one moral system. It may be fragile if one support changes. Record the reasons so future revision is intelligible.
 
 ## The primitive audit
+
+**Purpose.** Trace one public dispute from reported response through appraisal, evidence, operational values, comparison, power, policy, safeguards, dissent, and review without treating the starting emotion as a verdict.
 
 Choose one public dispute and complete the first page.
 

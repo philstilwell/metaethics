@@ -14,6 +14,8 @@ The broad family is called **deontological** because it centers duties, permissi
 
 This family includes universal rules, rights, side constraints, promises, contracts, professional duties, and thresholds for catastrophe. Sophisticated versions do not ignore consequences. They deny that every consequence enters one unrestricted exchange.
 
+**Where this chapter is headed.** We will test rule- and person-centered approaches through universalization, rights, duties, roles, and catastrophe cases. These structures protect boundaries that totals can erase, but they must explain standing, conflict, and the source of humane exceptions.
+
 ## Universalization
 
 One approach asks whether the principle of an action can be adopted consistently by all relevant agents.
@@ -149,6 +151,8 @@ Infants and cognitively disabled people create a parallel test. Protection throu
 The theory can use multiple grounds. The domain map must show them.
 
 ## Draft the boundary constitution
+
+**Purpose.** Build the strongest rule- and person-centered candidate with explicit bearers, rights, duties, conflicts, and catastrophe thresholds; naming a boundary does not yet ground its content or exceptions.
 
 Build the strongest rule- and person-centered Candidate System:
 

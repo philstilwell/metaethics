@@ -19,6 +19,8 @@ The central questions shift:
 
 These questions catch moral reality that abstract principles often miss. They also risk making good judgment depend on the unexplained perception of the already good judge.
 
+**Where this chapter is headed.** We will examine character, flourishing, care, loyalty, stewardship, and practical wisdom as sources of moral guidance. These approaches recover attention and relationship, while raising questions about whose model of flourishing governs and how partiality is limited.
+
 ## Character before calculation
 
 **Virtue ethics** centers stable dispositions such as courage, honesty, justice, generosity, compassion, temperance, humility, loyalty, and practical wisdom.
@@ -153,6 +155,8 @@ This is psychologically realistic. It creates vulnerability to bad formation. If
 The access audit requires feedback beyond admiration within the same tradition.
 
 ## Draft the relational constitution
+
+**Purpose.** Build the strongest character-and-care candidate while naming its model of flourishing, forms of attention, legitimate partiality, conflict method, and correction practice.
 
 Build the strongest character-and-care version of the Candidate System:
 

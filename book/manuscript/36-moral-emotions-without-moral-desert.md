@@ -14,6 +14,8 @@ Guilt, shame, resentment, indignation, gratitude, and pride are not detachable o
 
 The question is not whether to press an emotional mute button. There is no such button, and installing one would be an alarming research program. The question is what each emotion is doing now, what its appraisal says, how expression affects others, and when cultivation, redirection, or release serves the stakes we retain.
 
+**Where this chapter is headed.** We will separate an emotion's cause, appraisal, function, expression, intensity, and duration. This lets guilt, shame, resentment, indignation, gratitude, and pride be understood and revised without treating every feeling as either a moral oracle or a disposable error.
+
 ## Six questions hiding inside one feeling
 
 Whenever someone asks, “Is this emotion justified?” separate at least six questions.
@@ -179,6 +181,8 @@ Rejecting objective obligation does not imply that nothing happened. Eris can ac
 The remorse may combine care, loss, fear of condemnation, attachment, and learned desert. Sorting them can reveal tasks. Not every remainder needs punishment; some are grief at the cost of choosing.
 
 ## Build the emotion dossier
+
+**Purpose.** Audit one emotion's trigger, appraisal, cause, function, expression, intensity, duration, and alternatives; the dossier increases understanding without grading character or promising voluntary control.
 
 Choose one current or remembered emotion. Complete the dossier without deciding in advance whether the feeling is good or bad.
 

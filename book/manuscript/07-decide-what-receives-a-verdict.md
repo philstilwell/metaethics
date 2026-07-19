@@ -20,6 +20,8 @@ Was the event wrong?
 
 That is not yet one question. It is a sack containing several questions, some of which are kicking.
 
+**Where this chapter is headed.** We will distinguish the objects a system evaluates—acts, motives, outcomes, characters, relationships, rules, and institutions—and give their possible statuses a clearer grammar. This prevents a conclusion about one object from migrating unnoticed to another.
+
 ## The objects on the workbench
 
 A moral system does not evaluate “the situation” all at once. It assigns statuses to **objects of evaluation**. Different theories emphasize different objects, but ordinary moral judgment ranges across at least eight.
@@ -199,6 +201,8 @@ Tragedy names grave loss. Wrongdoing names a violation attributable to an act, p
 Repair looks toward victims, losses, relationships, and future conditions. Punishment imposes a burden under an authority. One can be appropriate without the other. Conflating them turns every offer of repair into an admission of punishable guilt and every absence of punishment into abandonment of the victim.
 
 ## Manufacture your stamps
+
+**Purpose.** Apply separate status terms to each relevant object in one difficult event; a complete table prevents one adverse label from silently deciding justification, excuse, character, repair, and punishment at once.
 
 Choose a difficult event from public life, history, or your own experience. If using a personal case, change identifying details. Make one row for each relevant object:
 

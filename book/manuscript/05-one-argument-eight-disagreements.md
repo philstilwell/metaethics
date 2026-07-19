@@ -34,6 +34,8 @@ Until we know which layer is active, an argument can continue indefinitely while
 
 Moral disagreement is less like a boxing match than a building with noise coming through the walls. Before striking back, it helps to find the room.
 
+**Where this chapter is headed.** We will separate eight kinds of disagreement that often occupy one argument at once. The map matters because evidence, clarification, negotiation, procedure, and grounding answer different problems; success at one layer cannot be billed as success at all eight.
+
 ## The first discipline: do not invent the dispute
 
 Suppose all you know is this:
@@ -357,6 +359,8 @@ Intellectual restraint is part of rigor. A map with invented roads is worse than
 
 ## Exercise: Decode a live disagreement
 
+**Purpose.** Classify the components of one controversy before trying to resolve it; the map shows where different methods apply and does not require a verdict on the controversy.
+
 Choose a controversy you can describe without needing to settle it immediately. Write two representative claims in the speakers' own strongest language.
 
 Create eight headings:
@@ -382,6 +386,8 @@ Then ask:
 - What would remain if the objective claims were removed?
 
 ## Exercise: Solve the wrong problem
+
+**Purpose.** Practice detecting exchanges in which speakers answer different layers; the task is diagnosis and repair of the conversation, not selection of the better substantive position.
 
 For each exchange, identify the mismatch.
 
@@ -421,6 +427,8 @@ Write two mismatched exchanges of your own. Then rewrite each so the speakers ad
 
 ## Construction exercise: The Candidate System's dispute protocol
 
+**Purpose.** Give the Candidate System a repeatable order of inquiry so facts, meanings, values, procedures, and objective claims do not answer in one another's place.
+
 Add this protocol to your Candidate System:
 
 > Before treating a dispute as a conflict over objective moral truth, identify any disagreement about description, prediction, standing, priority, attitude, coordination, or procedure. Resolve what can be resolved at its own layer. Record what remains.
@@ -446,6 +454,8 @@ Add this entry to the ledger:
 The debt is methodological. A system can reach a conclusion for several reasons. It must show the route.
 
 ## Inspection Report I — The Bill of Specifications
+
+**Purpose.** Assemble the project's initial target, meanings, and dispute method in one stable record; later inspections must show revisions against this version rather than an improved memory of it.
 
 Part I is complete. Before entering the construction floor, assemble the following pages.
 

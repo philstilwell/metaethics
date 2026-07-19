@@ -11,6 +11,8 @@ Use a fresh copy for each complete candidate. Never erase an earlier answer. Dat
 
 ## Cover sheet
 
+**Purpose.** Identify the candidate, its intended reach, its central promise, and its largest known debt so later revisions can be compared with the project that actually began.
+
 > **Candidate System name:** __________
 >
 > **Version:** __________
@@ -32,6 +34,8 @@ Use a fresh copy for each complete candidate. Never erase an earlier answer. Dat
 > **Current largest unresolved debt:** __________
 
 ## Worksheet 1 — The specification sheet
+
+**Purpose.** Fix the conditions by which this candidate will be judged before pressure cases begin; marking a condition essential states your target, not that the condition has been met.
 
 Mark each condition **Essential**, **Negotiable**, or **Unnecessary** before pressure-testing the foundation.
 
@@ -76,6 +80,8 @@ Complete the sentences.
 
 ## Worksheet 2 — Objectivity and meaning
 
+**Purpose.** State exactly which kind of independence the candidate claims and what its key verdicts mean; familiar moral words may not carry a stronger claim than the definitions written here.
+
 ### Objectivity threshold
 
 Mark the strongest property your project requires.
@@ -117,6 +123,8 @@ When the system says “Action A is wrong,” it primarily:
 
 ## Worksheet 3 — The direct-standing map
 
+**Purpose.** Decide who or what enters consideration for its own sake before assigning comparative weight; admission to the map does not decide equal treatment or final outcome.
+
 List every candidate bearer before assigning weight or outcome.
 
 | Being or system | Experience | Agency | Interests | Relationship | Membership | Objective status claimed | Constructed inclusion | Confidence | Direct standing? |
@@ -149,6 +157,8 @@ For every entry, complete:
 - An outsider who rejects the community: __________
 
 ## Worksheet 4 — Objects and status grammar
+
+**Purpose.** Separate the things being evaluated from the statuses assigned to them so a verdict about an act, motive, person, rule, or institution cannot migrate unnoticed.
 
 ### Objects of evaluation
 
@@ -190,6 +200,8 @@ Check the separations:
 
 ## Worksheet 5 — The value table
 
+**Purpose.** Translate attractive value labels into protected bearers, operational content, roles, limits, and evidence; listing a value does not yet generate a rule or priority.
+
 | Value or concern | Bearer | Object protected | Intrinsic, instrumental, constitutive, relational, or symbolic? | Primary, protected, or defeasible? | Evidence relevant to application | Source or selector |
 |---|---|---|---|---|---|---|
 | __________ | __________ | __________ | __________ | __________ | __________ | __________ |
@@ -212,6 +224,8 @@ Check the separations:
 > **Ground and access route:** __________
 
 ## Worksheet 6 — Generation rules
+
+**Purpose.** Display every move from “this matters” to “therefore do this” and expose the bridge, selector, or exception that makes the move possible.
 
 Complete one form for every move from “matters” to “act.”
 
@@ -241,6 +255,8 @@ Complete one form for every move from “matters” to “act.”
 
 ## Worksheet 7 — Comparison protocol
 
+**Purpose.** Specify how the candidate responds when protected values conflict; a procedure can settle action without proving that its ranking is objectively correct.
+
 > **Values in conflict:** __________ and __________
 >
 > **Bearers and distribution:** __________
@@ -262,6 +278,8 @@ Complete one form for every move from “matters” to “act.”
 > **Ground for any objective rank claimed:** __________
 
 ## Worksheet 8 — Similarity, relevance, and exception rules
+
+**Purpose.** Test whether like cases are treated alike for stated reasons and whether exceptions track relevant differences rather than identity, convenience, or power.
 
 > **Baseline rule:** __________
 >
@@ -295,6 +313,8 @@ Mirror tests:
 - [ ] Adversary's explanation
 
 ## Worksheet 9 — Reasons and authority audit
+
+**Purpose.** Separate causal influence, motivation, conditional support, social force, law, and claimed aim-independent reasons; alignment among columns does not turn them into one relation.
 
 ### Reason type
 
@@ -330,6 +350,8 @@ Mirror tests:
 
 ## Worksheet 10 — Epistemic-force statement
 
+**Purpose.** Explain why the candidate treats a belief-forming route as truth-directed or authoritative; usefulness, consensus, and reliability should not borrow one another's credentials.
+
 Mark every route you accept and do not blend them.
 
 - [ ] Evidence indicates truth.
@@ -352,6 +374,8 @@ Mark every route you accept and do not blend them.
 > **How moral and epistemic normativity remain separate:** __________
 
 ## Worksheet 11 — Access, genealogy, and correction
+
+**Purpose.** Record how central claims are formed, tested, challenged, and revised; a causal history neither refutes nor vindicates a claim without an additional reliability argument.
 
 ### Access route
 
@@ -396,6 +420,8 @@ Mark every route you accept and do not blend them.
 
 ## Worksheet 12 — Disagreement dossier
 
+**Purpose.** Locate a disagreement at the correct layer and state what the candidate predicts should converge; persistence alone is not yet evidence for realism, skepticism, or relativism.
+
 | Layer | Disagreement | Evidence or process | Settlement available | What remains |
 |---|---|---|---|---|
 | Words and frames | __________ | __________ | __________ | __________ |
@@ -416,6 +442,8 @@ Mark every route you accept and do not blend them.
 > **What convergence would and would not establish:** __________
 
 ## Worksheet 13 — Institutional charter
+
+**Purpose.** Convert declared concerns into a public structure with jurisdiction, participation, safeguards, and review while labeling the support each clause actually possesses.
 
 > **Primary goal:** __________
 >
@@ -452,6 +480,8 @@ Label each clause:
 
 ## Worksheet 14 — Coercion warrant
 
+**Purpose.** Make every proposed use of coercion answerable to a concrete threat, scope, necessity claim, affected population, safeguard, and path of appeal.
+
 > **Conduct constrained:** __________
 >
 > **Stake protected:** __________
@@ -484,6 +514,8 @@ Label each clause:
 
 ## Worksheet 15 — Responsibility response
 
+**Purpose.** Match adverse or supportive responses to protection, repair, relationship, communication, deterrence, rehabilitation, or any separately claimed desert rather than letting punishment justify itself.
+
 | Question | Entry |
 |---|---|
 | Conduct and evidence | __________ |
@@ -503,6 +535,8 @@ Label each clause:
 > **Purpose-deletion finding:** If every nonretributive purpose were removed, the response would / would not remain because __________.
 
 ## Worksheet 16 — Moral-emotion dossier
+
+**Purpose.** Separate an emotion's cause, appraisal, function, expression, intensity, and duration so understanding it does not automatically endorse or condemn it.
 
 > **Emotion:** guilt / shame / resentment / indignation / gratitude / pride / other: __________
 >
@@ -532,6 +566,8 @@ Label each clause:
 
 ## Worksheet 17 — Language policy
 
+**Purpose.** Decide when moral vocabulary will be asserted, conserved, translated, fictionalized, revised, or avoided, especially where compressed language activates power.
+
 | Context | Abolish, fictionalize, conserve, express, construct, or translate? | Intended function | Translation trigger | Risk |
 |---|---|---|---|---|
 | Promise | __________ | __________ | __________ | __________ |
@@ -545,6 +581,8 @@ Label each clause:
 > I use the term __________ to mean or do __________. I do not infer __________ from that use. When coercion or serious conflict enters, I will translate the claim into __________.
 
 ## Worksheet 18 — Primitive-to-policy chain
+
+**Purpose.** Carry a concrete response or concern through named stakes, evidence, comparison, policy design, safeguards, and review; the primitive begins inquiry but does not settle it.
 
 > **Felt response:** __________
 >
@@ -573,6 +611,8 @@ Label each clause:
 > **Repair:** __________
 
 ## Worksheet 19 — Final classification
+
+**Purpose.** Compare the surviving system with its opening specification and classify every change, so practical success is not mistaken for an objective property that was surrendered.
 
 Classify every surviving clause.
 

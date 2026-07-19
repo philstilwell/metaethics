@@ -6,6 +6,8 @@ Complete the brief before a final vote or coercive implementation. Preserve ever
 
 ## Use rules
 
+**Purpose.** Apply the same sequence to every brief so urgency, authority, and familiar moral vocabulary do not bypass evidence, comparison, safeguards, or dissent.
+
 1. Start with reported experience and concrete stakes, not theory labels.
 2. Separate factual claims from standing, priority, settlement, and authority.
 3. Treat emotion as evidence of salience and appraisal, not automatic evidence that the appraisal is accurate.
@@ -18,6 +20,8 @@ Complete the brief before a final vote or coercive implementation. Preserve ever
 10. Translate any high-stakes use of *right*, *wrong*, *just*, *duty*, or *desert* into the components below.
 
 ## Cover page
+
+**Purpose.** Establish authorship, institutional ownership, version history, and review responsibility before the proposal begins making claims about other people's lives.
 
 > **Decision title:** __________
 >
@@ -40,6 +44,8 @@ Complete the brief before a final vote or coercive implementation. Preserve ever
 > **Current status:** exploration / pilot / proposed / authorized / active / under review / expired: __________
 
 ## 1. Decision and jurisdiction
+
+**Purpose.** State the exact choice, decision-maker, scope, duration, and route of review; this keeps a broad aspiration from quietly authorizing conduct outside the decision.
 
 > **Exact decision:** __________
 >
@@ -67,6 +73,8 @@ Complete the brief before a final vote or coercive implementation. Preserve ever
 - [ ] Legal validity is not presented as objective moral correctness.
 
 ## 2. Affected parties and standing
+
+**Purpose.** Identify who or what bears direct and indirect effects before ranking claims, especially parties who lack formal membership, representation, or present political power.
 
 List parties before ranking their claims.
 
@@ -96,6 +104,8 @@ Check explicitly for:
 
 ## 3. Emotional stakes and reported experience
 
+**Purpose.** Record what people fear, resent, value, grieve, or hope for while separating the salience of an emotion from the factual accuracy and policy reach of its appraisal.
+
 Do not infer facts from emotion without a separate evidential route.
 
 | Party | Reported emotion or response | Object or trigger | Appraisal contained | Current function | Possible distortion or strategic use | How testimony was gathered |
@@ -123,6 +133,8 @@ Prompts:
 
 ## 4. Operational values
 
+**Purpose.** Translate abstract value words into observable states, experiences, capacities, relationships, or practices so competing proposals can be compared against declared aims.
+
 Translate abstract values into states, experiences, capacities, relationships, or practices.
 
 | Value label | Operational meaning | Bearer | Desired direction | Minimum, target, or protected boundary | Evidence relevant to application |
@@ -146,6 +158,8 @@ Examples of required translation:
 > **Objective status claimed, if any, and warrant:** __________
 
 ## 5. Empirical claims and confidence
+
+**Purpose.** Make every consequential factual premise traceable to evidence, uncertainty, and possible correction; the section tests descriptions and predictions, not the value that selects among them.
 
 | Claim | Type: description, cause, forecast, or measurement | Evidence | Method and baseline | Confidence | Main uncertainty | Evidence that would reduce confidence |
 |---|---|---|---|---|---|---|
@@ -171,6 +185,8 @@ Audit:
 > **What evidence leaves open:** standing / priority / acceptable risk / distribution / procedure / objective status / other: __________
 
 ## 6. Comparison method and unresolved conflicts
+
+**Purpose.** Disclose how the proposal compares gains, losses, thresholds, rights, priorities, and distributions, including conflicts the chosen method leaves unsettled.
 
 | Conflict | Bearers | Distribution | Method selected | Selector or decision-maker | Residual loss | Dissent |
 |---|---|---|---|---|---|---|
@@ -200,6 +216,8 @@ Available methods:
 
 ## 7. Available resources and constraints
 
+**Purpose.** Distinguish genuine limits on implementation from political choices presented as inevitabilities, and show whose time, money, labor, attention, or risk the proposal consumes.
+
 | Resource | Available amount | Owner or controller | Timing | Competing use | Reliability or uncertainty |
 |---|---|---|---|---|---|
 | Money | __________ | __________ | __________ | __________ | __________ |
@@ -217,6 +235,8 @@ Available methods:
 > **Who bears delay:** __________
 
 ## 8. Power and enforcement
+
+**Purpose.** Name who can decide, compel, evade, delay, capture, challenge, and repair the policy so implementation is not described as though rules enforce themselves.
 
 Draw the power map.
 
@@ -242,6 +262,8 @@ Draw the power map.
 
 ## 9. Policy alternatives
 
+**Purpose.** Compare the proposal with a real baseline and meaningful alternatives; rejecting one option does not establish that the favored option is necessary or best.
+
 Include a real baseline and at least three alternatives.
 
 | Option | Mechanism | Values served | Parties benefited | Parties burdened | Evidence | Power required | Reversibility | Cost |
@@ -259,6 +281,8 @@ Include a real baseline and at least three alternatives.
 > **Why this option rather than the nearest alternative:** __________
 
 ## 10. Safeguards
+
+**Purpose.** Design limits that remain protective under error, abuse, leadership change, and hostile administration rather than relying on the current decision-makers' good intentions.
 
 | Predictable failure or abuse | Safeguard | Responsible actor | Verification | Appeal | Trigger for suspension |
 |---|---|---|---|---|---|
@@ -290,6 +314,8 @@ Consider:
 
 ## 11. Measures
 
+**Purpose.** Connect each declared aim to indicators, baselines, horizons, and distributional checks while anticipating proxy failure and incentives to improve the number rather than the condition.
+
 | Measure | Value or factual claim tracked | Distribution reported | Data owner | Frequency | Manipulation risk | Interpretation limit |
 |---|---|---|---|---|---|---|
 | __________ | __________ | __________ | __________ | __________ | __________ | __________ |
@@ -315,6 +341,8 @@ Include where relevant:
 
 ## 12. Review, failure, and sunset
 
+**Purpose.** State when evidence, outcomes, or changed conditions will trigger review, suspension, revision, or expiration; correctability requires more than permission to reconsider someday.
+
 > **Initial review date:** __________
 >
 > **Full redesign date:** __________
@@ -337,6 +365,8 @@ Include where relevant:
 
 ## 13. Error acknowledgment and repair
 
+**Purpose.** Decide in advance how the institution will identify injury, notify affected parties, restore records or resources, compensate loss, and prevent recurrence.
+
 Plan before the error occurs.
 
 | Possible error | Person or system affected | Notice | Record correction | Compensation or restoration | Institutional change | Public acknowledgment |
@@ -353,6 +383,8 @@ Plan before the error occurs.
 > **Appeal when repair is denied:** __________
 
 ## 14. Support and dissent statement
+
+**Purpose.** Preserve the strongest supporting and dissenting accounts in their authors' own terms so a collective decision is not rewritten as unanimous moral agreement.
 
 | Actor or group | Supports, opposes, or uncertain | Actual basis | Desired change | Power in final decision |
 |---|---|---|---|---|
@@ -375,6 +407,8 @@ Plan before the error occurs.
 > **Objective authority claimed, if any, and warrant:** __________
 
 ## Final decision record
+
+**Purpose.** Freeze the authorized decision, reasons, evidential basis, acknowledged costs, safeguards, and unresolved objections at the moment responsibility attaches.
 
 > **Selected policy:** __________
 >
@@ -401,6 +435,8 @@ Plan before the error occurs.
 > **Ground and access route for that clause:** __________
 
 ## Independent reviewer page
+
+**Purpose.** Invite structured challenge from outside the drafting group and record which objections change the proposal, which expose uncertainty, and which remain unresolved.
 
 Ask at least three reviewers to mark one entry in each category.
 
@@ -433,5 +469,7 @@ Ask at least three reviewers to mark one entry in each category.
 > **What this review leaves open:** __________
 
 ## One-page public summary
+
+**Purpose.** Translate the full brief into an accessible account of the decision, stakes, evidence, tradeoffs, enforcement, safeguards, dissent, and review without erasing inconvenient detail.
 
 > We are deciding __________ under authority __________. The people and systems most affected are __________. They report stakes including __________. The policy protects or advances __________, based on factual claims __________ with confidence __________. The principal unresolved conflict is __________, settled through __________. The largest burden falls on __________. Implementation gives power to __________ and constrains __________. Safeguards include __________. We will measure __________, review on __________, and end or redesign the policy if __________. Established errors will be addressed through __________. Support comes from __________; dissent remains from __________. The proposal is presented as factual / instrumental / expressive / commitment-based / agreement-based / procedural / enforced / objectively required: __________.

@@ -14,6 +14,8 @@ The missing objective layer does not leave a blank page. The room contains peopl
 
 These materials do not write their own constitution. They make construction possible.
 
+**Where this chapter is headed.** We will draft a public code whose clauses disclose the support they actually possess. The code may coordinate, protect, authorize, and constrain without pretending that law, legitimacy, shared concern, and objective obligation are one source.
+
 ## Seven different supports
 
 Before drafting a clause, distinguish the supports it might have.
@@ -259,6 +261,8 @@ These columns will overlap. Do not merge them.
 A law may have broad support and little compliance because enforcement is weak. It may receive compliance without support because punishment is severe. It may be procedurally authorized while substantively opposed. It may be defensible to many without binding the permanent rejecter in the stance-independent sense.
 
 ## Draft your public code
+
+**Purpose.** Build a charter whose clauses disclose their goals, support, jurisdiction, coercive means, safeguards, dissent, and revision rules; defensibility to many is not renamed universal obligation.
 
 Build a charter for a real or imagined community.
 

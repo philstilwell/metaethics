@@ -20,6 +20,8 @@ Objective moral skepticism neither proves nor refutes objective epistemic reason
 
 We begin by separating the furniture.
 
+**Where this chapter is headed.** We will ask why evidence should govern belief and whether that force resembles the practical authority morality claims. Reliability, truth, usefulness, coherence, and public procedure each explain something; the task is to keep their achievements distinct.
+
 ## Truth, evidence, belief, and justification
 
 A **belief** represents the world as being some way. It may be true or false.
@@ -206,6 +208,8 @@ This book will proceed on two disclosed grounds:
 These grounds are sufficient to make evidence action-guiding for participating readers. The book does not need to establish that Tavi has an aim-independent epistemic reason before continuing. Whether truth-directed evidence supplies that stronger reason remains open.
 
 ## Write the epistemic charter
+
+**Purpose.** State what makes beliefs true, evidence truth-bearing, inquiry corrigible, and evidential support authoritative; practical usefulness or public warrant may be included but must be labeled.
 
 Add this page to the Candidate System:
 

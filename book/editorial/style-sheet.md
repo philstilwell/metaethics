@@ -36,6 +36,14 @@ The prose should feel like an intelligent expedition: concrete before abstract, 
 - Use *clearly*, *obviously*, and *simply* only when the word itself is under inspection or the claim really is secured by stipulated facts.
 - Prefer one stable metaphor at a time. Construction, bridge, ledger, inspection, map, translation, and maze may interact; do not add a new metaphor merely to enliven one sentence.
 
+## Reader orientation
+
+- Use **Where this chapter is headed** once, after the opening scene, to state the chapter's task and cumulative significance in plain language.
+- Use **Purpose** on reusable worksheets and policy forms to state what the reader is producing and what the result leaves open.
+- Prefer direct formulations such as *This distinction matters because...* or *This step establishes...* over vague promises that a point will become important later.
+- Do not annotate a section whose heading, opening, and closing already make its role clear. Signposts should reduce uncertainty, not create a second book running beside the first.
+- A closing transition should name the debt or question inherited by the next chapter rather than merely announcing that the next chapter exists.
+
 ## Philosophical fairness
 
 - Present the insight a view protects before applying pressure.

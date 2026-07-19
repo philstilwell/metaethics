@@ -16,6 +16,8 @@ Perhaps this is the source the Candidate System needs. Objective morality need n
 
 This proposal has genuine power. It also has a boundary. We must ask which reasons a commitment creates, for whom, under what conditions, and whether the authority of commitment is itself chosen.
 
+**Where this chapter is headed.** We will examine how promises, roles, memberships, and relationships change the practical landscape. Their force may be real and substantial while remaining conditional on entry, content, reliance, power, and the possibility of exit.
+
 ## What changes when a promise is made?
 
 Suppose Iona tells a harbor mechanic, “Repair the north gate tonight, and I will relieve your morning shift.” The mechanic relies on the assurance, cancels child care for the morning, and completes the repair. At dawn, Iona would prefer to attend a meeting and keep the mechanic on duty.
@@ -213,6 +215,8 @@ Imagine an agent who freely promises, creates reliance, understands every conseq
 If yes, commitment has produced or activated aim-independent support. Explain the source. If no, promises guide agents through continuing concerns and social enforcement but do not satisfy the original authority condition.
 
 ## Draft the commitment charter
+
+**Purpose.** Make a promise, role, membership, or relationship disclose its entry conditions, beneficiaries, content, limits, and exit; the charter records generated reasons without assuming universal authority.
 
 Choose a promise, role, membership, or relationship in your Candidate System. Complete:
 

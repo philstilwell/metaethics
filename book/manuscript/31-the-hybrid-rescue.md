@@ -22,6 +22,8 @@ The hybrid promises more stability:
 
 This could make a humane, intelligent, corrigible system. The decisive question is whether combination pays the earlier debts or merely arranges them attractively.
 
+**Where this chapter is headed.** We will combine the strongest surviving materials from the major candidates and test whether a hybrid can keep their benefits without inheriting their debts. The crucial component is the meta-rule that decides which layer governs when the layers conflict.
+
 ## A pile is not yet a structure
 
 Suppose a city constitution says:
@@ -244,6 +246,8 @@ Bring the master value upstairs. Give it a chair and a debt number.
 
 ## Build the strongest hybrid
 
+**Purpose.** Assign each component a distinct job and state the meta-rule for collisions; a hybrid succeeds by integration, not by letting every layer govern whenever convenient.
+
 Draft a system capable of governing the evacuation and ordinary life.
 
 > **Protected concerns:** __________.
@@ -295,6 +299,8 @@ She attaches an honest label to it.
 > **Built from protected human concerns. Ordering requires declared commitments. Objective authority not yet established.**
 
 ## Inspection Report V — What Each Candidate Saved
+
+**Purpose.** Record the indispensable contribution, strongest success, imported repair, unpaid debt, and useful narrower form of every major candidate before the general grounding audit.
 
 The inspectors do not award a trophy.
 

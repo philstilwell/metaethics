@@ -15,6 +15,8 @@ Four recurring devices organize the expedition:
 - **Pressure Cases** isolate seams by fixing tempting escape routes.
 - **Inspection Reports** preserve what survived each movement and what was surrendered.
 
+Two brief annotations help you recover the thread when the detail becomes dense. **Where this chapter is headed** appears after each opening scene and names the immediate task and its significance to the construction. **Purpose** appears in reusable worksheets and policy forms to state what the page produces and what completing it does not establish. These are route markers, not substitutes for the argument.
+
 The recommended route is straight through the prologue and all seven parts. The final result depends on distinctions accumulated along the way. If you return later with a narrower question, three shorter routes are useful:
 
 - For objective authority, read the Prologue; Chapters 1–5, 12–24, and 37–39; then Appendix F.

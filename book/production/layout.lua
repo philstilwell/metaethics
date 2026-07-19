@@ -138,6 +138,19 @@ function Table(tbl)
   return tbl
 end
 
+function Para(para)
+  local text = pandoc.utils.stringify(para.content)
+  if text:match('^Where this chapter is headed%.') or
+     text:match('^Where the prologue is headed%.') then
+    return {
+      pandoc.RawBlock('latex', '\\Needspace{16\\baselineskip}'),
+      para
+    }
+  end
+
+  return para
+end
+
 function Header(header)
   local label = pandoc.utils.stringify(header.content)
   if header.level == 2 and label:match('^Worksheet %d+') then
@@ -151,6 +164,13 @@ function Header(header)
      (header.level == 3 and label:match('^Card %d+')) then
     return {
       pandoc.RawBlock('latex', '\\Needspace{10\\baselineskip}'),
+      header
+    }
+  end
+
+  if header.level == 2 then
+    return {
+      pandoc.RawBlock('latex', '\\Needspace{8\\baselineskip}'),
       header
     }
   end

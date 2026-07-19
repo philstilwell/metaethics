@@ -18,6 +18,8 @@ If the answer is yes, we have reached an **aim-independent practical reason**.
 
 This is the bridge the objective moral project has been seeking. We should neither cross it by definition nor burn it because the structure looks unfamiliar.
 
+**Where this chapter is headed.** We have reached the central bridge: can a fact count in favor for an agent who lacks every connected aim? This chapter states the strongest case for such reasons, then separates that claim from motivation, rational blame, and a complete moral verdict.
+
 ## What an aim-independent reason claims
 
 The claim has four parts:
@@ -222,6 +224,8 @@ That is a semantic proposal from Chapter 3, not an observation that proves itsel
 This reports powerful seeming and may identify a basic truth. It does not by itself discriminate objective recognition from near-universal aversion and compassion. The distinction is precisely what the Candidate System must examine.
 
 ## Take the fork
+
+**Purpose.** Record whether the Candidate System accepts aim-independent practical reasons and state the strongest resulting clause; either fork must preserve its own costs rather than borrowing the other's advantages.
 
 The notebook now divides.
 

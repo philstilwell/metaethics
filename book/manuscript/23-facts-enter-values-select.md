@@ -20,6 +20,8 @@ This is sometimes summarized as “you cannot derive an ought from an is.” The
 
 Facts enter. Values select. Rules connect. Authority remains a separate question.
 
+**Where this chapter is headed.** We will trace how empirical facts constrain policy while showing where a standing rule, value, threshold, or distribution principle enters. The boundary protects science from being asked to choose values and values from disguising themselves as measurements.
+
 ## What evidence can settle
 
 Do not react to the boundary by understating science. Evidence performs at least six indispensable jobs.
@@ -192,6 +194,8 @@ None disputes the data. Each uses a comparison or legitimacy rule from Part II. 
 This discipline protects evidence too. When values are blamed for a conclusion evidence did not make, later factual correction becomes politically harder: people suspect that “the science” is a disguise for an undisclosed selector.
 
 ## Trace the policy chain
+
+**Purpose.** Decompose one policy into factual baseline, causal prediction, affected parties, values, comparison, procedure, authority, and review so the empirical and evaluative links can be challenged separately.
 
 Choose one policy claim from the Candidate System and write it as a sequence:
 

@@ -10,6 +10,8 @@ If we allow them to blur, an objective moral system can appear to succeed by mov
 
 Each move may identify something valuable. The question is whether it preserves the project written on our specification sheet.
 
+**Where this chapter is headed.** We will separate six forms of independence that the word *objective* often bundles together. Later candidates should receive credit only for the kind they actually establish, not for every favorable association carried by the word.
+
 ## Six kinds of independence
 
 Begin with six claims that might be expressed by saying a moral judgment is objective.
@@ -195,6 +197,8 @@ But the table does show how a project can change while keeping the same word.
 
 ## Pressure exercise: The convergence machine
 
+**Purpose.** Separate what idealized convergence can establish—information, impartiality, legitimacy, or a procedure-relative result—from the further claim of stance-independent truth.
+
 Port Meridian develops a deliberation system. It can provide every resident with verified facts, correct logical inconsistency, simulate the experience of every affected party, remove threats and bargaining advantages, and permit a century of subjective reflection in one hour. It does not implant a specific conclusion.
 
 After using the system, every resident endorses Policy A.
@@ -230,6 +234,8 @@ Each answer introduces a value or procedure not supplied by information and cons
 Add it to the Candidate System. Then add its debt.
 
 ## Construction exercise: Set the threshold
+
+**Purpose.** Fix the strongest kind of objectivity your project requires and the weaker achievements you would still count as success; the exercise defines the target rather than proving it exists.
 
 Return to the Promises page from Chapter 1. Under the heading **Objectivity**, write definitions for these terms:
 

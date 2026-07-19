@@ -18,6 +18,8 @@ It is also too fast.
 
 Criticism performs several jobs. Some require an approval-independent moral fact. Many do not. To know what Asha loses, we must stop forcing every objection through the same sentence.
 
+**Where this chapter is headed.** We will inventory forms of criticism available even when objective moral authority has not been established. The point is not to weaken reform, but to show whether evidence, effects, commitments, inconsistency, power, and declared values can make criticism more precise.
+
 ## Eight handles on a locked door
 
 Suppose Asha says each of the following:
@@ -181,6 +183,8 @@ Only the last seeks authority independent of every stance, relation, institution
 The world is not divided into cosmic proof and helpless opinion. It contains many joints at which criticism can apply pressure.
 
 ## The criticism ledger
+
+**Purpose.** Reconstruct one criticism from facts, affected beings, commitments, values, power, and proposed change; the ledger aims for load-bearing precision rather than metaphysical inflation.
 
 Choose one practice you oppose. Do not begin with the word *wrong*. Complete the ledger.
 

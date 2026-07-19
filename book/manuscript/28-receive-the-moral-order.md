@@ -18,6 +18,8 @@ This integrated account can distribute tasks. Divine goodness grounds value. Cre
 
 The strength of integration is also the place to inspect circular support.
 
+**Where this chapter is headed.** We will examine moral order as something received through command, nature, tradition, revelation, and inherited practice. The test is whether reception supplies stable authority and access without making interpretation, reform, or humane content invisible.
+
 ## Command within relationship
 
 A divine command is unlike an order from a stranger. If God is creator, sustainer, perfectly knowledgeable, and perfectly good, obedience can arise within trust, gratitude, dependence, and rightful authority.
@@ -151,6 +153,8 @@ Now remove anonymous aid and make her indifferent to every other person. The the
 The case tests whether the theory identifies objective human goods or moralizes flourishing by defining the good person as the one who values the good.
 
 ## Draft the received-order constitution
+
+**Purpose.** Build the strongest received-order candidate and expose how command, nature, tradition, interpretation, dissent, outsiders, and reform contribute to its authority and limits.
 
 Build the strongest integrated version:
 

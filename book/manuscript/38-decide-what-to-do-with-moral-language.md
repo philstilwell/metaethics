@@ -18,6 +18,8 @@ Should we stop using moral terms? Speak as if they report facts while privately 
 
 No theorem in Part VI selects the answer. Language policy is practical policy. It depends on what speakers care about, what audiences infer, what misunderstandings cost, and what alternatives can do.
 
+**Where this chapter is headed.** We will compare six policies for moral language after the construction audit, from abolition to context-sensitive translation. The choice is practical and semantic: it should preserve useful communication while revealing hidden claims where the stakes demand precision.
+
 ## Six policies for the old vocabulary
 
 Imagine six doors in the translation office.
@@ -202,6 +204,8 @@ The first expresses a protected commitment. The second makes the policy contesta
 
 ## Choose a context-sensitive policy
 
+**Purpose.** Decide how moral language should function across personal, relational, institutional, and emergency contexts; variation requires a disclosure trigger rather than whichever meaning wins locally.
+
 Complete this table.
 
 | Context | Language policy | What the moral term does | When translation is required | Main risk |
@@ -225,6 +229,8 @@ Then adopt three disclosure triggers. Translate a moral claim whenever:
 Add your own trigger if needed.
 
 ## The language charter
+
+**Purpose.** State your stable policy for retaining, revising, translating, fictionalizing, or abandoning moral terms, including the circumstances in which compressed language must be unpacked.
 
 Write a short policy:
 

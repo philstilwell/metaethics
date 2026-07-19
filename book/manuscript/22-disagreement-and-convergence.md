@@ -18,6 +18,8 @@ Convergence is equally ambiguous. Populations can agree because they encountered
 
 Disagreement is not refutation. Agreement is not revelation. Both are evidence whose force depends on the process producing them.
 
+**Where this chapter is headed.** We will ask what disagreement and convergence reveal about access to moral truth. Before drawing a skeptical or realist conclusion, we must locate the layer of conflict and explain what the proposed epistemology predicts should happen there.
+
 ## First locate the disagreement
 
 Before interpreting persistence, reopen the eight-layer map from Chapter 5.
@@ -231,6 +233,8 @@ This prevents a theory from treating every result as confirmation. Quick converg
 Objective domains can contain reasonable disagreement because evidence is incomplete, concepts are vague, computation is difficult, or permissible answers are plural. The stronger the claim of clear universal access and determinate content, however, the more persistent peer disagreement needs explanation.
 
 ## Build a disagreement dossier
+
+**Purpose.** Locate one persistent dispute, identify the mechanisms that sustain or reduce it, and state what your access theory predicts; a dossier that treats every outcome as confirmation has failed its test.
 
 Choose a persistent dispute. Create this record:
 

@@ -28,6 +28,8 @@ Desire-based accounts also explain why the same fact can support different actio
 
 The crude version—whatever you presently want gives you a reason—is too easy to defeat. Sophisticated accounts improve the desires before allowing them to generate reasons. We will test five versions, each more selective than the last.
 
+**Where this chapter is headed.** We will test whether reasons can be grounded in present aims, instrumentally coherent aims, or the aims a better-informed agent would have. Each repair improves some desires, but each must disclose who chooses the improvements and whether the result still belongs to the agent.
+
 ## Version one: the present desire
 
 The simplest formula is:
@@ -165,7 +167,7 @@ The case does not show that implanted desires are never reasons. It shows that f
 
 ## The lucid tyrant
 
-Now meet Kest at full strength.
+Idealization earns universal reach only if it can address an agent who is already informed, coherent, imaginative, and settled. Kest is that test.
 
 Kest rules a fortified district and values domination, aesthetic grandeur, personal continuity, and the loyalty of a small inner circle. He is factually informed. His aims are internally coherent. He has experienced immersive simulations of his victims’ fear, grief, humiliation, and lost futures. He understands them accurately and does not enjoy their pain for its own sake; he simply gives it no weight except when it threatens his projects.
 

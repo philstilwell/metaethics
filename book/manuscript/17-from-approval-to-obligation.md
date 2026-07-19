@@ -20,7 +20,11 @@ Social life surrounds us with rules that are real in every ordinary sense. Money
 
 The mistake is not taking social facts seriously. It is allowing one kind of social authority to impersonate every other kind.
 
+**Where this chapter is headed.** We will separate personal approval, commitment, social pressure, law, legitimacy, conditional reasons, and objective obligation. These sources can converge on one rule without becoming the same relation or acquiring one another's authority.
+
 ## Seven columns, not seven heights
+
+**Purpose.** Give each source of support its own column before considering alignment; the exercise classifies relations and does not rank their practical importance.
 
 Create seven columns in the Candidate System notebook. They do not form a scale from trivial to profound. A legal sanction may be more consequential than a private commitment. A conditional reason may be stronger for an agent than social pressure. The columns identify different sources and implications.
 
@@ -213,6 +217,8 @@ The council may say shared identity decays when exceptions are allowed. That is 
 The outsider case prevents an easy equation between harmlessness and social acceptance. Communities need practices. Individuals need room not to perform every meaning others cherish. Policy must compare those stakes; moral vocabulary cannot make one disappear by calling it sacred or antisocial.
 
 ## Classification without inflation
+
+**Purpose.** Apply the seven-column distinction across four cases so code, motivation, prudence, law, role, added foundation, and approval-independent duty remain separately visible.
 
 For each of the four cases, complete this table:
 

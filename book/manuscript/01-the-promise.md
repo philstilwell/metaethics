@@ -20,6 +20,8 @@ These are different promises. They are often bundled into one word.
 
 Before we build anything, we need to know which promises the finished system must keep.
 
+**Where this chapter is headed.** We will unpack the promise hidden inside *objective morality* and identify what a successful system would have to explain. Until that promise is explicit, agreement, law, emotional force, and objective authority can look interchangeable.
+
 ## The sentence that sounds complete
 
 Consider this exchange:
@@ -188,7 +190,7 @@ A successful page contains several concrete claims and one exposed bridge. It do
 
 ## The reformer's time
 
-Now change the case.
+The unheard song tested what approval contributes when one person rejects a rule. The next case tests a different hope: that an objective standard can vindicate a reformer before the surrounding society changes its mind.
 
 Port Meridian inherits a technical academy that once prohibited girls from studying engineering. Asha secretly taught them. At the time, the exclusion was lawful, popular, and religiously defended. She lost her employment and was denounced by nearly everyone in her district. Twenty years later, the academy admits its error and names its largest laboratory after her.
 
@@ -227,6 +229,8 @@ Correct. That is the central problem of authority, and we will not evade it.
 For now, the point is narrower. Emotional intensity, political resolve, and objective truth are different. A claim does not become objective because the stakes are high. Nor do the stakes become low if objectivity is not established.
 
 ## Construction exercise: The promise you require
+
+**Purpose.** Decide which aspirations make objective morality worth seeking for you; this sets the standard of success but does not show that the aspirations can be jointly satisfied.
 
 Return to Candidate System 0.1. Create a page titled **Promises**.
 

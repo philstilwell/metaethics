@@ -18,6 +18,8 @@ This is **basic desert**: the claim that a person merits benefit or suffering be
 
 Basic desert is not the whole of responsibility. Removing it leaves an unexpectedly busy workshop.
 
+**Where this chapter is headed.** We will separate the practical and relational jobs of responsibility from the claim that suffering is intrinsically deserved. Protection, repair, communication, trust, and rehabilitation may justify serious responses even if basic desert remains unsupported.
+
 ## The strongest case for payback
 
 Before removing anything, let retribution speak in its best voice.
@@ -213,6 +215,8 @@ Useful responses may include:
 Individual intention remains relevant. It is not the only lever. Fixating on who deserves suffering can leave the machinery that made the conduct likely humming beneath the courtroom.
 
 ## The response warrant
+
+**Purpose.** Match every adverse response to evidence, control, risk, purpose, necessity, and review, leaving any residual claim of intrinsically deserved suffering separately visible.
 
 For each adverse response, complete this table.
 

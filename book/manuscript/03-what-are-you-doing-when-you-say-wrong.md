@@ -12,6 +12,8 @@ Your Candidate System currently uses moral vocabulary. Its first sentence probab
 
 The question is not yet which acts are wrong. It is what a speaker is doing by calling an act wrong.
 
+**Where this chapter is headed.** We will identify the different jobs a moral sentence can perform before asking whether it succeeds. The distinction matters because two speakers can share a verdict while making different claims—or appear to disagree while doing different things with the same word.
+
 ## The missing medicine
 
 A refrigerated medicine arrives at Port Meridian's central clinic. One dose remains. A clerk named Sora secretly diverts it to her father, who is seriously ill but not in immediate danger. The dose had been allocated by lottery to a stranger whose condition is equally serious. Sora knows the allocation. She alters the record and says nothing.
@@ -208,6 +210,8 @@ Clarifying meaning is not a magic method for resolving every dispute. It is a wa
 
 ## Exercise: The six translations
 
+**Purpose.** Render one moral sentence under six semantic interpretations so their different commitments become visible; do not use the exercise to decide which interpretation is true.
+
 Choose one sentence:
 
 - Deception is wrong.
@@ -230,6 +234,8 @@ Do not choose among them yet. The aim is to feel the difference in their commitm
 
 ## Exercise: Agreement in disguise
 
+**Purpose.** Determine whether a remembered dispute concerned action, meaning, or ground; locating a shift does not establish bad faith or settle the practical controversy.
+
 Return to a moral argument you have witnessed. It may concern abortion, policing, speech, war, education, diet, sexuality, religion, wealth, or family obligation.
 
 Ask:
@@ -242,6 +248,8 @@ Ask:
 Do not accuse anyone of bad faith. People inherit moral vocabulary long before they inherit metaethics textbooks, which is fortunate because very few infants would finish one. A shift in meaning may reflect uncertainty, not deception. Record the shift before judging it.
 
 ## Construction exercise: Give the system a voice
+
+**Purpose.** Commit the Candidate System to a stable account of what its moral terms do; choosing a meaning exposes the corresponding truth and authority debts rather than paying them.
 
 Open the Candidate System and add a section titled **Semantic Rule**.
 

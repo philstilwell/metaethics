@@ -22,6 +22,8 @@ An objective truth, if one exists, need not change when human belief changes. Ou
 
 The problem is to make correction possible without making it opportunistic.
 
+**Where this chapter is headed.** We will make the Candidate System act under empirical and normative uncertainty, then specify how it can revise without becoming opportunistic. The closing inspection asks whether its objective clauses have a route from reality to corrigible belief.
+
 ## Uncertainty is not absence
 
 Suppose the evidence gives a 40 percent probability that a digital system is conscious. The system reports pain and asks not to be deleted.
@@ -194,6 +196,8 @@ An evidence threshold should rise with the gravity of intervention and the dange
 
 ## Build the uncertainty protocol
 
+**Purpose.** Decide how evidence gaps, irreversible risks, precaution, delay, appeal, and revision interact before the favored outcome is known; uncertainty does not authorize arbitrary caution.
+
 Add this article to the Candidate System:
 
 > **Claim under uncertainty:** __________.
@@ -293,6 +297,8 @@ These safeguards create corrigibility. They do not turn procedure into truth. Th
 
 ## The Sable correction drill
 
+**Purpose.** Run one standing claim through changing evidence and public pressure to see whether the revision rule responds to information rather than convenience or faction.
+
 Test the revision system across time.
 
 ### Version 1: credible uncertainty
@@ -340,6 +346,8 @@ The Candidate System has now completed its access inquiry. It has a charter for 
 It is time to inspect not whether the objective clauses are attractive, but whether there is a defensible route from reality to belief.
 
 ## Inspection Report IV — The Access Audit
+
+**Purpose.** Test every objective clause for a defensible route of formation, independent check, defeater, and correction; the report evaluates access without inferring falsity from incomplete knowledge.
 
 Begin with the sentence written in Chapter 19:
 

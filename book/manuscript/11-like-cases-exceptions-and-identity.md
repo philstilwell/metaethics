@@ -20,6 +20,8 @@ The problem is to distinguish a **relevant difference** from a convenient differ
 
 Moral systems regularly announce that like cases should be treated alike. The phrase is correct and incomplete. The entire argument is often hiding inside *like*.
 
+**Where this chapter is headed.** We will ask which similarities are relevant, when an exception is principled, and how identity can distort either judgment. This completes the first working constitution by making its consistency rules inspectable rather than intuitive.
+
 ## Consistency is not uniformity
 
 **Uniformity** applies the same treatment everywhere. **Consistency** applies the same rule to cases that share the features made relevant by that rule.
@@ -131,6 +133,8 @@ Exceptions should be reviewable. Who invoked one? On what evidence? Was the thre
 
 ## The mirror tests
 
+**Purpose.** Vary identity, power, visibility, relationship, and institutional role while holding admitted features fixed; a changed verdict requires a relevance rule, not merely a strong reaction.
+
 Take one controversial rule from your Candidate System and apply six tests.
 
 ### 1. The identity swap
@@ -195,6 +199,8 @@ Iona’s loyalty may explain her action and motivate it. Whether it favors the a
 
 ## Write the relevance rule
 
+**Purpose.** State which differences justify different treatment and connect each one to an existing part of the Candidate System; the rule should expose rather than conceal legitimate asymmetry.
+
 Complete this page in the Candidate System notebook:
 
 > **Identity-neutral principle:** Cases receive the same status when they match in __________.
@@ -224,6 +230,8 @@ The construction floor is now quiet. The circle has inhabitants. The cabinet has
 It is time to assemble the first constitution.
 
 ## Inspection Report II — The First Constitution
+
+**Purpose.** Compress the system's domain, statuses, values, rules, comparisons, and exceptions into an inspectable constitution before Part III tests whether any of it has authority.
 
 Do not aim for eloquence. A beautiful constitution can conceal debt in calligraphy. Aim for two pages of compressed structure, plus appendices containing the tables you built.
 
