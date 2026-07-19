@@ -14,6 +14,7 @@
 | Artifact | Format | Dimensions or behavior | Length | Status |
 |---|---|---|---:|---|
 | Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 499 pages | Approved |
+| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 499 pages | Approved |
 | Companion workbook | PDF 1.7 | US letter, two-sided, portrait with intentional rotated wide tables | 68 pages | Approved |
 | Digital edition | EPUB 3 | Reflowable text; wide tables scroll horizontally; chapter navigation | 51 content documents plus title page | Approved |
 
@@ -29,7 +30,7 @@
 
 ## Layout and visual inspection
 
-The main PDF and workbook were compiled with XeLaTeX from Pandoc-generated TeX. The final inspection covered:
+The print-interior PDF, illustrated reader edition, and workbook were compiled or assembled from XeLaTeX and Pandoc production files. The final inspection covered:
 
 - title, copyright, contents, and reader-orientation pages;
 - Roman-to-Arabic pagination and recto starts;
@@ -38,13 +39,14 @@ The main PDF and workbook were compiled with XeLaTeX from Pandoc-generated TeX. 
 - ordinary, list-heavy, quotation-heavy, and exercise-heavy chapter pages;
 - the beginning and synthesis pages of Chapters 37 and 41;
 - portrait and rotated tables in the main text, workbook, and Civic Stakes Brief;
+- geometric edge checks on all forty-eight table-bearing main-book pages and all twenty-three table-bearing workbook pages;
 - the opening of every appendix family;
 - notes and the complete three-page bibliography;
 - workbook title, contents, first and final worksheets, pressure cases, repair guide, and final public-summary page.
 
-The contents is restricted to part, chapter, appendix, notes, and bibliography entries. Wide tables are assigned paragraph widths rather than allowed to run off the page. Tables with seven or more columns rotate without changing trim dimensions. Workbook stages begin on fresh pages, and the term *worksheet* avoids making a false one-stage/one-physical-page promise.
+The contents is restricted to part, chapter, appendix, notes, and bibliography entries. Table fills, rules, and cell contents remain inside the intended text block in both portrait and landscape orientations; no measured table edge crosses a page margin. Tables with seven or more columns rotate without changing trim dimensions. Workbook stages begin on fresh pages, and the term *worksheet* avoids making a false one-stage/one-physical-page promise.
 
-All PDF fonts are embedded and Unicode-mapped. No missing glyph, replacement character, unresolved reference, or visible clipping was found. The final TeX logs contain no errors or font warnings. Two dense main-text table headers produce sub-two-point overfull measurements from equal-width calculations; rendered inspection confirms that both remain inside their cell boundaries. The workbook has no overfull item above one point.
+All PDF fonts are embedded and Unicode-mapped. No missing glyph, replacement character, unresolved reference, visible clipping, shaded-row spill, or partial terminal stripe was found. The final TeX logs contain no errors, font warnings, or alignment overfull boxes.
 
 ## Content and build regression
 

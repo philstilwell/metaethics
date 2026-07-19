@@ -111,11 +111,13 @@
   \RaggedRight\arraybackslash
   \small
   \renewcommand{\arraystretch}{1.14}%
-  \setlength{\tabcolsep}{4.5pt}%
+  % Pandoc's edge-suppressed longtables use @{} column boundaries. Keep
+  % TeX's intercolumn glue at zero so colortbl cannot paint past those
+  % boundaries; layout.lua restores the visual gutter inside each cell.
+  \setlength{\tabcolsep}{0pt}%
   \arrayrulecolor{PaletteGraphite}%
-  \rowcolors{2}{PaletteOchre!11}{white}%
 }
-\AtEndEnvironment{longtable}{\rowcolors{2}{white}{white}\arrayrulecolor{black}}
+\AtEndEnvironment{longtable}{\arrayrulecolor{black}}
 
 \newcommand{\chapterornament}{%
   \noindent
