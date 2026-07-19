@@ -5,7 +5,7 @@
 - **Title:** *The Objective Morality Project*
 - **Subtitle:** *An Expedition to Build a Moral System Everyone Has Reason to Obey*
 - **Author:** Phil Stilwell
-- **Publication text:** approximately 141,400 words
+- **Publication text:** approximately 141,800 words
 - **Main structure:** Prologue, seven parts, forty-one chapters, six appendices, notes, and bibliography
 - **Companion structure:** nineteen construction worksheets, forty-five pressure cases, eighteen repair entries, and the fourteen-section Civic Stakes Brief
 
@@ -13,8 +13,8 @@
 
 | Artifact | Format | Dimensions or behavior | Length | Status |
 |---|---|---|---:|---|
-| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 499 pages | Approved |
-| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 499 pages | Approved |
+| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 501 pages | Approved |
+| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 501 pages | Approved |
 | Companion workbook | PDF 1.7 | US letter, two-sided, portrait with intentional rotated wide tables | 68 pages | Approved |
 | Digital edition | EPUB 3 | Reflowable text; wide tables scroll horizontally; chapter navigation | 51 content documents plus title page | Approved |
 
@@ -36,7 +36,7 @@ The print-interior PDF, illustrated reader edition, and workbook were compiled o
 - Roman-to-Arabic pagination and recto starts;
 - blank versos, which carry no running head or page number;
 - all seven part-divider designs;
-- ordinary, list-heavy, quotation-heavy, and exercise-heavy chapter pages;
+- ordinary, list-heavy, quotation-heavy, and exercise-heavy chapter pages, including the two-page Chapter 1 claims audit;
 - the beginning and synthesis pages of Chapters 37 and 41;
 - portrait and rotated tables in the main text, workbook, and Civic Stakes Brief;
 - geometric edge checks on all forty-eight table-bearing main-book pages and all twenty-three table-bearing workbook pages;

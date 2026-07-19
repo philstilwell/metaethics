@@ -9,8 +9,8 @@
 - **Copyright year:** 2026
 - **Edition:** First edition
 - **Prepared formats:** 7 × 10 inch trade PDF, letter-size companion workbook PDF, and reflowable EPUB 3
-- **Approximate length:** 141,400 words including front and back matter
-- **Print proof length:** 499 pages
+- **Approximate length:** 141,800 words including front and back matter
+- **Print proof length:** 501 pages
 - **Companion workbook length:** 68 pages
 
 ## One-sentence description

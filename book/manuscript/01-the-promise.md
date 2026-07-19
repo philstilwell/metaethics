@@ -158,17 +158,33 @@ That is not a failure. It is an entry in the debt ledger.
 
 ### Exercise: Separate the claims
 
-Complete each sentence without using the word *wrong*:
+**Purpose.** The word *wrong* can compress several different claims into one verdict. This exercise asks you to pull those claims apart. You are not yet deciding whether Lio should have sung, whether the prohibition is defensible, or what the final moral verdict should be. You are auditing what each kind of statement establishes.
 
-1. Lio violated __________.
-2. If discovered, Lio would probably experience __________.
-3. The community has the institutional power to __________.
-4. Lio may personally care about __________.
-5. The rule affects the following people or interests: __________.
-6. The community's approval gives the rule __________.
-7. To show that the rule has authority over Lio in perfect secrecy, the system would need __________.
+**Guardrails**
 
-Do not make all seven answers say the same thing. The purpose is to keep classification, prediction, power, commitment, effect, social support, and objective authority visible as different possibilities.
+- Use only the facts stipulated in **The unheard song**. Do not add a threat in the lyrics, an effect on a listener, a promise by the city, or a motive for Lio.
+- Give one short, concrete answer to each prompt. If the case does not tell you, write **not specified**. An acknowledged gap is better than an invented fact.
+- Do not replace *wrong* with a disguised equivalent such as *immoral*, *unethical*, *bad*, *unjustified*, *objectively forbidden*, or *something he ought not do*. You may write *forbidden by Port Meridian's code* because that names a social classification rather than assuming an objective verdict.
+- Keep the levels separate. What officials **can punish** is not yet what they **have authority to punish**. What Lio **fears or values** is not yet a reason that applies to every person. What most residents **approve** is not yet what an informed rejecter is obligated to accept.
+- In item 7, state a bridge principle or an additional ground. Do not write merely that the rule “has authority” or “is objectively correct.” Those phrases restate the claim instead of supporting it.
+
+**Complete the audit**
+
+1. **Classification—what rule exists?** Under Port Meridian's current code, Lio violated __________.
+2. **Prediction—what might happen psychologically?** If the act were discovered, Lio might experience __________. If the case gives you no basis for a prediction, write **not specified**.
+3. **Institutional power—what can officials do?** The community's institutions have the power to __________.
+4. **Personal commitment—what might matter to Lio?** Lio may care about __________, but the case establishes __________ about whether he actually does.
+5. **Effects and interests—who or what is implicated?** The prohibition affects __________. The secret performance itself is stipulated to change __________.
+6. **Social support—what does approval accomplish?** The majority's approval gives the prohibition __________.
+7. **Missing bridge—what has not yet been established?** The prohibition would bind Lio even in perfect secrecy only if __________. State the ground or principle that would make the rule authoritative for an informed person who rejects the community's standard.
+
+**Check your work**
+
+- Could a reader accept your answers to items 1–6 and still ask whether the prohibition binds Lio? If not, you may have smuggled the conclusion into an earlier answer.
+- Does item 7 state a premise that could be examined and challenged? If it says only that the rule binds Lio because it is binding, the circle remains.
+- Did you turn *may* into *does* anywhere the case is silent? Replace the invented fact with **not specified**.
+
+A successful page contains several concrete claims and one exposed bridge. It does not require a verdict on the song. Its purpose is to prevent classification, prediction, power, commitment, effect, social support, and objective authority from borrowing one another's credentials.
 
 ## The reformer's time
 

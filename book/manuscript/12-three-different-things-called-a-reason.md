@@ -196,7 +196,7 @@ Condemnation creates a prudential consideration for anyone who wishes to avoid i
 
 Take five clauses from your Candidate System. Include one value rule, one constraint, one role duty, one comparison rule, and one exception. For each, complete this table:
 
-| Consideration | Causal role | Motivating role | Evidence-relative support | Fact-relative support | Claimed aim-independent support |
+| Reason claim | Causal role | Motivating role | Evidence-relative support | Fact-relative support | Claimed aim-independent support |
 |---|---|---|---|---|---|
 |  |  |  |  |  |  |
 
