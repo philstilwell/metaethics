@@ -2,12 +2,15 @@
 
 ## Baseline
 
-- Site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
-- Audit date: July 18, 2026
+- Conceptual site revision audited: `c8db8b8` — *Expand suite with guided non-realist labs*
+- Current repository verification: `e03e844` — *Fix table header spacing throughout book*
+- Audit date: July 19, 2026
 - Book alignment baseline: `70ff53a` — *Align book with expanded metaethics suite*
 - Manuscript coverage status: Parts I–VII and Appendices A–F drafted; complete book draft
 
 This document records whether conceptual changes to the site are represented in the book. It is an internal maintenance document and may name labs and implementation files. The published manuscript may not.
+
+The July 19 verification compared every non-book path from `c8db8b8` through `e03e844`. The only change outside the book and its generated outputs was repository housekeeping in `.gitignore`; no question family, case, inference rule, or conceptual distinction changed on the site. All twenty automated site test cases passed. The conceptual mapping below therefore remains current, while the book's publication files and audit records have been refreshed.
 
 ## New material in the audited revision
 

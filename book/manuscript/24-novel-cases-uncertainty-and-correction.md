@@ -355,10 +355,6 @@ Begin with the sentence written in Chapter 19:
 
 Do not improve it silently. If Part IV changed your account, record the revision and its reason. State whether evidential force is aim-independent, constitutive of belief, desire-dependent, instrumental, practice-based, procedural, plural, or nonnormative shorthand.
 
-Now take every foundational clause still placed in Columns 6 and 7 of the authority matrix from Inspection Report III.
-
-For each, complete this access table:
-
 | Foundational claim | What would make it true? | Proposed access route | Evidence for | Evidence against | Independence from conclusion | Public check | Error signal | Revision rule | Insulated or open? |
 |---|---|---|---|---|---|---|---|---|---|
 | Suffering supplies an aim-independent reason |  |  |  |  |  |  |  |  |  |
@@ -368,6 +364,8 @@ For each, complete this access table:
 | Human flourishing is normatively authoritative |  |  |  |  |  |  |  |  |  |
 | Rational agency entails equal regard |  |  |  |  |  |  |  |  |  |
 | A moral axiom is self-evidently true |  |  |  |  |  |  |  |  |  |
+
+: **Access Audit.** Complete one row for every foundational clause still placed in Columns 6 and 7 of the authority matrix from Inspection Report III.
 
 Add any other objective clause in your constitution.
 

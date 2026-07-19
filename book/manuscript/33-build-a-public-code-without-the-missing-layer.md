@@ -298,7 +298,7 @@ For each clause, label its basis:
 - **E** — backed by enforcement;
 - **O** — claimed as objectively required.
 
-An individual clause may receive several labels. Every **O** clause returns to the debt ledger. Every **E** clause requires a safeguard and stopping rule. Every **I** clause must identify its goal. Every **A** clause must identify the parties and valid conditions of agreement.
+An individual clause may receive several labels. Every **O** clause returns to the **Debt Ledger**. Every **E** clause requires a safeguard and stopping rule. Every **I** clause must identify its goal. Every **A** clause must identify the parties and valid conditions of agreement.
 
 Then test the charter against:
 

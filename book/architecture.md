@@ -19,10 +19,10 @@ A reader who expects objective morality to be constructible is led through a sus
 
 ## Scope and current length
 
-- Complete main text, including embedded exercises and inspections: approximately 120,350 words
-- Complete appendices and reusable worksheets: approximately 17,770 words
+- Complete main text, including embedded exercises and inspections: approximately 124,350 words
+- Complete appendices and reusable worksheets: approximately 18,700 words
 - Notes and bibliography: approximately 2,900 words
-- Expected finished length with front matter: approximately 142,000 words, or roughly 500–650 trade-paperback pages depending on trim, tables, and exercise layout
+- Finished publication text with front matter: approximately 147,000 words; the current 7 × 10 inch print proof is 517 pages
 
 The book should feel long because the reader performs the construction, not because the prose repeats the thesis.
 
@@ -680,7 +680,7 @@ Begin instead with questions such as:
 
 **Final exercise:** The reader takes one public controversy and produces a Civic Stakes Brief containing affected parties, emotional stakes, operational values, disputed facts, power map, policy options, safeguards, metrics, review, and repair. No sentence may rely on “moral,” “immoral,” “right,” “wrong,” “just,” “unjust,” “good,” “evil,” “duty,” or “desert” unless the term is immediately unpacked.
 
-**Final line direction:** We did not find a moral law above human life. We found the beings who fear, need, love, resist, suffer, cooperate, and hope—and that was where every apparently moral reason had begun.
+**Final line direction:** We did not earn a moral law above practical life. We found the beings who fear, need, love, resist, suffer, cooperate, and hope—and those were the beginnings we could identify, examine, and bring into public view.
 
 ---
 

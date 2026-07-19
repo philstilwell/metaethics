@@ -156,7 +156,7 @@ Perhaps only some forms of community approval create objective authority. Then w
 
 Each option may improve the rule. Each introduces a ground other than actual approval. Fairness, harm, equality, or rational endorsement now carries the argument.
 
-That is not a failure. It is an entry in the debt ledger.
+That is not a failure. It is an entry in the **Debt Ledger**.
 
 ### Exercise: Separate the claims
 
@@ -176,7 +176,7 @@ That is not a failure. It is an entry in the debt ledger.
 2. **Prediction—what might happen psychologically?** If the act were discovered, Lio might experience __________. If the case gives you no basis for a prediction, write **not specified**.
 3. **Institutional power—what can officials do?** The community's institutions have the power to __________.
 4. **Personal commitment—what might matter to Lio?** Lio may care about __________, but the case establishes __________ about whether he actually does.
-5. **Effects and interests—who or what is implicated?** The prohibition affects __________. The secret performance itself is stipulated to change __________.
+5. **Effects and interests—what is implicated?** The prohibition affects __________. The secret performance itself is stipulated to change __________.
 6. **Social support—what does approval accomplish?** The majority's approval gives the prohibition __________.
 7. **Missing bridge—what has not yet been established?** The prohibition would bind Lio even in perfect secrecy only if __________. State the ground or principle that would make the rule authoritative for an informed person who rejects the community's standard.
 
@@ -264,7 +264,7 @@ But several distinctions are now on the table:
 - seriousness does not establish objectivity;
 - the strength of a conclusion cannot exceed the support supplied by its grounds.
 
-Add the first line to the debt ledger:
+Add the first line to the **Debt Ledger**:
 
 > **Debt 1 — Added status:** What does an objective moral verdict add to the concrete facts, values, commitments, rules, and responses already identified?
 

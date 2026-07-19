@@ -14,7 +14,7 @@ The chief engineer removes the seven labels.
 
 She turns the chairs toward the people.
 
-**Where this chapter is headed.** We will replace negotiation among abstract moral systems with a public method that begins from affected lives and named stakes. The final test is practical: can disagreement become more honest, constrained, revisable, and answerable without pretending that policy has received a cosmic endorsement?
+**Where this chapter is headed.** We will replace negotiation among abstract moral systems with a public method that begins from affected lives and named stakes. The final test is practical: can disagreement become more honest, constrained, revisable, and answerable without pretending that policy has received stance-independent authority?
 
 ## The final admonition
 
@@ -210,7 +210,7 @@ The method does not promise persuasion of every rejecter. It makes the point of 
 
 > Shared concern ended here. Bargaining, procedure, law, or constraint begins here. These are the stakes and safeguards authorizing the action for those who support it. The target may remain opposed.
 
-This sentence lacks cosmic endorsement. It gains political honesty.
+This sentence lacks stance-independent certification. It gains political honesty.
 
 ## The Civic Stakes Brief
 
@@ -360,4 +360,4 @@ The blank at the center of the constitution remains blank.
 
 Around it, the pages are full.
 
-We did not find a moral law above human life. We found the beings who fear, need, love, resist, suffer, cooperate, and hope—and that was where every apparently moral reason had begun.
+We did not earn a moral law above practical life. We found the beings who fear, need, love, resist, suffer, cooperate, and hope—and those were the beginnings we could identify, examine, and bring into public view.

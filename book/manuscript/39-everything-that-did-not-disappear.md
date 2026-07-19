@@ -249,7 +249,7 @@ Moral non-realism is not global factual skepticism. The relation between evidenc
 
 ## The survivor's declaration
 
-**Purpose.** Record the experiences, beliefs, attachments, commitments, institutions, criticisms, and hopes you retain so the next chapter begins from an explicit practical inventory.
+**Purpose.** Inventory what you still feel, believe, trust, support, fear, and hope so the next chapter begins from explicit practical commitments.
 
 Complete these sentences.
 
@@ -273,14 +273,8 @@ Do not fill the page with the word *nothing* unless nothing is genuinely what yo
 
 The chief engineer finishes the inventory.
 
-“Then the city still contains stakes,” she says.
-
-“More than we can protect at once.”
+“Then the city still contains stakes,” the chief engineer says. “More than we can protect at once.”
 
 “And nothing ranks them for us?”
 
-“Nothing we have established.”
-
-She closes the constitution and looks at the people waiting outside.
-
-“Then we begin with what is moving them.”
+“Nothing we have established.” She closes the constitution and looks at the people waiting outside. “Then we begin with what is moving them.”

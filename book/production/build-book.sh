@@ -151,6 +151,7 @@ python3 "$LATEX_HELPER" \
 cp -f "$BUILD_DIR/workbook-out/workbook.pdf" "$PDF_DIR/the-objective-morality-project-companion-workbook.pdf"
 
 epub_inputs=(
+  "${main_inputs[0]}"
   "${main_inputs[2]}"
   "${main_inputs[@]:4}"
 )
@@ -166,6 +167,9 @@ pandoc "${epub_inputs[@]}" \
   --toc-depth=1 \
   --split-level=1 \
   --output="$EBOOK_DIR/the-objective-morality-project.epub"
+
+python3 "$PRODUCTION_DIR/normalize-epub.py" \
+  "$EBOOK_DIR/the-objective-morality-project.epub"
 
 unzip -t "$EBOOK_DIR/the-objective-morality-project.epub"
 

@@ -5,7 +5,7 @@
 - **Title:** *The Objective Morality Project*
 - **Subtitle:** *An Expedition to Build a Moral System Everyone Has Reason to Obey*
 - **Author:** Phil Stilwell
-- **Publication text:** approximately 146,300 words
+- **Publication text:** approximately 147,000 words
 - **Main structure:** Prologue, seven parts, forty-one chapters, six appendices, notes, and bibliography
 - **Companion structure:** nineteen construction worksheets, forty-five pressure cases, eighteen repair entries, and the fourteen-section Civic Stakes Brief
 
@@ -13,10 +13,10 @@
 
 | Artifact | Format | Dimensions or behavior | Length | Status |
 |---|---|---|---:|---|
-| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 519 pages | Approved |
-| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 519 pages | Approved |
+| Main print proof | PDF 1.7 | 7 × 10 inches, two-sided, portrait with intentional rotated wide tables | 517 pages | Approved |
+| Illustrated reader edition | PDF 1.7 | 7 × 10 inches; illustrated front cover replaces the interior title page | 517 pages | Approved |
 | Companion workbook | PDF 1.7 | US letter, two-sided, portrait with intentional rotated wide tables | 68 pages | Approved |
-| Digital edition | EPUB 3 | Reflowable text; wide tables scroll horizontally; chapter navigation | 51 content documents plus title page | Approved |
+| Digital edition | EPUB 3 | Reflowable text; wide tables scroll horizontally; chapter navigation | 52 content documents plus title page | Approved |
 
 ## Editorial completion
 
@@ -40,12 +40,14 @@ The print-interior PDF, illustrated reader edition, and workbook were compiled o
 - ordinary, list-heavy, quotation-heavy, and exercise-heavy chapter pages, including the two-page Chapter 1 claims audit and route-marker openings across all seven parts;
 - the beginning and synthesis pages of Chapters 37 and 41;
 - portrait and rotated tables in the main text, workbook, and Civic Stakes Brief;
-- geometric edge checks on all forty-five table-bearing main-book pages and all twenty-three table-bearing workbook pages;
+- geometric edge checks on every table-bearing main-book and workbook page;
 - the opening of every appendix family;
 - notes and the complete three-page bibliography;
 - workbook title, contents, first and final worksheets, pressure cases, repair guide, purpose-annotated warrants, and final public-summary page.
 
 The contents is restricted to part, chapter, appendix, notes, and bibliography entries. Table fills, rules, and cell contents remain inside the intended text block in both portrait and landscape orientations; no measured table edge crosses a page margin. Tables with seven or more columns rotate without changing trim dimensions. Workbook stages begin on fresh pages, and the term *worksheet* avoids making a false one-stage/one-physical-page promise.
+
+The final page-by-page contact-sheet audit covered all 517 pages of the main and illustrated editions and all 68 workbook pages. Potentially dense or structurally unusual pages were then checked at full resolution. The six blank pages in the main edition and the single blank workbook page are intentional versos created by recto-start rules; none contains a running head, folio, or stray mark.
 
 All PDF fonts are embedded and Unicode-mapped. No missing glyph, replacement character, unresolved reference, visible clipping, shaded-row spill, or partial terminal stripe was found. The final TeX logs contain no errors, font warnings, or alignment overfull boxes.
 
@@ -57,8 +59,8 @@ All PDF fonts are embedded and Unicode-mapped. No missing glyph, replacement cha
 - Published-source boundary scan: no development-site, software, scoring, or diagnostic references.
 - Copy scan: no unresolved `TODO`, citation placeholder, repeated adjacent word, trailing whitespace, or unintentional doubled punctuation found.
 - PDF text extraction: no leaked TeX commands or replacement characters.
-- EPUB: archive integrity passed; metadata, title page, navigation, fifty-one content documents, stylesheet, and all internal files tested successfully.
-- Repository regressions: all nineteen audit scripts passed after the book build.
+- EPUB: archive integrity passed; full copyright notice, metadata, title page, navigation, fifty-two content documents, accessible cover labeling, stylesheet, and all internal files tested successfully.
+- Repository regressions: all twenty automated site test cases passed after the book build.
 
 ## Remaining external decisions
 

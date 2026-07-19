@@ -284,7 +284,7 @@ This discipline protects both sides. It prevents the skeptic from dismissing eve
 
 ## Inspection note
 
-Add a second line to the debt ledger:
+Add a second line to the **Debt Ledger**:
 
 > **Debt 2 — Independence:** Which parts of the Candidate System remain true under universal rejection, and what makes their truth independent of the attitudes used to identify or apply them?
 

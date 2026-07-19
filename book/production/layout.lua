@@ -87,6 +87,34 @@ local function normalize_table_widths(tbl)
   end
 end
 
+local function first_header_label(tbl)
+  if #tbl.head.rows == 0 or #tbl.head.rows[1].cells == 0 then
+    return ''
+  end
+
+  return pandoc.utils.stringify(tbl.head.rows[1].cells[1].contents)
+end
+
+local function tune_special_table_widths(tbl)
+  local count = #tbl.colspecs
+
+  -- The Access Audit has nine short response columns but a first column
+  -- containing complete claims. Equal widths make those claims stack into
+  -- nearly one-word lines and unnecessarily force the worksheet over two
+  -- landscape pages. Preserve room for the response fields while giving the
+  -- claim column enough measure to remain readable.
+  if count == 10 and first_header_label(tbl) == 'Foundational claim' then
+    local first_width = 0.20
+    local independence_width = 0.105
+    local other_width = (0.999 - first_width - independence_width) / (count - 2)
+    tbl.colspecs[1] = {tbl.colspecs[1][1], first_width}
+    for i = 2, count do
+      tbl.colspecs[i] = {tbl.colspecs[i][1], other_width}
+    end
+    tbl.colspecs[6] = {tbl.colspecs[6][1], independence_width}
+  end
+end
+
 local function style_header_cells(tbl)
   local header_size = #tbl.colspecs >= 7 and '\\scriptsize' or '\\footnotesize'
   local header_style = '\\cellcolor{PaletteOlive}\\color{PalettePaper}\\sffamily\\bfseries' ..
@@ -116,6 +144,7 @@ end
 
 function Table(tbl)
   normalize_table_widths(tbl)
+  tune_special_table_widths(tbl)
   pad_all_cells(tbl)
   stripe_body_rows(tbl)
   style_header_cells(tbl)
@@ -156,6 +185,13 @@ function Header(header)
   if header.level == 2 and label:match('^Worksheet %d+') then
     return {
       pandoc.RawBlock('latex', '\\clearpage'),
+      header
+    }
+  end
+
+  if header.level == 2 and label:match('^Part [IVX]+ deck') then
+    return {
+      pandoc.RawBlock('latex', '\\Needspace{15\\baselineskip}'),
       header
     }
   end

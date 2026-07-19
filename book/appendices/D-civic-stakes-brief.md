@@ -212,7 +212,7 @@ Available methods:
 >
 > **Conflict left genuinely unresolved:** __________
 >
-> **Compensation, apology, restoration, or acknowledgment of residue:** __________
+> **Repair or acknowledged residue:** __________
 
 ## 7. Available resources and constraints
 
