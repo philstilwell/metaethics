@@ -36,6 +36,8 @@ assert.equal(toolCards.length, 14, "the landing page must present fourteen curre
 assert.equal(reservedCards.length, 0, "all current grid positions must be live tools");
 assert.match(css, /\.hub-tool-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/s, "the wide hub must retain a scalable three-column grid");
 assert.match(css, /\.hub-tool-emotions\s*\{[^}]*grid-column:\s*span\s*2/s, "the fourteenth card must complete the final wide-grid row deliberately");
+assert.match(css, /\.hub-hero\s*\{[^}]*align-items:\s*start/s, "the hub copy must start beside the tall project map instead of being vertically centered against it");
+assert.doesNotMatch(css, /\.hub-hero\s*\{[^}]*min-height:\s*calc\(100vh/s, "the hub hero must not force an extra viewport of vertical space");
 assert.match(css, /@media \(max-width: 1100px\)[\s\S]*?\.hub-tool-grid\s*\{[^}]*repeat\(2,/s, "the hub must collapse to two columns at medium widths");
 assert.match(css, /@media \(max-width: 760px\)[\s\S]*?\.hub-tool-grid,[\s\S]*?grid-template-columns:\s*1fr/s, "the hub must collapse to one column on narrow screens");
 

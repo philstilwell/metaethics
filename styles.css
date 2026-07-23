@@ -3432,9 +3432,8 @@ dialog p:not(.kicker) {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(370px, 0.75fr);
   gap: clamp(44px, 8vw, 120px);
-  align-items: center;
+  align-items: start;
   max-width: 1440px;
-  min-height: calc(100vh - 73px);
   margin: 0 auto;
   padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px);
 }
@@ -3528,8 +3527,8 @@ dialog p:not(.kicker) {
   grid-template-columns: 40px 1fr;
   gap: 14px;
   align-items: center;
-  min-height: 88px;
-  padding: 18px 28px;
+  min-height: 76px;
+  padding: 14px 28px;
   border-bottom: 1px solid #3f4742;
 }
 
@@ -7771,7 +7770,15 @@ dialog p:not(.kicker) {
 .finder-navigation button:disabled { cursor: not-allowed; opacity: 0.4; }
 
 .finder-results { padding-bottom: 90px; }
-.finder-results-hero { padding-bottom: 56px; }
+.finder-results-hero {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(62px, 8vw, 96px) clamp(26px, 6vw, 96px) 56px;
+}
+.finder-results-hero h1 {
+  max-width: 1050px;
+  font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+}
 .finder-result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0 clamp(26px, 6vw, 96px); }
 .finder-result-grid article { display: flex; min-height: 500px; flex-direction: column; padding: 28px; border: 1px solid var(--ink); background: var(--paper-bright); }
 .finder-result-grid article:first-child { border-top: 8px solid var(--acid-strong); background: #eef2df; }
@@ -7794,6 +7801,8 @@ dialog p:not(.kicker) {
 @media (max-width: 560px) {
   .finder-navigation { align-items: stretch; flex-direction: column-reverse; }
   .finder-navigation button { width: 100%; }
+  .finder-results-hero { padding: 52px 20px 42px; }
+  .finder-results-hero h1 { font-size: clamp(2.55rem, 12vw, 3.55rem); }
 }
 
 /* Public method and limits */

@@ -6,6 +6,7 @@ const vm = require("node:vm");
 const root = path.join(__dirname, "..");
 const source = fs.readFileSync(path.join(root, "find.js"), "utf8");
 const html = fs.readFileSync(path.join(root, "find.html"), "utf8");
+const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
 const context = {};
 vm.createContext(context);
 vm.runInContext(`${source.slice(0, source.indexOf("const finderState"))};globalThis.audit={FINDER_LABS,FINDER_QUESTIONS};`, context);
@@ -45,4 +46,6 @@ assert.match(html, /This is routing—not a personality test or diagnosis/, "the
 assert.match(html, /<fieldset id="finderChoices"/, "the finder must use native grouped choices");
 assert.match(html, /id="finderNext"[^>]+disabled/, "the finder must require an explicit next action");
 assert.match(html, /role="progressbar"/, "finder progress must be accessible");
+assert.match(css, /\.finder-results-hero\s*\{[^}]*padding:[^;]*clamp\(26px,\s*6vw,\s*96px\)/s, "finder results must retain a responsive left and right margin");
+assert.match(css, /\.finder-results-hero h1\s*\{[^}]*max-width:\s*1050px/s, "the finder result heading must stay within a readable measure");
 console.log(`Finder audit passed: ${paths} complete routes, fourteen reachable labs, native controls, deterministic ranking, and non-diagnostic framing verified.`);
