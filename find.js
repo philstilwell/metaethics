@@ -27,7 +27,7 @@ const FINDER_QUESTIONS = [
       { id: "self", label: "I want to understand my own choices, values, or reactions", weights: { profile: 5, genealogy: 4, tradeoffs: 3, emotions: 3 }, reason: "You started with your own pattern of judgment." },
       { id: "language", label: "I want to know what moral words or claims really amount to", weights: { meaning: 5, after: 4, obligation: 3, evidence: 2 }, reason: "You started with the meaning and use of normative claims." },
       { id: "skeptic", label: "I doubt objective moral facts and want to know what could remain", weights: { reasons: 5, after: 4, evidence: 4, builder: 3 }, reason: "You started from moral skepticism and its practical consequences." },
-      { id: "conflict", label: "I want to understand an argument, disagreement, or failed reform", weights: { decoder: 5, criticize: 4, tradeoffs: 3, builder: 2 }, reason: "You started with conflict between people or standards." },
+      { id: "conflict", label: "I want to understand why people disagree, or why others rejected an attempt to change a law, rule, or social practice", weights: { decoder: 5, criticize: 4, tradeoffs: 3, builder: 2 }, reason: "You started with conflict between people or standards." },
       { id: "response", label: "I am thinking about responsibility, emotional reactions, or who deserves consideration", weights: { blame: 5, emotions: 5, standing: 4, profile: 2 }, reason: "You started with treatment, accountability, or inclusion." },
     ],
   },

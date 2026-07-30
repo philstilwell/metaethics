@@ -11,9 +11,11 @@ const context = {};
 vm.createContext(context);
 vm.runInContext(`${source.slice(0, source.indexOf("const finderState"))};globalThis.audit={FINDER_LABS,FINDER_QUESTIONS};`, context);
 const { FINDER_LABS, FINDER_QUESTIONS } = context.audit;
+const conflictChoice = FINDER_QUESTIONS.find((question) => question.id === "starting").choices.find((choice) => choice.id === "conflict");
 assert.equal(Object.keys(FINDER_LABS).length, 14, "the finder must route across all fourteen labs");
 assert.equal(FINDER_QUESTIONS.length, 4, "the finder must remain a four-question, roughly sixty-second route");
 assert.equal(new Set(FINDER_QUESTIONS.map((question) => question.id)).size, 4, "finder question ids must be unique");
+assert.match(conflictChoice.label, /why people disagree.+attempt to change a law, rule, or social practice/, "the conflict route must explain failed reform in concrete language");
 for (const question of FINDER_QUESTIONS) {
   assert.ok(question.prompt.length >= 45, `${question.id} needs a clear prompt`);
   assert.ok(question.context.length >= 75, `${question.id} needs scope context`);
