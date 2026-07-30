@@ -11,17 +11,26 @@ const context = {};
 vm.createContext(context);
 vm.runInContext(`${source.slice(0, source.indexOf("const finderState"))};globalThis.audit={FINDER_LABS,FINDER_QUESTIONS};`, context);
 const { FINDER_LABS, FINDER_QUESTIONS } = context.audit;
-const conflictChoice = FINDER_QUESTIONS.find((question) => question.id === "starting").choices.find((choice) => choice.id === "conflict");
+const finderQuestion = (id) => FINDER_QUESTIONS.find((question) => question.id === id);
+const finderChoice = (questionId, choiceId) => finderQuestion(questionId).choices.find((choice) => choice.id === choiceId);
 assert.equal(Object.keys(FINDER_LABS).length, 14, "the finder must route across all fourteen labs");
 assert.equal(FINDER_QUESTIONS.length, 4, "the finder must remain a four-question, roughly sixty-second route");
 assert.equal(new Set(FINDER_QUESTIONS.map((question) => question.id)).size, 4, "finder question ids must be unique");
-assert.match(conflictChoice.label, /why people disagree.+attempt to change a law, rule, or social practice/, "the conflict route must explain failed reform in concrete language");
+assert.match(finderChoice("starting", "language").label, /call something.+right.+wrong.+required/, "the language route must give concrete examples");
+assert.match(finderChoice("starting", "skeptic").label, /facts independent of people.+what can still guide our choices/, "the skepticism route must explain its premise");
+assert.match(finderChoice("starting", "conflict").label, /why people disagree.+change a law, rule, or social practice/, "the conflict route must explain unsuccessful reform in concrete language");
+assert.match(finderChoice("scale", "meta").label, /whether moral facts exist.+what can count in favor.+what moral words mean.+obligation bind/, "the deeper-question route must unpack its scope");
+assert.match(finderChoice("task", "stress").label, /conclusion.+evidence or supporting reasons.+justify/, "the support-check route must state what is being tested");
+assert.match(finderChoice("scene", "argument").label, /assisted dying.+evidence, word meanings, priorities, and public rules/, "the disagreement scene must name its layers");
+const unexplainedJargon = /\b(?:epistemic|inference|interpersonal|metaethical|non-realist|normative|practical outlook)\b/i;
 for (const question of FINDER_QUESTIONS) {
   assert.ok(question.prompt.length >= 45, `${question.id} needs a clear prompt`);
-  assert.ok(question.context.length >= 75, `${question.id} needs scope context`);
+  assert.ok(question.context.length >= 110, `${question.id} needs scope context`);
   assert.ok(question.choices.length >= 5, `${question.id} needs broad but manageable choices`);
   for (const choice of question.choices) {
     assert.ok(choice.label.length >= 50, `${question.id}/${choice.id} needs a self-contained label`);
+    assert.ok(choice.reason.length >= 55, `${question.id}/${choice.id} needs a clear result explanation`);
+    assert.doesNotMatch(`${question.prompt} ${question.context} ${choice.label} ${choice.reason}`, unexplainedJargon, `${question.id}/${choice.id} must avoid unexplained specialist language`);
     assert.ok(Object.keys(choice.weights).length >= 2, `${question.id}/${choice.id} must support more than one possible route`);
     Object.keys(choice.weights).forEach((labId) => assert.ok(FINDER_LABS[labId], `${question.id}/${choice.id} points to unknown ${labId}`));
   }
