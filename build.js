@@ -324,7 +324,7 @@ const BUILDER_DESIGN_QUESTIONS = [
     assumptions:
       "Officials have reliable evidence of the violation, the person receives notice, and torture, permanent disappearance, and secret punishment are forbidden under every option.",
     scope:
-      "Choose the strongest ordinary enforcement model, not the exact response to every violation and not a theory of intrinsic moral desert.",
+      "Choose the strongest ordinary enforcement model, not the exact response to every violation and not a theory of deserved punishment for its own sake.",
     why: "The enforcement rule states how the code moves from reasons and decisions to actual compliance.",
     guide: {
       plain: "How far may the city go after persuasion and voluntary cooperation fail?",
@@ -1023,7 +1023,7 @@ function builderDiagnostic(state = builderState) {
     : "Your code has not yet named its basis.";
   const summary =
     `The bars describe which bases appeared in your 15 selections. ${fitCount} of 6 pressure responses matched as many of your relevant written rules as any offered response; ` +
-    `${departureCount} departed from a clearer code fit. Neither result establishes objective moral truth or an approval-independent duty to obey.`;
+    `${departureCount} departed from a clearer code fit. Neither result proves an objective moral truth or a duty that binds every dissenter.`;
   return {
     foundations,
     sorted,
@@ -1078,8 +1078,8 @@ function buildBuilderAIProbePrompt(state = builderState) {
 
 Your task:
 1. Ask one focused question at a time and wait for the answer.
-2. Begin with the most specific unresolved seam, code departure, or hidden ordering rule in the record below.
-3. Distinguish factual workability, internal consistency, fair justification, motivation, democratic authorization, coercive capacity, and approval-independent obligation. Never slide from one to another.
+2. Begin with the most specific unresolved conflict between rules, departure from the written code, or unstated rule about which value comes first.
+3. Keep separate: whether the code will work, whether its rules fit together, whether people can defend it fairly, what motivates support, whether voters authorized it, what force can make people comply, and whether it binds someone who rejects it.
 4. A vote, agreement, shared aim, beneficial result, informed preference, or stable practice may provide a reason inside a stated framework. Do not claim that it automatically creates a universal or transcendent obligation.
 5. Treat coercive power as a means of producing compliance unless an additional justification is supplied. Do not equate effectiveness with legitimacy.
 6. Test who is excluded or weakly represented: dissenters, nonmembers, people unable to contribute, future residents, minorities, dependent people, and newly recognized persons.
@@ -1396,7 +1396,7 @@ function renderBuilderSeams(diagnostic) {
   if (!diagnostic.tensions.length) {
     const note = document.createElement("p");
     note.className = "builder-no-seams";
-    note.textContent = "No listed rule-pair trigger fired. That means this audit found no predefined seam—not that every future case is already settled.";
+    note.textContent = "None of the rule pairs checked by this lab created a specific conflict. That does not mean the code already settles every possible case.";
     builderEls.seamGrid.append(note);
     return;
   }
@@ -1424,7 +1424,7 @@ function showBuilderResults() {
   builderEls.fitCopy.textContent = `${diagnostic.fullFitCount} responses matched every relevant rule; ${diagnostic.dividedCount} were tied best fits; ${diagnostic.departureCount} selected responses had a clearer written-code alternative.`;
   builderEls.seamCount.textContent = String(diagnostic.tensions.length);
   builderEls.seamCopy.textContent = diagnostic.tensions.length
-    ? "Each seam names two exact selections that need a priority, exception, reviewer, or scope rule."
+    ? "Each item names two selected rules that still need a priority, exception, reviewer, or clearer limit."
     : "No predefined pair triggered. New facts can still expose a conflict the simulator did not list.";
   builderEls.supportBasis.textContent = diagnostic.support.map((foundation) => foundation.name).join(" · ");
   builderEls.supportCopy.textContent = "These are the strongest non-power bases offered by your selections. They may explain why participants support the code by reference to benefits, procedures, commitments, preferences, welfare, or voice.";

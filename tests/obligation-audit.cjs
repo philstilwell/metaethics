@@ -201,7 +201,7 @@ for (const question of OBLIGATION_QUESTIONS) {
 }
 assert.match(aiPrompt, /not a ranking/i, "the AI prompt must explain that basis categories are not ordinal");
 assert.match(aiPrompt, /one question at a time/i, "the AI prompt must require a paced interview");
-assert.match(aiPrompt, /universal, objective, stance-independent, mind-independent, and approval-independent/i, "the AI prompt must preserve the central distinctions");
+assert.match(aiPrompt, /‘universal,’ ‘objective,’ ‘true regardless of anyone’s attitudes,’ ‘true without minds,’ and ‘binding even when rejected’/i, "the AI prompt must preserve the central distinctions");
 
 const queriedIds = [...source.matchAll(/document\.querySelector\("#([A-Za-z0-9_-]+)"\)/g)].map((match) => match[1]);
 for (const id of queriedIds) {

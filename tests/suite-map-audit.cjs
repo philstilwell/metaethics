@@ -52,7 +52,7 @@ assert.deepEqual(Object.keys(api.readMap()), [], "erasing must leave an empty ma
 for (const page of labPages) {
   const html = fs.readFileSync(path.join(root, page), "utf8");
   assert.match(html, /data-lab-id="[^"]+"/, `${page} must identify its suite-map record`);
-  assert.match(html, /<script src="suite-map\.js"><\/script>/, `${page} must load the opt-in map controls`);
+  assert.match(html, /<script src="suite-map\.js\?v=20260730-plain-language"><\/script>/, `${page} must load the opt-in map controls`);
   assert.match(html, /href="map\.html">My map<\/a>/, `${page} must link to the map`);
 }
 

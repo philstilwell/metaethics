@@ -56,7 +56,7 @@ for (const id of CRITICISM_BASE_ORDER) {
   assert.ok(basis.limit.length >= 105, `${id} must state what it leaves open`);
 }
 assert.match(CRITICISM_BASES.majority.limit, /does not by itself show.+objectively true/i);
-assert.match(CRITICISM_BASES.harm.limit, /cannot by itself supply the value bridge/i);
+assert.match(CRITICISM_BASES.harm.limit, /cannot by itself prove that everyone has an objective duty to prevent it/i);
 assert.match(CRITICISM_BASES.truth.short, /regardless of every actual or imagined person’s approval/i);
 
 assert.deepEqual(Array.from(CRITICISM_STANCE_ORDER), ["majority", "relative", "practical", "realist"]);
@@ -182,9 +182,9 @@ assert.equal(stanceAudits, (6 ** 5) * 7 * 4);
 const prompt = buildCriticismAIProbePrompt({ ...allTruthState, opening: "majority", final: "practical" });
 assert.match(prompt, /Ask one focused question at a time/i);
 assert.match(prompt, /Do not assume moral realism or moral non-realism/i);
-assert.match(prompt, /Do not reduce every form of cultural relativism to simple majority rule/i);
+assert.match(prompt, /Do not treat every view based on social standards as simple majority rule/i);
 assert.match(prompt, /Do not move from a factual claim about harm to a duty/i);
-assert.match(prompt, /Do not infer approval-independent obligation from agreement, law, social approval/i);
+assert.match(prompt, /Do not infer a duty that binds every dissenter merely from agreement, law, social approval/i);
 assert.match(prompt, /Do not call the use of several grounds incoherent by itself/i);
 for (const question of CRITICISM_CASES) {
   assert.ok(prompt.includes(question.context), `the prompt must include the full ${question.id} case`);

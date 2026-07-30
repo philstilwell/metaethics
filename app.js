@@ -16,7 +16,7 @@ const TENDENCIES = {
     description: "This reasoning looks for a rule, promise, or role-based duty that should hold even when breaking it could help.",
   },
   rights: {
-    name: "Rights & autonomy",
+    name: "Rights & personal control",
     theory: "Rights-based ethics",
     family: "Often associated with rights-based ethics",
     short: "What may not be done to a person",
@@ -48,14 +48,14 @@ const TENDENCIES = {
     theory: "Communitarianism",
     family: "Often associated with communitarian and particularist ethics",
     short: "What we owe our people and shared commitments",
-    description: "This reasoning gives moral weight to friendship, family, group membership, promises of trust, and standing by others.",
+    description: "This reasoning gives moral weight to friendship, family, group membership, promises of trust, and supporting people with whom one shares a bond.",
   },
   authority: {
-    name: "Authority & tradition",
+    name: "Authorized decision-makers & tradition",
     theory: "Authority-based ethics",
     family: "Often associated with authority- and tradition-based ethics",
-    short: "Who has legitimate standing to decide",
-    description: "This reasoning looks to legitimate offices, institutions, inherited practices, expertise, or accepted sources of authority.",
+    short: "Who has the accepted right or role to decide",
+    description: "This reasoning looks to authorized offices, institutions, inherited practices, expertise, or other sources a person accepts as entitled to decide.",
   },
 };
 
@@ -76,7 +76,7 @@ const META_STANCES = {
   },
   constructed: {
     name: "Moral constructivism",
-    description: "You treat moral rules as justified through a fair procedure, shared standpoint, or agreement among people.",
+    description: "You treat moral rules as built and justified through a fair process, a shared point of view, or agreement among people.",
   },
   relative: {
     name: "Moral relativism",
@@ -132,7 +132,7 @@ const SCENARIOS = [
       { id: "rights", label: "A person’s identity and voice remain theirs to control", detail: "Emergency benefits do not erase the importance of consent and personal ownership.", signal: "rights" },
       { id: "care", label: "The family’s grief and relationship to the singer deserve special care", detail: "The decision should not treat a loved person as a tool while those closest to her object.", signal: "care" },
       { id: "virtue", label: "A trustworthy public warning must not depend on hidden deception", detail: "The character of the act—honest or manipulative—matters beyond the final numbers.", signal: "virtue" },
-      { id: "authority", label: "The person or institution with legitimate control should decide", detail: "Family standing, law, or another accepted authority should settle who may use the voice.", signal: "authority" },
+      { id: "authority", label: "The person or institution with the recognized right to control the voice should decide", detail: "The law, the family’s role, or another accepted source of decision-making power should settle who may use the voice.", signal: "authority" },
     ],
   },
   {
@@ -184,7 +184,7 @@ const SCENARIOS = [
   {
     id: "memory",
     title: "The memory clinic",
-    axis: "Case — autonomy, evidence, and repair",
+    axis: "Case — personal control, evidence, and repair",
     story:
       "A patient secretly caused a fatal hit-and-run. No one else knows. They arrive at a clinic in immediate danger of suicide and ask for a permanent memory erasure. The treatment would probably prevent the suicide, but it would also destroy the only evidence and the patient’s ability to confess, remember the victim, or make meaningful amends.",
     assumptions:
@@ -198,7 +198,7 @@ const SCENARIOS = [
     ],
     reasons: [
       { id: "outcome", label: "The choice should produce the least serious expected harm from this point forward", detail: "Survival, future danger, and the effects on everyone involved should control the response.", signal: "outcome" },
-      { id: "rights", label: "A competent person should control what happens inside their own mind", detail: "Mental autonomy creates a strong limit on what clinicians may force someone to remember.", signal: "rights" },
+      { id: "rights", label: "A competent person should control what happens inside their own mind", detail: "Personal control over one’s mind strongly limits what clinicians may force someone to remember.", signal: "rights" },
       { id: "justice", label: "The victim and family have a claim to truth, accountability, and repair", detail: "The patient’s relief cannot erase what is owed to people harmed by the original act.", signal: "justice" },
       { id: "duty", label: "The clinician must first keep the patient alive through the immediate crisis", detail: "The professional duty to prevent an imminent suicide justifies temporary protection before any irreversible treatment.", signal: "duty" },
       { id: "care", label: "The response should protect a suffering person without abandoning other relationships", detail: "Good care attends to the patient, the victim’s family, and the possibility of future repair.", signal: "care" },
@@ -273,7 +273,7 @@ const CALIBRATION_QUESTIONS = [
       { id: "role", label: "Yes, when the relationship creates a care responsibility", detail: "Dependence and roles such as parent, friend, or clinician can create special obligations.", signal: "care" },
       { id: "effects", label: "Only when the relationship changes the likely results", detail: "Partiality matters through trust, cooperation, or harm—not simply because the person is “ours.”", signal: "outcome" },
       { id: "loyalty", label: "Yes—loyalty is itself a legitimate reason", detail: "Family, friendship, and group membership can justify preference even when other facts match.", signal: "loyalty" },
-      { id: "authority", label: "The group’s legitimate rules determine when it matters", detail: "Accepted roles, customs, or institutions define which relationships carry special standing.", signal: "authority" },
+      { id: "authority", label: "The group’s accepted rules determine when a relationship matters", detail: "Accepted roles, customs, or institutions define which relationships receive special treatment.", signal: "authority" },
     ],
   },
   {
@@ -283,17 +283,17 @@ const CALIBRATION_QUESTIONS = [
     axis: "What moral language means",
     prompt: "When you say that an action is “morally wrong,” what kind of claim are you making?",
     context: "This question is separate from the scenarios. A person can use outcome, duty, care, or virtue reasoning under any of these five views.",
-    definition: "The question asks what gives moral language its status—not which action you support or which reasons you use most often.",
+    definition: "The question asks what you think moral words are doing—not which action you support or which everyday reasons you use most often.",
     scope: "Choose the closest foundation. Do not choose based on which answer sounds kinder, stricter, or more socially acceptable.",
     why: "Metaethics and everyday moral reasoning answer different questions, so the result reports them separately.",
     guide: {
       plain: "Two people may make the same decision but disagree about whether it reports a fact, follows an authority, comes from agreement, depends on a framework, or expresses a human commitment.",
       example: "“Cheating is wrong” could be presented as an objective truth, a command, a fair shared rule, a culture-relative judgment, or strong opposition without an objective moral fact.",
-      reveals: "This answer names your metaethical stance. It never adds points to or subtracts points from a reasoning tendency.",
+      reveals: "This answer states your view about whether objective moral facts exist. It never raises or lowers any of the everyday reasoning results.",
     },
     choices: [
       { id: "objective", label: "It reports an objective moral fact", detail: "The claim can be true even if every person and culture disagrees.", meta: "objective" },
-      { id: "authority", label: "It reports what a true moral authority requires", detail: "The authority may be God, sacred teaching, natural order, or another source with genuine moral standing.", meta: "authority" },
+      { id: "authority", label: "It reports what a genuine moral authority requires", detail: "The authority might be God, a sacred teaching, natural order, or another source that truly has the power to set moral requirements.", meta: "authority" },
       { id: "constructed", label: "It states a rule justified through a fair human standpoint", detail: "The claim gets its force from agreement, public reasoning, or a procedure people could accept.", meta: "constructed" },
       { id: "relative", label: "It is true relative to a person, culture, or practice", detail: "Another framework may support a different moral truth without one universal standard deciding between them.", meta: "relative" },
       { id: "nonrealist", label: "It expresses a human stance rather than an objective moral fact", detail: "The claim voices opposition, commitment, a practical rule, or a chosen aim without describing a separate moral realm.", meta: "nonrealist" },
@@ -595,14 +595,14 @@ function buildAIProbePrompt() {
     "ALL EIGHT REASONING SIGNALS",
     ...signalSummary,
     "",
-    "MY METAETHICAL ANSWER — REPORTED SEPARATELY",
+    "MY VIEW ABOUT MORAL FACTS — REPORTED SEPARATELY",
     `Question: ${getQuestion("metaStance").prompt}`,
     `Key definition: ${getQuestion("metaStance").definition}`,
     `Scope: ${getQuestion("metaStance").scope}`,
     `Selected answer: ${metaChoice?.label || "No answer recorded"}.`,
     `Selected answer's meaning: ${metaChoice?.detail || "No explanation recorded"}`,
     `Survey category: ${meta?.name || "Not specified"}. ${meta?.description || ""}`,
-    "Treat my metaethical stance separately from the everyday kinds of reasons I used. For example, moral non-realism does not prevent a person from caring about outcomes, rights, duties, or relationships.",
+    "Treat my view about objective moral facts separately from the everyday kinds of reasons I used. For example, rejecting objective moral facts does not prevent a person from caring about outcomes, rights, duties, or relationships.",
     "",
     "MY SIX SCENARIOS AND ANSWERS",
     ...scenarios.map((scenario, index) => {
@@ -858,7 +858,7 @@ function showResults() {
   const shape = profileShape(profile);
   const tensions = detectTensions();
   const metaChoice = getChoice("metaStance");
-  const meta = META_STANCES[metaChoice?.meta] || { name: "Not specified", description: "No metaethical stance was recorded." };
+  const meta = META_STANCES[metaChoice?.meta] || { name: "Not specified", description: "No view about objective moral facts was recorded." };
 
   els.survey.classList.add("hidden");
   els.results.classList.remove("hidden");
@@ -923,7 +923,7 @@ function buildTextReport() {
     leaders.length > 1
       ? `Leading reasoning signals (${leaders.length}-way tie): ${leaders.map(([key]) => TENDENCIES[key].name).join(", ")}`
       : `Strongest reasoning signal: ${TENDENCIES[ranked[0][0]].name}`,
-    `Metaethical stance: ${meta?.name || "Not specified"}`,
+    `View about moral facts: ${meta?.name || "Not specified"}`,
     "",
     "REASONING SIGNALS",
     ...ranked.map(([key, entry]) => `- ${TENDENCIES[key].name}: chosen ${entry.hits} of ${entry.opportunities} times offered`),

@@ -59,11 +59,11 @@ const BLAME_RESPONSES = {
   },
   retribution: {
     index: "08",
-    name: "Retributive suffering",
+    name: "Suffering as deserved payback",
     lane: "meaning",
-    short: "Impose pain, loss, or hardship because the person is said to intrinsically deserve suffering for the past act, apart from any further human purpose.",
-    justifies: "Only a basic-desert claim could justify deliberately added suffering after every protective, preventive, reparative, relational, and expressive purpose is removed.",
-    safeguard: "This response rejects the lab’s desert-free premise. It needs an independent defense of deserved suffering, not a relabeling of protection or repair.",
+    short: "Impose pain, loss, or hardship because the person is said to deserve suffering for the past act, even when the suffering helps no one.",
+    justifies: "This requires the claim that the past act makes suffering fitting for its own sake. Philosophers call that basic desert.",
+    safeguard: "This answer rejects the lab’s starting assumption. It needs a separate defense of deserved suffering, not a new label for protection, prevention, repair, protest, or another human purpose.",
   },
 };
 
@@ -73,7 +73,7 @@ const BLAME_LANES = {
   future: { index: "A", name: "Future safety", copy: "These responses aim to reduce later harm. Their force must track evidence about risk and effects." },
   repair: { index: "B", name: "Repair and change", copy: "These responses address what was damaged or help make safer participation possible." },
   relationship: { index: "C", name: "Relationship and reliance", copy: "These responses change the terms on which a person or institution will relate, include, or rely." },
-  meaning: { index: "D", name: "Public meaning and desert", copy: "Condemnation communicates a social stand. Retribution adds the different claim that suffering itself is fitting." },
+  meaning: { index: "D", name: "Public protest and deserved payback", copy: "Condemnation communicates a social stand. Retribution adds the different claim that suffering itself is fitting even when it helps no one." },
 };
 
 const BLAME_POLICIES = {
@@ -88,21 +88,21 @@ const BLAME_POLICIES = {
     name: "Purpose-limited response",
     label: "A burden is justified only as the least harmful effective way to protect, deter, repair, rehabilitate, coordinate, or maintain justified boundaries and trust",
     detail: "The response needs evidence, a named beneficiary and goal, proportional limits, review, and a stopping rule. Pain counts as a cost, never as the point.",
-    implication: "Every purpose-based response can fit, but retributive suffering cannot because it treats pain as fitting apart from a further goal.",
+    implication: "Every purpose-based response can fit, but suffering as deserved payback cannot because it treats pain as fitting even when it serves no further goal.",
     allowed: BLAME_RESPONSE_ORDER.filter((id) => id !== "retribution"),
   },
   protest: {
     name: "Purpose plus moral protest",
     label: "Purpose-limited consequences are justified, and accurate public condemnation can also express protest and affirm a shared standard without making suffering the goal",
     detail: "A response may protect, repair, change behavior, revise trust, or communicate rejection. Any social pain must remain a constrained side effect rather than deserved payback.",
-    implication: "Every purpose-based response, including proportionate public condemnation, can fit; retributive suffering still does not.",
+    implication: "Every purpose-based response, including limited public condemnation, can fit; suffering as deserved payback still does not.",
     allowed: BLAME_RESPONSE_ORDER.filter((id) => id !== "retribution"),
   },
   desert: {
-    name: "Desert-permitting response",
+    name: "Allow suffering as deserved payback",
     label: "Some knowing wrongdoers can deserve blame or suffering simply because of what they did, even when the response serves no protective, reparative, or social purpose",
     detail: "Human purposes may also matter, but in at least some cases deserved suffering supplies an independent reason to impose pain or loss.",
-    implication: "All eight response types can fit because this policy expressly reintroduces the basic-desert claim that the lab initially removes.",
+    implication: "All eight response types can fit because this policy brings back the claim that a person can deserve suffering even when the suffering helps no one.",
     allowed: BLAME_RESPONSE_ORDER,
   },
 };
@@ -124,9 +124,9 @@ function blamePolicyQuestion(id, phase, axis) {
       "Choose the broadest response policy you accept. Do not choose a sentence length, diagnose a person, or assume that a useful purpose automatically permits any amount of force.",
     why: "Repeating the policy lets the result compare your general rule with the exact work you ask consequences to perform in six cases.",
     guide: {
-      plain: "Ask whether you would only protect your own participation, allow carefully limited responses for human purposes, add public protest, or also accept suffering simply because it is deserved.",
-      separate: "A response can predictably hurt without pain being its purpose. A retributive response says the pain itself can be fitting even when it changes nothing else.",
-      reveal: "Your choice sets the boundary used later to identify precise policy mismatches and any return of basic desert.",
+      plain: "Ask whether you would only protect safety and relationships, allow carefully limited responses for human purposes, add public protest, or also accept pain simply because the person deserves it.",
+      separate: "A response can predictably hurt without making pain its purpose. Retribution says that the pain itself can be fitting even when it changes nothing else.",
+      reveal: "Your choice sets the rule used later to compare your general policy with the purposes selected in each case.",
     },
     choices: BLAME_POLICY_ORDER.map((policy) => ({ id: policy, ...BLAME_POLICIES[policy] })),
   };
@@ -363,7 +363,7 @@ const BLAME_CASES = [
       "The threat was real and immediate during the diversion. Imani could safely report during the later forty-eight hours, understood the delay risk, and chose not to. Trauma specialists can evaluate support needs. The patient’s added costs are known. The gang—not Imani—creates the continuing violent danger.",
     scope:
       "Choose the primary purpose for responding to Imani, not the gang. The response must distinguish the coerced diversion from the later concealment and may not assume that one label explains both periods.",
-    why: "Agency can differ across parts of one event. Even without basic desert, protection, repair, reform, boundaries, trust, and public explanation should track those differences.",
+    why: "A person’s control can differ across parts of one event. Even without saying suffering is deserved for its own sake, protection, repair, reform, boundaries, trust, and public explanation should track those differences.",
     file: ["The diversion was coerced", "The later concealment was not", "The gang remains the violent threat"],
     guide: {
       plain: "Imani had almost no safe choice during the theft, but she had a safer choice during the later delay. The response should not flatten those facts.",
@@ -471,7 +471,7 @@ const BLAME_CASES = [
 const BLAME_ZERO_CONTROL = {
   id: "zero",
   kind: "control",
-  phase: "Isolate basic desert",
+  phase: "Test suffering as deserved payback",
   axis: "Control case · The silent minute",
   title: "The silent minute",
   prompt: "When one minute of pain can serve no one and change nothing, should the state cause it anyway?",
@@ -480,13 +480,13 @@ const BLAME_ZERO_CONTROL = {
   assumptions:
     "The pain cannot protect, deter, repair, rehabilitate, set a boundary, revise trust, communicate with the public, comfort another person, produce knowledge, or change future conduct. Refusing it will not weaken any institution or alter anyone’s expectations. Activating it has no hidden benefit.",
   scope:
-    "Decide only whether a basic-desert claim supplies a reason to activate the machine. Do not add a missing human purpose or change the stipulated facts.",
-  why: "The control removes every purpose measured in the six cases. Choosing pain isolates the claim that suffering is fitting simply because Sol deserves it.",
+    "Decide only whether Sol’s past act gives a reason to cause pain simply because he deserves it. Do not add a missing human purpose or change the stated facts.",
+  why: "The control removes every human purpose measured in the six cases. Choosing pain isolates one claim: Sol’s past act makes suffering deserved even when it helps no one. Philosophers call this basic desert.",
   file: ["Every human purpose is complete", "Only Sol will know", "Pain changes no outcome"],
   guide: {
     plain: "This is intentionally artificial. Its job is to remove every effect except the pain itself.",
     separate: "Wanting a public condemnation, a repaired loss, or a safer future does not answer this case because all of those tasks are already complete.",
-    reveal: "Your choice shows whether you accept, reject, or remain unsure about suffering that rests on basic desert alone.",
+    reveal: "Your choice shows whether you accept, reject, or remain unsure about suffering imposed solely as deserved payback.",
   },
   choices: [
     {
@@ -497,14 +497,14 @@ const BLAME_ZERO_CONTROL = {
     },
     {
       id: "desert",
-      name: "Activate for desert",
+      name: "Activate as deserved payback",
       label: "Activate the machine because Sol deserves some suffering for the fire even though the minute helps no one and changes nothing",
-      detail: "This is the pure basic-desert claim: the past act makes pain fitting apart from every future, reparative, relational, or expressive purpose.",
+      detail: "This is the claim that pain is deserved for its own sake: the past act makes pain fitting even when it produces no safety, prevention, repair, relationship, or public benefit. Philosophers call this basic desert.",
     },
     {
       id: "uncertain",
-      name: "Desert remains unsettled",
-      label: "I cannot decide until I know whether basic desert is real; none of the ordinary human purposes can settle this case",
+      name: "Deserved payback remains unsettled",
+      label: "I cannot decide until I know whether anyone can deserve suffering for its own sake; none of the ordinary human purposes can settle this case",
       detail: "This answer correctly identifies the missing premise and suspends judgment instead of inventing a practical benefit.",
     },
   ],
@@ -562,7 +562,7 @@ function blamePolicyMismatches(state) {
       id: "zero",
       title: BLAME_ZERO_CONTROL.title,
       response: "retribution",
-      text: `You activated pain for basic desert in “${BLAME_ZERO_CONTROL.title},” while your final ${policy.name.toLowerCase()} denies suffering as an independent goal. One of those two boundaries needs revision.`,
+      text: `You activated pain solely as deserved payback in “${BLAME_ZERO_CONTROL.title},” while your final ${policy.name.toLowerCase()} denies suffering as an independent goal. One of those two rules needs revision.`,
     });
   }
   return mismatches;
@@ -580,9 +580,9 @@ function blameDiagnostic(state) {
   const final = BLAME_POLICIES[state.final];
   const changed = state.opening !== state.final;
   let title = "You kept consequences tied to stated human purposes.";
-  if (desertReentries) title = desertReentries === 1 ? "Basic desert entered one part of your response." : "Basic desert re-entered several responses.";
-  if (state.zero === "uncertain" && !retributionCount) title = "You preserved human purposes and left pure desert unsettled.";
-  const summary = `${purposeCount} of your 6 case answers selected a purpose other than retributive suffering. ${state.zero === "refuse" ? "In the zero-purpose control, you refused deliberately added pain." : state.zero === "desert" ? "In the zero-purpose control, you accepted pain on basic-desert grounds alone." : "In the zero-purpose control, you identified basic desert as an unresolved premise."} ${mismatches.length ? `${mismatches.length} exact policy mismatch${mismatches.length === 1 ? " needs" : "es need"} clarification.` : "Every case response fits the boundary of your final policy."}`;
+  if (desertReentries) title = desertReentries === 1 ? "One answer used suffering as deserved payback." : "Several answers used suffering as deserved payback.";
+  if (state.zero === "uncertain" && !retributionCount) title = "You kept responses tied to human purposes and left deserved payback unsettled.";
+  const summary = `${purposeCount} of your 6 case answers selected a human purpose other than making someone suffer as payback. ${state.zero === "refuse" ? "In the zero-purpose control, you refused deliberately added pain." : state.zero === "desert" ? "In the zero-purpose control, you accepted pain solely because you thought it was deserved." : "In the zero-purpose control, you identified deserved suffering as an unresolved claim."} ${mismatches.length ? `${mismatches.length} policy mismatch${mismatches.length === 1 ? " needs" : "es need"} clarification.` : "Every case response fits the boundary of your final policy."}`;
   return { profile, primary, retributionCount, purposeCount, desertReentries, mismatches, opening, final, changed, title, summary };
 }
 
@@ -590,11 +590,11 @@ function buildBlameAIProbePrompt(state) {
   const diagnostic = blameDiagnostic(state);
   const zeroChoice = blameChoice(BLAME_ZERO_CONTROL, state.zero);
   const lines = [
-    "You are conducting a careful interview about blame after basic-desert suffering is removed. Ask one focused question at a time and wait for my answer.",
+    "You are conducting a careful interview about blame after setting aside the claim that a person can deserve suffering even when it helps no one. Philosophers call this basic-desert suffering. Ask one focused question at a time and wait for my answer.",
     "",
     "METHOD AND GUARDRAILS",
-    "- Do not assume that moral non-realism, determinism, free will skepticism, or skepticism about basic desert automatically implies any of the others.",
-    "- Keep causal responsibility, intentional action, answerability, current dangerousness, repair duties, trust, public protest, and intrinsic desert separate.",
+    "- Do not assume that rejecting objective moral facts, believing events are determined, doubting free will, and rejecting deserved suffering must always go together.",
+    "- Keep separate: causing an outcome, acting intentionally, being able to answer for it, posing a current danger, owing repair, being trustworthy, being a target of public protest, and deserving suffering for its own sake.",
     "- For every adverse response, ask: What exact human purpose does it serve? What evidence supports that effect? Who benefits and who bears the burden? What less harmful option could work? When must it end?",
     "- Do not equate protection with punishment, withdrawal of trust with hatred, public condemnation with harassment, rehabilitation with coercive control, or restitution with revenge.",
     "- Do not infer that any amount of force is justified merely because some benefit is predicted. Require due process, proportionality, least-restrictive means, review, and safeguards against bias.",
@@ -603,7 +603,7 @@ function buildBlameAIProbePrompt(state) {
     "- Treat a change between my opening and final policies as a possible revision, not an automatic error.",
     "",
     "LAB PREMISE",
-    "For the exercise, no approval-independent moral fact makes suffering deserved simply because of a past act. I was still allowed to reject that premise by selecting retribution or activating the zero-purpose pain.",
+    "For the exercise, do not assume that an objective moral fact makes suffering deserved merely because of a past act. I was still allowed to reject that assumption by selecting suffering as deserved payback or activating the zero-purpose pain.",
     "",
     "MY GENERAL POLICIES",
     `Opening: ${diagnostic.opening.label}`,
@@ -645,8 +645,8 @@ function buildBlameAIProbePrompt(state) {
   lines.push(
     "",
     `Purpose-based case answers: ${diagnostic.purposeCount} / 6`,
-    `Retributive case answers: ${diagnostic.retributionCount} / 6`,
-    `Desert re-entries including the control: ${diagnostic.desertReentries}`,
+    `Answers selecting suffering as deserved payback: ${diagnostic.retributionCount} / 6`,
+    `Selections based on deserved suffering, including the control: ${diagnostic.desertReentries}`,
     "",
     "EXACT POLICY MISMATCHES",
   );
@@ -772,7 +772,7 @@ function renderBlameQuestion({ scroll = false } = {}) {
   blameEls.next.disabled = !selected;
   if (blameState.index === BLAME_QUESTIONS.length - 1) blameEls.next.textContent = "See the full diagnostic →";
   else if (question.kind === "policy") blameEls.next.textContent = "Enter the six cases →";
-  else if (question.id === BLAME_CASES.at(-1).id) blameEls.next.textContent = "Isolate pure desert →";
+  else if (question.id === BLAME_CASES.at(-1).id) blameEls.next.textContent = "Test deserved payback →";
   else if (question.kind === "control") blameEls.next.textContent = "Reconsider your policy →";
   else blameEls.next.textContent = "Next case →";
   renderBlameLiveMap();
@@ -887,7 +887,7 @@ function renderBlameCases() {
 function renderBlameZero() {
   const choice = blameChoice(BLAME_ZERO_CONTROL, blameState.zero);
   blameEls.zeroAnswer.textContent = choice.name;
-  blameEls.zeroCopy.textContent = `${choice.detail} ${blameState.zero === "desert" ? "Because the case removes every other reason, this answer reintroduces basic-desert suffering in its pure form." : blameState.zero === "refuse" ? "This keeps the lab’s desert-free premise intact even after the past act is held fixed." : "This locates the unresolved issue precisely instead of smuggling in a practical effect the case excludes."}`;
+  blameEls.zeroCopy.textContent = `${choice.detail} ${blameState.zero === "desert" ? "Because the case removes every other reason, this answer treats suffering as deserved for its own sake." : blameState.zero === "refuse" ? "This keeps the lab’s premise against deserved payback intact even after the past act is held fixed." : "This locates the unresolved issue precisely instead of smuggling in a practical effect the case excludes."}`;
 }
 
 function renderBlameAlignment(diagnostic) {

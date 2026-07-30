@@ -103,11 +103,11 @@ for (const sourceId of sourceIds) {
   assert.equal(counts[sourceId].hits, 7, `${sourceId} must receive all seven selected hits`);
   assert.equal(leadingReasonSources(counts)[0][0], sourceId, `${sourceId} must be the exact leader`);
   assert.equal(roleMatched(), true, "the correct role answer must be recognized independently of stance");
-  assert.match(diagnosis.summary, /Seven cases/, "the summary must disclose its seven-case denominator");
+  assert.match(diagnosis.summary, /seven cases/i, "the summary must disclose its seven-case denominator");
   const prompt = buildReasonsAIProbePrompt();
   assert.match(prompt, /KEEP THREE ROLES SEPARATE/, "the AI prompt must preserve the role distinction");
   assert.match(prompt, /Ask one question at a time/, "the AI prompt must require a paced interview");
-  assert.match(prompt, /Moral non-realism does not automatically entail/, "the AI prompt must prevent an invalid implication from moral non-realism");
+  assert.match(prompt, /Do not assume that this premise removes every reason to act/, "the AI prompt must prevent an invalid implication from moral non-realism");
 }
 
 reset({

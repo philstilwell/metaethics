@@ -13,7 +13,7 @@
       metrics: [
         ["Leading reason", "#primaryTendency"],
         ["Profile shape", "#profileShape"],
-        ["Metaethical stance", "#metaStance"],
+        ["View about moral facts", "#metaStance"],
       ],
     },
     meaning: {
@@ -71,7 +71,7 @@
       headlineSelector: "#genealogyResultTitle",
       summarySelector: "#genealogyResultSummary",
       metrics: [
-        ["Inference classifications", "#genealogyScore"],
+        ["Conclusions classified", "#genealogyScore"],
         ["Unsupported refutations", "#genealogyOverreach"],
         ["Influence map", "#genealogyInfluenceSummary"],
       ],
@@ -85,7 +85,7 @@
       metrics: [
         ["Leading foundations", "#builderPrimaryBases"],
         ["Code–case fit", "#builderFitCount"],
-        ["Design seams", "#builderSeamCount"],
+        ["Unresolved rule conflicts", "#builderSeamCount"],
       ],
     },
     criticize: {
@@ -109,7 +109,7 @@
       metrics: [
         ["Most-used response", "#blamePrimaryPurpose"],
         ["Purpose-based answers", "#blamePurposeResult"],
-        ["Pure-desert control", "#blameZeroAnswer"],
+        ["Deserved-payback control", "#blameZeroAnswer"],
       ],
     },
     reasons: {
@@ -121,7 +121,7 @@
       metrics: [
         ["Most-used source", "#reasonsPrimarySource"],
         ["Reason–motivation link", "#reasonsMotivationResult"],
-        ["Scope of skepticism", "#reasonsScopeResult"],
+        ["What else the doubt removes", "#reasonsScopeResult"],
       ],
     },
     evidence: {
@@ -282,7 +282,7 @@
         <p>Nothing is saved unless you choose. Only the result headline and three summary fields are kept in this browser—not your full answers or AI prompt.</p>
       </div>
       <div class="suite-save-actions">
-        <button class="primary-button" type="button" data-suite-save>Save to My Metaethical Map</button>
+        <button class="primary-button" type="button" data-suite-save>Save to My Moral Questions Map</button>
         <a class="secondary-button" href="map.html">View my map</a>
         <button class="text-button" type="button" data-suite-remove>Remove saved result</button>
       </div>
@@ -298,7 +298,7 @@
 
     function refresh() {
       const saved = Boolean(readMap()[labId]);
-      saveButton.textContent = saved ? "Update saved result" : "Save to My Metaethical Map";
+      saveButton.textContent = saved ? "Update saved result" : "Save to My Moral Questions Map";
       removeButton.hidden = !saved;
       status.textContent = saved ? "A summary of this lab is currently saved on this device." : "No result from this lab is currently saved.";
     }

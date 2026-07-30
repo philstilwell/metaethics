@@ -59,7 +59,7 @@ assert.match(BLAME_RESPONSES.protection.safeguard, /least restrictive.+end it wh
 assert.match(BLAME_RESPONSES.deterrence.safeguard, /Do not assume severity deters/i);
 assert.match(BLAME_RESPONSES.rehabilitation.safeguard, /route back to participation/i);
 assert.match(BLAME_RESPONSES.trust.safeguard, /do not turn one failure into total permanent stigma/i);
-assert.match(BLAME_RESPONSES.retribution.short, /apart from any further human purpose/i);
+assert.match(BLAME_RESPONSES.retribution.short, /even when the suffering helps no one/i);
 
 assert.deepEqual(Array.from(BLAME_POLICY_ORDER), ["nonadverse", "purpose", "protest", "desert"]);
 assert.equal(Object.keys(BLAME_POLICIES).length, 4);
@@ -135,8 +135,8 @@ assert.deepEqual(Array.from(BLAME_ZERO_CONTROL.choices, (choice) => choice.id), 
 assert.ok(BLAME_ZERO_CONTROL.context.length >= 390);
 assert.ok(BLAME_ZERO_CONTROL.assumptions.length >= 285);
 assert.match(BLAME_ZERO_CONTROL.assumptions, /cannot protect, deter, repair, rehabilitate, set a boundary, revise trust, communicate/i);
-assert.match(BLAME_ZERO_CONTROL.scope, /basic-desert claim/i);
-assert.match(BLAME_ZERO_CONTROL.why, /removes every purpose/i);
+assert.match(BLAME_ZERO_CONTROL.scope, /deserves it/i);
+assert.match(BLAME_ZERO_CONTROL.why, /removes every human purpose/i);
 
 const firstAnswers = Object.fromEntries(BLAME_CASES.map((question) => [question.id, question.choices[0].id]));
 const firstState = { index: 8, opening: "purpose", final: "purpose", zero: "refuse", answers: firstAnswers };
@@ -192,8 +192,8 @@ assert.equal(compatibilityChecks, (7 ** 3) * (6 ** 3) * 4 * 3);
 
 const prompt = buildBlameAIProbePrompt(allRetributionState);
 assert.match(prompt, /Ask one focused question at a time/i);
-assert.match(prompt, /Do not assume that moral non-realism, determinism, free will skepticism, or skepticism about basic desert automatically implies any of the others/i);
-assert.match(prompt, /Keep causal responsibility, intentional action, answerability, current dangerousness, repair duties, trust, public protest, and intrinsic desert separate/i);
+assert.match(prompt, /Do not assume that rejecting objective moral facts, believing events are determined, doubting free will, and rejecting deserved suffering must always go together/i);
+assert.match(prompt, /Keep separate: causing an outcome, acting intentionally, being able to answer for it, posing a current danger/i);
 assert.match(prompt, /What less harmful option could work\? When must it end\?/i);
 assert.match(prompt, /Do not equate protection with punishment/i);
 assert.match(prompt, /due process, proportionality, least-restrictive means, review/i);
@@ -209,7 +209,7 @@ for (const response of BLAME_RESPONSE_ORDER) assert.ok(prompt.includes(BLAME_RES
 
 assert.match(html, /Remove deserved suffering\. See what still <em>justifies a response\.<\/em>/i);
 assert.match(html, /This is a conceptual lab, not a legal sentence, clinical assessment, or prediction/i);
-assert.match(html, /What does “basic desert” mean\?/i);
+assert.match(html, /What does “desert” mean in this lab\?/i);
 assert.match(html, /Does moral non-realism automatically remove moral responsibility\?/i);
 assert.match(html, /Is every painful consequence a punishment\?/i);
 assert.match(html, /Does retribution always mean cruelty or revenge\?/i);
@@ -231,7 +231,7 @@ assert.match(source, /\.focus\(\{ preventScroll: true \}\)/, "question and resul
 assert.match(papersSource, /id: "pereboom-without-desert"/);
 assert.match(papersSource, /id: "pereboom-regret-protest"/);
 assert.match(papersSource, /id: "caruso-quarantine"/);
-assert.match(papersSource, /does not make proportionality, dignity, or due-process concerns disappear/i);
+assert.match(papersSource, /still needs limits, humane treatment, fair procedures, and review/i);
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(ids).size, ids.length, "the page must not reuse an element id");

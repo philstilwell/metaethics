@@ -78,7 +78,7 @@ function caseLabDiagnosis() {
     counts, leaders, seams, primary, primaryCopy, pattern,
     openingFinal: `${opening ? caseLabFamily(opening.family).name : "Not answered"} → ${final ? caseLabFamily(final.family).name : "Not answered"}`,
     title,
-    summary: `${CASE_LAB_CONFIG.cases.length} cases used ${distinct} of ${CASE_LAB_CONFIG.familyOrder.length} available accounts. ${seams.length ? `${seams.length} exact seam${seams.length === 1 ? "" : "s"} should be clarified.` : "No exact cross-answer seam was detected by the lab’s limited rules."}`,
+    summary: `${CASE_LAB_CONFIG.cases.length} cases used ${distinct} of ${CASE_LAB_CONFIG.familyOrder.length} available accounts. ${seams.length ? `${seams.length} point${seams.length === 1 ? "" : "s"} should be compared more closely.` : "The lab’s limited rules did not find a specific conflict between answers."}`,
   };
 }
 
@@ -101,7 +101,7 @@ function buildCaseLabAIProbePrompt() {
     ].join("\n");
   }).join("\n\n");
   const counts = CASE_LAB_CONFIG.familyOrder.map((id) => `- ${caseLabFamily(id).name}: selected ${diagnosis.counts[id].hits} of ${diagnosis.counts[id].opportunities} times offered.`).join("\n");
-  const seams = diagnosis.seams.length ? diagnosis.seams.map((seam, index) => `${index + 1}. ${seam.title}: ${seam.detail}`).join("\n") : "No exact seam was flagged. This is not proof of complete coherence.";
+  const seams = diagnosis.seams.length ? diagnosis.seams.map((seam, index) => `${index + 1}. ${seam.title}: ${seam.detail}`).join("\n") : "The lab did not flag a specific conflict between answers. This does not prove complete coherence.";
   return `You are helping me examine my answers from The Moral Compass lab “${CASE_LAB_CONFIG.title}.” Act as a careful philosophical interviewer, not as a moral judge or advocate for one theory.
 
 FIXED PREMISE AND QUESTION
@@ -118,18 +118,18 @@ EXACT CASE COUNTS
 ${counts}
 These are selected ÷ offered counts, not probabilities, grades, confidence levels, or evidence that an account is true.
 
-EXACT SEAMS FLAGGED
+EXACT POINTS TO COMPARE
 ${seams}
 
 METHOD AND LIMITS
 - Every case offered the same ${CASE_LAB_CONFIG.familyOrder.length} broad accounts in the same order.
 - Using more than one account is not automatically incoherent; source, scope, strength, or context may differ.
 - The lab records when I used an account. It does not establish that the account is true or complete.
-- A flagged seam is a question for clarification, not an automatic contradiction.
+- A flagged point identifies answers to compare more closely; it is not automatically a contradiction.
 ${CASE_LAB_CONFIG.aiCautions.map((item) => `- ${item}`).join("\n")}
 
 INTERVIEW INSTRUCTIONS
-1. Begin with the strongest exact seam. If none exists, begin with the case whose selected account has the hardest stated limit.
+1. Begin with the strongest point of conflict or uncertainty. If none exists, begin with the case whose selected account has the hardest stated limit.
 2. Ask one focused question at a time.
 3. Require me to state the source, scope, and limit of each claim before testing it.
 4. Do not substitute a familiar moral verdict for the exact question this lab asks.
@@ -188,7 +188,7 @@ function renderCaseLabResults() {
   const diagnosis = caseLabDiagnosis();
   caseLabEls.resultTitle.textContent = diagnosis.title; caseLabEls.resultSummary.textContent = diagnosis.summary; caseLabEls.primary.textContent = diagnosis.primary; caseLabEls.primaryCopy.textContent = diagnosis.primaryCopy; caseLabEls.pattern.textContent = diagnosis.pattern; caseLabEls.patternCopy.textContent = `The seven case answers used ${diagnosis.pattern.toLowerCase()}. Multiple accounts may be deliberate.`; caseLabEls.openingFinal.textContent = diagnosis.openingFinal; caseLabEls.openingFinalCopy.textContent = caseLabAnswer("opening")?.family === caseLabAnswer("final")?.family ? "Your general account stayed the same; case-level exceptions may still matter." : "A changed answer can be revision rather than inconsistency; identify what changed it.";
   caseLabEls.ledger.replaceChildren(); CASE_LAB_CONFIG.familyOrder.forEach((id) => { const family = caseLabFamily(id), entry = diagnosis.counts[id], row = document.createElement("article"); row.className = "case-lab-ledger-row"; const index = document.createElement("span"); index.textContent = family.index; const copy = document.createElement("div"); const title = document.createElement("strong"); title.textContent = family.name; const theory = document.createElement("small"); theory.textContent = family.theory; const note = document.createElement("p"); note.textContent = family.note; copy.append(title, theory, note); const graph = document.createElement("div"); const score = document.createElement("b"); score.textContent = `${entry.hits} / ${entry.opportunities}`; const bar = document.createElement("i"); const fill = document.createElement("span"); fill.style.width = `${entry.rate}%`; bar.append(fill); graph.append(score, bar); row.append(index, copy, graph); caseLabEls.ledger.append(row); });
-  caseLabEls.seams.replaceChildren(); if (diagnosis.seams.length) diagnosis.seams.forEach((seam) => { const article = document.createElement("article"); const heading = document.createElement("h3"); heading.textContent = seam.title; const copy = document.createElement("p"); copy.textContent = seam.detail; article.append(heading, copy); caseLabEls.seams.append(article); }); else { const clear = document.createElement("p"); clear.className = "no-final-tensions"; clear.textContent = "No exact seam was detected by this lab’s limited comparison rules. This is not proof that every answer has been fully explained."; caseLabEls.seams.append(clear); }
+  caseLabEls.seams.replaceChildren(); if (diagnosis.seams.length) diagnosis.seams.forEach((seam) => { const article = document.createElement("article"); const heading = document.createElement("h3"); heading.textContent = seam.title; const copy = document.createElement("p"); copy.textContent = seam.detail; article.append(heading, copy); caseLabEls.seams.append(article); }); else { const clear = document.createElement("p"); clear.className = "no-final-tensions"; clear.textContent = "This lab’s limited comparison rules did not find a specific conflict between your answers. That does not mean every answer has been fully explained."; caseLabEls.seams.append(clear); }
   caseLabEls.caseGrid.replaceChildren(); CASE_LAB_CONFIG.cases.forEach((question, index) => { const answer = caseLabAnswer(question); const article = document.createElement("article"); const meta = document.createElement("span"); meta.textContent = `${String(index + 1).padStart(2, "0")} · ${caseLabFamily(answer.family).name}`; const heading = document.createElement("h3"); heading.textContent = question.axis.replace(/^Case — /, ""); const selected = document.createElement("strong"); selected.textContent = answer.application || answer.label; const establishes = document.createElement("p"); const eLabel = document.createElement("b"); eLabel.textContent = "What it establishes: "; establishes.append(eLabel, answer.establishes); const limit = document.createElement("p"); const lLabel = document.createElement("b"); lLabel.textContent = "What remains open: "; limit.append(lLabel, answer.limit); article.append(meta, heading, selected, establishes, limit); caseLabEls.caseGrid.append(article); });
   caseLabEls.aiPrompt.value = buildCaseLabAIProbePrompt(); caseLabEls.workspace.classList.add("hidden"); caseLabEls.results.classList.remove("hidden"); caseLabEls.liveStatus.textContent = `Diagnostic ready: ${diagnosis.title}`; window.scrollTo({ top: 0, behavior: "smooth" }); caseLabEls.resultTitle.focus({ preventScroll: true });
 }

@@ -16,15 +16,15 @@ assert.match(html, /They take apart one familiar moral sentence\./, "the hub mus
 assert.match(html, /Community-Code Simulator tests construction\./, "the hub must explain how the seventh tool extends the suite");
 assert.match(html, /Social Criticism Lab tests reform\./, "the hub must explain how the eighth tool extends the suite");
 assert.match(html, /Blame Laboratory tests response\./, "the hub must explain how the ninth tool extends the suite");
-assert.match(html, /Reasons Lab tests the favoring relation\./, "the hub must explain how the tenth tool extends the suite");
-assert.match(html, /Evidence Lab tests epistemic force\./, "the hub must explain how the eleventh tool extends the suite");
+assert.match(html, /Reasons Lab tests what “a reason” means\./, "the hub must explain how the tenth tool extends the suite");
+assert.match(html, /Evidence Lab tests reasons for belief\./, "the hub must explain how the eleventh tool extends the suite");
 assert.match(html, /Standing Lab tests the boundary\./, "the hub must explain how the twelfth tool extends the suite");
 assert.match(html, /Value Conflict Lab tests comparison\./, "the hub must explain how the thirteenth tool extends the suite");
-assert.match(html, /Moral Emotions Lab tests the remainder\./, "the hub must explain how the fourteenth tool extends the suite");
+assert.match(html, /Moral Emotions Lab asks what remains\./, "the hub must explain how the fourteenth tool extends the suite");
 assert.match(html, /There is no required order\./, "the hub must not present the tools as a forced sequence");
 assert.match(html, /No account, tracking, or built-in AI/, "the hub must disclose its privacy model");
 assert.match(html, /The complete project in one sustained argument/, "the hub must present the book as the comprehensive synthesis");
-assert.match(html, /three source papers/, "the hub must state the current number of project source papers");
+assert.match(html, /reading room explains the source papers/, "the hub must describe the project sources");
 assert.match(html, /href="book\.html"/, "the hub must link to the dedicated book page");
 assert.match(html, /the-objective-morality-project-with-cover\.pdf/, "the hub must link directly to the complete illustrated book");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "the landing page must have one primary heading");
@@ -49,7 +49,7 @@ for (const link of toolLinks) {
 assert.doesNotMatch(html, /<script[^>]+app\.js/, "the central hub must not initialize the Moral Profile survey");
 assert.match(
   fs.readFileSync(path.join(root, "profile.html"), "utf8"),
-  /<script src="app\.js"><\/script>/,
+  /<script src="app\.js\?v=20260730-plain-language"><\/script>/,
   "the Moral Profile must retain its survey script after moving off the home route",
 );
 

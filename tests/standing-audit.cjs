@@ -15,6 +15,6 @@ reset({ opening: "constructed", final: "constructed", ...uniform("constructed"),
 assert.ok(api.caseLabSeams().some((seam) => seam.id === "discovered-inside-constructed"), "repeated objective status must be compared with a constructed final boundary");
 reset({ opening: "none", final: "none", ...uniform("none") });
 assert.equal(api.caseLabSeams().length, 0, "a uniform direct-standing denial must not receive an invented seam");
-assert.match(result.html, /Having standing is not the same as getting equal weight/, "the lab must separate standing from weight");
+assert.match(result.html, /Being included is not the same as receiving equal weight/, "the lab must separate standing from weight");
 assert.match(config.opening.context, /not only because a human owns it/, "the opening must define direct rather than instrumental standing");
 console.log(`Standing audit passed: ${result.profiles.toLocaleString()} complete case profiles, eight exact grounds, direct/indirect and standing/weight boundaries, scope seams, and full AI context verified.`);

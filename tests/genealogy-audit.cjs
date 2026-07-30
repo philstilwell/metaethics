@@ -77,7 +77,7 @@ for (const id of GENEALOGY_INFERENCE_ORDER) {
 assert.match(GENEALOGY_INFERENCES.explain.short, /does not yet show/i);
 assert.match(GENEALOGY_INFERENCES.distrust.short, /local process/i);
 assert.match(GENEALOGY_INFERENCES.against.short, /what the belief says|premise/i);
-assert.match(GENEALOGY_INFERENCES.burden.short, /whether it was true or false.+independent support/i);
+assert.match(GENEALOGY_INFERENCES.burden.short, /whether it was true or false.+support that does not depend on that process/i);
 
 assert.equal(GENEALOGY_QUESTIONS.length, 8, "the reasoning diagnostic must contain eight bounded cases");
 assert.deepEqual(
@@ -148,7 +148,7 @@ assert.equal(correctDiagnosis.correctCount, 8);
 assert.equal(correctDiagnosis.reviewCount, 0);
 assert.equal(correctDiagnosis.overreachCount, 0);
 assert.deepEqual(Array.from(correctDiagnosis.skills.map((skill) => skill.correct)), [2, 2, 2, 2]);
-assert.match(correctDiagnosis.title, /origin, reliability, content, and burden separate/i);
+assert.match(correctDiagnosis.title, /how the belief formed, whether the process was reliable, what evidence says about the belief, and what support is now needed/i);
 
 const allWrong = Object.fromEntries(GENEALOGY_QUESTIONS.map((question) => [
   question.id,
@@ -217,11 +217,11 @@ for (const id of GENEALOGY_INFLUENCE_ORDER) assert.match(prompt, new RegExp(GENE
 assert.match(prompt, /Ask one focused question at a time/i);
 assert.match(prompt, /Do not treat them as established causes/i);
 assert.match(prompt, /Do not infer falsity merely from dependence on evolution, culture, parents, religion, status, personal experience, or reflection/i);
-assert.match(prompt, /Do not assume moral realism or moral non-realism/i);
-assert.match(prompt, /Do not call a non-truth-apt attitude false/i);
-assert.match(prompt, /Deliberate reflection no automatic exemption/i);
-assert.match(prompt, /separate that phenomenological force from its evidential force/i);
-assert.match(prompt, /what evidence would lower confidence that this source tracks/i);
+assert.match(prompt, /Do not assume that objective moral facts exist or that they do not/i);
+assert.match(prompt, /Do not call an attitude false merely because it is not a factual claim/i);
+assert.match(prompt, /Give deliberate reflection no automatic exemption/i);
+assert.match(prompt, /keep the strength of that feeling separate from the strength of the evidence/i);
+assert.match(prompt, /what evidence would lower my confidence that this source responds to the facts or reasons/i);
 assert.match(prompt, /What this genealogy does not establish/i);
 for (const question of GENEALOGY_QUESTIONS) {
   assert.ok(prompt.includes(question.context), `the AI prompt must include the full ${question.id} case`);
@@ -259,7 +259,7 @@ assert.match(css, /\.genealogy-conclusion > p\s*\{[^}]*color:\s*#465047/s);
 assert.match(html, /Richard Joyce.+Irrealism and the Genealogy of Morals/is);
 assert.match(papersSource, /id: "joyce-irrealism-genealogy"/);
 assert.match(papersSource, /id: "moral-intuitions-realm"/);
-assert.match(papersSource, /comparatively modest.+epistemic burden/is);
+assert.match(papersSource, /strongest conclusion is limited.+needs independent support/is);
 assert.match(source, /document\.querySelector\("#genealogyOriginConviction"\)\.textContent/, "custom conviction text must be inserted as text, not HTML");
 assert.match(source, /genealogyEls\.liveConviction\.textContent/, "live custom text must be inserted safely");
 assert.match(source, /function clearGenealogyDownstream\(\)[\s\S]*?influences = \{\}[\s\S]*?answers = \{\}/, "changing the traced conviction must clear its old influence map and case answers");

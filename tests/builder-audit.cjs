@@ -138,7 +138,7 @@ assert.equal(firstDiagnostic.fitCount, firstDiagnostic.assessments.filter((asses
 assert.equal(firstDiagnostic.departureCount, 6 - firstDiagnostic.fitCount);
 assert.ok(firstDiagnostic.foundations.every((foundation) => foundation.cap > 0));
 assert.ok(firstDiagnostic.foundations.every((foundation) => foundation.score >= 0 && foundation.score <= 100));
-assert.match(firstDiagnostic.summary, /Neither result establishes objective moral truth or an approval-independent duty to obey/i);
+assert.match(firstDiagnostic.summary, /Neither result proves an objective moral truth or a duty that binds every dissenter/i);
 for (const foundation of firstDiagnostic.foundations) {
   const allQuestions = [...BUILDER_DESIGN_QUESTIONS, ...BUILDER_STRESS_QUESTIONS];
   const selectedUses = allQuestions.filter((question) => {
@@ -219,7 +219,7 @@ assert.equal(pressurePaths, 4 ** 6);
 const prompt = buildBuilderAIProbePrompt(firstState);
 assert.match(prompt, /Ask one focused question at a time/i);
 assert.match(prompt, /Do not argue the participant into moral realism or moral non-realism/i);
-assert.match(prompt, /distinguish factual workability, internal consistency, fair justification, motivation, democratic authorization, coercive capacity, and approval-independent obligation/i);
+assert.match(prompt, /Keep separate: whether the code will work, whether its rules fit together, whether people can defend it fairly/i);
 assert.match(prompt, /Do not equate effectiveness with legitimacy/i);
 assert.match(prompt, /Do not call overlap among bases an incoherence by itself/i);
 for (const question of BUILDER_DESIGN_QUESTIONS) {
@@ -236,7 +236,7 @@ for (const question of BUILDER_STRESS_QUESTIONS) {
 assert.match(html, /No cosmic rulebook\. Real people still have to live together\./i);
 assert.match(html, /This is a design lab, not a proof that your code is objectively true/i);
 assert.match(html, /Does “without moral facts” mean that anything goes\?/i);
-assert.match(html, /Is every constructed code a form of metaethical constructivism\?/i);
+assert.match(html, /Is every human-made code an example of the theory called “constructivism”\?/i);
 assert.match(html, /What will the final bars mean\?/i);
 assert.match(html, /aria-valuemax="15"/);
 assert.match(html, /id="resetBuilderButton"/);
@@ -253,7 +253,7 @@ assert.doesNotMatch(source, /fetch\(|XMLHttpRequest|WebSocket|EventSource/, "the
 assert.match(source, /\.focus\(\{ preventScroll: true \}\)/, "question and result transitions must manage keyboard focus");
 assert.match(source, /changed && Object\.keys\(builderState\.stress\)\.length[\s\S]*?builderState\.stress = \{\}/, "changing the written charter must clear pressure answers made under the old code");
 assert.match(papersSource, /id: "street-constructivism"/, "the reading room must contain the constructivist foundation paper");
-assert.match(papersSource, /rather than on independent moral facts/i, "the constructivist source note must state its non-realist relevance");
+assert.match(papersSource, /rather than discovered as independent moral facts/i, "the constructivist source note must state its non-realist relevance");
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(ids).size, ids.length, "the page must not reuse an element id");

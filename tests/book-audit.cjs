@@ -20,8 +20,8 @@ assert.equal((html.match(/<h1\b/g) || []).length, 1, "the book page must have on
 assert.match(html, /The comprehensive synthesis/, "the page must identify the book's role in the project");
 assert.match(html, /The labs isolate the questions\. The book makes the whole journey\./, "the page must distinguish focused labs from the cumulative book");
 assert.match(html, /No candidate returns with the full specification intact\./, "the page must state the cumulative result");
-assert.match(html, /not a deductive proof that every logically possible objective moral fact is[\s\S]*?impossible/, "the page must preserve the conclusion's limit");
-assert.match(html, /common or mutually legible emotions and values/, "the page must state the post-search public method");
+assert.match(html, /not a proof that every possible[\s\S]*?objective moral fact is impossible/, "the page must preserve the conclusion's limit");
+assert.match(html, /emotions and values[\s\S]*?that people share or can at least understand/, "the page must state the post-search public method");
 assert.match(html, /528 pages/, "the page must state the current print length");
 assert.match(html, /Prologue \+ 41 chapters/, "the page must state the complete narrative structure");
 assert.equal((html.match(/<li class="book-part-card">/g) || []).length, 7, "the page must present all seven parts");

@@ -17,7 +17,7 @@ const DECODER_LAYERS = {
   },
   evidence: {
     index: "02",
-    name: "Empirical predictions",
+    name: "Predictions we can check with evidence",
     short: "The speakers expect different observable effects from the same policy.",
     zone: "evidence",
     method: "Compare evidence",
@@ -45,14 +45,14 @@ const DECODER_LAYERS = {
   },
   coordination: {
     index: "06",
-    name: "Rules for social coordination",
+    name: "The public rule everyone will follow",
     short: "A group needs one workable public rule even though its members do not share one moral outlook.",
     zone: "design",
     method: "Design a common rule",
   },
   procedure: {
     index: "07",
-    name: "Procedure for reaching a decision",
+    name: "Who decides and how",
     short: "The speakers dispute who may decide, how reasons are heard, and how a decision can be challenged.",
     zone: "procedure",
     method: "Choose and defend a process",
@@ -62,7 +62,7 @@ const DECODER_LAYERS = {
     name: "Alleged moral facts",
     short: "The speakers make opposing claims about an objective moral status that approval does not create.",
     zone: "metaethical",
-    method: "Make the metaethical case",
+    method: "Explain the claim about moral facts",
   },
   mixed: {
     index: "M",
@@ -79,7 +79,7 @@ const DECODER_CHECK_ORDER = ["surface", ...DECODER_LAYER_ORDER, "mixed"];
 const DECODER_ZONES = [
   {
     id: "evidence",
-    name: "Evidence-responsive",
+    name: "Can be checked with evidence",
     layers: ["evidence"],
     action: "Define the outcome, compare genuinely similar cases, check base rates, and ask what result would change each prediction.",
     limit: "Evidence may fully resolve some claims and only narrow others. It does not, by itself, set an acceptable level of risk.",
@@ -89,18 +89,18 @@ const DECODER_ZONES = [
     name: "Clarify first",
     layers: ["scope"],
     action: "Define the act, policy, population, and disputed words before comparing verdicts about one shared subject.",
-    limit: "Clear wording can remove confusion. But people may also have a substantive dispute about which definition or frame should guide public discussion.",
+    limit: "Clear wording can remove confusion. But people may still disagree about which definition should guide public discussion.",
   },
   {
     id: "deliberate",
-    name: "Deliberative / sometimes negotiable",
+    name: "Needs discussion and may allow compromise",
     layers: ["interests", "priority"],
     action: "Map affected parties, expose exclusions, compare tradeoffs, and look for revised priorities or compromise.",
-    limit: "Facts inform this work, but no dataset automatically grants standing or assigns weight. Deliberation may end in agreement, compromise, or a clearly stated impasse.",
+    limit: "Facts inform this work, but no dataset decides whose interests count or how much weight each interest receives. Discussion may end in agreement, compromise, or a clearly stated deadlock.",
   },
   {
     id: "commitment",
-    name: "Commitment-dependent",
+    name: "Depends on what people support or commit to",
     layers: ["attitude"],
     action: "Use honest persuasion, changed experience, compromise, or explicit recognition that the practical stances remain opposed.",
     limit: "A true report about each person’s attitude does not make the attitudes jointly satisfiable or identify an objective winner. A moral dispute may also contain belief disagreements at the same time.",
@@ -121,7 +121,7 @@ const DECODER_ZONES = [
   },
   {
     id: "metaethical",
-    name: "Metaethical residual",
+    name: "A remaining claim about objective moral facts",
     layers: ["moral"],
     action: "Ask what an objective moral claim means, what could make it true, and how anyone could know that it is true.",
     limit: "Calling a disagreement ‘moral’ does not establish that objective moral facts exist; denying such facts does not end the practical conflict.",
@@ -143,9 +143,9 @@ const DECODER_SKILL_GROUPS = [
   },
   {
     id: "practical",
-    name: "Standing, priorities, and plans",
+    name: "Who counts, what comes first, and what people support",
     checks: ["interests", "priority", "attitude"],
-    note: "Keep who receives standing, how competing values are ranked, and what each person favors as three different questions.",
+    note: "Keep three questions separate: Whose interests are included? Which value comes first? What does each person support?",
   },
   {
     id: "institutional",
@@ -155,7 +155,7 @@ const DECODER_SKILL_GROUPS = [
   },
   {
     id: "metaethical",
-    name: "Objective moral claims",
+    name: "Claims about moral facts that do not depend on approval",
     checks: ["moral"],
     note: "Reserve this layer for an actual claim about moral truth that is not created by approval, law, or procedure.",
   },
@@ -196,7 +196,7 @@ const DECODER_QUESTIONS = [
         id: "evidence",
         kind: "evidence",
         label: "They must be making different factual predictions about what an assisted-dying policy would cause",
-        detail: "This conclusion treats the argument as an empirical dispute even though neither speaker has yet stated a prediction or referred to any observable outcome.",
+        detail: "This treats the argument as a disagreement about checkable facts even though neither speaker has predicted an observable result.",
       },
       {
         id: "attitude",
@@ -208,7 +208,7 @@ const DECODER_QUESTIONS = [
         id: "moral",
         kind: "moral",
         label: "They have directly identified one objective moral fact and are now disagreeing only about its truth",
-        detail: "This conclusion assumes that both sentences aim at an approval-independent moral fact before either speaker has said what moral claims mean or what could make one true.",
+        detail: "This assumes that both speakers are claiming a moral fact that is true whether or not anyone agrees, before either speaker has explained what the moral words mean.",
       },
     ],
   },
@@ -232,7 +232,7 @@ const DECODER_QUESTIONS = [
     why: "Verdicts about different policies are not yet cleanly opposed verdicts about one shared subject.",
     guide: {
       plain: "They first need one exact case. Otherwise each person can defeat a position the other person did not take.",
-      separate: "Clarifying a term is different from proving a policy safe. After the mismatch is exposed, they may still disagree substantively about which definition should guide public debate.",
+      separate: "Clarifying a term is different from proving a policy safe. After the wording mismatch is exposed, they may still disagree about which definition should guide public debate.",
       reveal: "Your answer tests whether you repair a scope mismatch before moving to evidence or values.",
     },
     choices: [
@@ -265,7 +265,7 @@ const DECODER_QUESTIONS = [
   {
     id: "evidence",
     phase: "Test the predictions",
-    axis: "Layer 2 — empirical expectations",
+    axis: "Layer 2 — predictions that evidence can check",
     prompt: "Now that the policy is fixed, what kind of disagreement do these new statements contain, and what could directly move it?",
     dialogue: [
       { speaker: "Lina", text: "A careful review will usually detect coercion, and reported errors will remain rare." },
@@ -279,7 +279,7 @@ const DECODER_QUESTIONS = [
       "Classify only the stated difference in their predictions. Do not infer that evidence will settle their acceptable level of risk or their final moral verdict.",
     correct: "evidence",
     displayOrder: ["scope", "attitude", "moral", "evidence"],
-    why: "Claims about how often observable events will occur are empirical, even when they appear inside a moral argument.",
+    why: "A claim about how often an observable event will occur can be checked with evidence, even when it appears inside a moral argument.",
     guide: {
       plain: "They are predicting different things about the world. Better evidence can make those predictions more or less credible.",
       separate: "Evidence can estimate effects. It cannot, by itself, decide how much risk is acceptable or whether an outcome has an objective moral status.",
@@ -289,7 +289,7 @@ const DECODER_QUESTIONS = [
       {
         id: "evidence",
         kind: "evidence",
-        label: "This is an empirical disagreement; compare clear definitions, outcome records, safeguards, and uncertainty",
+        label: "They make different predictions that evidence can check; compare definitions, outcome records, safeguards, and uncertainty",
         detail: "The speakers predict different observable rates of coercion, error, and lost trust. Evidence can test those forecasts, although limited data may leave a range rather than one certain answer.",
       },
       {
@@ -326,20 +326,20 @@ const DECODER_QUESTIONS = [
     assumptions:
       "Use the same narrow policy and empirical estimates. Lina does not deny that outsiders have reactions; Marcus does not yet say their interests outweigh the competent patient’s. The question is inclusion, not final priority.",
     scope:
-      "Identify who each speaker says should receive standing in the decision. Keep that separate from the factual size of an effect and from the later question of which included interest should win.",
+      "Identify whose interests each speaker includes in the decision at all. Keep that separate from the size of each effect and from the later question of which included interest should win.",
     correct: "interests",
     displayOrder: ["evidence", "interests", "priority", "procedure"],
     why: "Before values are ranked, arguments can differ over who and what enters the picture at all.",
     guide: {
       plain: "They disagree about who gets a place at the table before anyone decides whose concern is strongest.",
-      separate: "Evidence helps show who is affected. Granting an affected person standing is different from deciding that this person’s interest outweighs every competing interest.",
+      separate: "Evidence helps show who is affected. Including that person’s interests is different from deciding that those interests outweigh every competing interest.",
       reveal: "Your answer tests whether you separate inclusion in the field of concern from the later ranking of included interests.",
     },
     choices: [
       {
         id: "interests",
         kind: "interests",
-        label: "They disagree about whose interests receive standing; build one shared list of included and excluded groups before weighing them",
+        label: "They disagree about whose interests should be included at all; list the included and excluded groups before weighing any interests",
         detail: "They should state why requesting patients, non-requesting patients, families, clinicians, or the wider public do or do not count in this decision. Inclusion does not yet fix anyone’s final weight.",
       },
       {
@@ -458,7 +458,7 @@ const DECODER_QUESTIONS = [
         id: "moral",
         kind: "moral",
         label: "Opposite commitments by themselves prove that one speaker has detected an objective moral fact incorrectly",
-        detail: "The statements express what each person supports and plans to do. Whether an approval-independent moral fact exists is a further question that has not been established here.",
+        detail: "The statements express what each person supports and plans to do. Whether either plan is backed by an objective moral fact that is true regardless of approval is a further question.",
       },
     ],
   },
@@ -558,7 +558,7 @@ const DECODER_QUESTIONS = [
         id: "moral",
         kind: "moral",
         label: "Whichever process reaches a decision will thereby discover and prove the objective moral fact",
-        detail: "A court, panel, or legislature can issue a decision under a rule of authority. That institutional fact does not by itself establish an approval-independent moral property.",
+        detail: "A court, panel, or legislature can issue an official decision. That institutional fact does not by itself establish a moral truth that exists regardless of every decision.",
       },
     ],
   },
@@ -576,21 +576,21 @@ const DECODER_QUESTIONS = [
     assumptions:
       "The lab does not assume that objective moral facts exist or that they do not. It also does not assume that resolving facts, wording, interests, priorities, attitudes, rules, and procedures would resolve this final claim.",
     scope:
-      "Identify the metaethical issue created by these approval-independent claims. Do not choose which assisted-dying verdict is correct.",
+      "Identify the deeper question about moral facts created by these claims. Do not choose which assisted-dying verdict is correct.",
     correct: "moral",
     displayOrder: ["moral", "evidence", "attitude", "procedure"],
     why: "A claim about what remains morally true regardless of every approval is a claim about objective moral status, not merely a leftover practical dispute.",
     guide: {
       plain: "They are no longer only asking what happened, what people want, or what rule won. They are claiming that one answer is morally true independently of all of that.",
-      separate: "An unresolved dispute is not automatically a dispute about moral facts. Here it becomes one because both speakers explicitly make approval-independent truth claims.",
-      reveal: "Your answer tests whether you reserve metaethical analysis for an actual claim about the nature and truth of morality.",
+      separate: "An unresolved dispute is not automatically a dispute about moral facts. Here it becomes one because both speakers explicitly say their claim remains true whether or not anyone approves.",
+      reveal: "Your answer tests whether you identify a deeper question about what moral claims mean and what could make them true only when the speakers actually raise it.",
     },
     choices: [
       {
         id: "moral",
         kind: "moral",
         label: "They now allege incompatible objective moral facts; ask what those claims mean, what could make one true, and how it could be known",
-        detail: "This is the metaethical residual. Realists, relativists, constructivists, expressivists, and error theorists may explain the two sentences differently, so their meaning and truth cannot be assumed.",
+        detail: "This is the remaining question about the nature of morality. Different theories may treat the sentences as reports of independent facts, claims made true by a standard or fair process, expressions of commitment, or failed fact claims. Their meaning and truth cannot be assumed.",
       },
       {
         id: "evidence",
@@ -602,7 +602,7 @@ const DECODER_QUESTIONS = [
         id: "attitude",
         kind: "attitude",
         label: "They are only reporting their private feelings, and both reports can settle the issue without further analysis",
-        detail: "Some non-cognitivist theories interpret moral conflict through attitudes, but these speakers present their claims as approval-independent. The correct metaethical account remains to be argued.",
+        detail: "Some theories explain moral conflict mainly through attitudes and plans, but these speakers present their claims as true whether or not anyone approves. The correct account of what their claims mean still must be argued.",
       },
       {
         id: "procedure",
@@ -622,7 +622,7 @@ const DECODER_QUESTIONS = [
       { speaker: "Marcus", text: "Under that same policy, I predict much pressure will stay hidden. I rank protection ahead of choice. I will campaign for my side. A constitutional court should decide." },
     ],
     context:
-      "The two speakers explicitly make different predictions, rank the same values differently, announce opposed practical commitments, and name different decision procedures. They use the same policy definition and include the same affected groups. Neither makes an approval-independent moral claim in this exchange.",
+      "The two speakers explicitly make different predictions, rank the same values differently, announce opposed practical commitments, and name different decision processes. They use the same policy definition and include the same affected groups. Neither claims an objective moral fact that remains true regardless of approval.",
     assumptions:
       "Count only the types of statements actually made. Do not add a definition dispute, an excluded stakeholder, a detailed hospital rule, or an objective moral-fact claim merely because one appeared earlier in the lab.",
     scope:
@@ -662,7 +662,7 @@ const DECODER_QUESTIONS = [
         kind: "moral",
         resultName: "Public rules + objective moral facts",
         label: "Rules for social coordination and alleged objective moral facts, with no factual or procedural disagreement",
-        detail: "The exchange does not design a detailed operating rule or allege an approval-independent moral fact. It explicitly includes conflicting forecasts and different decision procedures.",
+        detail: "The exchange does not design a detailed operating rule or claim an objective moral fact that remains true regardless of approval. It explicitly includes conflicting forecasts and different decision processes.",
       },
     ],
   },
@@ -779,17 +779,17 @@ ${zoneLines}
 INTERVIEW INSTRUCTIONS
 1. Ask one focused question at a time and wait for my answer.
 2. First ask me for a real moral disagreement I want to decode. Require exact quotations or careful paraphrases from both sides before classifying it.
-3. Test these layers separately: empirical predictions; definitions or framing; whose interests matter; priority among shared values; personal attitudes or commitments; rules for social coordination; procedures for reaching agreement; and alleged moral facts.
+3. Test these layers separately: predictions that evidence can check; definitions or framing; whose interests count; which shared value comes first; personal attitudes or commitments; the public rule everyone will follow; who decides and how; and claims about objective moral facts.
 4. Do not infer a hidden layer merely because it would be common in similar debates. Mark it as unknown until the speakers state enough to support it.
 5. For every factual prediction, define the measured outcome, identify genuinely comparable cases, check relevant base rates, say what evidence could change each prediction, and state what uncertainty remains. Evidence may settle some factual disputes; do not promise that it must settle every one.
-6. For definitions, distinguish a fixable verbal mismatch from a substantive dispute about which framing should guide action.
-7. For interests, first use evidence to ask who is affected; then separately ask whose interests each speaker grants standing in the decision. Do not confuse inclusion with the later weight assigned to an included interest.
+6. For definitions, distinguish two people accidentally using a word differently from a deeper dispute about which definition should guide action.
+7. For interests, first use evidence to ask who is affected. Then separately ask whose interests each speaker includes at all. Do not confuse being included with how much weight an included interest receives later.
 8. For priorities, identify shared values, the exact tradeoff, and what reasons or compromise might change the ranking. Do not pretend data mechanically assigns weights.
 9. Distinguish disagreement in attitude from disagreement about attitudes. Accurate reports of opposed plans can both be true while the plans remain incompatible. Do not infer that a whole moral dispute is only a clash of attitudes; belief disagreement may also be present.
-10. Distinguish the content of a coordination rule from the procedure that chooses the rule.
-11. Treat a vote, court ruling, agreement, or workable policy as a practical settlement unless a separate argument shows more. Ask why the procedure has authority. A decision procedure does not by itself create objective moral truth.
+10. Keep separate the public rule a group will follow and the process used to choose that rule.
+11. Treat a vote, court ruling, agreement, or workable policy as a practical settlement unless a separate argument shows more. Ask why people should accept the process. A decision process does not by itself create an objective moral truth.
 12. Do not assume that an unresolved conflict concerns objective moral facts. Ask what moral claims mean, what could make them true, and how anyone could know only when that issue is actually raised.
-13. Do not assume moral realism or moral non-realism. Show how different metaethical views could interpret any genuine residual moral claim.
+13. Do not assume that objective moral facts exist or that they do not. When a genuine claim about such facts remains, show how different theories could explain what that claim means.
 14. Expect several layers to occur in one exchange. List each layer supported by the words used, and keep common but unstated layers marked “unknown.”
 15. End with a table that lists each layer, the evidence that it is present, the best next move, the likely limit of that move, and what disagreement would remain afterward.
 

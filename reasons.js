@@ -3,45 +3,45 @@
 const REASON_SOURCES = {
   current: {
     index: "01",
-    name: "Current aims",
+    name: "What the person wants now",
     short: "It helps this person get something they already want.",
     family: "Actual-desire account",
-    note: "A fact counts in favor only through an aim, desire, aversion, or project the person already has. This account must say what happens when desires are manipulated, badly informed, or cruel.",
+    note: "A fact gives the person a reason only when it helps with a goal, desire, concern, or project the person already has. This view must explain what happens when a desire was manipulated, rests on false information, or aims at cruelty.",
   },
   informed: {
     index: "02",
-    name: "Better-informed aims",
+    name: "What the person would want after careful thought",
     short: "It serves what the person would want after accurate information and careful thought.",
     family: "Corrected- or idealized-desire account",
-    note: "A reason connects to the person’s outlook after factual error, confusion, manipulation, or shallow reflection is corrected. The account must specify which corrections are legitimate without building the desired answer into them.",
+    note: "A fact gives the person a reason when it connects with what they would want after errors, confusion, manipulation, and rushed thinking were corrected. This view must say which corrections are fair without designing them to produce a preferred answer.",
   },
   commitment: {
     index: "03",
-    name: "Chosen commitments",
+    name: "Promises, roles, relationships, and chosen commitments",
     short: "A promise, role, relationship, or settled project gives it weight.",
     family: "Commitment or practical-identity account",
-    note: "A person’s voluntary promises, relationships, roles, and central projects can organize reasons. The account must explain which commitments are valid, how they may be left, and why a destructive identity should carry authority.",
+    note: "A person’s voluntary promises, relationships, roles, and central projects can give them reasons. This view must explain which commitments count, how someone may leave them, and why a destructive role or identity should have any authority.",
   },
   fair: {
     index: "04",
-    name: "Fair terms",
+    name: "Rules or agreements reached fairly",
     short: "A defensible agreement or procedure gives it weight.",
     family: "Reciprocal or procedural account",
-    note: "Reasons arise from fair terms among affected people or from a defended decision procedure. The account must identify who participates, what makes the process fair, and when its result may be challenged.",
+    note: "A fair agreement among affected people, or a fair way of deciding, can give participants reasons. This view must identify who takes part, what makes the process fair, and when people may challenge its result.",
   },
   external: {
     index: "05",
-    name: "Aim-independent reason",
+    name: "A reason that applies even if the person does not care",
     short: "The fact counts in favor even if this person does not care.",
-    family: "External or stance-independent reasons account",
-    note: "Some considerations apply without a supporting desire or accepted rule. This does not automatically make them moral facts, but the view must explain what makes them genuine reasons and whether it has rebuilt the authority the premise set aside.",
+    family: "Reasons independent of the person’s aims",
+    note: "Some facts may give a person a reason even when the person has no supporting desire and accepts no rule. That does not automatically make the reason a moral fact. The view must still explain why the fact counts in favor of the action and whom it applies to.",
   },
   none: {
     index: "06",
-    name: "No literal favoring fact",
-    short: "There are causes, desires, and effective means, but nothing literally counts in favor.",
+    name: "Nothing literally counts in favor",
+    short: "There are causes, desires, and effective ways to reach an aim, but no added fact that a person should choose one option.",
     family: "Practical-reasons skepticism",
-    note: "Reason language is treated as shorthand for explanation, motivation, or success relative to an aim. This view must explain deliberation, criticism, and statements about better evidence without quietly restoring the favoring relation it rejects.",
+    note: "On this view, talk about a ‘reason’ is shorthand for what caused a choice, what motivates someone, or what works for a stated aim. The view must explain careful thought, criticism, and claims about better evidence without quietly bringing back the kind of reason it rejected.",
   },
 };
 
@@ -73,14 +73,14 @@ const STANCE_CHOICES = [
   {
     id: "external",
     source: "external",
-    label: "Some facts count in favor whether or not this person wants, accepts, or is motivated by them",
+    label: "Some facts give a person a reason whether or not the person cares, agrees, or feels motivated",
     detail: "A person may have a reason they reject or do not feel, although the source and reach of such a reason still need explanation.",
   },
   {
     id: "none",
     source: "none",
-    label: "Nothing literally counts in favor; there are only causes, motives, aims, and effective ways to reach them",
-    detail: "I use “reason” as practical shorthand without treating favoring as a further fact about what anyone should do.",
+    label: "Nothing literally gives anyone a reason; there are only causes, motives, aims, and effective ways to reach them",
+    detail: "I use the word “reason” as convenient shorthand. I do not think there is an additional fact that a person should choose one option.",
   },
 ];
 
@@ -108,8 +108,8 @@ const REASON_CASES = [
       { id: "informed", source: "informed", label: "Her informed rejection of the implanted desire gives her reason to remove it instead", detail: "What matters is the outlook Mara reaches while understanding the manipulation and thinking from her other stable concerns.", establishes: "A corrected version of Mara’s own outlook can reject a desire she currently feels.", limit: "The view must explain why these corrections reveal her reasons instead of replacing one set of attitudes with another." },
       { id: "commitment", source: "commitment", label: "Her earlier directive gives her reason not to act on the new desire", detail: "Mara deliberately settled how commercially implanted wants should be treated before the manipulation occurred.", establishes: "A prior, informed commitment can guide action against a later desire.", limit: "The account must explain when an older commitment may govern a present person and when it may be revised." },
       { id: "fair", source: "fair", label: "A defensible consent safeguard gives her reason to suspend the desire", detail: "A rule made with informed users—do not act on undisclosed commercial implants until independent review—would control this case.", establishes: "A named procedure can provide a public basis for treating manipulated wants.", limit: "The procedure’s participants, authority, and right to override Mara’s present wish still need defense." },
-      { id: "external", source: "external", label: "The manipulation itself counts against acting on the desire, even if Mara embraces it", detail: "Secret control of a person’s agency supplies a reason for removal regardless of what the implanted preference now motivates.", establishes: "A fact can count against action without support from the agent’s present outlook.", limit: "The account must explain what makes manipulation reason-giving and whether that reason is moral, prudential, rational, or another kind." },
-      { id: "none", source: "none", label: "Nothing literally counts in favor; Mara must choose which desire or directive to use", detail: "The implant explains one motive and the directive records another commitment, but neither possesses an extra property of favoring an action.", establishes: "The case can be described as competing attitudes and strategies without literal normative reasons.", limit: "The view must explain what makes deliberation more than selecting whichever attitude wins." },
+      { id: "external", source: "external", label: "The secret manipulation gives Mara a reason to remove the desire, even if she now embraces it", detail: "Someone secretly controlled her ability to choose. That fact counts against acting on the implanted desire even when her current motivation supports it.", establishes: "A fact can give someone a reason without connecting to the person’s present aims.", limit: "This answer must explain why manipulation counts against the action and whether the reason concerns morality, Mara’s own good, rational choice, or something else." },
+      { id: "none", source: "none", label: "Nothing literally gives Mara a reason; she must choose whether to follow the desire or her earlier directive", detail: "The implant explains one motive and the directive records an earlier commitment, but there is no added fact that she should follow either one.", establishes: "The case can be described as a conflict between attitudes and plans without saying that either truly gives a reason.", limit: "This answer must explain what careful thought adds beyond letting whichever attitude is stronger win." },
     ],
   },
   {
@@ -135,8 +135,8 @@ const REASON_CASES = [
       { id: "informed", source: "informed", label: "Vale has a reason only if sound reflection could connect rescue to a deeper concern Vale already has", detail: "Full information alone is not enough, but careful reflection might connect the act to Vale’s concern for agency, consistency, or a future self.", establishes: "A reason may be internal to an improved version of the agent’s outlook rather than a current impulse.", limit: "If no sound path from Vale’s concerns exists, this account may still conclude that Vale lacks a reason." },
       { id: "commitment", source: "commitment", label: "No commitment-based reason is present because Vale accepted no rescue role or promise", detail: "A promise, relationship, or chosen identity could create a reason, but the case deliberately supplies none.", establishes: "Commitment-based reasons have conditions and do not arise merely because help is possible.", limit: "This account needs another source if it wants the strangers’ danger itself to reach Vale." },
       { id: "fair", source: "fair", label: "Vale has reason under a reciprocal rescue rule that everyone affected could defensibly adopt", detail: "People sharing vulnerable spaces have reason to use a rule requiring costless rescue, even if no one explicitly signed it beforehand.", establishes: "Fair terms among mutually vulnerable people can extend beyond current motivation.", limit: "The view must explain why a hypothetical or public rule has authority over Vale without actual acceptance." },
-      { id: "external", source: "external", label: "The preventable deaths themselves give Vale a reason to press", detail: "Their danger counts in favor of rescue even though Vale has no supporting desire, role, agreement, audience, or reward.", establishes: "At least one reason can apply independently of this agent’s aims.", limit: "The view must explain the reason-giving relation and whether calling this non-moral changes anything beyond its label." },
-      { id: "none", source: "none", label: "There is no literal reason for Vale; there are only the strangers’ wishes and the available causal option", detail: "We may plead, threaten, or express opposition, but the facts do not contain a further favoring relation for Vale.", establishes: "The case contains needs and means without any literal normative reason for the unmoved agent.", limit: "The view must explain why evidence and deliberation should change Vale rather than merely cause a new desire." },
+      { id: "external", source: "external", label: "The preventable deaths give Vale a reason to press the button, even though Vale does not care", detail: "The strangers’ danger counts in favor of rescue even though Vale has no supporting desire, role, agreement, audience, or reward.", establishes: "A reason can apply independently of this person’s aims.", limit: "This answer must explain why the deaths give Vale a reason and whether calling the reason non-moral changes anything important." },
+      { id: "none", source: "none", label: "Nothing literally gives Vale a reason; there are only the strangers’ wishes and a way to rescue them", detail: "People may plead, threaten, or oppose Vale, but the facts do not add a further truth that Vale should press.", establishes: "The case contains needs and a way to meet them without giving the unmoved person a literal reason.", limit: "This answer must explain why evidence and careful thought should change Vale rather than merely cause a new desire." },
     ],
   },
   {
@@ -162,8 +162,8 @@ const REASON_CASES = [
       { id: "informed", source: "informed", label: "His whole informed outlook gives him reason to refuse", detail: "Sound deliberation includes vivid awareness of the lasting loss and connects it to Ivo’s continuing concern for music and future experience.", establishes: "A corrected and temporally wider version of Ivo’s own outlook can oppose the current urge.", limit: "The account must say why future vividness and coherence are proper corrections rather than outside values imposed on Ivo." },
       { id: "commitment", source: "commitment", label: "His earlier calm directive gives him reason to refuse", detail: "Ivo deliberately committed his later impulsive self not to trade away this ability under the machine’s influence.", establishes: "A settled commitment can bridge changes in motivation over time.", limit: "The view must explain when a past directive remains authoritative and when the present person may revoke it." },
       { id: "fair", source: "fair", label: "A fair decision must represent both present and future Ivo", detail: "A procedure that gives each time-slice a voice would reject letting twelve hours of pleasure impose years of unchosen grief.", establishes: "A procedure can distribute standing across a person’s changing perspectives.", limit: "The design and authority of this imagined negotiation still need justification." },
-      { id: "external", source: "external", label: "The certain future suffering counts against entry even if present Ivo dismisses it", detail: "The fact that a person will suffer gives present Ivo a reason independent of what he currently wants or remembers later.", establishes: "Future harm can be an aim-independent reason for present action.", limit: "The view must explain why future suffering favors refusal and how that reason compares with present pleasure." },
-      { id: "none", source: "none", label: "Neither pleasure nor future grief literally favors anything; they are outcomes Ivo may care about differently", detail: "The machine supplies causal facts and Ivo supplies attitudes, but there is no further reason relation between them and the choice.", establishes: "Temporal conflict can be described without genuine favoring reasons.", limit: "The view must explain what makes careful long-term deliberation better than surrender to the strongest present impulse." },
+      { id: "external", source: "external", label: "The certain future suffering gives Ivo a reason not to enter, even if he now dismisses it", detail: "The fact that Ivo will suffer gives him a reason now, whatever he currently wants and whatever he remembers later.", establishes: "Future harm can give a person a reason that does not depend on a present aim.", limit: "This answer must explain why future suffering counts against entry and how that reason compares with present pleasure." },
+      { id: "none", source: "none", label: "Neither present pleasure nor future grief literally gives Ivo a reason; they are simply outcomes he may care about differently", detail: "The machine determines what will happen and Ivo supplies his attitudes, but there is no added fact that he should choose either option.", establishes: "A conflict between present and future desires can be described without saying that either truly gives a reason.", limit: "This answer must explain what makes careful long-term thought better than following the strongest present impulse." },
     ],
   },
   {
@@ -189,8 +189,8 @@ const REASON_CASES = [
       { id: "informed", source: "informed", label: "Sela has a reason if informed reflection connects delivery to values she still holds", detail: "She may recognize that reliability, closure, or respect for her own agency fits her deeper and better-informed outlook.", establishes: "The promise matters through a sound route from Sela’s broader concerns.", limit: "If no such route exists, this account may conclude that the promise supplies no reason." },
       { id: "commitment", source: "commitment", label: "The voluntary promise itself gives Sela a reason to deliver", detail: "By deliberately giving her word, Sela changed the practical situation even though the audience later disappeared.", establishes: "A chosen commitment can create a reason that outlives the desire that produced it.", limit: "The account must identify cancellation, emergency, deception, and unreasonable-cost conditions." },
       { id: "fair", source: "fair", label: "The shared practice of promising gives her a reason under terms people could rely on", detail: "A defensible promise practice treats voluntary assurances as reasons unless named release conditions apply.", establishes: "Reciprocal terms can give continuing force to assurances beyond a current audience.", limit: "Here no living participant relies on the practice, so the reach of hypothetical or general terms needs explanation." },
-      { id: "external", source: "external", label: "The fact that she promised counts in favor whether or not she still cares", detail: "A voluntary assurance is itself a reason-giving fact for the person who made it, independent of current desire or social response.", establishes: "A promise can supply an aim-independent reason.", limit: "The view must explain why this historical fact has favoring force and whether that force is distinctively moral." },
-      { id: "none", source: "none", label: "The promise explains a past commitment but nothing now literally counts in favor", detail: "Sela can choose to preserve or abandon the practice, yet no extra normative relation remains after every attitude and effect is specified.", establishes: "Promise language can be reduced to history, attitudes, and practices without a surviving reason fact.", limit: "The view must explain why breaking assurances is criticizable when no current preference or consequence supplies the criticism." },
+      { id: "external", source: "external", label: "The promise gives Sela a reason to keep it whether or not she still cares", detail: "The voluntary assurance itself gives the person who made it a reason, independent of current desire or social response.", establishes: "A promise can give someone a reason that does not depend on a present aim.", limit: "This answer must explain why a past promise still counts in favor and whether the reason is specifically moral." },
+      { id: "none", source: "none", label: "The promise records a past commitment, but nothing now literally gives Sela a reason to keep it", detail: "Sela can choose to preserve or abandon the practice, but after all attitudes and effects are stated, there is no added fact that she should do one rather than the other.", establishes: "Promises can be described through history, attitudes, and practices without a reason that survives on its own.", limit: "This answer must explain what criticism remains when no current preference or consequence supports keeping the promise." },
     ],
   },
   {
@@ -205,7 +205,7 @@ const REASON_CASES = [
     scope:
       "Choose what, if anything, counts in favor of giving the injection. Do not confuse Oren’s hatred with evidence about the treatment’s effects.",
     file: ["Pain: extreme", "Treatment: safe and available", "Oren’s desire: continued suffering", "Medical role: freely accepted"],
-    why: "The case separates hostile motivation, an accepted role, reciprocal safeguards, and the possible reason-giving force of another person’s suffering.",
+    why: "The case separates hostile motivation, an accepted role, reciprocal safeguards, and the question of whether another person’s suffering supports action.",
     guide: {
       plain: "Can someone else’s pain give you a reason when you want that person to hurt?",
       separate: "Oren’s role, a public rule, and the patient’s suffering can support the same act for different reasons.",
@@ -216,8 +216,8 @@ const REASON_CASES = [
       { id: "informed", source: "informed", label: "Sound reflection may connect treatment to Oren’s deeper medical aims", detail: "Full attention to the role, future identity, and facts may show that revenge conflicts with projects Oren more stably endorses.", establishes: "A corrected route from Oren’s own outlook can oppose an immediate hostile desire.", limit: "If hatred survives every permitted correction, this account needs to say whether any reason remains." },
       { id: "commitment", source: "commitment", label: "Oren’s freely accepted medical role gives a reason to treat", detail: "The role was adopted before this conflict and explicitly covers disliked or enemy patients.", establishes: "A voluntary professional commitment can create a reason against a current desire.", limit: "The account must explain why and when a person may leave, suspend, or revise the role." },
       { id: "fair", source: "fair", label: "A reciprocal medical rule gives Oren a reason to treat every captive alike", detail: "A rule protecting wounded people on all sides is one that mutually vulnerable parties can defend without knowing who will be captured.", establishes: "Fair terms can provide a reason across enemy lines.", limit: "The rule’s authority over someone who rejects the ceasefire practice still needs an account." },
-      { id: "external", source: "external", label: "The commander’s extreme and preventable pain itself counts in favor of treatment", detail: "The suffering gives Oren a reason even if Oren rejects the role, the reciprocal rule, and every compassionate motive.", establishes: "Another person’s suffering can be an aim-independent reason for an agent.", limit: "The account must explain how another person’s interest becomes Oren’s reason and whether this recreates a moral requirement." },
-      { id: "none", source: "none", label: "Nothing literally favors treatment; the case contains opposed desires, a role, and a possible technique", detail: "Oren can act from professional identity or revenge, but neither side is supported by a further normative fact.", establishes: "The conflict can be understood as competition among motives and practices without genuine reasons.", limit: "The view must explain what it means to call one response better supported after all motives are described." },
+      { id: "external", source: "external", label: "The commander’s extreme and preventable pain gives Oren a reason to provide treatment", detail: "The suffering gives Oren a reason even if he rejects the role, the shared rule, and every compassionate motive.", establishes: "Another person’s suffering can give someone a reason that does not depend on that person’s aims.", limit: "This answer must explain how the commander’s interest becomes Oren’s reason and whether this recreates a moral requirement under another name." },
+      { id: "none", source: "none", label: "Nothing literally gives Oren a reason to treat; the case contains opposing desires, a role, and an available treatment", detail: "Oren can act from professional identity or revenge, but there is no added fact that he should follow either one.", establishes: "The conflict can be understood as a contest among motives and practices without saying that either genuinely gives a reason.", limit: "This answer must explain what it means to call one response better supported after every motive has been described." },
     ],
   },
   {
@@ -242,9 +242,9 @@ const REASON_CASES = [
       { id: "current", source: "current", label: "Your crew now has reason to seize because that serves its strongest current aim", detail: "The earlier procedure matters only if honoring it still advances something the crew presently wants, such as stability or reputation.", establishes: "A procedure has no independent force beyond the agent’s current aims.", limit: "This makes fair cooperation fragile whenever safe defection becomes more attractive." },
       { id: "informed", source: "informed", label: "A fully informed view of the crew’s long-term aims gives reason to comply", detail: "Vivid awareness of future cooperation, reciprocal vulnerability, and the charter’s benefits may connect compliance to the crew’s deeper projects.", establishes: "Corrected long-term aims can support compliance after a local loss.", limit: "If secret seizure truly serves every informed aim, this account may supply no remaining reason to comply." },
       { id: "commitment", source: "commitment", label: "The crew’s voluntary agreement gives it a reason to accept the loss", detail: "By joining on known terms, the crew undertook a commitment that does not disappear when the lottery selects someone else.", establishes: "A voluntary commitment can survive an unfavorable result.", limit: "The account must specify release conditions and distinguish a genuine agreement from consent to an abusive system." },
-      { id: "fair", source: "fair", label: "The informed and equal procedure itself gives reason to comply", detail: "The charter represents every crew under conditions none could tailor to its later position.", establishes: "A defensible procedure can generate practical reasons for losers as well as winners.", limit: "The view must still explain why fairness has reason-giving force and when bad consequences override a fair process." },
+      { id: "fair", source: "fair", label: "The informed and equal process gives every crew a reason to follow the result", detail: "The charter represented every crew under conditions that none could design around its later position.", establishes: "A fair process can give reasons to people who lose as well as those who win.", limit: "This answer must still explain why fairness gives a reason and when harmful results may justify breaking from a fair process." },
       { id: "external", source: "external", label: "The effects on trust and other crews count against seizure regardless of consent", detail: "Even without the prior agreement, imposing the loss and destabilizing cooperation would provide reasons not to seize.", establishes: "Facts about others and future effects can supply reasons independently of present aims or procedural acceptance.", limit: "The account must state why those effects count and how they compare with the research benefit." },
-      { id: "none", source: "none", label: "Nothing literally favors compliance; the charter is a tool crews may keep while they support it", detail: "Agreement and fairness describe the process, while stability is an expected effect. None adds an independent favoring relation.", establishes: "Institutional compliance can be treated as conditional strategy rather than response to a genuine reason.", limit: "The view must explain what criticism remains when a participant defects secretly from terms it freely accepted." },
+      { id: "none", source: "none", label: "Nothing literally gives a reason to comply; the charter is a tool the crews may keep using while they support it", detail: "Agreement and fairness describe the process, while stability is an expected effect. None adds a further fact that a crew should comply.", establishes: "Following an institution can be treated as a strategy that works under certain conditions rather than as a response to a genuine reason.", limit: "This answer must explain what criticism remains when a participant secretly breaks terms it freely accepted." },
     ],
   },
   {
@@ -266,12 +266,12 @@ const REASON_CASES = [
       reveal: "Your answer identifies whether practical reason can criticize a fully informed and coherent aim.",
     },
     choices: [
-      { id: "current", source: "current", label: "Sol’s settled aim gives him reasons to use the effective means", detail: "Because displacement efficiently serves a real desire of Sol’s, the factual plan contains reasons for him to carry it out.", establishes: "An agent’s actual aim can generate instrumental reasons even when the aim is cruel.", limit: "The account needs an additional filter if it wants to say Sol has reason to abandon the end itself." },
+      { id: "current", source: "current", label: "Sol’s settled aim gives him reasons to use the effective means", detail: "Because displacement efficiently serves a real desire of Sol’s, the factual plan contains reasons for him to carry it out.", establishes: "An agent’s actual aim can give a reason to use effective means even when the aim is cruel.", limit: "The account needs an additional filter if it wants to say Sol has reason to abandon the end itself." },
       { id: "informed", source: "informed", label: "Sol’s informed and coherent endorsement leaves his reason to proceed intact", detail: "The usual corrections—facts, vivid awareness, consistency, and long reflection—do not connect him to a different aim.", establishes: "Idealizing an agent’s information and coherence does not guarantee humane reasons.", limit: "The account must add a non-circular correction if it wants to rule out fully informed cruelty." },
       { id: "commitment", source: "commitment", label: "Sol’s chosen identity gives him a project-relative reason, but not automatically final authority", detail: "His settled project can organize what to do next while remaining open to criticism from other commitments or kinds of reason.", establishes: "A central project can supply some practical structure without automatically settling every reason.", limit: "The account must explain why destructive identities have any weight and what may defeat them." },
       { id: "fair", source: "fair", label: "The project lacks support because the affected residents had no fair standing in its terms", detail: "A procedure representing everyone displaced would not let Sol’s private project determine their homes and lives.", establishes: "Fair representation can criticize an internally coherent personal aim.", limit: "The procedure’s design and authority over Sol still need defense; actual agreement is absent." },
-      { id: "external", source: "external", label: "The residents’ fear, loss, and agency count against the project whether or not Sol cares", detail: "Those facts give Sol reasons not to proceed despite his full information, coherent desire, and rejection of every shared rule.", establishes: "Aim-independent reasons can criticize a fully informed and coherent agent.", limit: "The account must explain their source, weight, and relation to the rejected category of objective moral facts." },
-      { id: "none", source: "none", label: "The plan is an effective route to Sol’s aim, but neither proceeding nor stopping is literally favored", detail: "Efficiency describes a means–end relation; opposition expresses other people’s aims. No further practical-reason fact settles between them.", establishes: "Instrumental effectiveness can remain after genuine favoring reasons are rejected.", limit: "The view must explain rational criticism beyond pointing to inconsistency, misinformation, or competing power." },
+      { id: "external", source: "external", label: "The residents’ fear, loss, and ability to direct their own lives give Sol reasons to stop, whether or not he cares", detail: "Those facts give Sol reasons not to proceed despite his full information, consistent desire, and rejection of every shared rule.", establishes: "Reasons that do not depend on a person’s aims can criticize even a fully informed and consistent person.", limit: "This answer must explain where those reasons come from, how strong they are, and how they differ from the objective moral facts the lab set aside." },
+      { id: "none", source: "none", label: "The plan effectively serves Sol’s aim, but nothing literally gives him a reason to proceed or stop", detail: "Efficiency describes what works for Sol’s goal; opposition expresses other people’s goals. No further fact settles which side anyone should choose.", establishes: "A plan can efficiently serve an aim even if nothing genuinely gives a reason to adopt that aim.", limit: "This answer must explain criticism beyond pointing to inconsistency, false information, or a competing use of power." },
     ],
   },
 ];
@@ -322,12 +322,12 @@ const MOTIVATION_QUESTION = {
     reveal: "Your answer locates the connection between reason, judgment, desire, and motivation.",
   },
   choices: [
-    { id: "actual", label: "No motivation means Iris has no reason", detail: "A consideration cannot be a reason for an agent unless it connects to an actual desire or motivation that the agent already has.", name: "Actual motivation required", copy: "You tied the existence of a reason to a present motivational state." },
-    { id: "counterfactual", label: "She has a reason if sound reflection could motivate her from concerns already in her outlook", detail: "A current impulse is unnecessary, but there must be a possible path from her existing concerns through accurate and rational deliberation.", name: "A sound internal route", copy: "You required a counterfactual route from the agent’s outlook rather than present motivation." },
+    { id: "actual", label: "Because Iris has no motivation, she has no reason", detail: "Something cannot give a person a reason unless it connects to a desire, concern, or motivation the person already has.", name: "A present motivation is required", copy: "You said that a reason exists only when it connects to a motivation the person has now." },
+    { id: "counterfactual", label: "Iris has a reason if careful thought could motivate her through concerns she already has", detail: "She need not feel an impulse now, but accurate information and careful thought must be able to connect the action with one of her existing concerns.", name: "Careful thought could connect the reason to an existing concern", copy: "You did not require present motivation, but you did require a possible path from the person’s existing concerns." },
     { id: "desireNeeded", label: "The reason may exist, but knowing it cannot motivate without a separate desire", detail: "The antidote fact can count in favor while action still requires an attitude such as caring about survival, consistency, or acting on reasons.", name: "Reason exists; desire moves", copy: "You separated the reason’s existence from the desire needed to produce motivation." },
-    { id: "judgmentMoves", label: "A fully sincere judgment normally brings some motivation, so total indifference needs explanation", detail: "If Iris genuinely judges that she has a reason, a complete absence of motivation casts doubt on her practical rationality or on the depth of the judgment.", name: "Sincere judgment normally moves", copy: "You treated motivation as normally built into sincere reason judgment without saying it always wins." },
+    { id: "judgmentMoves", label: "A sincere judgment that she has a reason should normally create at least some motivation", detail: "If Iris truly believes that she has a reason, her complete lack of motivation casts doubt either on how carefully she is thinking about action or on how fully she accepts the judgment.", name: "A sincere judgment normally creates some motivation", copy: "You said that sincerely judging that one has a reason normally creates some motivation, even if that motivation does not win." },
     { id: "independent", label: "The reason exists whether or not Iris can ever be motivated by it", detail: "Her motivational system may simply fail to respond to a consideration that still genuinely counts in favor of releasing the antidote.", name: "Reason independent of motivation", copy: "You allowed a reason to apply even when no actual or possible motivational link is supplied." },
-    { id: "none", label: "There is no favoring reason; the evidence predicts effects and Iris has no motive", detail: "Calling the evidence a reason adds no literal fact beyond the causal information and whatever attitudes a person happens to bring.", name: "No literal favoring reason", copy: "You rejected the reason–motivation problem by rejecting genuine favoring reasons." },
+    { id: "none", label: "The evidence predicts what will happen, but nothing literally gives Iris a reason and she has no motive", detail: "Calling the evidence a reason adds no fact beyond the predicted results and the attitudes a person brings to them.", name: "Nothing literally gives a reason", copy: "You dissolved the puzzle by denying that anything genuinely counts in favor of an action." },
   ],
 };
 
@@ -336,25 +336,25 @@ const SCOPE_QUESTION = {
   kind: "scope",
   phase: "Drawing the boundary",
   axis: "What did the premise remove?",
-  prompt: "If objective moral facts are absent, how much wider skepticism follows?",
+  prompt: "If there are no objective moral facts, what else—if anything—must we stop believing in?",
   context:
-    "The lab’s opening premise concerns objective moral facts. Philosophers disagree about whether practical, prudential, and epistemic reasons stand or fall with them.",
+    "This lab begins by setting aside objective moral facts. That does not by itself settle whether people can still have reasons to act, reasons based on their own future well-being, or reasons to believe what good evidence supports.",
   assumptions:
     "This question asks about the scope of your skepticism, not which acts are kind or cruel. No answer is automatically produced by moral non-realism.",
   scope:
-    "Choose the strongest claim you accept about reasons in general. ‘Objective’ here means not made true merely by an individual’s present attitudes.",
-  why: "Rejecting moral facts, rejecting desire-independent practical reasons, and rejecting every normative reason are three different positions.",
+    "Choose the strongest claim you accept about reasons in general. Here, ‘objective’ means that a fact gives a person a reason even if that person’s present wishes do not make it so.",
+  why: "These are three different views: objective moral facts do not exist; no reason can apply independently of a person’s aims; nothing truly gives anyone a reason to act or believe.",
   guide: {
     plain: "Did we remove only moral facts, all reasons that ignore an agent’s aims, or every fact about what anyone should do or believe?",
-    separate: "Moral skepticism does not by itself settle whether evidence gives reasons for belief or whether future pain gives prudential reasons.",
+    separate: "Doubting objective morality does not by itself settle whether evidence gives reasons for belief or whether your own future pain gives you a reason to avoid it.",
     reveal: "Your answer fixes the reach of your skepticism and prevents the final result from silently expanding it.",
   },
   choices: [
-    { id: "moralOnly", label: "Only objective moral facts are set aside; practical and rational reasons remain an open question", detail: "A moral non-realist may still accept reasons based on aims, commitments, procedures, welfare, evidence, or other sources.", name: "Moral skepticism only", copy: "You left the wider theory of reasons open rather than deriving it from moral non-realism." },
-    { id: "internalOnly", label: "Reasons tied to aims, commitments, or procedures may remain, but aim-independent practical reasons do not", detail: "There can be better and worse means, corrected preferences, and constructed standards without reasons that apply regardless of every stance.", name: "Agent-grounded reasons only", copy: "You preserved internal or constructed reasons while rejecting aim-independent practical reasons." },
-    { id: "global", label: "No genuine normative reasons remain—not for action, belief, desire, or feeling", detail: "Talk of what evidence supports or what anyone should do is ultimately shorthand for causes, attitudes, rules, and effective methods.", name: "Global reasons skepticism", copy: "You extended skepticism beyond morality to every literal favoring reason." },
-    { id: "practicalRealism", label: "Some objective practical reasons remain even though no distinctively moral properties do", detail: "Facts may genuinely favor actions without being facts about moral rightness, wrongness, duty, virtue, guilt, or desert.", name: "Objective practical reasons remain", copy: "You separated realism about some reasons from realism about distinctively moral properties." },
-    { id: "agnostic", label: "I am not yet sure how far the skepticism reaches", detail: "The premise removes objective moral facts, but I need another argument before accepting or rejecting other normative reasons.", name: "Scope left open", copy: "You withheld a wider conclusion pending a separate argument about normativity." },
+    { id: "moralOnly", label: "Set aside only objective moral facts; leave every other kind of reason as an open question", detail: "Someone can reject objective morality while still accepting reasons based on aims, commitments, fair processes, well-being, evidence, or other sources.", name: "Only objective moral facts are set aside", copy: "You did not assume that rejecting objective morality also removes every other kind of reason." },
+    { id: "internalOnly", label: "Keep reasons based on a person’s aims, commitments, or accepted procedures, but reject reasons that apply regardless of all of these", detail: "People can still compare means, correct false beliefs, and build shared standards without claiming that a reason applies to a person who rejects every supporting aim or rule.", name: "Only reasons connected to the person or an accepted practice remain", copy: "You kept reasons based on people’s aims or shared practices but rejected reasons that apply independently of them." },
+    { id: "global", label: "Nothing genuinely gives anyone a reason—not to act, believe, want, or feel", detail: "Talk about what evidence supports or what anyone should do is ultimately shorthand for causes, attitudes, rules, and effective methods.", name: "No literal reasons of any kind remain", copy: "You extended your doubt beyond morality to every claim that something genuinely counts in favor of an action or belief." },
+    { id: "practicalRealism", label: "Some facts still give people reasons to act even though no distinctively moral facts exist", detail: "A fact may count in favor of an action without being a fact about moral right, wrong, duty, virtue, guilt, or deserved blame.", name: "Some objective reasons for action remain", copy: "You kept some reasons that apply independently of a person’s wishes while rejecting distinctively moral facts." },
+    { id: "agnostic", label: "I am not yet sure what else, if anything, must be rejected", detail: "Setting aside objective moral facts is not enough by itself. I need another argument before accepting or rejecting other kinds of reasons.", name: "The wider question remains open", copy: "You did not draw a wider conclusion without a separate argument." },
   ],
 };
 
@@ -445,33 +445,33 @@ function reasonSeams() {
   });
   if (final?.source === "none" && counts.none.hits < REASON_CASES.length) seams.push({
     id: "final-none-cases",
-    title: "The final definition rejects favoring reasons that some case answers used",
-    detail: `${REASON_CASES.length - counts.none.hits} case answer${REASON_CASES.length - counts.none.hits === 1 ? "" : "s"} treated a desire, commitment, procedure, or independent fact as supporting action, while the final definition says nothing literally counts in favor.`,
+    title: "Some case answers used real reasons, but your final answer says that nothing literally gives a reason",
+    detail: `${REASON_CASES.length - counts.none.hits} case answer${REASON_CASES.length - counts.none.hits === 1 ? "" : "s"} said that a desire, commitment, fair process, or independent fact supported an action. Your final answer says there is no added fact that anyone should choose one option. Explain whether the earlier answers were only shorthand.`,
   });
   if (scope?.id === "global" && final?.source !== "none") seams.push({
     id: "global-scope",
-    title: "Global skepticism and the final source need reconciliation",
-    detail: `You rejected every genuine normative reason but ended by selecting ${REASON_SOURCES[final.source].name.toLowerCase()} as a source of favoring. One of those claims needs a narrower scope or a nonliteral reading.`,
+    title: "You rejected every literal reason, but your final answer still named a source of reasons",
+    detail: `You said that nothing genuinely gives anyone a reason, but ended by selecting ${REASON_SOURCES[final.source].name.toLowerCase()}. Narrow one claim or explain that the final source is only shorthand.`,
   });
   if (scope?.id === "internalOnly" && (final?.source === "external" || counts.external.hits >= 2)) seams.push({
     id: "external-scope",
-    title: "Aim-independent case answers extend beyond the stated boundary",
-    detail: `You limited reasons to aims, commitments, or procedures but used aim-independent reasons in ${counts.external.hits} case${counts.external.hits === 1 ? "" : "s"}${final?.source === "external" ? " and in the final definition" : ""}. Clarify whether those answers were shorthand or exceptions.`,
+    title: "Some answers used reasons that apply even when the person does not care",
+    detail: `You limited reasons to a person’s aims, commitments, or accepted procedures, but used reasons that apply independently of them in ${counts.external.hits} case${counts.external.hits === 1 ? "" : "s"}${final?.source === "external" ? " and in the final definition" : ""}. Explain whether those answers were shorthand or exceptions.`,
   });
   if (motivation?.id === "actual" && counts.external.hits > 0) seams.push({
     id: "motivation-external",
-    title: "An actual-motivation rule meets an aim-independent reason",
-    detail: `You said no motivation means no reason, yet ${counts.external.hits} case answer${counts.external.hits === 1 ? "" : "s"} allowed a fact to count regardless of the agent’s aims. State whether those agents had an unmentioned motive or revise one of the rules.`,
+    title: "You required motivation, but some case answers gave reasons to people who did not care",
+    detail: `You said that no motivation means no reason, yet ${counts.external.hits} case answer${counts.external.hits === 1 ? "" : "s"} said that a fact gave a person a reason regardless of that person’s aims. State whether those people had an unmentioned motive or revise one of the rules.`,
   });
   if (final?.source === "current" && counts.external.hits >= 2) seams.push({
     id: "current-external",
-    title: "The final current-aim rule is narrower than several case answers",
-    detail: `Aim-independent considerations carried ${counts.external.hits} cases, but the final definition requires a current aim. Explain whether those cases reveal hidden aims or genuine reasons that the final rule omits.`,
+    title: "Your final rule requires a current aim, but several case answers did not",
+    detail: `${counts.external.hits} cases used a reason that applied whether or not the person cared, but your final answer requires a current aim. Explain whether those cases contained hidden aims or reasons that your final rule leaves out.`,
   });
   if (final?.source === "external" && counts.none.hits >= 2) seams.push({
     id: "external-none",
-    title: "Aim-independent reasons and reasons skepticism both did substantial work",
-    detail: `You used no-favoring-reason answers in ${counts.none.hits} cases but ended with aim-independent reasons. Identify what feature makes a fact a reason in some cases and mere description in others.`,
+    title: "You sometimes denied all literal reasons but ended with reasons that apply regardless of a person’s aims",
+    detail: `You said that nothing literally gave a reason in ${counts.none.hits} cases, but your final answer accepts reasons that apply whether or not a person cares. Identify what makes a fact a reason in some cases and a mere description in others.`,
   });
   return seams;
 }
@@ -488,7 +488,7 @@ function reasonsDiagnosis() {
     ? `${leaders.map(([id]) => REASON_SOURCES[id].name).join(", ")} each appeared ${leaders[0][1].hits} of 7 times. No tie-breaker was invented.`
     : leaders.length ? `${REASON_SOURCES[leaders[0][0]].short} Selected ${leaders[0][1].hits} of 7 times.` : "No case source was recorded.";
   let title = "Your practical reasons had more than one possible source.";
-  if (final?.source === "none") title = "You ended by treating favoring reasons as shorthand.";
+  if (final?.source === "none") title = "You ended by treating talk about reasons as convenient shorthand.";
   else if (leaders.length === 1 && leaders[0][1].hits >= 4) title = `${REASON_SOURCES[leaders[0][0]].name} carried most of your cases.`;
   return {
     counts,
@@ -501,7 +501,7 @@ function reasonsDiagnosis() {
     scopeCopy: scope?.copy || "No skepticism boundary was recorded.",
     seams,
     title,
-    summary: `Seven cases used ${Object.values(counts).filter((entry) => entry.hits > 0).length} of the six available accounts. ${roleMatched() ? "You kept explanation, motivation, and practical support separate in the control." : "The three roles of reason need another look."} ${seams.length ? `${seams.length} exact seam${seams.length === 1 ? "" : "s"} should be clarified.` : "No exact cross-answer seam was detected by the lab’s limited checks."}`,
+    summary: `Across seven cases, you used ${Object.values(counts).filter((entry) => entry.hits > 0).length} of the six available accounts. ${roleMatched() ? "You kept apart what explains an action, what motivates it, and what supports doing it." : "Your answers may be blending what explains an action, what motivates it, and what supports doing it."} ${seams.length ? `${seams.length} point${seams.length === 1 ? "" : "s"} should be compared more closely.` : "The lab’s limited checks did not find a specific conflict between your answers."}`,
   };
 }
 
@@ -534,17 +534,17 @@ function buildReasonsAIProbePrompt() {
     const entry = diagnosis.counts[id];
     return `- ${source.name}: selected ${entry.hits} of ${entry.opportunities} times offered.`;
   });
-  const seamLines = diagnosis.seams.length ? diagnosis.seams.map((seam, index) => `${index + 1}. ${seam.title}: ${seam.detail}`) : ["No exact seam was flagged. This is not proof of complete coherence."];
+  const seamLines = diagnosis.seams.length ? diagnosis.seams.map((seam, index) => `${index + 1}. ${seam.title}: ${seam.detail}`) : ["The lab did not flag a specific conflict between answers. This does not prove that the view is fully coherent."];
 
   return `You are helping me examine what I mean by a practical reason after setting aside objective moral facts. Act as a careful philosophical interviewer, not as a therapist, moral judge, or advocate for one theory.
 
 FIXED PREMISE
-For this exercise, suppose there are no objective moral facts about rightness, wrongness, duty, virtue, guilt, or desert. Ordinary facts about desires, pain, evidence, promises, relationships, procedures, consequences, and power remain. Do not assume that this premise removes every practical, prudential, or epistemic reason. That wider question is part of the investigation.
+For this exercise, suppose there are no objective moral facts about right, wrong, duty, virtue, guilt, or deserved blame and praise. Ordinary facts about desires, pain, evidence, promises, relationships, decision processes, consequences, and power remain. Do not assume that this premise removes every reason to act, every reason based on a person’s own well-being, or every reason to believe what evidence supports. That wider question is part of the investigation.
 
 KEEP THREE ROLES SEPARATE
 1. Explanatory reason: a cause or background fact helps explain why an action happened.
 2. Motivating reason: the consideration in light of which the person acted; it can involve a false belief.
-3. Normative or favoring reason: a consideration that genuinely counts in favor of an action; it need not motivate or even be known.
+3. Supporting reason (often called a normative reason): a fact that genuinely counts in favor of an action; the person need not know it or feel motivated by it.
 A motivating reason often also helps explain an action. Keep the questions distinct without assuming that the roles are mutually exclusive.
 
 MY OPENING AND FINAL DEFINITIONS
@@ -553,7 +553,7 @@ MY OPENING AND FINAL DEFINITIONS
 
 ROLE CONTROL
 - My classification: ${role?.label || "No answer"}.
-- Lab assessment: ${role?.correct ? "This kept explanation, motivation, and favoring separate." : "This blended at least two roles; help me identify exactly which ones without treating the mistake as a moral failure."}
+- Lab assessment: ${role?.correct ? "This kept explanation, motivation, and support separate." : "This blended at least two roles; help me identify exactly which ones without treating the mistake as a moral failure."}
 
 MY SEVEN CASES
 ${caseLines.join("\n\n")}
@@ -570,26 +570,26 @@ SCOPE OF MY SKEPTICISM
 - ${scope?.label || "No answer"}. ${scope?.detail || ""}
 - Lab label: ${scope?.name || "Not classified"}. ${scope?.copy || ""}
 
-EXACT SEAMS FLAGGED
+POINTS TO COMPARE ACROSS MY ANSWERS
 ${seamLines.join("\n")}
 
 METHOD AND LIMITS
-- The seven cases offered the same six broad accounts: current aims, better-informed aims, chosen commitments, fair terms, aim-independent reasons, and no literal favoring facts.
+- The seven cases offered the same six broad accounts: what the person wants now, what the person would want after careful thought, chosen commitments, fair agreements, reasons that apply even when the person does not care, and the view that nothing literally gives a reason.
 - Selecting more than one account is not automatically incoherent. Context, source, strength, and scope may differ.
 - The lab did not prove that desires, commitments, procedures, suffering, or evidence are genuine reasons. It recorded when I treated them that way.
-- Moral non-realism does not automatically entail reasons internalism, reasons externalism, desire-based reasons, constructivism, or global normative skepticism.
-- An aim-independent practical reason may overlap with ordinary moral content. Ask whether I have merely renamed an objective moral fact, but do not assume that conclusion.
+- Rejecting objective moral facts does not automatically tell us whether reasons must connect to a person’s aims, can apply independently of those aims, can be built through fair procedures, or do not literally exist at all.
+- A reason that applies independently of a person’s aims may resemble an ordinary moral claim. Ask whether I have merely renamed an objective moral fact, but do not assume that I have.
 - Do not treat a desire as self-validating, an idealized desire as corrected without a specified correction, a commitment as binding without exit conditions, or a procedure as authoritative without participants and safeguards.
-- If I reject all favoring reasons, ask how I understand evidence, deliberation, error, and claims that one means is better for an aim—without assuming that this refutes my view.
+- If I reject all literal reasons, ask how I understand evidence, careful thought, mistakes, and claims that one method works better for an aim—without assuming that this refutes my view.
 
 INTERVIEW INSTRUCTIONS
-1. Begin with the strongest exact seam above. If none exists, begin with the case whose source and limit are hardest to state together.
+1. Begin with the strongest point of conflict or uncertainty above. If none exists, begin with the case whose selected source and stated limit are hardest to hold together.
 2. Ask one question at a time.
-3. First ask what kind of claim I am making: explanatory, motivating, or favoring.
+3. First ask what kind of claim I am making: one that explains the action, one that moved the person, or one that supports doing the action.
 4. If I cite an actual desire, test manipulated and cruel desires. If I cite an informed desire, make me specify the permitted corrections.
 5. If I cite a commitment, ask about voluntary adoption, conflict, exit, and destructive identities. If I cite fair terms, ask who participates and why the procedure has authority.
-6. If I cite an aim-independent reason, ask what makes the fact count in favor, whom it applies to, and whether it differs from an objective moral fact.
-7. If I deny favoring reasons, ask what remains of practical criticism and rational error without smuggling normativity back in.
+6. If I cite a reason that applies independently of a person’s aims, ask what makes the fact count in favor, whom it applies to, and whether it differs from an objective moral fact.
+7. If I deny that anything literally gives a reason, ask what remains of criticism and mistaken reasoning without quietly bringing that kind of reason back in.
 8. End with: (a) my clearest account of a practical reason, (b) its reach, (c) its connection to motivation, (d) its limits, and (e) the questions still open.
 
 Start with a two-sentence description of the issue, then ask your first single question.`;

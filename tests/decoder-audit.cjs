@@ -54,7 +54,7 @@ assert.ok(DECODER_ZONES.every((zone) => zone.action.length >= 55 && zone.limit.l
 assert.match(DECODER_ZONES.find((zone) => zone.id === "evidence").limit, /may fully resolve some claims and only narrow others/i);
 assert.match(DECODER_ZONES.find((zone) => zone.id === "procedure").limit, /leaving disagreement/i);
 assert.match(DECODER_ZONES.find((zone) => zone.id === "metaethical").limit, /does not establish that objective moral facts exist/i);
-assert.match(DECODER_ZONES.find((zone) => zone.id === "clarify").limit, /substantive dispute about which definition or frame/i);
+assert.match(DECODER_ZONES.find((zone) => zone.id === "clarify").limit, /may still disagree about which definition should guide public discussion/i);
 assert.match(DECODER_ZONES.find((zone) => zone.id === "commitment").limit, /belief disagreements at the same time/i);
 
 const skillChecks = DECODER_SKILL_GROUPS.flatMap((group) => group.checks);
@@ -110,13 +110,13 @@ assert.match(coordination.scope, /content of the rule with the separate procedur
 assert.match(procedure.scope, /Do not assume that a legitimate decision would create agreement or objective moral truth/i);
 assert.match(moral.assumptions, /does not assume that objective moral facts exist or that they do not/i);
 assert.equal(mixed.correct, "mixed");
-assert.match(mixed.context, /different predictions.+rank the same values differently.+practical commitments.+decision procedures/i);
+assert.match(mixed.context, /different predictions.+rank the same values differently.+practical commitments.+decision processes/i);
 assert.match(mixed.assumptions, /Do not add a definition dispute.+objective moral-fact claim/i);
 
 const interestQuestion = DECODER_QUESTIONS.find((question) => question.id === "interests");
 assert.match(interestQuestion.context, /which effects make someone a participant whose interests must enter/i);
-assert.match(interestQuestion.scope, /Keep that separate from the factual size of an effect.+which included interest should win/i);
-assert.match(interestQuestion.guide.separate, /Granting an affected person standing is different from deciding/i);
+assert.match(interestQuestion.scope, /Keep that separate from the size of each effect.+which included interest should win/i);
+assert.match(interestQuestion.guide.separate, /Including that person’s interests is different from deciding/i);
 
 const allCorrect = Object.fromEntries(DECODER_QUESTIONS.map((question) => [question.id, question.correct]));
 const correctDiagnosis = decoderDiagnostic(allCorrect);
@@ -170,11 +170,11 @@ const prompt = buildDecoderAIProbePrompt(allCorrect);
 assert.match(prompt, /Ask one focused question at a time/i);
 assert.match(prompt, /Do not infer a hidden layer/i);
 assert.match(prompt, /Evidence may settle some factual disputes; do not promise that it must settle every one/i);
-assert.match(prompt, /whose interests each speaker grants standing/i);
+assert.match(prompt, /whose interests each speaker includes/i);
 assert.match(prompt, /Distinguish disagreement in attitude from disagreement about attitudes/i);
 assert.match(prompt, /Do not infer that a whole moral dispute is only a clash of attitudes/i);
-assert.match(prompt, /procedure does not by itself create objective moral truth/i);
-assert.match(prompt, /Do not assume moral realism or moral non-realism/i);
+assert.match(prompt, /decision process does not by itself create an objective moral truth/i);
+assert.match(prompt, /Do not assume that objective moral facts exist or that they do not/i);
 assert.match(prompt, /Expect several layers to occur in one exchange/i);
 assert.match(prompt, /table that lists each layer/i);
 assert.match(prompt, /8 single-layer checks and 2 of 2 restraint\/integration checks/i);

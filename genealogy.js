@@ -107,27 +107,27 @@ const GENEALOGY_CONVICTIONS = [
 const GENEALOGY_INFERENCES = {
   explain: {
     index: "01",
-    name: "Causal explanation only",
-    short: "The evidence helps explain why the conviction formed, but does not yet show a faulty process, remove its support, or count against its content.",
-    next: "Record the influence, then ask whether it responded to relevant facts or reasons before deciding how much confidence the conviction deserves.",
+    name: "Only explains how the belief formed",
+    short: "The evidence helps explain why the belief formed. It does not yet show that the process was faulty, remove the belief’s support, or show that the belief is false.",
+    next: "Record the influence. Then ask whether it responded to relevant facts or reasons before deciding how much confidence the belief deserves.",
   },
   distrust: {
     index: "02",
-    name: "Reason to distrust the process",
+    name: "A reason to distrust how the belief formed",
     short: "The evidence shows a local process following an irrelevant cue, manipulation, or incentive rather than the features the judgment claims to track.",
     next: "Reduce reliance on that source, repeat the judgment under better conditions, and check whether independent support remains.",
   },
   against: {
     index: "03",
-    name: "Argument against the belief",
-    short: "The evidence bears on what the belief says, defeats a premise the person explicitly uses, or exposes a conflict inside the stated position.",
-    next: "Revise or defend the content itself. Another argument may still support it, so defeating one basis need not settle every possible defense.",
+    name: "Evidence against the belief itself",
+    short: "The evidence speaks directly against what the belief says, defeats a supporting claim the person uses, or reveals a conflict inside the person’s stated position.",
+    next: "Revise or defend the belief itself. Another argument may still support it, so defeating one source of support need not settle every possible defense.",
   },
   burden: {
     index: "04",
-    name: "Burden of proof shifts",
-    short: "A broad, well-supported account shows that the same process would have produced the conviction whether it was true or false, so independent support is now needed.",
-    next: "Withhold the benefit of the doubt and ask for support that survives the genealogy; do not silently replace ‘needs support’ with ‘proved false.’",
+    name: "The belief now needs independent support",
+    short: "A broad and well-supported history shows that the same process would have produced the belief whether it was true or false. The belief now needs support that does not depend on that process.",
+    next: "Withhold the benefit of the doubt and ask for support that survives the history. Do not silently replace ‘needs support’ with ‘proved false.’",
   },
 };
 
@@ -136,25 +136,25 @@ const GENEALOGY_INFERENCE_ORDER = ["explain", "distrust", "against", "burden"];
 const GENEALOGY_SKILLS = [
   {
     id: "explanation",
-    name: "Origin without verdict",
+    name: "An origin story without a verdict",
     checks: ["scar", "storm"],
     note: "Recognize a causal account when no unreliable process, direct objection to the belief, or complete loss of support has been shown.",
   },
   {
     id: "reliability",
-    name: "Process reliability",
+    name: "Was the belief-forming process reliable?",
     checks: ["badges", "applause"],
     note: "Notice when a judgment follows group labels or rewards instead of the facts and reasons it claims to follow.",
   },
   {
     id: "content",
-    name: "Content-level criticism",
+    name: "Evidence against what the belief says",
     checks: ["ledger", "mirror"],
     note: "Separate evidence against a stated premise or position from a story about the psychological source of belief.",
   },
   {
     id: "burden",
-    name: "Burden, not falsity",
+    name: "Needs support; not proved false",
     checks: ["islands", "species"],
     note: "Treat a broad history produced without regard for moral truth as a demand for independent support, not as automatic proof that every moral claim is false.",
   },
@@ -175,7 +175,7 @@ const GENEALOGY_QUESTIONS = [
       "Choose the strongest conclusion supported by identifying this personal experience as an early cause. Do not assume that a vivid cause is automatically a bias, and do not invent later support for Lea.",
     correct: "explain",
     displayOrder: ["distrust", "against", "explain", "burden"],
-    why: "A true belief and a false belief can both begin with a vivid event. The event explains salience, but this file does not yet assess Lea’s process or reasons.",
+    why: "A true belief and a false belief can both begin with a vivid event. The event explains why the issue stood out to Lea, but this file does not yet assess her process or reasons.",
     guide: {
       plain: "You know why Lea began caring. You do not yet know whether that starting point helped her notice a real harm, pushed her into an overgeneralization, or was later replaced by better reasons.",
       separate: "A cause of attention is not automatically a source of distortion. To show distortion, the case would need evidence that Lea’s judgment stops responding to relevant differences or evidence.",
@@ -445,17 +445,17 @@ function genealogyDiagnostic(answers = genealogyState.answers) {
     correct: skill.checks.filter((id) => answers[id] === genealogyQuestion(id).correct).length,
     total: skill.checks.length,
   }));
-  let title = "Several causal stories became stronger conclusions than the evidence allowed.";
-  let summary = "The answer review shows whether a case needed more skepticism, less skepticism, or a different kind of criticism.";
+  let title = "Some stories about how a belief formed were asked to prove more than the evidence allowed.";
+  let summary = "The answer review shows whether each case called for more doubt, less doubt, or a different kind of criticism.";
   if (correctCount === 8) {
-    title = "You kept origin, reliability, content, and burden separate.";
-    summary = "Across all eight cases, you matched the conclusion to the evidence without treating genealogy as either powerless or automatically refuting.";
+    title = "You kept four questions separate: how the belief formed, whether the process was reliable, what evidence says about the belief, and what support is now needed.";
+    summary = "Across all eight cases, you matched the conclusion to the evidence without treating a belief’s history as either irrelevant or an automatic refutation.";
   } else if (correctCount >= 6) {
     title = "You preserved most of the important boundaries.";
     summary = "Most classifications fit the evidence. The remaining cases show where an origin story was asked to do too much—or where a real challenge was understated.";
   } else if (correctCount >= 4) {
-    title = "Part of the genealogy is under control.";
-    summary = "You separated several findings correctly, while other cases still blended causal explanation, process reliability, content-level evidence, and burden of proof.";
+    title = "You correctly classified part of the evidence about how beliefs form.";
+    summary = "You separated several findings correctly. Other answers still blend how a belief formed, whether that process was reliable, evidence against what the belief says, and the need for new support.";
   }
   return {
     selected,
@@ -494,7 +494,7 @@ function buildGenealogyAIProbePrompt(state = genealogyState) {
     ].join("\n");
   }).join("\n\n");
 
-  return `You are helping me investigate the genealogy of one moral conviction. Act as a careful epistemic interviewer, not as a therapist and not as a judge announcing whether my conviction is morally correct.
+  return `You are helping me investigate how one moral conviction formed and what that history shows. Act as a careful interviewer about belief and evidence, not as a therapist and not as a judge announcing whether my conviction is morally correct.
 
 THE CONVICTION I CHOSE
 ${conviction}
@@ -514,27 +514,27 @@ MY COMPLETE CASE ANSWERS
 ${answerLines}
 
 THE FOUR CONCLUSIONS TO KEEP SEPARATE
-1. Causal explanation: an account of how a belief or attitude formed. Origin alone does not establish falsity or lack of justification.
+1. Explanation of origin: an account of how a belief or attitude formed. Origin alone does not show that the belief is false or unsupported.
 2. Reason to distrust a process: evidence that a source followed an irrelevant cue, manipulation, faulty factual belief, or incentive rather than the features it claimed to track. This can lower confidence without proving the output false.
-3. Argument against the belief: evidence bearing on the proposition, a premise explicitly supporting it, or the internal consistency of the stated position. Defeating one argument need not defeat every possible defense.
-4. Burden-of-proof shift: a broad, well-supported, non-truth-tracking genealogy explains the support currently on offer, so independent support is required. This is an epistemological conclusion, not by itself moral error theory.
+3. Evidence against the belief: evidence that speaks against what the belief says, defeats a claim explicitly used to support it, or reveals a conflict inside the stated position. Defeating one argument need not defeat every possible defense.
+4. Need for independent support: a broad, well-supported history shows that the process would have produced the belief whether it was true or false. Support from that process no longer deserves automatic trust. This is a conclusion about confidence and evidence, not by itself proof that all ordinary moral claims are false.
 
 INTERVIEW INSTRUCTIONS
 1. Ask one focused question at a time and wait for my answer.
 2. Begin by asking me to state the conviction precisely: its subject, scope, exceptions, and whether I understand it as a belief, commitment, rule, constructed conclusion, or useful way of speaking.
 3. For each of the nine possible influences, ask what actual evidence supports its presence. Mark unsupported possibilities “unknown”; do not invent a childhood, religion, motive, trauma, or social reward for me.
 4. Build a timeline. Separate what first made the issue noticeable, what first produced the judgment, what later reinforced it, and what currently supports it.
-5. For every proposed cause, ask whether the process responded to relevant facts or reasons, to an irrelevant cue, or to both. A causal influence can be truth-conducive, truth-indifferent, distorting, or still unassessed.
+5. For every proposed cause, ask whether the process responded to relevant facts or reasons, to an irrelevant cue, or to both. A cause may help someone reach the truth, ignore the truth, distort judgment, or still be untested.
 6. Separate a local challenge to one judgment from a global challenge to a whole moral faculty. Require broader evidence for broader conclusions.
 7. When a process looks unreliable, ask whether my current confidence still depends on it and whether independent evidence or deliberate reflection survives.
 8. Do not call a genealogy a genuine argument against the conviction unless evidence bears on its content, defeats an explicit premise, or exposes an inconsistency. State exactly which claim is challenged.
 9. Do not infer falsity merely from dependence on evolution, culture, parents, religion, status, personal experience, or reflection. State the additional bridge premise whenever a stronger conclusion is proposed.
-10. If a complete non-truth-tracking genealogy appears plausible, explain what benefit of the doubt is lost and what independent burden remains. Keep “unjustified,” “unknown,” and “false” separate.
-11. Do not assume moral realism or moral non-realism. Explain how a realist, constructivist, expressivist, and error theorist might interpret the same genealogy, but only after the causal evidence is mapped.
-12. If I treat the conviction mainly as an attitude or commitment rather than a truth-apt belief, assess whether its causes rely on false beliefs, irrelevant manipulation, or consequences I reject. Do not call a non-truth-apt attitude false.
+10. If the belief’s full history appears unrelated to whether the belief is true, explain exactly what automatic trust is lost and what new support is needed. Keep ‘unsupported,’ ‘unknown,’ and ‘false’ separate.
+11. Do not assume that objective moral facts exist or that they do not. Only after mapping the evidence about causes, explain how different theories of morality might interpret the same history.
+12. If I treat the conviction mainly as an attitude or commitment rather than as a statement that can be true or false, assess whether its causes rely on false beliefs, irrelevant manipulation, or consequences I reject. Do not call an attitude false merely because it is not a factual claim.
 13. Give deliberate reflection no automatic exemption. Ask what information, counterexamples, comparison rules, and safeguards made it more reliable than the earlier process.
-14. If the conviction feels self-evident, external, or authoritative, separate that phenomenological force from its evidential force. Ask whether practice, objectifying language, or internalized approval and punishment could explain how the response now feels.
-15. Test calibration directly: ask what evidence would lower confidence that this source tracks what it claims to track. Do not protect either a realist or non-realist interpretation from every possible result.
+14. If the conviction feels obvious, external, or authoritative, keep the strength of that feeling separate from the strength of the evidence. Ask whether repeated practice, fact-like language, or learned approval and punishment could explain how the response feels.
+15. Ask what evidence would lower my confidence that this source responds to the facts or reasons it claims to track. Do not protect any theory from every possible result.
 16. End with a table listing each proposed influence, evidence for it, confidence in the causal claim, its relation to relevant reasons, the strongest warranted conclusion, what remains unknown, and what independent support survives.
 17. Finish with two short sections: “What this genealogy changes” and “What this genealogy does not establish.”
 

@@ -174,9 +174,9 @@ for (const family of MEANING_FAMILY_ORDER) {
   const prompt = buildMeaningAIProbePrompt();
   assert.match(prompt, new RegExp(MEANING_FAMILIES[family].theory), `${family} AI context must name the associated family`);
   assert.match(prompt, /Ask one focused question at a time/i, "the AI prompt must require a paced interview");
-  assert.match(prompt, /relativism is not automatically anti-realism/i, "the prompt must preserve the relativism distinction");
-  assert.match(prompt, /classification of constructivism is disputed/i, "the prompt must preserve the constructivism caveat");
-  assert.match(prompt, /only four selected cross-family comparisons/i, "the prompt must disclose that its comparison set is not exhaustive");
+  assert.match(prompt, /Do not assume that every standard-relative view is anti-realist/i, "the prompt must preserve the relativism distinction");
+  assert.match(prompt, /Philosophers also disagree about how to classify constructivism/i, "the prompt must preserve the constructivism caveat");
+  assert.match(prompt, /checks only four selected comparisons/i, "the prompt must disclose that its comparison set is not exhaustive");
 }
 
 reset({ opening: "realism", final: "express" });

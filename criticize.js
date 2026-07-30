@@ -11,7 +11,7 @@ const CRITICISM_BASES = {
   },
   subcommunity: {
     index: "02",
-    name: "Subcommunity standards",
+    name: "Standards of a smaller group",
     lane: "actual",
     short: "The criticism is supported by the real standards of a minority, profession, faith, class, or other group inside or across the society.",
     establishes: "This shows that the society contains a genuine standard from which the practice is rejected, even if the largest group approves it.",
@@ -19,15 +19,15 @@ const CRITICISM_BASES = {
   },
   inconsistency: {
     index: "03",
-    name: "Internal inconsistency",
+    name: "The society breaks one of its own stated commitments",
     lane: "internal",
     short: "The practice conflicts with another rule, value, or description the same society publicly accepts.",
-    establishes: "This supports an internal criticism: the society cannot keep both the challenged practice and its stated commitment unchanged without explaining the conflict.",
+    establishes: "This criticizes the society on its own terms: it cannot keep both the challenged practice and its stated commitment unchanged without explaining the conflict.",
     limit: "It does not prove which commitment should be dropped, and it does not show that either commitment is objectively morally true.",
   },
   promise: {
     index: "04",
-    name: "Previously promised rights",
+    name: "A protection the society already promised",
     lane: "internal",
     short: "A charter, law, treaty, or explicit assurance already promised people a protection that the practice removes.",
     establishes: "This shows breach of a documented public commitment and gives affected people a claim using the institution’s own terms.",
@@ -43,27 +43,27 @@ const CRITICISM_BASES = {
   },
   harm: {
     index: "06",
-    name: "Harm or autonomy",
+    name: "Harm or loss of control over one’s own life",
     lane: "human",
-    short: "Evidence shows injury, suffering, deprivation, domination, or loss of informed control, and the criticism gives those effects priority.",
+    short: "Evidence shows injury, suffering, deprivation, domination, or loss of informed control, and the criticism treats those effects as important reasons for change.",
     establishes: "This joins an evidence claim about people’s lives to a stated practical priority against serious harm or imposed control.",
-    limit: "Evidence can show the effect; it cannot by itself supply the value bridge that everyone objectively ought to prevent that effect.",
+    limit: "Evidence can show the effect. It cannot by itself prove that everyone has an objective duty to prevent it; the value or decision rule doing that work must be stated.",
   },
   ideal: {
     index: "07",
-    name: "Idealized agreement",
+    name: "What people would accept under fairer conditions",
     lane: "human",
-    short: "The practice is tested by what people would accept with better information, less coercion, equal standing, or ignorance of their own social position.",
+    short: "The practice is tested by what people would accept with better information, less pressure, equal influence, or no knowledge of which social position they will occupy.",
     establishes: "This supports criticism from a specified procedure designed to remove information gaps, threats, or bargaining advantages.",
     limit: "The result depends on why those ideal conditions were chosen and whether actual people have reason to accept the procedure’s authority.",
   },
   truth: {
     index: "08",
-    name: "Approval-independent moral truth",
+    name: "A moral truth that no one’s approval creates",
     lane: "truth",
     short: "The practice is claimed to be morally wrong regardless of every actual or imagined person’s approval, commitment, agreement, or goal.",
     establishes: "If the claimed moral fact exists and the claim is correct, the society’s total approval does not change the practice’s moral status.",
-    limit: "The claim needs a defense of approval-independent moral facts and an account of how this case falls under them; social disapproval alone cannot supply either.",
+    limit: "This answer must defend the claim that such objective moral facts exist and explain how this case falls under one. Social disapproval alone cannot do either.",
   },
 };
 
@@ -87,7 +87,7 @@ const CRITICISM_LANES = {
   },
   truth: {
     index: "D",
-    name: "Approval-independent moral truth",
+    name: "Moral truth that no person or group creates",
     copy: "This ground claims a status that no person, vote, culture, or agreement creates or removes.",
   },
 };
@@ -101,24 +101,24 @@ const CRITICISM_STANCES = {
     allowed: ["majority"],
   },
   relative: {
-    name: "Actual-standard-relative definition",
+    name: "Use the standards of a named person or group",
     label: "A criticism can be valid relative to an actual group, rule, or promise, but no group automatically outranks every other",
     detail: "A minority can be correct by its standard, and a society can fail its own rule. The speaker must still name whose standard applies and how conflicts between standards are handled.",
     implication: "Actual group standards and the society’s existing commitments count; personal priorities, ideal procedures, and objective facts go beyond this definition.",
     allowed: ["majority", "subcommunity", "inconsistency", "promise"],
   },
   practical: {
-    name: "Practical non-realist definition",
+    name: "Use openly stated human reasons without claiming objective moral truth",
     label: "A criticism is valid when its human basis is stated and supported; it need not report an objective moral fact",
-    detail: "A person may use actual standards, broken commitments, harm, autonomy, personal commitments, or a defended procedure while openly rejecting approval-independent moral truth.",
-    implication: "Every listed ground except approval-independent moral truth can fit this definition if its factual and practical claims are supported.",
+    detail: "A person may use actual group standards, broken commitments, harm, loss of control, personal commitments, or a fair process while openly rejecting moral truths that exist independently of everyone’s views.",
+    implication: "Every listed ground except objective moral truth can fit this definition if its factual claims and stated priorities are supported.",
     allowed: ["majority", "subcommunity", "inconsistency", "promise", "personal", "harm", "ideal"],
   },
   realist: {
     name: "Moral-realist definition",
     label: "At least some societies can be objectively morally wrong even if every actual person approves",
     detail: "Votes, promises, harms, and procedures may help explain or persuade, but the deepest claim is that some moral truths do not depend on any person’s or group’s stance.",
-    implication: "All eight grounds can be used, although only the approval-independent truth ground directly states the realist claim.",
+    implication: "All eight grounds can be used, although only the objective-moral-truth ground directly states the realist claim.",
     allowed: CRITICISM_BASE_ORDER,
   },
 };
@@ -140,8 +140,8 @@ function criticismStanceQuestion(id, phase, axis) {
       "Choose the broadest basis you accept for society-level criticism. This is about what can support the criticism, not whether force should be used or whether the reformer will win.",
     why: "The repeated definition lets the diagnostic compare your general rule with the exact grounds you use in concrete cases.",
     guide: {
-      plain: "Ask what could make the reformer more than a person announcing dislike: majority acceptance, an actual standard, stated human reasons, or objective moral truth.",
-      separate: "A criticism can be useful, brave, or well argued without being approval-independent. An objective claim can also be poorly argued.",
+      plain: "Ask what could support the reformer’s criticism: the majority’s current view, a named group’s rule, openly stated human reasons, or an objective moral truth.",
+      separate: "A criticism can be useful, brave, and well supported without claiming an objective moral truth. A claim to objective truth can also be poorly argued.",
       reveal: "Your answer sets the general boundary against which your six case grounds will later be compared.",
     },
     choices: CRITICISM_STANCE_ORDER.map((stance) => ({ id: stance, ...CRITICISM_STANCES[stance] })),
@@ -185,7 +185,7 @@ const CRITICISM_CASES = [
       {
         id: "personal",
         basis: "personal",
-        label: "Ilya can openly oppose inherited rank from a personal commitment to equal standing without claiming to report Vey’s shared standard",
+        label: "Ilya can openly oppose inherited rank because he supports equal treatment, without claiming that Vey already shares that value",
         detail: "The criticism is an honest practical stand and invitation to reform, not a claim that most citizens already accept equality.",
       },
       {
@@ -204,7 +204,7 @@ const CRITICISM_CASES = [
         id: "truth",
         basis: "truth",
         label: "Inherited civic rank is objectively morally wrong even if every person in Vey understands it and continues to approve it",
-        detail: "The criticism claims an approval-independent moral fact; defending it requires more than reporting the health gap or the vote count.",
+        detail: "The criticism claims an objective moral fact that is true whether or not anyone agrees. Defending it requires more than reporting the health gap or the vote count.",
       },
     ],
   },
@@ -309,7 +309,7 @@ const CRITICISM_CASES = [
       {
         id: "harm",
         basis: "harm",
-        label: "The known loss of privacy and felt ownership supports criticism when critics state that those autonomy costs should not be traded for debt relief",
+        label: "The known loss of privacy and control over one’s own memories supports criticism when critics say those losses should not be traded for debt relief",
         detail: "The factual effect existed in 2080; the priority assigned to mental control supplies the bridge from that fact to opposition.",
       },
       {
@@ -322,7 +322,7 @@ const CRITICISM_CASES = [
         id: "truth",
         basis: "truth",
         label: "Commercial leasing of these memories was objectively morally wrong in 2080 regardless of approval in either century",
-        detail: "This answer makes the old practice’s status independent of the two majorities and requires an approval-independent moral defense.",
+        detail: "This answer says that the old practice was objectively wrong regardless of either majority’s view, so it needs a defense of that objective moral claim.",
       },
     ],
   },
@@ -387,7 +387,7 @@ const CRITICISM_CASES = [
         id: "truth",
         basis: "truth",
         label: "Overriding Nadi’s informed instruction is objectively morally wrong regardless of her groups, the city’s promise, or the lives saved",
-        detail: "This makes the criticism approval-independent and requires a defense of objective control over one’s posthumous body.",
+        detail: "This says the criticism remains true regardless of anyone’s approval and therefore requires a defense of an objective right to control what happens to one’s body after death.",
       },
     ],
   },
@@ -404,7 +404,7 @@ const CRITICISM_CASES = [
       "Every Delta resident is a citizen. Sen’s constitution separately promises equal freedom of movement and a hearing before any district-wide restriction. Delta received no hearing. Traffic models show that several non-discriminatory routing plans would produce the same evacuation time at modest extra cost.",
     scope:
       "Choose the single ground that gives the coalition’s criticism its clearest support in this case. Do not decide the remedy, damages, or whether every emergency movement limit is unacceptable.",
-    why: "The case contains both a broad professed value and a precise promised right. It also allows criticism through consequences, a fair procedure, or approval-independent truth.",
+    why: "The case contains both a broad stated value and a precise promised right. It also allows criticism through consequences, a fair process, or an objective moral truth.",
     file: ["68% support the gate", "All Delta residents are citizens", "Equal movement and a hearing were promised"],
     guide: {
       plain: "Sen says citizens stand as equals, and its constitution makes that promise specific. The gate treats one citizen district differently without the promised hearing.",
@@ -434,7 +434,7 @@ const CRITICISM_CASES = [
         id: "harm",
         basis: "harm",
         label: "The gate imposes avoidable confinement and loss of control when equally effective alternatives exist at a modest shared cost",
-        detail: "The evidence supports criticism when joined to a priority against concentrating an avoidable autonomy burden on one district.",
+        detail: "The evidence supports criticism when joined to a priority against placing an avoidable loss of personal control on one district.",
       },
       {
         id: "ideal",
@@ -446,7 +446,7 @@ const CRITICISM_CASES = [
         id: "truth",
         basis: "truth",
         label: "Confining Delta in these conditions is objectively morally wrong even if Sen removes its equality motto and every citizen approves",
-        detail: "This answer does not rely on inconsistency or breach; it claims an approval-independent moral status for the practice itself.",
+        detail: "This answer does not rely on inconsistency or a broken promise. It claims that the practice itself is objectively wrong whether or not anyone agrees.",
       },
     ],
   },
@@ -572,7 +572,7 @@ function criticismDiagnostic(state) {
   const usedLanes = new Set(profile.filter((basis) => basis.selected).map((basis) => basis.lane));
   let title = "Your criticism uses more than a popularity test.";
   if (beyond === 0) title = "Your criticism stays with current-majority approval.";
-  else if (profile.find((basis) => basis.id === "truth").selected) title = "Your criticism includes an approval-independent moral claim.";
+  else if (profile.find((basis) => basis.id === "truth").selected) title = "Your criticism includes a claim about objective moral truth.";
   else if (usedLanes.size >= 3) title = "Your criticism moves across several human standpoints.";
   const summary = `${beyond} of your 6 case answers used a ground other than current-majority approval. ${mismatches.length ? `${mismatches.length} answer${mismatches.length === 1 ? " does" : "s do"} not fit the boundary set by your final definition and needs clarification.` : "Every case ground fits within the boundary set by your final definition."} This reports how the claims are built; it does not decide whether any society is objectively morally right.`;
   return { profile, primary, beyond, mismatches, opening, final, changed, usedLanes, title, summary };
@@ -585,10 +585,10 @@ function buildCriticismAIProbePrompt(state) {
     "",
     "METHOD AND GUARDRAILS",
     "- Do not assume moral realism or moral non-realism. Help me state which view I rely on and why.",
-    "- Keep these claims distinct: ‘the majority disapproves,’ ‘a subcommunity rejects it,’ ‘the society violates its own rule,’ ‘a promised right was breached,’ ‘I oppose it,’ ‘it causes harm or removes autonomy,’ ‘an idealized procedure rejects it,’ and ‘it is objectively morally wrong.’",
-    "- Do not reduce every form of cultural relativism to simple majority rule. When I appeal to a social standard, ask which community, speaker, person judged, time, or rule supplies it.",
+    "- Keep these claims distinct: ‘the majority disapproves,’ ‘a smaller group rejects it,’ ‘the society violates its own rule,’ ‘a promised protection was broken,’ ‘I oppose it,’ ‘it causes harm or removes personal control,’ ‘people would reject it under fairer conditions,’ and ‘it is objectively morally wrong.’",
+    "- Do not treat every view based on social standards as simple majority rule. When I appeal to a social standard, ask which community, speaker, time, or rule supplies it.",
     "- Do not move from a factual claim about harm to a duty without asking for the value or procedure that makes the harm count against the practice.",
-    "- Do not infer approval-independent obligation from agreement, law, social approval, usefulness, punishment, or motivation.",
+    "- Do not infer a duty that binds every dissenter merely from agreement, law, social approval, usefulness, punishment, or motivation.",
     "- Do not call the use of several grounds incoherent by itself. Flag only a precise conflict in scope, definition, or application.",
     "- Treat a change between my opening and final definitions as a possible revision prompted by the cases, not an error.",
     "- For each tension, first restate both claims in their strongest compatible form, then ask what extra rule would settle it.",
@@ -631,7 +631,7 @@ function buildCriticismAIProbePrompt(state) {
   lines.push(
     "",
     "INTERVIEW TASK",
-    "Begin with the most important unresolved boundary in my answers. Ask whether my criticism is internal to an actual standard, practical from a stated commitment or procedure, or approval-independent. Then probe one case at a time. If I appeal to a group, ask why that group is relevant. If I appeal to harm, ask which priority connects the effect to reform. If I appeal to ideal agreement, ask who is included and why the idealizing conditions have authority. If I appeal to objective moral truth, ask what supports the truth claim beyond disapproval and what would count against it. End only after summarizing my clarified position, its strongest criticism of a fully approving society, and the questions that remain open.",
+    "Begin with the most important unclear boundary in my answers. Ask whether my criticism uses a group’s actual standard, an openly stated commitment or fair process, or an objective moral truth. Then probe one case at a time. If I appeal to a group, ask why that group is relevant. If I appeal to harm, ask which priority connects the effect to reform. If I appeal to what people would accept under fairer conditions, ask who is included and why people should accept those conditions. If I appeal to objective moral truth, ask what supports the truth claim beyond disapproval and what would count against it. End by summarizing my clarified position, its strongest criticism of a society in which everyone approves, and the questions that remain open.",
   );
   return lines.join("\n");
 }

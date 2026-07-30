@@ -3,12 +3,12 @@
 const MEANING_FAMILIES = {
   realism: {
     index: "01",
-    name: "Approval-independent moral fact",
+    name: "A moral fact that is true whether or not anyone agrees",
     theory: "Robust moral realism",
     group: "fact",
     resultPhrase: "a claim about a moral fact that approval does not create",
-    short: "The sentence describes a moral status that is not created by anyone’s approval or chosen standard.",
-    note: "This lab measures the robust or objective version of realism: at least some moral facts are not created by anyone’s approval. Broader, minimal uses of “realism” require less than this.",
+    short: "The sentence describes a moral status that no person, group, vote, or chosen rule creates.",
+    note: "The philosophical name used here is robust moral realism: at least some moral facts are true whether or not anyone approves of them. Some philosophers use the word ‘realism’ in broader ways, so this lab states the stronger meaning it measures.",
   },
   error: {
     index: "02",
@@ -16,17 +16,17 @@ const MEANING_FAMILIES = {
     theory: "Moral error theory",
     group: "fact",
     resultPhrase: "a fact-like claim that the world does not make true",
-    short: "The sentence tries to report an objective moral status, but no such status exists, so the literal claim fails.",
-    note: "Error theorists say ordinary moral claims try to state facts but never succeed. They still disagree about whether people should replace, revise, or knowingly preserve moral language.",
+    short: "The sentence tries to report that kind of moral fact, but no such fact exists, so the literal claim is false.",
+    note: "This view is called moral error theory. It says ordinary moral claims try to state objective facts but do not succeed. Error theorists still disagree about whether people should stop using moral language, change it, or knowingly keep it as a useful tool.",
   },
   express: {
     index: "03",
-    name: "Commitment, norm, or plan",
+    name: "A commitment, accepted rule, or plan",
     theory: "Plan/norm expressivism",
     group: "stance",
     resultPhrase: "an expression of commitment and a plan for action",
-    short: "The sentence mainly condemns, accepts a rule, or expresses a plan rather than detecting a special property.",
-    note: "This lab measures plan- and norm-centered expressivism. Sophisticated expressivists may still use words such as “true” and “fact”; they explain that language without treating moral judgment mainly as detection of an independent property.",
+    short: "The sentence mainly condemns, accepts a rule, or expresses a plan rather than reporting a moral property.",
+    note: "This family is called expressivism. The lab focuses on views that treat moral judgments as expressions of plans or accepted rules. More complex expressivist views may still use words such as ‘true’ and ‘fact,’ but explain them without saying that moral judgment mainly discovers an independent property.",
   },
   relative: {
     index: "04",
@@ -35,16 +35,16 @@ const MEANING_FAMILIES = {
     group: "standard",
     resultPhrase: "a claim made true or false by an actual standard",
     short: "The sentence says an action violates the standards of a named person or group, so whose standard is used must be specified.",
-    note: "Relativism is not automatically anti-realism. A relativist claim can still be treated as an ordinary truth claim about what a specified standard permits.",
+    note: "This is a standard-relative view: the claim is true or false only after a person’s or group’s standard is named. That does not automatically settle whether the view counts as realism or anti-realism in every philosophical use of those terms.",
   },
   construct: {
     index: "05",
-    name: "Idealized reasoning procedure",
+    name: "The result of a specified fair reasoning process",
     theory: "Idealized-procedure constructivism",
     group: "standard",
     resultPhrase: "a conclusion produced by a specified process of reasoning",
-    short: "The sentence reports what follows from a fair or rational procedure, not merely what people currently approve.",
-    note: "This is one narrow family of constructivism: a carefully specified reasoning procedure sets the answer. Other constructivists build from agency, practical reason, society, or other starting points, and philosophers dispute where these views belong.",
+    short: "The sentence reports what follows from a fair and informed process, not merely what people currently approve.",
+    note: "This is one form of constructivism: a clearly specified process of reasoning or agreement sets the answer. Other constructivists begin from the ability to choose, practical reasoning, society, or other starting points, and philosophers disagree about how to classify them.",
   },
   fiction: {
     index: "06",
@@ -53,7 +53,7 @@ const MEANING_FAMILIES = {
     group: "tool",
     resultPhrase: "a useful fiction or practical shorthand",
     short: "The speaker knowingly talks as if moral properties existed because the familiar language serves a practical purpose.",
-    note: "This lab measures revolutionary fictionalism: a speaker knowingly adopts or preserves moral make-believe after rejecting literal moral properties. It does not separately score hermeneutic fictionalism, which says ordinary moral talk was already fiction-like.",
+    note: "This is called revolutionary moral fictionalism: a speaker rejects literal moral properties but knowingly keeps using familiar moral language as a useful make-believe. The lab does not separately measure the view that ordinary moral talk was already fiction-like all along.",
   },
 };
 
@@ -95,7 +95,7 @@ const OPENING_QUESTION = {
     },
     error: {
       label: "She is trying to state that kind of moral fact, but no action actually has such a status",
-      detail: "Her sentence aims to report objective wrongness, yet the world contains no property that could make this ordinary moral claim literally true.",
+      detail: "Her sentence tries to report a moral status that is true whether or not anyone agrees. On this answer, no such status exists, so the literal sentence is false.",
       interpretation: "This says ordinary moral language tries to state facts while denying that any positive moral claim succeeds. That combination is the core of moral error theory.",
     },
     express: {
@@ -198,7 +198,7 @@ const CLAIM_ROUTE_QUESTIONS = [
       },
       error: {
         label: "It fits the view that the sentence asks the world for an objective moral property that is not there",
-        detail: "The catalog supplies harms, reactions, and preferences but no categorical property of wrongness capable of making the ordinary fact-like claim true.",
+        detail: "The catalog records harms, reactions, and preferences but contains no moral property of wrongness that is true whether or not anyone agrees.",
         interpretation: "This treats the missing property as evidence for error theory, though the catalog must still support the claim that no natural or constructed account can do the work.",
       },
       express: {
@@ -501,7 +501,7 @@ const TOOL_ROUTE_QUESTIONS = [
     },
     choices: meaningChoices({
       realism: {
-        label: "It states an approval-independent moral fact, so the announcer says something she does not believe",
+        label: "It states a moral fact that would be true whether or not anyone agrees, so the announcer says something she does not believe",
         detail: "Its useful effect does not change what the sentence means. A separate argument might defend using an insincere warning in this emergency, but that would not make it sincere.",
         interpretation: "This keeps the robust realist meaning fixed across emergency and ordinary settings instead of allowing usefulness to rewrite the claim.",
       },
@@ -573,7 +573,7 @@ const TOOL_ROUTE_QUESTIONS = [
       construct: {
         label: "The statements fit if the public verdict reports the result of a fair procedure she can identify and defend",
         detail: "Her denial of independent properties is compatible with treating a constructed principle as true under the procedure that gives it authority.",
-        interpretation: "This distinguishes non-realist-sounding metaphysics from constructivist truth and requires the underlying procedure to be more than hidden rhetoric.",
+        interpretation: "This distinguishes a non-realist-sounding view about what exists from a truth built through a process, and it requires that process to be more than hidden persuasion.",
       },
       fiction: {
         label: "The statements fit if she intentionally uses a useful moral fiction and can defend its transparency and effects",
@@ -941,14 +941,14 @@ function buildMeaningAIProbePrompt() {
     "- Use plain language first. Define any philosophical term immediately.",
     "- Do not infer a complete theory from the action I favor or from one answer.",
     "- Keep separate: what a moral sentence means, whether it can be true, what makes it true, what motivates the speaker, and whether the language is useful.",
-    "- Do not collapse moral non-realism, relativism, constructivism, skepticism, and disagreement into one position.",
-    "- Remember that relativism is not automatically anti-realism and that the classification of constructivism is disputed.",
+    "- Keep these views separate: denying objective moral facts, making truth depend on a named standard, building conclusions through a fair process, doubting knowledge, and simply disagreeing.",
+    "- Do not assume that every standard-relative view is anti-realist. Philosophers also disagree about how to classify constructivism.",
     "- Treat a change in meaning as something to explain, not automatic incoherence.",
     "- Press especially on whether I use ‘wrong’ differently in private reflection, public persuasion, disagreement, and rule-making.",
     "- If I make a truth claim, ask what could make it true and how I could be corrected. If I express a stance, ask how reasoning and disagreement work. If I use a standard or procedure, ask whose and why. If I use a fiction, ask about honesty and practical limits.",
     "",
     "METHOD AND LIMITS",
-    "The lab offered six simplified readings in every question: an approval-independent moral fact, a failed fact claim, a commitment or plan, an actual standard, an idealized reasoning procedure, and a deliberate moral fiction. These are associations with philosophical families, not diagnoses. Counts show how often I selected each interpretation out of seven; they are not probabilities, rankings, or confidence scores. The lab checks only four selected cross-family comparisons, so an unflagged combination is not proof that my overall view is coherent.",
+    "The lab offered six simplified readings in every question: a moral fact that is true whether or not anyone agrees; an attempt to state such a fact when no such fact exists; a commitment, rule, or plan; a named person’s or group’s actual standard; the result of a specified fair reasoning process; and a moral fiction used on purpose. These answers resemble philosophical families but do not diagnose a complete theory. Counts show how often I selected each reading out of seven. They are not probabilities, rankings, or confidence scores. The lab checks only four selected comparisons, so an unflagged combination does not prove that my whole view is coherent.",
     "",
     `ROUTE: ${diagnosis.route.name}`,
     diagnosis.route.reason,
@@ -1117,7 +1117,7 @@ function renderMeaningShiftReport(diagnosis) {
       <h3>${diagnosis.route.name}</h3>
       <p>${diagnosis.route.reason}</p>
     </article>
-    <p class="meaning-combination-intro">This lab checks four selected contrasts: independent fact versus failed fact claim, independent fact versus practical commitment, current standard versus fair-review procedure, and error theory versus deliberate fiction. It is not a complete test of every possible combination.</p>
+    <p class="meaning-combination-intro">This lab checks four selected contrasts: a moral fact versus a failed attempt to state one; a moral fact versus a practical commitment; a group’s current standard versus a fair-review process; and moral error theory versus deliberate moral fiction. It does not test every possible combination.</p>
     <div class="meaning-combination-list">${combinationCopy}</div>`;
 }
 

@@ -41,9 +41,9 @@ const AFTER_POLICIES = {
     group: "revise",
     level: "replacement",
     resultPhrase: "recasting moral claims as commitments and plans",
-    short: "Keep moral terms but openly use them mainly to express commitments, accept norms, and coordinate action.",
-    note: "This is a broad replacement strategy inspired by revolutionary expressivism. The speaker sincerely takes a practical stand; the speaker is not pretending that an objective moral fact exists.",
-    interpretation: "You chose to use moral language openly as a way to take a stand, accept a norm, and invite coordinated action.",
+    short: "Keep moral terms but openly use them mainly to express commitments, accept shared rules, and coordinate action.",
+    note: "This is a broad replacement strategy inspired by expressivism. The speaker sincerely takes a practical stand and invites others to coordinate; the speaker is not pretending that an objective moral fact exists.",
+    interpretation: "You chose to use moral language openly as a way to take a stand, accept a shared rule, and invite coordinated action.",
   },
   construct: {
     index: "05",
@@ -99,7 +99,7 @@ const AFTER_QUESTIONS = [
     axis: "Begin with the premise",
     prompt: "Suppose there are no objective moral facts. What should we do with moral language?",
     context:
-      "For this lab, imagine that careful inquiry has convinced you that actions do not possess objective properties such as moral rightness, wrongness, obligation, or desert. People still care, suffer, cooperate, make demands, and disagree. You must choose a general policy for words such as “right,” “wrong,” “ought,” and “deserves.”",
+      "For this lab, imagine that careful inquiry has convinced you that no objective moral facts make actions right, wrong, required, forbidden, or deserving of blame. People still care, suffer, cooperate, make demands, and disagree. You must choose a general policy for words such as “right,” “wrong,” “ought,” and “deserves.”",
     assumptions:
       "Treat the no-objective-facts premise as fixed only while taking this lab. Do not argue for or against it here. Ordinary facts about harm, promises, law, trust, feelings, and power remain available.",
     scope:
@@ -271,20 +271,20 @@ const AFTER_QUESTIONS = [
   },
   {
     id: "blame",
-    phase: "Blame without desert",
+    phase: "Blame without deserved payback",
     axis: "Case — the manufactured temper",
     prompt: "Niko deliberately humiliates a worker, but every part of his character has known causes. How should the community talk about blame?",
     context:
       "Niko publicly humiliates a junior worker for amusement and understands the likely distress. Scientists can trace his temper, tastes, and self-control to genes, training, and past events, just as they can for everyone else. The community needs to respond, protect workers, and decide whether to say, “Niko morally deserves blame.”",
     assumptions:
-      "Niko acted intentionally and can respond to incentives and discussion. The worker’s distress is real. Under the premise, there is no objective moral desert—no further fact making suffering or condemnation something he deserves in itself.",
+      "Niko acted intentionally and can respond to incentives and discussion. The worker’s distress is real. Under the premise, there is no objective fact making suffering or condemnation something he deserves in itself.",
     scope:
-      "Choose a policy for blame language. Do not confuse denying objective desert with refusing criticism, protection, restitution, deterrence, or behavior change.",
+      "Choose a policy for blame language. Do not confuse rejecting blame as objectively deserved with refusing criticism, protection, repayment, deterrence, or behavior change.",
     why: "Blame tests whether moral language adds useful accountability or an unsupported claim that someone deserves suffering.",
     guide: {
       plain: "The community can still stop Niko and demand repair. The question is whether it should call him blameworthy, and what that word would mean.",
       separate: "Causal explanation does not make the conduct safe or acceptable. It does challenge claims that punishment is deserved independently of future protection, repair, or chosen rules.",
-      reveal: "Your answer shows how your policy handles responsibility after objective desert is removed.",
+      reveal: "Your answer shows how your policy handles responsibility after blame as deserved payback is removed.",
     },
     choices: afterChoices({
       abolish: {
@@ -292,12 +292,12 @@ const AFTER_QUESTIONS = [
         detail: "The community should describe what Niko did and impose only responses supported by stated practical aims, without saying he objectively deserves suffering.",
       },
       fiction: {
-        label: "Retain blame and desert talk as a controlled fiction if it improves accountability",
+        label: "Retain talk of blame and deserved punishment as a controlled fiction if it improves accountability",
         detail: "The community may speak as if Niko deserves blame while knowing that claim is literally false, provided the fiction’s benefits and harms are carefully managed.",
       },
       conserve: {
         label: "Continue the ordinary belief that Niko is blameworthy and deserves condemnation",
-        detail: "Daily practice should treat intentional cruelty as genuinely deserving blame even while careful reflection says there is no objective moral desert.",
+        detail: "Daily practice should treat intentional cruelty as genuinely deserving blame even while careful reflection says there is no objective fact that makes the blame deserved.",
       },
       express: {
         label: "Use blame to express condemnation and commit the community to protective norms",
@@ -308,7 +308,7 @@ const AFTER_QUESTIONS = [
         detail: "The process should state who has a voice, what evidence counts, how decisions are made, and how the worker, Niko, and future workers can challenge a result.",
       },
       pragmatic: {
-        label: "Use “blameworthy” as shorthand for intentional harm and accountability, not cosmic desert",
+        label: "Use “blameworthy” as shorthand for intentional harm and accountability, not punishment deserved for its own sake",
         detail: "The community may keep the word while unpacking it into agency, risk, repair, and justified consequences whenever punishment or suffering is at stake.",
       },
     }),
@@ -317,14 +317,14 @@ const AFTER_QUESTIONS = [
     id: "law",
     phase: "Public authority",
     axis: "Case — the memory-theft sentence",
-    prompt: "A court must sentence a person who stole and sold memories. What should its official judgment say after objective guilt and desert are removed?",
+    prompt: "A court must sentence a person who stole and sold memories. What should its official judgment say after objective guilt and deserved payback are removed?",
     context:
       "A broker knowingly copied thousands of private memories and sold them. The statute clearly forbids this, the trial was fair, and the evidence is certain. Experts know the risks of repetition, the needs of victims, and the likely effects of prison, monitoring, restitution, and treatment. The judge must explain a public sentence.",
     assumptions:
       "Legal guilt under the valid statute is established. The lab’s premise removes objective moral guilt and deserved suffering, not legal authority, safety needs, victims’ interests, or the broker’s ability to respond to reasons.",
     scope:
       "Choose the court’s official language policy. Do not choose the exact sentence. Distinguish legal guilt from moral guilt and forward-looking reasons from punishment for its own sake.",
-    why: "Criminal law raises the stakes: vague moral language can affect liberty, suffering, public trust, and claims of desert.",
+    why: "Criminal law raises the stakes: vague moral language can affect liberty, suffering, public trust, and claims that punishment is deserved.",
     guide: {
       plain: "The court must act and give reasons. Should it remove moral claims, use them as fiction, preserve them, reinterpret them, attach them to a named public procedure, or use them as careful shorthand?",
       separate: "A person can be legally guilty because a public rule was proven violated even if there is no objective moral property of guilt or deserved punishment.",
@@ -333,7 +333,7 @@ const AFTER_QUESTIONS = [
     choices: afterChoices({
       abolish: {
         label: "Use legal and practical reasons only; remove claims of moral guilt or deserved suffering",
-        detail: "The judgment should name the proven violation, harm, risk, restitution, and least harmful effective response without asserting objective moral desert.",
+        detail: "The judgment should name the proven violation, harm, risk, restitution, and least harmful effective response without claiming that blame is objectively deserved.",
       },
       fiction: {
         label: "Keep moral guilt language as an official fiction if it makes law work better",
@@ -353,7 +353,7 @@ const AFTER_QUESTIONS = [
       },
       pragmatic: {
         label: "Keep terms such as “wrongdoing” as shorthand but define them in legal and practical terms",
-        detail: "The court may use familiar language only while making clear that it summarizes the violation, intent, harm, risk, and response—not objective desert.",
+        detail: "The court may use familiar language only while making clear that it summarizes the violation, intent, harm, risk, and response—not punishment deserved for its own sake.",
       },
     }),
   },
@@ -647,12 +647,12 @@ Help me decide what to do with moral thought and language after accepting that p
 
 The three classic post-error responses are:
 - Moral abolitionism: retire literal moral claims and state practical facts, aims, rules, and commitments directly.
-- Revolutionary moral fictionalism: remove ordinary moral belief but knowingly retain moral language through non-believing acceptance or make-believe.
+- Revolutionary moral fictionalism: stop literally believing ordinary moral claims but knowingly retain their language as useful make-believe.
 - Moral conservationism: continue ordinary moral belief and practice in daily life even though careful reflection says those beliefs are false.
 
 The lab also tests three broader replacement or reinterpretation strategies:
-- Expressivist revision: openly use moral claims to express commitments, accept norms, and coordinate plans.
-- Constructivist revision: tie verdicts to a named procedure or agreement rather than discovered moral truth. This is not every theory called constructivist; many constructivists accept normative truths.
+- Expressivist revision: openly use moral claims to express commitments, accept shared rules, and coordinate plans.
+- Constructivist revision: tie verdicts to a named procedure or agreement rather than a moral truth discovered independently of that process. This is not every view called constructivist; many constructivists accept genuine truths about what people should do.
 - Ordinary-language pragmatism: keep moral vocabulary as explainable practical shorthand. This is the project’s label, not one established doctrine.
 
 MY EXACT PRACTICAL-CASE COUNTS

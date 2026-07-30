@@ -13,6 +13,6 @@ reset({ opening: "desire", final: "desire", ...Object.fromEntries(config.cases.m
 assert.ok(api.caseLabSeams().some((seam) => seam.id === "unmoved-agent"), "the indifferent agent must be compared with a desire-only final account");
 reset({ opening: "none", final: "none", ...Object.fromEntries(config.cases.map((question) => [question.id, "none"])) });
 assert.equal(api.caseLabSeams().length, 0, "a uniform anti-normativist path must not receive an invented seam");
-assert.match(result.html, /Moral skepticism and skepticism about evidence are different claims/, "the lab must state its central non-entailment");
+assert.match(result.html, /Doubting moral facts is not the same as doubting reasons for belief/, "the lab must state its central non-entailment");
 assert.match(config.opening.context, /cause of belief or a clue/, "the opening must distinguish evidence from a cause");
 console.log(`Evidence audit passed: ${result.profiles.toLocaleString()} complete case profiles, seven exact accounts, truth/use/aim distinctions, scope seams, and full AI context verified.`);

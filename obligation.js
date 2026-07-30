@@ -33,8 +33,8 @@ const FORCE_LEVELS = {
   },
   universal: {
     index: "!",
-    name: "Approval-independent duty asserted",
-    short: "The answer claims authority that survives rejection or changing approval.",
+    name: "A duty that still applies when everyone rejects it",
+    short: "The answer claims that the rule binds a person even if the person and community reject it.",
   },
 };
 
@@ -45,15 +45,15 @@ const OBLIGATION_QUESTIONS = [
     axis: "What does “obligated” mean?",
     prompt: "When you say that a community rule morally obligates everyone it reaches, which claim do you mean?",
     context:
-      "Imagine a community with a deeply held rule. People strongly condemn anyone who breaks it. For now, no divine command, stance-independent moral fact, or rule required by reason has been established as part of the argument.",
+      "Imagine a community with a deeply held rule. People strongly condemn anyone who breaks it. For now, the argument has not established a divine command, a moral fact that is true whether or not anyone agrees, or a rule that reason itself requires.",
     assumptions:
       "The rule is genuinely popular and socially enforced. This question asks what the word “obligated” adds beyond that description.",
     scope:
       "Choose the statement closest to what you mean. Do not yet argue that the rule itself is wise, kind, or harmful.",
     why: "This opening answer fixes the strength and reach of the claim that the later cases will test.",
     guide: {
-      plain: "Are you reporting a social fact, giving practical advice, expressing a commitment, naming a conditional duty, or claiming authority that survives disapproval?",
-      separate: "A person can have a powerful reason to obey without the rule having approval-independent authority over that person.",
+      plain: "Are you reporting a group’s rule, giving practical advice, expressing a value you support, naming a duty that applies only under certain conditions, or claiming that the rule binds even a person who rejects it?",
+      separate: "A person can have a powerful practical reason to obey—such as avoiding punishment—without the rule truly binding that person after all approval and enforcement disappear.",
       reveal: "Your answer establishes how far your use of “obligation” is meant to reach.",
     },
     choices: [
@@ -63,7 +63,7 @@ const OBLIGATION_QUESTIONS = [
         detail: "Its authority would survive disagreement, secrecy, changing public opinion, and the absence of any accepted role or agreement.",
         level: "universal",
         directGap: null,
-        interpretation: "This defines an approval-independent claim. It is not yet marked mistaken; the remaining questions test what foundation, if any, supports authority that broad.",
+        interpretation: "This defines the broadest claim: the rule still binds after approval, membership, agreement, and punishment are removed. The remaining questions test what, if anything, supports authority that broad.",
       },
       {
         id: "member",
@@ -84,7 +84,7 @@ const OBLIGATION_QUESTIONS = [
         label: "It means that the community strongly requires and defends the rule",
         detail: "The statement describes a shared social code without claiming authority that survives rejection or a change in the community’s view.",
         level: "social",
-        interpretation: "This clearly describes a social rule while leaving approval-independent moral authority unclaimed.",
+        interpretation: "This clearly describes a social rule without claiming that it binds every person who rejects it.",
       },
       {
         id: "commitment",
@@ -109,7 +109,7 @@ const OBLIGATION_QUESTIONS = [
     why: "A secret act separates a standing social rule from the actual pressure created when other people react.",
     guide: {
       plain: "What follows from a standing social rule after every actual social reaction has been removed?",
-      separate: "Violating a local rule, expecting punishment, following a private commitment, and violating an approval-independent duty are different claims.",
+      separate: "These are different claims: ‘I broke the town’s rule,’ ‘I risk punishment,’ ‘I violated my own commitment,’ and ‘the rule still binds me even if everyone rejects it.’",
       reveal: "Your answer shows whether social acceptance defines wrongness, merely pressures behavior, or needs another standard.",
     },
     choices: [
@@ -124,14 +124,14 @@ const OBLIGATION_QUESTIONS = [
           detail: "The premise establishes that the town has a rule. A further premise is needed to show why the rule binds someone independently of detection, reaction, or accepted membership.",
           severity: "high",
         },
-        interpretation: "This moves directly from the existence of a standing social rule to approval-independent authority; within this test, that connection still needs support.",
+        interpretation: "This moves directly from ‘the town has a rule’ to ‘the rule binds even people who reject it.’ Within this test, that connection still needs support.",
       },
       {
         id: "localViolation",
         label: "It violates the town’s code, but that is the whole claim",
         detail: "The act is “wrong by this town’s rules” without being wrong for every person independently of those rules.",
         level: "social",
-        interpretation: "This preserves a coherent local code without inflating it into approval-independent authority.",
+        interpretation: "This preserves a coherent local rule without claiming that it binds every dissenter.",
       },
       {
         id: "noPressure",
@@ -150,9 +150,9 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "myCommitment",
         label: "I support Lio’s choice, but that judgment expresses my values",
-        detail: "I oppose the town’s rule without claiming that my opposition reports an approval-independent moral fact.",
+        detail: "I oppose the town’s rule without claiming that my opposition reports a moral fact that is true whether or not anyone agrees.",
         level: "commitment",
-        interpretation: "This answers the case through an explicit personal commitment rather than hidden approval-independent authority.",
+        interpretation: "This answers the case through an openly stated personal commitment rather than quietly claiming authority over every dissenter.",
       },
     ],
   },
@@ -206,7 +206,7 @@ const OBLIGATION_QUESTIONS = [
         label: "A person has practical reason to follow whichever town can punish them",
         detail: "The safest action changes with enforcement, even though the towns’ wider authority has not been established.",
         level: "pressure",
-        interpretation: "This explains compliance through expected social costs rather than approval-independent obligation.",
+        interpretation: "This explains compliance through expected social costs rather than a duty that survives rejection.",
       },
       {
         id: "outsideStandard",
@@ -231,14 +231,14 @@ const OBLIGATION_QUESTIONS = [
     why: "Reform tests whether current approval is only a social fact or also your complete test of moral status.",
     guide: {
       plain: "Are you describing two social codes, endorsing Asha, or judging the old code by another standard?",
-      separate: "Later praise can change reputation and the current code without automatically proving an earlier approval-independent duty.",
+      separate: "Later praise can change reputation and the current social rule without proving that an opposite duty already applied before people changed their minds.",
       reveal: "Your answer shows whether current approval is your whole description or whether another standard does the critical work.",
     },
     choices: [
       {
         id: "wrongThen",
         label: "Asha violated the code then and is honored under the new code now; that is the whole claim",
-        detail: "The description tracks the colony’s social rules at each time without adding an approval-independent judgment that the old rule was morally mistaken.",
+        detail: "The description tracks the colony’s social rules at each time without adding the claim that the old rule was mistaken as an objective moral fact.",
         level: "social",
         interpretation: "This is a consistent social-code answer. It records a change in rules without claiming that the former community violated a further standard.",
       },
@@ -252,7 +252,7 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "presentEndorsement",
         label: "Calling Asha right expresses my present support for what she did",
-        detail: "I can praise her courage and oppose the old rule without claiming that approval-independent moral facts existed.",
+        detail: "I can praise her courage and oppose the old rule without claiming that moral facts existed independently of everyone’s views.",
         level: "commitment",
         interpretation: "This gives reform a clear human basis in present commitments rather than pretending the old community supplied it.",
       },
@@ -261,20 +261,20 @@ const OBLIGATION_QUESTIONS = [
         label: "The colony’s own promise of equal citizenship gave Asha a limited case",
         detail: "Her challenge exposed a conflict between the colony’s stated commitments and its exclusionary rule.",
         level: "conditional",
-        interpretation: "This criticizes the rule from standards the community already claimed, without yet establishing an approval-independent duty.",
+        interpretation: "This criticizes the rule by using standards the community already claimed, without proving a duty that applies independently of those standards.",
       },
       {
         id: "futureProof",
-        label: "The later medal proves that Asha’s earlier action already had approval-independent moral authority",
+        label: "The later medal proves that Asha’s action was already morally required before the colony changed its view",
         detail: "The community’s later approval is treated as enough, by itself, to prove the act’s moral status at a time when that approval did not yet exist.",
         level: "universal",
         directGap: {
           id: "future-approval",
           title: "Later approval was used as proof of an earlier duty",
-          detail: "The medal establishes how the colony judges Asha later. Another premise is needed to show why that later reaction proves an approval-independent status at the earlier time.",
+          detail: "The medal shows how the colony judges Asha later. Another premise is needed to show why that later reaction proves what was morally required before the colony changed its view.",
           severity: "medium",
         },
-        interpretation: "This asks a later social reaction to prove an earlier approval-independent status without explaining how the later attitude reaches backward.",
+        interpretation: "This asks a later social reaction to prove what was morally required earlier, without explaining how the later attitude can reach backward.",
       },
     ],
   },
@@ -288,7 +288,7 @@ const OBLIGATION_QUESTIONS = [
     assumptions:
       "The custom was not disclosed before rescue, the traveler made no promise, and refusing causes no loss beyond offense at seeing the custom rejected.",
     scope:
-      "Ask whether disapproval itself creates an obligation for a nonmember. Courtesy, safety, gratitude, and approval-independent authority should be kept separate.",
+      "Ask whether disapproval itself creates an obligation for a nonmember. Keep courtesy, safety, gratitude, and a duty that binds outsiders separate.",
     why: "An outsider tests whether a group’s authority extends beyond agreement, membership, and accepted roles.",
     guide: {
       plain: "Does being surrounded by people who condemn an act make their rule morally binding on you?",
@@ -312,9 +312,9 @@ const OBLIGATION_QUESTIONS = [
       {
         id: "avoidConflict",
         label: "The traveler should probably kneel to avoid conflict and exclusion",
-        detail: "Compliance is practical advice based on likely social costs, not proof that the custom has approval-independent authority.",
+        detail: "Compliance is practical advice based on likely social costs, not proof that the custom binds an outsider who rejects it.",
         level: "pressure",
-        interpretation: "This recognizes a practical social reason while withholding a claim of approval-independent duty.",
+        interpretation: "This recognizes a practical social reason without claiming a duty that survives rejection.",
       },
       {
         id: "guestRole",
@@ -328,7 +328,7 @@ const OBLIGATION_QUESTIONS = [
         label: "There is no obligation, though kneeling could be a generous courtesy",
         detail: "A person may voluntarily show respect without admitting that the group has moral authority over them.",
         level: "commitment",
-        interpretation: "This makes respectful conduct a chosen value rather than an approval-independent requirement created by offense.",
+        interpretation: "This makes respectful conduct a chosen value rather than a requirement that the community’s offense creates for every outsider.",
       },
       {
         id: "dignityLimit",
@@ -396,7 +396,7 @@ const OBLIGATION_QUESTIONS = [
         label: "I oppose forced praise as a human commitment I am willing to defend",
         detail: "My resistance rests on openly held values rather than a claim that punishment somehow creates morality.",
         level: "commitment",
-        interpretation: "This supplies a clear basis for resistance without disguising a commitment as an established approval-independent fact.",
+        interpretation: "This supplies a clear basis for resistance without disguising a commitment as an established objective moral fact.",
       },
     ],
   },
@@ -406,7 +406,7 @@ const OBLIGATION_QUESTIONS = [
     axis: "The final bridge",
     prompt: "Given only the stated fact of strong community disapproval, which conclusion follows without adding another premise?",
     context:
-      "For this question, no divine command, stance-independent moral fact, built-in purpose, rule required by reason, or prior agreement has been established as a premise. The stated fact is only that a community strongly supports a rule and condemns violations.",
+      "For this question, the argument has not established a divine command, a moral fact that is true whether or not anyone agrees, a built-in purpose, a rule required by reason itself, or a prior agreement. The only stated fact is that a community strongly supports a rule and condemns violations.",
     assumptions:
       "The social reaction is real and may influence behavior. The question is what follows from that reaction alone. Other foundations may exist, but they must be added and defended rather than silently assumed.",
     scope:
@@ -414,13 +414,13 @@ const OBLIGATION_QUESTIONS = [
     why: "This final answer identifies whether your conclusion stays within the evidence or crosses the missing “ought” without support.",
     guide: {
       plain: "What can “we strongly disapprove” establish without adding another premise about why that reaction has authority?",
-      separate: "A shared rule can be important, useful, and strongly enforced without thereby becoming an approval-independent duty.",
+      separate: "A shared rule can be important, useful, and strongly enforced without proving that it binds people who reject it after the approval and enforcement disappear.",
       reveal: "Your answer sets the final ceiling of the obligation claim.",
     },
     choices: [
       {
         id: "universalFromDisapproval",
-        label: "An approval-independent moral duty follows from collective disapproval itself",
+        label: "The community’s disapproval alone creates a moral duty that binds even people who reject it",
         detail: "When a community’s opposition is strong and settled enough, that reaction alone creates a duty that survives secrecy, rejection, nonmembership, and later changes in opinion.",
         level: "universal",
         directGap: {
@@ -429,11 +429,11 @@ const OBLIGATION_QUESTIONS = [
           detail: "The premise says that a community disapproves. The conclusion says that the rule has authority beyond that approval. A further reason is needed to connect those statements.",
           severity: "high",
         },
-        interpretation: "This moves directly from a fact about attitudes to approval-independent authority without supplying an additional premise.",
+        interpretation: "This moves directly from ‘the community disapproves’ to ‘the rule binds even someone who rejects it’ without supplying the missing reason that connects those claims.",
       },
       {
         id: "socialCodeOnly",
-        label: "A real social code follows, but no approval-independent duty follows",
+        label: "The community has a real social rule, but its disapproval alone does not make that rule bind every dissenter",
         detail: "The community has values, expectations, and institutions it can defend without claiming that its disapproval alone creates wider moral authority.",
         level: "social",
         interpretation: "This is a coherent and candid social-code conclusion that does not claim more authority than its source supplies.",
@@ -450,11 +450,11 @@ const OBLIGATION_QUESTIONS = [
         label: "Only practical reasons to avoid social costs follow",
         detail: "People may comply to avoid shame, exclusion, or punishment without accepting the community’s moral authority.",
         level: "pressure",
-        interpretation: "This treats disapproval as an effective human pressure rather than a source of approval-independent duty.",
+        interpretation: "This treats disapproval as effective human pressure rather than the source of a duty that survives rejection.",
       },
       {
         id: "needBeyond",
-        label: "An approval-independent duty would require a further foundation beyond disapproval",
+        label: "A duty that binds even dissenters would need another foundation beyond the community’s disapproval",
         detail: "Harm, rights, rational consistency, idealized agreement, divine authority, or another proposed foundation must be added and defended separately.",
         level: "bridge",
         interpretation: "This identifies the missing step instead of pretending that social reaction already supplied it.",
@@ -537,7 +537,7 @@ function detectPathChanges() {
     changes.push({
       id: "scope-broadened",
       title: "Your final answer broadened the opening claim",
-      detail: "Your opening answer did not claim approval-independent authority, but your final answer did. The direct-inference note identifies the additional premise that broader conclusion needs.",
+      detail: "Your opening answer did not say that the rule binds people who reject it, but your final answer did. The note below identifies the additional premise that this broader conclusion needs.",
     });
   }
 
@@ -578,7 +578,7 @@ function obligationDiagnosis() {
       key: "universal",
       title: "The missing “ought” remains.",
       summary: "Your final answer asks social disapproval to do more than describe a group’s attitudes, rules, and power: it asks that reaction to create authority that survives rejection.",
-      ceiling: "Approval-independent duty asserted",
+      ceiling: "A duty that survives rejection was asserted",
       ceilingCopy: "This is the category of your final answer, not a score or proof that the claim succeeds.",
       universal: "Needs another premise",
       universalCopy: "The stated facts establish a shared demand and possible social costs, but not wider authority by themselves.",
@@ -594,7 +594,7 @@ function obligationDiagnosis() {
       universal: "Follows within scope",
       universalCopy: "A community’s approval is enough to establish that the community has an accepted code.",
       conclusionHeading: "A social code can be coherent without claiming wider authority.",
-      conclusion: "This position can be coherent as a non-realist social system. It presents “our rule” as a real social fact while leaving any approval-independent duty to a separate argument.",
+      conclusion: "This position can be coherent as a non-realist social system. It presents ‘our rule’ as a real social fact while leaving the stronger claim—‘this rule binds even dissenters’—to a separate argument.",
     },
     conditional: {
       key: "conditional",
@@ -610,13 +610,13 @@ function obligationDiagnosis() {
     pressure: {
       key: "pressure",
       title: "A practical reason to comply.",
-      summary: "Your final answer explains behavior through shame, exclusion, conflict, or punishment rather than through approval-independent authority.",
+      summary: "Your final answer explains compliance through shame, exclusion, conflict, or punishment. It does not claim that the rule still binds after those pressures and all approval disappear.",
       ceiling: "Practical social reason",
       ceilingCopy: "This is the category of your final answer: advice about consequences, not an overall score.",
       universal: "Follows if costs apply",
       universalCopy: "The reason changes when discovery, punishment, or the person’s concern about those costs changes.",
       conclusionHeading: "Pressure explains compliance, not authority.",
-      conclusion: "Social pressure can be powerful enough to control a life. Its practical force should be taken seriously without treating intensity as proof of an approval-independent duty.",
+      conclusion: "Social pressure can be powerful enough to control a life. Its practical force should be taken seriously, but stronger pressure does not by itself prove that the rule binds a person who rejects it.",
     },
     bridge: {
       key: "bridge",
@@ -627,7 +627,7 @@ function obligationDiagnosis() {
       universal: "Open argument",
       universalCopy: "Naming a possible foundation is the beginning of an explanation, not yet proof that it has the claimed authority.",
       conclusionHeading: "The missing step has been named, not yet crossed.",
-      conclusion: "This path identifies the philosophical work still required. Any approval-independent system must explain why its added foundation has authority and who falls within its scope.",
+      conclusion: "This path identifies the philosophical work still required. Any system that claims to bind people regardless of their approval must explain why its added foundation has that authority and whom it binds.",
     },
   };
 
@@ -667,9 +667,9 @@ function buildObligationAIProbePrompt() {
     "IMPORTANT RULES",
     "- Ask one question at a time and wait for my answer.",
     "- Use plain language and define any philosophy term before using it.",
-    "- Do not assume that universal, objective, stance-independent, mind-independent, and approval-independent all mean the same thing. Ask me which claim I intend.",
+    "- Do not assume that ‘universal,’ ‘objective,’ ‘true regardless of anyone’s attitudes,’ ‘true without minds,’ and ‘binding even when rejected’ all mean the same thing. Ask me which claim I intend.",
     "- Do not treat moral non-realism as the same as cultural relativism or as the view that only social disapproval matters.",
-    "- Separate a personal commitment, a shared rule, a practical reason, a threat, a role-based duty, and an approval-independent duty.",
+    "- Keep separate a personal commitment, a shared rule, a practical reason, a threat, a duty created by an accepted role, and a duty that binds even a dissenter.",
     "- Treat each case’s stated facts as fixed. If I add a fact or foundation, name it explicitly.",
     "- A proposed bridge such as harm, fairness, rational consistency, idealized agreement, or divine authority is not an error. Ask why it has authority and who it binds.",
     "- A flagged direct inference is a request for the missing premise, not proof that my conclusion is false.",
@@ -704,7 +704,7 @@ function buildObligationAIProbePrompt() {
     "1. Start with the strongest flagged direct inference. If none was flagged, start with the first additional foundation I invoked. If neither exists, ask what practical purpose I want my social code to serve.",
     "2. State the premise and conclusion you are comparing in two short sentences.",
     "3. Ask me for the missing connecting premise rather than supplying one for me.",
-    "4. Test whether that premise is descriptive, practical, conditional, or approval-independent.",
+    "4. Test whether that premise describes a fact, gives practical advice, applies only under stated conditions, or claims authority even over someone who rejects it.",
     "5. Ask what would make the premise apply to a dissenter, an outsider, or an undetected act.",
     "6. If I invoke a foundation, ask why it has authority, what its limits are, and whether it depends on any values or agreements.",
     "7. At the end, report: my final claim, its scope, the premises supporting it, any openly accepted limits, and any step still undefended.",
@@ -766,7 +766,7 @@ function renderForceMap() {
     </div>
     <div class="ought-gap" role="separator">
       <span>A wider claim needs another premise</span>
-      <small>More agreement, disapproval, or force does not automatically create approval-independent authority.</small>
+      <small>More agreement, disapproval, or force does not automatically make a rule bind someone who rejects it.</small>
     </div>
     <div class="force-branch force-branch-claim">
       <span class="force-group-label">Claims beyond current approval</span>

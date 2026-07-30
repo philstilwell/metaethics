@@ -61,7 +61,7 @@ function createLabCard(labId, lab, record) {
     article.append(headline, metrics, actions);
   } else {
     const copy = document.createElement("p");
-    copy.textContent = "Complete this lab, then choose “Save to My Metaethical Map” on its result page.";
+    copy.textContent = "Complete this lab, then choose “Save to My Moral Questions Map” on its result page.";
     const link = document.createElement("a");
     link.href = lab.href;
     link.textContent = "Open this lab →";
@@ -79,7 +79,7 @@ function buildConnections(map) {
   const has = (...ids) => ids.every((id) => map[id]);
 
   if (has("profile", "meaning")) {
-    const stance = metric(map.profile, "Metaethical stance");
+    const stance = metric(map.profile, "View about moral facts");
     const interpretation = metric(map.meaning, "Closest interpretation");
     items.push(connection(
       "Reasoning pattern and meaning",
@@ -98,7 +98,7 @@ function buildConnections(map) {
     ["Missing Ought", "Reasons Lab"],
   ));
   if (has("obligation", "builder")) items.push(connection(
-    "Authority and construction",
+    "Authority and human-built rules",
     `Your obligation result was “${metric(map.obligation, "Assessment")},” while your community code relied most on “${metric(map.builder, "Leading foundations")}.” Can those foundations support the code without claiming the wider authority the obligation lab examined?`,
     ["Missing Ought", "Community-Code Simulator"],
   ));
@@ -108,8 +108,8 @@ function buildConnections(map) {
     ["Reasons Lab", "Community-Code Simulator"],
   ));
   if (has("reasons", "evidence")) items.push(connection(
-    "Practical and epistemic reasons",
-    `Your action cases most often used “${metric(map.reasons, "Most-used source")}.” Your belief cases most often used “${metric(map.evidence, "Most-used account")}.” Ask whether these are two forms of the same favoring relation or whether evidence receives a different source and scope.`,
+    "Reasons for action and reasons for belief",
+    `Your action cases most often used “${metric(map.reasons, "Most-used source")}.” Your belief cases most often used “${metric(map.evidence, "Most-used account")}.” Ask whether the same kind of fact gives both reasons, or whether evidence gets its authority from a different source.`,
     ["Reasons Lab", "Evidence Lab"],
   ));
   if (has("builder", "criticize")) items.push(connection(
@@ -134,12 +134,12 @@ function buildConnections(map) {
   ));
   if (has("after", "blame")) items.push(connection(
     "Blame language and blame’s purpose",
-    `Your post-error practice leaned toward “${metric(map.after, "Most-used strategy")}.” In the Blame Laboratory, your most-used response was “${metric(map.blame, "Most-used response")},” and the zero-purpose control was “${metric(map.blame, "Pure-desert control")}.” Ask what your blame words communicate about purpose and desert.`,
+    `Your approach after rejecting objective moral facts leaned toward “${metric(map.after, "Most-used strategy")}.” In the Blame Laboratory, your most-used response was “${metric(map.blame, "Most-used response")},” and the deserved-payback control was “${metric(map.blame, "Deserved-payback control")}.” Ask what your blame words communicate, what purpose they serve, and whether they imply that someone deserves pain even when it helps no one.`,
     ["After Moral Facts", "Blame Laboratory"],
   ));
   if (has("blame", "emotions")) items.push(connection(
     "Blame responses and emotional roles",
-    `Your blame cases most often used “${metric(map.blame, "Most-used response")}.” Your emotion cases most often used “${metric(map.emotions, "Most-used account")}.” Ask whether the emotion serves that same human purpose, communicates a different one, or preserves desert after the policy has rejected it.`,
+    `Your blame cases most often used “${metric(map.blame, "Most-used response")}.” Your emotion cases most often used “${metric(map.emotions, "Most-used account")}.” Ask whether the emotion serves that same human purpose, communicates a different one, or still treats pain or praise as deserved after the policy has rejected that idea.`,
     ["Blame Laboratory", "Moral Emotions Lab"],
   ));
   if (has("after", "emotions")) items.push(connection(
@@ -185,7 +185,7 @@ function renderConnections(map) {
 function readableSummary(map) {
   const saved = Object.values(map);
   const lines = [
-    "MY METAETHICAL MAP",
+    "MY MORAL QUESTIONS MAP",
     "Generated locally by The Moral Compass. These are saved summaries, not a coherence score.",
     "",
   ];
@@ -230,7 +230,7 @@ mapEls.download.addEventListener("click", () => {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "my-metaethical-map.json";
+  link.download = "my-moral-questions-map.json";
   link.click();
   URL.revokeObjectURL(url);
   mapEls.status.textContent = "Map data downloaded.";
