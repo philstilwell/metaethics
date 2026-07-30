@@ -533,8 +533,10 @@ INTERVIEW INSTRUCTIONS
 11. Do not assume moral realism or moral non-realism. Explain how a realist, constructivist, expressivist, and error theorist might interpret the same genealogy, but only after the causal evidence is mapped.
 12. If I treat the conviction mainly as an attitude or commitment rather than a truth-apt belief, assess whether its causes rely on false beliefs, irrelevant manipulation, or consequences I reject. Do not call a non-truth-apt attitude false.
 13. Give deliberate reflection no automatic exemption. Ask what information, counterexamples, comparison rules, and safeguards made it more reliable than the earlier process.
-14. End with a table listing each proposed influence, evidence for it, confidence in the causal claim, its relation to relevant reasons, the strongest warranted conclusion, what remains unknown, and what independent support survives.
-15. Finish with two short sections: “What this genealogy changes” and “What this genealogy does not establish.”
+14. If the conviction feels self-evident, external, or authoritative, separate that phenomenological force from its evidential force. Ask whether practice, objectifying language, or internalized approval and punishment could explain how the response now feels.
+15. Test calibration directly: ask what evidence would lower confidence that this source tracks what it claims to track. Do not protect either a realist or non-realist interpretation from every possible result.
+16. End with a table listing each proposed influence, evidence for it, confidence in the causal claim, its relation to relevant reasons, the strongest warranted conclusion, what remains unknown, and what independent support survives.
+17. Finish with two short sections: “What this genealogy changes” and “What this genealogy does not establish.”
 
 Begin by asking me to restate the conviction in the most precise form I can.`;
 }

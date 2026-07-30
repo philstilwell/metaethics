@@ -20,6 +20,7 @@ const LAB_NAMES = {
 const LAB_SUPPORT = {
   "field-guide": Object.keys(LAB_NAMES),
   "parsimonious-world": Object.keys(LAB_NAMES),
+  "moral-intuitions-realm": ["meaning", "obligation", "after", "genealogy", "evidence", "emotions"],
   "conditions-coherence": ["profile", "obligation", "builder", "criticize"],
   "stevenson-emotive-meaning": ["meaning", "decoder"],
   "harman-relativism": ["meaning", "criticize"],
@@ -62,6 +63,16 @@ const CURATED_PAPERS = [
     core: true,
     url: "https://www.academia.edu/169490990/_The_Parsimonious_World_of_the_Moral_Non_Realist_Illegitimate_Questions_Surviving_Values_and_Life_Without_a_Moral_Realm",
     note: "The tool’s non-realist foundation. It separates moral facts from the real human world of pain, care, law, trust, fear, meaning, institutions, and repair.",
+  },
+  {
+    id: "moral-intuitions-realm",
+    title: "Moral Intuitions without a Moral Realm: Development, Reification, and the Affective Genealogy of Value",
+    author: "Phil Stilwell",
+    year: 2026,
+    approach: "Project source",
+    core: true,
+    url: "https://philstilwell.github.io/metaethics/output/pdf/moral-intuitions-without-a-moral-realm.pdf",
+    note: "The project’s account of why a learned moral judgment can feel immediate, external, and authoritative. It argues that a well-supported genealogy can undercut an intuition’s automatic use as evidence for a non-natural moral realm without proving every moral claim false or refuting naturalist realism by itself.",
   },
   {
     id: "conditions-coherence",

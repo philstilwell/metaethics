@@ -220,6 +220,8 @@ assert.match(prompt, /Do not infer falsity merely from dependence on evolution, 
 assert.match(prompt, /Do not assume moral realism or moral non-realism/i);
 assert.match(prompt, /Do not call a non-truth-apt attitude false/i);
 assert.match(prompt, /Deliberate reflection no automatic exemption/i);
+assert.match(prompt, /separate that phenomenological force from its evidential force/i);
+assert.match(prompt, /what evidence would lower confidence that this source tracks/i);
 assert.match(prompt, /What this genealogy does not establish/i);
 for (const question of GENEALOGY_QUESTIONS) {
   assert.ok(prompt.includes(question.context), `the AI prompt must include the full ${question.id} case`);
@@ -256,6 +258,7 @@ assert.match(css, /\.genealogy-conclusion\s*\{[^}]*color:\s*var\(--ink\)/s);
 assert.match(css, /\.genealogy-conclusion > p\s*\{[^}]*color:\s*#465047/s);
 assert.match(html, /Richard Joyce.+Irrealism and the Genealogy of Morals/is);
 assert.match(papersSource, /id: "joyce-irrealism-genealogy"/);
+assert.match(papersSource, /id: "moral-intuitions-realm"/);
 assert.match(papersSource, /comparatively modest.+epistemic burden/is);
 assert.match(source, /document\.querySelector\("#genealogyOriginConviction"\)\.textContent/, "custom conviction text must be inserted as text, not HTML");
 assert.match(source, /genealogyEls\.liveConviction\.textContent/, "live custom text must be inserted safely");

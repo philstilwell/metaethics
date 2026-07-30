@@ -24,6 +24,7 @@ assert.match(html, /Moral Emotions Lab tests the remainder\./, "the hub must exp
 assert.match(html, /There is no required order\./, "the hub must not present the tools as a forced sequence");
 assert.match(html, /No account, tracking, or built-in AI/, "the hub must disclose its privacy model");
 assert.match(html, /The complete project in one sustained argument/, "the hub must present the book as the comprehensive synthesis");
+assert.match(html, /three source papers/, "the hub must state the current number of project source papers");
 assert.match(html, /href="book\.html"/, "the hub must link to the dedicated book page");
 assert.match(html, /the-objective-morality-project-with-cover\.pdf/, "the hub must link directly to the complete illustrated book");
 assert.equal((html.match(/<h1\b/g) || []).length, 1, "the landing page must have one primary heading");
