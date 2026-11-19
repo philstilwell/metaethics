@@ -27,7 +27,7 @@ assert.match(html, /Prologue \+ 41 chapters/, "the page must state the complete 
 assert.equal((html.match(/<li class="book-part-card">/g) || []).length, 7, "the page must present all seven parts");
 assert.equal((html.match(/<article class="book-edition-card(?: [^"]+)?">/g) || []).length, 4, "the page must offer four publication formats");
 assert.doesNotMatch(html, /<script\b/, "the book page must remain a static, no-tracking document");
-assert.match(html, /styles\.css\?v=20261119-kdp-links/, "the book page must bypass stale pre-book stylesheets");
+assert.match(html, /styles\.css\?v=20261119-cover-caption/, "the book page must bypass stale pre-book stylesheets");
 
 const hero = html.match(/<section class="book-hero"[\s\S]*?<\/section>/)[0];
 const expectedEditions = ["B0HRR33XD2", "B0HRQYCT8J", "B0HRR8898C"];

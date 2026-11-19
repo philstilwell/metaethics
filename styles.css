@@ -9179,11 +9179,12 @@ dialog p:not(.kicker) {
 }
 
 .book-cover-figure figcaption {
-  margin-top: 28px;
+  margin-top: 56px;
   color: #aeb4af;
   font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.11em;
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
 }
@@ -9724,6 +9725,10 @@ dialog p:not(.kicker) {
 
   .book-cover-figure a {
     box-shadow: 16px 20px 0 rgba(66, 71, 57, 0.7), 0 30px 80px rgba(0, 0, 0, 0.46);
+  }
+
+  .book-cover-figure figcaption {
+    margin-top: 40px;
   }
 
   .book-hero-copy h1 {
