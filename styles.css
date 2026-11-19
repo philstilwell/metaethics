@@ -9230,6 +9230,68 @@ dialog p:not(.kicker) {
   text-decoration: none;
 }
 
+.book-purchase-note {
+  margin: 16px 0 0;
+  color: #c7cbc7;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.book-catalogue-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 22px;
+  font-size: 0.9rem;
+}
+
+.book-catalogue-links a,
+.book-facts a {
+  color: var(--book-ochre);
+  text-underline-offset: 4px;
+}
+
+.book-catalogue-links a:focus-visible,
+.book-facts a:focus-visible,
+.book-archive summary:focus-visible {
+  outline: 3px solid var(--book-ochre);
+  outline-offset: 5px;
+}
+
+.book-introduction-copy p,
+.book-archive-note p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.book-introduction-copy p + p,
+.book-archive-note p + p {
+  margin-top: 22px;
+}
+
+.book-introduction + .book-role {
+  border-top: 1px solid var(--line);
+}
+
+.book-archive {
+  border-top: 1px solid var(--ink);
+  background: var(--paper-bright);
+}
+
+.book-archive summary {
+  padding: 28px clamp(20px, 8vw, 120px);
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  cursor: pointer;
+}
+
+.book-archive-note {
+  padding: 0 clamp(20px, 8vw, 120px) 32px;
+}
+
 .book-facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
